@@ -1,5 +1,6 @@
 import React from "react";
 import img from "../../assets/images/sec1-background.webp";
+
 // import { Link } from "react-router-dom";
 
 const Banner = () => {

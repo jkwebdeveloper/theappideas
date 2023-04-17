@@ -1,0 +1,17 @@
+.services-one {
+  position: relative;
+  padding: 100px 0px;
+  background-color: var(--color-thirtynine);
+}
+.services-one_pattern-layer {
+  position: absolute;
+  inset: 0px;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+.services-one .auto-container {
+  position: static;
+  max-width: 1170px;
+  padding: 0px 15px;
+  margin: 0 auto;
+}
