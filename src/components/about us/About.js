@@ -10,7 +10,7 @@ const About = () => {
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12">
             <div className="row">
-              <div className="col-6">
+              <div className="col-lg-6 col-md-12 col-sm-12">
                 <p className="main-title-uner-line">About Us</p>
                 <div className="line"></div>
                 <p className="title">
@@ -31,7 +31,7 @@ const About = () => {
                   with client approval and confirmation.`}
                 </p>
               </div>
-              <div className="col-6">
+              <div className="col-lg-6 col-md-12 col-sm-12">
                 <p className="main-title-uner-line-right">Our Achievements</p>
                 <div className="line-right"></div>
                 <div className="Achieve-box">
