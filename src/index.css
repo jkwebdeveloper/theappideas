@@ -1,3 +1,5 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&display=swap'); */
+
 .site-header-one {
   position: absolute;
   top: 25px;
@@ -67,7 +69,10 @@
   font-size: 23px;
   margin-top: -3px;
 }
-
+.dropdown-icon-right {
+  font-size: 20px;
+  margin-left: 5px;
+}
 /* Dropdown menu */
 
 .main-nav__main-navigation .dropdown-btn {
@@ -76,7 +81,7 @@
 
 .main-nav__main-navigation .main-nav__navigation-box > li ul {
   position: absolute;
-  width: 230px;
+  width: 300px;
   background-color: #fff;
   border-top: 2px solid var(--thm-base);
   box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.05),
@@ -130,7 +135,7 @@
   left: 0;
   -webkit-transform: translateY(30px);
   transform: translateY(30px);
-  border-radius: 7px;
+  /* border-radius: 7px; */
   visibility: hidden;
   opacity: 0;
 }

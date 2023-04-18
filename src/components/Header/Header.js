@@ -1,5 +1,7 @@
 import React from "react";
 import { RiArrowDownSFill } from "react-icons/ri";
+import { RiArrowRightSFill } from "react-icons/ri";
+
 // import { FaBeer } from "react-icons/fa";
 import "./header.css";
 import AboutGif from "../../assets/images/Header/Company/About us.gif";
@@ -8,7 +10,6 @@ import TeamGif from "../../assets/images/Header/Company/Our Team.gif";
 import TestimonialGif from "../../assets/images/Header/Company/Testamonials.gif";
 import CareersGif from "../../assets/images/Header/Company/Carrers.gif";
 import LifeGif from "../../assets/images/Header/Company/Life at TAI.gif";
-
 
 const Header = () => {
   return (
@@ -37,23 +38,64 @@ const Header = () => {
                 </a>
                 <ul>
                   <li>
-                    
-                    <a href="/"><img src={AboutGif} alt="" style={{ width: '35px', marginRight: '15px'}}/>About Us </a>
+                    <a href="/" style={{ fontWeight: "500" }}>
+                      <img
+                        src={AboutGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      About Us{" "}
+                    </a>
                   </li>
                   <li>
-                    <a href="/"><img src={ProcessGif} alt="" style={{ width: '35px', marginRight: '15px'}}/>Our Process</a>
+                    <a href="/" style={{ fontWeight: "500" }}>
+                      <img
+                        src={ProcessGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Our Process
+                    </a>
                   </li>
                   <li>
-                    <a href="/"><img src={TeamGif} alt="" style={{ width: '35px', marginRight: '15px'}}/>Out Team</a>
+                    <a href="/" style={{ fontWeight: "500" }}>
+                      <img
+                        src={TeamGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Out Team
+                    </a>
                   </li>
                   <li>
-                    <a href="/"><img src={TestimonialGif} alt="" style={{ width: '35px', marginRight: '15px'}}/>Testimonial </a>
+                    <a href="/" style={{ fontWeight: "500" }}>
+                      <img
+                        src={TestimonialGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Testimonial{" "}
+                    </a>
                   </li>
                   <li>
-                    <a href="/"><img src={CareersGif} alt="" style={{ width: '35px', marginRight: '15px'}}/>Careers</a>
+                    <a href="/" style={{ fontWeight: "500" }}>
+                      <img
+                        src={CareersGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Careers
+                    </a>
                   </li>
                   <li>
-                    <a href="/"><img src={LifeGif} alt="" style={{ width: '35px', marginRight: '15px'}}/>Life at TAI</a>
+                    <a href="/" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Life at TAI
+                    </a>
                   </li>
                 </ul>
               </li>
@@ -65,14 +107,300 @@ const Header = () => {
                   </a>
                 </a>
                 <ul>
-                  <li>
-                    <a href="/service">Services 01</a>
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
-                    <a href="/service-v2">Services 02</a>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
                   </li>
-                  <li>
-                    <a href="/service-details">Services Details</a>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
+                  </li>
+
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
@@ -103,17 +431,41 @@ const Header = () => {
                   </a>
                 </a>
                 <ul>
-                  <li>
-                    <a href="/portfolio-standard">Portfolio Standard</a>
-                  </li>
-                  <li>
-                    <a href="/portfolio-full">Portfolio Full</a>
-                  </li>
-                  <li>
-                    <a href="/portfolio-masonary">Portfolio Masonary</a>
-                  </li>
-                  <li>
-                    <a href="/portfolio-details">Portfolio Details</a>
+                  <li className="dropdown">
+                    <a href="/service" style={{ fontWeight: "500" }}>
+                      <img
+                        src={LifeGif}
+                        alt=""
+                        style={{ width: "35px", marginRight: "15px" }}
+                      />
+                      Mobile App Development
+                      <a className="dropdown-icon-right">
+                        <RiArrowRightSFill />
+                      </a>
+                    </a>
+                    <ul>
+                      <li>
+                        <a href="/">Android App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Iphone App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">I Pad App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">React Native Development</a>
+                      </li>
+                      <li>
+                        <a href="/">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="/">Apple Watch App Development</a>
+                      </li>
+                    </ul>
                   </li>
                 </ul>
               </li>
