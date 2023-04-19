@@ -1,19 +1,18 @@
 import React from "react";
-import { BsActivity } from "react-icons/bs";
 
 const Services = () => {
   return (
     <>
       {/* ======= Services Section ======= */}
       <section className="container">
-        <div class="row">
-          <h2 class="section-heading">Our Services</h2>
+        <div className="row">
+          <h2 className="section-heading">Our Services</h2>
         </div>
-        <div class="row">
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fas fa-hammer"></i>
+        <div className="row">
+          <div className="column">
+            <div className="card">
+              <div className="icon-wrapper">
+                <i className="fas fa-hammer"></i>
               </div>
               <h5>WEB DEVELOPMENT</h5>
               <p>
@@ -22,10 +21,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fas fa-brush"></i>
+          <div className="column">
+            <div className="card">
+              <div className="icon-wrapper">
+                <i className="fas fa-brush"></i>
               </div>
               <h5>E-COMMERCE DEVELOPMENT</h5>
               <p>
@@ -34,10 +33,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fas fa-wrench"></i>
+          <div className="column">
+            <div className="card">
+              <div className="icon-wrapper">
+                <i className="fas fa-wrench"></i>
               </div>
               <h5>MOBILE APP DEVELOPMENT</h5>
               <p>
@@ -46,10 +45,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fas fa-truck-pickup"></i>
+          <div className="column">
+            <div className="card">
+              <div className="icon-wrapper">
+                <i className="fas fa-truck-pickup"></i>
               </div>
               <h5>INTERNET OF THINGS</h5>
               <p>
@@ -58,10 +57,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fas fa-broom"></i>
+          <div className="column">
+            <div className="card">
+              <div className="icon-wrapper">
+                <i className="fas fa-broom"></i>
               </div>
               <h5>GAME DEVELOPMENT</h5>
               <p>
@@ -70,10 +69,10 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div class="column">
-            <div class="card">
-              <div class="icon-wrapper">
-                <i class="fas fa-plug"></i>
+          <div className="column">
+            <div className="card">
+              <div className="icon-wrapper">
+                <i className="fas fa-plug"></i>
               </div>
               <h5>HIRE A DEVELOPER</h5>
               <p>
