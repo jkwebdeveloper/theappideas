@@ -1,141 +1,226 @@
 import React from "react";
+import { RiMapPinFill } from "react-icons/ri";
+import { FaFacebookF } from "react-icons/fa";
+import { BsTwitter } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { FaYoutube } from "react-icons/fa";
+import { BsDribbble } from "react-icons/bs";
+import { FaBehance } from "react-icons/fa";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { GoMail } from "react-icons/go";
+import { BsWhatsapp } from "react-icons/bs";
+import { BsSkype } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="footer-area footer-default">
-      <div className="container">
-        <div className="footer-widget pt-100 pb-55">
-          <div className="row">
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="widget about-widget mb-40"
-                data-aos="fade-up"
-                data-aos-delay={30}
-              >
-                <div className="site-branding">
-                  {/* <a href="index.html">
-                    <img src={require("../assets/images/logo2-1.png")} alt="Site Logo" />
-                  </a> */}
+    <>
+      {/* ======= Footer ======= */}
+      <footer id="footer" className="footer">
+        <div className="footer-content">
+          <div className="container">
+            <div className="row">
+              <div className="col-lg-3 col-md-6">
+                <div className="footer-info">
+                  <h4>GET IN TOUCH</h4>
+                  <div className="line"></div>
+                  <p>
+                    <RiMapPinFill
+                      style={{ marginRight: "5px", marginTop: "-5px" }}
+                    />
+                    FO-6, Raspan Arcade, Near Rajhans Cinema, Nikol- <br />
+                    Naroda, Ahmedabad-382350.
+                    <br />
+                    <br />
+                    <strong>
+                      <GoMail />
+                    </strong>{" "}
+                    contact@theappideas.com
+                    <br />
+                    <strong>
+                      <BsFillTelephoneFill />
+                    </strong>{" "}
+                    +91 8866564279
+                    <br />
+                    <br />
+                    <BsWhatsapp
+                      style={{ marginRight: "5px", marginTop: "-5px" }}
+                    />
+                    Whats App Me
+                    <br />
+                    <BsSkype
+                      style={{ marginRight: "5px", marginTop: "-5px" }}
+                    />
+                    Skype
+                  </p>
                 </div>
-                <h4 className="widget-title">GET IN TOUCH</h4>
-
-                <ul className="social-link" style={{listStyle: 'none'}}>
+              </div>
+              <div className="col-lg-2 col-md-6 footer-links">
+                <h4>QUICK LINKS</h4>
+                <div className="line"></div>
+                <ul>
                   <li>
-                    <a href="#">
-                      <i className="fab fa-facebook-f" />
-                    </a>
+                    <a href="/">Home</a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="fab fa-twitter" />
-                    </a>
+                    <a href="/">About us</a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="fab fa-instagram" />
-                    </a>
+                    <a href="/">Portfolio</a>
                   </li>
                   <li>
-                    <a href="#">
-                      <i className="fab fa-linkedin-in" />
-                    </a>
+                    <a href="/">Blog</a>
+                  </li>
+                  <li>
+                    <a href="/">Contact Us</a>
+                  </li>
+                  <li>
+                    <a href="/">Testimonial</a>
+                  </li>
+                  <li>
+                    <a href="/">Careers</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-2 col-md-6 footer-links">
+                <h4>SERVICES</h4>
+                <div className="line"></div>
+                <ul>
+                  <li>
+                    <a href="/">Mobile App Development</a>
+                  </li>
+                  <li>
+                    <a href="/">IOT Development</a>
+                  </li>
+                  <li>
+                    <a href="/">Web Design & Development</a>
+                  </li>
+                  <li>
+                    <a href="/">E-commerce Development</a>
+                  </li>
+                  <li>
+                    <a href="/">Game Development</a>
+                  </li>
+                  <li>
+                    <a href="/">Hire A Developer</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-3 col-md-6 footer-links">
+                <h4>SOLUTIONS</h4>
+                <div className="line"></div>
+                <ul>
+                  <li>
+                    <a href="/">Dating App</a>
+                  </li>
+                  <li>
+                    <a href="/">Lawyer Website Solution</a>
+                  </li>
+                  <li>
+                    <a href="/">Driver Tracking App Solution</a>
+                  </li>
+                  <li>
+                    <a href="/">Ecommerce App Solution</a>
+                  </li>
+                  <li>
+                    <a href="/">Elearning Website Solution</a>
+                  </li>
+                </ul>
+              </div>
+              <div className="col-lg-2 col-md-6 footer-links">
+                <h4>ON DEMAND APPS</h4>
+                <div className="line"></div>
+                <ul>
+                  <li>
+                    <a href="/">Taxi Booking App</a>
+                  </li>
+                  <li>
+                    <a href="/">Security Guard App</a>
+                  </li>
+                  <li>
+                    <a href="/">Food Delivery App</a>
+                  </li>
+                  <li>
+                    <a href="/">Doctor Hiring App</a>
                   </li>
                 </ul>
               </div>
             </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="widget footer-nav-widget mb-40"
-                data-aos="fade-up"
-                data-aos-delay={40}
-              >
-                <h4 className="widget-title">Product</h4>
-                <ul className="footer-nav" style={{listStyle: 'none'}}>
-                  <li>
-                    <a href="#">Landing page</a>
-                  </li>
-                  <li>
-                    <a href="#">Features</a>
-                  </li>
-                  <li>
-                    <a href="#">Documentation</a>
-                  </li>
-                  <li>
-                    <a href="#">Referral Program</a>
-                  </li>
-                  <li>
-                    <a href="#">Pricing</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="widget footer-nav-widget"
-                data-aos="fade-up"
-                data-aos-delay={50}
-              >
-                <div className="widget footer-nav-widget mb-40">
-                  <h4 className="widget-title">Services</h4>
-                  <ul className="footer-nav" style={{listStyle: 'none'}}>
+            <div className="row">
+              <div className="col-lg-8">
+                <h3>AWARDS AND ACCOLADES</h3>
+                <div className="footer-line"></div>
+                <div className="awords-section">
+                  <ul>
                     <li>
-                      <a href="#">Documentation</a>
+                      <img
+                        src={require("../assets/images/Footer/goodfirms.png")}
+                        style={{ width: "140px" }}
+                      />
                     </li>
                     <li>
-                      <a href="#">License</a>
+                      <img
+                        src={require("../assets/images/Footer/freelancer-logo-1.webp")}
+                        style={{ width: "120px" }}
+                      />
                     </li>
                     <li>
-                      <a href="#">Changelog</a>
+                      <img
+                        src={require("../assets/images/Footer/pph_new.webp")}
+                        style={{ width: "120px" }}
+                      />
                     </li>
                     <li>
-                      <a href="#">Developers</a>
+                      <img
+                        src={require("../assets/images/Footer/upwork_new.webp")}
+                        style={{ width: "120px" }}
+                      />
                     </li>
                   </ul>
+                  {/* <img
+                      src={require("../assets/images/Footer/goodfirms.png")}
+                    />
+                    <img
+                      src={require("../assets/images/Footer/freelancer-logo-1.webp")}
+                    />
+                    <img src={require("../assets/images/Footer/pph_new.webp")} />
+                    <img
+                      src={require("../assets/images/Footer/upwork_new.webp")}
+                    /> */}
                 </div>
               </div>
-            </div>
-            <div className="col-lg-3 col-md-6 col-sm-12">
-              <div
-                className="widget contact-info-widget mb-40"
-                data-aos="fade-up"
-                data-aos-delay={60}
-              >
-                <h4 className="widget-title">Informaion</h4>
-                <ul className="info-list" style={{listStyle: 'none'}}>
-                  <li>
-                    <span>
-                      <i className="far fa-phone" />
-                      <a href="tel:+123-589-847">+123 - 589 - 847</a>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i className="far fa-envelope-open-text" />
-                      <a href="mailto:Resly@gmail.com">Resly@gmail.com</a>
-                    </span>
-                  </li>
-                  <li>
-                    <span>
-                      <i className="far fa-map-marker-alt" />
-                      1791 Yorkshire Circle Kitty Hawk, NC 279499
-                    </span>
-                  </li>
-                </ul>
+              <div className="col-lg-4 ">
+                <h3>FOLLOW US</h3>
+                <div className="footer-line"></div>
+                <div className="social-account">
+                  <ul style={{ display: "flex" }}>
+                    <a href="/">
+                      <FaFacebookF />
+                    </a>
+                    <a href="/">
+                      <BsTwitter />
+                    </a>
+                    <a href="/">
+                      <FaLinkedinIn />
+                    </a>
+                    <a href="/">
+                      <FaYoutube />
+                    </a>
+                    <a href="/">
+                      <BsDribbble />
+                    </a>
+                    <a href="/">
+                      <FaBehance />
+                    </a>
+                  </ul>
+                </div>
+                <button className="footer-btn">SITEMAP</button>
               </div>
             </div>
           </div>
         </div>
-        <div className="footer-copyright">
-          <div className="row">
-            <div className="col-lg-12">
-              <div className="text text-center">
-                <p>© Copyright 2022 Saap All Rights Reserved</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
+      </footer>
+      {/* End Footer */}
+    </>
   );
 };
 

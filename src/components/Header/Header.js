@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from "react";
 import { RiArrowDownSFill } from "react-icons/ri";
-import { RiArrowRightSFill } from "react-icons/ri";
+// import { RiArrowRightSFill } from "react-icons/ri";
 
 // import { FaBeer } from "react-icons/fa";
-import "./header.css";
+
 import AboutGif from "../../assets/images/Header/Company/About us.gif";
 import ProcessGif from "../../assets/images/Header/Company/Process.gif";
 import TeamGif from "../../assets/images/Header/Company/Our Team.gif";

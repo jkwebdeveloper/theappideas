@@ -23,9 +23,9 @@
   content: "";
   width: 80px;
   height: 4px;
-  background: #f6c000;
+  background: #d6aa0b;
   display: block;
-  margin: 8px 0;
+  margin: -9px 0px 15px 0px;
 }
 .about .title {
   font-size: 21px;

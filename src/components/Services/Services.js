@@ -1,18 +1,91 @@
 import React from "react";
-import "./services.css";
-import Image from "../../assets/images/sec3-background.webp";
+import { BsActivity } from "react-icons/bs";
 
 const Services = () => {
   return (
-    <section className="services-one">
-      <div
-        className="services-one_pattern-layer"
-        style={{ backgroundImage: `url(${Image})` }}
-      />
-      <div className="auto-container">
-        
-      </div>
-    </section>
+    <>
+      {/* ======= Services Section ======= */}
+      <section className="container">
+        <div class="row">
+          <h2 class="section-heading">Our Services</h2>
+        </div>
+        <div class="row">
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-hammer"></i>
+              </div>
+              <h5>WEB DEVELOPMENT</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-brush"></i>
+              </div>
+              <h5>E-COMMERCE DEVELOPMENT</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-wrench"></i>
+              </div>
+              <h5>MOBILE APP DEVELOPMENT</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-truck-pickup"></i>
+              </div>
+              <h5>INTERNET OF THINGS</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-broom"></i>
+              </div>
+              <h5>GAME DEVELOPMENT</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+          <div class="column">
+            <div class="card">
+              <div class="icon-wrapper">
+                <i class="fas fa-plug"></i>
+              </div>
+              <h5>HIRE A DEVELOPER</h5>
+              <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Quisquam consequatur necessitatibus eaque.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* End Services Section */}
+    </>
   );
 };
 
