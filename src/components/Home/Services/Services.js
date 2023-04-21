@@ -1,7 +1,8 @@
 import React from "react";
-import background from "../../assets/images/Home-our-services/download.png";
-import background1 from "../../assets/images/Home-our-services/download (1).png";
+import background from "../../../assets/images/Home-our-services/download.png";
+import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import { HiOutlineArrowRight } from "react-icons/hi";
+import './services.css'
 
 const Services = () => {
   return (
@@ -36,7 +37,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../assets/images/Home-our-services/WEB DEVELOPMENT.gif")}
+                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT.gif")}
                     alt="Web Development"
                     style={{ width: "70px" }}
                   />
@@ -69,7 +70,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif")}
+                    src={require("../../../assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif")}
                     alt="E-COMMERCE DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
@@ -102,7 +103,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../assets/images/Home-our-services/91645-adaptive-mobile-app-design.gif")}
+                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT (1).gif")}
                     alt="MOBILE APP DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
@@ -135,7 +136,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../assets/images/Home-our-services/INTERNET OF THINGS.gif")}
+                    src={require("../../../assets/images/Home-our-services/INTERNET OF THINGS.gif")}
                     alt="INTERNET OF THING"
                     style={{ width: "70px" }}
                   />
@@ -168,7 +169,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../assets/images/Home-our-services/GAME DEVELOPMENT.gif")}
+                    src={require("../../../assets/images/Home-our-services/GAME DEVELOPMENT.gif")}
                     alt="GAME DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
@@ -202,7 +203,7 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../assets/images/Home-our-services/Hire Developer.gif")}
+                    src={require("../../../assets/images/Home-our-services/Hire Developer.gif")}
                     alt="Hire Developer"
                     style={{ width: "70px" }}
                   />
