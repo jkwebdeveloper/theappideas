@@ -1,0 +1,96 @@
+.blog-headidng {
+  text-align: center;
+  padding-top: 80px;
+  padding-bottom: 50px;
+}
+.underline {
+  text-align: center;
+}
+.slide-container {
+  margin: 0 30px;
+  overflow: hidden;
+  padding-bottom: 60px;
+}
+.card {
+  background: #fff;
+  border-radius: 8px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+.card .image-box {
+  height: 200px;
+}
+.card .image-box img {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px 8px 0 0;
+}
+.card .profile-details {
+  display: flex;
+  align-items: center;
+  column-gap: 12px;
+  padding: 15px;
+}
+.card .profile-details img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+}
+.top-btn {
+  display: flex;
+}
+.view-right {
+  border: none;
+  background-color: #000;
+  color: #fff;
+  font-size: 14px;
+  margin: 20px 3px 5px 15px;
+  /* margin-right: 13px; */
+  font-family: sans-serif;
+  padding: 0px 6px;
+  text-transform: capitalize;
+}
+.profile-details .name {
+  font-size: 15px;
+  font-weight: 500;
+}
+.profile-details .job {
+  font-size: 12px;
+  font-weight: 500;
+  color: #4d4d4d;
+}
+.read-btn {
+  padding: 5px 9px 5px 13px;
+  border-radius: 20px;
+  background-color: #f6c000;
+  color: #000;
+  border: none;
+}
+.read-btn a:hover {
+  background-color: #2f0e39 !important;
+  color: #fff;
+}
+.swiper-navBtn {
+  color: #000;
+  height: 40px;
+  width: 40px;
+  background: #cecece;
+  border-radius: 50%;
+  margin-top: 70px;
+  margin-left: -10px;
+  margin-right: -9px;
+}
+.swiper-navBtn::before,
+.swiper-navBtn::after {
+  font-size: 18px;
+}
+
+.swiper-pagination-bullet {
+  background-color: #000;
+}
+
+@media screen and (max-width: 768px) {
+  .swiper-navBtn {
+    display: none;
+  }
+}

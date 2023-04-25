@@ -2,37 +2,9 @@
 
 section {
   overflow: hidden;
-  /* padding-top: 50px; */
+  /* padding-top: 60px; */
 }
 
-
-
-/* Swiper Slider css start */
-
-.swiper {
-  width: 100%;
-  height: 100%;
-}
-
-.swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  background: #fff;
-
-  /* Center slide text vertically */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.swiper-slide img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-
-/* Swiper Slider css End */
 
 .banner-one {
   background-repeat: no-repeat;
@@ -88,7 +60,7 @@ section {
   height: auto;
   background-color: #2f0e39;
   padding: 35px;
-  margin-top: 50px;
+  /* margin-top: 50px; */
 }
 .left-content {
   font-size: 25px;

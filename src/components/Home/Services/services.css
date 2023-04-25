@@ -3,13 +3,14 @@
 # Services Section start
 --------------------------------------------------------------*/
 .services-section {
-    padding-bottom: 150px;
+    padding-bottom: 100px;
   }
   .services-heading {
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     font-family: sans-serif;
+    padding: 50px;
   }
   .underline {
     content: "";
