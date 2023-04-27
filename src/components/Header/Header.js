@@ -37,7 +37,7 @@ const Header = () => {
     >
       <div className="main_header_area animated">
         <div className="container">
-          <nav id="navigation1" className="navigation" >
+          <nav id="navigation1" className="navigation">
             <div className="nav-header">
               <a className="nav-brand" href="#">
                 <img
@@ -53,9 +53,8 @@ const Header = () => {
                 <li>
                   <a href="#">Company</a>
                   <div className="megamenu-panel">
-                  <h2 className="megamenu_panel_title">Company</h2>
+                    <h2 className="megamenu_panel_title">Company</h2>
                     <div className="megamenu-lists">
-                      
                       <ul className="megamenu-list list-col-3">
                         <li>
                           <a href="#" target="_blank" className="company_menu">
@@ -81,7 +80,10 @@ const Header = () => {
                         <li>
                           <a href="#" target="_blank" className="company_menu">
                             {" "}
-                            <img src={require("../../assets/images/Header/Process.gif")} alt="Process" />
+                            <img
+                              src={require("../../assets/images/Header/Process.gif")}
+                              alt="Process"
+                            />
                             Our Process
                           </a>
                         </li>
@@ -446,9 +448,8 @@ const Header = () => {
                 <li>
                   <a href="#">Hire us </a>
                   <div className="megamenu-panel">
-                  <h2 className="megamenu_panel_title">Hire us</h2>
+                    <h2 className="megamenu_panel_title">Hire us</h2>
                     <div className="megamenu-lists">
-                      
                       <ul className="megamenu-list list-col-4">
                         <li className="megamenu-list-title">
                           <a href="#">
@@ -616,9 +617,8 @@ const Header = () => {
                 <li>
                   <a href="#">Solutions</a>
                   <div className="megamenu-panel">
-                  <h2 className="megamenu_panel_title">Solutions</h2>
+                    <h2 className="megamenu_panel_title">Solutions</h2>
                     <div className="megamenu-lists">
-                      
                       <ul className="megamenu-list list-col-3">
                         <li className="megamenu-list-title">
                           <a href="#">
@@ -768,6 +768,5 @@ const Header = () => {
     </header>
   );
 };
-
 
 export default Header;

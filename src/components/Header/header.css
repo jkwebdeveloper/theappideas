@@ -173,7 +173,7 @@ header {
 
 .nav-menu > li {
   display: inline-block;
-  margin-right: 16px;
+  /* margin-right: 16px; */
   text-align: left;
 }
 .nav-menu > li:hover .megamenu-panel {
@@ -736,6 +736,9 @@ header {
   .triangle_angle {
     border-left: solid 6px rgb(255, 255, 255);
   }
+  .nav-brand img{
+    width: 120px;
+  }
 }
 
 @media (max-width: 360px) {
@@ -744,6 +747,9 @@ header {
   .nav-menu > li > a,
   .megamenu-list > li > a.company_menu {
     font-size: 13px;
+  }
+  .nav-menu{
+    display: none;
   }
 }
 
@@ -765,10 +771,28 @@ header {
   .megamenu-panel {
     max-width: 960px;
   }
+  /* .nav-menu{
+    display: flex;
+  } */
 }
-
+/* @media (max-width: 1199px) {
+  .nav-toggle {
+    display: block;
+  }
+} */
 @media (min-width: 1200px) {
   .megamenu-panel {
     max-width: 1140px;
+  }
+}
+@media (max-width: 992px) {
+  .nav-menu{
+    display: none;
+  }
+  .nav-toggle {
+    display: block;
+  }
+  .nav-toggle {
+    right: 20px;
   }
 }

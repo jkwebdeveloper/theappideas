@@ -35,7 +35,7 @@ const About = () => {
               {/* <div className="underline-1"></div> */}
             </div>
             <div className="row">
-              <div className="col-lg-6 col-md-12">
+              <div className="col-6">
                 <div className="out-box my-3">
                   <p>Our Team</p>
                   <p>50+</p>
@@ -45,7 +45,7 @@ const About = () => {
                   <p>350+</p>
                 </div>
               </div>
-              <div className="col-lg-6 col-md-12">
+              <div className="col-6">
               <div className="out-box-blue my-3">
                   <p>Mobile Apps</p>
                   <p>150+</p>

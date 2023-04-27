@@ -10,17 +10,9 @@
     font-size: 30px;
     font-weight: 700;
     font-family: sans-serif;
-    padding: 50px;
+    padding: 20px;
   }
-  .underline {
-    content: "";
-    width: 80px;
-    height: 4px;
-    background: #d6aa0b;
-    display: block;
-    /* margin: -9px 0px 15px 0px; */
-    align-items: center;
-  }
+ 
   .services-heading-text {
     text-align: center;
     font-family: sans-serif;

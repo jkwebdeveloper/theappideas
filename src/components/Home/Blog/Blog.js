@@ -11,17 +11,41 @@ const Blog = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
-    <div style={{ position: "relative" }}>
+    <div className="blog-section" style={{paddingBottom: '50px'}}>
       <div className="container ">
         <div className="blog-headidng">
           <h2>Our Latest Blogs</h2>
-          <div className="underline"></div>
+          <div className="blog-line">
+            <div className="underline"></div>
+          </div>
         </div>
         <Swiper
           modules={[Pagination, Autoplay, Navigation]}
           spaceBetween={20}
           slidesPerView={3}
           loop={true}
+          breakpoints={{
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            425: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            640: {
+              slidesPerView: 1,
+              spaceBetween: 30,
+            },
+            768: {
+              slidesPerView: 2,
+              spaceBetween: 20,
+            },
+            1024: {
+              slidesPerView: 3,
+              spaceBetween: 20,
+            },
+          }}
           autoplay={{
             delay: 2000,
             disableOnInteraction: false,
@@ -30,7 +54,7 @@ const Blog = () => {
           speed={500}
           direction={"horizontal"}
           pagination
-          navigation
+          // navigation
           onSwiper={(swiper) => {
             // Delay execution for the refs to be defined
             setTimeout(() => {
@@ -81,7 +105,7 @@ const Blog = () => {
             <div className="card">
               <div className="image-box">
                 <img
-                  src={require("../../../assets/images/blog-slider/1-1-1.webp")}
+                  src={require("../../../assets/images/blog-slider/Cost-to-Build-an-Educational-App-for-Kids-The-App-Ideas.webp")}
                   alt=""
                 />
               </div>
@@ -112,7 +136,7 @@ const Blog = () => {
             <div className="card">
               <div className="image-box">
                 <img
-                  src={require("../../../assets/images/blog-slider/1-1-1.webp")}
+                  src={require("../../../assets/images/blog-slider/Dunzo.webp")}
                   alt=""
                 />
               </div>
@@ -143,7 +167,7 @@ const Blog = () => {
             <div className="card">
               <div className="image-box">
                 <img
-                  src={require("../../../assets/images/blog-slider/1-1-1.webp")}
+                  src={require("../../../assets/images/blog-slider/Wedding-Website-Development-The-App-Ideas.webp")}
                   alt=""
                 />
               </div>
@@ -174,7 +198,7 @@ const Blog = () => {
             <div className="card">
               <div className="image-box">
                 <img
-                  src={require("../../../assets/images/blog-slider/1-1-1.webp")}
+                  src={require("../../../assets/images/blog-slider/blog_banner-1.jpg")}
                   alt=""
                 />
               </div>
@@ -205,7 +229,131 @@ const Blog = () => {
             <div className="card">
               <div className="image-box">
                 <img
-                  src={require("../../../assets/images/blog-slider/1-1-1.webp")}
+                  src={require("../../../assets/images/blog-slider/blog_banner.jpg")}
+                  alt=""
+                />
+              </div>
+              <div className="top-btn">
+                <button className="view-right">App ideas</button>
+                <button className="view-right">Application</button>
+              </div>
+              <div className="profile-details">
+                <div className="name-job">
+                  <h3 className="name">
+                    How Much Does It Cost to Develop A Grocery Delivery App like
+                    Instacart?
+                  </h3>
+                  <br />
+                  <h4 className="job">By Chirag Panchal/ April 24,2023</h4>
+                  <br />
+                  <h4 className="job">
+                    Hire in this article, we are going to discuss the Grocery
+                    Delivery...
+                  </h4>
+                  <br />
+                  <button className="read-btn">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card">
+              <div className="image-box">
+                <img
+                  src={require("../../../assets/images/blog-slider/car-parking.webp")}
+                  alt=""
+                />
+              </div>
+              <div className="top-btn">
+                <button className="view-right">App ideas</button>
+                <button className="view-right">Application</button>
+              </div>
+              <div className="profile-details">
+                <div className="name-job">
+                  <h3 className="name">
+                    How Much Does It Cost to Develop A Grocery Delivery App like
+                    Instacart?
+                  </h3>
+                  <br />
+                  <h4 className="job">By Chirag Panchal/ April 24,2023</h4>
+                  <br />
+                  <h4 className="job">
+                    Hire in this article, we are going to discuss the Grocery
+                    Delivery...
+                  </h4>
+                  <br />
+                  <button className="read-btn">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card">
+              <div className="image-box">
+                <img
+                  src={require("../../../assets/images/blog-slider/car-wash-app.webp")}
+                  alt=""
+                />
+              </div>
+              <div className="top-btn">
+                <button className="view-right">App ideas</button>
+                <button className="view-right">Application</button>
+              </div>
+              <div className="profile-details">
+                <div className="name-job">
+                  <h3 className="name">
+                    How Much Does It Cost to Develop A Grocery Delivery App like
+                    Instacart?
+                  </h3>
+                  <br />
+                  <h4 className="job">By Chirag Panchal/ April 24,2023</h4>
+                  <br />
+                  <h4 className="job">
+                    Hire in this article, we are going to discuss the Grocery
+                    Delivery...
+                  </h4>
+                  <br />
+                  <button className="read-btn">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card">
+              <div className="image-box">
+                <img
+                  src={require("../../../assets/images/blog-slider/image-18.webp")}
+                  alt=""
+                />
+              </div>
+              <div className="top-btn">
+                <button className="view-right">App ideas</button>
+                <button className="view-right">Application</button>
+              </div>
+              <div className="profile-details">
+                <div className="name-job">
+                  <h3 className="name">
+                    How Much Does It Cost to Develop A Grocery Delivery App like
+                    Instacart?
+                  </h3>
+                  <br />
+                  <h4 className="job">By Chirag Panchal/ April 24,2023</h4>
+                  <br />
+                  <h4 className="job">
+                    Hire in this article, we are going to discuss the Grocery
+                    Delivery...
+                  </h4>
+                  <br />
+                  <button className="read-btn">READ MORE</button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide>
+            <div className="card">
+              <div className="image-box">
+                <img
+                  src={require("../../../assets/images/blog-slider/rover.webp")}
                   alt=""
                 />
               </div>

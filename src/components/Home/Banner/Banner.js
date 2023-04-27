@@ -12,19 +12,6 @@ const Banner = () => {
   const nextRef = useRef(null);
   return (
     <section className="banner-section" style={{ position: "relative" }}>
-      <img
-        src={require("../../../assets/images/sec1-background.webp")}
-        style={{
-          width: "100%",
-          backgroundRepeat: "no-repeat",
-          position: "absolute",
-          top: 0,
-          right: 0,
-          left: 0,
-          bottom: 0,
-        }}
-        alt=""
-      />
       <div style={{ position: "relative" }}>
         <div className="container ">
           <Swiper
@@ -32,6 +19,28 @@ const Banner = () => {
             spaceBetween={20}
             slidesPerView={1}
             loop={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              425: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+            }}
             autoplay={{
               delay: 2000,
               disableOnInteraction: false,
@@ -40,7 +49,7 @@ const Banner = () => {
             speed={1000}
             direction={"horizontal"}
             pagination
-            navigation
+            // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
@@ -54,46 +63,160 @@ const Banner = () => {
                 swiper.navigation.update();
               });
             }}
-            style={{ padding: "2.5rem 0" }}
+            style={{ padding: "1rem 0px 4rem 0px" }}
           >
             <SwiperSlide>
               <div className="row">
-                <div className="col-6">
-                  <img
-                    src={require("../../../assets/images/banner-slider/create-web.webp")}
-                    alt=""
-                  />
+                <div className="col-lg-6 col-md-12">
+                  <div className="slider-img">
+                    <img
+                      src={require("../../../assets/images/banner-slider/mobile-app-slider-1.webp")}
+                      alt=""
+                      style={{ width: "60%", marginLeft: "130px" }}
+                    />
+                  </div>
                 </div>
-                <div className="col-6">
-                  <p>Would you like to create an App?</p>
-                  <p>
+                <div className="col-lg-6 col-md-12">
+                  <p className="slider-heading-dec">
+                    Would you like to create an App?
+                  </p>
+                  <p className="slider-dec">
                     We build most sophisticated and future-ready mobile apps to
                     ensure consistent user engagement and business conversion.
                     From highly demanding modern enterprise apps to a whole
                     array of niche consumer apps, our experience and expertise
                     spans across every mobile app niche and category.
                   </p>
+                  <br />
+                  <div className="silder-btn">
+                    <a href="" className="slider-get_btn">
+                      Contact Us
+                    </a>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
-
             <SwiperSlide>
               <div className="row">
-                <div className="col-6">
-                  <img
-                    src={require("../../../assets/images/banner-slider/create-web.webp")}
-                    alt=""
-                  />
+                <div className="col-lg-6 col-md-12">
+                  <div className="slider-img">
+                    <img
+                      src={require("../../../assets/images/banner-slider/ecommerce.webp")}
+                      alt=""
+                      style={{ width: "70%", marginLeft: "120px" }}
+                    />
+                  </div>
                 </div>
-                <div className="col-6">
-                  <p>Would you like to create an App?</p>
-                  <p>
+                <div className="col-lg-6 col-md-12">
+                  <p className="slider-heading-dec">
+                    Would you like to create an App?
+                  </p>
+                  <p className="slider-dec">
                     We build most sophisticated and future-ready mobile apps to
                     ensure consistent user engagement and business conversion.
                     From highly demanding modern enterprise apps to a whole
                     array of niche consumer apps, our experience and expertise
                     spans across every mobile app niche and category.
                   </p>
+                  <br />
+                  <div className="silder-btn">
+                    <a href="" className="slider-get_btn">
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="row">
+                <div className="col-lg-6 col-md-12">
+                  <div className="slider-img">
+                    <img
+                      src={require("../../../assets/images/banner-slider/game.webp")}
+                      alt=""
+                      style={{ width: "80%", marginLeft: "40px" }}
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12">
+                  <p className="slider-heading-dec">
+                    Would you like to create an App?
+                  </p>
+                  <p className="slider-dec">
+                    We build most sophisticated and future-ready mobile apps to
+                    ensure consistent user engagement and business conversion.
+                    From highly demanding modern enterprise apps to a whole
+                    array of niche consumer apps, our experience and expertise
+                    spans across every mobile app niche and category.
+                  </p>
+                  <br />
+                  <div className="silder-btn">
+                    <a href="" className="slider-get_btn">
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="row">
+                <div className="col-lg-6 col-md-12">
+                  <div className="slider-img">
+                    <img
+                      src={require("../../../assets/images/banner-slider/create-web.webp")}
+                      alt=""
+                      style={{ width: "80%", marginLeft: "40px" }}
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12">
+                  <p className="slider-heading-dec">
+                    Would you like to create an App?
+                  </p>
+                  <p className="slider-dec">
+                    We build most sophisticated and future-ready mobile apps to
+                    ensure consistent user engagement and business conversion.
+                    From highly demanding modern enterprise apps to a whole
+                    array of niche consumer apps, our experience and expertise
+                    spans across every mobile app niche and category.
+                  </p>
+                  <br />
+                  <div className="silder-btn">
+                    <a href="" className="slider-get_btn">
+                      Contact Us
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="row">
+                <div className="col-lg-6 col-md-12">
+                  <div className="slider-img">
+                    <img
+                      src={require("../../../assets/images/banner-slider/iot.webp")}
+                      alt=""
+                      style={{ width: "80%", marginLeft: "40px" }}
+                    />
+                  </div>
+                </div>
+                <div className="col-lg-6 col-md-12">
+                  <p className="slider-heading-dec">
+                    Would you like to create an App?
+                  </p>
+                  <p className="slider-dec">
+                    We build most sophisticated and future-ready mobile apps to
+                    ensure consistent user engagement and business conversion.
+                    From highly demanding modern enterprise apps to a whole
+                    array of niche consumer apps, our experience and expertise
+                    spans across every mobile app niche and category.
+                  </p>
+                  <br />
+                  <div className="silder-btn">
+                    <a href="" className="slider-get_btn">
+                      Contact Us
+                    </a>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>
