@@ -8,6 +8,7 @@ import React, { useEffect, useState } from "react";
 // import LifeGif from "../../assets/images/Header/Company/Life at TAI.gif";
 // import { Link } from "react-router-dom";
 import "./header.css";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   const [sticky, setSticky] = useState("");
@@ -40,11 +41,13 @@ const Header = () => {
           <nav id="navigation1" className="navigation">
             <div className="nav-header">
               <a className="nav-brand" href="#">
+                <Link to='/'>
                 <img
                   src={require("../../assets/images/Header/logo.png")}
                   alt="logo"
                   className="img-fluid"
                 />
+                </Link>
               </a>
               <div className="nav-toggle" />
             </div>
@@ -56,20 +59,27 @@ const Header = () => {
                     <h2 className="megamenu_panel_title">Company</h2>
                     <div className="megamenu-lists">
                       <ul className="megamenu-list list-col-3">
+                        <Link to="/Aboutus">
+                          <li>
+                            <a
+                              href="/"
+                              target="_blank"
+                              className="company_menu"
+                            >
+                              {" "}
+                              <img
+                                src={require("../../assets/images/Header/About-us (1).gif")}
+                                alt="About-us"
+                                style={{width:'36px', height:'36px', objectFit:'cover',marginLeft:'15px'}}
+                              />{" "}
+                              <span className="title">About US</span>
+                            </a>
+                          </li>
+                        </Link>
                         <li>
                           <a href="#" target="_blank" className="company_menu">
-                            {" "}
                             <img
-                              src={require("../../assets/images/Header/About-us.gif")}
-                              alt="About-us"
-                            />{" "}
-                            About US
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank" className="company_menu">
-                            <img
-                              src={require("../../assets/images/Header/Testamonials.gif")}
+                              src={require("../../assets/images/Header/Testamonials (1).gif")}
                               alt="Testamonials"
                             />
                             Testimonial
@@ -81,7 +91,7 @@ const Header = () => {
                           <a href="#" target="_blank" className="company_menu">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Process.gif")}
+                              src={require("../../assets/images/Header/Process (1).gif")}
                               alt="Process"
                             />
                             Our Process
@@ -91,7 +101,7 @@ const Header = () => {
                           <a href="#" target="_blank" className="company_menu">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Carrers.gif")}
+                              src={require("../../assets/images/Header/Carrers (1).gif")}
                               alt="Carrers"
                             />{" "}
                             Carrers
@@ -103,7 +113,7 @@ const Header = () => {
                           <a href="#" target="_blank" className="company_menu">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Our-Team.gif")}
+                              src={require("../../assets/images/Header/Our-Team (1).gif")}
                               alt="Our-Team"
                             />{" "}
                             Our Team
@@ -113,7 +123,7 @@ const Header = () => {
                           <a href="#" target="_blank" className="company_menu">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Life-at-TAI.gif")}
+                              src={require("../../assets/images/Header/Life-at-TAI (1).gif")}
                               alt="Life-at-TAI"
                             />{" "}
                             Life at TAI
