@@ -5,7 +5,6 @@ section {
   /* padding-top: 60px; */
 }
 
-
 .banner-one {
   background-repeat: no-repeat;
   background-position: top left;
@@ -62,18 +61,38 @@ section {
   padding: 35px;
   /* margin-top: 50px; */
 }
-.left-content {
-  font-size: 25px;
+.contact-lft p {
+  font-size: 20px;
   color: #fff;
-  font-weight: 500;
+  margin-bottom: 0;
 }
-.button {
-  padding: 8px 20px 9px 21px;
-  background-color: #f6c000;
+
+.contact__rht {
+  border-left: 1px solid #fff;
+  border-left-style: dotted;
+  border-left-width: unset;
+}
+
+.contact_btn {
+  background: #f6c000;
+  padding: 14px 0;
+  display: block;
+  margin: 7px auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #000;
   font-weight: 700;
-  border: none;
-  border-radius: 32px;
-  float: right;
+  border: 1px solid #f6c000;
+  transition: 0.3s all;
+  text-transform: uppercase;
+}
+
+.contact_btn:hover {
+  border: 1px solid #351040;
+  color: #000;
+  background: #fff;
 }
 /*--------------------------------------------------------------
 # Execute Section end

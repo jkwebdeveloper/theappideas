@@ -10,9 +10,9 @@ const Services = () => {
       {/* ======= Services Section ======= */}
       <section className="services-section style-two">
         <div className="container">
-          <p className="services-heading">Our Services
-          </p>
-            <p className="underline"></p>
+          <div className="services-heading">
+            <h2>Our Services</h2>
+          </div>
           <p className="services-heading-text">
             Over the years we have established ourselves as the leading service
             provider for Mobile App Development, Web Development, Web and

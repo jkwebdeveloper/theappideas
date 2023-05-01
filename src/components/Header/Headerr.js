@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./headerr.css";
 import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Headerr = () => {
@@ -48,11 +50,11 @@ const Headerr = () => {
             </label>
             <li>
               <a href="#" className="desktop-item">
-                Company <i className="fa  fa-angle-down down__arrow" />
+                Company <MdKeyboardArrowDown />
               </a>
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
-                Company <i className="fa  fa-angle-down down__arrow" />
+                Company <MdKeyboardArrowDown />
               </label>
               <div className="mega-box">
                 <div className="content content_sub">
@@ -63,7 +65,7 @@ const Headerr = () => {
                           <a href="#" className="f">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/About-us (1).gif")}
+                              src={require("../../assets/images/Header/Company/About Us.gif")}
                               alt="About-us"
                             />{" "}
                             About Us
@@ -78,7 +80,7 @@ const Headerr = () => {
                         <a href="#" className="company_text">
                           {" "}
                           <img
-                            src={require("../../assets/images/Header/Process (1).gif")}
+                            src={require("../../assets/images/Header/Company/Our Process.gif")}
                             alt="Our-Team"
                           />{" "}
                           Our Process
@@ -92,7 +94,7 @@ const Headerr = () => {
                         <a href="#" className="company_text">
                           {" "}
                           <img
-                            src={require("../../assets/images/Header/Our-Team (1).gif")}
+                            src={require("../../assets/images/Header/Company/Our Team.gif")}
                             alt="Our-Team"
                           />{" "}
                           Our Team
@@ -108,7 +110,7 @@ const Headerr = () => {
                         <a href="#" className="company_text">
                           {" "}
                           <img
-                            src={require("../../assets/images/Header/Testamonials (1).gif")}
+                            src={require("../../assets/images/Header/Company/Testimonial.gif")}
                             alt="Testamonials"
                           />
                           Testimonial
@@ -122,7 +124,7 @@ const Headerr = () => {
                         <a href="#" className="company_text">
                           {" "}
                           <img
-                            src={require("../../assets/images/Header/Carrers (1).gif")}
+                            src={require("../../assets/images/Header/Company/Careers.gif")}
                             alt="Carrers"
                           />{" "}
                           Careers
@@ -136,7 +138,7 @@ const Headerr = () => {
                         <a href="#" className="company_text">
                           {" "}
                           <img
-                            src={require("../../assets/images/Header/Life-at-TAI (1).gif")}
+                            src={require("../../assets/images/Header/Company/Life at TAI.gif")}
                             alt="Life-at-TAI"
                           />{" "}
                           Life at TAI
@@ -165,23 +167,25 @@ const Headerr = () => {
             </li>
             <li>
               <a href="#" className="desktop-item">
-                Services <i className="fa  fa-angle-down down__arrow" />{" "}
+                Services <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega1" />
               <label htmlFor="showMega1" className="mobile-item">
-                Services <i className="fa  fa-angle-down down__arrow" />{" "}
+                Services <MdKeyboardArrowDown />{" "}
               </label>
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
+                    <Link to='/mobile-app-development'>
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Mobile-App-Development.gif"
+                        src={require("../../assets/images/Header/Services/Mobile App Development.gif")}
                         alt="Mobile-App-Development"
                       />
                       Mobile App Development
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">Android App Development</a>
@@ -207,14 +211,16 @@ const Headerr = () => {
                     </ul>
                   </div>
                   <div className="row">
+                    <Link to='/web-development'>
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Web-Development.gif"
+                        src={require("../../assets/images/Header/Services/Web Development.gif")}
                         alt="Web-Development"
                       />{" "}
                       Web Development
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">WordPress Development</a>
@@ -234,7 +240,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/E-commerce-website-Development.gif"
+                        src={require("../../assets/images/Header/Services/E-commerce website Development.gif")}
                         alt="E-commerce-website-Development"
                       />{" "}
                       E-commerce Website Development
@@ -258,7 +264,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Game-Development.gif"
+                        src={require("../../assets/images/Header/Services/Game Development.gif")}
                         alt="Game-Development"
                       />
                       Game Development
@@ -290,7 +296,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Digital-Marketing-Agency.gif"
+                        src={require("../../assets/images/Header/Services/Digital Marketing Agency.gif")}
                         alt="Digital-Marketing-Agency"
                       />{" "}
                       Digital Marketing Agency
@@ -323,7 +329,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Software-Development.gif"
+                        src={require("../../assets/images/Header/Services/Software Development.gif")}
                         alt="Software-Development"
                       />
                       software development
@@ -341,7 +347,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Designing-Services.gif"
+                        src={require("../../assets/images/Header/Services/E-commerce website Development.gif")}
                         alt="Designing-Services"
                       />
                       Designing services
@@ -359,7 +365,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Other-Services.gif"
+                        src={require("../../assets/images/Header/Services/Other Services.gif")}
                         alt="Other-Services"
                       />
                       Other Services
@@ -391,11 +397,11 @@ const Headerr = () => {
             </li>
             <li>
               <a href="#" className="desktop-item">
-                Hire Us <i className="fa  fa-angle-down down__arrow" />{" "}
+                Hire Us <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega2" />
               <label htmlFor="showMega2" className="mobile-item">
-                Hire Us <i className="fa fa-angle-down down__arrow" />
+                Hire Us <MdKeyboardArrowDown />
               </label>
               <div className="mega-box">
                 <div className="content">
@@ -403,7 +409,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Hire-Mobile-App-Developer.gif"
+                        src={require("../../assets/images/Header/Hire Us/Hire Mobile App Developer.gif")}
                         alt="Hire-Mobile-App-Development"
                       />
                       Hire Mobile App Development
@@ -427,7 +433,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Hire-Web-Developer.gif"
+                        src={require("../../assets/images/Header/Hire Us/Hire Web Developer.gif")}
                         alt="Hire-Web-Development"
                       />
                       Hire Web Developer
@@ -463,7 +469,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Hire-Ecommerce-Developer.gif"
+                        src={require("../../assets/images/Header/Hire Us/Hire E-commerce Developer.gif")}
                         alt="Hire-Ecommerce-Developer"
                       />
                       Hire E-commerce Developer
@@ -481,7 +487,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Hire-Designer.gif"
+                        src={require("../../assets/images/Header/Hire Us/Hire Designer.gif")}
                         alt="Hire-Designer"
                       />
                       Hire Designer
@@ -511,11 +517,11 @@ const Headerr = () => {
             </li>
             <li>
               <a href="#" className="desktop-item">
-                Solutions <i className="fa  fa-angle-down down__arrow" />{" "}
+                Solutions <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega3" />
               <label htmlFor="showMega3" className="mobile-item">
-                Solutions <i className="fa fa-angle-down down__arrow" />
+                Solutions <MdKeyboardArrowDown />
               </label>
               <div className="mega-box">
                 <div className="content">
@@ -523,7 +529,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Delivery-App.gif"
+                        src={require("../../assets/images/Header/Solutions/Delivery App.gif")}
                         alt="Delivery-App"
                       />
                       Delivery Apps
@@ -544,7 +550,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/On-Demand-Apps.gif"
+                        src={require("../../assets/images/Header/Solutions/On Demand Apps.gif")}
                         alt="On-Demand-Apps"
                       />
                       On-Demand Apps
@@ -565,7 +571,7 @@ const Headerr = () => {
                     <h4>
                       {" "}
                       <img
-                        src="assets/img/Popular-Solutions.gif"
+                        src={require("../../assets/images/Header/Solutions/Popular Solutions.gif")}
                         alt="Popular-Solutions"
                       />
                       Popular Solutions
@@ -623,10 +629,11 @@ const Headerr = () => {
               <a href="#" className="get_a_btn">
                 GET A QUOTE
               </a>
+              {/* <button class="custom-btn btn-15">Read More</button> */}
             </li>
           </ul>
           <label htmlFor="menu-btn" className="btn menu-btn">
-            <i className="fa fa-bars" />
+            <AiOutlineMenu />
           </label>
         </div>
       </nav>

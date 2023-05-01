@@ -11,13 +11,10 @@ const Blog = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
-    <div className="blog-section" style={{paddingBottom: '50px'}}>
+    <div className="blog-section" style={{ paddingBottom: "50px" }}>
       <div className="container ">
-        <div className="blog-headidng">
+        <div className="blog-heading">
           <h2>Our Latest Blogs</h2>
-          <div className="blog-line">
-            <div className="underline"></div>
-          </div>
         </div>
         <Swiper
           modules={[Pagination, Autoplay, Navigation]}

@@ -7,8 +7,20 @@
   font-family: sans-serif;
   padding-bottom: 30px;
 }
+.work-heading h2::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 8px auto;
+}
 .dec {
   font-size: 25px;
   font-weight: bold;
   font-family: sans-serif;
+}
+.work_slider_section {
+  box-shadow: -4px 0px 26px #c3c3c3;
+  background: #fff;
 }

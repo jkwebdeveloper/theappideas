@@ -13,6 +13,22 @@
   color: #000;
   padding-bottom: 10px;
 }
+.about-heading h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin-top: 5px;
+}
+.About-left-heading h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 8px auto;
+}
 .About-left-heading {
   font-size: 32px;
   font-weight: 500;
@@ -20,37 +36,131 @@
   color: #000;
   text-align: center;
 }
-/* .underline-1 {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #d6aa0b;
-  display: block;
-  margin: -9px 0px 15px 0px;
-  align-items: center;
-} */
 .about-text {
   font-size: 18px;
   font-weight: 500;
 }
 
-.out-box {
-  background-image: linear-gradient(to right, #2f0e39, #600360);
-  height: 150px;
-  width: 150px;
-  border-radius: 20px;
-  align-items: center;
-  text-align: center;
-  color: #fff;
-  padding-top: 40px;
+.achievements_box {
+  display: flex;
+  flex-wrap: wrap;
 }
-.out-box-blue {
-    background-image: linear-gradient(to right,#272f6b,#2033c7);
-    height: 150px;
-    width: 150px;
-    border-radius: 20px;
-    align-items: center;
-    text-align: center;
-    color: #fff;
-    padding-top: 40px;
+
+.achievements_box .square {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  flex: 1 1 25%;
+  max-width: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.achievements_box .square:nth-child(2n) {
+  box-shadow: 5px 0px 5px rgba(0, 0, 0, 0.2) inset;
+  background-image: linear-gradient(to right, #272f6b, #2033c7);
+}
+
+.achievements_box .square:nth-child(2n + 1) {
+  background-image: linear-gradient(to right, #2f0e39, #600360);
+}
+
+.achievements_box .square:first-child {
+  box-shadow: none;
+}
+
+.achievements_box .square p.text {
+  padding: 0 8px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 16px;
+  margin: 0 0 10px 0;
+}
+
+.achievements_box .square h2 {
+  margin: 0;
+  color: #fff;
+  font-weight: 700;
+  font-size: 28px;
+}
+
+.achievements_box .triagle {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 20px 0 20px 20px;
+  position: absolute;
+  top: 80px;
+  line-height: 0;
+  border-color: transparent transparent transparent #2133bf;
+  z-index: 999;
+  right: -20px;
+}
+
+.square:nth-child(2n + 1) .triagle {
+  border-color: transparent transparent transparent #5c045d;
+}
+
+.circle {
+  background-color: #fff;
+  border: 15px solid #4d0751;
+  border-radius: 100px;
+  height: 70px;
+  width: 70px;
+  position: absolute;
+  top: -40px;
+  box-shadow: 0 0 6px #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 36px;
+  z-index: 1;
+}
+
+.square:nth-child(2n) .circle {
+  border: 15px solid #2133bf;
+  top: 155px;
+}
+
+.achievements_box .circle p {
+  bottom: -50px;
+  font-size: 50px;
+  position: absolute;
+  display: block;
+  border: 5px solid #fcfcfa;
+  border-radius: 50px;
+  height: 50px;
+  width: 50px;
+  padding: 20px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+.achievements_box .circle p span {
+  font: 700 35px/50px Verdana;
+  color: #a6a6a6;
+}
+
+@media (max-width: 767px) {
+  .achievements_box .square {
+    max-width: 50%;
+    flex: 1 1 50%;
+    margin-bottom: 50px;
   }
+}
+
+@media (max-width: 575px) {
+  .achievements_box .square {
+    max-width: 100%;
+    flex: 1 1 100%;
+    margin-bottom: 50px;
+  }
+
+  .achievements_box .square:nth-child(2n) .circle {
+    top: -40px;
+  }
+  .achievements_box .triagle {
+    right: -12px;
+  }
+}

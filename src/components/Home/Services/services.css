@@ -5,14 +5,21 @@
 .services-section {
     padding-bottom: 100px;
   }
-  .services-heading {
+  .services-heading h2{
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     font-family: sans-serif;
     padding: 20px;
   }
- 
+  .services-heading h2::after {
+    content: "";
+    width: 80px;
+    height: 4px;
+    background: #f6c000;
+    display: block;
+    margin: 8px auto;
+  }
   .services-heading-text {
     text-align: center;
     font-family: sans-serif;

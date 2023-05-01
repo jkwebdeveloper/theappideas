@@ -144,7 +144,65 @@ const AboutUs = () => {
       </section>
       <section className="our-skill-section">
         <div className="container">
-            
+          <div className="skill-heading">
+            <h2>Our Skill</h2>
+          </div>
+          <div className="row">
+            <div className="col-lg-2 col-md-6">
+              <div className="skill-img">
+                <img
+                  src={require("../../assets/images/About-us/skill/Digital-Marketing.png")}
+                  style={{ width: "120px", padding: "8px" }}
+                />
+              </div>
+              <p className="skill-content">Website Development</p>
+            </div>
+            <div className="col-lg-2 col-md-6">
+              <div className="skill-img">
+                <img
+                  src={require("../../assets/images/About-us/skill/Digital-Marketing.png")}
+                  style={{ width: "120px", padding: "8px" }}
+                />
+              </div>
+              <p className="skill-content">Ecommerce Development</p>
+            </div>
+            <div className="col-lg-2 col-md-6">
+              <div className="skill-img">
+                <img
+                  src={require("../../assets/images/About-us/skill/Digital-Marketing.png")}
+                  style={{ width: "120px", padding: "8px" }}
+                />
+              </div>
+              <p className="skill-content">Mobile Development</p>
+            </div>
+            <div className="col-lg-2 col-md-6">
+              <div className="skill-img">
+                <img
+                  src={require("../../assets/images/About-us/skill/Digital-Marketing.png")}
+                  style={{ width: "120px", padding: "8px" }}
+                />
+              </div>
+              <p className="skill-content">IOT Development</p>
+            </div>
+            <div className="col-lg-2 col-md-6">
+              <div className="skill-img">
+                <img
+                  src={require("../../assets/images/About-us/skill/Digital-Marketing.png")}
+                  style={{ width: "120px", padding: "8px" }}
+                />
+              </div>
+              <p className="skill-content">Game Development</p>
+            </div>
+            <div className="col-lg-2 col-md-6">
+              <div className="skill-img">
+                <img
+                  src={require("../../assets/images/About-us/skill/Digital-Marketing.png")}
+                  style={{ width: "120px", padding: "8px" }}
+                />
+              </div>
+              <p className="skill-content">Digital Marketing</p>
+            </div>
+          </div>
         </div>
       </section>
     </div>

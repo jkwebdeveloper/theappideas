@@ -8,8 +8,7 @@ const About = () => {
         <div className="row">
           <div className="col-lg-6 col-md-12">
             <div className="about-heading">
-              <span>About us</span>
-              <div className="underline"></div>
+              <h2>About us</h2>
             </div>
             <p className="about-text">WEB & MOBILE APP DEVELOPMENT COMPANY</p>
             <p>
@@ -31,31 +30,61 @@ const About = () => {
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="About-left-heading">
-              <span>Our Achievements</span>
-              {/* <div className="underline-1"></div> */}
+              <h2>Our Achievements</h2>
             </div>
-            <div className="row">
-              <div className="col-6">
-                <div className="out-box my-3">
-                  <p>Our Team</p>
-                  <p>50+</p>
+
+            <section className="Portfolio_section" style={{paddingBottom:'25px'}}>
+              <div className="achievements_box" style={{paddingTop:'80px'}}>
+                <div className="square">
+                  <div className="circle">
+                    <img
+                      src={require("../../../assets/images/About-us/team.png")}
+                      alt="team"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="triagle" />
+                  <p className="text">Our Team</p>
+                  <h2>50 +</h2>
                 </div>
-                <div className="out-box-blue">
-                  <p>Completed Projects</p>
-                  <p>350+</p>
+                <div className="square">
+                  <div className="circle">
+                    <img
+                      src={require("../../../assets/images/About-us/Completed-Projects.png")}
+                      alt="Completed-Projects"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="triagle" />
+                  <p className="text">Completed Projects</p>
+                  <h2>350 +</h2>
+                </div>
+                <div className="square">
+                  <div className="circle">
+                    <img
+                      src={require("../../../assets/images/About-us/Mobile-Apps.png")}
+                      alt="Mobile-Apps"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="triagle" />
+                  <p className="text">Mobile Apps</p>
+                  <h2>150 +</h2>
+                </div>
+                <div className="square">
+                  <div className="circle">
+                    <img
+                      src={require("../../../assets/images/About-us/Worked-With-Clients.png")}
+                      alt="Worked-With-Clients"
+                      className="img-fluid"
+                    />
+                  </div>
+                  <div className="triagle" />
+                  <p className="text">Worked With Clients</p>
+                  <h2>200 +</h2>
                 </div>
               </div>
-              <div className="col-6">
-              <div className="out-box-blue my-3">
-                  <p>Mobile Apps</p>
-                  <p>150+</p>
-                </div>
-                <div className="out-box">
-                  <p>Worked With Clients</p>
-                  <p>200+</p>
-                </div>
-              </div>
-            </div>
+            </section>
           </div>
         </div>
       </div>
