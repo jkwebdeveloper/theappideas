@@ -18,7 +18,7 @@
 
 .header__section nav .wrapper {
   position: relative;
-  padding: 0px 30px;
+  /* padding: 0px 30px; */
   height: 90px;
   line-height: 90px;
   margin: auto;
@@ -52,7 +52,7 @@
   border-radius: 0px !important;
   transition: all 0.5s ease;
   text-transform: uppercase;
-  padding-bottom: 5px;
+  /* padding-bottom: 5px; */
 }
 
 .company_text {
@@ -113,7 +113,7 @@
 }
 
 .mega-box .content {
-  padding: 25px 20px;
+  padding: 10px 0px;
   display: flex;
   width: 100%;
   justify-content: space-between;
@@ -160,7 +160,7 @@
 .row .mega-links li a {
   padding: 0px;
   color: #000;
-  font-size: 14px;
+  font-size: 13px;
   display: block;
   font-weight: 500;
   text-transform: capitalize;
@@ -175,10 +175,10 @@
   color: #f6c000;
 }
 
-.nav-links li a:hover {
+/* .nav-links li a:hover {
   border-bottom: 2px solid #f6c000;
   border-radius: 0;
-}
+} */
 
 .wrapper .btn {
   color: #fff;
@@ -205,10 +205,10 @@
   color: #000 !important;
   border-radius: 50px !important;
   margin-left: 5px !important;
-  font-size: 22px !important;
+  font-size: 18px !important;
   width: auto !important;
-  line-height: 60px !important;
-  padding: 0 30px !important;
+  line-height: 50px !important;
+  padding: 0 20px !important;
 }
 
 .nav-links li a.get_a_btn {

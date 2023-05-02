@@ -148,7 +148,7 @@ const Headerr = () => {
                   </div>
                 </div>
                 <div className="menu_bottom_content_box">
-                  <div className="row align-items-center py-3">
+                  <div className="row align-items-center">
                     <div className="col-md-8">
                       <div className="menu_bottomm_content_left">
                         <h4>Would you like to execute any project?</h4>
@@ -176,15 +176,15 @@ const Headerr = () => {
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <Link to='/mobile-app-development'>
-                    <h4>
-                      {" "}
-                      <img
-                        src={require("../../assets/images/Header/Services/Mobile App Development.gif")}
-                        alt="Mobile-App-Development"
-                      />
-                      Mobile App Development
-                    </h4>
+                    <Link to="/mobile-app-development">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Mobile App Development.gif")}
+                          alt="Mobile-App-Development"
+                        />
+                        Mobile App Development
+                      </h4>
                     </Link>
                     <ul className="mega-links">
                       <li>
@@ -210,29 +210,37 @@ const Headerr = () => {
                       </li>
                     </ul>
                   </div>
+
                   <div className="row">
-                    <Link to='/web-development'>
                     <h4>
                       {" "}
                       <img
-                        src={require("../../assets/images/Header/Services/Web Development.gif")}
-                        alt="Web-Development"
+                        src={require("../../assets/images/Header/Services/Digital Marketing Agency.gif")}
+                        alt="Digital-Marketing-Agency"
                       />{" "}
-                      Web Development
+                      Digital Marketing Agency
                     </h4>
-                    </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">WordPress Development</a>
+                        <a href="#">SEO</a>
                       </li>
                       <li>
-                        <a href="#">PHP Development</a>
+                        <a href="#">Social Media Marketing</a>
                       </li>
                       <li>
-                        <a href="#">Angular Development</a>
+                        <a href="#">ASO</a>
                       </li>
                       <li>
-                        <a href="#">Webflow Development</a>
+                        <a href="#">Guest Blogging</a>
+                      </li>
+                      <li>
+                        <a href="#">iBeacon App Development</a>
+                      </li>
+                      <li>
+                        <a href="#">IOT App Development</a>
+                      </li>
+                      <li>
+                        <a href="#">Apple Watch App Development</a>
                       </li>
                     </ul>
                   </div>
@@ -293,35 +301,28 @@ const Headerr = () => {
                 </div>
                 <div className="content">
                   <div className="row">
-                    <h4>
-                      {" "}
-                      <img
-                        src={require("../../assets/images/Header/Services/Digital Marketing Agency.gif")}
-                        alt="Digital-Marketing-Agency"
-                      />{" "}
-                      Digital Marketing Agency
-                    </h4>
+                    <Link to="/web-development">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Web Development.gif")}
+                          alt="Web-Development"
+                        />{" "}
+                        Web Development
+                      </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">SEO</a>
+                        <a href="#">WordPress Development</a>
                       </li>
                       <li>
-                        <a href="#">Social Media Marketing</a>
+                        <a href="#">PHP Development</a>
                       </li>
                       <li>
-                        <a href="#">ASO</a>
+                        <a href="#">Angular Development</a>
                       </li>
                       <li>
-                        <a href="#">Guest Blogging</a>
-                      </li>
-                      <li>
-                        <a href="#">iBeacon App Development</a>
-                      </li>
-                      <li>
-                        <a href="#">IOT App Development</a>
-                      </li>
-                      <li>
-                        <a href="#">Apple Watch App Development</a>
+                        <a href="#">Webflow Development</a>
                       </li>
                     </ul>
                   </div>
@@ -378,7 +379,7 @@ const Headerr = () => {
                   </div>
                 </div>
                 <div className="menu_bottom_content_box">
-                  <div className="row align-items-center py-3">
+                  <div className="row align-items-center">
                     <div className="col-md-8">
                       <div className="menu_bottomm_content_left">
                         <h4>Would you like to execute any project?</h4>
