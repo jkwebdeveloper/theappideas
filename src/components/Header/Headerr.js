@@ -617,12 +617,16 @@ const Headerr = () => {
                 </div>
               </div>
             </li>
+            <Link to='/portfolio'>
             <li>
-              <a href="#">Portfolio</a>
+              <a href="/portfolio">Portfolio</a>
             </li>
+            </Link>
+            <Link to="/contactUs">
             <li>
-              <a href="#">Contact Us</a>
+              <a href="/contactUs">Contact Us</a>
             </li>
+            </Link>
             <li>
               <a href="#">Blog</a>
             </li>

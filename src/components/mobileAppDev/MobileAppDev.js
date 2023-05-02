@@ -193,7 +193,7 @@ const MobileAppDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-smartphone-tablet-80-1.png")}
+                      src={require("../../assets/Health and Fitness.png")}
                       alt="smartphone-tablet"
                       className="img-fluid"
                     />
@@ -205,7 +205,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/iPad-app-development.png")}
+                      src={require("../../assets/Game Marketing.png")}
                       alt="smartphone-tablet"
                       className="img-fluid"
                     />

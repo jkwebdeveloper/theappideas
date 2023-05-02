@@ -113,6 +113,682 @@ section {
 .card {
   border: none;
 }
+/* --------------------------------------------------------------------------- */
+/* PortFolio css start */
+
+/* Contact Page CSS Start */
+.contact__form_box {
+  background-color: #280e41;
+  padding: 40px;
+  border-radius: 15px;
+}
+
+.contact__form_box h2 {
+  color: #fff;
+  position: relative;
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.contact__form_box h2::after {
+  content: "";
+  left: 45%;
+  bottom: -10px;
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  display: inline-block;
+  background: #fff;
+}
+
+.contact__form_box input,
+.contact__form_box textarea {
+  border-radius: 2px;
+  color: #333;
+  display: block;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  padding: 6px 10px;
+  height: 38px;
+  width: 100%;
+  line-height: 1.3;
+}
+
+.other_contact_conection h4 {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 20px 0;
+}
+
+.other_contact_conection p {
+  color: #000;
+  margin-top: 0;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+.contact__with__social a {
+  margin: 10px 0;
+  width: 100%;
+  background: #f6c000;
+  display: inline-block;
+  color: #000;
+  font-size: 18px;
+  padding: 10px 0px;
+  text-align: center;
+  text-transform: uppercase;
+  border-radius: 50px;
+  font-weight: 600;
+}
+
+.contact__with__social a .fa {
+  margin-right: 10px;
+}
+
+.social__connection h2 {
+  color: #000;
+  font-weight: 700;
+  font-size: 20px;
+  margin: 30px 0;
+}
+
+.social__connection a {
+  width: 50px;
+  height: 50px;
+  display: inline-block;
+  background: #f6c000;
+  margin: 0 16px 10px 0;
+  color: #000;
+  border-radius: 500%;
+  font-size: 28px;
+  text-align: center;
+  line-height: 50px;
+}
+
+/* Contact Page CSS End */
+
+/* Blog Page CSS Start */
+.blog__section {
+  background-color: #2f0e39;
+}
+
+.blog__title {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+.blog__para {
+  color: #fff;
+  text-align: center;
+  margin: 0 0 20px 0;
+  font-size: 18px;
+}
+
+.blog__search {
+  text-align: center;
+  position: relative;
+  max-width: 576px;
+  margin: 0 auto;
+}
+
+.blog__search input {
+  border-radius: 50px;
+  height: 50px;
+  margin: 0 auto;
+  display: block;
+  color: #000;
+  font-size: 18px;
+  width: 100%;
+  border: none;
+  padding-right: 61px;
+  padding-left: 8px;
+}
+
+.blog__search input:focus-visible {
+  border: none;
+  outline: none;
+}
+
+.blog__search input::placeholder {
+  font-size: 14px;
+  color: #878688;
+}
+
+.blog__search button {
+  position: absolute;
+  right: 4px;
+  top: 3px;
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  background: #2f0e39;
+  border-radius: 50px;
+  color: #f6c000;
+  border: none;
+}
+
+.blog__tabing__box .nav .nav-item .nav-link {
+  padding: 8px 20px;
+  border: 1px solid #000;
+  margin: 10px;
+  transition: 0.3s all;
+  color: #000;
+  font-size: 17px;
+  font-weight: 700;
+  border-radius: 0px;
+}
+
+.blog__tabing__box .nav .nav-item .nav-link.active {
+  background: #f6c000;
+  padding: 8px 20px;
+  border: 1px solid #000;
+  margin: 10px;
+  transition: 0.3s all;
+  color: #000;
+}
+
+/* Blog Page CSS End */
+
+/* Blog Listing Page CSS Start */
+.create_cost_content_lft h2 {
+  line-height: 1.45 !important;
+  font-size: 40px;
+  color: #000;
+  font-weight: 700;
+}
+
+.create_cost_user_box .create_cost_user_img {
+  margin: 0 20px 8px 0;
+}
+
+.create_cost_user_box .create_cost_user_img img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+}
+
+.create_cost_user_box .create_cost_user_text h4 {
+  font-size: 18px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.blog-listing-yellow {
+  color: #d0a302;
+}
+
+.blog-listing-yellow:hover {
+  color: #d0a302;
+}
+
+.create_cost_user_box .create_cost_user_text span {
+  font-size: 16px;
+  color: #747a87;
+}
+
+.create_cost_img {
+  transition: all 0.5s;
+  cursor: pointer;
+  background: 0 0;
+  position: relative;
+}
+
+.create_cost_img img {
+  border-radius: 6px;
+}
+
+.create_cost_img:hover img {
+  transform: translate(0px, -20px);
+  transition: all 0.5s;
+}
+
+.blog_list_tab a {
+  text-decoration: none;
+  background: #f8f9fa !important;
+  border: none;
+  color: #000;
+  padding: 8px 16px;
+  border-radius: 3px;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.blog__listing__social {
+  margin-top: 60px;
+  position: sticky;
+  top: 60px;
+}
+
+.blog__listing__social a {
+  display: inline-block;
+  background: #f1f1f1;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  color: #000;
+  margin-right: 23px;
+  text-align: center;
+  border-radius: 50%;
+  margin-bottom: 14px;
+}
+
+.blog__listing__rht_content p {
+  font-size: 16px;
+  color: #000;
+  line-height: 30px;
+}
+
+.blog__listing__rht_content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  margin: 16px 0;
+}
+
+.blog__listing__rht_content ul {
+  padding-left: 0;
+}
+
+.blog__listing__rht_content ul li,
+.blog__listing__rht_content ol li {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 16px 0;
+}
+
+.blog__listing__bottom_banner {
+  background-image: url('./assets/images/Portfolio/blog-listing-bottom-banner-bg.webp');
+  padding: 30px 16px;
+  border-radius: 20px;
+  height: auto;
+}
+
+.blog__listing__profile {
+  border: 1px solid #eee;
+  padding: 16px 16px 50px 16px;
+}
+
+.blog__listing__bottom_banner_lft h2 {
+  margin: 0;
+  color: #fff;
+  font-size: 22px;
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.blog__listing__profile .blog__listing__profile_img img {
+  border-radius: 50%;
+  box-shadow: 0 0 4px 2px #ccc;
+  width: 100px;
+}
+
+.blog__listing__profile .blog__listing__profile_content h4 a {
+  color: #000;
+  font-size: 26px;
+  font-weight: 700;
+  display: block;
+  padding: 10px 0;
+}
+
+.blog__listing__profile .blog__listing__profile_content p {
+  font-size: 16px;
+  color: #000;
+  text-align: justify;
+  line-height: 28px;
+  margin: 0 0 20px 0;
+}
+
+.blog_listing_pro_btn {
+  background: #ffc819;
+  padding: 10px 20px;
+  display: inline-block;
+  width: auto;
+  margin: 10px 5px;
+  text-align: center;
+  border-radius: 15px;
+  color: #000;
+  font-weight: 500;
+  font-size: 18px;
+}
+
+.blog_listing_pro_btn:hover {
+  color: #000;
+}
+.Portfolio__Blog .nav .nav-item .nav-link {
+  border: 1px solid #fff;
+  /* color: #fff; */
+}
+.Portfolio__Blog .nav .nav-item .nav-link.active {
+  border: 1px solid #fff;
+  background: #f6c000;
+}
+/* Blog Listing Page CSS End */
+
+/* Work We head Section CSS Start */
+.work_head_box {
+  /* background-image: url("../img/work-we-had-bg-one.webp"); */
+  background-image: url("./assets/images/Portfolio/work-we-had-bg-one.webp");
+  object-fit: cover;
+  display: block;
+  width: 100%;
+  height: 400px;
+  background-size: cover !important;
+  background-repeat: no-repeat;
+  background-position: center !important;
+  box-shadow: 0 10px 6px -6px #000;
+  transition: 0.1s ease;
+}
+
+.work_head_box_one {
+  background-image: url("./assets/images/Portfolio/work-we-had-bg-two.webp");
+}
+
+.work_head_box_two {
+  background-image: url("./assets/images/Portfolio/work-we-had-bg-three.webp");
+}
+
+/* .work_head_box .work_head_box_link{
+  height: 100%;
+  
+} */
+.work_head_box .work_head_lft {
+  position: relative;
+  top: 60%;
+  left: 5%;
+}
+
+.work_head_box .work_head_lft h2 {
+  font-size: 32px;
+  line-height: 42px;
+  padding-bottom: 10px;
+  color: #fff;
+}
+
+.work_head_box .work_head_lft ul li {
+  list-style-type: none;
+  display: inline-block;
+  border-right: 2px solid #fff;
+  margin: 0 10px 0 0;
+}
+
+.work_head_box .work_head_lft ul li:last-child {
+  border-right: 0px;
+}
+
+.work_head_box .work_head_lft ul li .work_head_item {
+  font-size: 16px;
+  line-height: 26px;
+  text-transform: capitalize;
+  margin: 0;
+  padding: 0;
+  padding-right: 10px;
+  color: #fff;
+}
+
+.work_head_box .work_head_rht {
+  height: 400px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  padding-right: 3rem;
+}
+
+.work_head_box .work_head_rht img {
+  width: 622px;
+  height: 300px;
+  object-fit: contain;
+}
+
+/* Work We head Section CSS End */
+.port_mobilebg_one {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-onee.webp");
+}
+.port_mobilebg_two {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-two.webp");
+}
+.port_mobilebg_three {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-three.webp");
+}
+.port_mobilebg_four {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-four.webp");
+}
+.port_mobilebg_five {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-five.webp");
+}
+.port_mobilebg_six {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-six.webp");
+}
+.port_mobilebg_sevan {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-seven.webp");
+}
+.port_mobilebg_eight {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-eight.webp");
+}
+.port_mobilebg_nine {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-nine.webp");
+}
+.port_mobilebg_tan {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-tan.webp");
+}
+.port_mobilebg_eleven {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-eleven.webp");
+}
+.port_mobilebg_twelve {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twelve.webp");
+}
+
+.port_mobilebg_thirteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirteen.webp");
+}
+.port_mobilebg_fourteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-forteen.webp");
+}
+.port_mobilebg_fifteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-fifteen.webp");
+}
+.port_mobilebg_sixteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-sixteen.webp");
+}
+.port_mobilebg_sevanteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-sevanteen.webp");
+}
+.port_mobilebg_eighteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-eighteen.webp");
+}
+.port_mobilebg_nineteen {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-nineteen.webp");
+}
+.port_mobilebg_twenty {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twenty.webp");
+}
+.port_mobilebg_twentyone {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentyone.webp");
+}
+.port_mobilebg_twentytwo {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentytwo.webp");
+}
+.port_mobilebg_twentythree {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentythree.webp");
+}
+.port_mobilebg_twentyfour {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentyfour.webp");
+}
+.port_mobilebg_twentyfive {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentyfive.webp");
+}
+.port_mobilebg_twentysix {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentysix.webp");
+}
+.port_mobilebg_twentysevan {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentysevan.webp");
+}
+.port_mobilebg_twentyeight {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentyeight.webp");
+}
+.port_mobilebg_twentynine {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentynine.webp");
+}
+.port_mobilebg_thirty {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirty.webp");
+}
+.port_mobilebg_thirtyone {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirtyone.jpg");
+}
+.port_mobilebg_thirtytwo {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirtytwo.webp");
+}
+.port_mobilebg_thirtythree {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirtythree.webp");
+}
+.port_mobilebg_thirtyfour {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirtyfour.webp");
+}
+.port_mobilebg_thirtyfive {
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-thirtyfive.webp");
+}
+
+.port_webdevelop {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg.webp");
+}
+.port_webdevelopone {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-one.webp");
+}
+.port_webdevelopthree {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-three.webp");
+}
+
+.port_webdevelopfour {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-four.webp");
+}
+.port_webdevelopfive {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-five.webp");
+}
+.port_webdevelopsix {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-six.webp");
+}
+.port_webdevelopsix {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-six.webp");
+}
+
+.port_webdevelopsevan {
+  background-image: url("./assets/images/Portfolio/port-webdevelop-bg-sevan.webp");
+}
+.port_ecommerce {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg.webp");
+}
+.port_ecommerce-one {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-one.webp");
+}
+.port_ecommerce-two {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-two.webp");
+}
+.port_ecommerce-three {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-three.webp");
+}
+.port_ecommerce-four {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-four.webp");
+}
+.port_ecommerce-five {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-five.webp");
+}
+.port_ecommerce-six {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-six.webp");
+}
+.port_ecommerce-sevan {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-sevan.webp");
+}
+.port_ecommerce-eight {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-eight.webp");
+}
+.port_ecommerce-nine {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-nine.webp");
+}
+.port_ecommerce-tan {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-tan.webp");
+}
+.port_ecommerce-eleven {
+  background-image: url("./assets/images/Portfolio/port-ecommerce-bg-eleven.webp");
+}
+
+/* PortFolio css End */
+/* --------------------------------------------------------------------------- */
+
+
+/* Contact Section CSS Start */
+.contact__lft p {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 0;
+  text-align: center;
+}
+
+.contact__rht {
+  border-left: 1px solid #fff;
+  border-left-style: dotted;
+  border-left-width: unset;
+}
+
+.contact_btn {
+  background: #f6c000;
+  padding: 14px 0;
+  display: block;
+  margin: 7px auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  border: 1px solid #f6c000;
+  transition: .3s all;
+  text-transform: uppercase;
+}
+
+.contact_btn:hover {
+  border: 1px solid #351040;
+  color: #000;
+  background: #fff;
+}
+
+/* Contact Section CSS End */
+
+/* Mobile App Development Company Page CSS End */
+
+
+/* Hire IOS Developer Page CSS Start */
+
+/* Our Feat Section CSS Start */
+.contact_btn_new {
+  background: #f6c000;
+  padding: 14px 35px;
+  display: block;
+  margin: 7px auto;
+  width: 180px;
+  text-align: center;
+  border-radius: 50px;
+  font-size: 14px;
+  color: #000;
+  font-weight: 700;
+  border: 1px solid #f6c000;
+  transition: .3s all;
+  text-transform: uppercase;
+  overflow: hidden;
+  position: relative;
+}
+
+.contact_btn_new:hover {
+  color: red;
+}
+/* ------------------------------------------ */
+
+
+
 .footer {
   color: var(--color-white);
   font-size: 14px;

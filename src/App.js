@@ -8,6 +8,8 @@ import AboutUs from "./components/Aboutus/AboutUs";
 import Headerr from "./components/Header/Headerr";
 import MobileAppDev from "./components/mobileAppDev/MobileAppDev";
 import WebDev from "./components/webDevelopment/WebDev";
+import PortFolio from "./pages/PortFolio";
+import ContactUs from "./pages/ContactUs";
 
 const App = () => {
   return (
@@ -19,6 +21,8 @@ const App = () => {
         <Route path="/Aboutus" element={<AboutUs/>}/>
         <Route path="/mobile-app-development" element={<MobileAppDev/>}/>
         <Route path="/web-development" element={<WebDev/>}/>
+        <Route path="/portfolio" element={<PortFolio/>}/>
+        <Route path="/contactUs" element={<ContactUs/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>
