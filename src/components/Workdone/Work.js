@@ -49,7 +49,7 @@ const Work = () => {
           }}
           speed={500}
           direction={"horizontal"}
-          pagination
+          pagination={{ clickable: true }}
           // navigation
           onSwiper={(swiper) => {
             // Delay execution for the refs to be defined

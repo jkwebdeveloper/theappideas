@@ -50,7 +50,7 @@ const Blog = () => {
           }}
           speed={500}
           direction={"horizontal"}
-          pagination
+          pagination={{ clickable: true }}
           // navigation
           onSwiper={(swiper) => {
             // Delay execution for the refs to be defined
@@ -65,7 +65,7 @@ const Blog = () => {
               swiper.navigation.update();
             });
           }}
-          style={{ padding: "2.5rem 0" }}
+          style={{ padding: "2.5rem 0px 4.2rem" }}
         >
           <SwiperSlide>
             <div className="card">

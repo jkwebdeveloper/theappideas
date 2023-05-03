@@ -1,226 +1,406 @@
 import React from "react";
-import { RiMapPinFill } from "react-icons/ri";
-import { FaFacebookF } from "react-icons/fa";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { MdLocationPin } from "react-icons/md";
+import { GoMail } from "react-icons/go";
+import { RiFacebookFill } from "react-icons/ri";
 import { BsTwitter } from "react-icons/bs";
 import { FaLinkedinIn } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
+import { AiFillYoutube } from "react-icons/ai";
 import { BsDribbble } from "react-icons/bs";
-import { FaBehance } from "react-icons/fa";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { GoMail } from "react-icons/go";
+import { AiOutlineBehance } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsSkype } from "react-icons/bs";
+import { RiArrowRightSLine } from "react-icons/ri";
+import appdeveloper from "../assets/images/Footer/app-development-img.svg";
 
 const Footer = () => {
   return (
-    <>
-      {/* ======= Footer ======= */}
-      <footer id="footer" className="footer">
-        <div className="footer-content">
-          <div className="container">
-            <div className="row">
-              <div className="col-lg-3 col-md-6">
-                <div className="footer-info">
-                  <h4>GET IN TOUCH</h4>
-                  <div className="line"></div>
-                  <p>
-                    <RiMapPinFill
-                      style={{ marginRight: "5px", marginTop: "-5px" }}
-                    />
-                    FO-6, Raspan Arcade, Near Rajhans Cinema, Nikol- <br />
-                    Naroda, Ahmedabad-382350.
-                    <br />
-                    <br />
-                    <strong>
-                      <GoMail />
-                    </strong>{" "}
-                    contact@theappideas.com
-                    <br />
-                    <strong>
-                      <BsFillTelephoneFill />
-                    </strong>{" "}
-                    +91 8866564279
-                    <br />
-                    <br />
-                    <BsWhatsapp
-                      style={{ marginRight: "5px", marginTop: "-5px" }}
-                    />
-                    Whats App Me
-                    <br />
-                    <BsSkype
-                      style={{ marginRight: "5px", marginTop: "-5px" }}
-                    />
-                    Skype
-                  </p>
-                </div>
+    <footer className="footer__section">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">On Demand Apps</h2>
+              <ul>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Taxi Booking App
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Security Guard App
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Food Delivery App
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Doctor Hiring App
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">Quick Links</h2>
+              <ul>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Home
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    About Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Portfolio
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Blog
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Contact Us
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Testimonial
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Careers{" "}
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">Services</h2>
+              <ul>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Mobile App Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    IOT Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Web Design &amp; Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    E-commerce Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Game Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Testimonial
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Hire A Developer
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">Solutions</h2>
+              <ul>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Dating App
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Lawyer Website Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Web Design &amp; Development
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Driver Tracking App Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Ecommerce App Solution
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Ecommerce App Solution
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">Get in Touch</h2>
+              <p>
+                <i className="location_map" aria-hidden="true">
+                  <MdLocationPin />
+                </i>
+                <span>
+                  FO-6, Raspan Arcade, Near Rajhans Cinema, Nikol-Naroda,
+                  Ahmedabad-382350.
+                </span>
+              </p>
+              <ul className="ms-2">
+                <li>
+                  <a href="#">
+                    <i style={{ marginRight: "10px", marginLeft: "25px" }}>
+                      <GoMail style={{ color: "#d6aa0b" }} />
+                    </i>
+                    <span>contact@theappideas.com</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i style={{ marginRight: "10px", marginLeft: "25px" }}>
+                      <BsFillTelephoneFill style={{ color: "#d6aa0b" }} />
+                    </i>
+                    <span>+91 8866564279</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i style={{ marginRight: "10px", marginLeft: "25px" }}>
+                      <BsWhatsapp style={{ color: "#d6aa0b" }} />
+                    </i>
+                    <span>Whats App Me</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i style={{ marginRight: "10px", marginLeft: "25px" }}>
+                      <BsSkype style={{ color: "#d6aa0b" }} />
+                    </i>
+                    <span>Skype</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">Follow us</h2>
+              <div className="social__footer">
+                <a href="/">
+                  <RiFacebookFill />
+                </a>
+                <a href="/">
+                  <BsTwitter />
+                </a>
+                <a href="/">
+                  <FaLinkedinIn />
+                </a>
+                <a href="/">
+                  <AiFillYoutube />
+                </a>
+                <a href="/">
+                  <BsDribbble />
+                </a>
+                <a href="/">
+                  <AiOutlineBehance />
+                </a>
               </div>
-              <div className="col-lg-2 col-md-6 footer-links">
-                <h4>QUICK LINKS</h4>
-                <div className="line"></div>
-                <ul>
-                  <li>
-                    <a href="/">Home</a>
-                  </li>
-                  <li>
-                    <a href="/">About us</a>
-                  </li>
-                  <li>
-                    <a href="/">Portfolio</a>
-                  </li>
-                  <li>
-                    <a href="/">Blog</a>
-                  </li>
-                  <li>
-                    <a href="/">Contact Us</a>
-                  </li>
-                  <li>
-                    <a href="/">Testimonial</a>
-                  </li>
-                  <li>
-                    <a href="/">Careers</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-lg-2 col-md-6 footer-links">
-                <h4>SERVICES</h4>
-                <div className="line"></div>
-                <ul>
-                  <li>
-                    <a href="/">Mobile App Development</a>
-                  </li>
-                  <li>
-                    <a href="/">IOT Development</a>
-                  </li>
-                  <li>
-                    <a href="/">Web Design & Development</a>
-                  </li>
-                  <li>
-                    <a href="/">E-commerce Development</a>
-                  </li>
-                  <li>
-                    <a href="/">Game Development</a>
-                  </li>
-                  <li>
-                    <a href="/">Hire A Developer</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-lg-3 col-md-6 footer-links">
-                <h4>SOLUTIONS</h4>
-                <div className="line"></div>
-                <ul>
-                  <li>
-                    <a href="/">Dating App</a>
-                  </li>
-                  <li>
-                    <a href="/">Lawyer Website Solution</a>
-                  </li>
-                  <li>
-                    <a href="/">Driver Tracking App Solution</a>
-                  </li>
-                  <li>
-                    <a href="/">Ecommerce App Solution</a>
-                  </li>
-                  <li>
-                    <a href="/">Elearning Website Solution</a>
-                  </li>
-                </ul>
-              </div>
-              <div className="col-lg-2 col-md-6 footer-links">
-                <h4>ON DEMAND APPS</h4>
-                <div className="line"></div>
-                <ul>
-                  <li>
-                    <a href="/">Taxi Booking App</a>
-                  </li>
-                  <li>
-                    <a href="/">Security Guard App</a>
-                  </li>
-                  <li>
-                    <a href="/">Food Delivery App</a>
-                  </li>
-                  <li>
-                    <a href="/">Doctor Hiring App</a>
-                  </li>
-                </ul>
+              <div className="footer__sitemap my-3">
+                <a href="#" className="sitemap_btn">
+                  Sitemap
+                </a>
               </div>
             </div>
-            <div className="row">
-              <div className="col-lg-8">
-                <h3>AWARDS AND ACCOLADES</h3>
-                <div className="footer-line"></div>
-                <div className="awords-section">
-                  <ul>
-                    <li>
+          </div>
+          <div className="col-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="footer__box">
+              <h2 className="footer_title">Awards and Accolades</h2>
+              <div className="footer__awards">
+                <ul>
+                  <li>
+                    <a href="#" className="footer__awards_achor"></a>
+                    <div className="d-flex">
+                      <a href="#" className="footer__awards_achor">
+                        <div>
+                          <img
+                            src={require("../assets/images/Footer/clutch-logo.png")}
+                            alt="app-development-img"
+                            className="img-fluid"
+                          />
+                        </div>
+                      </a>
+                      <div className="rating_box">
+                        <a href="#" className="footer__awards_achor"></a>
+                        <a href="#">
+                          <span>
+                            <i className="fa fa-star" />
+                          </span>
+                          <span>
+                            <i className="fa fa-star" />
+                          </span>
+                          <span>
+                            <i className="fa fa-star" />
+                          </span>
+                          <span>
+                            <i className="fa fa-star" />
+                          </span>
+                          <span>
+                            <i className="fa fa-star" />
+                          </span>
+                        </a>
+                        <a href="#" className="reviews-count">
+                          <span>42 reviews</span>
+                        </a>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <a href="#" className="footer__awards_achor">
                       <img
-                        src={require("../assets/images/Footer/goodfirms.png")}
-                        style={{ width: "140px" }}
+                        src={appdeveloper}
+                        alt="app-development-img"
+                        className="img-fluid"
                       />
-                    </li>
-                    <li>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="footer__awards_achor">
                       <img
                         src={require("../assets/images/Footer/freelancer-logo-1.webp")}
-                        style={{ width: "120px" }}
+                        alt="freelancer-logo"
+                        className="img-fluid"
                       />
-                    </li>
-                    <li>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="footer__awards_achor">
                       <img
                         src={require("../assets/images/Footer/pph_new.webp")}
-                        style={{ width: "120px" }}
+                        alt="pph_new"
+                        className="img-fluid"
                       />
-                    </li>
-                    <li>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#" className="footer__awards_achor">
                       <img
                         src={require("../assets/images/Footer/upwork_new.webp")}
-                        style={{ width: "120px" }}
+                        alt="upwork_new"
+                        className="img-fluid"
                       />
-                    </li>
-                  </ul>
-                  {/* <img
-                      src={require("../assets/images/Footer/goodfirms.png")}
-                    />
-                    <img
-                      src={require("../assets/images/Footer/freelancer-logo-1.webp")}
-                    />
-                    <img src={require("../assets/images/Footer/pph_new.webp")} />
-                    <img
-                      src={require("../assets/images/Footer/upwork_new.webp")}
-                    /> */}
-                </div>
-              </div>
-              <div className="col-lg-4 ">
-                <h3>FOLLOW US</h3>
-                <div className="footer-line"></div>
-                <div className="social-account">
-                  <ul style={{ display: "flex" }}>
-                    <a href="/">
-                      <FaFacebookF />
                     </a>
-                    <a href="/">
-                      <BsTwitter />
-                    </a>
-                    <a href="/">
-                      <FaLinkedinIn />
-                    </a>
-                    <a href="/">
-                      <FaYoutube />
-                    </a>
-                    <a href="/">
-                      <BsDribbble />
-                    </a>
-                    <a href="/">
-                      <FaBehance />
-                    </a>
-                  </ul>
-                </div>
-                <button className="footer-btn">SITEMAP</button>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
         </div>
-      </footer>
-      {/* End Footer */}
-    </>
+      </div>
+    </footer>
   );
 };
 

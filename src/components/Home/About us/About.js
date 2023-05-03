@@ -33,55 +33,26 @@ const About = () => {
               <h2>Our Achievements</h2>
             </div>
 
-            <section className="Portfolio_section" style={{paddingBottom:'25px'}}>
-              <div className="achievements_box" style={{paddingTop:'80px'}}>
-                <div className="square">
-                  <div className="circle">
-                    <img
-                      src={require("../../../assets/images/About-us/team.png")}
-                      alt="team"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="triagle" />
-                  <p className="text">Our Team</p>
-                  <h2>50 +</h2>
+            <section
+              className="Portfolio_section_wrapper"
+              style={{ paddingTop: "50px" }}
+            >
+              <div className="achievements__section">
+                <div className="achievements_box">
+                  <p>Our Team</p>
+                  <h4>50+</h4>
                 </div>
-                <div className="square">
-                  <div className="circle">
-                    <img
-                      src={require("../../../assets/images/About-us/Completed-Projects.png")}
-                      alt="Completed-Projects"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="triagle" />
-                  <p className="text">Completed Projects</p>
-                  <h2>350 +</h2>
+                <div className="achievements_box achievements_box_top">
+                  <p>Completed Projects</p>
+                  <h4>350+</h4>
                 </div>
-                <div className="square">
-                  <div className="circle">
-                    <img
-                      src={require("../../../assets/images/About-us/Mobile-Apps.png")}
-                      alt="Mobile-Apps"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="triagle" />
-                  <p className="text">Mobile Apps</p>
-                  <h2>150 +</h2>
+                <div className="achievements_box">
+                  <p>Mobile Apps</p>
+                  <h4>150+</h4>
                 </div>
-                <div className="square">
-                  <div className="circle">
-                    <img
-                      src={require("../../../assets/images/About-us/Worked-With-Clients.png")}
-                      alt="Worked-With-Clients"
-                      className="img-fluid"
-                    />
-                  </div>
-                  <div className="triagle" />
-                  <p className="text">Worked With Clients</p>
-                  <h2>200 +</h2>
+                <div className="achievements_box achievements_box_top">
+                  <p>Worked With Clients</p>
+                  <h4>200+</h4>
                 </div>
               </div>
             </section>

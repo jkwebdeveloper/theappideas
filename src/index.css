@@ -403,7 +403,7 @@ section {
 }
 
 .blog__listing__bottom_banner {
-  background-image: url('./assets/images/Portfolio/blog-listing-bottom-banner-bg.webp');
+  background-image: url("./assets/images/Portfolio/blog-listing-bottom-banner-bg.webp");
   padding: 30px 16px;
   border-radius: 20px;
   height: auto;
@@ -719,7 +719,6 @@ section {
 /* PortFolio css End */
 /* --------------------------------------------------------------------------- */
 
-
 /* Contact Section CSS Start */
 .contact__lft p {
   font-size: 20px;
@@ -746,7 +745,7 @@ section {
   color: #000;
   font-weight: 700;
   border: 1px solid #f6c000;
-  transition: .3s all;
+  transition: 0.3s all;
   text-transform: uppercase;
 }
 
@@ -759,7 +758,6 @@ section {
 /* Contact Section CSS End */
 
 /* Mobile App Development Company Page CSS End */
-
 
 /* Hire IOS Developer Page CSS Start */
 
@@ -776,7 +774,7 @@ section {
   color: #000;
   font-weight: 700;
   border: 1px solid #f6c000;
-  transition: .3s all;
+  transition: 0.3s all;
   text-transform: uppercase;
   overflow: hidden;
   position: relative;
@@ -787,191 +785,225 @@ section {
 }
 /* ------------------------------------------ */
 
+/* Footer css start */
 
-
-.footer {
-  color: var(--color-white);
-  font-size: 14px;
+.footer__section {
+  /* background-color: #2f0e39; */
+  /* background-image: linear-gradient(to right,#272f6b,#2033c7); */
+  padding: 30px 0;
 }
 
-.footer .footer-content {
-  background: var(--color-secondary);
-  padding: 60px 0 30px 0;
+.footer__box {
+  padding: 10px;
+  margin-bottom: 20px;
 }
 
-.footer .footer-content .footer-info {
-  margin-bottom: 30px;
-}
-
-.footer .footer-content .footer-info h3 {
-  font-size: 28px;
-  margin: 0 0 20px 0;
-  padding: 2px 0 2px 0;
-  line-height: 1;
-  font-weight: 700;
+.footer__box .footer_title {
+  /* color: #fff; */
+  font-size: 20px;
+  position: relative;
+  padding-bottom: 10px;
+  font-weight: 600;
+  margin-bottom: 15px;
   text-transform: uppercase;
 }
 
-.footer .footer-content .footer-info h3 span {
-  color: var(--color-primary);
-}
-
-.footer .footer-content .footer-info p {
-  font-size: 16px;
-  line-height: 24px;
-  margin-bottom: 0;
-  font-family: var(--font-primary);
-  color: var(--color-white);
-}
-
-.footer .footer-content h4 {
-  font-size: 18px;
-  font-weight: 600;
-  color: var(--color-white);
-  position: relative;
-  padding-bottom: 12px;
-  margin-bottom: 15px;
-}
-.footer .footer-content h3 {
-  /* font-size: 18px; */
-  font-weight: 600;
-  color: var(--color-white);
-  position: relative;
-  padding-bottom: 12px;
-  margin-bottom: 15px;
-  margin-top: 15px;
-}
-.footer-line {
-  content: "";
-  width: 80px;
-  height: 4px;
-  background: #d6aa0b;
-  display: block;
-  margin: -9px 0px 15px 0px;
-  text-align: center;
-  margin-bottom: 30px;
-}
-.awords-section ul li {
-  text-align: center;
-  display: inline-block;
-  padding: 0px 21px 27px 0px;
-}
-.footer .footer-content h4::after {
+.footer__box .footer_title::before {
   content: "";
   position: absolute;
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--color-primary);
-  bottom: 0;
+  bottom: -4px;
   left: 0;
+  display: block;
+  height: 2px;
+  background-color: #e0e0e0;
+  width: 20px;
 }
 
-.footer .footer-content .footer-links {
-  margin-bottom: 30px;
-}
-
-.footer .footer-content .footer-links ul {
-  list-style: none;
-  padding: 0;
-  margin: 0;
-}
-
-.footer .footer-content .footer-links ul i {
-  padding-right: 2px;
-  color: var(--color-white);
-  font-size: 12px;
-  line-height: 1;
-}
-
-.footer .footer-content .footer-links ul li {
-  padding: 10px 0;
-  display: flex;
-  align-items: center;
-}
-
-.footer .footer-content .footer-links ul li:first-child {
-  padding-top: 0;
-}
-
-.footer .footer-content .footer-links ul a {
-  color: rgba(var(--color-white-rgb), 0.7);
-  transition: 0.3s;
-  display: inline-block;
-  line-height: 1;
-}
-
-.footer .footer-content .footer-links ul a:hover {
-  text-decoration: none;
-  color: #d6aa0b;
-}
-
-.footer .footer-content .footer-newsletter form {
-  margin-top: 30px;
-  background: var(--color-white);
-  padding: 6px 10px;
-  position: relative;
-  border-radius: 4px;
-}
-
-.footer .footer-content .footer-newsletter form input[type="email"] {
-  border: 0;
-  padding: 4px;
-  width: calc(100% - 110px);
-}
-
-.footer
-  .footer-content
-  .footer-newsletter
-  form
-  input[type="email"]:focus-visible {
-  outline: none;
-}
-
-.footer .footer-content .footer-newsletter form input[type="submit"] {
+.footer__box .footer_title::after {
+  content: "";
   position: absolute;
-  top: 0;
-  right: -2px;
-  bottom: 0;
-  border: 0;
-  background: none;
-  font-size: 16px;
-  padding: 0 20px;
-  background: var(--color-primary);
-  color: var(--color-white);
-  transition: 0.3s;
-  border-radius: 0 4px 4px 0;
+  bottom: -4px;
+  left: 22px;
+  display: block;
+  height: 2px;
+  background-color: #d6aa0b;
+  width: 36px;
 }
-.awords-section {
-  text-align: center;
+
+.footer__box ul {
+  padding-left: 0;
+  margin-left: -17px;
 }
-.social-account {
-  display: flex;
+
+.footer__box ul li {
+  list-style-type: none;
 }
-.social-account a {
-  background: #5e2b87;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
+
+.footer__box ul li a {
+  font-size: 15px;
+  color: #000;
   line-height: 30px;
-  display: inline-block;
+  transition: all 0.5s;
+  margin-left: -10px;
+  text-decoration: none;
+}
+
+.footer__box ul li a .right__arrow {
+  opacity: 0;
+  padding-right: 0px;
+  transition: all 350ms ease-in-out 0s;
+  font-size: 20px;
+  font-size: 24px;
+}
+
+.footer__box ul li a:hover {
+  color: #f6c000;
+}
+
+.footer__box ul li a:hover .right__arrow {
+  opacity: 1;
+  padding-right: 10px;
+  color: #d6aa0b;
+  transition: all 350ms ease-in-out 0s;
+}
+
+.footer__box p {
+  /* color: #fff; */
+  font-size: 15px;
+}
+
+.footer__box .location_map {
+  color: #d6aa0b;
+  margin-right: 10px;
+  width: 26px;
+  background: #fff;
+  height: 26px;
   text-align: center;
-  margin-right: 5px;
+  line-height: 26px;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+.social__footer a {
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  text-align: center;
+  background: white;
+  line-height: 25px;
+  border-radius: 2px;
+  background-size: 100% 200%;
+  background-position: 5% 5%;
+  transition: background-position 0.3s, color 0.3s;
+  margin-bottom: 10px;
+  font-size: 17px;
+}
+
+.social__footer a:nth-child(1) {
+  color: #fff;
+  background-image: linear-gradient(#5e2b87 50%, #3b5998 50%);
+  margin: 0px 5px 0px 0px;
+}
+
+.social__footer a:nth-child(2) {
+  color: #fff;
+  background-image: linear-gradient(#5e2b87 50%, #00acee 50%);
+  margin: 0px 5px 0px 0px;
+}
+
+.social__footer a:nth-child(3) {
+  color: #fff;
+  background-image: linear-gradient(#5e2b87 50%, #0a66c2 50%);
+  margin: 0px 5px 0px 0px;
+}
+
+.social__footer a:nth-child(4) {
+  color: #fff;
+  background-image: linear-gradient(#5e2b87 50%, #ff0000 50%);
+  margin: 6px 5px 10px 0px;
+}
+
+.social__footer a:nth-child(5) {
+  color: #fff;
+  background-image: linear-gradient(#5e2b87 50%, #ea4c89 50%);
+  margin: 0px 5px 0px 0px;
+}
+
+.social__footer a:nth-child(6) {
+  color: #fff;
+  background-image: linear-gradient(#5e2b87 50%, #0057ff 50%);
+  margin: 0px 5px 0px 0px;
+}
+
+.social__footer a:hover {
+  background-position: 0% 100%;
   color: #fff;
 }
-.footer-btn {
-  background-color: #3d1761;
+
+.sitemap_btn {
+  padding: 10px 20px;
+  background: #d6aa0b;
   border-radius: 22px;
   color: #fff;
   font-weight: 700;
-  width: 100px;
-  height: 36px;
-  margin-left: 90px;
-  margin-top: 20px;
-  border: none;
+  font-size: 15px;
+  transition: all 0.5s;
+  border: 1px solid #d6aa0b;
+  text-transform: uppercase;
+  letter-spacing: 0.7px;
+  text-decoration: none;
 }
-.footer-btn a:hover {
-  background-color: #fff;
-  border-color: #3d1761;
+
+.sitemap_btn:hover {
+  color: #561569;
+  border: 1px solid #561569;
+  background-color: transparent;
+}
+
+.footer__awards ul li {
+  display: inline-block;
+  margin-right: 17px;
+  margin-bottom: 20px;
+}
+
+.footer__awards a:first-child {
+  margin: 0;
+}
+
+.footer__awards a img {
+  width: 65px;
+  height: 65px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.rating_box {
+  display: flex;
+  flex-direction: column;
+  padding-left: 20px;
+}
+
+.rating_box a .fa-star {
+  color: #d6aa0b;
+}
+
+.rating_box .reviews-count span {
   color: #000;
 }
+
+@media (max-width: 767px) {
+  .footer__awards a img {
+    margin-left: 17px;
+  }
+}
+
+@media (max-width: 575px) {
+  .footer__awards ul li {
+    display: block;
+  }
+  .footer__section{
+    display: none;
+  }
+}
+
+/* Footer css End */

@@ -10,6 +10,7 @@ import "swiper/css/navigation";
 const Banner = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
   return (
     <section className="banner-section" style={{ position: "relative" }}>
       <div style={{ position: "relative" }}>
@@ -48,7 +49,7 @@ const Banner = () => {
             }}
             speed={1000}
             direction={"horizontal"}
-            pagination
+            pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
@@ -65,7 +66,7 @@ const Banner = () => {
             }}
             style={{ padding: "1rem 0px 4rem 0px" }}
           >
-            <SwiperSlide>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
@@ -96,7 +97,7 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
@@ -109,14 +110,15 @@ const Banner = () => {
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <p className="slider-heading-dec">
-                    Would you like to create an App?
+                    Would you like to create an E-commerce Store?
                   </p>
                   <p className="slider-dec">
-                    We build most sophisticated and future-ready mobile apps to
-                    ensure consistent user engagement and business conversion.
-                    From highly demanding modern enterprise apps to a whole
-                    array of niche consumer apps, our experience and expertise
-                    spans across every mobile app niche and category.
+                    We are into ecommerce development for decades and have
+                    played an instrumental role in shaping many online brands.
+                    We build most well-equipped, customer-centric and
+                    brand-specific ecommerce stores with rich features,
+                    user-centric design and UX attributes that can steadily make
+                    business conversion.
                   </p>
                   <br />
                   <div className="silder-btn">
@@ -127,7 +129,7 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
@@ -140,14 +142,16 @@ const Banner = () => {
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <p className="slider-heading-dec">
-                    Would you like to create an App?
+                    Would you like to create a Game?
                   </p>
                   <p className="slider-dec">
-                    We build most sophisticated and future-ready mobile apps to
-                    ensure consistent user engagement and business conversion.
-                    From highly demanding modern enterprise apps to a whole
-                    array of niche consumer apps, our experience and expertise
-                    spans across every mobile app niche and category.
+                    We build most engaging and addictive gaming apps across all
+                    major game niches and categories. From simple 2D puzzle or
+                    story book games to immersive racing and action games to
+                    instantly engaging Virtual Reality (AR) and Augmented
+                    Reality (AR) games, we develop and design game apps of every
+                    niche for all platforms including game consoles, VR headsets
+                    and mobile.
                   </p>
                   <br />
                   <div className="silder-btn">
@@ -158,7 +162,7 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
@@ -171,14 +175,15 @@ const Banner = () => {
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <p className="slider-heading-dec">
-                    Would you like to create an App?
+                    DO YOU HAVE A WEBSITE IDEA?
                   </p>
                   <p className="slider-dec">
-                    We build most sophisticated and future-ready mobile apps to
-                    ensure consistent user engagement and business conversion.
-                    From highly demanding modern enterprise apps to a whole
-                    array of niche consumer apps, our experience and expertise
-                    spans across every mobile app niche and category.
+                    Keeping pace with the latest innovations in web development
+                    technologies, we build highly sophisticated, feature-rich
+                    and performance-driven websites of various niches. Our web
+                    development experience and expertise spans across all latest
+                    web development technologies including Progressive Web Apps
+                    (PWA), Accelerated Mobile Pages (AMP) and others.
                   </p>
                   <br />
                   <div className="silder-btn">
@@ -189,7 +194,7 @@ const Banner = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
@@ -202,14 +207,15 @@ const Banner = () => {
                 </div>
                 <div className="col-lg-6 col-md-12">
                   <p className="slider-heading-dec">
-                    Would you like to create an App?
+                    Would you like to create an IoT app?
                   </p>
                   <p className="slider-dec">
-                    We build most sophisticated and future-ready mobile apps to
-                    ensure consistent user engagement and business conversion.
-                    From highly demanding modern enterprise apps to a whole
-                    array of niche consumer apps, our experience and expertise
-                    spans across every mobile app niche and category.
+                    In the world of connected gadgets and IoT ecosystem we make
+                    consistent value additions by allowing users optimum control
+                    and accessibility with a variety of IoT apps. From building
+                    IoT apps for smart home gadgets to connected workplace
+                    environments to smart automation apps for industrial
+                    environments, we offer a broad range of IoT app solutions.
                   </p>
                   <br />
                   <div className="silder-btn">

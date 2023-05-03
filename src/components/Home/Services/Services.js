@@ -1,5 +1,5 @@
 import React from "react";
-import background from "../../../assets/images/Home-our-services/download.png";
+import background from "../../../assets/images/Home-our-services/bg-download.svg";
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import { HiOutlineArrowRight } from "react-icons/hi";
 import './services.css'
