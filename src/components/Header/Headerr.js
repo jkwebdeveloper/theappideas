@@ -30,7 +30,7 @@ const Headerr = () => {
       data-scrollto-offset={0}
     >
       <nav>
-        <div className="wrapper container">
+        <div className="wrapper">
           <div className="logo">
             <Link to="/">
               <a href="/">
@@ -617,18 +617,21 @@ const Headerr = () => {
                 </div>
               </div>
             </li>
+            <li>
             <Link to='/portfolio'>
-            <li>
-              <a href="/portfolio">Portfolio</a>
-            </li>
+              <a>Portfolio</a>
             </Link>
+            </li>
+            <li>
             <Link to="/contactUs">
-            <li>
-              <a href="/contactUs">Contact Us</a>
-            </li>
+              <a>Contact Us</a>
             </Link>
+            </li>
+           
             <li>
-              <a href="#">Blog</a>
+              <Link to="/blog">
+              <a>Blog</a>
+              </Link>
             </li>
             <li>
               <a href="#" className="get_a_btn">

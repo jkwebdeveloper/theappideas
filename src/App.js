@@ -10,19 +10,21 @@ import MobileAppDev from "./components/mobileAppDev/MobileAppDev";
 import WebDev from "./components/webDevelopment/WebDev";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
+import Blog from "./pages/Blog";
 
 const App = () => {
   return (
     <BrowserRouter>
       {/* <Header /> */}
-      <Headerr/>
+      <Headerr />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/Aboutus" element={<AboutUs/>}/>
-        <Route path="/mobile-app-development" element={<MobileAppDev/>}/>
-        <Route path="/web-development" element={<WebDev/>}/>
-        <Route path="/portfolio" element={<PortFolio/>}/>
-        <Route path="/contactUs" element={<ContactUs/>}/>
+        <Route path="/Aboutus" element={<AboutUs />} />
+        <Route path="/mobile-app-development" element={<MobileAppDev />} />
+        <Route path="/web-development" element={<WebDev />} />
+        <Route path="/portfolio" element={<PortFolio />} />
+        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       <Footer />
     </BrowserRouter>

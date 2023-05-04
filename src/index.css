@@ -117,6 +117,9 @@ section {
 /* PortFolio css start */
 
 /* Contact Page CSS Start */
+.header-top-bg {
+  background-color: #2f0e39;
+}
 .contact__form_box {
   background-color: #280e41;
   padding: 40px;
@@ -166,12 +169,12 @@ section {
 .other_contact_conection p {
   color: #000;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 13px;
   font-size: 16px;
 }
 
 .contact__with__social a {
-  margin: 10px 0;
+  margin: 9px 0;
   width: 100%;
   background: #f6c000;
   display: inline-block;
@@ -192,7 +195,7 @@ section {
   color: #000;
   font-weight: 700;
   font-size: 20px;
-  margin: 30px 0;
+  margin: 20px 0;
 }
 
 .social__connection a {
@@ -205,12 +208,68 @@ section {
   border-radius: 500%;
   font-size: 28px;
   text-align: center;
-  line-height: 50px;
+  line-height: 44px;
 }
-
+.social__connection a:hover {
+  background-color: #fff;
+  border: 1px solid #f6c000;
+  color: #000;
+}
 /* Contact Page CSS End */
 
 /* Blog Page CSS Start */
+
+.blog__box {
+  transition: 0.3s all;
+  border: 1px solid #dadada;
+  margin-bottom: 20px;
+}
+
+.blog__box:hover {
+  background: #f6c000;
+}
+
+.blog__box .blog__box__img {
+  height: 234px;
+  width: 100%;
+}
+
+.blog__box .blog__box__img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.blog__box .blog__box__content {
+  padding: 16px;
+  min-height: 110px;
+  max-height: 120px;
+}
+
+.blog__box .blog__box__content h4 {
+  font-size: 16px;
+  text-align: center;
+  color: #000;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.pagination__wrapper .page-item.active .page-link {
+  color: #000;
+  background-color: #f6c000;
+  border-color: #f6c000;
+}
+
+.pagination__wrapper .page-item .page-link {
+  color: #000;
+  border: 1px solid #ddd;
+  font-size: 13px;
+}
+
+.pagination__wrapper .page-item .page-link:hover {
+  background-color: #eee;
+}
+/* .......... */
 .blog__section {
   background-color: #2f0e39;
 }
@@ -221,6 +280,13 @@ section {
   font-size: 30px;
   font-weight: 700;
   margin: 16px 0;
+}
+.blog-title-heading {
+  text-align: center;
+  color: #fff;
+  font-size: 30px;
+  font-weight: 700;
+  margin: 70px 0 20px;
 }
 .blog__para {
   color: #fff;
@@ -1001,7 +1067,7 @@ section {
   .footer__awards ul li {
     display: block;
   }
-  .footer__section{
+  .footer__section {
     display: none;
   }
 }

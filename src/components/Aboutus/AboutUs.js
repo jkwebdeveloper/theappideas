@@ -2,6 +2,8 @@ import React from "react";
 import background from "../../assets/images/Home-our-services/download.png";
 import background1 from "../../assets/images/Home-our-services/download (1).png";
 import "./about.css";
+import { Link } from "react-router-dom";
+import Execute from "../Execute";
 
 const AboutUs = () => {
   return (
@@ -205,6 +207,183 @@ const AboutUs = () => {
           </div>
         </div>
       </section>
+      <section className="our-process-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="process-img">
+                <img
+                  src={require("../../assets/images/About-us/our-process-img.webp")}
+                  alt="our-process"
+                  style={{ width: "100%" }}
+                />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12">
+              <h2 className="Our-Process-title">Our Process</h2>
+              <p className="join-dec">
+                We use a strategically planned and well-organised approach to
+                design, develop, deploy and evaluate the solutions for
+                businesses across the niches. We give enough focus and effort to
+                strategic decisions about the solution followed by a
+                well-articulated and appropriate design approach and lastly
+                smooth deployment to ensure smooth operation as it was meant to
+                deliver.
+              </p>
+              <Link>
+                <button className="our-process-btn" role="button">
+                  CHECK OUT OUR PROCESS
+                </button>
+                {/* <a className="join-btn">Join our team</a> */}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section
+        className="join-us"
+        style={{ paddingTop: "40px", paddingBottom: "50px" }}
+      >
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="join-img">
+                <img
+                  src={require("../../assets/images/About-us/chirag_1.webp")}
+                  alt="chirag"
+                  style={{ width: "222px", padding: "5px" }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/ankita1.webp")}
+                  alt="ankita"
+                  style={{ width: "222px", padding: "5px" }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/PAYAL1.webp")}
+                  alt="payal"
+                  style={{ width: "222px", padding: "5px" }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/mansi1.webp")}
+                  alt="mansi"
+                  style={{ width: "222px", padding: "5px" }}
+                />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12">
+              <div className="join-title">
+                <h2>Join Us</h2>
+              </div>
+              <p className="join-dec">
+                The App Ideas is a leading Web and app development company. We
+                are highly skilled in providing successful solutions for all
+                kinds of businesses and Startups. We have a team of highly
+                proficient developers, creative designers and a team of a
+                creative bunch of thinkers who are having knowledgeable in
+                shaping future-ready mobile and web apps across niches. The App
+                Ideas is a great environment to start a tech career in the best
+                possible way. If you are looking for a job then feel free to
+                reach us and join our team.
+              </p>
+              <Link>
+                <button className="button-69" role="button">
+                  Join our team
+                </button>
+                {/* <a className="join-btn">Join our team</a> */}
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section className="our-clients-section">
+        <div className="container">
+          <div className="row">
+            <div className="col-lg-6 col-md-12 col-sm-12">
+              <h3 className="client-title">Our Clients</h3>
+              <div className="our-clients-img">
+                <img
+                  src={require("../../assets/images/About-us/our-client/bolt_new.png")}
+                  alt="Bolt Delivery Logo"
+                  style={{
+                    width: "160px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    marginRight: "15px",
+                  }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/our-client/footnote_new.png")}
+                  alt="FOOTNOTE Logo"
+                  style={{
+                    width: "160px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    marginRight: "15px",
+                  }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/our-client/mindweel_new.png")}
+                  alt="mindweel logo"
+                  style={{
+                    width: "160px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    marginRight: "15px",
+                  }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/our-client/bravura_new.webp")}
+                  alt="bravura"
+                  style={{
+                    width: "160px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    marginRight: "15px",
+                    marginTop: "15px",
+                  }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/our-client/chef_club_new1.png")}
+                  alt="Chefs Club Collective Logo"
+                  style={{
+                    width: "160px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    marginRight: "15px",
+                    marginTop: "15px",
+                  }}
+                />
+                <img
+                  src={require("../../assets/images/About-us/our-client/snagpay_new.png")}
+                  alt="Snag Pay Logo"
+                  style={{
+                    width: "160px",
+                    boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px",
+                    marginRight: "15px",
+                    marginTop: "15px",
+                  }}
+                />
+              </div>
+            </div>
+            <div className="col-lg-6 col-md-12 col-sm-12">
+              <h3 className="client-title">Work With Us</h3>
+              <p className="client-dec">
+                The App Ideas is a leading software development company. We are
+                highly experienced in developing Website development, Mobile app
+                development, Web app development and E-commerce platform
+                development. We have a team of highly skilled developers and
+                designers who will offer the best and successful software
+                solutions at the best rates. We initially analyze and understand
+                the requirements. We strictly follow the agile methodology, in
+                which we divide projects into small milestones. We take clients
+                approval in every step of the development and deliver the
+                project on the given timeline. You can check our client’s list
+                as well as clients testimonials. START A PROJECT
+              </p>
+              <button className="button-69" role="button">
+                Join our team
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Execute />
     </div>
   );
 };

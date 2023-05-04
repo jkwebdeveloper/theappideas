@@ -18,7 +18,7 @@
 
 .header__section nav .wrapper {
   position: relative;
-  /* padding: 0px 30px; */
+  padding: 0px 120px;
   height: 90px;
   line-height: 90px;
   margin: auto;
@@ -48,7 +48,7 @@
   color: #f2f2f2;
   text-decoration: none;
   font-size: 16px;
-  font-weight: 500;
+  font-weight: 700;
   border-radius: 0px !important;
   transition: all 0.5s ease;
   text-transform: uppercase;
@@ -121,7 +121,7 @@
 }
 
 .mega-box .content.content_sub {
-  padding: 8px 20px;
+  padding: 14px 90px;
 }
 
 .mega-box .content .row {
@@ -160,7 +160,7 @@
 .row .mega-links li a {
   padding: 0px;
   color: #000;
-  font-size: 13px;
+  font-size: 15px;
   display: block;
   font-weight: 500;
   text-transform: capitalize;
@@ -258,6 +258,9 @@
 }
 
 @media screen and (max-width: 991px) {
+  .header__section nav .wrapper{
+    padding: 0 30px;
+  }
   .nav-links li a:hover {
     border-bottom: 0px;
   }
@@ -305,16 +308,18 @@
 
   #close-btn:checked ~ .btn.menu-btn {
     display: block;
+    padding-top: 30px;
   }
 
   .nav-links li {
-    margin: 15px 10px;
+    padding: 0 !important;
   }
 
   .nav-links li a {
-    padding: 0 14px;
+    padding: 0 10px;
     display: block;
-    font-size: 16 px;
+    font-size: 16px;
+    
   }
 
   .nav-links .drop-menu {
@@ -346,7 +351,7 @@
     display: block;
     color: #f2f2f2;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 700;
     padding-left: 20px;
     cursor: pointer;
     border-radius: 5px;
@@ -397,6 +402,8 @@
   .mega-box .content .row {
     width: 100%;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   .mega-box .content .row:nth-child(1) {
@@ -491,13 +498,33 @@
     width: 150px;
   }
 }
-
-@media (max-width: 1101px) and (min-width: 992px) {
+@media(max-width:1365px) and (min-width:1280px){
+  .nav-links li a{
+    font-size: 14px;
+  }
+}
+@media (max-width: 1279px) and (min-width:1024px) {
   .nav-links li {
     margin: 0 4px;
   }
   .nav-links li a {
     font-size: 14px;
+  }
+  .header__section nav .wrapper{
+    padding: 0 50px;
+  }
+}
+
+
+@media (max-width:1023px) and (min-width:992px) {
+  .nav-links li {
+    margin: 0 4px;
+  }
+  .nav-links li a {
+    font-size: 14px;
+  }
+  .header__section nav .wrapper{
+    padding: 0 30px;
   }
 }
 nav input {
