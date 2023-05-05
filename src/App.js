@@ -11,6 +11,7 @@ import WebDev from "./components/webDevelopment/WebDev";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
+import DigitalMarketing from "./components/Digital-Marketing/DigitalMarketing";
 
 const App = () => {
   return (
@@ -21,6 +22,10 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/Aboutus" element={<AboutUs />} />
         <Route path="/mobile-app-development" element={<MobileAppDev />} />
+        <Route
+          path="/Digital-Marketing-Agency"
+          element={<DigitalMarketing />}
+        />
         <Route path="/web-development" element={<WebDev />} />
         <Route path="/portfolio" element={<PortFolio />} />
         <Route path="/contactUs" element={<ContactUs />} />

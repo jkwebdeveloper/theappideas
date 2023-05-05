@@ -1,4 +1,5 @@
 import React from "react";
+import { BiSearch } from "react-icons/bi";
 
 const Blog = () => {
   return (
@@ -10,7 +11,7 @@ const Blog = () => {
             <div className="blog__search">
               <input type="text" placeholder="Search..." />
               <button>
-                <i className="fa fa-search" />
+                <BiSearch style={{ fontSize: "20px" }} />
               </button>
             </div>
           </form>
@@ -136,7 +137,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-1.jpg"
+                            src={require("../assets/images/blog/blog_banner-1.jpg")}
                             alt="blog_banner-1"
                             className="img-fluid"
                           />
@@ -170,7 +171,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-3.webp"
+                            src={require("../assets/images/blog/blog_banner-3.webp")}
                             alt="blog_banner-3"
                             className="img-fluid"
                           />
@@ -188,7 +189,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-4.webp"
+                            src={require("../assets/images/blog/blog_banner-4.webp")}
                             alt="blog_banner-4"
                             className="img-fluid"
                           />
@@ -207,7 +208,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-5.webp"
+                            src={require("../assets/images/blog/blog_banner-5.webp")}
                             alt="blog_banner-5"
                             className="img-fluid"
                           />
@@ -226,7 +227,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-6.webp"
+                            src={require("../assets/images/blog/blog_banner-6.webp")}
                             alt="blog_banner-6"
                             className="img-fluid"
                           />
@@ -245,7 +246,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-7.webp"
+                            src={require("../assets/images/blog/blog_banner-7.webp")}
                             alt="blog_banner-7"
                             className="img-fluid"
                           />
@@ -264,7 +265,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-8.webp"
+                            src={require("../assets/images/blog/blog_banner-8.webp")}
                             alt="blog_banner-8"
                             className="img-fluid"
                           />
@@ -283,7 +284,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src="assets/img/blog/blog_banner-9.webp"
+                            src={require("../assets/images/blog/blog_banner-9.webp")}
                             alt="blog_banner-9"
                             className="img-fluid"
                           />

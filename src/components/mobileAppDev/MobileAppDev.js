@@ -3,6 +3,29 @@ import "./mobileAppDev.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import Work from "../Workdone/Work";
 import TestiMonial from "../Testimonial/TestiMonial";
+import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
+import Application from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
+import Mobileapplication from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
+import IPhoneapp from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/IPhone App Development.svg";
+import Ipadeapp from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/IPad Mobile app development.svg";
+
+import Androidapp from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Android Mobile app development.svg";
+import Androidtablet from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Android Tablet app development.svg";
+import Reskinning from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile App Reskinning.svg";
+import Redesigning from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile App Redesigning.svg";
+import Upgradation from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile App Upgradation.svg";
+import Mobileappsupport from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile app Support and maintenance.svg";
+import Crossplatform from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Cross-platform Mobile Apps.svg";
+
+import Shopping from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Shopping _ E-Commerce.svg";
+import Education from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Education and E-Learning.svg";
+import Banking from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Banking and finance.svg";
+import Travel from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Travel and Tourism.svg";
+import Food from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Food and Drink.svg";
+import SocialNetworking from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Social Networking.svg";
+import lifestyle from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
+import Real from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Real Estate.svg";
+import health from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
 
 const MobileAppDev = () => {
   return (
@@ -64,9 +87,10 @@ const MobileAppDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/Mobile-App-Development.png")}
+                        src={mobileApp}
                         alt="Mobile-App-Development"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Mobile App Development</h4>
                     </div>
@@ -74,9 +98,10 @@ const MobileAppDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/Mobile-Application-Development-Company.png")}
-                        alt="Mobile-App-Development"
+                        src={Application}
+                        alt="Mobile-Application-Development"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Mobile Application Development Company </h4>
                     </div>
@@ -84,9 +109,10 @@ const MobileAppDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/Mobile-Application-Developer.png")}
-                        alt="Mobile-App-Development"
+                        src={Mobileapplication}
+                        alt="Mobile-Application-Development"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Mobile Application Developer</h4>
                     </div>
@@ -115,8 +141,7 @@ const MobileAppDev = () => {
                           <input
                             type="email"
                             className="form-control"
-                            placeholder="Email*
-                                      "
+                            placeholder="Email*"
                             aria-label="Email"
                           />
                         </div>
@@ -193,7 +218,7 @@ const MobileAppDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/Health and Fitness.png")}
+                      src={IPhoneapp}
                       alt="smartphone-tablet"
                       className="img-fluid"
                     />
@@ -205,7 +230,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/Game Marketing.png")}
+                      src={Ipadeapp}
                       alt="smartphone-tablet"
                       className="img-fluid"
                     />
@@ -218,7 +243,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-touchscreen-80-1.png")}
+                      src={Androidapp}
                       alt="smartphone-tablet"
                       className="img-fluid"
                     />
@@ -230,7 +255,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android-tablet-app-development.png")}
+                      src={Androidtablet}
                       alt="smartphone-tablet"
                       className="img-fluid"
                     />
@@ -243,7 +268,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-smart-watch-80-1.png")}
+                      src={Reskinning}
                       alt="smart-watch"
                       className="img-fluid"
                     />
@@ -255,7 +280,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Mobile-App-Redesigning.png")}
+                      src={Redesigning}
                       alt="Mobile-App-Redesigning"
                       className="img-fluid"
                     />
@@ -267,7 +292,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Mobile-App-Upgradation.png")}
+                      src={Upgradation}
                       alt="Mobile-App-Upgradation"
                       className="img-fluid"
                     />
@@ -279,7 +304,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-service-80-1.png")}
+                      src={Mobileappsupport}
                       alt="service-icon"
                       className="img-fluid"
                     />
@@ -291,7 +316,7 @@ const MobileAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Cross-platform-Mobile-Apps.png")}
+                      src={Crossplatform}
                       alt="Cross-platform-Mobile-Apps"
                       className="img-fluid"
                     />
@@ -433,7 +458,7 @@ const MobileAppDev = () => {
                         className="service__provide_tab service__provide_tab_active"
                       >
                         <img
-                          src="assets/img/shopping-1.png"
+                          src={Shopping}
                           alt="shopping-1"
                           className="img-fluid"
                         />
@@ -443,7 +468,7 @@ const MobileAppDev = () => {
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
                         <img
-                          src="assets/img/health-and-fitness-1.png"
+                          src={health}
                           alt="health-and-fitness-1"
                           className="img-fluid"
                         />
@@ -453,7 +478,7 @@ const MobileAppDev = () => {
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
                         <img
-                          src="assets/img/education-1.png"
+                          src={Education}
                           alt="smartphone-tablet"
                           className="img-fluid"
                         />
@@ -463,7 +488,7 @@ const MobileAppDev = () => {
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
                         <img
-                          src="assets/img/banking-1.png"
+                          src={Banking}
                           alt="banking-1"
                           className="img-fluid"
                         />
@@ -472,28 +497,20 @@ const MobileAppDev = () => {
                     </div>
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/travel-1.png"
-                          alt="travel"
-                          className="img-fluid"
-                        />
+                        <img src={Travel} alt="travel" className="img-fluid" />
                         <p>Travel &amp; Tourism</p>
                       </a>
                     </div>
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/food-1-1.png"
-                          alt="food-1-1"
-                          className="img-fluid"
-                        />
+                        <img src={Food} alt="food-1-1" className="img-fluid" />
                         <p>Food &amp; Drink</p>
                       </a>
                     </div>
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
                         <img
-                          src="assets/img/Social-Networking.png"
+                          src={SocialNetworking}
                           alt="Social-Networking"
                           className="img-fluid"
                         />
@@ -503,7 +520,7 @@ const MobileAppDev = () => {
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
                         <img
-                          src="assets/img/lifestyle.png"
+                          src={lifestyle}
                           alt="lifestyle"
                           className="img-fluid"
                         />
@@ -513,7 +530,7 @@ const MobileAppDev = () => {
                     <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
                       <a href="#" className="service__provide_tab">
                         <img
-                          src="assets/img/Real-Estate.png"
+                          src={Real}
                           alt="Real-Estate"
                           className="img-fluid"
                         />

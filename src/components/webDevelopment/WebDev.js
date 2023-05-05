@@ -1,9 +1,32 @@
 import React from "react";
-import "./webDev.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../Testimonial/TestiMonial";
 import WorkSlider from "../WorkSlider";
+import mobileweb from "../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg";
+import mobileaap from "../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg";
+import webapp from "../../assets/images/SERVICES/WEB DEVELOPMENT/Website Development Company.svg";
 
+// Service section image
+import CustomWebsite from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Custom Website Development.svg";
+import smartphone from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Website Development.svg";
+import webimprovement from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Website Improvement.svg";
+import Websitemaintenance from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Website Maintenance.svg";
+import web from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Web app.svg";
+import websiteupgrade from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Website Upgrade.svg";
+import websiteredesign from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Website Redesign.svg";
+import webAPICreations from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Web APIs creations.svg";
+import Integration from "../../assets/images/SERVICES/WEB DEVELOPMENT/Why choose us/Integration with the third parties APIs.svg";
+
+// service provide section images
+import Food from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Food Industry.svg";
+import Retail from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Retail Industry.svg";
+import Transport from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Transport Industry.svg";
+import Education from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Education Industry.svg";
+import Business from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Business Industry.svg";
+import Recruitment from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Recruitment Industry.svg";
+import Software from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Software Industry.svg";
+import Finance from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Finance Industry.svg";
+import Insurance from "../../assets/images/SERVICES/WEB DEVELOPMENT/Industries We Serve/Insurance Industry.svg";
 const WebDev = () => {
   return (
     <>
@@ -61,9 +84,10 @@ const WebDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/Mobile-App-Development.png")}
+                        src={mobileweb}
                         alt="Mobile-App-Development"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Mobile App Development</h4>
                     </div>
@@ -71,9 +95,10 @@ const WebDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/Mobile-Application-Development-Company.png")}
+                        src={mobileaap}
                         alt="Mobile-App-Development"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Mobile Application Development Company </h4>
                     </div>
@@ -81,9 +106,10 @@ const WebDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/Mobile-Application-Developer.png")}
+                        src={webapp}
                         alt="Mobile-App-Development"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Mobile Application Developer</h4>
                     </div>
@@ -167,18 +193,15 @@ const WebDev = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Services we provide</h3>
+            <h3>Why choose us for Website Designing & Development?</h3>
             <p>
-              Over the years, with a team of Experienced, Skilled and Creative
-              bunch of the{" "}
-              <a href="#">
-                <b>Mobile app developers</b>
-              </a>
-              and UI/UX designer, We have worked on various themes based as well
-              as customized mobile app solution which will be best for your
-              Business. We help our clients with innovative ideas and unique
-              designs which helps in providing the best user experiences to the
-              business.
+              The App Ideas with a team of creative minds and experienced web
+              development professionals can help you shape your web presence to
+              cater to the target audience. With every business looking for its
+              own space on the web it is increasingly becoming competitive and
+              this is why to help you connect your audience with the brand
+              message we focus on custom website solutions instead of run of the
+              mill web development
             </p>
           </div>
           <div className="row mt-5">
@@ -190,24 +213,25 @@ const WebDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-smartphone-tablet-80-1.png")}
-                      alt="smartphone-tablet"
+                      src={smartphone}
+                      alt="Website-Development"
                       className="img-fluid"
                     />
                     <p>
-                      IPhone App <br /> Development
+                      Website
+                      <br /> Development
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/iPad-app-development.png")}
-                      alt="smartphone-tablet"
+                      src={CustomWebsite}
+                      alt="Custom Website-Development"
                       className="img-fluid"
                     />
                     <p>
-                      Ipad App <br />
+                      Custom Website <br />
                       Development
                     </p>
                   </a>
@@ -215,85 +239,86 @@ const WebDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-touchscreen-80-1.png")}
-                      alt="smartphone-tablet"
+                      src={webimprovement}
+                      alt="website-improvement"
                       className="img-fluid"
                     />
                     <p>
-                      Android App <br /> Development
+                      Website <br />
+                      Improvement
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android-tablet-app-development.png")}
-                      alt="smartphone-tablet"
+                      src={Websitemaintenance}
+                      alt="Website-maintenance"
                       className="img-fluid"
                     />
                     <p>
-                      Android tablet <br />
-                      App Development
+                      Website <br />
+                      Maintenance
+                    </p>
+                  </a>
+                </div>
+                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                  <a href="#" className="service__provide_tab">
+                    <img src={web} alt="web-App" className="img-fluid" />
+                    <p>
+                      Web <br /> App
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-smart-watch-80-1.png")}
-                      alt="smart-watch"
+                      src={websiteupgrade}
+                      alt="website-upgrade"
                       className="img-fluid"
                     />
                     <p>
-                      Mobile App <br /> Reskinning
+                      Website <br />
+                      Upgrade
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Mobile-App-Redesigning.png")}
-                      alt="Mobile-App-Redesigning"
+                      src={websiteredesign}
+                      alt="Website-redesign"
                       className="img-fluid"
                     />
                     <p>
-                      Mobile App <br /> Redesigning
+                      Website <br />
+                      Redesign
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Mobile-App-Upgradation.png")}
-                      alt="Mobile-App-Upgradation"
+                      src={webAPICreations}
+                      alt="web-API-Creations"
                       className="img-fluid"
                     />
                     <p>
-                      Mobile App <br /> Upgradation
+                      Web APIs <br />
+                      Creations
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/icons8-service-80-1.png")}
-                      alt="service-icon"
+                      src={Integration}
+                      alt="Integration"
                       className="img-fluid"
                     />
                     <p>
-                      Mobile app support <br /> and service
-                    </p>
-                  </a>
-                </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
-                    <img
-                      src={require("../../assets/images/MobileAppDev/Cross-platform-Mobile-Apps.png")}
-                      alt="Cross-platform-Mobile-Apps"
-                      className="img-fluid"
-                    />
-                    <p>
-                      Cross-platform <br /> mobile App
+                      Integration With The <br />
+                      Third Parties APIs
                     </p>
                   </a>
                 </div>
@@ -302,30 +327,29 @@ const WebDev = () => {
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="service_rht">
                 <div className="Title">
-                  <h3 className="Title_heading">IPhone App Development</h3>
+                  <h3 className="Title_heading">Website Development</h3>
                   <p className="Title_para">
-                    The App Ideas is one of the leading web as well as mobile
-                    app development company. We are highly experienced in
-                    providing the best Mobile app services for Android devices
-                    as well as for IOS devices. We have a team of highly skilled
-                    IOS app developers who are efficient in providing successful
-                    iPhone app development services. We are highly expert in
-                    deploying successful iPhone Mobile app development as per
-                    the client’s requirements.
+                    The App Ideas is one of the most popular web development
+                    company. We offer the best services for website development
+                    for all kinds of businesses and categories. We are highly
+                    experienced as well as experts in providing the best web
+                    development services by accessing the trendy technologies.
+                    We have worked on various website development and provide
+                    the best solution at the best possible rates as per the
+                    client’s requirements.
                   </p>
                   <p className="Title_para">
-                    Are you looking for the best iPhone App Development
-                    services?
+                    Are you looking for the best Website Development services?
                   </p>
                   <p className="Title_para">
-                    If Yes, then without taking much time, let’s get connected.
-                    We are happy to help you to launch a successful iPhone
-                    Mobile app services which will be very profitable for your
-                    business. We mainly follow the steps like initially, we
-                    gather the requirements, analyze the client’s requirements,
-                    have a meeting for clearing all the doubt of the clients,
-                    divide the overall project into milestones, take clients
-                    approval in every stage and deliver the project on time.
+                    If yes, then this is probably the best time for you to think
+                    and make an investment in digitalizing your business with
+                    advanced features. We are happy to help you to launch a
+                    successful website development service which will be very
+                    advantageous for the business. We initially gather the
+                    requirements, analyze your requirements, arrange a meeting,
+                    update clients at every module development and deploy the
+                    project on time.
                   </p>
                 </div>
               </div>
@@ -345,54 +369,54 @@ const WebDev = () => {
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
-                    src={require("../../assets/images/MobileAppDev/technogies-img/obj-c-icon.png")}
-                    alt="obj-c-icon"
+                    src={require("../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/wp.png")}
+                    alt="Wordpress"
                     className="img-fluid"
                   />
-                  <h2>Objective C</h2>
+                  <h2>Wordpress</h2>
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
-                    src={require("../../assets/images/MobileAppDev/technogies-img/swift-icon.png")}
-                    alt="swift-icon"
+                    src={require("../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/php.png")}
+                    alt="PHP"
                     className="img-fluid"
                   />
-                  <h2>Swift</h2>
+                  <h2>PHP</h2>
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
-                    src={require("../../assets/images/MobileAppDev/technogies-img/java.png")}
-                    alt="Java"
+                    src={require("../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/an.png")}
+                    alt="Angular"
                     className="img-fluid"
                   />
-                  <h2>Java</h2>
+                  <h2>Angular</h2>
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
-                    src={require("../../assets/images/MobileAppDev/technogies-img/kotlin.png")}
-                    alt="kotlin"
+                    src={require("../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/react-js.png")}
+                    alt="React-Js"
                     className="img-fluid"
                   />
-                  <h2>Kotlin</h2>
+                  <h2>ReactJs</h2>
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
-                    src={require("../../assets/images/MobileAppDev/technogies-img/react-native.png")}
-                    alt="react-native"
+                    src={require("../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/node-js.png")}
+                    alt="Node-Js"
                     className="img-fluid"
                   />
-                  <h2>React Native</h2>
+                  <h2>Node Js</h2>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              {/* <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/flutter.png")}
@@ -401,7 +425,7 @@ const WebDev = () => {
                   />
                   <h2>Flutter</h2>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </section>
@@ -412,14 +436,6 @@ const WebDev = () => {
             <div className="container">
               <div className="Title">
                 <h3>Industries We Serve</h3>
-                <p>
-                  We are highly proficient in offering mobile app development
-                  company services across multiple industries over the years as
-                  well as we have also helped various businesses in various
-                  domains. We have served a wide range of industries like
-                  Finance, Government, Real Estate, Retail, Healthcare, Travel
-                  and more.
-                </p>
               </div>
               <div className="row mt-5">
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
@@ -430,92 +446,117 @@ const WebDev = () => {
                         className="service__provide_tab service__provide_tab_active"
                       >
                         <img
-                          src="assets/img/shopping-1.png"
-                          alt="shopping-1"
-                          className="img-fluid"
-                        />
-                        <p>Shopping &amp; E-Commerce</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/health-and-fitness-1.png"
-                          alt="health-and-fitness-1"
-                          className="img-fluid"
-                        />
-                        <p>Health &amp; Fitness</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/education-1.png"
-                          alt="smartphone-tablet"
-                          className="img-fluid"
-                        />
-                        <p>Education &amp; E-Learning</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/banking-1.png"
-                          alt="banking-1"
-                          className="img-fluid"
-                        />
-                        <p>Banking &amp; Finance</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/travel-1.png"
-                          alt="travel"
-                          className="img-fluid"
-                        />
-                        <p>Travel &amp; Tourism</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/food-1-1.png"
-                          alt="food-1-1"
-                          className="img-fluid"
-                        />
-                        <p>Food &amp; Drink</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/Social-Networking.png"
-                          alt="Social-Networking"
-                          className="img-fluid"
-                        />
-                        <p>Social Networking</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/lifestyle.png"
-                          alt="lifestyle"
-                          className="img-fluid"
-                        />
-                        <p>lifestyle &amp; mobility</p>
-                      </a>
-                    </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
-                        <img
-                          src="assets/img/Real-Estate.png"
-                          alt="Real-Estate"
+                          src={Food}
+                          alt="Food-Industry"
                           className="img-fluid"
                         />
                         <p>
-                          Real <br /> Estate
+                          Food <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Retail}
+                          alt="Retail-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Retail <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Transport}
+                          alt="Transport-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Transport <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Education}
+                          alt="Education-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Education <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Business}
+                          alt="Business-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Business <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Recruitment}
+                          alt="Recruitment-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Recruitment <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Software}
+                          alt="Software-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Software <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Finance}
+                          alt="Finance-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Finance <br />
+                          Industry
+                        </p>
+                      </a>
+                    </div>
+                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <a href="#" className="service__provide_tab">
+                        <img
+                          src={Insurance}
+                          alt="Insurance-Industry"
+                          className="img-fluid"
+                        />
+                        <p>
+                          Insurance <br />
+                          Industry
                         </p>
                       </a>
                     </div>
@@ -524,35 +565,29 @@ const WebDev = () => {
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                   <div className="service_rht">
                     <div className="Title">
-                      <h3 className="Title_heading">
-                        Shopping &amp; E-Commerce
-                      </h3>
+                      <h3 className="Title_heading">Transport Industry</h3>
                       <p className="Title_para">
-                        We are highly experienced in providing the best software
-                        development services to each niche with unique designing
-                        and development services as well as at the best costing.
-                        We have a team of highly skilled developers as well as
-                        designers who initially try to understand the client’s
-                        requirements.
+                        The App Ideas is one of the popular Transport Industry
+                        web development services. We are highly skilled and
+                        expertise in offering the best online platforms
+                        development services including in the transport
+                        industry. In the Transport industry, it is very
+                        important to have a web app, so it will be very easy for
+                        the business owners to track down their services and
+                        manage the work accordingly.
                       </p>
                       <p className="Title_para">
-                        Currently, many business owners are shifting their
-                        services into online platforms like websites, web apps
-                        or mobile apps. It is beneficial to convert your
-                        business into online platforms because this makes the
-                        work easier for you as well as for your users.
+                        Are you planning to launch a Transport Industry Web app
+                        in the market?
                       </p>
+
                       <p className="Title_para">
-                        Are you planning to launch a Shopping and E-commerce
-                        Store in the market?
-                      </p>
-                      <p className="Title_para">
-                        If Yes, then feel free to connect with us. Let’s have a
-                        quick call to discuss your requirements in detail. Our
-                        Process starts from Requirements Gathering and Analysis,
-                        The meeting for clearing out the questions, Project
-                        Estimation and Proposal, Resources and team allocation,
-                        Daily/Weekly updates and the deployment of the projects
+                        If Yes, then this is probably the best time for you to
+                        launch a Transport industry web app at the best rates.
+                        By having a Transport Industry web app, you can easily
+                        track down your drivers, manage the services from any
+                        place, convenience of managing the services at any time,
+                        have great staff management and more.
                       </p>
                     </div>
                   </div>
@@ -563,7 +598,7 @@ const WebDev = () => {
           {/* Service Section End */}
 
           {/* <!-- Work Slider Start --> */}
-          <WorkSlider/>
+          <WorkSlider />
           {/* <!-- Work Slider End --> */}
 
           {/* Client testimonial Section Start */}

@@ -212,6 +212,7 @@ const Headerr = () => {
                   </div>
 
                   <div className="row">
+                    <Link to="/Digital-Marketing-Agency">
                     <h4>
                       {" "}
                       <img
@@ -220,6 +221,7 @@ const Headerr = () => {
                       />{" "}
                       Digital Marketing Agency
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">SEO</a>
