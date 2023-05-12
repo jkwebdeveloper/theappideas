@@ -12,6 +12,15 @@ import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import DigitalMarketing from "./components/Digital-Marketing/DigitalMarketing";
+import ECommerceWeb from "./components/ECommerceWeb/ECommerceWeb";
+import GameDev from "./components/Game Development/GameDev";
+import SoftwareDev from "./components/Software Development/SoftwareDev";
+import Designing from "./components/DesigningServices/Designing";
+import StartupServices from "./pages/StartupServices";
+import HireIOSDev from "./pages/Hire Us/Hire Mobile App Dev/HireIOSDev";
+import FoodDelivery from "./pages/Solutions/DeliveryApp/FoodDelivery";
+import PopUp from "./components/PopUp";
+import Error404 from "./pages/Error404";
 
 const App = () => {
   return (
@@ -30,6 +39,18 @@ const App = () => {
         <Route path="/portfolio" element={<PortFolio />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/blog" element={<Blog />} />
+        <Route
+          path="/E-commerce-website-Development"
+          element={<ECommerceWeb />}
+        />
+        <Route path="/Game-Development" element={<GameDev />} />
+        <Route path="/Software-Development" element={<SoftwareDev />} />
+        <Route path="/Designing-Services" element={<Designing />} />
+        <Route path="/Startup-Services" element={<StartupServices />} />
+        <Route path="/Hire-IOS-Developer" element={<HireIOSDev/>}/>
+        <Route path="/Food-Delivery-App-Development" element={ <FoodDelivery/> }/>
+        <Route path="/popup" element={<PopUp/>} />
+        <Route path="/*" element={<Error404/>}/>
       </Routes>
       <Footer />
     </BrowserRouter>

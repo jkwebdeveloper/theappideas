@@ -110,6 +110,8 @@
   box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
   overflow-y: auto;
   max-height: 550px;
+  /* pointer-events: none;
+  animation: 0s ease 0s 1 normal forwards running none; */
 }
 
 .mega-box .content {

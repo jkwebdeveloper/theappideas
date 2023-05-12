@@ -26,6 +26,7 @@ import SocialNetworking from "../../assets/images/MobileAppDev/Mobile App Develo
 import lifestyle from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
 import Real from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Real Estate.svg";
 import health from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
+import FAQ from "../FAQ";
 
 const MobileAppDev = () => {
   return (
@@ -592,7 +593,7 @@ const MobileAppDev = () => {
 
           <>
             {/* FAQ Section Start */}
-            <section className="accordion_section py-5">
+            {/* <section className="accordion_section py-5">
               <div className="container">
                 <div className="Title">
                   <h3>Frequently Asked Questions</h3>
@@ -925,7 +926,8 @@ const MobileAppDev = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
+            <FAQ />
             {/* FAQ Section End */}
           </>
 

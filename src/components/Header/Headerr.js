@@ -247,6 +247,7 @@ const Headerr = () => {
                     </ul>
                   </div>
                   <div className="row">
+                    <Link to="/E-commerce-website-Development">
                     <h4>
                       {" "}
                       <img
@@ -255,6 +256,7 @@ const Headerr = () => {
                       />{" "}
                       E-commerce Website Development
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">Shopify Development</a>
@@ -271,6 +273,7 @@ const Headerr = () => {
                     </ul>
                   </div>
                   <div className="row">
+                    <Link to="/Game-Development">
                     <h4>
                       {" "}
                       <img
@@ -279,6 +282,7 @@ const Headerr = () => {
                       />
                       Game Development
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">Mobile Game Development</a>
@@ -329,6 +333,7 @@ const Headerr = () => {
                     </ul>
                   </div>
                   <div className="row">
+                    <Link to='/Software-Development'>
                     <h4>
                       {" "}
                       <img
@@ -337,6 +342,7 @@ const Headerr = () => {
                       />
                       software development
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">Asp.Net Development</a>
@@ -347,6 +353,7 @@ const Headerr = () => {
                     </ul>
                   </div>
                   <div className="row">
+                    <Link to="/Designing-Services">
                     <h4>
                       {" "}
                       <img
@@ -355,6 +362,7 @@ const Headerr = () => {
                       />
                       Designing services
                     </h4>
+                    </Link>
                     <ul className="mega-links">
                       <li>
                         <a href="#">Graphics Design</a>
@@ -365,6 +373,7 @@ const Headerr = () => {
                     </ul>
                   </div>
                   <div className="row">
+                    <Link>
                     <h4>
                       {" "}
                       <img
@@ -373,10 +382,13 @@ const Headerr = () => {
                       />
                       Other Services
                     </h4>
+                    </Link>
                     <ul className="mega-links">
+                      <Link to="/Startup-Services">
                       <li>
                         <a href="#">Startup Services</a>
                       </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
@@ -418,9 +430,11 @@ const Headerr = () => {
                       Hire Mobile App Development
                     </h4>
                     <ul className="mega-links">
+                      <Link to="/Hire-IOS-Developer">
                       <li>
-                        <a href="#">Hire IOS Developer</a>
+                        <a>Hire IOS Developer</a>
                       </li>
+                      </Link>
                       <li>
                         <a href="#">Hire Android Developer</a>
                       </li>
@@ -529,6 +543,7 @@ const Headerr = () => {
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
+                    <Link>
                     <h4>
                       {" "}
                       <img
@@ -537,10 +552,13 @@ const Headerr = () => {
                       />
                       Delivery Apps
                     </h4>
+                    </Link>
                     <ul className="mega-links">
+                      <Link to="/Food-Delivery-App-Development">
                       <li>
-                        <a href="#">Food Delivery App Development</a>
+                        <a>Food Delivery App Development</a>
                       </li>
+                      </Link>
                       <li>
                         <a href="#">Courier Pickup Management Solution</a>
                       </li>

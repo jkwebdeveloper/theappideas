@@ -415,21 +415,13 @@ Title .Title_Color {
 /* Technologies Section CSS End */
 
 /* Accordian Section CSS Start */
-.accordion_box .accordion-button::after {
-  content: "\f107";
-  font-family: FontAwesome;
-  background-image: none;
-  right: 8px;
-  position: absolute;
-}
-
-.accordion_box .accordion-button::after {
-  content: "\f107";
-  font-family: FontAwesome;
-  background-image: none;
-  position: absolute;
-  right: 8px;
-}
+/* .accordion_box .accordion-button::after {
+  font-size: 24px;
+  color: transparent;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: #000;
+} */
 
 .accordion_box button.accordion-button.collapsed {
   background: #fff;
@@ -438,6 +430,10 @@ Title .Title_Color {
   box-shadow: 0px 0px 5px 0px #b8b8b8 !important;
   font-size: 17px;
   font-weight: 700;
+  padding: 16px;
+  width: 100%;
+  text-align: left;
+  border: none;
 }
 
 .accordion_box button.accordion-button.collapsed:hover {

@@ -849,7 +849,449 @@ section {
 .contact_btn_new:hover {
   color: red;
 }
+
+/* HIRE US CSS START */
+
+.hire__card {
+  padding: 15px;
+  background: #fff;
+  box-shadow: 0px 2px 18px 0px rgb(71 74 182/12%);
+  margin-bottom: 15px;
+  height: 100%;
+}
+
+.hire__card .hire__card__img {
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  background: #f6f5fa;
+  text-align: center;
+  border-radius: 50%;
+  margin: 10px auto;
+}
+
+.hire__card h2 {
+  line-height: 28px;
+  text-transform: capitalize;
+  text-align: center;
+  padding: 10px 0;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.hire__card p {
+  color: #000;
+  font-size: 16px;
+  text-align: center;
+  line-height: 28px;
+}
+
+.hire__card:hover,
+.hire__card:hover p {
+  color: #fff !important;
+  background-image: linear-gradient(
+    to right top,
+    #4e1d5c,
+    #4a1a58,
+    #461654,
+    #421350,
+    #3e0f4c
+  );
+}
+
+/* Hire IOS Developer Page CSS End */
+
+/* HIRE US CSS END */
+
 /* ------------------------------------------ */
+
+/*--------------------------------------------------------------
+# HireIOSDev Page CSS start
+--------------------------------------------------------------*/
+.HireIOSDev-section {
+  padding-bottom: 100px;
+}
+.HireIOSDev-heading h2 {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 700;
+  font-family: sans-serif;
+  padding: 20px;
+}
+.HireIOSDev-heading p a {
+  color: #f7c30b;
+}
+.HireIOSDev-heading h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 8px auto;
+}
+.HireIOSDev-heading-text {
+  text-align: center;
+  font-family: sans-serif;
+}
+.HireIOS-block .inner-box {
+  position: relative;
+  text-align: center;
+  border-radius: 8px;
+  padding: 70px 20px 60px;
+  background-color: #ffffff;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.HireIOS-block .inner-box .color-layer {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  border-radius: 8px;
+}
+
+.HireIOS-block .inner-box .color-layer:before {
+  position: absolute;
+  content: "";
+  left: 0px;
+  top: 0px;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  background: #d34ae0;
+  transform: rotateY(90deg);
+  border-radius: 8px 0px 0px 8px;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  background: -webkit-linear-gradient(to bottom, #d34ae0 0%, #6615b2 100%);
+  background: -moz-linear-gradient(to bottom, #d34ae0 0%, #6615b2 100%);
+  background: linear-gradient(to bottom, #d34ae0 0%, #6615b2 100%);
+}
+
+.HireIOS-block .inner-box .color-layer:after {
+  position: absolute;
+  content: "";
+  right: 0px;
+  top: 0px;
+  width: 50%;
+  height: 100%;
+  opacity: 0;
+  background: #d34ae0;
+  transform: rotateY(90deg);
+  border-radius: 0px 8px 8px 0px;
+  transition: all 500ms ease;
+  -moz-transition: all 500ms ease;
+  -webkit-transition: all 500ms ease;
+  -ms-transition: all 500ms ease;
+  -o-transition: all 500ms ease;
+  background: -webkit-linear-gradient(to bottom, #d34ae0 0%, #6615b2 100%);
+  background: -moz-linear-gradient(to bottom, #d34ae0 0%, #6615b2 100%);
+  background: linear-gradient(to bottom, #d34ae0 0%, #6615b2 100%);
+}
+
+.HireIOS-block .inner-box:hover .color-layer:before,
+.HireIOS-block .inner-box:hover .color-layer:after {
+  opacity: 1;
+  transform: rotateY(0deg);
+}
+
+.HireIOS-block .inner-box .pattern-layer-one {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 262px;
+  height: 175px;
+  border-radius: 8px;
+  background-repeat: no-repeat;
+  transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+}
+
+.HireIOS-block .inner-box:hover .pattern-layer-one {
+  opacity: 0;
+}
+
+.HireIOS-block .inner-box .pattern-layer-two {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 108px;
+  height: 123px;
+  opacity: 0;
+  background-repeat: no-repeat;
+  transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+}
+
+.HireIOS-block .inner-box:hover .pattern-layer-two {
+  opacity: 1;
+}
+
+.HireIOS-block .inner-box .icon-box {
+  position: relative;
+  color: #242e6c;
+  font-size: 60px;
+  line-height: 1em;
+  margin-bottom: 20px;
+  transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+}
+
+.HireIOS-block .inner-box:hover h5 a,
+.HireIOS-block .inner-box:hover .text,
+.HireIOS-block .inner-box:hover .icon-box {
+  color: #ffffff;
+}
+
+.HireIOS-block .inner-box h5 {
+  position: relative;
+  line-height: 1.3em;
+  font-weight: 600;
+}
+
+.HireIOS-block .inner-box h5 a {
+  position: relative;
+  color: #222222;
+  transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+  text-decoration: none;
+}
+
+.HireIOS-block .inner-box .text {
+  position: relative;
+  color: #777777;
+  font-size: 15px;
+  line-height: 1.7em;
+  margin-top: 15px;
+  transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+}
+
+.HireIOS-block .inner-box .arrow-icon {
+  position: absolute;
+  left: 50%;
+  bottom: -25px;
+  width: 50px;
+  height: 50px;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 38px;
+  text-align: center;
+  border-radius: 50px;
+  display: inline-block;
+  border: 3px solid #ffffff;
+  background: #fe8b57;
+  margin-left: -25px;
+  opacity: 0;
+  transform: translateY(-25px);
+  box-shadow: 0px 15px 20px rgba(0, 0, 0, 0.1);
+  background: -webkit-linear-gradient(to bottom, #fe8b57 0%, #ea3368 100%);
+  background: -moz-linear-gradient(to bottom, #fe8b57 0%, #ea3368 100%);
+  background: linear-gradient(to bottom, #fe8b57 0%, #ea3368 100%);
+  transition: all 600ms ease;
+  -moz-transition: all 600ms ease;
+  -webkit-transition: all 600ms ease;
+  -ms-transition: all 600ms ease;
+  -o-transition: all 600ms ease;
+}
+
+.HireIOS-block .inner-box:hover .arrow-icon {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.HireIOS-block.style-two .inner-box .color-layer:before {
+  background-color: #5d296d;
+  background: -webkit-linear-gradient(to bottom, #5d296d 0%, #2f0e39 100%);
+  background: -moz-linear-gradient(to bottom, #5d296d 0%, #2f0e39 100%);
+  background: linear-gradient(to bottom, #5d296d 0%, #2f0e39 100%);
+}
+
+.HireIOS-block.style-two .inner-box .color-layer:after {
+  background-color: #5d296d;
+  background: -webkit-linear-gradient(to bottom, #5d296d 0%, #2f0e39 100%);
+  background: -moz-linear-gradient(to bottom, #5d296d 0%, #2f0e39 100%);
+  background: linear-gradient(to bottom, #5d296d 0%, #2f0e39 100%);
+}
+
+.HireIOS-block.style-two .inner-box .arrow-icon {
+  background-color: #ff2800;
+  background: -webkit-linear-gradient(to bottom, #ff2800 0%, #ff2800 100%);
+  background: -moz-linear-gradient(to bottom, #ff2800 0%, #ff2800 100%);
+  background: linear-gradient(to bottom, #ff2800 0%, #ff2800 100%);
+}
+/*--------------------------------------------------------------
+# HireIOSDev Page CSS end
+--------------------------------------------------------------*/
+
+/* Food Delivery Page CSS Start */
+.service__provide__section .nav .nav-item {
+  flex: 1 1 25%;
+  max-width: 25%;
+  border-right: 1px solid #fff;
+}
+
+.service__provide__section .nav .nav-item:last-child {
+  border-right: 0px;
+}
+
+.service__provide__section .nav-pills .nav-link {
+  width: 100%;
+  background-color: #ebeaea;
+  color: #323643;
+  border-radius: 0px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.service__provide__section .nav-pills .nav-link.active {
+  width: 100%;
+  background: #2f0e39;
+  color: #fff;
+}
+
+.food__delivery__box {
+  text-align: center;
+  height: 100%;
+}
+
+.food__delivery__box h4 {
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.food__delivery__box p {
+  color: #000;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+.food_delivery_swiper .swiper-wrapper {
+  height: 100vh;
+}
+
+.food_delivery_swiper .swiper-slide .swiper-slide_lft img {
+  object-fit: contain;
+}
+
+.food_delivery_swiper .swiper-slide .swiper-slide_lft img {
+  box-shadow: none;
+}
+
+/* Food Delivery Page CSS End */
+
+/* PopUP Page CSS Start */
+.formbold-mb-5 {
+  margin-bottom: 20px;
+}
+.formbold-pt-3 {
+  padding-top: 12px;
+}
+.formbold-main-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 48px;
+}
+
+.formbold-form-wrapper {
+  margin: 0 auto;
+  max-width: 550px;
+  width: 100%;
+  background: white;
+}
+.formbold-form-label {
+  display: block;
+  font-weight: 500;
+  font-size: 16px;
+  color: #07074d;
+  margin-bottom: 12px;
+}
+.formbold-form-label-2 {
+  font-weight: 600;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+.formbold-form-input {
+  width: 100%;
+  padding: 12px 24px;
+  border-radius: 6px;
+  border: 1px solid #e0e0e0;
+  background: white;
+  font-weight: 500;
+  font-size: 16px;
+  color: #6b7280;
+  outline: none;
+  resize: none;
+}
+.formbold-form-input:focus {
+  border-color: #f6c000;
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold-btn {
+  text-align: center;
+  font-size: 16px;
+  border-radius: 6px;
+  padding: 14px 32px;
+  border: none;
+  font-weight: 600;
+  background: #f6c000 !important;
+  border-color: #f6c000 !important;
+  color: white;
+  text-align: center;
+}
+.formbold-btn:hover {
+  box-shadow: 0px 3px 8px rgba(0, 0, 0, 0.05);
+}
+
+.formbold--mx-3 {
+  margin-left: -12px;
+  margin-right: -12px;
+}
+.formbold-px-3 {
+  padding-left: 12px;
+  padding-right: 12px;
+}
+.flex {
+  display: flex;
+}
+.flex-wrap {
+  flex-wrap: wrap;
+}
+.w-full {
+  width: 100%;
+}
+@media (min-width: 540px) {
+  .sm\:w-half {
+    width: 50%;
+  }
+}
+
+/* PopUp Page CSS End */
 
 /* Footer css start */
 
@@ -1073,3 +1515,31 @@ section {
 }
 
 /* Footer css End */
+
+.error-banner-section {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/MobileAppDev/bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  padding: 40px;
+  color: #fff;
+  padding-bottom: 120px;
+  padding-top: 130px;
+}
+
+.page-error {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 10rem;
+}
+.page-error img {
+  width: 500px;
+  max-width: 75%;
+}
+.kf-contacts-items {
+  padding: 40px 0;
+  position: relative;
+  z-index: 2;
+}
