@@ -8,10 +8,11 @@ const Error404 = () => {
         <div className="page-error">
           <h2 className="">Oops ! Page not found.</h2>
           <img
-            src={require("../assets/images/Digital Marketing Strategy.svg")}
+            src={require("../assets/images/Error.png")}
             alt=""
+            style={{marginTop:"-170px"}}
           />
-          <h4 className="">We Can't find the page you're looking for.</h4>
+          <h4 className="" style={{marginTop:"-116px"}}>We Can't find the page you're looking for.</h4>
           <Link to="/">
             <button className="error-btn">GO BACK HOME</button>
           </Link>

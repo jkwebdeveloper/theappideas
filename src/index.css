@@ -1532,14 +1532,35 @@ section {
 .page-error {
   text-align: center;
   padding-bottom: 50px;
-  padding-top: 10rem;
+  /* padding-top: 10rem; */
 }
-.page-error img {
+/* .page-error img {
   width: 500px;
   max-width: 75%;
-}
+} */
 .kf-contacts-items {
   padding: 40px 0;
   position: relative;
   z-index: 2;
+}
+.error-btn {
+  padding: 10px 10px !important;
+  font-size: 16px !important;
+  margin-top: 20px !important;
+  font-weight: 500 !important;
+  background-color: #f6c000 !important;
+  color: #000 !important;
+  border-radius: 8px !important;
+  border: none;
+}
+
+
+.port-mobile-one {
+  background-image: url("./assets/images/MobileAppDev/React\ Native\ App/port-mobile-1.webp");
+}
+.port-mobile-two {
+  background-image: url("./assets/images/MobileAppDev/React\ Native\ App/port-mobile-2.webp");
+}
+.port-mobile-three {
+  background-image: url("./assets/images/MobileAppDev/React\ Native\ App/port-mobile-3.webp");
 }

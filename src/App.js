@@ -21,6 +21,12 @@ import HireIOSDev from "./pages/Hire Us/Hire Mobile App Dev/HireIOSDev";
 import FoodDelivery from "./pages/Solutions/DeliveryApp/FoodDelivery";
 import PopUp from "./components/PopUp";
 import Error404 from "./pages/Error404";
+import AndroidAppDev from "./pages/MobileAppDev/AndroidAppDev";
+import IphoneAppDev from "./pages/MobileAppDev/IphoneAppDev";
+import IpadAppDev from "./pages/MobileAppDev/IpadAppDev";
+import ReactNativeDev from "./pages/MobileAppDev/ReactNativeDev"
+import IBeaconAppDev from "./pages/MobileAppDev/IBeaconAppDev";
+import IOTAppDev from "./pages/MobileAppDev/IOTAppDev";
 
 const App = () => {
   return (
@@ -28,17 +34,19 @@ const App = () => {
       {/* <Header /> */}
       <Headerr />
       <Routes>
+        {/* Home page Link */}
         <Route path="/" element={<Home />} />
+
+        {/* Company Link */}
         <Route path="/Aboutus" element={<AboutUs />} />
+
+        {/* Services Link */}
         <Route path="/mobile-app-development" element={<MobileAppDev />} />
         <Route
           path="/Digital-Marketing-Agency"
           element={<DigitalMarketing />}
         />
         <Route path="/web-development" element={<WebDev />} />
-        <Route path="/portfolio" element={<PortFolio />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/blog" element={<Blog />} />
         <Route
           path="/E-commerce-website-Development"
           element={<ECommerceWeb />}
@@ -47,10 +55,30 @@ const App = () => {
         <Route path="/Software-Development" element={<SoftwareDev />} />
         <Route path="/Designing-Services" element={<Designing />} />
         <Route path="/Startup-Services" element={<StartupServices />} />
-        <Route path="/Hire-IOS-Developer" element={<HireIOSDev/>}/>
-        <Route path="/Food-Delivery-App-Development" element={ <FoodDelivery/> }/>
-        <Route path="/popup" element={<PopUp/>} />
-        <Route path="/*" element={<Error404/>}/>
+        <Route path="/Android-App-Development" element={<AndroidAppDev />} />
+        <Route path="/IPhone-App-Development"  element={<IphoneAppDev/>}/>
+        <Route path="/IPadAppDevelopment" element={ <IpadAppDev/>}/>
+        <Route path="/React-Native-Development" element={<ReactNativeDev/>}/>
+        <Route path="/iBeacon-App-Development" element={<IBeaconAppDev/>}/>
+        <Route path="/IOT-App-Development" element={<IOTAppDev/>}/>
+
+        {/* Hire Us Link */}  
+        <Route path="/Hire-IOS-Developer" element={<HireIOSDev />} />
+
+        {/* Solution Link */}
+        <Route
+          path="/Food-Delivery-App-Development"
+          element={<FoodDelivery />}
+        />
+        {/* PortFolio Link */}
+        <Route path="/portfolio" element={<PortFolio />} />
+        {/* Contact us Link */}
+        <Route path="/contactUs" element={<ContactUs />} />
+        {/* Blog Link */}
+        <Route path="/blog" element={<Blog />} />
+        
+        <Route path="/popup" element={<PopUp />} />
+        <Route path="/*" element={<Error404 />} />
       </Routes>
       <Footer />
     </BrowserRouter>

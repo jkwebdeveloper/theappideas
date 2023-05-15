@@ -10,7 +10,6 @@ const Headerr = () => {
 
   // on render, set listener
   useEffect(() => {
-    console.log("hello");
     window.addEventListener("scroll", isSticky);
     return () => {
       window.removeEventListener("scroll", isSticky);
@@ -22,7 +21,6 @@ const Headerr = () => {
     const scrollTop = window.scrollY;
     const stickyClass = scrollTop >= 80 ? "sticked" : "";
     setSticky(stickyClass);
-    console.log(stickyClass);
   };
   return (
     <header
@@ -49,7 +47,7 @@ const Headerr = () => {
               <AiOutlineClose />
             </label>
             <li>
-              <a href="#" className="desktop-item">
+              <a href="/" className="desktop-item">
                 Company <MdKeyboardArrowDown />
               </a>
               <input type="checkbox" id="showMega" />
@@ -62,7 +60,7 @@ const Headerr = () => {
                     <ul className="mega-links">
                       <Link to="/Aboutus">
                         <li>
-                          <a href="#" className="f">
+                          <a href="/" className="f">
                             {" "}
                             <img
                               src={require("../../assets/images/Header/Company/About Us.gif")}
@@ -77,7 +75,7 @@ const Headerr = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <li>
-                        <a href="#" className="company_text">
+                        <a href="/" className="company_text">
                           {" "}
                           <img
                             src={require("../../assets/images/Header/Company/Our Process.gif")}
@@ -91,7 +89,7 @@ const Headerr = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <li>
-                        <a href="#" className="company_text">
+                        <a href="/" className="company_text">
                           {" "}
                           <img
                             src={require("../../assets/images/Header/Company/Our Team.gif")}
@@ -107,7 +105,7 @@ const Headerr = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <li>
-                        <a href="#" className="company_text">
+                        <a href="/" className="company_text">
                           {" "}
                           <img
                             src={require("../../assets/images/Header/Company/Testimonial.gif")}
@@ -121,7 +119,7 @@ const Headerr = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <li>
-                        <a href="#" className="company_text">
+                        <a href="/" className="company_text">
                           {" "}
                           <img
                             src={require("../../assets/images/Header/Company/Careers.gif")}
@@ -135,7 +133,7 @@ const Headerr = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <li>
-                        <a href="#" className="company_text">
+                        <a href="/" className="company_text">
                           {" "}
                           <img
                             src={require("../../assets/images/Header/Company/Life at TAI.gif")}
@@ -156,7 +154,7 @@ const Headerr = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="#" className="menu_contact_btn">
+                        <a href="/" className="menu_contact_btn">
                           Contact Us
                         </a>
                       </div>
@@ -166,7 +164,7 @@ const Headerr = () => {
               </div>
             </li>
             <li>
-              <a href="#" className="desktop-item">
+              <a href="/" className="desktop-item">
                 Services <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega1" />
@@ -187,26 +185,38 @@ const Headerr = () => {
                       </h4>
                     </Link>
                     <ul className="mega-links">
+                      <Link to="/Android-App-Development">
                       <li>
-                        <a href="#">Android App Development</a>
+                        <a>Android App Development</a>
                       </li>
+                      </Link>
+                      <Link to="IPhone-App-Development">
                       <li>
-                        <a href="#">IPhone App Development</a>
+                        <a>IPhone App Development</a>
                       </li>
+                      </Link>
+                      <Link to="/IPadAppDevelopment">
                       <li>
-                        <a href="#">IPad App Development</a>
+                        <a>IPad App Development</a>
                       </li>
+                      </Link>
+                      <Link to="/React-Native-Development">
                       <li>
-                        <a href="#">React Native Development</a>
+                        <a>React Native Development</a>
                       </li>
+                      </Link>
+                      <Link to="/iBeacon-App-Development">
                       <li>
-                        <a href="#">iBeacon App Development</a>
+                        <a>iBeacon App Development</a>
                       </li>
+                      </Link>
+                      <Link to="/IOT-App-Development">
                       <li>
-                        <a href="#">IOT App Development</a>
+                        <a>IOT App Development</a>
                       </li>
+                      </Link>
                       <li>
-                        <a href="#">Apple Watch App Development</a>
+                        <a>Apple Watch App Development</a>
                       </li>
                     </ul>
                   </div>
@@ -224,25 +234,25 @@ const Headerr = () => {
                     </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">SEO</a>
+                        <a href="/">SEO</a>
                       </li>
                       <li>
-                        <a href="#">Social Media Marketing</a>
+                        <a href="/">Social Media Marketing</a>
                       </li>
                       <li>
-                        <a href="#">ASO</a>
+                        <a href="/">ASO</a>
                       </li>
                       <li>
-                        <a href="#">Guest Blogging</a>
+                        <a href="/">Guest Blogging</a>
                       </li>
                       <li>
-                        <a href="#">iBeacon App Development</a>
+                        <a href="/">iBeacon App Development</a>
                       </li>
                       <li>
-                        <a href="#">IOT App Development</a>
+                        <a href="/">IOT App Development</a>
                       </li>
                       <li>
-                        <a href="#">Apple Watch App Development</a>
+                        <a href="/">Apple Watch App Development</a>
                       </li>
                     </ul>
                   </div>
@@ -259,16 +269,16 @@ const Headerr = () => {
                     </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Shopify Development</a>
+                        <a href="/">Shopify Development</a>
                       </li>
                       <li>
-                        <a href="#">Magento Development</a>
+                        <a href="/">Magento Development</a>
                       </li>
                       <li>
-                        <a href="#">Joomla Development</a>
+                        <a href="/">Joomla Development</a>
                       </li>
                       <li>
-                        <a href="#">Drupal Development</a>
+                        <a href="/">Drupal Development</a>
                       </li>
                     </ul>
                   </div>
@@ -285,22 +295,22 @@ const Headerr = () => {
                     </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Mobile Game Development</a>
+                        <a href="/">Mobile Game Development</a>
                       </li>
                       <li>
-                        <a href="#">2D-3D Game Development</a>
+                        <a href="/">2D-3D Game Development</a>
                       </li>
                       <li>
-                        <a href="#">Unity Game Development</a>
+                        <a href="/">Unity Game Development</a>
                       </li>
                       <li>
-                        <a href="#">Virtual Reality Game Development</a>
+                        <a href="/">Virtual Reality Game Development</a>
                       </li>
                       <li>
-                        <a href="#">HTML5 Games Development</a>
+                        <a href="/">HTML5 Games Development</a>
                       </li>
                       <li>
-                        <a href="#">COCOS2D Game Development</a>
+                        <a href="/">COCOS2D Game Development</a>
                       </li>
                     </ul>
                   </div>
@@ -319,16 +329,16 @@ const Headerr = () => {
                     </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">WordPress Development</a>
+                        <a href="/">WordPress Development</a>
                       </li>
                       <li>
-                        <a href="#">PHP Development</a>
+                        <a href="/">PHP Development</a>
                       </li>
                       <li>
-                        <a href="#">Angular Development</a>
+                        <a href="/">Angular Development</a>
                       </li>
                       <li>
-                        <a href="#">Webflow Development</a>
+                        <a href="/">Webflow Development</a>
                       </li>
                     </ul>
                   </div>
@@ -345,10 +355,10 @@ const Headerr = () => {
                     </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Asp.Net Development</a>
+                        <a href="/">Asp.Net Development</a>
                       </li>
                       <li>
-                        <a href="#">DotNetNuke Development</a>
+                        <a href="/">DotNetNuke Development</a>
                       </li>
                     </ul>
                   </div>
@@ -365,10 +375,10 @@ const Headerr = () => {
                     </Link>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Graphics Design</a>
+                        <a href="/">Graphics Design</a>
                       </li>
                       <li>
-                        <a href="#">Mobile App Design</a>
+                        <a href="/">Mobile App Design</a>
                       </li>
                     </ul>
                   </div>
@@ -386,7 +396,7 @@ const Headerr = () => {
                     <ul className="mega-links">
                       <Link to="/Startup-Services">
                       <li>
-                        <a href="#">Startup Services</a>
+                        <a href="/">Startup Services</a>
                       </li>
                       </Link>
                     </ul>
@@ -401,7 +411,7 @@ const Headerr = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="#" className="menu_contact_btn">
+                        <a href="/" className="menu_contact_btn">
                           Contact Us
                         </a>
                       </div>
@@ -411,7 +421,7 @@ const Headerr = () => {
               </div>
             </li>
             <li>
-              <a href="#" className="desktop-item">
+              <a href="/" className="desktop-item">
                 Hire Us <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega2" />
@@ -436,13 +446,13 @@ const Headerr = () => {
                       </li>
                       </Link>
                       <li>
-                        <a href="#">Hire Android Developer</a>
+                        <a href="/">Hire Android Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire React Native Developer</a>
+                        <a href="/">Hire React Native Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire Flutter Developer</a>
+                        <a href="/">Hire Flutter Developer</a>
                       </li>
                     </ul>
                   </div>
@@ -457,28 +467,28 @@ const Headerr = () => {
                     </h4>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Hire Laravel Developer</a>
+                        <a href="/">Hire Laravel Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire WordPress Developer</a>
+                        <a href="/">Hire WordPress Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire Node.js Developer</a>
+                        <a href="/">Hire Node.js Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire CodeIgniter Developer</a>
+                        <a href="/">Hire CodeIgniter Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire PHP Developers</a>
+                        <a href="/">Hire PHP Developers</a>
                       </li>
                       <li>
-                        <a href="#">Hire Python Developer</a>
+                        <a href="/">Hire Python Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire React JS Developer</a>
+                        <a href="/">Hire React JS Developer</a>
                       </li>
                       <li>
-                        <a href="#">Hire Angular 2 Developer</a>
+                        <a href="/">Hire Angular 2 Developer</a>
                       </li>
                     </ul>
                   </div>
@@ -493,10 +503,10 @@ const Headerr = () => {
                     </h4>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Hire Shopify Development</a>
+                        <a href="/">Hire Shopify Development</a>
                       </li>
                       <li>
-                        <a href="#">Hire Magento 2 Development</a>
+                        <a href="/">Hire Magento 2 Development</a>
                       </li>
                     </ul>
                   </div>
@@ -523,7 +533,7 @@ const Headerr = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="#" className="menu_contact_btn">
+                        <a href="/" className="menu_contact_btn">
                           Hire Our Developer{" "}
                         </a>
                       </div>
@@ -533,7 +543,7 @@ const Headerr = () => {
               </div>
             </li>
             <li>
-              <a href="#" className="desktop-item">
+              <a href="/" className="desktop-item">
                 Solutions <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega3" />
@@ -560,10 +570,10 @@ const Headerr = () => {
                       </li>
                       </Link>
                       <li>
-                        <a href="#">Courier Pickup Management Solution</a>
+                        <a href="/">Courier Pickup Management Solution</a>
                       </li>
                       <li>
-                        <a href="#">Grocery App Development</a>
+                        <a href="/">Grocery App Development</a>
                       </li>
                     </ul>
                   </div>
@@ -578,13 +588,13 @@ const Headerr = () => {
                     </h4>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">Taxi Booking App Development</a>
+                        <a href="/">Taxi Booking App Development</a>
                       </li>
                       <li>
-                        <a href="#">Doctor Hiring App Solution</a>
+                        <a href="/">Doctor Hiring App Solution</a>
                       </li>
                       <li>
-                        <a href="#">Security App Solution</a>
+                        <a href="/">Security App Solution</a>
                       </li>
                     </ul>
                   </div>
@@ -599,19 +609,19 @@ const Headerr = () => {
                     </h4>
                     <ul className="mega-links">
                       <li>
-                        <a href="#">eCommerce App Development</a>
+                        <a href="/">eCommerce App Development</a>
                       </li>
                       <li>
-                        <a href="#">E-learning App Development</a>
+                        <a href="/">E-learning App Development</a>
                       </li>
                       <li>
-                        <a href="#">Dating App Development</a>
+                        <a href="/">Dating App Development</a>
                       </li>
                       <li>
-                        <a href="#">Driver Tracking App Development</a>
+                        <a href="/">Driver Tracking App Development</a>
                       </li>
                       <li>
-                        <a href="#">Salon Service App</a>
+                        <a href="/">Salon Service App</a>
                       </li>
                     </ul>
                   </div>
@@ -628,7 +638,7 @@ const Headerr = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="#" className="menu_contact_btn">
+                        <a href="/" className="menu_contact_btn">
                           Contact Us{" "}
                         </a>
                       </div>
@@ -654,7 +664,7 @@ const Headerr = () => {
               </Link>
             </li>
             <li>
-              <a href="#" className="get_a_btn">
+              <a href="/" className="get_a_btn">
                 GET A QUOTE
               </a>
               {/* <button class="custom-btn btn-15">Read More</button> */}

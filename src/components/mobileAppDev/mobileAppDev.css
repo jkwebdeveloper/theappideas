@@ -346,13 +346,13 @@ Title .Title_Color {
 }
 
 .work_swiper-container .swiper-button-prev {
-  background-image: url("");
+  /* background-image: url(""); */
   left: 25px;
   background-size: 16px;
 }
 
 .work_swiper-container .swiper-button-next {
-  background-image: url("");
+  /* background-image: url(""); */
   background-size: 16px;
   right: 25px;
 }
