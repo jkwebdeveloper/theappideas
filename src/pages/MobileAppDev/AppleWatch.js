@@ -3,10 +3,10 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import Work from "../../components/Workdone/Work";
-import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
 import TestiMonial from "../../components/Testimonial/TestiMonial";
+// import FAQ from "../../components/FAQ";
 
-const IBeaconAppDev = () => {
+const AppleWatch = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -18,14 +18,14 @@ const IBeaconAppDev = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
               <div className="common_banner_lft">
-                <h2>iBeacon App Development Company</h2>
+                <h2>Apple Watch App Development Company</h2>
                 <p>
-                  The App Ideas is one of the leading iBeacon development
-                  company with years of expertise and proven experience. We have
-                  a team of highly proficient developers who will offer
-                  successful iBeacon app development services along with
-                  customization. Many people are now launching their iBeacon app
-                  for your business for its growth and success.
+                  The App Ideas is one of the best software development company.
+                  We are highly proficient in offering the best solution for all
+                  kinds of online platforms including the Apple Watch app
+                  development process. Many of the business is now offering
+                  Apple Watch app because of the increasing demand in the
+                  market.
                 </p>
                 <ul className="common__banner__list ps-0 mt-4">
                   <li>
@@ -41,7 +41,7 @@ const IBeaconAppDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                      Best iBeacon App Development Company
+                      Best Apple Watch App Development Company
                     </span>
                   </li>
                   <li>
@@ -49,7 +49,7 @@ const IBeaconAppDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                      Dedicated team for your iBeacon App Development
+                      Dedicated team for your Apple Watch App Development
                     </span>
                   </li>
                   <li>
@@ -70,7 +70,7 @@ const IBeaconAppDev = () => {
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>IBeacon App Development Company</h4>
+                      <h4>Apple Watch App Development</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
@@ -81,7 +81,7 @@ const IBeaconAppDev = () => {
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>IBeacon App Development Services</h4>
+                      <h4>Create Apple Watch App</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
@@ -92,7 +92,7 @@ const IBeaconAppDev = () => {
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>IBeacon Application Developer</h4>
+                      <h4>Apple Watch App Development Company</h4>
                     </div>
                   </div>
                 </div>
@@ -173,16 +173,15 @@ const IBeaconAppDev = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Our iBeacon App Development Company</h3>
+            <h3>Apple Watch App Development Company from The App Ideas.</h3>
             <p>
-              iBeacon stands for the latest and most widely acclaimed location
-              tracking technology that is used across shopping malls, brand
-              stores and many establishments. At The App Ideas, we build the
-              most sophisticated and future-ready iBeacon apps for a wide
-              variety of business niches. We are an acclaimed iBeacon app
-              development company with solid expertise with Bluetooth Low Energy
-              (BLE) technology and several successful iBeacon apps to our
-              credit.
+              Smart Watches surpassing their earlier avatar as fashion-tech
+              became now use devices to allow mobile users to do a lot of things
+              right from the wrist. Smartwatches are also offering smarter
+              wearable ways to communicate and to keep track of health and
+              fitness measurements. At the App Ideas, we build sophisticated,
+              agile, performance-savvy and user-optimised custom smartwatch apps
+              for smartwatches across both Android and Apple Watch platforms.
             </p>
           </div>
           <div className="row mt-5">
@@ -194,63 +193,61 @@ const IBeaconAppDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Our iBeacon/Vehicle-tracking.png")}
-                      alt="Custom-Mobile-App-Development"
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Apple Watch App/Smartwatch-Health-and-Fitness-apps1.png")}
+                      alt="Smartwatch-Fitness"
+                      className="img-fluid"
+                    />
+                    <p>Smartwatch Fitness Apps</p>
+                  </a>
+                </div>
+                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                  <a href="" className="service__provide_tab">
+                    <img
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Apple Watch App/Smartwatch-Game-Apps.png")}
+                      alt="Smartwatch-Game-Apps"
+                      className="img-fluid"
+                    />
+                    <p>Smartwatch Game Apps</p>
+                  </a>
+                </div>
+                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                  <a href="" className="service__provide_tab">
+                    <img
+                      src={require("../../asse../../assets/images/MobileAppDev/Apple Watch/Apple Watch App/icons8-smart-watch-100-1.png")}
+                      alt="Extending-Smartwatch"
+                      className="img-fluid"
+                    />
+                    <p>Extending Smartwatch App Versions</p>
+                  </a>
+                </div>
+                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                  <a href="" className="service__provide_tab">
+                    <img
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Apple Watch App/SmartWatch-Location-apps.png")}
+                      alt="SmartWatch-Location-apps"
                       className="img-fluid"
                     />
                     <p>
-                      Vehicle <br /> Tracking
+                      Smartwatch <br />
+                      GPS
                     </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Our iBeacon/Documents-Transfer.png")}
-                      alt="Android-Enterprise-App-Development"
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Apple Watch App/SmartWatch-Chat-apps.png")}
+                      alt="SmartWatch-Chat-apps"
                       className="img-fluid"
                     />
-                    <p>Document Transfer</p>
+                    <p>SmartWatch Chat Apps</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Our iBeacon/Location-Based-Services.png")}
-                      alt="Android-Wearable-App-Development"
-                      className="img-fluid"
-                    />
-                    <p>Location-Based Services</p>
-                  </a>
-                </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
-                    <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Our iBeacon/Mobile-Payments.png")}
-                      alt="Android-Game-App-Development"
-                      className="img-fluid"
-                    />
-                    <p>
-                      Mobile <br />
-                      Payments
-                    </p>
-                  </a>
-                </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
-                    <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Our iBeacon/Location-Based-Promotions.png")}
-                      alt="Android-App-Redesign"
-                      className="img-fluid"
-                    />
-                    <p>Location-Based Promotions</p>
-                  </a>
-                </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
-                    <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Our iBeacon/Support-and-Maintenance..png")}
-                      alt="Android-Support-And-Maintenance"
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Apple Watch App/Mask-Group.png")}
+                      alt="Mask-Group"
                       className="img-fluid"
                     />
                     <p>Support And Maintenance</p>
@@ -261,21 +258,24 @@ const IBeaconAppDev = () => {
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="service_rht">
                 <div className="Title">
-                  <h3 className="Title_heading">Vehicle tracking.</h3>
+                  <h3 className="Title_heading">
+                    Smartwatch Health and Fitness apps.
+                  </h3>
                   <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a team of highly skilled team of developers
-                    who are highly expert in providing the best iBeacon app
-                    solution with advanced features and design which can help in
-                    accessing the services very conveniently for the users.
+                    Smartwatches are the current trending technology in the
+                    market. Many of the businesses, as well as startups, are now
+                    converting their online services into smartwatch apps and
+                    some of the entrepreneurs are also launching their
+                    smartwatches app in the market. In health and fitness apps,
+                    many of the users are now using smartwatches in the market.
                   </p>
                   <p className="Title_para">
-                    iBeacon technology is getting popular in this modern time,
-                    Many of the businesses, entrepreneurs and startups owners
-                    are integrating this technology for location tracking
-                    features.iBeacons are great for tracking on-road vehicles
-                    and transport systems. We utilize iBeacons for building
-                    sophisticated vehicle tracking apps.
+                    The App Ideas is one of the leading web and app development
+                    company. We have a team of highly skilled developers who are
+                    experts in providing the best solution for websites, mobile
+                    app and web apps. We build sophisticated health and fitness
+                    apps for both Android and Apple Watch platforms with
+                    cutting-edge features and an engaging user experience.
                   </p>
                 </div>
               </div>
@@ -289,7 +289,7 @@ const IBeaconAppDev = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Why You Should Choose Us for iPhone App Development?</h3>
+            <h3>Why You Should Choose Us for Apple Watch App Development?</h3>
           </div>
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
@@ -300,8 +300,8 @@ const IBeaconAppDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Why Should/Experience-and-Expertise.png")}
-                      alt="Experience-and-Expertise."
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Why You Should/Experience-and-Expertise2.png")}
+                      alt="Smartwatch-Fitness"
                       className="img-fluid"
                     />
                     <p>Experience and Expertise.</p>
@@ -310,8 +310,8 @@ const IBeaconAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={Robust}
-                      alt="Robust-Portfolio"
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Why You Should/Robust-portfolio.png")}
+                      alt="Smartwatch-Game-Apps"
                       className="img-fluid"
                     />
                     <p>
@@ -323,44 +323,41 @@ const IBeaconAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Why Should/agile.png")}
-                      alt="Full-Lifecycle-Support"
+                      src={require("../../asse../../assets/images/MobileAppDev/Apple Watch/Why You Should/Dedicated-Project-manager.png")}
+                      alt="Extending-Smartwatch"
                       className="img-fluid"
                     />
-                    <p>Agile Development</p>
+                    <p>Dedicated Project Manager</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Why Should/Innovative-Ideas.png")}
-                      alt="Agile-Development"
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Why You Should/Highly-Result-Driven.png")}
+                      alt="SmartWatch-Location-apps"
                       className="img-fluid"
                     />
-                    <p>
-                      Innovative <br />
-                      Ideas
-                    </p>
+                    <p>Highly Result Driven</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Why Should/Transparent-Development-Process.png")}
-                      alt="Fast-Paced-Development"
-                      className="img-fluid"
-                    />
-                    <p>Transparent Process</p>
-                  </a>
-                </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
-                    <img
-                      src={require("../../assets/images/MobileAppDev/ibeacon App/Why Should/Competitive-pricing-1.png")}
-                      alt="Competitive-Pricing"
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Why You Should/Competitive-pricing.png")}
+                      alt="SmartWatch-Chat-apps"
                       className="img-fluid"
                     />
                     <p>Competitive Pricing</p>
+                  </a>
+                </div>
+                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                  <a href="" className="service__provide_tab">
+                    <img
+                      src={require("../../assets/images/MobileAppDev/Apple Watch/Why You Should/Meet-milestones-and-deadlines1.png")}
+                      alt="Mask-Group"
+                      className="img-fluid"
+                    />
+                    <p>Meet Milestones And Deadlines</p>
                   </a>
                 </div>
               </div>
@@ -370,19 +367,19 @@ const IBeaconAppDev = () => {
                 <div className="Title">
                   <h3 className="Title_heading">Experience and Expertise.</h3>
                   <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a group of highly talented developers who
-                    are experts in offering the best iBeacon App development.
-                    Many business owners are now converting these services
-                    towards mobile apps for increasing user engagement.
+                    The App Ideas is one of the most popular software
+                    development company. We have a group of talented developers
+                    who are experts as well as experience App Watch app
+                    developers. We offer the solution which will help you in the
+                    growth as well as success in your business with unique
+                    design.
                   </p>
                   <p className="Title_para">
-                    The reason to choose The App Ideas is that we have a group
-                    of expert and dedicated developers with years of experience
-                    in deploying better quality projects. We boast of years of
-                    frontline experience in the iBeacon app development and have
-                    the expertise to build any challenging app with the
-                    technology.
+                    The App Ideas has proficient and skilled developers who are
+                    highly experienced in offering the best Apple Watch app
+                    development. We offer a talented pool of Apple Watch app
+                    developers having years of experience proven expertise and
+                    great credentials.{" "}
                   </p>
                 </div>
               </div>
@@ -393,7 +390,6 @@ const IBeaconAppDev = () => {
       {/* Service Section End */}
       <TestiMonial />
 
-      {/* FAQ section start */}
       <section className="accordion_section py-5">
         <div className="container">
           <div className="Title">
@@ -415,7 +411,8 @@ const IBeaconAppDev = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseTwo"
                     >
-                      What use do iBeacons serve?
+                      What Are the Different Types of Mobile Apps You Can
+                      Develop?
                     </button>
                   </h2>
                   <div
@@ -425,12 +422,10 @@ const IBeaconAppDev = () => {
                     data-bs-parent="#accordionFlushExample"
                   >
                     <div className="accordion-body">
-                      The position of the user may be determined by iBeacon App
-                      Development using Bluetooth Low Energy (BLE) technology.
-                      To determine if the customer is physically near to the
-                      shop, this might be employed. After that, it notifies
-                      customers through push notifications sent to their mobile
-                      devices about deals, new goods, and other information.
+                      Applications may be developed for mobile devices running
+                      both the Android and iOS operating systems. Customers,
+                      employees, or even vendors may promote certain apps for
+                      use.
                     </div>
                   </div>
                 </div>
@@ -444,7 +439,8 @@ const IBeaconAppDev = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseThree"
                     >
-                      What is the farthest point that beacons can travel?
+                      Which platform, Android or iOS, should our application be
+                      launched on?
                     </button>
                   </h2>
                   <div
@@ -454,12 +450,10 @@ const IBeaconAppDev = () => {
                     data-bs-parent="#accordionFlushExample"
                   >
                     <div className="accordion-body">
-                      A beacon may be seen from a maximum of 70 metres away.
-                      Nevertheless, there are restrictions because to
-                      environmental interference, physical obstructions, and
-                      signal disruption brought on by natural phenomena. These
-                      items are all significant. The range’s loudness is
-                      adjustable on seven distinct levels.
+                      In the past, companies had the option of creating software
+                      just for one OS. Even while major mobile OSes like Android
+                      and iOS have huge user bases, most companies still choose
+                      to create apps that work on both..
                     </div>
                   </div>
                 </div>
@@ -473,7 +467,8 @@ const IBeaconAppDev = () => {
                       aria-expanded="false"
                       aria-controls="flush-collapseFour"
                     >
-                      Does iBeacon functionality need an app?
+                      What is the Difference Between Cross-Platform and Native
+                      App Development?
                     </button>
                   </h2>
                   <div
@@ -483,10 +478,13 @@ const IBeaconAppDev = () => {
                     data-bs-parent="#accordionFlushExample"
                   >
                     <div className="accordion-body">
-                      An ibeacon may still activate the appropriate app even if
-                      the user’s iOS device isn’t currently running it.
-                      Ibeacons, however, are only compatible with Apple’s iOS
-                      and not Android.
+                      Cross-platform development refers to the process of
+                      creating software for several platforms as opposed to only
+                      one. The process of creating applications specifically for
+                      different platforms, including Android and iOS, is known
+                      as native <b>app development</b>. A software that
+                      functions effectively on both systems may be made using
+                      cross-platform development approaches.
                       <br />
                       <div className="mt-3">
                         <b>
@@ -499,6 +497,34 @@ const IBeaconAppDev = () => {
                           developing an iOS app
                         </b>
                       </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingFive">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      Can You Work With Us if We Don’t Have a Fully Formed Idea
+                      for Our App?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      We engineers are used to collaborating with businesses
+                      whose app concepts are in varied phases of development.
+                      Let’s collaborate to bring your ideas to life as practical
+                      mobile applications.
                     </div>
                   </div>
                 </div>
@@ -516,7 +542,7 @@ const IBeaconAppDev = () => {
                       aria-expanded="false"
                       aria-controls="collapseTwo"
                     >
-                      How can iBeacon help those who are blind?
+                      Will You Sign an NDA for the App You’re Developing?
                     </button>
                   </h2>
                   <div
@@ -526,11 +552,10 @@ const IBeaconAppDev = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      With tools like text-to-speech and voice recognition,
-                      iBeacon App Development makes it easier for those who are
-                      blind to communicate using a smartphone. These criteria
-                      have been reflected in Siri, and Bluetooth braille
-                      accessibility is now available.
+                      We are willing to sign non-disclosure agreements
+                      throughout the development of your mobile app (NDAs). You
+                      can trust us to keep your development under wraps and out
+                      of the hands of your competitors at all times.
                     </div>
                   </div>
                 </div>
@@ -544,7 +569,7 @@ const IBeaconAppDev = () => {
                       aria-expanded="false"
                       aria-controls="collapseThree"
                     >
-                      What distinguishes iBeacons from Beacons?
+                      Do I Need to Test My App?
                     </button>
                   </h2>
                   <div
@@ -554,10 +579,14 @@ const IBeaconAppDev = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      iBeacons may show both the numbers and the range, in
-                      contrast to Beacons, which only display the Unique
-                      Identifier (UIN). As iBeacons work with Apple’s iOS, they
-                      are a good substitute.
+                      Our knowledgeable internal testing crew puts every mobile
+                      app through rigorous testing. This group works closely
+                      with the developers to make sure the applications being
+                      created are of the best quality possible. You are welcome
+                      to participate in our internal testing as well as your
+                      own, of course. You could have suggestions for other uses
+                      for the app, allowing you to develop test cases that are
+                      more difficult.
                     </div>
                   </div>
                 </div>
@@ -571,7 +600,7 @@ const IBeaconAppDev = () => {
                       aria-expanded="false"
                       aria-controls="collapseFour"
                     >
-                      What was the primary issue in creating the iBeacon app?
+                      Can an App connect to my existing systems/data store?
                     </button>
                   </h2>
                   <div
@@ -581,11 +610,67 @@ const IBeaconAppDev = () => {
                     data-bs-parent="#accordionExample"
                   >
                     <div className="accordion-body">
-                      The most difficult component is overcoming external
-                      interference from the surroundings and radio
-                      transmissions. These problems, along with many others, are
-                      managed and resolved by the iOS Software Development Kit
-                      (SDK).
+                      You may rely on us to develop API-based applications that
+                      smoothly synchronise with your current infrastructure
+                      (API). Because to APIs that may be developed in any
+                      language, your datastore can be accessed and utilised by
+                      any software.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFive">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      Should I prepare my app's visual (wireframe)?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      Our development team may collaborate with you to create
+                      the app if you have access to a web designer and are
+                      prepared to give graphics. The We team would be pleased to
+                      assist you with visualising your concept and bringing it
+                      to life in the digital sphere, even if all you currently
+                      have is a conception or an idea.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingSix">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="v"
+                    >
+                      Who will own the intellectual property rights to my App?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSix"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      The SPAR team’s obligations are limited to providing
+                      advice and support while you develop the App for your
+                      clients since the App is based on your idea, concept, and
+                      company, and you retain all rights to it.
                     </div>
                   </div>
                 </div>
@@ -594,16 +679,16 @@ const IBeaconAppDev = () => {
           </div>
         </div>
       </section>
-      {/* FAQ section End */}
+
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
+      <secion className="testi-bg py-4">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
                 <p style={{ textAlign: "left" }}>
-                  Are you planning to launch a Successful iBeacon Mobile app in
-                  the market?{" "}
+                  Are you planning to launch a Successful IoT Mobile app in the
+                  market?{" "}
                 </p>
               </div>
             </div>
@@ -616,10 +701,10 @@ const IBeaconAppDev = () => {
             </div>
           </div>
         </div>
-      </section>
+      </secion>
       {/* Contact Section End */}
     </>
   );
 };
 
-export default IBeaconAppDev;
+export default AppleWatch;

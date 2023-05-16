@@ -1,4 +1,6 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
 import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
@@ -13,6 +15,9 @@ import FAQ from "../../components/FAQ";
 import WorkHand from "../../components/WorkHand";
 
 const IphoneAppDev = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       {/* Banner Section Start */}

@@ -24,9 +24,13 @@ import Error404 from "./pages/Error404";
 import AndroidAppDev from "./pages/MobileAppDev/AndroidAppDev";
 import IphoneAppDev from "./pages/MobileAppDev/IphoneAppDev";
 import IpadAppDev from "./pages/MobileAppDev/IpadAppDev";
-import ReactNativeDev from "./pages/MobileAppDev/ReactNativeDev"
+import ReactNativeDev from "./pages/MobileAppDev/ReactNativeDev";
 import IBeaconAppDev from "./pages/MobileAppDev/IBeaconAppDev";
 import IOTAppDev from "./pages/MobileAppDev/IOTAppDev";
+import AppleWatch from "./pages/MobileAppDev/AppleWatch";
+import HireAndroidDev from "./pages/Hire Us/Hire Mobile App Dev/HireAndroidDev";
+import HireReactNativeDev from "./pages/Hire Us/Hire Mobile App Dev/HireReactNativeDev";
+import HireFlutterDev from "./pages/Hire Us/Hire Mobile App Dev/HireFlutterDev";
 
 const App = () => {
   return (
@@ -56,14 +60,21 @@ const App = () => {
         <Route path="/Designing-Services" element={<Designing />} />
         <Route path="/Startup-Services" element={<StartupServices />} />
         <Route path="/Android-App-Development" element={<AndroidAppDev />} />
-        <Route path="/IPhone-App-Development"  element={<IphoneAppDev/>}/>
-        <Route path="/IPadAppDevelopment" element={ <IpadAppDev/>}/>
-        <Route path="/React-Native-Development" element={<ReactNativeDev/>}/>
-        <Route path="/iBeacon-App-Development" element={<IBeaconAppDev/>}/>
-        <Route path="/IOT-App-Development" element={<IOTAppDev/>}/>
+        <Route path="/IPhone-App-Development" element={<IphoneAppDev />} />
+        <Route path="/IPadAppDevelopment" element={<IpadAppDev />} />
+        <Route path="/React-Native-Development" element={<ReactNativeDev />} />
+        <Route path="/iBeacon-App-Development" element={<IBeaconAppDev />} />
+        <Route path="/IOT-App-Development" element={<IOTAppDev />} />
+        <Route path="/watch-app-development" element={<AppleWatch />} />
 
-        {/* Hire Us Link */}  
+        {/* Hire Us Link */}
         <Route path="/Hire-IOS-Developer" element={<HireIOSDev />} />
+        <Route path="/hire-android-developer" element={<HireAndroidDev />} />
+        <Route
+          path="/hire-react-native-developer"
+          element={<HireReactNativeDev />}
+        />
+        <Route path="/hire-flutter-developer" element={<HireFlutterDev />} />
 
         {/* Solution Link */}
         <Route
@@ -76,7 +87,7 @@ const App = () => {
         <Route path="/contactUs" element={<ContactUs />} />
         {/* Blog Link */}
         <Route path="/blog" element={<Blog />} />
-        
+
         <Route path="/popup" element={<PopUp />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>
