@@ -2,24 +2,26 @@ import React, { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
+
 import background from "../../../assets/images/Home-our-services/bg-download.svg";
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import Elegant from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/The Elegant Designing Services.svg";
-import Platforms from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Cross Platforms Development.svg";
-import Deliver from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Deliver Secure App Solution.svg";
-import Support from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Support And Maintenance.svg";
-import Custom from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Custom Flutter App Development.svg";
-import Flutter from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Flutter Consulting Services.svg";
 
-import Highly from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Highly Skilled Developers.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Sophisticated Portfolio.svg";
-import Deployment from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/On-Time Deployment.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Affordable Costing.svg";
-import Client from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Client Satisfaction Guarantee.svg";
-import Process from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Agile Development Process.svg";
+import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Offer Customization.svg";
+import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Features Integration.svg";
+import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Consulting Services.svg";
+import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Secure Web Solutions.svg";
+import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Web Application Development.svg";
+import Unit from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Unit Testing Methods.svg";
 
-const HireFlutterDev = () => {
+import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Expertise In Web Solutions.svg";
+import Sophisticated from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Sophisticated Portfolio.svg";
+import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Implement Agile Methods.svg";
+import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Affordable Costing.svg";
+import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Time-Bound Deployment.svg";
+import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Free Support Services.svg";
+
+const HireWordPressDev = () => {
   useEffect(() => {
     AOS.init();
   }, []);
@@ -31,16 +33,16 @@ const HireFlutterDev = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
               <div className="common_banner_lft">
-                <h2>Hire Flutter Developers In India</h2>
+                <h2>Hire WordPress Developers In India</h2>
                 <p>
-                  Hire the best Flutter Developers in India from The App Ideas.
-                  The App Ideas is one of the most popular web and app
-                  development company. We have a team of skilled developers who
-                  are expert in understanding the client’s requirements in a
-                  much better way, plan out, develop and deploy the perfect
-                  business solutions which will be helpful in your business
-                  growth. Flutter is a newly introduced cross platforms
-                  technology.
+                  WordPress has always been the most popular CMS platform with
+                  millions blogs and content rich websites actively using it all
+                  over the the globe. WordPress always enjoyed popularity as a
+                  CMS platform because of its unmatched flexibility,
+                  versatility, scalability, great scope of customization with
+                  hundreds of plugins, themes and extensions. WordPress as a CMS
+                  platform offers exceptional ease of use for the user and
+                  unmatched ease and rich tools for the administrators
                 </p>
                 <ul className="common__banner__list ps-0 mt-4">
                   <li>
@@ -56,7 +58,7 @@ const HireFlutterDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                      Best Flutter app Development Company
+                      Best WordPress Development Company
                     </span>
                   </li>
                   <li>
@@ -64,7 +66,7 @@ const HireFlutterDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                      Dedicated team for your Flutter app Development
+                      Dedicated team for your WordPress Development
                     </span>
                   </li>
                   <li>
@@ -80,35 +82,35 @@ const HireFlutterDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/VRApplicationDeveloper.webp")}
+                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/VRApplicationDeveloper.webp")}
                         alt="IPhone-App-Development-Company"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Flutter App Development</h4>
+                      <h4>Custom WordPress Development Services</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Mobile-App-Development.png")}
+                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/Mobile-Apps-Development.png")}
                         alt="IPhone-App-Development-Service"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Flutter App Development Service</h4>
+                      <h4>WordPress Website Development Company</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Wordpress-Developer.png")}
+                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/Angular-JS-developer.png")}
                         alt="
                         IPhone-Application-Development"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Flutter App Developer</h4>
+                      <h4>WordPress Website Developer</h4>
                     </div>
                   </div>
                 </div>
@@ -189,24 +191,35 @@ const HireFlutterDev = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Our Feat in Flutter App Development</h3>
+            <h3>Our Feat in WordPress Development</h3>
             <p>
-              The App Ideas is a Flutter app development company. Our developers
-              are highly capable of developing a sophisticated and future-ready
-              flutter app development. Many of the businesses and services are
-              now shifting their business to online and choose the flutter
-              technology. Our flutter app development solutions can help you in
-              your brand awareness online. Our Flutter skilled developers can
-              provide the best software solution with the best design and
-              functionality which can be helpful in business growth.
+              Over the years with a gamut of clients from all niches of business
+              and all walks of life who depended on our expertise for shaping
+              their web presence, we have built a strong portfolio of most
+              sophisticated WordPress websites with beautiful user interface and
+              exceptionally fluid user experience. Our feat in building niche
+              custom WordPress websites for variety of content needs, made us
+              one of the most preferred{" "}
+              <a
+                href="https://theappideas.com/iphone-app-development-company/"
+                className="Title_Color"
+                target="_blank"
+                style={{ color: "#d6aa0b" }}
+              >
+                <b> WordPress development</b>
+              </a>{" "}
+              company for this popular CMS platform. Besides building custom
+              WordPress websites our WordPress developers can also build and
+              design custom themes and plugins to help our customers achieve
+              their sought after look and feel.
             </p>
             <p>
-              Flutter is a Google new open source technology for creating native
-              mobile apps for Android and IOS with a single codebase. We have a
-              team of highly skilled Flutter app development who are highly
-              expert and experienced in providing the best business solution for
-              different niches. Hire us and access our expertise to convert your
-              ideas into online platforms solutions.
+              The App Ideas has been into WordPress development for years
+              delivering a whole array of sophisticated and highly custom
+              designed websites. Hire industry’s best WordPress prodigies to
+              give your custom website and blog an unmatched user experience. If
+              you want to produce awesome web experience with glitch-free
+              performance, our Hire WordPress Developers in India.
             </p>
             <div className="text-center">
               <a href="#" className="contact_btn_new">
@@ -224,36 +237,30 @@ const HireFlutterDev = () => {
           </div>
           <div className="row mt-5">
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-1">
-                <a href="" className="work_head_box_link"></a>
+              <div className="work_head_box port_ecommerce">
+                <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
-                  <a href="" className="work_head_box_link"></a>
+                  <a href="#" className="work_head_box_link"></a>
                   <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="" className="work_head_box_link"></a>
+                    <a href="#" className="work_head_box_link"></a>
                     <div className="work_head_lft">
-                      <a href="" className="work_head_box_link">
-                        <h2>Spending Tracker</h2>
+                      <a href="#" className="work_head_box_link">
+                        <h2>Resipsausa</h2>
                       </a>
                       <ul className="ps-0">
-                        <a href="" className="work_head_box_link"></a>
+                        <a href="#" className="work_head_box_link"></a>
                         <li>
-                          <a href="" className="work_head_box_link">
+                          <a href="#" className="work_head_box_link">
                             {" "}
                           </a>
-                          <a href="" className="work_head_item">
-                            Mobile Application Development{" "}
+                          <a href="#" className="work_head_item">
+                            E-Commerce
                           </a>
                         </li>
                         <li>
                           {" "}
-                          <a href="" className="work_head_item">
-                            React Native
-                          </a>
-                        </li>
-                        <li>
-                          {" "}
-                          <a href="" className="work_head_item">
-                            Reactjs
+                          <a href="#" className="work_head_item">
+                            Hire Wordpress
                           </a>
                         </li>
                       </ul>
@@ -262,9 +269,8 @@ const HireFlutterDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-53-1536x948.webp")}
-                        alt="port-mobile-app-mobile-thirteen"
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website.webp")}
+                        alt="port-ecommerce-website"
                         className="img-fluid"
                       />
                     </div>
@@ -273,36 +279,30 @@ const HireFlutterDev = () => {
               </div>
             </div>
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-2">
-                <a href="" className="work_head_box_link"></a>
+              <div className="work_head_box port_ecommerce-one">
+                <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
-                  <a href="" className="work_head_box_link"></a>
+                  <a href="#" className="work_head_box_link"></a>
                   <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="" className="work_head_box_link"></a>
+                    <a href="#" className="work_head_box_link"></a>
                     <div className="work_head_lft">
-                      <a href="" className="work_head_box_link">
-                        <h2>Pitch App</h2>
+                      <a href="#" className="work_head_box_link">
+                        <h2>Purebodynaturals</h2>
                       </a>
                       <ul className="ps-0">
-                        <a href="" className="work_head_box_link"></a>
+                        <a href="#" className="work_head_box_link"></a>
                         <li>
-                          <a href="" className="work_head_box_link">
+                          <a href="#" className="work_head_box_link">
                             {" "}
                           </a>
-                          <a href="" className="work_head_item">
-                            Mobile Application Development
+                          <a href="#" className="work_head_item">
+                            E-Commerce
                           </a>
                         </li>
                         <li>
                           {" "}
-                          <a href="" className="work_head_item">
-                            React Native
-                          </a>
-                        </li>
-                        <li>
-                          {" "}
-                          <a href="" className="work_head_item">
-                            Reactjs
+                          <a href="#" className="work_head_item">
+                            Hire Wordpress
                           </a>
                         </li>
                       </ul>
@@ -311,9 +311,8 @@ const HireFlutterDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-52-1536x948.webp")}
-                        alt="Device-Image-one"
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-one.webp")}
+                        alt="port-ecommerce-website-one"
                         className="img-fluid"
                       />
                     </div>
@@ -322,32 +321,37 @@ const HireFlutterDev = () => {
               </div>
             </div>
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-3">
-                <a href="" className="work_head_box_link"></a>
+              <div className="work_head_box port_mobilebg_fourteen">
+                <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
-                  <a href="" className="work_head_box_link"></a>
+                  <a href="#" className="work_head_box_link"></a>
                   <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="" className="work_head_box_link"></a>
+                    <a href="#" className="work_head_box_link"></a>
                     <div className="work_head_lft">
-                      <a href="" className="work_head_box_link">
-                        <h2>We Eat App</h2>
+                      <a href="#" className="work_head_box_link">
+                        <h2>Food Ordering Website</h2>
                       </a>
                       <ul className="ps-0">
-                        <a href="" className="work_head_box_link"></a>
+                        <a href="#" className="work_head_box_link"></a>
                         <li>
-                          <a href="" className="work_head_box_link">
+                          <a href="#" className="work_head_box_link">
                             {" "}
                           </a>
-                          <a href="" className="work_head_item">
-                            Mobile Application Development
+                          <a href="#" className="work_head_item">
+                            Hire Wordpress
                           </a>
                         </li>
                         <li>
-                          <a href="" className="work_head_box_link">
-                            {" "}
+                          {" "}
+                          <a href="#" className="work_head_item">
+                            Web Development
                           </a>
-                          <a href="" className="work_head_item">
-                            React Native
+                        </li>
+                        <li>
+                          {" "}
+                          <a href="#" className="work_head_item">
+                            {" "}
+                            Wordpress
                           </a>
                         </li>
                       </ul>
@@ -356,9 +360,8 @@ const HireFlutterDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-51-1536x948.webp")}
-                        alt="port-mobile-app-mobile-thirteen"
+                        src={require("../../../assets/images/Portfolio/port-webdevelop-webiste-two.webp")}
+                        alt="port-webdevelop-webiste-two"
                         className="img-fluid"
                       />
                     </div>
@@ -367,36 +370,30 @@ const HireFlutterDev = () => {
               </div>
             </div>
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-4">
-                <a href="" className="work_head_box_link"></a>
+              <div className="work_head_box port_ecommerce-tan">
+                <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
-                  <a href="" className="work_head_box_link"></a>
+                  <a href="#" className="work_head_box_link"></a>
                   <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="" className="work_head_box_link"></a>
+                    <a href="#" className="work_head_box_link"></a>
                     <div className="work_head_lft">
-                      <a href="" className="work_head_box_link">
-                        <h2>Spending Tracker</h2>
+                      <a href="#" className="work_head_box_link">
+                        <h2>Carolight</h2>
                       </a>
                       <ul className="ps-0">
-                        <a href="" className="work_head_box_link"></a>
+                        <a href="#" className="work_head_box_link"></a>
                         <li>
-                          <a href="" className="work_head_box_link">
+                          <a href="#" className="work_head_box_link">
                             {" "}
                           </a>
-                          <a href="" className="work_head_item">
-                            Mobile Application Development{" "}
+                          <a href="#" className="work_head_item">
+                            E-Commerce
                           </a>
                         </li>
                         <li>
                           {" "}
-                          <a href="" className="work_head_item">
-                            React Native
-                          </a>
-                        </li>
-                        <li>
-                          {" "}
-                          <a href="" className="work_head_item">
-                            Reactjs
+                          <a href="#" className="work_head_item">
+                            Hire Wordpress
                           </a>
                         </li>
                       </ul>
@@ -405,9 +402,8 @@ const HireFlutterDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-26-1536x948.webp")}
-                        alt="port-mobile-app-mobile-thirteen"
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-tan.webp")}
+                        alt="port-ecommerce-website-tan"
                         className="img-fluid"
                       />
                     </div>
@@ -416,36 +412,36 @@ const HireFlutterDev = () => {
               </div>
             </div>
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-5">
-                <a href="" className="work_head_box_link"></a>
+              <div className="work_head_box port_ecommerce-eleven">
+                <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
-                  <a href="" className="work_head_box_link"></a>
+                  <a href="#" className="work_head_box_link"></a>
                   <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="" className="work_head_box_link"></a>
+                    <a href="#" className="work_head_box_link"></a>
                     <div className="work_head_lft">
-                      <a href="" className="work_head_box_link">
-                        <h2>Pitch App</h2>
+                      <a href="#" className="work_head_box_link">
+                        <h2>Bravura</h2>
                       </a>
                       <ul className="ps-0">
-                        <a href="" className="work_head_box_link"></a>
+                        <a href="#" className="work_head_box_link"></a>
                         <li>
-                          <a href="" className="work_head_box_link">
+                          <a href="#" className="work_head_box_link">
                             {" "}
                           </a>
-                          <a href="" className="work_head_item">
-                            Mobile Application Development
+                          <a href="#" className="work_head_item">
+                            E-Commerce
                           </a>
                         </li>
                         <li>
                           {" "}
-                          <a href="" className="work_head_item">
-                            React Native
+                          <a href="#" className="work_head_item">
+                            Hire Wordpress
                           </a>
                         </li>
                         <li>
                           {" "}
-                          <a href="" className="work_head_item">
-                            Reactjs
+                          <a href="#" className="work_head_item">
+                            Wordpress
                           </a>
                         </li>
                       </ul>
@@ -454,54 +450,8 @@ const HireFlutterDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/app-1536x948.webp")}
-                        alt="Device-Image-one"
-                        className="img-fluid"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port-bg-6">
-                <a href="" className="work_head_box_link"></a>
-                <div className="row w-100">
-                  <a href="" className="work_head_box_link"></a>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="" className="work_head_box_link"></a>
-                    <div className="work_head_lft">
-                      <a href="" className="work_head_box_link">
-                        <h2>We Eat App</h2>
-                      </a>
-                      <ul className="ps-0">
-                        <a href="" className="work_head_box_link"></a>
-                        <li>
-                          <a href="" className="work_head_box_link">
-                            {" "}
-                          </a>
-                          <a href="" className="work_head_item">
-                            Mobile Application Development
-                          </a>
-                        </li>
-                        <li>
-                          <a href="" className="work_head_box_link">
-                            {" "}
-                          </a>
-                          <a href="" className="work_head_item">
-                            React Native
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <img
-                        data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-1-1536x948.webp")}
-                        alt="port-mobile-app-mobile-thirteen"
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-eleven.webp")}
+                        alt="port-ecommerce-website-eleven"
                         className="img-fluid"
                       />
                     </div>
@@ -518,8 +468,8 @@ const HireFlutterDev = () => {
         <div className="container">
           <div className="HireIOSDev-heading">
             <h2>
-              Hire Flutter Developers from The App Ideas for Variety of
-              Requirements
+              The App Ideas: Hire WordPress developers for delivering rich web
+              experience with content focused websites and blogs
             </h2>
           </div>
           <div className="row clearfix">
@@ -531,7 +481,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: "425px" }}
               >
                 <div className="color-layer" />
                 <div
@@ -544,19 +494,98 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Custom}
-                    alt="Custom Flutter App Development"
+                    src={Laravel}
+                    alt="Laravel Web Application Development"
                     style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">Custom Flutter App Development</a>
+                  <a href="/services">WordPress Features Integration</a>
                 </h5>
                 <div className="text">
-                  Our Flutter app developers are highly skilled and experienced
-                  in delivering the best Flutter app platform to the business
-                  which fulfils all the aspects of the clients as per the
-                  requirements.
+                  We have a team of highly skills WordPress developer who can
+                  also easily integrate the new WordPress features into an
+                  existing website for your business success.
+                </div>
+                {/* <a href="/services" className="arrow-icon">
+                  <HiOutlineArrowRight />
+                </a> */}
+              </div>
+            </div>
+            <div
+              data-aos="fade-up"
+              className="HireIOS-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
+              <div
+                className="inner-box wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+                style={{ height: "425px" }}
+              >
+                <div className="color-layer" />
+                <div
+                  className="pattern-layer-one"
+                  style={{ backgroundImage: `url(${background})` }}
+                />
+                <div
+                  className="pattern-layer-two"
+                  style={{ backgroundImage: `url(${background1})` }}
+                />
+                <div className="icon-box">
+                  <img
+                    src={Offer}
+                    alt="Offer Customization"
+                    style={{ width: "50px" }}
+                  />
+                </div>
+                <h5>
+                  <a href="/services">Offer Secure Website Platforms</a>
+                </h5>
+                <div className="text">
+                  Security is one of the most important and crucial factors in
+                  Website development. WordPress is one of the most popular
+                  frameworks which also provides the best security to your
+                  online platform. We can help you to provide a secure web
+                  application solution.
+                </div>
+                {/* <a href="/services" className="arrow-icon">
+                  <HiOutlineArrowRight />
+                </a> */}
+              </div>
+            </div>
+            <div
+              data-aos="fade-up"
+              className="HireIOS-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
+              <div
+                className="inner-box wow fadeInLeft"
+                data-wow-delay="0ms"
+                data-wow-duration="1500ms"
+                style={{ height: "425px" }}
+              >
+                <div className="color-layer" />
+                <div
+                  className="pattern-layer-one"
+                  style={{ backgroundImage: `url(${background})` }}
+                />
+                <div
+                  className="pattern-layer-two"
+                  style={{ backgroundImage: `url(${background1})` }}
+                />
+                <div className="icon-box">
+                  <img
+                    src={Features}
+                    alt="CUSTOM WORDPRESS DEVELOPMENT"
+                    style={{ width: "50px" }}
+                  />
+                </div>
+                <h5>
+                  <a href="/services">CUSTOM WORDPRESS DEVELOPMENT</a>
+                </h5>
+                <div className="text">
+                  Our expertise driven WordPress developers can develop highly
+                  customized WordPress websites with the help of custom themes
+                  and plugins offering truly unique look and feel.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -584,18 +613,18 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Elegant}
-                    alt="The Elegant Designing Services"
+                    src={Secure}
+                    alt="Secure Web Solutions"
                     style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">The Elegant Designing Services</a>
+                  <a href="/services">WORDPRESS MOBILE APP CONVERSION</a>
                 </h5>
                 <div className="text">
-                  We have a team of highly experienced designers who are capable
-                  of offering unique, sophisticated and future-ready UI -UX for
-                  a variety of Flutter apps.
+                  We have also proven expertise in converting a WordPress
+                  website into highly responsive and feature rich cross platform
+                  native mobile apps.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -623,18 +652,18 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Platforms}
-                    alt="Cross Platforms Development"
+                    src={Consulting}
+                    alt="Laravel Consulting Services"
                     style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">Cross Platforms Development</a>
+                  <a href="/services">WORDPRESS THEME DESIGN</a>
                 </h5>
                 <div className="text">
-                  We have an experienced team of experts of cross-platform
-                  developers who can help you to convert your app ideas into an
-                  elegant app for both Android and IOS.
+                  We at The App Ideas develop a wide variety of custom WordPress
+                  themes for a variety but of content rich websites belonging to
+                  a wide variety of niches.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -662,97 +691,18 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Support}
-                    alt="Support And Maintenance"
+                    src={Unit}
+                    alt="Unit Testing Methods"
                     style={{ width: "50px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">Support And Maintenance</a>
+                  <a href="/services">Theme And Plugin Integration</a>
                 </h5>
                 <div className="text">
-                  We are ready with a robust team of Flutter developers who are
-                  ready to provide the flutter apps along with keeping in mind
-                  the performance issues of integrating new features.
-                </div>
-                {/* <a href="/services" className="arrow-icon">
-                  <HiOutlineArrowRight />
-                </a> */}
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              className="HireIOS-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
-            >
-              <div
-                className="inner-box wow fadeInLeft"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-                style={{ height: "400px" }}
-              >
-                <div className="color-layer" />
-                <div
-                  className="pattern-layer-one"
-                  style={{ backgroundImage: `url(${background})` }}
-                />
-                <div
-                  className="pattern-layer-two"
-                  style={{ backgroundImage: `url(${background1})` }}
-                />
-                <div className="icon-box">
-                  <img
-                    src={Deliver}
-                    alt="Deliver Secure App Solution"
-                    style={{ width: "50px" }}
-                  />
-                </div>
-                <h5>
-                  <a href="/services">Deliver Secure App Solution</a>
-                </h5>
-                <div className="text">
-                  As a Flutter software development company, we offer the best
-                  flutter app solution. Along with delivering the best flutter
-                  app solution, we also ensure about delivering a secure
-                  solution that helps in maintaining security and privacy.
-                </div>
-                {/* <a href="/services" className="arrow-icon">
-                  <HiOutlineArrowRight />
-                </a> */}
-              </div>
-            </div>
-            <div
-              data-aos="fade-up"
-              className="HireIOS-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
-            >
-              <div
-                className="inner-box wow fadeInLeft"
-                data-wow-delay="0ms"
-                data-wow-duration="1500ms"
-                style={{ height: "400px" }}
-              >
-                <div className="color-layer" />
-                <div
-                  className="pattern-layer-one"
-                  style={{ backgroundImage: `url(${background})` }}
-                />
-                <div
-                  className="pattern-layer-two"
-                  style={{ backgroundImage: `url(${background1})` }}
-                />
-                <div className="icon-box">
-                  <img
-                    src={Flutter}
-                    alt="Flutter Consulting Services"
-                    style={{ width: "50px" }}
-                  />
-                </div>
-                <h5>
-                  <a href="/services">Flutter Consulting Services</a>
-                </h5>
-                <div className="text">
-                  Our iOS app developers also have the necessary expertise and
-                  skills to build sophisticated Apple Watch apps and connected
-                  apps for various IOT gadgets.
+                  Our WordPress experts can also help you sport accustom web
+                  experience by integrating a range of handpicked themes and
+                  plugins suitable for your website.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -769,12 +719,12 @@ const HireFlutterDev = () => {
       <section className="HireIOSDev-section style-two py-5">
         <div className="container">
           <div className="HireIOSDev-heading">
-            <h2>Why Hire Flutter app Developers from us?</h2>
+            <h2>WHY CHOOSE HIRE LARAVEL DEVELOPERS IN INDIA?</h2>
             <p>
-              We have established our reputation in the market as one of the
-              leading Flutter app development with experience in app development
-              for different niches. Here I am listing some of the key reasons to
-              hire the Flutter app developers for us.
+              Laravel Technology is a free and open-source laravel PHP framework
+              that follows the MVC architecture to offer the foremost web
+              applications to you. Our Laravel developers are highly
+              experienced. There are various reasons to choose us.
             </p>
           </div>
           <div className="row clearfix">
@@ -798,13 +748,13 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Highly}
-                    alt="Highly Skilled Developers"
+                    src={Expertise}
+                    alt="Expertise In Web Solutions"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">Highly Skilled Developers</a>
+                  <a href="/services">Expertise In Web Solutions</a>
                 </h5>
                 <div className="text">
                   We boast of a robust team of dedicated iOS app developers with
@@ -845,9 +795,9 @@ const HireFlutterDev = () => {
                   <a href="/services">Sophisticated Portfolio</a>
                 </h5>
                 <div className="text" style={{ marginBottom: "-26px" }}>
-                  We have proven our expertise in the web and app development
-                  field by creating a sophisticated portfolio of web and app
-                  development services.
+                  With years of experience, We have worked on various Laravel
+                  projects and successful web solutions or applications for
+                  different niches.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -874,13 +824,13 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Deployment}
-                    alt="On-Time Deployment"
+                    src={Implement}
+                    alt="Implement Agile Methods"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">On-Time Deployment</a>
+                  <a href="/services">Implement Agile Methods</a>
                 </h5>
                 <div className="text">
                   Along with the best designing and development services, we
@@ -921,10 +871,9 @@ const HireFlutterDev = () => {
                   <a href="/services">Affordable Costing</a>
                 </h5>
                 <div className="text" style={{ marginBottom: "-25px" }}>
-                  After requirements gathering, we analyze the overall projects
-                  and features of the client. And based on that we offer the
-                  best and competitive rates without compromising the quality of
-                  the software solution.
+                  Based on the projects, modules, and features of the
+                  requirements, we offer the best competitive rates without
+                  embracing the quality of the projects.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -951,18 +900,18 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Client}
-                    alt="Client Satisfaction Guarantee"
+                    src={Time}
+                    alt="Time-Bound Deployment"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">Client Satisfaction Guarantee</a>
+                  <a href="/services">Time-Bound Deployment</a>
                 </h5>
                 <div className="text">
-                  With hundreds of projects completed by us and a global client
-                  base, we guarantee client satisfaction with our flutter app
-                  development services.
+                  We strictly follow the timeline of deploying the projects to
+                  our clients with the best quality. In a timeline, we develop
+                  as well as test the software before delivering it to you.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -989,17 +938,19 @@ const HireFlutterDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Process}
-                    alt="Agile Development Process"
+                    src={Free}
+                    alt="Free Support Services"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">Agile Development Process</a>
+                  <a href="/services">Free Support Services</a>
                 </h5>
                 <div className="text" style={{ marginBottom: "25px" }}>
-                  Our Flutter developers follow the Agile Development process to
-                  ensure the fast paced development.
+                  After deployment of the projects within the timeline, we also
+                  offer our clients three months of free support and maintenance
+                  services. You can easily connect with us through various
+                  methods like E-mail, call, and chat.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -1037,4 +988,4 @@ const HireFlutterDev = () => {
   );
 };
 
-export default HireFlutterDev;
+export default HireWordPressDev;

@@ -1,6 +1,11 @@
-import React from "react";
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const WorkHand = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <section className="work_head_section py-5">
@@ -48,7 +53,7 @@ const WorkHand = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        //   data-aos="fade-left"
+                        data-aos="fade-left"
                         src={require("../assets/images/Portfolio/Device-Image-one.webp")}
                         alt="Device-Image-one"
                         className="img-fluid"
@@ -106,7 +111,7 @@ const WorkHand = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        //   data-aos="fade-left"
+                        data-aos="fade-left"
                         src={require("../assets/images/Portfolio/Device-Image-two.webp")}
                         alt="Device-Image-two"
                         className="img-fluid"
@@ -158,7 +163,7 @@ const WorkHand = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        //   data-aos="fade-left"
+                        data-aos="fade-left"
                         src={require("../assets/images/Portfolio/Device-Image-three.webp")}
                         alt="Device-Image-three"
                         className="img-fluid"

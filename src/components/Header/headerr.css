@@ -25,6 +25,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: 1350px;
 }
 
 .wrapper .logo a {

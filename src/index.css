@@ -1554,7 +1554,6 @@ section {
   border: none;
 }
 
-
 .port-mobile-one {
   background-image: url("./assets/images/MobileAppDev/React\ Native\ App/port-mobile-1.webp");
 }
@@ -1564,3 +1563,120 @@ section {
 .port-mobile-three {
   background-image: url("./assets/images/MobileAppDev/React\ Native\ App/port-mobile-3.webp");
 }
+.port-bg-1 {
+  background-image: url("./assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-1.webp");
+}
+.port-bg-2 {
+  background-image: url("./assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-2.webp");
+}
+.port-bg-3 {
+  background-image: url("./assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-3.webp");
+}
+.port-bg-4 {
+  background-image: url("./assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-4.webp");
+}
+.port-bg-5 {
+  background-image: url("./assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-5.webp");
+}
+.port-bg-6 {
+  background-image: url("./assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/BG-6.jpg");
+}
+.port_mobilebg-02 {
+  /* background-image: url("./assets/images/Poport-mobile-app-bg-twentythree.webprtfolio/port-mobile-app-bg-fifteen.webp"); */
+  background-image: url("./assets/images/Portfolio/port-mobile-app-bg-twentythree.webp");
+}
+/* Responsive css start */
+
+@media (max-width: 991px) {
+  .work_swiper-container .swiper-slide {
+    display: grid;
+  }
+  .work_swiper-container .swiper-wrapper {
+    height: 100%;
+  }
+  .common__banner__section .common_banner_lft h2,
+  .Title h3,
+  .Title__White h3 {
+    font-size: 22px;
+  }
+  .contact__lft p,
+  .accordion_box button.accordion-button.collapsed,
+  .common__banner__section .common_banner_lft p {
+    font-size: 16px;
+  }
+  .blog__listing__bottom_banner_lft h2 {
+    font-size: 18px;
+    margin-bottom: 16px;
+  }
+  .service__provide__section .nav .nav-item {
+    flex: 1 1 50%;
+    max-width: 50%;
+    border-bottom: 1px solid #fff;
+  }
+  .contact__with__social a {
+    width: 49%;
+  }
+  .contact__form {
+    padding: 40px 6px;
+  }
+  .blog__listing__profile .blog__listing__profile_content h4 a {
+    font-size: 18px;
+    text-align: center;
+  }
+  .blog__listing__profile_img {
+    text-align: center;
+  }
+}
+
+@media (max-width: 767px) {
+  .contact__rht {
+    border-left: none;
+  }
+  .common__banner__section {
+    padding: 40px 0;
+  }
+  .request__btn {
+    font-size: 14px;
+  }
+  .work_head_box {
+    height: 100%;
+  }
+  .work_head_box .work_head_rht {
+    height: 100%;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    margin-top: 20px;
+  }
+  .work_head_box .work_head_lft {
+    text-align: center;
+    margin: 40px 0;
+    left: 0;
+    top: 0;
+  }
+  .work_head_box .work_head_rht img {
+    height: auto;
+  }
+  .service__provide__section .nav .nav-item {
+    flex: 1 1 100%;
+    max-width: 100%;
+    border-bottom: 1px solid #fff;
+    border-right: 0px;
+  }
+  .create_cost_content_lft h2 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 575px) {
+  .testimonial__content {
+    bottom: 0;
+  }
+  .testimonial__content h5 {
+    font-size: 18px;
+  }
+  .contact__with__social a {
+    width: 100%;
+  }
+}
+
+/* Responsive Css End  */

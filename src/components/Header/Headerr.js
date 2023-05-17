@@ -444,14 +444,14 @@ const Headerr = () => {
                         </li>
                       </Link>
                       <Link to="/hire-react-native-developer">
-                      <li>
-                        <a href="/">Hire React Native Developer</a>
-                      </li>
+                        <li>
+                          <a href="/">Hire React Native Developer</a>
+                        </li>
                       </Link>
                       <Link to="/hire-flutter-developer">
-                      <li>
-                        <a href="/">Hire Flutter Developer</a>
-                      </li>
+                        <li>
+                          <a href="/">Hire Flutter Developer</a>
+                        </li>
                       </Link>
                     </ul>
                   </div>
@@ -465,30 +465,46 @@ const Headerr = () => {
                       Hire Web Developer
                     </h4>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">Hire Laravel Developer</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire WordPress Developer</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire Node.js Developer</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire CodeIgniter Developer</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire PHP Developers</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire Python Developer</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire React JS Developer</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire Angular 2 Developer</a>
-                      </li>
+                      <Link to="/Hire-Laravel-Developer">
+                        <li>
+                          <a>Hire Laravel Developer</a>
+                        </li>
+                      </Link>
+                      <Link to="/Hire-WordPress-Developer">
+                        <li>
+                          <a>Hire WordPress Developer</a>
+                        </li>
+                      </Link>
+                      <Link to="/Hire-nodejs-developer">
+                        <li>
+                          <a>Hire Node.js Developer</a>
+                        </li>
+                      </Link>
+                      <Link to="/hire-CodeIgniter-developer">
+                        <li>
+                          <a>Hire CodeIgniter Developer</a>
+                        </li>
+                      </Link>
+                      <Link to="/hire-php-developer">
+                        <li>
+                          <a>Hire PHP Developers</a>
+                        </li>
+                      </Link>
+                      <Link to="/Hire-python-developer">
+                        <li>
+                          <a>Hire Python Developer</a>
+                        </li>
+                      </Link>
+                      <Link to="/hire-reactjs-developer">
+                        <li>
+                          <a>Hire React JS Developer</a>
+                        </li>
+                      </Link>
+                      <Link to="/hire-HireAngular-developer">
+                        <li>
+                          <a>Hire Angular 2 Developer</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
@@ -568,12 +584,16 @@ const Headerr = () => {
                           <a>Food Delivery App Development</a>
                         </li>
                       </Link>
-                      <li>
-                        <a href="/">Courier Pickup Management Solution</a>
-                      </li>
-                      <li>
-                        <a href="/">Grocery App Development</a>
-                      </li>
+                      <Link to="/Courier-Pickup-Management-Solution">
+                        <li>
+                          <a>Courier Pickup Management Solution</a>
+                        </li>
+                      </Link>
+                      <Link to="/grocery-app-developer">
+                        <li>
+                          <a>Grocery App Development</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">

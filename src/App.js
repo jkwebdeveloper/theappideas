@@ -1,7 +1,7 @@
 import React from "react";
 // import Header from "./components/Header/Header";
 import "./index.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AboutUs from "./components/Aboutus/AboutUs";
@@ -31,6 +31,16 @@ import AppleWatch from "./pages/MobileAppDev/AppleWatch";
 import HireAndroidDev from "./pages/Hire Us/Hire Mobile App Dev/HireAndroidDev";
 import HireReactNativeDev from "./pages/Hire Us/Hire Mobile App Dev/HireReactNativeDev";
 import HireFlutterDev from "./pages/Hire Us/Hire Mobile App Dev/HireFlutterDev";
+import HireLaravelDev from "./pages/Hire Us/Hire Web Dev/HireLaravelDev";
+import HireWordPressDev from "./pages/Hire Us/Hire Web Dev/HireWordPressDev";
+import HireNodeDev from "./pages/Hire Us/Hire Web Dev/HireNodeDev";
+import HireCodeIgniter from "./pages/Hire Us/Hire Web Dev/HireCodeIgniter";
+import HirePHPDev from "./pages/Hire Us/Hire Web Dev/HirePHPDev";
+import HirePythonDev from "./pages/Hire Us/Hire Web Dev/HirePythonDev";
+import HireReactJsDev from "./pages/Hire Us/Hire Web Dev/HireReactJsDev";
+import HireAngular from "./pages/Hire Us/Hire Web Dev/HireAngular";
+import CourierPickup from "./pages/Solutions/DeliveryApp/CourierPickup";
+import GroceryApp from "./pages/Solutions/DeliveryApp/GroceryApp";
 
 const App = () => {
   return (
@@ -75,12 +85,31 @@ const App = () => {
           element={<HireReactNativeDev />}
         />
         <Route path="/hire-flutter-developer" element={<HireFlutterDev />} />
+        <Route path="/Hire-Laravel-Developer" element={<HireLaravelDev />} />
+        <Route
+          path="/Hire-WordPress-Developer"
+          element={<HireWordPressDev />}
+        />
+        <Route path="/Hire-nodejs-developer" element={<HireNodeDev />} />
+        <Route
+          path="/hire-CodeIgniter-developer"
+          element={<HireCodeIgniter />}
+        />
+        <Route path="/hire-php-developer" element={<HirePHPDev />} />
+        <Route path="/Hire-python-developer" element={<HirePythonDev />} />
+        <Route path="/hire-reactjs-developer" element={<HireReactJsDev />} />
+        <Route path="/hire-HireAngular-developer" element={<HireAngular />} />
 
         {/* Solution Link */}
         <Route
           path="/Food-Delivery-App-Development"
           element={<FoodDelivery />}
         />
+        <Route
+          path="/Courier-Pickup-Management-Solution"
+          element={<CourierPickup />}
+        />
+        <Route path="/grocery-app-developer" element={<GroceryApp />} />
         {/* PortFolio Link */}
         <Route path="/portfolio" element={<PortFolio />} />
         {/* Contact us Link */}
