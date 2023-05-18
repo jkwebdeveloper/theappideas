@@ -87,7 +87,7 @@ a:hover {
   line-height: 140%;
   font-weight: 600;
   width: 100%;
-  text-align: center;
+  /* text-align: center; */
 }
 
 .banner__contact__box {

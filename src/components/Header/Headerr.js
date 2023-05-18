@@ -74,74 +74,84 @@ const Headerr = () => {
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <li>
-                        <a href="/" className="company_text">
-                          {" "}
-                          <img
-                            src={require("../../assets/images/Header/Company/Our Process.gif")}
-                            alt="Our-Team"
-                          />{" "}
-                          Our Process
-                        </a>
-                      </li>
+                      <Link to="/Our-Process">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Our Process.gif")}
+                              alt="Our-Team"
+                            />{" "}
+                            Our Process
+                          </a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <li>
-                        <a href="/" className="company_text">
-                          {" "}
-                          <img
-                            src={require("../../assets/images/Header/Company/Our Team.gif")}
-                            alt="Our-Team"
-                          />{" "}
-                          Our Team
-                        </a>
-                      </li>
+                      <Link to="/Our-Team">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Our Team.gif")}
+                              alt="Our-Team"
+                            />{" "}
+                            Our Team
+                          </a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
                 <div className="content content_sub">
                   <div className="row">
                     <ul className="mega-links">
-                      <li>
-                        <a href="/" className="company_text">
-                          {" "}
-                          <img
-                            src={require("../../assets/images/Header/Company/Testimonial.gif")}
-                            alt="Testamonials"
-                          />
-                          Testimonial
-                        </a>
-                      </li>
+                      <Link to="/Testimonial">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Testimonial.gif")}
+                              alt="Testamonials"
+                            />
+                            Testimonial
+                          </a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <li>
-                        <a href="/" className="company_text">
-                          {" "}
-                          <img
-                            src={require("../../assets/images/Header/Company/Careers.gif")}
-                            alt="Carrers"
-                          />{" "}
-                          Careers
-                        </a>
-                      </li>
+                      <Link to="/Careers">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Careers.gif")}
+                              alt="Carrers"
+                            />{" "}
+                            Careers
+                          </a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <li>
-                        <a href="/" className="company_text">
-                          {" "}
-                          <img
-                            src={require("../../assets/images/Header/Company/Life at TAI.gif")}
-                            alt="Life-at-TAI"
-                          />{" "}
-                          Life at TAI
-                        </a>
-                      </li>
+                      <Link to="/Life-at-Tai">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Life at TAI.gif")}
+                              alt="Life-at-TAI"
+                            />{" "}
+                            Life at TAI
+                          </a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
@@ -205,21 +215,21 @@ const Headerr = () => {
                           <a>React Native Development</a>
                         </li>
                       </Link>
-                      <Link to="/iBeacon-App-Development">
+                      {/* <Link to="/iBeacon-App-Development">
                         <li>
                           <a>iBeacon App Development</a>
                         </li>
-                      </Link>
+                      </Link> */}
                       <Link to="/IOT-App-Development">
                         <li>
                           <a>IOT App Development</a>
                         </li>
                       </Link>
-                      <Link to="/watch-app-development">
+                      {/* <Link to="/watch-app-development">
                         <li>
                           <a>Apple Watch App Development</a>
                         </li>
-                      </Link>
+                      </Link> */}
                     </ul>
                   </div>
 
@@ -235,18 +245,26 @@ const Headerr = () => {
                       </h4>
                     </Link>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">SEO</a>
-                      </li>
-                      <li>
-                        <a href="/">Social Media Marketing</a>
-                      </li>
-                      <li>
-                        <a href="/">ASO</a>
-                      </li>
-                      <li>
-                        <a href="/">Guest Blogging</a>
-                      </li>
+                      <Link to="/seo">
+                        <li>
+                          <a>SEO</a>
+                        </li>
+                      </Link>
+                      <Link to="/Social-Media-Marketing">
+                        <li>
+                          <a>Social Media Marketing</a>
+                        </li>
+                      </Link>
+                      <Link to="/ASO-company">
+                        <li>
+                          <a>ASO</a>
+                        </li>
+                      </Link>
+                      <Link to="/Guest-Blogging">
+                        <li>
+                          <a>Guest Blogging</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
@@ -261,54 +279,28 @@ const Headerr = () => {
                       </h4>
                     </Link>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">Shopify Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Magento Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Joomla Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Drupal Development</a>
-                      </li>
+                      <Link to="/Shopify-Development">
+                        <li>
+                          <a>Shopify Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Magento-Development">
+                        <li>
+                          <a>Magento Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Joomla-Development">
+                        <li>
+                          <a>Joomla Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Drupal-Development">
+                        <li>
+                          <a>Drupal Development</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
-                  <div className="row">
-                    <Link to="/Game-Development">
-                      <h4>
-                        {" "}
-                        <img
-                          src={require("../../assets/images/Header/Services/Game Development.gif")}
-                          alt="Game-Development"
-                        />
-                        Game Development
-                      </h4>
-                    </Link>
-                    <ul className="mega-links">
-                      <li>
-                        <a href="/">Mobile Game Development</a>
-                      </li>
-                      <li>
-                        <a href="/">2D-3D Game Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Unity Game Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Virtual Reality Game Development</a>
-                      </li>
-                      <li>
-                        <a href="/">HTML5 Games Development</a>
-                      </li>
-                      <li>
-                        <a href="/">COCOS2D Game Development</a>
-                      </li>
-                    </ul>
-                  </div>
-                </div>
-                <div className="content">
                   <div className="row">
                     <Link to="/web-development">
                       <h4>
@@ -321,20 +313,30 @@ const Headerr = () => {
                       </h4>
                     </Link>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">WordPress Development</a>
-                      </li>
-                      <li>
-                        <a href="/">PHP Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Angular Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Webflow Development</a>
-                      </li>
+                      <Link to="/WordPress-Development">
+                        <li>
+                          <a>WordPress Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/PHP-Development">
+                        <li>
+                          <a>PHP Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Angular-Development">
+                        <li>
+                          <a>Angular Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Webflow-Development">
+                        <li>
+                          <a>Webflow Development</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
+                </div>
+                <div className="content">
                   <div className="row">
                     <Link to="/Software-Development">
                       <h4>
@@ -347,12 +349,16 @@ const Headerr = () => {
                       </h4>
                     </Link>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">Asp.Net Development</a>
-                      </li>
-                      <li>
-                        <a href="/">DotNetNuke Development</a>
-                      </li>
+                      <Link to="/Asp.Net-Development">
+                        <li>
+                          <a>Asp.Net Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/DotNetNuke-Development">
+                        <li>
+                          <a>DotNetNuke Development</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
@@ -360,19 +366,23 @@ const Headerr = () => {
                       <h4>
                         {" "}
                         <img
-                          src={require("../../assets/images/Header/Services/E-commerce website Development.gif")}
+                          src={require("../../assets/images/Header/Services/Designing Services.gif")}
                           alt="Designing-Services"
                         />
                         Designing services
                       </h4>
                     </Link>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">Graphics Design</a>
-                      </li>
-                      <li>
-                        <a href="/">Mobile App Design</a>
-                      </li>
+                      <Link to="/Graphics-Design">
+                        <li>
+                          <a>Graphics Design</a>
+                        </li>
+                      </Link>
+                      <Link to="/Mobile-App-Design">
+                        <li>
+                          <a>Mobile App Design</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
@@ -517,12 +527,16 @@ const Headerr = () => {
                       Hire E-commerce Developer
                     </h4>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">Hire Shopify Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Hire Magento 2 Development</a>
-                      </li>
+                      <Link to="/Hire-Shopify-Development">
+                        <li>
+                          <a>Hire Shopify Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Hire-Magento-Development">
+                        <li>
+                          <a>Hire Magento 2 Development</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
@@ -606,15 +620,21 @@ const Headerr = () => {
                       On-Demand Apps
                     </h4>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">Taxi Booking App Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Doctor Hiring App Solution</a>
-                      </li>
-                      <li>
-                        <a href="/">Security App Solution</a>
-                      </li>
+                      <Link to="/Taxi-Booking-App-Development">
+                        <li>
+                          <a>Taxi Booking App Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Doctor-Hiring-App-Solution">
+                        <li>
+                          <a>Doctor Hiring App Solution</a>
+                        </li>
+                      </Link>
+                      <Link to="/Security-App-Solution">
+                        <li>
+                          <a>Security App Solution</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                   <div className="row">
@@ -627,21 +647,31 @@ const Headerr = () => {
                       Popular Solutions
                     </h4>
                     <ul className="mega-links">
-                      <li>
-                        <a href="/">eCommerce App Development</a>
-                      </li>
-                      <li>
-                        <a href="/">E-learning App Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Dating App Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Driver Tracking App Development</a>
-                      </li>
-                      <li>
-                        <a href="/">Salon Service App</a>
-                      </li>
+                      <Link to="/eCommerce-App-Development">
+                        <li>
+                          <a>eCommerce App Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/E-learning-App-Development">
+                        <li>
+                          <a>E-learning App Development</a>
+                        </li>
+                      </Link>
+                      <Link to="Dating-App-Development">
+                        <li>
+                          <a>Dating App Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Driver-Tracking-App-Development">
+                        <li>
+                          <a>Driver Tracking App Development</a>
+                        </li>
+                      </Link>
+                      <Link to="/Salon-Service-App">
+                        <li>
+                          <a>Salon Service App</a>
+                        </li>
+                      </Link>
                     </ul>
                   </div>
                 </div>
