@@ -119,7 +119,7 @@
   padding: 10px 0px;
   display: flex;
   width: 100%;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: flex-start;
 }
 
@@ -128,7 +128,7 @@
 }
 
 .mega-box .content .row {
-  width: calc(25% - 30px);
+  width: calc(25% - 20px);
   line-height: 45px;
 }
 

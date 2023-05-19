@@ -10,7 +10,7 @@ const TestiMonial = () => {
         </div>
         <div className="row">
           <div className="col-lg-6 col-md-12 col-sm-12">
-            <div className="box my-5">
+            <div className="box my-5" style={{ cursor: "pointer" }}>
               <div className="imgbox">
                 <img
                   src={require("../../assets/images/Testimonial/maxresdefault.webp")}
@@ -19,7 +19,7 @@ const TestiMonial = () => {
                 />
               </div>
               <h4>
-                <spam>Lloyd Medley</spam>
+                <span>Lloyd Medley</span>
               </h4>
               <br />
               <p className="">
@@ -29,7 +29,7 @@ const TestiMonial = () => {
             </div>
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
-            <div className="box my-5">
+            <div className="box my-5" style={{ cursor: "pointer" }}>
               <div className="imgbox">
                 <img
                   src={require("../../assets/images/Testimonial/testimonial-2.webp")}
@@ -38,12 +38,12 @@ const TestiMonial = () => {
                 />
               </div>
               <h4>
-                <spam>Lloyd Medley</spam>
+                <span>Roberto Valdovinos</span>
               </h4>
               <br />
               <p className="">
-                We have designed and developed a website for his client, happy
-                to work with him in future.
+                We had done a Food Ordering and Food Delivery app for this
+                client
               </p>
             </div>
           </div>

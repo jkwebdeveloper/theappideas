@@ -24,7 +24,7 @@ section .testimonial {
   padding-bottom: 20px;
 }
 .testi-heading h2::after {
-  content: '';
+  content: "";
   width: 80px;
   height: 4px;
   background: #f6c000;
@@ -38,6 +38,7 @@ section .testimonial {
   text-align: center;
   background: #fff;
   border: 1px solid #c5c5c5;
+  border-radius: 12px;
 }
 .container .box:hover {
   background: #f6c000;
@@ -57,38 +58,40 @@ section .testimonial {
   line-height: 20px;
 }
 .container .box h4 span {
-  font-weight: 600;
-  font-size: 14px;
+  font-weight: 700;
+  font-size: 20px;
   color: #000000;
   transition: 0.5s;
 }
 .container .box:hover p,
-.container .box:hover h4,
-.container .box:hover h4 span {
+.container .box:hover h4 {
   color: #000;
+}
+.container .box:hover h4 span {
+  color: #2f0e39;
 }
 .container .box .imgbox {
   position: absolute;
   top: -60px;
   transform: translateX(-50%);
   left: 50%;
-  border-radius: 8px;
+  border-radius: 10px 10px 0px 0px;
   overflow: hidden;
 }
 .container .box .imgbox img {
   background-repeat: no-repeat;
   background-size: cover;
 }
-.testi-btn{
+.testi-btn {
   text-align: center;
 }
 .view-more-btn {
-  padding: 5px 15px 5px 15px;
+  padding: 8px 20px 8px 20px;
   border: none;
   border-radius: 30px;
   background-color: #f6c000;
 }
-.testi-btn .view-more-btn a:hover{
+.testi-btn .view-more-btn a:hover {
   border: none;
   background-color: #fff;
   color: #000;

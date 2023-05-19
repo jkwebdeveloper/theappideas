@@ -78,6 +78,8 @@ import Careers from "./pages/Company/Careers";
 import Testimonial from "./pages/Company/Testimonial";
 import OurTeam from "./pages/Company/OurTeam";
 import OurProcess from "./pages/Company/OurProcess";
+import Solutions from "./components/Solutions";
+import HireUs from "./components/HireUs";
 
 const App = () => {
   return (
@@ -145,6 +147,7 @@ const App = () => {
         <Route path="/Mobile-App-Design" element={<MobileAppDesign />} />
 
         {/* Hire Us Link */}
+        <Route path="/hire-us" element={<HireUs />} />
         <Route path="/Hire-IOS-Developer" element={<HireIOSDev />} />
         <Route path="/hire-android-developer" element={<HireAndroidDev />} />
         <Route
@@ -170,6 +173,7 @@ const App = () => {
         <Route path="/Hire-Magento-Development" element={<HireMagento />} />
 
         {/* Solution Link */}
+        <Route path="/solutions" element={<Solutions />} />
         <Route
           path="/Food-Delivery-App-Development"
           element={<FoodDelivery />}

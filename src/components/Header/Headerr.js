@@ -174,7 +174,7 @@ const Headerr = () => {
               </div>
             </li>
             <li>
-              <a href="/" className="desktop-item">
+              <a href="#" className="desktop-item">
                 Services <MdKeyboardArrowDown />{" "}
               </a>
               <input type="checkbox" id="showMega1" />
@@ -258,11 +258,6 @@ const Headerr = () => {
                       <Link to="/ASO-company">
                         <li>
                           <a>ASO</a>
-                        </li>
-                      </Link>
-                      <Link to="/Guest-Blogging">
-                        <li>
-                          <a>Guest Blogging</a>
                         </li>
                       </Link>
                     </ul>
@@ -424,9 +419,11 @@ const Headerr = () => {
               </div>
             </li>
             <li>
-              <a href="/" className="desktop-item">
-                Hire Us <MdKeyboardArrowDown />{" "}
-              </a>
+              <Link to="/hire-us">
+                <a href="/hire-us" className="desktop-item">
+                  Hire Us <MdKeyboardArrowDown />{" "}
+                </a>
+              </Link>
               <input type="checkbox" id="showMega2" />
               <label htmlFor="showMega2" className="mobile-item">
                 Hire Us <MdKeyboardArrowDown />
@@ -572,9 +569,11 @@ const Headerr = () => {
               </div>
             </li>
             <li>
-              <a href="/" className="desktop-item">
-                Solutions <MdKeyboardArrowDown />{" "}
-              </a>
+              <Link to="/solutions">
+                <a href="/solutions" className="desktop-item">
+                  Solutions <MdKeyboardArrowDown />{" "}
+                </a>
+              </Link>
               <input type="checkbox" id="showMega3" />
               <label htmlFor="showMega3" className="mobile-item">
                 Solutions <MdKeyboardArrowDown />
