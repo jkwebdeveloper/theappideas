@@ -6,6 +6,18 @@ import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import FAQ from "../../../components/FAQ";
+
+//  Customer App
+import search from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/search foods online.svg";
+import Check from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check details.svg";
+import Orderonline from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Order online.svg";
+import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Pay online.svg";
+import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Reviews and ratings.svg";
+import Get from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Get cashback.svg";
+import Avail from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Avail offers view offers.svg";
+import Checkorder from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check order history.svg";
+import Live from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Live tracking.svg";
 
 const FoodDelivery = () => {
   const prevRef = useRef(null);
@@ -249,9 +261,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/search-food-icon.png"
+                        src={search}
                         alt="search-food-icon"
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Search Foods Online</h4>
                       <p>
@@ -264,9 +277,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Check-Details-icons.png"
+                        src={Check}
                         alt="Check-Details-icons"
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Check details</h4>
                       <p>
@@ -279,9 +293,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Order-Online-icon.png"
+                        src={Orderonline}
                         alt="Order-Online-icon"
                         className="img-fluid"
+                        style={{ width: "25%" }}
                       />
                       <h4>Order online</h4>
                       <p>
@@ -294,9 +309,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Pay-Online-icons.png"
+                        src={payonline}
                         alt="Pay-Online-icons"
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Pay online</h4>
                       <p>
@@ -309,9 +325,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Reviews-And-Ratings-icons.png"
+                        src={Reviews}
                         alt="Reviews-And-Ratings-icons "
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Reviews and ratings</h4>
                       <p>
@@ -324,9 +341,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Get-Cashback-icons.png"
+                        src={Get}
                         alt="Get-Cashback-icons"
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Get cashback</h4>
                       <p>
@@ -338,9 +356,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/search-food-icon.png"
+                        src={Avail}
                         alt="search-food-icon"
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Avail offers/view offers</h4>
                       <p>
@@ -353,9 +372,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Check-Order-History-icons.png"
+                        src={Checkorder}
                         alt="Check-Order-History-icons"
                         className="img-fluid"
+                        style={{ width: "20%" }}
                       />
                       <h4>Check order history</h4>
                       <p>
@@ -368,9 +388,10 @@ const FoodDelivery = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src="assets/img/Live-Tracking-icons.png"
+                        src={Live}
                         alt="Live-Tracking-icons"
                         className="img-fluid"
+                        style={{ width: "13%" }}
                       />
                       <h4>Live tracking</h4>
                       <p>
@@ -790,7 +811,7 @@ const FoodDelivery = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food Delivery App/food1.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
                     style={{
                       width: "100%",
                     }}
@@ -802,7 +823,7 @@ const FoodDelivery = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food Delivery App/Food-2.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp")}
                     style={{
                       width: "100%",
                     }}
@@ -814,7 +835,7 @@ const FoodDelivery = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food Delivery App/Food-3.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp")}
                     style={{
                       width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -1045,6 +1066,29 @@ const FoodDelivery = () => {
       {/* Food Ordering Section End */}
 
       <TestiMonial />
+      <FAQ />
+      {/* Contact Section Start */}
+      <section className="testi-bg py-4">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
+              <div className="contact__lft">
+                <p style={{ textAlign: "left" }}>
+                  Would you like to create a Food Ordering App?
+                </p>
+              </div>
+            </div>
+            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
+              <div className="contact__rht">
+                <a href="/" className="contact_btn">
+                  Contact us{" "}
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Contact Section End */}
     </>
   );
 };

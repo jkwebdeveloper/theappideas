@@ -1,26 +1,23 @@
 import React from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
-
 const HireUs = () => {
   return (
     <>
-      {/* Banner Section Start */}
-      <section className="hire__banner__section">
+      {/* common Banner start */}
+      <section className="common__banner__section">
         <div className="container">
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
               <div className="common_banner_lft">
-                <h2>Best Graphic Design Company</h2>
+                <h2>Salon Booking App Development</h2>
                 <p>
-                  The App Ideas is one of the leading web and app development
-                  company. Along with the development services, we are also
-                  proficient in providing the best graphic designing services
-                  based on the business and requirements of the modern time. If
-                  you have an online platform or planning to launch an online
-                  platform, then it is very important for you to focus on
-                  Graphic designing services and offer the foremost designing
-                  service.
+                  Here we are at The App Ideas, which is one of the leading
+                  Salon Booking app development company. We have a team of
+                  highly experienced and expert mobile app developers who will
+                  offer the best salon app development services at the best
+                  rates. Feel free to reach us and get a free quote for a Salon
+                  Booking app development service.
                 </p>
                 <ul className="common__banner__list ps-0 mt-4">
                   <li>
@@ -36,7 +33,7 @@ const HireUs = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                      Best Graphic design Development Company
+                      Best Salon Service App Development Company
                     </span>
                   </li>
                   <li>
@@ -44,7 +41,7 @@ const HireUs = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                      Dedicated team for your Graphic design Development
+                      Dedicated team for your Salon Service App Development
                     </span>
                   </li>
                   <li>
@@ -60,107 +57,178 @@ const HireUs = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        alt="Mobile-App-Development"
+                        // src={require("")}
+                        alt="IPhone-App-Development-Company"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Graphic Design</h4>
+                      <h4>Salon Booking App Development</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        alt="Mobile-Application-Development"
+                        // src={require("")}
+                        alt="IPhone-App-Development-Service"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Graphic Design Services</h4>
+                      <h4>Salon App Development</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        alt="Mobile-Application-Development"
+                        // src={require("")}
+                        alt="
+                      IPhone-Application-Development"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Professional Graphic Designer</h4>
+                      <h4>Salon Booking App Development Company</h4>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                      "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
+              <div className="Title">
+                <h1>Hire Dedicated Developer</h1>
+              </div>
+              <p>
+                The App Ideas is a leading web and app development company, that
+                also offers the hiring of expert developers with dedicated
+                resources for developing the fortunate business solution, at the
+                best rates. Our committed developers understand the overall
+                project requirements, the integration of unique ideas, security
+                concerns, and the procedure for deploying the best services. We
+                have mastered delivering the best software services for various
+                niches. Hire us and experience our proficiency.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* common banner end  */}
+      {/* Food Delivery App Section Start */}
+      <section className="service__provide__section py-5">
+        <div className="container">
+          <div className="Title">
+            <h3>Why should you hire us?</h3>
+          </div>
+          <div className="food__delivery__tabing mt-5">
+            <div className="tab-content mt-5" id="pills-tabContent">
+              <div
+                className="tab-pane fade show active"
+                id="Customer-App"
+                role="tabpanel"
+                aria-labelledby="Customer-App-Tab"
+              >
+                <div className="row">
+                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                    <div className="food__delivery__box">
+                      <img
+                        src={require("../assets/images/Header/Hire Us/why-should/exp1.png")}
+                        alt="Check-Details-icons"
+                        className="img-fluid"
+                        style={{ width: "20%" }}
+                      />
+                      <h4>Registration and location setup</h4>
+                      <p>
+                        Customer App can allow a customer to add up their
+                        personal details like Name, Address and more. Customers
+                        can also provide access to their location to find better
+                        results.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                    <div className="food__delivery__box">
+                      <img
+                        src={require("../assets/images/Header/Hire Us/why-should/exp2.png")}
+                        alt="Order-Online-icon"
+                        className="img-fluid"
+                        style={{ width: "25%" }}
+                      />
+                      <h4>Browse Salon</h4>
+                      <p>
+                        Customer App can easily check the list of the nearby
+                        salon or they can also browse the salon easily in a
+                        Salon Service app.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                    <div className="food__delivery__box">
+                      <img
+                        src={require("../assets/images/Header/Hire Us/why-should/exp3.png")}
+                        alt="Pay-Online-icons"
+                        className="img-fluid"
+                        style={{ width: "20%" }}
+                      />
+                      <h4>Check the details</h4>
+                      <p>
+                        Customer App or panel can allow the users to check the
+                        overall details of the salon services as well as the
+                        beautician list for hiring.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                    <div className="food__delivery__box">
+                      <img
+                        src={require("../assets/images/Header/Hire Us/why-should/exp4.png")}
+                        alt="Reviews-And-Ratings-icons "
+                        className="img-fluid"
+                        style={{ width: "20%" }}
+                      />
+                      <h4>Schedule an appointment</h4>
+                      <p>
+                        Customers can easily access the list, check the reviews
+                        of the beautician and then easily schedule an
+                        appointment at the availability.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                    <div className="food__delivery__box">
+                      <img
+                        src={require("../assets/images/Header/Hire Us/why-should/Deadline-icon.png")}
+                        alt="Get-Cashback-icons"
+                        className="img-fluid"
+                        style={{ width: "20%" }}
+                      />
+                      <h4>In-App Calendar</h4>
+                      <p>
+                        The calendar is also integrated into a customer app to
+                        conveniently manage the appointment. Customers can check
+                        the calendar and book appointments accordingly.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                    <div className="food__delivery__box">
+                      <img
+                        src={require("../assets/images/Header/Hire Us/why-should/exp6.png")}
+                        alt="search-food-icon"
+                        className="img-fluid"
+                        style={{ width: "20%" }}
+                      />
+                      <h4>In-App chat Interaction</h4>
+                      <p>
+                        Customers can have access to the chat integration
+                        service. Through these features, they can easily chat
+                        for the support service.
+                      </p>
+                    </div>
                   </div>
                 </div>
-                <div className="contact__footer" />
               </div>
             </div>
           </div>
         </div>
       </section>
-      {/* Banner Section End */}
+      {/* Food Delivery App Section End */}
     </>
   );
 };

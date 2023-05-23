@@ -1152,7 +1152,7 @@ section {
 /* Food Delivery Page CSS Start */
 .service__provide__section .nav .nav-item {
   flex: 1 1 25%;
-  max-width: 25%;
+  /* max-width: 25%; */
   border-right: 1px solid #fff;
 }
 
