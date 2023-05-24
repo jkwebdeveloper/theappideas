@@ -1,4 +1,6 @@
-import React from "react";
+import { React, useState } from "react";
+import { BiMinusCircle } from "react-icons/bi";
+import { BiPlusCircle } from "react-icons/bi";
 import "./mobileAppDev.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import Work from "../Workdone/Work";
@@ -26,9 +28,82 @@ import SocialNetworking from "../../assets/images/MobileAppDev/Mobile App Develo
 import lifestyle from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
 import Real from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Real Estate.svg";
 import health from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
-import FAQ from "../FAQ";
 
 const MobileAppDev = () => {
+  const [selected, setSelected] = useState(null);
+
+  const toggle = (i) => {
+    if (selected === i) {
+      return setSelected(null);
+    }
+    setSelected(i);
+  };
+  const data = [
+    {
+      id: 1,
+      question: "What does Mobile App Development Require?",
+      answer:
+        "Mobile app development entails making computer programs that can run on a wide range of mobile platforms and devices. If you want to have a successful mobile app, you should choose a business that has experience making such apps and follows a tried-and-true process. Mobile app developers provide an all-encompassing development plan, interface design, software development, software distribution, and backend services to back up the app. Core features of the software are tested often during development.",
+    },
+    {
+      id: 2,
+      question: "What Are the Different Types of Mobile Apps You Can Develop?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+    {
+      id: 3,
+      question:
+        "Which platform, Android or iOS, should our application be launched on?",
+      answer:
+        "In the past, companies had the option of creating software just for one OS. Even while major mobile OSes like Android and iOS have huge user bases, most companies still choose to create apps that work on both.",
+    },
+    {
+      id: 4,
+      question:
+        "What is the Difference Between Cross-Platform and Native App Development?",
+      answer:
+        "Cross-platform development refers to the process of creating software for several platforms as opposed to only one. The process of creating applications specifically for different platforms, including Android and iOS, is known as native app development. A software that functions effectively on both systems may be made using cross-platform development approaches.",
+        
+    },
+    {
+      id: 5,
+      question:
+        "Can You Work With Us if We Don’t Have a Fully Formed Idea for Our App?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+    {
+      id: 6,
+      question: "Will You Sign an NDA for the App You’re Developing?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+    {
+      id: 7,
+      question: "Do I Need to Test My App?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+    {
+      id: 8,
+      question: "Can an App connect to my existing systems/data store?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+    {
+      id: 9,
+      question: "Should I prepare my app's visual (wireframe)?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+    {
+      id: 10,
+      question: "Who will own the intellectual property rights to my App?",
+      answer:
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
+    },
+  ];
   return (
     <>
       {/* Banner Section Start */}
@@ -593,7 +668,69 @@ const MobileAppDev = () => {
 
           <>
             {/* FAQ Section Start */}
-            <FAQ />
+            <section className="accordion_section py-5">
+              <div className="container">
+                <div className="Title">
+                  <h3>Frequently Asked Questions</h3>
+                </div>
+                <div className="row mt-5">
+                  <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
+                    {data.slice(0, 5).map((item) => (
+                      <div className="accordion" key={item.id}>
+                        <div className="item">
+                          <h2 className="title" onClick={() => toggle(item.id)}>
+                            {item.question}
+                            <span>
+                              {selected === item.id ? (
+                                <BiMinusCircle />
+                              ) : (
+                                <BiPlusCircle />
+                              )}
+                            </span>
+                          </h2>
+                        </div>
+                        <div
+                          className={
+                            selected === item.id
+                              ? "accordion_content show"
+                              : "accordion_content"
+                          }
+                        >
+                          {item.answer}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                  <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
+                    {data.slice(5, 10).map((item, i) => (
+                      <div className="accordion" key={item.id}>
+                        <div className="item">
+                          <h2 className="title" onClick={() => toggle(item.id)}>
+                            {item.question}
+                            <span>
+                              {selected === item.id ? (
+                                <BiMinusCircle />
+                              ) : (
+                                <BiPlusCircle />
+                              )}
+                            </span>
+                          </h2>
+                        </div>
+                        <div
+                          className={
+                            selected === item.id
+                              ? "accordion_content show"
+                              : "accordion_content"
+                          }
+                        >
+                          {item.answer}
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            </section>
             {/* FAQ Section End */}
           </>
 

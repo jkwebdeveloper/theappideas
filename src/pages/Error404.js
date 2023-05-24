@@ -8,7 +8,7 @@ const Error404 = () => {
         <div className="page-error">
           <h2 className="">Oops ! Page not found.</h2>
           <img
-            src={require("../assets/images/Error.png")}
+            src={require("../assets/images/Error page.png")}
             alt=""
             style={{marginTop:"-170px"}}
           />

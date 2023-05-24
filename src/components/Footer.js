@@ -12,6 +12,7 @@ import { BsWhatsapp } from "react-icons/bs";
 import { BsSkype } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";
 import appdeveloper from "../assets/images/Footer/app-development-img.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -23,36 +24,44 @@ const Footer = () => {
               <h2 className="footer_title">On Demand Apps</h2>
               <ul>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Taxi Booking App
-                  </a>
+                  <Link to="/taxi-booking-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Taxi Booking App
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Security Guard App
-                  </a>
+                  <Link to="/security-app-solution">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Security Guard App
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Food Delivery App
-                  </a>
+                  <Link to="/food-delivery-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Food Delivery App
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Doctor Hiring App
-                  </a>
+                  <Link to="/doctor-hiring-app-solution">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Doctor Hiring App
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -62,60 +71,74 @@ const Footer = () => {
               <h2 className="footer_title">Quick Links</h2>
               <ul>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Home
-                  </a>
+                  <Link to="/">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Home
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    About Us
-                  </a>
+                  <Link to="/aboutus">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      About Us
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Portfolio
-                  </a>
+                  <Link to="/portfolio">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Portfolio
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Blog
-                  </a>
+                  <Link to="/blog">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Blog
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Contact Us
-                  </a>
+                  <Link to="/contactus">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Contact Us
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Testimonial
-                  </a>
+                  <Link to="/testimonial">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Testimonial
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Careers{" "}
-                  </a>
+                  <Link to="/careers">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Careers{" "}
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -125,60 +148,64 @@ const Footer = () => {
               <h2 className="footer_title">Services</h2>
               <ul>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Mobile App Development
-                  </a>
+                  <Link to="/mobile-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Mobile App Development
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    IOT Development
-                  </a>
+                  <Link to="/iot-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      IOT Development
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Web Design &amp; Development
-                  </a>
+                  <Link to="/web-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Web Design &amp; Development
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    E-commerce Development
-                  </a>
+                  <Link to="/e-commerce-website-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      E-commerce Development
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Game Development
-                  </a>
+                  <Link to="/testimonial">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Testimonial
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Testimonial
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Hire A Developer
-                  </a>
+                  <Link to="/hire-us">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Hire A Developer
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -188,52 +215,54 @@ const Footer = () => {
               <h2 className="footer_title">Solutions</h2>
               <ul>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Dating App
-                  </a>
+                  <Link to="/dating-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Dating App
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Lawyer Website Solution
-                  </a>
+                  <Link to="/lawyer-website-solution">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Lawyer Website Solution
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Web Design &amp; Development
-                  </a>
+                  <Link to="/driver-tracking-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Driver Tracking App Solution
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Driver Tracking App Solution
-                  </a>
+                  <Link to="/e-commerce-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Ecommerce App Solution
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Ecommerce App Solution
-                  </a>
-                </li>
-                <li>
-                  <a href="#">
-                    <i className="right__arrow">
-                      <RiArrowRightSLine />
-                    </i>{" "}
-                    Ecommerce App Solution
-                  </a>
+                  <Link to="/e-learning-app-development">
+                    <a>
+                      <i className="right__arrow">
+                        <RiArrowRightSLine />
+                      </i>{" "}
+                      Elearning Website Solution
+                    </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -252,7 +281,7 @@ const Footer = () => {
               </p>
               <ul className="ms-2">
                 <li>
-                  <a href="#">
+                  <a>
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <GoMail style={{ color: "#d6aa0b" }} />
                     </i>
@@ -260,7 +289,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a>
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <BsFillTelephoneFill style={{ color: "#d6aa0b" }} />
                     </i>
@@ -268,7 +297,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a>
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <BsWhatsapp style={{ color: "#d6aa0b" }} />
                     </i>
@@ -276,7 +305,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a>
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <BsSkype style={{ color: "#d6aa0b" }} />
                     </i>
@@ -290,29 +319,27 @@ const Footer = () => {
             <div className="footer__box">
               <h2 className="footer_title">Follow us</h2>
               <div className="social__footer">
-                <a href="/">
+                <a href="https://www.facebook.com/Theappideas/" target="_blank">
                   <RiFacebookFill />
                 </a>
-                <a href="/">
+                <a href="https://twitter.com/theappidea" target="_blank">
                   <BsTwitter />
                 </a>
-                <a href="/">
+                <a href="https://www.linkedin.com/company/theappideas/" target="_blank">
                   <FaLinkedinIn />
                 </a>
-                <a href="/">
-                  <AiFillYoutube />
+                <a href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA" target="_blank">
+                  <AiFillYoutube />   
                 </a>
-                <a href="/">
+                <a href="https://dribbble.com/theappideas" target="_blank">
                   <BsDribbble />
                 </a>
-                <a href="/">
+                <a href="https://www.behance.net/theappidea" target="_blank">
                   <AiOutlineBehance />
                 </a>
               </div>
               <div className="footer__sitemap my-3">
-                <a href="#" className="sitemap_btn">
-                  Sitemap
-                </a>
+                <a className="sitemap_btn">Sitemap</a>
               </div>
             </div>
           </div>
@@ -322,9 +349,9 @@ const Footer = () => {
               <div className="footer__awards">
                 <ul>
                   <li>
-                    <a href="#" className="footer__awards_achor"></a>
+                    <a className="footer__awards_achor"></a>
                     <div className="d-flex">
-                      <a href="#" className="footer__awards_achor">
+                      <a className="footer__awards_achor">
                         <div>
                           <img
                             src={require("../assets/images/Footer/clutch-logo.png")}
@@ -334,8 +361,8 @@ const Footer = () => {
                         </div>
                       </a>
                       <div className="rating_box">
-                        <a href="#" className="footer__awards_achor"></a>
-                        <a href="#">
+                        <a className="footer__awards_achor"></a>
+                        <a>
                           <span>
                             <i className="fa fa-star" />
                           </span>
@@ -352,14 +379,14 @@ const Footer = () => {
                             <i className="fa fa-star" />
                           </span>
                         </a>
-                        <a href="#" className="reviews-count">
+                        <a className="reviews-count">
                           <span>42 reviews</span>
                         </a>
                       </div>
                     </div>
                   </li>
                   <li>
-                    <a href="#" className="footer__awards_achor">
+                    <a className="footer__awards_achor">
                       <img
                         src={appdeveloper}
                         alt="app-development-img"
@@ -368,7 +395,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="footer__awards_achor">
+                    <a className="footer__awards_achor">
                       <img
                         src={require("../assets/images/Footer/freelancer-logo-1.webp")}
                         alt="freelancer-logo"
@@ -377,7 +404,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="footer__awards_achor">
+                    <a className="footer__awards_achor">
                       <img
                         src={require("../assets/images/Footer/pph_new.webp")}
                         alt="pph_new"
@@ -386,7 +413,7 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a href="#" className="footer__awards_achor">
+                    <a className="footer__awards_achor">
                       <img
                         src={require("../assets/images/Footer/upwork_new.webp")}
                         alt="upwork_new"

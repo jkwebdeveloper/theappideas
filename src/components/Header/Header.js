@@ -1,13 +1,8 @@
 import React, { useEffect, useState } from "react";
-// import { RiArrowDownSFill } from "react-icons/ri";
-// import AboutGif from "../../assets/images/Header/Company/About us.gif";
-// import ProcessGif from "../../assets/images/Header/Company/Process.gif";
-// import TeamGif from "../../assets/images/Header/Company/Our Team.gif";
-// import TestimonialGif from "../../assets/images/Header/Company/Testamonials.gif";
-// import CareersGif from "../../assets/images/Header/Company/Carrers.gif";
-// import LifeGif from "../../assets/images/Header/Company/Life at TAI.gif";
-// import { Link } from "react-router-dom";
 import "./header.css";
+import { AiOutlineClose } from "react-icons/ai";
+import { AiOutlineMenu } from "react-icons/ai";
+import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
 const Header = () => {
@@ -15,7 +10,6 @@ const Header = () => {
 
   // on render, set listener
   useEffect(() => {
-    console.log("hello");
     window.addEventListener("scroll", isSticky);
     return () => {
       window.removeEventListener("scroll", isSticky);
@@ -27,754 +21,712 @@ const Header = () => {
     const scrollTop = window.scrollY;
     const stickyClass = scrollTop >= 80 ? "sticked" : "";
     setSticky(stickyClass);
-    console.log(stickyClass);
   };
-
   return (
     <header
-      id="header"
-      className={`header fixed-top ${sticky}`}
+      className={`header__section fixed-top ${sticky}`}
       data-scrollto-offset={0}
     >
-      <div className="main_header_area animated">
-        <div className="container">
-          <nav id="navigation1" className="navigation">
-            <div className="nav-header">
-              <a className="nav-brand" href="#">
-                <Link to='/'>
+      <nav>
+        <div className="wrapper">
+          <div className="logo">
+            <Link to="/">
+              <a href="/">
                 <img
                   src={require("../../assets/images/Header/logo.png")}
                   alt="logo"
                   className="img-fluid"
                 />
-                </Link>
               </a>
-              <div className="nav-toggle" />
-            </div>
-            <div className="nav-menus-wrapper">
-              <ul className="nav-menu align-to-right">
-                <li>
-                  <a href="#">Company</a>
-                  <div className="megamenu-panel">
-                    <h2 className="megamenu_panel_title">Company</h2>
-                    <div className="megamenu-lists">
-                      <ul className="megamenu-list list-col-3">
-                        <Link to="/Aboutus">
-                          <li>
-                            <a
-                              href="/"
-                              target="_blank"
-                              className="company_menu"
-                            >
-                              {" "}
-                              <img
-                                src={require("../../assets/images/Header/About-us (1).gif")}
-                                alt="About-us"
-                                style={{width:'36px', height:'36px', objectFit:'cover',marginLeft:'15px'}}
-                              />{" "}
-                              <span className="title">About US</span>
-                            </a>
-                          </li>
-                        </Link>
+            </Link>
+          </div>
+          <input type="radio" name="slider" id="menu-btn" />
+          <input type="radio" name="slider" id="close-btn" />
+          <ul className="nav-links">
+            <label htmlFor="close-btn" className="btn close-btn">
+              <AiOutlineClose />
+            </label>
+            <li>
+              <Link>
+                <a href="/" className="desktop-item">
+                  Company <MdKeyboardArrowDown />
+                </a>
+              </Link>
+              <input type="checkbox" id="showMega" />
+              <label htmlFor="showMega" className="mobile-item">
+                Company <MdKeyboardArrowDown />
+              </label>
+              <div className="mega-box">
+                <div className="content content_sub">
+                  <div className="row">
+                    <ul className="mega-links">
+                      <Link to="/aboutus">
                         <li>
-                          <a href="#" target="_blank" className="company_menu">
-                            <img
-                              src={require("../../assets/images/Header/Testamonials (1).gif")}
-                              alt="Testamonials"
-                            />
-                            Testimonial
-                          </a>
-                        </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-3">
-                        <li>
-                          <a href="#" target="_blank" className="company_menu">
+                          <a href="/" className="f">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Process (1).gif")}
-                              alt="Process"
-                            />
+                              src={require("../../assets/images/Header/Company/About Us.gif")}
+                              alt="About-us"
+                            />{" "}
+                            About Us
+                          </a>
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <ul className="mega-links">
+                      <Link to="/our-process">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Our Process.gif")}
+                              alt="Our-Team"
+                            />{" "}
                             Our Process
                           </a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <ul className="mega-links">
+                      <Link to="/our-team">
                         <li>
-                          <a href="#" target="_blank" className="company_menu">
+                          <a className="company_text">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Carrers (1).gif")}
-                              alt="Carrers"
-                            />{" "}
-                            Carrers
-                          </a>
-                        </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-3">
-                        <li>
-                          <a href="#" target="_blank" className="company_menu">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Our-Team (1).gif")}
+                              src={require("../../assets/images/Header/Company/Our Team.gif")}
                               alt="Our-Team"
                             />{" "}
                             Our Team
                           </a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+                <div className="content content_sub">
+                  <div className="row">
+                    <ul className="mega-links">
+                      <Link to="/testimonial">
                         <li>
-                          <a href="#" target="_blank" className="company_menu">
+                          <a className="company_text">
                             {" "}
                             <img
-                              src={require("../../assets/images/Header/Life-at-TAI (1).gif")}
+                              src={require("../../assets/images/Header/Company/Testimonial.gif")}
+                              alt="Testamonials"
+                            />
+                            Testimonial
+                          </a>
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <ul className="mega-links">
+                      <Link to="/careers">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Careers.gif")}
+                              alt="Carrers"
+                            />{" "}
+                            Careers
+                          </a>
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <ul className="mega-links">
+                      <Link to="/life-at-tai">
+                        <li>
+                          <a className="company_text">
+                            {" "}
+                            <img
+                              src={require("../../assets/images/Header/Company/Life at TAI.gif")}
                               alt="Life-at-TAI"
                             />{" "}
                             Life at TAI
                           </a>
                         </li>
-                      </ul>
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+                <div className="menu_bottom_content_box">
+                  <div className="row align-items-center">
+                    <div className="col-md-8">
+                      <div className="menu_bottomm_content_left">
+                        <h4>Would you like to execute any project?</h4>
+                      </div>
                     </div>
-                    <div className="navbar__bottom__content">
-                      <div className="row">
-                        <div className="col-md-8">
-                          <div className="navbar__bottom__content__lft">
-                            <h2>Would you like to build your career?</h2>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="navbar__bottom__content__rht">
-                            <a href="#" className="contact_header_btn">
-                              Join Our Team
-                            </a>
-                          </div>
-                        </div>
+                    <div className="col-md-4 text-center">
+                      <div className="menu_bottomm_content_rht">
+                        <a href="/" className="menu_contact_btn">
+                          Contact Us
+                        </a>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <a href="#">Services</a>
-                  <div className="megamenu-panel">
-                    <div className="megamenu-lists">
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Mobile-App-Development.gif")}
-                              alt="Mobile App Development"
-                              className="img-fluid"
-                            />{" "}
-                            Mobile App Development
-                          </a>
-                        </li>
+                </div>
+              </div>
+            </li>
+            <li>
+              <Link>
+                <a className="desktop-item">
+                  Services <MdKeyboardArrowDown />{" "}
+                </a>
+              </Link>
+              <input type="checkbox" id="showMega1" />
+              <label htmlFor="showMega1" className="mobile-item">
+                Services <MdKeyboardArrowDown />{" "}
+              </label>
+              <div className="mega-box">
+                <div className="content">
+                  <div className="row">
+                    <Link to="/mobile-app-development">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Mobile App Development.gif")}
+                          alt="Mobile-App-Development"
+                        />
+                        Mobile App Development
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/android-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Android App Development
-                          </a>
+                          <a>Android App Development</a>
                         </li>
+                      </Link>
+                      <Link to="iphone-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> IPhone App
-                            Development
-                          </a>
+                          <a>IPhone App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/ipad-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> IPad App
-                            Development
-                          </a>
+                          <a>IPad App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/react-native-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> React Native
-                            Development
-                          </a>
+                          <a>React Native Development</a>
                         </li>
+                      </Link>
+                      {/* <Link to="/iBeacon-App-Development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> iBeacon App
-                            Development
-                          </a>
+                          <a>iBeacon App Development</a>
                         </li>
+                      </Link> */}
+                      <Link to="/iot-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> IOT App
-                            Development
-                          </a>
+                          <a>IOT App Development</a>
                         </li>
+                      </Link>
+                      {/* <Link to="/watch-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> Apple Watch App
-                            Development
-                          </a>
+                          <a>Apple Watch App Development</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Web-Development.gif")}
-                              alt="Web-Development"
-                              className="img-fluid"
-                            />{" "}
-                            Web Development
-                          </a>
-                        </li>
+                      </Link> */}
+                    </ul>
+                  </div>
+
+                  <div className="row">
+                    <Link to="/digital-marketing-agency">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Digital Marketing Agency.gif")}
+                          alt="Digital-Marketing-Agency"
+                        />{" "}
+                        Digital Marketing Agency
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/seo">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            WordPress Development
-                          </a>
+                          <a>SEO</a>
                         </li>
+                      </Link>
+                      <Link to="/social-media-marketing">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            PHP Development
-                          </a>
+                          <a>Social Media Marketing</a>
                         </li>
+                      </Link>
+                      <Link to="/aso-company">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Angular Development
-                          </a>
+                          <a>ASO</a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <Link to="/e-commerce-website-development">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/E-commerce website Development.gif")}
+                          alt="E-commerce-website-Development"
+                        />{" "}
+                        E-commerce Website Development
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/shopify-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Webflow Development
-                          </a>
+                          <a>Shopify Development</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/E-commerce-website-Development.gif")}
-                              alt="E-commerce-website-Development"
-                              className="img-fluid"
-                            />
-                            E-commerce Website Development
-                          </a>
-                        </li>
+                      </Link>
+                      <Link to="/magento-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Shopify Development
-                          </a>
+                          <a>Magento Development</a>
                         </li>
+                      </Link>
+                      <Link to="/joomla-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Magento Development
-                          </a>
+                          <a>Joomla Development</a>
                         </li>
+                      </Link>
+                      <Link to="/drupal-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Joomla Development
-                          </a>
+                          <a>Drupal Development</a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <Link to="/web-development">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Web Development.gif")}
+                          alt="Web-Development"
+                        />{" "}
+                        Web Development
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/wordpress-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Drupal Development
-                          </a>
+                          <a>WordPress Development</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Game-Development.gif")}
-                              alt="Game-Development"
-                              className="img-fluid"
-                            />
-                            Game Development
-                          </a>
-                        </li>
+                      </Link>
+                      <Link to="/php-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Mobile Game Development
-                          </a>
+                          <a>PHP Development</a>
                         </li>
+                      </Link>
+                      <Link to="/angular-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            2D-3D Game Development
-                          </a>
+                          <a>Angular Development</a>
                         </li>
+                      </Link>
+                      <Link to="/webflow-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Unity Game Development
-                          </a>
+                          <a>Webflow Development</a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+                <div className="content">
+                  <div className="row">
+                    <Link to="/software-development">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Software Development.gif")}
+                          alt="Software-Development"
+                        />
+                        software development
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/asp-net-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Virtual Reality Game Development
-                          </a>
+                          <a>Asp.Net Development</a>
                         </li>
+                      </Link>
+                      <Link to="/dotnetnuke-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            HTML5 Games Development
-                          </a>
+                          <a>DotNetNuke Development</a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <Link to="/designing-services">
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Designing Services.gif")}
+                          alt="Designing-Services"
+                        />
+                        Designing services
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/graphics-design">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            COCOS2D Game Development
-                          </a>
+                          <a>Graphics Design</a>
                         </li>
-                      </ul>
+                      </Link>
+                      <Link to="/mobile-app-design">
+                        <li>
+                          <a>Mobile App Design</a>
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <Link>
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Services/Other Services.gif")}
+                          alt="Other-Services"
+                        />
+                        Other Services
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/startup-services">
+                        <li>
+                          <a href="/">Startup Services</a>
+                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+                <div className="menu_bottom_content_box">
+                  <div className="row align-items-center">
+                    <div className="col-md-8">
+                      <div className="menu_bottomm_content_left">
+                        <h4>Would you like to execute any project?</h4>
+                      </div>
                     </div>
-                    <div className="megamenu-lists mt-4 ">
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Digital-Marketing-Agency.gif")}
-                              alt="Digital-Marketing-Agency"
-                              className="img-fluid"
-                            />
-                            Digital Marketing Agency
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            SEO
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Social Media Marketing
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> ASO
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Guest Blogging
-                          </a>
-                        </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            <img
-                              src={require("../../assets/images/Header/Software-Development.gif")}
-                              alt="Software-Development"
-                              className="img-fluid"
-                            />
-                            software development
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Asp.Net Development
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            DotNetNuke Development
-                          </a>
-                        </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            <img
-                              src={require("../../assets/images/Header/Designing-Services.gif")}
-                              alt="Designing-Services"
-                              className="img-fluid"
-                            />
-                            Designing services
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Graphics Design
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Mobile App Design
-                          </a>
-                        </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Other-Services.gif")}
-                              alt="Other-Services"
-                              className="img-fluid"
-                            />
-                            Other Services
-                          </a>
-                        </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Startup Services
-                          </a>
-                        </li>
-                      </ul>
-                    </div>
-                    <div className="navbar__bottom__content">
-                      <div className="row">
-                        <div className="col-md-8">
-                          <div className="navbar__bottom__content__lft">
-                            <h2> Would you like to execute any project?</h2>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="navbar__bottom__content__rht">
-                            <a href="#" className="contact_header_btn">
-                              Contact
-                            </a>
-                          </div>
-                        </div>
+                    <div className="col-md-4 text-center">
+                      <div className="menu_bottomm_content_rht">
+                        <a href="/" className="menu_contact_btn">
+                          Contact Us
+                        </a>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <a href="#">Hire us </a>
-                  <div className="megamenu-panel">
-                    <h2 className="megamenu_panel_title">Hire us</h2>
-                    <div className="megamenu-lists">
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Hire-Mobile-App-Developer.gif")}
-                              alt="Hire-Mobile-App-Developer"
-                              className="img-fluid"
-                            />
-                            Hire Mobile App Developer
-                          </a>
-                        </li>
+                </div>
+              </div>
+            </li>
+            <li>
+              <Link to="/hire-us">
+                <a href="/hire-us" className="desktop-item">
+                  Hire Us <MdKeyboardArrowDown />{" "}
+                </a>
+              </Link>
+              <input type="checkbox" id="showMega2" />
+              <label htmlFor="showMega2" className="mobile-item">
+                Hire Us <MdKeyboardArrowDown />
+              </label>
+              <div className="mega-box">
+                <div className="content">
+                  <div className="row">
+                    <h4>
+                      {" "}
+                      <img
+                        src={require("../../assets/images/Header/Hire Us/Hire Mobile App Developer.gif")}
+                        alt="Hire-Mobile-App-Development"
+                      />
+                      Hire Mobile App Development
+                    </h4>
+                    <ul className="mega-links">
+                      <Link to="/hire-ios-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire IOS Developer
-                          </a>
+                          <a>Hire IOS Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-android-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> Hire Android
-                            Developer
-                          </a>
+                          <a href="/">Hire Android Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-react-native-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> Hire React
-                            Native Developer
-                          </a>
+                          <a href="/">Hire React Native Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-flutter-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> Hire Flutter
-                            Developer
-                          </a>
+                          <a href="/">Hire Flutter Developer</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Hire-Web-Developer.gif")}
-                              alt="Web-Development"
-                              className="img-fluid"
-                            />{" "}
-                            hire Web Development
-                          </a>
-                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <h4>
+                      {" "}
+                      <img
+                        src={require("../../assets/images/Header/Hire Us/Hire Web Developer.gif")}
+                        alt="Hire-Web-Development"
+                      />
+                      Hire Web Developer
+                    </h4>
+                    <ul className="mega-links">
+                      <Link to="/hire-laravel-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Laravel Developer
-                          </a>
+                          <a>Hire Laravel Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-wordpress-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire WordPress Developer
-                          </a>
+                          <a>Hire WordPress Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-nodejs-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Node.js Developer
-                          </a>
+                          <a>Hire Node.js Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-codeigniter-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire CodeIgniter Developer
-                          </a>
+                          <a>Hire CodeIgniter Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-php-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire PHP Developers
-                          </a>
+                          <a>Hire PHP Developers</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-python-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Python Developer
-                          </a>
+                          <a>Hire Python Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-reactjs-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire React JS Developer
-                          </a>
+                          <a>Hire React JS Developer</a>
                         </li>
+                      </Link>
+                      <Link to="/hire-hireangular-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Angular 2 Developer
-                          </a>
+                          <a>Hire Angular 2 Developer</a>
                         </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <h4>
+                      {" "}
+                      <img
+                        src={require("../../assets/images/Header/Hire Us/Hire E-commerce Developer.gif")}
+                        alt="Hire-Ecommerce-Developer"
+                      />
+                      Hire E-commerce Developer
+                    </h4>
+                    <ul className="mega-links">
+                      <Link to="/hire-shopify-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Angular 2 Developer
-                          </a>
+                          <a>Hire Shopify Development</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Hire-Ecommerce-Developer.gif")}
-                              alt="E-commerce-website-Development"
-                              className="img-fluid"
-                            />
-                            Hire eCommerce Developer
-                          </a>
-                        </li>
+                      </Link>
+                      <Link to="/hire-magento-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Shopify Developer
-                          </a>
+                          <a>Hire Magento 2 Development</a>
                         </li>
-                        <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Hire Magento 2 Developer
-                          </a>
-                        </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-4">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Hire-Designer.gif")}
-                              alt="Hire-Designer"
-                              className="img-fluid"
-                            />
-                            Hire Designer
-                          </a>
-                        </li>
-                      </ul>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <h4>
+                      {" "}
+                      <img
+                        src={require("../../assets/images/Header/Hire Us/Hire Designer.gif")}
+                        alt="Hire-Designer"
+                      />
+                      Hire Designer
+                    </h4>
+                  </div>
+                </div>
+                <div className="menu_bottom_content_box">
+                  <div className="row align-items-center py-3">
+                    <div className="col-md-8">
+                      <div className="menu_bottomm_content_left">
+                        <h4>
+                          Are you looking for an experience resource for your
+                          project?
+                        </h4>
+                      </div>
                     </div>
-                    <div className="navbar__bottom__content">
-                      <div className="row">
-                        <div className="col-md-8">
-                          <div className="navbar__bottom__content__lft">
-                            <h2>
-                              Are you looking for an experience resource for
-                              your project?
-                            </h2>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="navbar__bottom__content__rht">
-                            <a href="#" className="contact_header_btn">
-                              Hire our Developer
-                            </a>
-                          </div>
-                        </div>
+                    <div className="col-md-4 text-center">
+                      <div className="menu_bottomm_content_rht">
+                        <a href="/" className="menu_contact_btn">
+                          Hire Our Developer{" "}
+                        </a>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <a href="#">Solutions</a>
-                  <div className="megamenu-panel">
-                    <h2 className="megamenu_panel_title">Solutions</h2>
-                    <div className="megamenu-lists">
-                      <ul className="megamenu-list list-col-3">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Delivery-App.gif")}
-                              alt="Delivery-App"
-                              className="img-fluid"
-                            />
-                            Delivery Apps
-                          </a>
-                        </li>
+                </div>
+              </div>
+            </li>
+            <li>
+              <Link to="/solutions">
+                <a href="/solutions" className="desktop-item">
+                  Solutions <MdKeyboardArrowDown />{" "}
+                </a>
+              </Link>
+              <input type="checkbox" id="showMega3" />
+              <label htmlFor="showMega3" className="mobile-item">
+                Solutions <MdKeyboardArrowDown />
+              </label>
+              <div className="mega-box">
+                <div className="content">
+                  <div className="row">
+                    <Link>
+                      <h4>
+                        {" "}
+                        <img
+                          src={require("../../assets/images/Header/Solutions/Delivery App.gif")}
+                          alt="Delivery-App"
+                        />
+                        Delivery Apps
+                      </h4>
+                    </Link>
+                    <ul className="mega-links">
+                      <Link to="/food-delivery-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Food Delivery App Development
-                          </a>
+                          <a>Food Delivery App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/courier-pickup-management-solution">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" /> Courier Pickup
-                            Management Solution
-                          </a>
+                          <a>Courier Pickup Management Solution</a>
                         </li>
+                      </Link>
+                      <Link to="/grocery-app-developer">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Grocery App Development
-                          </a>
+                          <a>Grocery App Development</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-3">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/On-Demand-Apps.gif")}
-                              alt="On-Demand-Apps"
-                              className="img-fluid"
-                            />{" "}
-                            On-Demand Apps
-                          </a>
-                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <h4>
+                      {" "}
+                      <img
+                        src={require("../../assets/images/Header/Solutions/On Demand Apps.gif")}
+                        alt="On-Demand-Apps"
+                      />
+                      On-Demand Apps
+                    </h4>
+                    <ul className="mega-links">
+                      <Link to="/taxi-booking-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Taxi Booking App Development
-                          </a>
+                          <a>Taxi Booking App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/doctor-hiring-app-solution">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Doctor Hiring App Solution
-                          </a>
+                          <a>Doctor Hiring App Solution</a>
                         </li>
+                      </Link>
+                      <Link to="/security-app-solution">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Security App Solution
-                          </a>
+                          <a>Security App Solution</a>
                         </li>
-                      </ul>
-                      <ul className="megamenu-list list-col-3">
-                        <li className="megamenu-list-title">
-                          <a href="#">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Popular-Solutions.gif")}
-                              alt="Popular-Solutions"
-                              className="img-fluid"
-                            />
-                            Popular Solutions
-                          </a>
-                        </li>
+                      </Link>
+                    </ul>
+                  </div>
+                  <div className="row">
+                    <h4>
+                      {" "}
+                      <img
+                        src={require("../../assets/images/Header/Solutions/Popular Solutions.gif")}
+                        alt="Popular-Solutions"
+                      />
+                      Popular Solutions
+                    </h4>
+                    <ul className="mega-links">
+                      <Link to="/e-commerce-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            eCommerce App Development
-                          </a>
+                          <a>eCommerce App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/e-learning-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            E-learning App Development
-                          </a>
+                          <a>E-learning App Development</a>
                         </li>
+                      </Link>
+                      <Link to="dating-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Dating App Development
-                          </a>
+                          <a>Dating App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/driver-tracking-app-development">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Driver Tracking App Development
-                          </a>
+                          <a>Driver Tracking App Development</a>
                         </li>
+                      </Link>
+                      <Link to="/salon-service-app">
                         <li>
-                          <a href="#" target="_blank">
-                            <span className="triangle_angle" />
-                            Salon Service App
-                          </a>
+                          <a>Salon Service App</a>
                         </li>
-                      </ul>
+                      </Link>
+                    </ul>
+                  </div>
+                </div>
+                <div className="menu_bottom_content_box">
+                  <div className="row align-items-center py-3">
+                    <div className="col-md-8">
+                      <div className="menu_bottomm_content_left">
+                        <h4>
+                          Would you like to know more about our ready made
+                          solution?
+                        </h4>
+                      </div>
                     </div>
-                    <div className="navbar__bottom__content">
-                      <div className="row">
-                        <div className="col-md-8">
-                          <div className="navbar__bottom__content__lft">
-                            <h2>
-                              Would you like to know more about our ready made
-                              solution?
-                            </h2>
-                          </div>
-                        </div>
-                        <div className="col-md-4">
-                          <div className="navbar__bottom__content__rht">
-                            <a href="#" className="contact_header_btn">
-                              Contact Us
-                            </a>
-                          </div>
-                        </div>
+                    <div className="col-md-4 text-center">
+                      <div className="menu_bottomm_content_rht">
+                        <a href="/" className="menu_contact_btn">
+                          Contact Us{" "}
+                        </a>
                       </div>
                     </div>
                   </div>
-                </li>
-                <li>
-                  <a href="#">Portfolio</a>
-                </li>
-                <li>
-                  <a href="#">Contact us</a>
-                </li>
-                <li>
-                  <a href="#">blog</a>
-                </li>
-                <li>
-                  <a href="#" className="get_btn">
-                    get a Quote
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </nav>
+                </div>
+              </div>
+            </li>
+            <li>
+              <Link to="/portfolio">
+                <a>Portfolio</a>
+              </Link>
+            </li>
+            <li>
+              <Link to="/contactus">
+                <a>Contact Us</a>
+              </Link>
+            </li>
+
+            <li>
+              <Link to="/blog">
+                <a>Blog</a>
+              </Link>
+            </li>
+            <li>
+              <a href="/" className="get_a_btn">
+                GET A QUOTE
+              </a>
+              {/* <button class="custom-btn btn-15">Read More</button> */}
+            </li>
+          </ul>
+          <label htmlFor="menu-btn" className="btn menu-btn">
+            <AiOutlineMenu />
+          </label>
         </div>
-      </div>
+      </nav>
     </header>
   );
 };

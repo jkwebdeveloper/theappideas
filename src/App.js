@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AboutUs from "./components/Aboutus/AboutUs";
-import Headerr from "./components/Header/Headerr";
+import Header from "./components/Header/Header";
 import MobileAppDev from "./components/mobileAppDev/MobileAppDev";
 import WebDev from "./components/webDevelopment/WebDev";
 import PortFolio from "./pages/PortFolio";
@@ -80,23 +80,24 @@ import OurTeam from "./pages/Company/OurTeam";
 import OurProcess from "./pages/Company/OurProcess";
 import Solutions from "./components/Solutions";
 import HireUs from "./components/HireUs";
+import LawyerWeb from "./components/LawyerWeb";
 
 const App = () => {
   return (
     <BrowserRouter>
       {/* <Header /> */}
-      <Headerr />
+      <Header />
       <Routes>
         {/* Home page Link */}
         <Route path="/" element={<Home />} />
 
         {/* Company Link */}
-        <Route path="/Aboutus" element={<AboutUs />} />
-        <Route path="/Life-at-Tai" element={<LifeTAI />} />
-        <Route path="/Careers" element={<Careers />} />
-        <Route path="/Testimonial" element={<Testimonial />} />
-        <Route path="/Our-Team" element={<OurTeam />} />
-        <Route path="/Our-Process" element={<OurProcess />} />
+        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/life-at-tai" element={<LifeTAI />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/our-team" element={<OurTeam />} />
+        <Route path="/our-process" element={<OurProcess />} />
 
         {/* Services Link */}
         <Route path="/mobile-app-development" element={<MobileAppDev />} />
@@ -203,6 +204,7 @@ const App = () => {
 
         <Route path="/popup" element={<PopUp />} />
         <Route path="/*" element={<Error404 />} />
+        <Route path="/lawyer-website-solution" element={<LawyerWeb />} />
       </Routes>
       <Footer />
     </BrowserRouter>
