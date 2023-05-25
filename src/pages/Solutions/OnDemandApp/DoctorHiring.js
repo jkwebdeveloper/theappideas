@@ -9,18 +9,20 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
 
 //  Customer App
-import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/signup.webp";
-import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Signin.webp";
-import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/forgot_password-2.webp";
-import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password-2.webp";
-import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create a profile.webp";
-import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage profile.webp";
-import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage-Medical-History-Profile.webp";
-import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Search available doctors.webp";
-import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Ratings and reviews.webp";
-import chat from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User can chat.webp";
-import Pay from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Can-Pay-Via-PayPal.webp";
-import User from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Get-The-Morning-Quotes.webp";
+
+import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/signup.svg";
+import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Signin.svg";
+import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password.svg";
+import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password-2.svg";
+import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create a profile.svg";
+import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage profile.svg";
+import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage-Medical-History-Profile.svg";
+import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Search available doctors.svg";
+import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Ratings and reviews.svg";
+import chat from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User can chat.svg";
+import Pay from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Can-Pay-Via-PayPal.svg";
+import User from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Get-The-Morning-Quotes.svg";
+
 const DoctorHiring = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -422,7 +424,7 @@ const DoctorHiring = () => {
                     <div className="food__delivery__box">
                       <img
                         src={User}
-                        alt="Live-Tracking-icons"                   
+                        alt="Live-Tracking-icons"
                         className="img-fluid"
                         style={{ width: "13%" }}
                       />
@@ -434,7 +436,6 @@ const DoctorHiring = () => {
                       </p>
                     </div>
                   </div>
-                
                 </div>
               </div>
               <div
@@ -884,7 +885,6 @@ const DoctorHiring = () => {
         </div>
       </section>
 
- 
       <TestiMonial />
       <FAQ />
       {/* Contact Section Start */}

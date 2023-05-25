@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Execute = () => {
   return (
@@ -12,9 +13,11 @@ const Execute = () => {
           </div>
           <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
             <div className="contact__rht">
-              <a href="#" className="contact_btn">
-                Contact us{" "}
-              </a>
+              <Link to="/contactus">
+                <a className="contact_btn" style={{color:"#000"}}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>

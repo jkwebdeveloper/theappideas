@@ -1,35 +1,46 @@
-import { React, useState } from "react";
+import { React, useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import "../Workdone/work.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { BiMinusCircle } from "react-icons/bi";
 import { BiPlusCircle } from "react-icons/bi";
 import "./mobileAppDev.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import Work from "../Workdone/Work";
 import TestiMonial from "../Testimonial/TestiMonial";
-import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
-import Application from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
-import Mobileapplication from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
-import IPhoneapp from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/IPhone App Development.svg";
-import Ipadeapp from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/IPad Mobile app development.svg";
+// import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
+import mobileApp from "../../assets/images/SERVICES/Mobile-App-dev/Mobile App Development.svg";
+import Application from "../../assets/images/SERVICES/Mobile-App-dev/Mobile Application Development Company.svg";
+import Mobileapplication from "../../assets/images/SERVICES/Mobile-App-dev/mobile app developer.svg";
 
-import Androidapp from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Android Mobile app development.svg";
-import Androidtablet from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Android Tablet app development.svg";
-import Reskinning from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile App Reskinning.svg";
-import Redesigning from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile App Redesigning.svg";
-import Upgradation from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile App Upgradation.svg";
-import Mobileappsupport from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Mobile app Support and maintenance.svg";
-import Crossplatform from "../../assets/images/MobileAppDev/Mobile App Development Company/Services we provide/Cross-platform Mobile Apps.svg";
+// Services we provide
+import IPhoneapp from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/IPhone App Development.svg";
+import Ipadeapp from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/IPad Mobile app development.svg";
+import Androidapp from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Android Mobile app development.svg";
+import Androidtablet from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Android Tablet app development.svg";
+import Reskinning from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Reskinning.svg";
+import Redesigning from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Redesigning.svg";
+import Upgradation from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Upgradation.svg";
+import Mobileappsupport from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile app Support and maintenance.svg";
+import Crossplatform from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Cross-platform Mobile Apps.svg";
 
-import Shopping from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Shopping _ E-Commerce.svg";
-import Education from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Education and E-Learning.svg";
-import Banking from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Banking and finance.svg";
-import Travel from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Travel and Tourism.svg";
-import Food from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Food and Drink.svg";
-import SocialNetworking from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Social Networking.svg";
-import lifestyle from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
-import Real from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Real Estate.svg";
-import health from "../../assets/images/MobileAppDev/Mobile App Development Company/Industries We Serve/Health and Fitness.svg";
+// Industries We Serve
+import Shopping from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Shopping _ E-Commerce.svg";
+import Education from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Education and E-Learning.svg";
+import Banking from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Banking and finance.svg";
+import Travel from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Travel and Tourism.svg";
+import Food from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Food and Drink.svg";
+import SocialNetworking from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Social Networking.svg";
+import lifestyle from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg";
+import Real from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Real Estate.svg";
+import health from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg";
+import { Link } from "react-router-dom";
 
 const MobileAppDev = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -64,7 +75,6 @@ const MobileAppDev = () => {
         "What is the Difference Between Cross-Platform and Native App Development?",
       answer:
         "Cross-platform development refers to the process of creating software for several platforms as opposed to only one. The process of creating applications specifically for different platforms, including Android and iOS, is known as native app development. A software that functions effectively on both systems may be made using cross-platform development approaches.",
-        
     },
     {
       id: 5,
@@ -447,7 +457,10 @@ const MobileAppDev = () => {
             </div>
             <div className="row">
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
+                <div
+                  className="technologies_box text-center"
+                  style={{ cursor: "pointer" }}
+                >
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/obj-c-icon.png")}
                     alt="obj-c-icon"
@@ -457,7 +470,10 @@ const MobileAppDev = () => {
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
+                <div
+                  className="technologies_box text-center"
+                  style={{ cursor: "pointer" }}
+                >
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/swift-icon.png")}
                     alt="swift-icon"
@@ -467,7 +483,10 @@ const MobileAppDev = () => {
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
+                <div
+                  className="technologies_box text-center"
+                  style={{ cursor: "pointer" }}
+                >
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/java.png")}
                     alt="Java"
@@ -477,7 +496,10 @@ const MobileAppDev = () => {
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
+                <div
+                  className="technologies_box text-center"
+                  style={{ cursor: "pointer" }}
+                >
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/kotlin.png")}
                     alt="kotlin"
@@ -487,7 +509,10 @@ const MobileAppDev = () => {
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
+                <div
+                  className="technologies_box text-center"
+                  style={{ cursor: "pointer" }}
+                >
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/react-native.png")}
                     alt="react-native"
@@ -497,7 +522,10 @@ const MobileAppDev = () => {
                 </div>
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
+                <div
+                  className="technologies_box text-center"
+                  style={{ cursor: "pointer" }}
+                >
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/flutter.png")}
                     alt="flutter"
@@ -659,7 +687,221 @@ const MobileAppDev = () => {
           {/* Service Section End */}
 
           {/* <!-- Work Slider Start --> */}
-          <Work />
+          <section className="work_slider_section py-5">
+            <div className="container">
+              <div className="work-heading">
+                <h2>Work we had done</h2>
+              </div>
+              <Swiper
+                modules={[Pagination, Autoplay, Navigation]}
+                spaceBetween={20}
+                slidesPerView={3}
+                loop={true}
+                breakpoints={{
+                  320: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                  },
+                  425: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                  },
+                  640: {
+                    slidesPerView: 1,
+                    spaceBetween: 30,
+                  },
+                  768: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                  1024: {
+                    slidesPerView: 1,
+                    spaceBetween: 20,
+                  },
+                }}
+                autoplay={{
+                  delay: 2000,
+                  disableOnInteraction: false,
+                  pauseOnMouseEnter: true,
+                }}
+                speed={500}
+                direction={"horizontal"}
+                pagination={{ clickable: true }}
+                // navigation
+                onSwiper={(swiper) => {
+                  // Delay execution for the refs to be defined
+                  setTimeout(() => {
+                    // Override prevEl & nextEl now that refs are defined
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
+
+                    // Re-init navigation
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  });
+                }}
+                style={{ padding: "2.5rem 0" }}
+              >
+                <SwiperSlide>
+                  <Link
+                    to="https://play.google.com/store/apps/details?id=com.app.mindwheel"
+                    target="_blank"
+                  >
+                    <div className="row">
+                      <div className="col-lg-5 col-md-12">
+                        <img
+                          src={require("../../assets/images/work/2.webp")}
+                          style={{
+                            width: "100%",
+                            boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                            borderRadius: "10px",
+                            marginLeft: "10px",
+                          }}
+                        />
+                      </div>
+                      <div
+                        className="col-lg-7 col-md-12"
+                        style={{ color: "#000" }}
+                      >
+                        <div className="dec">
+                          Mindweel - On Demand Psychologist Hiring App
+                        </div>
+                        <p>
+                          It’s an On Demand Psychologist OR Doctor Hiring App.
+                          It has been very useful app in the current scenario of
+                          the world where everyone is facing depression, anxiety
+                          and mental health issues.
+                        </p>
+                        <p>
+                          This project has three main modules, Patient App,
+                          Psychologist / Doctor App, and Admin Panel.
+                        </p>
+
+                        <p>
+                          Patient can able to create and manage their medical
+                          profile, find the best available Psychologist /
+                          Doctors, Check their profiles, availability, ratings
+                          and reviews, Book them online, make a payment, give
+                          ratings and reviews.
+                        </p>
+                        <p>
+                          Psychologist OR Doctor can able to register
+                          themselves, create their specialist profile, manage
+                          availability, patient, booking, payment and other
+                          stuffs.
+                        </p>
+                        <p>
+                          Admin can able to manage Patients, Doctors, Payment,
+                          Reports, Content and other stuffs.
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    to="https://play.google.com/store/apps/details?id=com.app.boltdriverapp"
+                    target="_blank"
+                  >
+                    <div className="row">
+                      <div className="col-lg-5 col-md-12">
+                        <img
+                          src={require("../../assets/images/work/bolt-app.webp")}
+                          style={{
+                            width: "100%",
+                            boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                            borderRadius: "10px",
+                            marginLeft: "10px",
+                          }}
+                        />
+                      </div>
+                      <div
+                        className="col-lg-7 col-md-12"
+                        style={{ color: "#000" }}
+                      >
+                        <div className="dec">Bold Delivery</div>
+                        <p>
+                          It’s a Food Ordering & Food Delivery App. We have
+                          created a User app, Restaurant App, Driver App, and
+                          Admin panel.
+                        </p>
+                        <p>
+                          User can able to search, filter, check food details,
+                          place an online order, make payment, track their
+                          orders, give ratings and reviews.
+                        </p>
+
+                        <p>
+                          Restaurant can able to register themselves, list and
+                          manage their food items, manage orders, track drivers
+                          and orders.
+                        </p>
+                        <p>
+                          Driver can able to register, manage their
+                          availabilities, deliver the food items to the users.
+                        </p>
+                        <p>
+                          Admin can able to manage users, food category & sub
+                          category, restaurants, drivers, payment and other
+                          things.
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+                <SwiperSlide>
+                  <Link
+                    to="https://play.google.com/store/apps/details?id=com.servicemycar.android"
+                    target="_blank"
+                  >
+                    <div className="row">
+                      <div className="col-lg-5 col-md-12">
+                        <img
+                          src={require("../../assets/images/work/service-my-car.webp")}
+                          style={{
+                            width: "100%",
+                            boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                            borderRadius: "10px",
+                            marginLeft: "10px",
+                          }}
+                        />
+                      </div>
+                      <div
+                        className="col-lg-7 col-md-12"
+                        style={{ color: "#000" }}
+                      >
+                        <div className="dec">Service my car</div>
+                        <p>
+                          It’s an On Demand Car Servicing App, It has 2 main
+                          modules.
+                        </p>
+                        <p>
+                          1) User App <br />
+                          2) Admin Web Backend
+                        </p>
+
+                        <p>
+                          User can able to check out all the services packages
+                          offered by a service center, check in details and
+                          compare them, choose the service package and book
+                          online, pay online, they can also choose pickup and
+                          drop off point, check and approve extra repair cost,
+                          check their car 360° inspections on their app, provide
+                          ratings and reviews of the services.
+                        </p>
+                        <p>
+                          Admin can able to list down all the services packages,
+                          manage booking, extra repair services, payment,
+                          content of an app, offers and other stuffs
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </SwiperSlide>
+              </Swiper>
+            </div>
+          </section>
           {/* <!-- Work Slider End --> */}
 
           {/* Client testimonial Section Start */}
@@ -749,9 +991,11 @@ const MobileAppDev = () => {
                   </div>
                   <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
                     <div className="contact__rht">
-                      <a href="#" className="contact_btn">
-                        Contact us{" "}
-                      </a>
+                      <Link to="/contactus">
+                        <a className="contact_btn" style={{ color: "#000" }}>
+                          Contact us{" "}
+                        </a>
+                      </Link>
                     </div>
                   </div>
                 </div>

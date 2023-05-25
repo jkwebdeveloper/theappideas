@@ -13,7 +13,6 @@ import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
 import DigitalMarketing from "./components/Digital-Marketing/DigitalMarketing";
 import ECommerceWeb from "./components/ECommerceWeb/ECommerceWeb";
-import GameDev from "./components/Game Development/GameDev";
 import SoftwareDev from "./components/Software Development/SoftwareDev";
 import Designing from "./components/DesigningServices/Designing";
 import StartupServices from "./pages/StartupServices";
@@ -25,9 +24,7 @@ import AndroidAppDev from "./pages/MobileAppDev/AndroidAppDev";
 import IphoneAppDev from "./pages/MobileAppDev/IphoneAppDev";
 import IpadAppDev from "./pages/MobileAppDev/IpadAppDev";
 import ReactNativeDev from "./pages/MobileAppDev/ReactNativeDev";
-import IBeaconAppDev from "./pages/MobileAppDev/IBeaconAppDev";
 import IOTAppDev from "./pages/MobileAppDev/IOTAppDev";
-import AppleWatch from "./pages/MobileAppDev/AppleWatch";
 import HireAndroidDev from "./pages/Hire Us/Hire Mobile App Dev/HireAndroidDev";
 import HireReactNativeDev from "./pages/Hire Us/Hire Mobile App Dev/HireReactNativeDev";
 import HireFlutterDev from "./pages/Hire Us/Hire Mobile App Dev/HireFlutterDev";
@@ -59,12 +56,6 @@ import ShopifyDev from "./pages/Services/ECommerceWeb/ShopifyDev";
 import MagentoDev from "./pages/Services/ECommerceWeb/MagentoDev";
 import Joomla from "./pages/Services/ECommerceWeb/Joomla";
 import DrupalDev from "./pages/Services/ECommerceWeb/DrupalDev";
-import MobileGameDev from "./pages/Services/Game Developer/MobileGameDev";
-import TwoDGameDev from "./pages/Services/Game Developer/TwoDGameDev";
-import UnityGameDev from "./pages/Services/Game Developer/UnityGameDev";
-import VirtualGameDev from "./pages/Services/Game Developer/VirtualGameDev";
-import HTMLGameDev from "./pages/Services/Game Developer/HTMLGameDev";
-import COCOSGameDev from "./pages/Services/Game Developer/COCOSGameDev";
 import WordPressDeveloper from "./pages/Services/Web Development/WordPressDeveloper";
 import PHPDev from "./pages/Services/Web Development/PHPDev";
 import Angular from "./pages/Services/Web Development/Angular";
@@ -110,17 +101,15 @@ const App = () => {
           path="/E-commerce-website-Development"
           element={<ECommerceWeb />}
         />
-        <Route path="/Game-Development" element={<GameDev />} />
+
         <Route path="/Software-Development" element={<SoftwareDev />} />
         <Route path="/Designing-Services" element={<Designing />} />
         <Route path="/Startup-Services" element={<StartupServices />} />
         <Route path="/Android-App-Development" element={<AndroidAppDev />} />
         <Route path="/IPhone-App-Development" element={<IphoneAppDev />} />
-        <Route path="/IPadAppDevelopment" element={<IpadAppDev />} />
+        <Route path="/ipad-app-development" element={<IpadAppDev />} />
         <Route path="/React-Native-Development" element={<ReactNativeDev />} />
-        <Route path="/iBeacon-App-Development" element={<IBeaconAppDev />} />
         <Route path="/IOT-App-Development" element={<IOTAppDev />} />
-        <Route path="/watch-app-development" element={<AppleWatch />} />
         <Route path="/seo" element={<SEO />} />
         <Route path="/Social-Media-Marketing" element={<SocialMedia />} />
         <Route path="/ASO-company" element={<ASO />} />
@@ -129,15 +118,6 @@ const App = () => {
         <Route path="/Magento-Development" element={<MagentoDev />} />
         <Route path="/Joomla-Development" element={<Joomla />} />
         <Route path="/Drupal-Development" element={<DrupalDev />} />
-        <Route path="/Mobile-Game-Development" element={<MobileGameDev />} />
-        <Route path="/2D-3D-Game-Development" element={<TwoDGameDev />} />
-        <Route path="/Unity-Game-Development" element={<UnityGameDev />} />
-        <Route
-          path="/Virtual-Reality-Game-Development"
-          element={<VirtualGameDev />}
-        />
-        <Route path="/HTML5-Games-Development" element={<HTMLGameDev />} />
-        <Route path="/COCOS2D-Game-Development" element={<COCOSGameDev />} />
         <Route path="/WordPress-Development" element={<WordPressDeveloper />} />
         <Route path="/PHP-Development" element={<PHPDev />} />
         <Route path="/Angular-Development" element={<Angular />} />
@@ -190,7 +170,7 @@ const App = () => {
         <Route path="/Salon-Service-App" element={<SalonApp />} />
         <Route path="/E-learning-App-Development" element={<ElearningApp />} />
         <Route path="/Dating-App-Development" element={<DatingApp />} />
-        <Route path="/eCommerce-App-Development" element={<EcommerceApp />} />
+        <Route path="/e-commerce-app-development" element={<EcommerceApp />} />
         <Route
           path="/Driver-Tracking-App-Development"
           element={<DriverTrackingApp />}

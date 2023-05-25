@@ -13,6 +13,7 @@ import Competitive from "../../assets/images/MobileAppDev/Android App Developmen
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
 import WorkHand from "../../components/WorkHand";
+import { Link } from "react-router-dom";
 
 const IphoneAppDev = () => {
   useEffect(() => {
@@ -410,17 +411,18 @@ const IphoneAppDev = () => {
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
                 <p style={{ textAlign: "left" }}>
-                  Do you want to know more about our expertise in Android app
-                  development? Do you want to know how we can make great value
-                  additions with our Android development?
+                  Are you planning to launch a Successful iPhone Mobile app in
+                  the market?
                 </p>
               </div>
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link to="/contactus">
+                  <a href="/" className="contact_btn">
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

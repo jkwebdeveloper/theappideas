@@ -1,10 +1,18 @@
-import React from "react";
+import { React, useState, useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import "../../components/Workdone/work.css";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import Work from "../../components/Workdone/Work";
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
+import { Link } from "react-router-dom";
 
 const IOTAppDev = () => {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <>
       {/* Banner Section Start */}
@@ -61,7 +69,7 @@ const IOTAppDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/ibeacon App/IBeacon-App-Development-Company.png")}
+                        src={require("../../assets/images/MobileAppDev/IOT App/IoT-App-Development.png")}
                         alt="Mobile-App-Development"
                         className="img-fluid"
                         style={{ width: "25%" }}
@@ -72,7 +80,7 @@ const IOTAppDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/ibeacon App/IBeacon-App-Development-Services.png")}
+                        src={require("../../assets/images/MobileAppDev/IOT App/IoT-App-Development-Company.png")}
                         alt="Mobile-Application-Development"
                         className="img-fluid"
                         style={{ width: "25%" }}
@@ -83,7 +91,7 @@ const IOTAppDev = () => {
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
                     <div className="banner__boxes">
                       <img
-                        src={require("../../assets/images/MobileAppDev/ibeacon App/IBeacon-Application-Developer.png")}
+                        src={require("../../assets/images/MobileAppDev/IOT App/IoT-Application-Development-Services.png")}
                         alt="Mobile-Application-Development"
                         className="img-fluid"
                         style={{ width: "25%" }}
@@ -215,7 +223,7 @@ const IOTAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png")}
+                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Cities.png")}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -228,7 +236,7 @@ const IOTAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png")}
+                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/IoT-In-Agriculture.png")}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -241,7 +249,7 @@ const IOTAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png")}
+                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Retail.png")}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
@@ -254,7 +262,7 @@ const IOTAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png")}
+                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Mask-Group.png")}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -291,7 +299,211 @@ const IOTAppDev = () => {
         </div>
       </section>
       {/* Service Section End */}
-      <Work />
+      {/* <!-- Work Slider Start --> */}
+      <section className="work_slider_section py-5">
+        <div className="container">
+          <div className="work-heading">
+            <h2>Work we had done</h2>
+          </div>
+          <Swiper
+            modules={[Pagination, Autoplay, Navigation]}
+            spaceBetween={20}
+            slidesPerView={3}
+            loop={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              425: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 1,
+                spaceBetween: 20,
+              },
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={500}
+            direction={"horizontal"}
+            pagination={{ clickable: true }}
+            // navigation
+            onSwiper={(swiper) => {
+              // Delay execution for the refs to be defined
+              setTimeout(() => {
+                // Override prevEl & nextEl now that refs are defined
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+
+                // Re-init navigation
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
+            }}
+            style={{ padding: "2.5rem 0" }}
+          >
+            <SwiperSlide>
+              <Link
+                to="https://play.google.com/store/apps/details?id=com.app.mindwheel"
+                target="_blank"
+              >
+                <div className="row">
+                  <div className="col-lg-5 col-md-12">
+                    <img
+                      src={require("../../assets/images/work/2.webp")}
+                      style={{
+                        width: "100%",
+                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                        borderRadius: "10px",
+                        marginLeft: "10px",
+                      }}
+                    />
+                  </div>
+                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                    <div className="dec">
+                      Mindweel - On Demand Psychologist Hiring App
+                    </div>
+                    <p>
+                      It’s an On Demand Psychologist OR Doctor Hiring App. It
+                      has been very useful app in the current scenario of the
+                      world where everyone is facing depression, anxiety and
+                      mental health issues.
+                    </p>
+                    <p>
+                      This project has three main modules, Patient App,
+                      Psychologist / Doctor App, and Admin Panel.
+                    </p>
+
+                    <p>
+                      Patient can able to create and manage their medical
+                      profile, find the best available Psychologist / Doctors,
+                      Check their profiles, availability, ratings and reviews,
+                      Book them online, make a payment, give ratings and
+                      reviews.
+                    </p>
+                    <p>
+                      Psychologist OR Doctor can able to register themselves,
+                      create their specialist profile, manage availability,
+                      patient, booking, payment and other stuffs.
+                    </p>
+                    <p>
+                      Admin can able to manage Patients, Doctors, Payment,
+                      Reports, Content and other stuffs.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link
+                to="https://play.google.com/store/apps/details?id=com.app.boltdriverapp"
+                target="_blank"
+              >
+                <div className="row">
+                  <div className="col-lg-5 col-md-12">
+                    <img
+                      src={require("../../assets/images/work/bolt-app.webp")}
+                      style={{
+                        width: "100%",
+                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                        borderRadius: "10px",
+                        marginLeft: "10px",
+                      }}
+                    />
+                  </div>
+                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                    <div className="dec">Bold Delivery</div>
+                    <p>
+                      It’s a Food Ordering & Food Delivery App. We have created
+                      a User app, Restaurant App, Driver App, and Admin panel.
+                    </p>
+                    <p>
+                      User can able to search, filter, check food details, place
+                      an online order, make payment, track their orders, give
+                      ratings and reviews.
+                    </p>
+
+                    <p>
+                      Restaurant can able to register themselves, list and
+                      manage their food items, manage orders, track drivers and
+                      orders.
+                    </p>
+                    <p>
+                      Driver can able to register, manage their availabilities,
+                      deliver the food items to the users.
+                    </p>
+                    <p>
+                      Admin can able to manage users, food category & sub
+                      category, restaurants, drivers, payment and other things.
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
+            <SwiperSlide>
+              <Link
+                to="https://play.google.com/store/apps/details?id=com.servicemycar.android"
+                target="_blank"
+              >
+                <div className="row">
+                  <div className="col-lg-5 col-md-12">
+                    <img
+                      src={require("../../assets/images/work/service-my-car.webp")}
+                      style={{
+                        width: "100%",
+                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                        borderRadius: "10px",
+                        marginLeft: "10px",
+                      }}
+                    />
+                  </div>
+                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                    <div className="dec">Service my car</div>
+                    <p>
+                      It’s an On Demand Car Servicing App, It has 2 main
+                      modules.
+                    </p>
+                    <p>
+                      1) User App <br />
+                      2) Admin Web Backend
+                    </p>
+
+                    <p>
+                      User can able to check out all the services packages
+                      offered by a service center, check in details and compare
+                      them, choose the service package and book online, pay
+                      online, they can also choose pickup and drop off point,
+                      check and approve extra repair cost, check their car 360°
+                      inspections on their app, provide ratings and reviews of
+                      the services.
+                    </p>
+                    <p>
+                      Admin can able to list down all the services packages,
+                      manage booking, extra repair services, payment, content of
+                      an app, offers and other stuffs
+                    </p>
+                  </div>
+                </div>
+              </Link>
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </section>
+      {/* <!-- Work Slider End --> */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
         <div className="container">
@@ -384,30 +596,32 @@ const IOTAppDev = () => {
       {/* Service Section End */}
       <TestiMonial />
 
-      <FAQ/>
+      <FAQ />
 
       {/* Contact Section Start */}
-      <secion className="testi-bg py-4">
+      <section className="testi-bg py-4">
         <div className="container">
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
+                <p>
                   Are you planning to launch a Successful IoT Mobile app in the
-                  market?{" "}
+                  market?
                 </p>
               </div>
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link to="/contactus">
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
         </div>
-      </secion>
+      </section>
       {/* Contact Section End */}
     </>
   );

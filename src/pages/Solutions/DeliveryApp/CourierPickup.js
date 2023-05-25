@@ -9,12 +9,13 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
 
 //  User App
-import search from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/profile-manage-4.webp";
-import Check from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/first_use_checkup_list.webp";
-import Orderonline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/creaate-sector.webp";
-import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/create-order.webp";
-import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/assign-sector.webp";
-import Get from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/report_management.webp";
+
+import search from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/Profile Management.svg";
+import Check from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/first_use_checkup_list.svg";
+import Orderonline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/creaate-sector.svg";
+import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/create-order.svg";
+import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/assign-sector.svg";
+import Get from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/Reports management.svg";
 
 const CourierPickup = () => {
   const prevRef = useRef(null);

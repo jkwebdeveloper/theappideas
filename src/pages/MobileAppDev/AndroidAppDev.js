@@ -7,15 +7,16 @@ import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development C
 import Application from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
 import Mobileapplication from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
 
-import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
-import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
-import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
-import Agile from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg";
-import Fast from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg";
-import Competitive from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
+import Experience from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Experience and Expertise.svg";
+import Robust from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Robust Portfolio.svg";
+import Lifecycle from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Full Lifecycle support.svg";
+import Agile from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Agile Development.svg";
+import Fast from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Fast-paced development.svg";
+import Competitive from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Competitive price.svg";
 
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
+import { Link } from "react-router-dom";
 // import WorkHand from "../../components/WorkHand";
 
 const AndroidAppDev = () => {
@@ -310,53 +311,52 @@ const AndroidAppDev = () => {
           </div>
           <div className="row mt-5">
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box">
-                <a href="/" className="work_head_box_link"></a>
-                <div className="row w-100">
-                  <a href="/" className="work_head_box_link"></a>
-                  <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                    <a href="/" className="work_head_box_link"></a>
-                    <div className="work_head_lft">
-                      <a href="/" className="work_head_box_link">
-                        <h2>Covid</h2>
-                      </a>
-                      <ul className="ps-0">
-                        <a href="/" className="work_head_box_link"></a>
-                        <li>
-                          <a href="/" className="work_head_box_link">
+              <Link
+                to="https://play.google.com/store/apps/details?id=com.covid2019.rchc"
+                target="_blank"
+              >
+                <div data-aos="fade-up" className="work_head_box">
+                  <a className="work_head_box_link"></a>
+                  <div className="row w-100">
+                    <a className="work_head_box_link"></a>
+                    <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                      <a className="work_head_box_link"></a>
+                      <div className="work_head_lft">
+                        <a className="work_head_box_link">
+                          <h2>Covid</h2>
+                        </a>
+                        <ul className="ps-0">
+                          <a className="work_head_box_link"></a>
+                          <li>
+                            <a className="work_head_box_link"> </a>
+                            <a className="work_head_item">Android App</a>
+                          </li>
+                          <li>
                             {" "}
-                          </a>
-                          <a href="/" className="work_head_item">
-                            Android App
-                          </a>
-                        </li>
-                        <li>
-                          {" "}
-                          <a href="/" className="work_head_item">
-                            IOS
-                          </a>
-                        </li>
-                        <li>
-                          {" "}
-                          <a href="/" className="work_head_item">
-                            Mobile Application Development
-                          </a>
-                        </li>
-                      </ul>
+                            <a className="work_head_item">IOS</a>
+                          </li>
+                          <li>
+                            {" "}
+                            <a className="work_head_item">
+                              Mobile Application Development
+                            </a>
+                          </li>
+                        </ul>
+                      </div>
                     </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                    <div className="work_head_rht">
-                      <img
-                        data-aos="fade-left"
-                        src={require("../../assets/images/Portfolio/Device-Image-one.webp")}
-                        alt="Device-Image-one"
-                        className="img-fluid"
-                      />
+                    <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                      <div className="work_head_rht">
+                        <img
+                          data-aos="fade-left"
+                          src={require("../../assets/images/Portfolio/Device-Image-one.webp")}
+                          alt="Device-Image-one"
+                          className="img-fluid"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
+              </Link>
             </div>
             <div className="col-12 px-0 mb-4">
               <div
@@ -605,9 +605,11 @@ const AndroidAppDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link to="/contactus">
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

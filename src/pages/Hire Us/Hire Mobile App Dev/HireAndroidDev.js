@@ -7,6 +7,17 @@ import WorkHand from "../../../components/WorkHand";
 import background from "../../../assets/images/Home-our-services/bg-download.svg";
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import { Link } from "react-router-dom";
+
+import Contactus from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/CUSTOM ANDROID APPS.svg";
+import ANDROID from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/ANDROID SUPPORT.svg";
+import CROSS from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/CROSS PLATFORM DEVELOPMENT.svg";
+
+import EXPERIENCE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/EXPERIENCE AND EXPERTISE.svg";
+import STUNNING from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/STUNNING PORTFOLIO.svg";
+import GREAT from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/GREAT UI AND UX.svg";
+import INTERNET from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/PERFORMANCE DRIVEN.svg";
+import FAST from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/FAST PACED AND COMPETITIVE.svg";
 
 const HireAndroidDev = () => {
   useEffect(() => {
@@ -242,18 +253,17 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT.gif")}
+                    src={Contactus}
                     alt="Web Development"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">CUSTOM IPHONE APP DEVELOPMENT</a>
+                  <a href="/services">Contact us ANDROID APPS</a>
                 </h5>
                 <div className="text">
-                  Our iOS app developers have the expertise and experience to
-                  deliver the best of iOS platform to ensure optimum native
-                  capabilities with your iPhone mobile app.
+                  Our experienced and skilled team of Android developers can
+                  build innovative Android apps across niches and categories.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -280,18 +290,19 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif")}
+                    src={ANDROID}
                     alt="E-COMMERCE DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">IOS GAME DEVELOPMENT</a>
+                  <a href="/services">ANDROID SUPPORT</a>
                 </h5>
                 <div className="text">
-                  Our iOS app developers have the expertise and experience to
-                  deliver the best of iOS platform to ensure optimum native
-                  capabilities with your iPhone mobile app.
+                  We are also ready with a robust team of Android developers who
+                  are ready to provide support to all your Android apps whether
+                  for addressing performance issues or for changing the user
+                  interface or for integrating new features.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -318,18 +329,18 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT (1).gif")}
+                    src={CROSS}
                     alt="MOBILE APP DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">UPGRADE AND SUPPORT</a>
+                  <a href="/services">CROSS PLATFORM DEVELOPMENT</a>
                 </h5>
                 <div className="text">
-                  We also offer experienced IOS developers who can address
-                  issues from time to time and give facelift to your apps with
-                  timely and new updates and upgrades.
+                  We have a large team of expert cross platform developers who
+                  can turn your app idea into sophisticated apps across both
+                  Android and iOS mobile platforms.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -346,15 +357,12 @@ const HireAndroidDev = () => {
       <section className="HireIOSDev-section style-two py-5">
         <div className="container">
           <div className="HireIOSDev-heading">
-            <h2>WHY HIRE iPHONE APP DEVELOPERS FROM US?</h2>
+            <h2>Why Hire Android Developers From Us?</h2>
             <p>
-              We have established our reputation as one of the leading iPhone
-              app developers with a wide spectrum of{" "}
-              <a href="/" className="Title_Color" target="_blank">
-                <b>app development</b>
-              </a>{" "}
-              projects across the niches. Here are some of the key reasons to
-              hire iPhone app developers from us.
+              We are one of the most respected an Android developer in India
+              companies with a robust portfolio of future ready apps across the
+              niche. Here are some of the key reasons to hire Android developers
+              from us.
             </p>
           </div>
           <div className="row clearfix">
@@ -378,7 +386,7 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT.gif")}
+                    src={EXPERIENCE}
                     alt="Web Development"
                     style={{ width: "70px" }}
                   />
@@ -387,9 +395,9 @@ const HireAndroidDev = () => {
                   <a href="/services">EXPERIENCE AND EXPERTISE</a>
                 </h5>
                 <div className="text">
-                  We boast of a robust team of dedicated iOS app developers with
-                  proven track record and several years of iOS development
-                  experience.
+                  We boast of a long experience in Android mobile app
+                  development with expertise in building apps across diverse
+                  niches.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -416,18 +424,17 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif")}
+                    src={STUNNING}
                     alt="E-COMMERCE DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">STRONG PORTFOLIO</a>
+                  <a href="/services">STUNNING PORTFOLIO</a>
                 </h5>
                 <div className="text">
-                  We have a strong portfolio of several successful iOS apps
-                  representing various niches and built for different devices
-                  including latest iPhone devices and Apple Watches.
+                  We boast of a proven track record with a stunning portfolio of
+                  a gamut of most successful Android apps across several niches.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -454,17 +461,17 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT (1).gif")}
+                    src={GREAT}
                     alt="MOBILE APP DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">UNIQUE UI AND UX</a>
+                  <a href="/services">GREAT UI AND UX</a>
                 </h5>
                 <div className="text">
-                  Our iOS developers will guarantee delivering unique and
-                  engaging UI and UX for apps of all niches.
+                  We guarantee delivering highly customer centric UI design and
+                  engaging UX for Android apps of all types and niches.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -491,18 +498,17 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/INTERNET OF THINGS.gif")}
+                    src={INTERNET}
                     alt="INTERNET OF THING"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">FASTER TIME TO MARKET</a>
+                  <a href="/services">PERFORMANCE DRIVEN</a>
                 </h5>
                 <div className="text">
-                  Thanks to agile development process coupled up with concurrent
-                  testing we ensure quick development time without compromising
-                  on the quality.
+                  We build Android apps with unmatched performance and low
+                  downtime guaranteed.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -529,18 +535,18 @@ const HireAndroidDev = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/GAME DEVELOPMENT.gif")}
+                    src={FAST}
                     alt="GAME DEVELOPMENT"
                     style={{ width: "70px" }}
                   />
                 </div>
                 <h5>
-                  <a href="/services">COMPETITIVE RATE</a>
+                  <a href="/services">FAST PACED AND COMPETITIVE</a>
                 </h5>
                 <div className="text">
-                  We offer one of the most competitive rate for most
-                  sophisticated and quality-focused iOS app development service
-                  across a wide variety of business niches.
+                  We ensure building Android apps at quick pace thanks to our
+                  agile development process while maintaining most competitive
+                  pricing for apps across niches.
                 </div>
                 {/* <a href="/services" className="arrow-icon">
                   <HiOutlineArrowRight />
@@ -565,9 +571,11 @@ const HireAndroidDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link to="/contactus">
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

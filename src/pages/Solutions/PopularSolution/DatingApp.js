@@ -9,15 +9,14 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
 
 //  Customer App
-import search from "../../../assets/images/SOLUTIONS/Registration and location setup.svg";
-// import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Agency-Role.webp";
-// import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Chat-With-The-Client.webp";
-// import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Offers.webp";
-// import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Time-Management-Tracking.webp";
-// import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Paid-Online.webp";
-// import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Rating _ Reviews.webp";
-// import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/news.webp";
-// import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/community.webp";
+import Social from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Social Media Login.svg";
+import Profile from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/profile-manage-4.svg";
+import Find from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Find-Nearby-Dates.svg";
+import Swipe from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Swipe feature for showing interest not interested.svg";
+import Create from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Create-And-Share-Post.svg";
+import Like from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Like-Dislike-Comment.svg";
+import Match from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Match-With-The-Right-Date.svg";
+import Video from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Chat, Audio and Video Call feature.svg";
 
 const DatingApp = () => {
   const prevRef = useRef(null);
@@ -233,7 +232,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src={search}
+                        src={Social}
                         alt="search-food-icon"
                         className="img-fluid"
                         style={{ width: "20%" }}
@@ -248,7 +247,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Check}
+                        src={Profile}
                         alt="Check-Details-icons"
                         className="img-fluid"
                         style={{ width: "20%" }}
@@ -263,7 +262,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Orderonline}
+                        src={Find}
                         alt="Order-Online-icon"
                         className="img-fluid"
                         style={{ width: "25%" }}
@@ -278,7 +277,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={payonline}
+                        src={Swipe}
                         alt="Pay-Online-icons"
                         className="img-fluid"
                         style={{ width: "20%" }}
@@ -295,7 +294,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Reviews}
+                        src={Create}
                         alt="Reviews-And-Ratings-icons "
                         className="img-fluid"
                         style={{ width: "20%" }}
@@ -310,7 +309,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Get}
+                        src={Like}
                         alt="Get-Cashback-icons"
                         className="img-fluid"
                         style={{ width: "20%" }}
@@ -325,7 +324,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Avail}
+                        src={Match}
                         alt="search-food-icon"
                         className="img-fluid"
                         style={{ width: "20%" }}
@@ -340,7 +339,7 @@ const DatingApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Avail}
+                        src={Video}
                         alt="search-food-icon"
                         className="img-fluid"
                         style={{ width: "20%" }}

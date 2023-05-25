@@ -7,15 +7,15 @@ import background from "../../../assets/images/Home-our-services/bg-download.svg
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 
-import Offer from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/SEO FRIENDLY.svg";
-import Features from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/IOS GAME DEVELOPMENT.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/LOWER LEARNING CURVE.svg";
-import Secure from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/HIGHLY RESPONSIVE.svg";
-import Laravel from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/FASTER TIME TO MARKET.svg";
-import Unit from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/IOS Wearable App Development.svg";
+import SEO from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/SEO FRIENDLY.svg";
+import GAME from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/IOS GAME DEVELOPMENT.svg";
+import LOWER from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/LOWER LEARNING CURVE.svg";
+import HIGHLY from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/HIGHLY RESPONSIVE.svg";
+import FASTER from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/FASTER TIME TO MARKET.svg";
+import Wearable from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/1/IOS Wearable App Development.svg";
 
 import Expertise from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/EXPERIENCE AND EXPERTISE.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/Robust Portfolio.svg";
+import ROBUST from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/Robust Portfolio.svg";
 import Implement from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/On-Time Deployment.svg";
 import Affordable from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/MOST COMPETITIVE PRICING.svg";
 import Time from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/SEO FRIENDLY.svg";
@@ -276,7 +276,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Laravel}
+                    src={SEO}
                     alt="Laravel Web Application Development"
                     style={{ width: "50px" }}
                   />
@@ -316,7 +316,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Offer}
+                    src={GAME}
                     alt="Offer Customization"
                     style={{ width: "50px" }}
                   />
@@ -355,7 +355,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Features}
+                    src={LOWER}
                     alt="Laravel Features Integration"
                     style={{ width: "50px" }}
                   />
@@ -394,7 +394,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Secure}
+                    src={HIGHLY}
                     alt="Secure Web Solutions"
                     style={{ width: "50px" }}
                   />
@@ -434,7 +434,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Consulting}
+                    src={FASTER}
                     alt="Laravel Consulting Services"
                     style={{ width: "50px" }}
                   />
@@ -474,7 +474,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Unit}
+                    src={Wearable}
                     alt="Unit Testing Methods"
                     style={{ width: "50px" }}
                   />
@@ -568,7 +568,7 @@ const HireShopify = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Sophisticated}
+                    src={ROBUST}
                     alt="Sophisticated Portfolio"
                     style={{ width: "70px" }}
                   />

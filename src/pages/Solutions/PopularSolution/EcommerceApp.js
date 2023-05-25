@@ -9,15 +9,14 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
 
 //  Customer App
-// import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/profile-manage-4.webp";
-// import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Agency-Role.webp";
-// import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Chat-With-The-Client.webp";
-// import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Offers.webp";
-// import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Time-Management-Tracking.webp";
-// import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Paid-Online.webp";
-// import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Rating _ Reviews.webp";
-// import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/news.webp";
-// import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/community.webp";
+import search from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Search-Products.svg";
+import Check from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/View-Products-Categories-Wise.svg";
+import Orderonline from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Cart-Management.svg";
+import payonline from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Wish-Products.svg";
+import Reviews from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Avail-Offers.svg";
+import Get from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Purchase-Online.svg";
+import Avail from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Rating _ Reviews.svg";
+import Checkorder from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Check-Order-History.svg";
 
 const EcommerceApp = () => {
   const prevRef = useRef(null);
@@ -204,7 +203,7 @@ const EcommerceApp = () => {
                   aria-controls="Customer-App"
                   aria-selected="true"
                 >
-                  Contractor App
+                  User App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
@@ -218,7 +217,21 @@ const EcommerceApp = () => {
                   aria-controls="Restaurent-App"
                   aria-selected="false"
                 >
-                  Client App
+                  Admin Panel
+                </button>
+              </li>
+              <li className="nav-item" role="presentation">
+                <button
+                  className="nav-link"
+                  id="Restaurent-App-Tab"
+                  data-bs-toggle="pill"
+                  data-bs-target="#Restaurent-App"
+                  type="button"
+                  role="tab"
+                  aria-controls="Restaurent-App"
+                  aria-selected="false"
+                >
+                  Seller Panel
                 </button>
               </li>
             </ul>
@@ -233,130 +246,118 @@ const EcommerceApp = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={search}
+                        src={search}
                         alt="search-food-icon"
                         className="img-fluid"
                         style={{ width: "20%" }}
                       />
-                      <h4>Profile Management</h4>
+                      <h4>Search products</h4>
                       <p>
-                        The Contractor/ Agency can register, login, create &
-                        manage his/her profile.
+                        User can search for products by using a variety of
+                        filters.
                       </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Check}
+                        src={Check}
                         alt="Check-Details-icons"
                         className="img-fluid"
                         style={{ width: "20%" }}
                       />
-                      <h4>Agency Role</h4>
-                      <p>The agency can add multiple contractors under them.</p>
+                      <h4>View products categories wise</h4>
+                      <p>
+                        Users can view and search for products across different
+                        categories.
+                      </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Orderonline}
+                        src={Orderonline}
                         alt="Order-Online-icon"
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Chat with the Client</h4>
+                      <h4>Cart management</h4>
                       <p>
-                        Once the client approves contractors interest then they
-                        can chat with each other.
+                        Users can search and see lists of available courses.
                       </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={payonline}
+                        src={payonline}
                         alt="Pay-Online-icons"
                         className="img-fluid"
                         style={{ width: "20%" }}
                       />
-                      <h4>Get Offers</h4>
+                      <h4>Wish Products</h4>
                       <p>
-                        Contractor gets offers, view offers and decide to accept
-                        or reject it.
+                        Users are also allowed to keep their chosen products
+                        under wish-list for future purchases.
                       </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Reviews}
+                        src={Reviews}
                         alt="Reviews-And-Ratings-icons "
                         className="img-fluid"
                         style={{ width: "20%" }}
                       />
-                      <h4>Time Management & Tracking</h4>
+                      <h4>Avail Offers</h4>
                       <p>
-                        Contractor login his in time, out time, view and manage
-                        timesheet and get approved by the client.
+                        The user app also shows various offers available for the
+                        users.
                       </p>
                     </div>
                   </div>
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Get}
+                        src={Get}
                         alt="Get-Cashback-icons"
                         className="img-fluid"
                         style={{ width: "20%" }}
                       />
-                      <h4>Get Paid Online</h4>
+                      <h4>Purchase Online</h4>
                       <p>
-                        The contractor sends withdraw the request and get paid.
+                        Through the user panel the user can make online
+                        purchases.
                       </p>
                     </div>
                   </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Avail}
+                        src={Avail}
                         alt="search-food-icon"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: "15%" }}
                       />
-                      <h4>Rating & Reviews</h4>
+                      <h4>give ratings and reviews</h4>
                       <p>
-                        After completion of the job, the contractor can drop
-                        his/her feedback.
+                        Users can write reviews and give ratings on the basis of
+                        their satisfaction with the products.
                       </p>
                     </div>
                   </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
+                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        // src={Checkorder}
+                        src={Checkorder}
                         alt="Check-Order-History-icons"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: "15%" }}
                       />
-                      <h4>News</h4>
+                      <h4>check order history</h4>
                       <p>
-                        Admin post some news and contractors can view that news.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Live}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>Community</h4>
-                      <p>
-                        Contractors, participate in communities. ask questions
-                        and give answers and become engaged with each other.
+                        Admin post some news and contractors can view that news
                       </p>
                     </div>
                   </div>

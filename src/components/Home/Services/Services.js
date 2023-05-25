@@ -2,7 +2,8 @@ import React from "react";
 import background from "../../../assets/images/Home-our-services/bg-download.svg";
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import { HiOutlineArrowRight } from "react-icons/hi";
-import './services.css'
+import "./services.css";
+import { Link } from "react-router-dom";
 
 const Services = () => {
   return (
@@ -43,14 +44,18 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">WEB DEVELOPMENT</a>
+                  <Link to="/web-development">
+                    <a>WEB DEVELOPMENT</a>
+                  </Link>
                 </h5>
                 <div className="text">
                   We help you build robust web presence with our expertise ...
                 </div>
-                <a href="/services" className="arrow-icon">
-                  <HiOutlineArrowRight />
-                </a>
+                <Link to="/web-development">
+                  <a className="arrow-icon">
+                    <HiOutlineArrowRight />
+                  </a>
+                </Link>
               </div>
             </div>
             <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
@@ -76,12 +81,12 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">E-COMMERCE DEVELOPMENT</a>
+                  <a href="/e-commerce-website-development">E-COMMERCE DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   We help your business connect to the customers over ...
                 </div>
-                <a href="/services" className="arrow-icon">
+                <a href="/e-commerce-website-development" className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a>
               </div>

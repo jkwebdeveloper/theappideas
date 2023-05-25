@@ -325,11 +325,17 @@ const Footer = () => {
                 <a href="https://twitter.com/theappidea" target="_blank">
                   <BsTwitter />
                 </a>
-                <a href="https://www.linkedin.com/company/theappideas/" target="_blank">
+                <a
+                  href="https://www.linkedin.com/company/theappideas/"
+                  target="_blank"
+                >
                   <FaLinkedinIn />
                 </a>
-                <a href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA" target="_blank">
-                  <AiFillYoutube />   
+                <a
+                  href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA"
+                  target="_blank"
+                >
+                  <AiFillYoutube />
                 </a>
                 <a href="https://dribbble.com/theappideas" target="_blank">
                   <BsDribbble />
@@ -386,7 +392,11 @@ const Footer = () => {
                     </div>
                   </li>
                   <li>
-                    <a className="footer__awards_achor">
+                    <a
+                      href="https://www.goodfirms.co/company/the-app-ideas"
+                      className="footer__awards_achor"
+                      target="_blank"
+                    >
                       <img
                         src={appdeveloper}
                         alt="app-development-img"
@@ -395,7 +405,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="footer__awards_achor">
+                    <a
+                      href="https://www.freelancer.com/u/Theappideas"
+                      className="footer__awards_achor"
+                      target="_blank"
+                    >
                       <img
                         src={require("../assets/images/Footer/freelancer-logo-1.webp")}
                         alt="freelancer-logo"
@@ -404,7 +418,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="footer__awards_achor">
+                    <a
+                      href="https://www.peopleperhour.com/freelancer/technology-programming/app_ideas_infotech_pvt_ltd-panchal-full-stack-developer-web-app-znjmyqw"
+                      target="_blank"
+                      className="footer__awards_achor"
+                    >
                       <img
                         src={require("../assets/images/Footer/pph_new.webp")}
                         alt="pph_new"
@@ -413,7 +431,11 @@ const Footer = () => {
                     </a>
                   </li>
                   <li>
-                    <a className="footer__awards_achor">
+                    <a
+                      href="https://www.upwork.com/ag/theappideas/"
+                      className="footer__awards_achor"
+                      target="_blank"
+                    >
                       <img
                         src={require("../assets/images/Footer/upwork_new.webp")}
                         alt="upwork_new"

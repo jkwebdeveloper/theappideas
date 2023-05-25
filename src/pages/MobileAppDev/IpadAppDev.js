@@ -3,6 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
+import AR from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad AR and VR apps.svg"
+import chat from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad Chat Apps.svg"
 import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
 import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
 import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
@@ -202,7 +204,7 @@ const IpadAppDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png")}
+                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/enterprise.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -212,7 +214,7 @@ const IpadAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png")}
+                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/ipad-media.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -224,7 +226,7 @@ const IpadAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png")}
+                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/ipad-game.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -236,7 +238,7 @@ const IpadAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png")}
+                      src={AR}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -246,7 +248,7 @@ const IpadAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png")}
+                      src={chat}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -259,7 +261,7 @@ const IpadAppDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png")}
+                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/Website-Redesign.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
