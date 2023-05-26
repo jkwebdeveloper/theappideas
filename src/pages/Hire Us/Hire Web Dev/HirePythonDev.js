@@ -7,7 +7,7 @@ import background from "../../../assets/images/Home-our-services/bg-download.svg
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Custom Python Online Solution.svg";
+import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Best UI UX Designing Services.svg";
 import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Custom Python Online Solution_1.svg";
 import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Python Web And App Development.svg";
 import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Deploy Secure Solution.svg";

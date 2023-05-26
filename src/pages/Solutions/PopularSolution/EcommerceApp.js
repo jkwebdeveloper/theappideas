@@ -800,7 +800,7 @@ const EcommerceApp = () => {
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
-                    <p>Highly Scalable</p>
+                    <p>Mobile Shopping Made Simple</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
@@ -810,7 +810,7 @@ const EcommerceApp = () => {
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
-                    <p>Fully Customizable</p>
+                    <p>Always Open Storefront</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
@@ -820,7 +820,7 @@ const EcommerceApp = () => {
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
-                    <p>Time And Cost-Effective</p>
+                    <p>Always Accessible Customer Support</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
@@ -830,7 +830,7 @@ const EcommerceApp = () => {
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
-                    <p>Multi-Lingual Support</p>
+                    <p>Sophisticated Experience</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
@@ -840,7 +840,7 @@ const EcommerceApp = () => {
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
-                    <p>Multi-Currency Support</p>
+                    <p>Easier Product Promotions</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
@@ -850,7 +850,7 @@ const EcommerceApp = () => {
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
-                    <p>User-Friendly Design</p>
+                    <p>Higher ROI Growth</p>
                   </a>
                 </div>
               </div>

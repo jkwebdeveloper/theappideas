@@ -72,6 +72,9 @@ import OurProcess from "./pages/Company/OurProcess";
 import Solutions from "./components/Solutions";
 import HireUs from "./components/HireUs";
 import LawyerWeb from "./components/LawyerWeb";
+import MobileAppToronto from "./pages/Sitemap/MobileAppToronto";
+import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
+import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
 
 const App = () => {
   return (
@@ -122,7 +125,7 @@ const App = () => {
         <Route path="/PHP-Development" element={<PHPDev />} />
         <Route path="/Angular-Development" element={<Angular />} />
         <Route path="/Webflow-Development" element={<WebFlowDev />} />
-        <Route path="/Asp.Net-Development" element={<AspNet />} />
+        <Route path="/asp-net-development" element={<AspNet />} />
         <Route path="/DotNetNuke-Development" element={<DotNetDev />} />
         <Route path="/Graphics-Design" element={<GraphicsDesign />} />
         <Route path="/Mobile-App-Design" element={<MobileAppDesign />} />
@@ -185,6 +188,20 @@ const App = () => {
         <Route path="/popup" element={<PopUp />} />
         <Route path="/*" element={<Error404 />} />
         <Route path="/lawyer-website-solution" element={<LawyerWeb />} />
+
+        {/* Sitemap Link */}
+        <Route
+          path="/mobile-app-development-toronto"
+          element={<MobileAppToronto />}
+        />
+        <Route
+          path="/mobile-app-development-new-york"
+          element={<MobileAppNewyork />}
+        />
+        <Route
+          path="/mobile-app-development-barcelona"
+          element={<MobileAppBarcelona />}
+        />
       </Routes>
       <Footer />
     </BrowserRouter>
