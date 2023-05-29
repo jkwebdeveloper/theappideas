@@ -201,7 +201,7 @@ const PHPDev = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/ui-ux.png")}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -211,7 +211,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/cms-icon1-1.png")}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -221,7 +221,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/icons8-iphone-x-72-1.png")}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -231,7 +231,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mechanism-gears-1.png")}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -241,7 +241,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Group-184.png")}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -251,7 +251,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mask-Group.png")}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -511,7 +511,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/why-Choose/icon.png")}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -521,7 +521,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -531,7 +531,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -541,7 +541,7 @@ const PHPDev = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="/" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
