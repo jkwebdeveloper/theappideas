@@ -537,11 +537,15 @@ section {
 }
 .Portfolio__Blog .nav .nav-item .nav-link {
   border: 1px solid #fff;
-  /* color: #fff; */
+  color: #fff;
 }
 .Portfolio__Blog .nav .nav-item .nav-link.active {
   border: 1px solid #fff;
   background: #f6c000;
+}
+.Portfolio__Blog .nav .nav-item .nav-link:hover {
+  background: #f6c000;
+  color: #000;
 }
 /* Blog Listing Page CSS End */
 
@@ -1154,6 +1158,7 @@ section {
 --------------------------------------------------------------*/
 
 /* Food Delivery Page CSS Start */
+
 .service__provide__section .nav .nav-item {
   flex: 1 1 25%;
   /* max-width: 25%; */
@@ -1171,6 +1176,7 @@ section {
   border-radius: 0px;
   font-size: 16px;
   font-weight: 700;
+  border: none;
 }
 
 .service__provide__section .nav-pills .nav-link.active {
@@ -1178,7 +1184,10 @@ section {
   background: #2f0e39;
   color: #fff;
 }
-
+.service__provide__section .nav-pills .nav-link:hover {
+  background: #2f0e39;
+  color: #fff;
+}
 .food__delivery__box {
   text-align: center;
   height: 100%;
@@ -2560,7 +2569,7 @@ section {
 .display-table {
   display: table !important;
 }
-.right-img{
+.right-img {
   max-width: 100%;
   height: auto;
 }

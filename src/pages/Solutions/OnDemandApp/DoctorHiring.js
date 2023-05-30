@@ -12,9 +12,9 @@ import FAQ from "../../../components/FAQ";
 
 import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/signup.svg";
 import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Signin.svg";
-import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password.svg";
+import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/forgot_password.svg";
 import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password-2.svg";
-import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create a profile.svg";
+import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create a Profile.svg";
 import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage profile.svg";
 import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage-Medical-History-Profile.svg";
 import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Search available doctors.svg";

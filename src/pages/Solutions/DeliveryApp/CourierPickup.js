@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,6 +7,8 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //  User App
 
@@ -17,9 +19,144 @@ import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app
 import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/assign-sector.svg";
 import Get from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/Reports management.svg";
 
+const CourierData = [
+  {
+    id: 1,
+    category: "User-App",
+    image: search,
+    title: "Profile Management",
+    des: "Create/Maintain profile for every courier boy.",
+  },
+  {
+    id: 2,
+    category: "User-App",
+    image: Check,
+    title: "Create/Maintain clients list",
+    des: "Where operator enter the details of the client like name, Email id, Phone number.",
+  },
+  {
+    id: 3,
+    category: "User-App",
+    image: Orderonline,
+    title: "Create/Manage Sectors",
+    des: "based on the zip codes.",
+  },
+  {
+    id: 4,
+    category: "User-App",
+    image: payonline,
+    title: "Create/ Update orders",
+    des: "Operator will create the customer order by filling up name, email id, phone number, zip code, address, parcel type, approx. weight.",
+  },
+  {
+    id: 5,
+    category: "User-App",
+    image: Reviews,
+    title: "Assign the Sectors to courier boys",
+    des: "We need to create the zip code table where operator will enter the zip code.",
+  },
+  {
+    id: 6,
+    category: "User-App",
+    image: Get,
+    title: "Reports Management",
+    des: "View the list of the assigned jobs on a particular day for the courier boy.",
+  },
+  {
+    id: 7,
+    category: "Courier-Boy-App",
+    image: search,
+    title: "Login",
+    des: "The courier boy needs to create login credentials and log in for use.",
+  },
+  {
+    id: 8,
+    category: "Courier-Boy-App",
+    image: Check,
+    title: "Forgot Password",
+    des: "In case of forgetting password the courier boy can follow the instructions to create a new password.",
+  },
+  {
+    id: 9,
+    category: "Courier-Boy-App",
+    image: Orderonline,
+    title: "Change Password",
+    des: "Courier boy can change the password at any point of time.",
+  },
+  {
+    id: 10,
+    category: "Courier-Boy-App",
+    image: payonline,
+    title: "See the assigned jobs list",
+    des: "Courier boy can see the list of all jobs assigned for him.",
+  },
+  {
+    id: 11,
+    category: "Courier-Boy-App",
+    image: Reviews,
+    title: "Get the details",
+    des: "Courier boy can access details about each and every job assigned to him.",
+  },
+  {
+    id: 12,
+    category: "Courier-Boy-App",
+    image: Get,
+    title: "Timeline",
+    des: "20 Working Days",
+  },
+  {
+    id: 13,
+    category: "Courier-Boy-App",
+    image: Check,
+    title: "Picked up the parcel",
+    des: "They need to click on a Button Called “Parcel Picked up”.",
+  },
+  {
+    id: 14,
+    category: "Courier-Boy-App",
+    image: Orderonline,
+    title: "If person was not available",
+    des: "Courier boy click on Create a note button and generate a note and submit it.",
+  },
+  {
+    id: 15,
+    category: "Courier-Boy-App",
+    image: payonline,
+    title: "courier boy see the job list.",
+    des: "",
+  },
+  {
+    id: 16,
+    category: "Courier-Boy-App",
+    image: Reviews,
+    title:
+      "once they clicked on it, it will open the pickup and company details",
+    des: "",
+  },
+  {
+    id: 17,
+    category: "Courier-Boy-App",
+    image: Get,
+    title: "They click on start journey button, live tracking will be started",
+    des: "",
+  },
+];
+
 const CourierPickup = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [item, setItems] = useState(CourierData);
+
+  const filterItem = (cateItem) => {
+    const updateItems = CourierData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
   return (
     <>
       {/* common Banner start */}
@@ -193,13 +330,14 @@ const CourierPickup = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active"
-                  id="Customer-App-Tab"
+                  id="User-App"
                   data-bs-toggle="pill"
                   data-bs-target="#Customer-App"
                   type="button"
                   role="tab"
-                  aria-controls="Customer-App"
+                  aria-controls="User-App"
                   aria-selected="true"
+                  onClick={() => filterItem("User-App")}
                 >
                   User App
                 </button>
@@ -207,13 +345,14 @@ const CourierPickup = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Courier-Boy-App"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Courier-Boy-App"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Courier-Boy-App"
                   aria-selected="false"
+                  onClick={() => filterItem("Courier-Boy-App")}
                 >
                   Courier Boy App
                 </button>
@@ -221,31 +360,18 @@ const CourierPickup = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Driver-Tracking-Tab"
+                  id="Admin-panel-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Driver-Tracking"
+                  data-bs-target="#Admin-panel"
                   type="button"
                   role="tab"
-                  aria-controls="Driver-Tracking"
+                  aria-controls="Admin-panel"
                   aria-selected="false"
+                  onClick={() => filterItem("Admin-panel")}
                 >
                   Admin Panel
                 </button>
               </li>
-              {/* <li className="nav-item" role="presentation">
-                <button
-                  className="nav-link"
-                  id="Super-Admin-Tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#Super-Admin"
-                  type="button"
-                  role="tab"
-                  aria-controls="Super-Admin"
-                  aria-selected="false"
-                >
-                  Super Admin Panel
-                </button>
-              </li> */}
             </ul>
             <div className="tab-content mt-5" id="pills-tabContent">
               <div
@@ -255,433 +381,26 @@ const CourierPickup = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={search}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Profile Management</h4>
-                      <p>Create/Maintain profile for every courier boy.</p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Check}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Create/Maintain clients list</h4>
-                      <p>
-                        Where operator enter the details of the client like
-                        name, Email id, Phone number.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Orderonline}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Create/Manage Sectors</h4>
-                      <p>based on the zip codes.</p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={payonline}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Create/ Update orders</h4>
-                      <p>
-                        Operator will create the customer order by filling up
-                        name, email id, phone number, zip code, address, parcel
-                        type, approx. weight.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Reviews}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Assign the Sectors to courier boys</h4>
-                      <p>
-                        We need to create the zip code table where operator will
-                        enter the zip code.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Get}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Reports Management</h4>
-                      <p>
-                        View the list of the assigned jobs on a particular day
-                        for the courier boy.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Login</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {item.map((elem) => {
+                    const { id, image, des, title } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="search-food-icon"
+                            className="img-fluid"
+                            style={{ height: "70px" }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

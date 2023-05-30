@@ -61,7 +61,7 @@ function LifeTAI() {
             <div className="col-lg-5 col-md-7 col-sm-12 col-12">
               <div className="life_img_rht">
                 <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/ganesh-chaturthi.webp")}
+                  src={require("../../assets/images/COMPANY/lifeAtTai/Ganesh Chaturthi.gif")}
                   alt="ganesh-chaturthi"
                   className="img-fluid"
                 />
