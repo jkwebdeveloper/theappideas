@@ -166,9 +166,9 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="/" className="menu_contact_btn">
-                          Contact Us
-                        </a>
+                        <Link to="/careers">
+                          <a className="menu_contact_btn">Join Our Team</a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -413,9 +413,9 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="/" className="menu_contact_btn">
-                          Contact Us
-                        </a>
+                        <Link to="/contactus">
+                          <a className="menu_contact_btn">Contact Us</a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -563,9 +563,11 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="/" className="menu_contact_btn">
-                          Hire Our Developer{" "}
-                        </a>
+                        <Link to="/hire-us">
+                          <a className="menu_contact_btn">
+                            Hire Our Developer{" "}
+                          </a>
+                        </Link>
                       </div>
                     </div>
                   </div>
@@ -690,9 +692,9 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <a href="/" className="menu_contact_btn">
-                          Contact Us{" "}
-                        </a>
+                        <Link to="/contactus">
+                          <a className="menu_contact_btn">Contact Us </a>
+                        </Link>
                       </div>
                     </div>
                   </div>

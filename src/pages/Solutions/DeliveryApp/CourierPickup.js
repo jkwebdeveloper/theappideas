@@ -19,6 +19,27 @@ import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app
 import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/assign-sector.svg";
 import Get from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/User App/Reports management.svg";
 
+// courier boy
+import Login from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/Login _ Register.svg";
+import Forgot from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/forgot_password.svg";
+import Change from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/change_password-2.svg";
+import Seethe from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/courier boy see the job list.svg";
+import Getthe from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/Get the details.svg";
+import Timeline from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/Timeline.svg";
+import parcel from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/pickup-parcel.svg";
+import person from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/If person was not available.svg";
+import courier from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/courier boy see the job list.svg";
+import clicked from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/once they clicked on it, it will open the pickup and company details.svg";
+import They from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Courier Boy App/Timeline.svg";
+
+//  Admin penal
+import UserManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/user_manage-1.svg";
+import CourierBoyManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Courier Boy Management.svg";
+import CourierManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Courier Management.svg";
+import PaymentManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Payment-Management-1.svg";
+import ReportsManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Reports management.svg";
+import Contentmanagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/content-management.svg";
+
 const CourierData = [
   {
     id: 1,
@@ -65,70 +86,70 @@ const CourierData = [
   {
     id: 7,
     category: "Courier-Boy-App",
-    image: search,
+    image: Login,
     title: "Login",
     des: "The courier boy needs to create login credentials and log in for use.",
   },
   {
     id: 8,
     category: "Courier-Boy-App",
-    image: Check,
+    image: Forgot,
     title: "Forgot Password",
     des: "In case of forgetting password the courier boy can follow the instructions to create a new password.",
   },
   {
     id: 9,
     category: "Courier-Boy-App",
-    image: Orderonline,
+    image: Change,
     title: "Change Password",
     des: "Courier boy can change the password at any point of time.",
   },
   {
     id: 10,
     category: "Courier-Boy-App",
-    image: payonline,
+    image: Seethe,
     title: "See the assigned jobs list",
     des: "Courier boy can see the list of all jobs assigned for him.",
   },
   {
     id: 11,
     category: "Courier-Boy-App",
-    image: Reviews,
+    image: Getthe,
     title: "Get the details",
     des: "Courier boy can access details about each and every job assigned to him.",
   },
   {
     id: 12,
     category: "Courier-Boy-App",
-    image: Get,
+    image: Timeline,
     title: "Timeline",
     des: "20 Working Days",
   },
   {
     id: 13,
     category: "Courier-Boy-App",
-    image: Check,
+    image: parcel,
     title: "Picked up the parcel",
     des: "They need to click on a Button Called “Parcel Picked up”.",
   },
   {
     id: 14,
     category: "Courier-Boy-App",
-    image: Orderonline,
+    image: person,
     title: "If person was not available",
     des: "Courier boy click on Create a note button and generate a note and submit it.",
   },
   {
     id: 15,
     category: "Courier-Boy-App",
-    image: payonline,
+    image: courier,
     title: "courier boy see the job list.",
     des: "",
   },
   {
     id: 16,
     category: "Courier-Boy-App",
-    image: Reviews,
+    image: clicked,
     title:
       "once they clicked on it, it will open the pickup and company details",
     des: "",
@@ -136,8 +157,50 @@ const CourierData = [
   {
     id: 17,
     category: "Courier-Boy-App",
-    image: Get,
+    image: They,
     title: "They click on start journey button, live tracking will be started",
+    des: "",
+  },
+  {
+    id: 18,
+    category: "Admin-panel",
+    image: UserManagement,
+    title: "User Management",
+    des: "",
+  },
+  {
+    id: 19,
+    category: "Admin-panel",
+    image: CourierBoyManagement,
+    title: "Courier Boy Management",
+    des: "",
+  },
+  {
+    id: 20,
+    category: "Admin-panel",
+    image: CourierManagement,
+    title: "Courier Management",
+    des: "",
+  },
+  {
+    id: 21,
+    category: "Admin-panel",
+    image: PaymentManagement,
+    title: "Payment Management",
+    des: "",
+  },
+  {
+    id: 22,
+    category: "Admin-panel",
+    image: ReportsManagement,
+    title: "Reports Management",
+    des: "",
+  },
+  {
+    id: 23,
+    category: "Admin-panel",
+    image: Contentmanagement,
+    title: "Content management",
     des: "",
   },
 ];
