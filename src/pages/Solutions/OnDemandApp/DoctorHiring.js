@@ -14,7 +14,7 @@ import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doc
 import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Signin.svg";
 import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/forgot_password.svg";
 import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password-2.svg";
-import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create a Profile.svg";
+import img from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create_a_profile.svg";
 import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage profile.svg";
 import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage-Medical-History-Profile.svg";
 import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Search available doctors.svg";
@@ -314,7 +314,7 @@ const DoctorHiring = () => {
                   <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
                     <div className="food__delivery__box">
                       <img
-                        src={Reviews}
+                        src={img}
                         alt="Reviews-And-Ratings-icons "
                         className="img-fluid"
                         style={{ width: "20%" }}
