@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,25 +7,264 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-//  Customer App
+//  User App
+import SignUp from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/signup.svg";
+import Signin from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Signin.svg";
+import ForgotPassword from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/forgot_password.svg";
+import ChangePassword from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password-2.svg";
+import Createaprofile from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create_a_profile.svg";
+import Manageprofile from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage profile.svg";
+import Manage from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage-Medical-History-Profile.svg";
+import available from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Search available doctors.svg";
+import Ratings from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Ratings and reviews.svg";
+import Usercanchat from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User can chat.svg";
+import UsercanPay from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Can-Pay-Via-PayPal.svg";
+import Userget from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Get-The-Morning-Quotes.svg";
 
-import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/signup.svg";
-import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Signin.svg";
-import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/forgot_password.svg";
-import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/change_password-2.svg";
-import img from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Create_a_profile.svg";
-import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage profile.svg";
-import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Manage-Medical-History-Profile.svg";
-import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Search available doctors.svg";
-import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/Ratings and reviews.svg";
-import chat from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User can chat.svg";
-import Pay from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Can-Pay-Via-PayPal.svg";
-import User from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/User App/User-Get-The-Morning-Quotes.svg";
+// Doctor-App-Development
+import Complaint from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/Complaint Management.svg";
+import Forgot from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/forgot_password.svg";
+import Change from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/change_password.svg";
+import profile from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/Create_a_profile.svg";
+import Managepro from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/Manage-Profile.svg";
+import Setavailability from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/Set-Availability.svg";
+import Requestwithdrawal from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/Request-For-A-Withdrawal.svg";
+import Doctorscan from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/On Demand Doctor App Development/Doctors can see the reports.svg";
+
+// Admin-Penal
+import UserManagement from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/User management.svg";
+import DoctorsManagement from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Doctors-Management.svg";
+import Featured from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Featured profile management.svg";
+import Payment from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/payment-manage-4.svg";
+import Suspend from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Suspend.svg";
+import Dispute from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Dispute.svg";
+import Reports from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/report management.svg";
+import Doctorsget from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Doctors-Get-Notification.svg";
+
+const DoctorData = [
+  {
+    id: 1,
+    category: "User-App",
+    image: SignUp,
+    title: "Sign Up",
+    des: "This feature of the user interface will allow you signup as a new user with all the credentials and required details.",
+  },
+  {
+    id: 2,
+    category: "User-App",
+    image: Signin,
+    title: "Signin",
+    des: "After being registered users need to sign in to the app by providing their signup credentials.",
+  },
+  {
+    id: 3,
+    category: "User-App",
+    image: ForgotPassword,
+    title: "Forgot Password",
+    des: "n case the user forgets password, this user app feature will allow him to retrieve the password by following some easy steps.",
+  },
+  {
+    id: 4,
+    category: "User-App",
+    image: ChangePassword,
+    title: "Change Password",
+    des: "The user can change his password from time to time in order to strengthen the security of the login credentials.",
+  },
+  {
+    id: 5,
+    category: "User-App",
+    image: Createaprofile,
+    title: "Create a profile",
+    des: "Users is allowed to chat with the drivers or the admin whenever needed.",
+  },
+  {
+    id: 6,
+    category: "User-App",
+    image: Manageprofile,
+    title: "Manage profile",
+    des: "Users can manage their profiles and edit them at ease by changing the profile information.",
+  },
+  {
+    id: 7,
+    category: "User-App",
+    image: Manage,
+    title: "Manage medical history profile",
+    des: "The users can also manage, edit, change and add new information to their medical history profile.",
+  },
+  {
+    id: 8,
+    category: "User-App",
+    image: available,
+    title: "Search available doctors",
+    des: "The users can search for specialist doctors from a variety of specialties through the search function and an array of filters.",
+  },
+  {
+    id: 9,
+    category: "User-App",
+    image: Ratings,
+    title: "Ratings and reviews",
+    des: "Users can provide feedback about the doctors and the app by giving ratings and publishing reviews about them.",
+  },
+  {
+    id: 10,
+    category: "User-App",
+    image: Usercanchat,
+    title: "User can chat",
+    des: "User can engage in real-time chat with the therapists and service-provider doctors and can explain their health issues.",
+  },
+  {
+    id: 11,
+    category: "User-App",
+    image: UsercanPay,
+    title: "User can Pay via PayPal",
+    des: "User can make payment to the doctors and therapists for their required medical services by using PayPal and an array of other payment gateways.",
+  },
+  {
+    id: 12,
+    category: "User-App",
+    image: Userget,
+    title: "User get the Morning Quotes",
+    des: "User also get lucrative quote from the service provider doctors in the beginning of the day as promotional offers.",
+  },
+  {
+    id: 13,
+    category: "Doctor-App-Development",
+    image: SignUp,
+    title: "SignUp",
+    des: "Doctors and therapists also need to signup by creating a fresh new account with the app.",
+  },
+  {
+    id: 14,
+    category: "Doctor-App-Development",
+    image: Complaint,
+    title: "Complaint Management",
+    des: "The doctors for using the app need to sign in by using the login credentials.",
+  },
+  {
+    id: 15,
+    category: "Doctor-App-Development",
+    image: Forgot,
+    title: "Forgot Password",
+    des: "Doctors can retrieve their password or create new password in case they have forgotten their password or login credentials.",
+  },
+  {
+    id: 16,
+    category: "Doctor-App-Development",
+    image: Change,
+    title: "Change Password",
+    des: "Doctors can change or create new password from time to time for the sake of safeguarding their account.",
+  },
+  {
+    id: 17,
+    category: "Doctor-App-Development",
+    image: profile,
+    title: "Create a profile",
+    des: "Doctors can create or manage their own profiles by providing all the professional details.",
+  },
+  {
+    id: 18,
+    category: "Doctor-App-Development",
+    image: Managepro,
+    title: "Manage profile",
+    des: "Doctors can manage their profiles by maintaining all their professional credentials and information in a discoverable manner.",
+  },
+  {
+    id: 19,
+    category: "Doctor-App-Development",
+    image: Setavailability,
+    title: "Set availability",
+    des: "Doctors can set availability of their services to opt for or opt out of requested services from patients.",
+  },
+  {
+    id: 20,
+    category: "Doctor-App-Development",
+    image: Requestwithdrawal,
+    title: "Request for a withdrawal",
+    des: "Doctors can also request for withdrawing from a previously opted service.",
+  },
+  {
+    id: 21,
+    category: "Doctor-App-Development",
+    image: Doctorscan,
+    title: "Doctors can see the reports",
+    des: "Doctors can withdrawing from a service can also choose to see the medical reports of the concerned patients.",
+  },
+  {
+    id: 22,
+    category: "Admin-Penal",
+    image: UserManagement,
+    title: "User Management",
+    des: "The admin panel of the app allows the app admin to manage different users.",
+  },
+  {
+    id: 23,
+    category: "Admin-Penal",
+    image: DoctorsManagement,
+    title: "Doctors Management",
+    des: "The doctors management section of the admin panel allows the app admin to manage the registered therapists and doctors.",
+  },
+  {
+    id: 24,
+    category: "Admin-Penal",
+    image: Featured,
+    title: "Featured profile management",
+    des: "The admin panel can also allow creating a list of featured profiles and managing them separately.",
+  },
+  {
+    id: 25,
+    category: "Admin-Penal",
+    image: Payment,
+    title: "Payment Management",
+    des: "The admin panel allows managing the payment methods, gateways and the actual payment made by the users.",
+  },
+  {
+    id: 26,
+    category: "Admin-Penal",
+    image: Suspend,
+    title: "Suspend account management",
+    des: "The admin panel can also suspend certain accounts and can evaluate the accounts for disciplinary actions.",
+  },
+  {
+    id: 27,
+    category: "Admin-Penal",
+    image: Dispute,
+    title: "Dispute management",
+    des: "The admin panel also helps sorting out any dispute between the service provider doctors and the patients.",
+  },
+  {
+    id: 28,
+    category: "Admin-Penal",
+    image: Reports,
+    title: "Reports Management",
+    des: "The admin panel also offers a report management feature to keep track of the doctor’s services and the patient’s feedback.",
+  },
+  {
+    id: 29,
+    category: "Admin-Penal",
+    image: Doctorsget,
+    title: "Doctors get notification",
+    des: "The admin panel also helps sending doctors and therapists notification messages with latest service update.",
+  },
+];
 
 const DoctorHiring = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [item, setItems] = useState(DoctorData);
+
+  const filterItem = (cateItem) => {
+    const updateItems = DoctorData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
   return (
     <>
       {/* common Banner start */}
@@ -200,13 +439,14 @@ const DoctorHiring = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active"
-                  id="Customer-App-Tab"
+                  id="User-App-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Customer-App"
+                  data-bs-target="#User App"
                   type="button"
                   role="tab"
-                  aria-controls="Customer-App"
+                  aria-controls="User App"
                   aria-selected="true"
+                  onClick={() => filterItem("User-App")}
                 >
                   User App
                 </button>
@@ -214,13 +454,14 @@ const DoctorHiring = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Doctor-App-Development-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Doctor-App-Development"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Doctor-App-Development"
                   aria-selected="false"
+                  onClick={() => filterItem("Doctor-App-Development")}
                 >
                   On Demand Doctor App Development
                 </button>
@@ -228,13 +469,14 @@ const DoctorHiring = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Driver-Tracking-Tab"
+                  id="Admin-Penal-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Driver-Tracking"
+                  data-bs-target="#Admin-Penal"
                   type="button"
                   role="tab"
-                  aria-controls="Driver-Tracking"
+                  aria-controls="Admin-Penal"
                   aria-selected="false"
+                  onClick={() => filterItem("Admin-Penal")}
                 >
                   Admin Penal
                 </button>
@@ -248,536 +490,26 @@ const DoctorHiring = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={search}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Sign Up</h4>
-                      <p>
-                        This feature of the user interface will allow you signup
-                        as a new user with all the credentials and required
-                        details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Check}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Signin</h4>
-                      <p>
-                        After being registered users need to sign in to the app
-                        by providing their signup credentials.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Orderonline}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Forgot Password</h4>
-                      <p>
-                        In case the user forgets password, this user app feature
-                        will allow him to retrieve the password by following
-                        some easy steps.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={payonline}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Change Password</h4>
-                      <p>
-                        The user can change his password from time to time in
-                        order to strengthen the security of the login
-                        credentials.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={img}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Create a profile</h4>
-                      <p>
-                        Users can create their profile with the app by providing
-                        all the required personal details including contact
-                        information and address.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Get}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Manage profile</h4>
-                      <p>
-                        Users can manage their profiles and edit them at ease by
-                        changing the profile information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Manage medical history profile</h4>
-                      <p>
-                        The users can also manage, edit, change and add new
-                        information to their medical history profile.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Checkorder}
-                        alt="Check-Order-History-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Search available doctors</h4>
-                      <p>
-                        The users can search for specialist doctors from a
-                        variety of specialties through the search function and
-                        an array of filters.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Live}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>Ratings and reviews</h4>
-                      <p>
-                        Users can provide feedback about the doctors and the app
-                        by giving ratings and publishing reviews about them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={chat}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>User can chat</h4>
-                      <p>
-                        User can engage in real-time chat with the therapists
-                        and service-provider doctors and can explain their
-                        health issues.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Pay}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>User can Pay via PayPal</h4>
-                      <p>
-                        User can make payment to the doctors and therapists for
-                        their required medical services by using PayPal and an
-                        array of other payment gateways.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={User}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>User get the Morning Quotes</h4>
-                      <p>
-                        User also get lucrative quote from the service provider
-                        doctors in the beginning of the day as promotional
-                        offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {item.map((elem) => {
+                    const { id, image, des, title } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="search-food-icon"
+                            className="img-fluid"
+                            style={{ height: "70px" }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -846,7 +578,7 @@ const DoctorHiring = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/slider/mindweel.webp")}
                     style={{
                       width: "100%",
                     }}
@@ -858,24 +590,9 @@ const DoctorHiring = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/slider/godr.webp")}
                     style={{
                       width: "100%",
-                    }}
-                  />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
-              <div className="row">
-                <div className="col-12">
-                  <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp")}
-                    style={{
-                      width: "100%",
-                      // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                      // borderRadius: "10px",
-                      // marginLeft: "10px",
                     }}
                   />
                 </div>

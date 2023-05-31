@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,21 +7,280 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-//  Customer App
-import search from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/search foods online.svg";
-import Check from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check details.svg";
-import Orderonline from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Order online.svg";
-import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Pay online.svg";
-import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Reviews and ratings.svg";
-import Get from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Get cashback.svg";
-import Avail from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Avail offers view offers.svg";
-import Checkorder from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check order history.svg";
-import Live from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Live tracking.svg";
+//  Passenger App
+import SignUp from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/signup.svg";
+import Pickup from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Pick up Location.svg";
+import Drop from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Drop off location.svg";
+import BookingTypes from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Booking Types.svg";
+import Chat from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Chat.svg";
+import OnlinePayment from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Online payment.svg";
+import Ratings from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Rating _ Reviews.svg";
+import Order from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Order History.svg";
+import AvailOffers from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Avail offer.svg";
+import Payvia from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Passenger App/Pay with Wallet.svg";
 
+// On-Demand-Driver-App
+import Flexible from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Flexible-ride-choice.svg";
+import Driverchat from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Driver chat option.svg";
+import Finding from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Finding the available drivers.svg";
+import approaching from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Driver approaching scenarios.svg";
+import Boarding from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Boarding process.svg";
+import cancellation from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Ride cancellation scenarios.svg";
+import During from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/During the ride features.svg";
+import Accepting from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Accepting and not accepting rides.svg";
+import passenger from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/On Demand Driver App/Rating _ Reviews.svg";
+
+// Backend
+import Driverstatus from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Driver status and reports.svg";
+import Userstatus from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/User status and reports.svg";
+import Trip from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Trip status and reports.svg";
+import Revenue from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Revenue earning status and reports.svg";
+import Currentlyactive from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Currently active drivers.svg";
+import Currently from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Currently ongoing trips.svg";
+import Complaints from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Complaints against driver.svg";
+import Disciplinary from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Disciplinary actions on drivers and passengers.svg";
+import Liveevents from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Live feed.svg";
+import Notificationclients from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Notification to all clients.svg";
+import Weekly from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Weekly monthly payment invoicing.svg";
+import Email from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Email system.svg";
+
+const TaxiBookingData = [
+  {
+    id: 1,
+    category: "Passenger-App",
+    image: SignUp,
+    title: "Sign Up",
+    des: "Users need to register or sign up with the app.",
+  },
+  {
+    id: 2,
+    category: "Passenger-App",
+    image: Pickup,
+    title: "Pick up Location",
+    des: "Users need to choose their exact locations on a GPS enabled map.",
+  },
+  {
+    id: 3,
+    category: "Passenger-App",
+    image: Drop,
+    title: "Drop off Location",
+    des: "Users need to choose their preferred drop-off location or destination on the GPS map.",
+  },
+  {
+    id: 4,
+    category: "Passenger-App",
+    image: BookingTypes,
+    title: "Booking Types",
+    des: "Users need to choose one booking type from all the available types of booking.",
+  },
+  {
+    id: 5,
+    category: "Passenger-App",
+    image: Chat,
+    title: "Chat",
+    des: "Users is allowed to chat with the drivers or the admin whenever needed.",
+  },
+  {
+    id: 6,
+    category: "Passenger-App",
+    image: OnlinePayment,
+    title: "Online Payment",
+    des: "Users can pay their fare online by using any of the available payment methods.",
+  },
+  {
+    id: 7,
+    category: "Passenger-App",
+    image: Ratings,
+    title: "Ratings Reviews",
+    des: "Users can give rating to the driver and the app and post reviews on the basis of their feedback.",
+  },
+  {
+    id: 8,
+    category: "Passenger-App",
+    image: Order,
+    title: "Order History",
+    des: "Users can access their order history to have a detailed look at the rides availed by them through the app.",
+  },
+  {
+    id: 9,
+    category: "Passenger-App",
+    image: AvailOffers,
+    title: "Avail Offers",
+    des: "Users can avail various promotional offers and discount coupons that from time to time are sent through notifications.",
+  },
+  {
+    id: 10,
+    category: "Passenger-App",
+    image: Payvia,
+    title: "Pay via wallet money",
+    des: "Users can also pay for their ride by using a digital wallet app.",
+  },
+  {
+    id: 11,
+    category: "On-Demand-Driver-App",
+    image: Flexible,
+    title: "Flexible ride choice",
+    des: "Driver can select his visibility area and can make him available unavailable.",
+  },
+  {
+    id: 12,
+    category: "On-Demand-Driver-App",
+    image: Driverchat,
+    title: "Driver chat option",
+    des: "Driver can spot the nearby drivers on the map and can chat with them.",
+  },
+  {
+    id: 13,
+    category: "On-Demand-Driver-App",
+    image: Finding,
+    title: "Finding the available drivers.",
+    des: "The driver app also helps finding all the available drivers nearby.",
+  },
+  {
+    id: 14,
+    category: "On-Demand-Driver-App",
+    image: approaching,
+    title: "Driver approaching scenarios.",
+    des: "The driver app also shows on the GPS map the various on-road scenarios when the vehicle approaches.",
+  },
+  {
+    id: 15,
+    category: "On-Demand-Driver-App",
+    image: Boarding,
+    title: "Boarding process.",
+    des: "The driver app also guides the driver through the entire boarding process.",
+  },
+  {
+    id: 16,
+    category: "On-Demand-Driver-App",
+    image: cancellation,
+    title: "Ride cancellation scenarios",
+    des: "The driver app also allows cancelling rides with some statutory fines and actions against them.",
+  },
+  {
+    id: 17,
+    category: "On-Demand-Driver-App",
+    image: During,
+    title: "During the ride features",
+    des: "The driver app also offers a gamut of on-the-ride features including GPS based route guidance.",
+  },
+  {
+    id: 18,
+    category: "On-Demand-Driver-App",
+    image: Accepting,
+    title: "Accepting and not accepting rides",
+    des: "After the driver is called by the passenger, based upon the distance, rate, pick-up and drop-off location, he can accept or reject the ride.",
+  },
+  {
+    id: 19,
+    category: "On-Demand-Driver-App",
+    image: passenger,
+    title: "Driver and passenger review and rating system.",
+    des: "The driver app allows the driver to rate the passenger and review the experience while showing the same from passengers. ",
+  },
+  {
+    id: 20,
+    category: "Backend",
+    image: Driverstatus,
+    title: "Driver status and reports",
+    des: "",
+  },
+  {
+    id: 21,
+    category: "Backend",
+    image: Userstatus,
+    title: "User status and reports",
+    des: "",
+  },
+  {
+    id: 22,
+    category: "Backend",
+    image: Trip,
+    title: "Trip status and reports",
+    des: "",
+  },
+  {
+    id: 23,
+    category: "Backend",
+    image: Revenue,
+    title: "Revenue earning status and reports",
+    des: "",
+  },
+  {
+    id: 24,
+    category: "Backend",
+    image: Currentlyactive,
+    title: "Currently active drivers",
+    des: "",
+  },
+  {
+    id: 25,
+    category: "Backend",
+    image: Currently,
+    title: "Currently ongoing trips",
+    des: "",
+  },
+  {
+    id: 26,
+    category: "Backend",
+    image: Complaints,
+    title: "Complaints against driver",
+    des: "",
+  },
+  {
+    id: 27,
+    category: "Backend",
+    image: Disciplinary,
+    title: "Disciplinary actions on drivers and passengers",
+    des: "",
+  },
+  {
+    id: 28,
+    category: "Backend",
+    image: Liveevents,
+    title: "Live feed of events",
+    des: "",
+  },
+  {
+    id: 29,
+    category: "Backend",
+    image: Notificationclients,
+    title: "Notification to all clients",
+    des: "",
+  },
+  {
+    id: 30,
+    category: "Backend",
+    image: Weekly,
+    title: "Weekly/monthly payment invoicing",
+    des: "",
+  },
+  {
+    id: 31,
+    category: "Backend",
+    image: Email,
+    title: "Email system",
+    des: "",
+  },
+];
 const TaxiBooking = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [item, setItems] = useState(TaxiBookingData);
+
+  const filterItem = (cateItem) => {
+    const updateItems = TaxiBookingData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
   return (
     <>
       {/* common Banner start */}
@@ -197,13 +456,14 @@ const TaxiBooking = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active"
-                  id="Customer-App-Tab"
+                  id="Passenger-App-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Customer-App"
+                  data-bs-target="#Passenger-App"
                   type="button"
                   role="tab"
-                  aria-controls="Customer-App"
+                  aria-controls="Passenger-App"
                   aria-selected="true"
+                  onClick={() => filterItem("Passenger-App")}
                 >
                   Passenger App
                 </button>
@@ -211,13 +471,14 @@ const TaxiBooking = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="On-Demand-Driver-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#On-Demand-Driver"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="On-Demand-Driver"
                   aria-selected="false"
+                  onClick={() => filterItem("On-Demand-Driver-App")}
                 >
                   On Demand Driver App
                 </button>
@@ -225,13 +486,14 @@ const TaxiBooking = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Driver-Tracking-Tab"
+                  id="Backend-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Driver-Tracking"
+                  data-bs-target="#Backend"
                   type="button"
                   role="tab"
-                  aria-controls="Driver-Tracking"
+                  aria-controls="Backend"
                   aria-selected="false"
+                  onClick={() => filterItem("Backend")}
                 >
                   Backend
                 </button>
@@ -245,496 +507,26 @@ const TaxiBooking = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={search}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Sign Up</h4>
-                      <p>Users need to register or sign up with the app.</p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Check}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Pick up Location</h4>
-                      <p>
-                        Users need to choose their exact locations on a GPS
-                        enabled map.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Orderonline}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Drop off Location</h4>
-                      <p>
-                        Users need to choose their preferred drop-off location
-                        or destination on the GPS map.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={payonline}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Booking Types</h4>
-                      <p>
-                        Users need to choose one booking type from all the
-                        available types of booking.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Reviews}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Chat</h4>
-                      <p>
-                        Users is allowed to chat with the drivers or the admin
-                        whenever needed.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Get}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Online Payment</h4>
-                      <p>
-                        Users can pay their fare online by using any of the
-                        available payment methods.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Ratings Reviews</h4>
-                      <p>
-                        Users can give rating to the driver and the app and post
-                        reviews on the basis of their feedback.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Checkorder}
-                        alt="Check-Order-History-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Order History</h4>
-                      <p>
-                        Users can access their order history to have a detailed
-                        look at the rides availed by them through the app.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Live}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>Avail Offers</h4>
-                      <p>
-                        Users can avail various promotional offers and discount
-                        coupons that from time to time are sent through
-                        notifications.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-12 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Live}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "50px" }}
-                      />
-                      <h4>Pay via wallet money</h4>
-                      <p>
-                        Users can also pay for their ride by using a digital
-                        wallet app.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {item.map((elem) => {
+                    const { id, image, des, title } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="search-food-icon"
+                            className="img-fluid"
+                            style={{ height: "60px  " }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -803,7 +595,7 @@ const TaxiBooking = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/slider/Demand-Taxi-Booking-App.webp")}
                     style={{
                       width: "100%",
                     }}
@@ -815,24 +607,9 @@ const TaxiBooking = () => {
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp")}
+                    src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/slider/kukaa.webp")}
                     style={{
                       width: "100%",
-                    }}
-                  />
-                </div>
-              </div>
-            </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
-              <div className="row">
-                <div className="col-12">
-                  <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp")}
-                    style={{
-                      width: "100%",
-                      // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                      // borderRadius: "10px",
-                      // marginLeft: "10px",
                     }}
                   />
                 </div>

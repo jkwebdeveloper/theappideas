@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,21 +7,272 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //  Customer App
 import search from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/search foods online.svg";
-import Check from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check details.svg";
-import Orderonline from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Order online.svg";
-import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Pay online.svg";
+import Check from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Coustmer App/Check order history.svg";
+import Orderonline from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Coustmer App/Order online.svg";
+import payonline from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Coustmer App/Pay online.svg";
 import Reviews from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Reviews and ratings.svg";
 import Get from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Get cashback.svg";
-import Avail from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Avail offers view offers.svg";
-import Checkorder from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check order history.svg";
+import Login from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Avail offers view offers.svg";
+import View from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Check order history.svg";
 import Live from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Live tracking.svg";
 
+// Vender App and Panel
+import ProfileManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Profile Management.svg";
+import GroceryCategoryManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Food Category Management.svg";
+import Grocerylistingmanagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Food Listing Management.svg";
+import OrderManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Order Management.svg";
+import DriverManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Driver Management.svg";
+import Usermanagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/User management.svg";
+import DriverTracking from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Driver Tracking.svg";
+import Reviewmanagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Review management.svg";
+import Loyaltymanagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Vendor App and Panel/Loyalty management.svg";
+
+// Driver Tracking App
+import Setavailability from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Driver Tracking App/Set availability.svg";
+import GetNotify from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Driver Tracking App/Get Notify.svg";
+import Customerandroutedetails from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Driver Tracking App/Order Route _ Customer Details.svg";
+import Tracktheroute from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Driver Tracking App/Driver Track the route.svg";
+import Getacustomerfeedback from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Driver Tracking App/User Get a customer feedback.svg";
+
+// Admin Panel
+import SubscriptionManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Subscription Management.svg";
+import PaymentManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Payment Management.svg";
+import GroceryStoremanagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Grocery Store Management.svg";
+import Reports from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Reports.svg";
+
+const GroceryData = [
+  {
+    id: 1,
+    category: "Customer-App",
+    image: search,
+    title: "Search Grocery Online",
+    des: "The custom app grants users to browse and check the grocery item list of the various grocery stores. This functionality works based on the location of the customers.",
+  },
+  {
+    id: 2,
+    category: "Customer-App",
+    image: Check,
+    title: "Check details",
+    des: "Customers can easily get the details of the grocery item. They can easily check the grocery store details like cost of the item, shipping details and more.",
+  },
+  {
+    id: 3,
+    category: "Customer-App",
+    image: Orderonline,
+    title: "Order Online",
+    des: "On a Grocery store app, customers can easily add the product to the cart. They can add up the quantity as per preference and place an order.",
+  },
+  {
+    id: 4,
+    category: "Customer-App",
+    image: payonline,
+    title: "Create/ Update orders",
+    des: "This Grocery store app can allow users to make an online payment using the net banking transfer, COD, Paypal, digital wallets and many other methods.",
+  },
+  {
+    id: 5,
+    category: "Customer-App",
+    image: Reviews,
+    title: "Reviews and ratings",
+    des: "Grocery store apps can grant customers to give their honest feedback through ratings and reviews about the services and other factors.",
+  },
+  {
+    id: 6,
+    category: "Customer-App",
+    image: Get,
+    title: "Get cashback",
+    des: "The customer panel is also consist of some of the additional features like seasonal offers, discounts and cashback options.",
+  },
+  {
+    id: 7,
+    category: "Customer-App",
+    image: Login,
+    title: "Login",
+    des: "Customers can easily check or browse grocery items based on the available offers and the discount code to take advantage of the discounts.",
+  },
+  {
+    id: 8,
+    category: "Customer-App",
+    image: View,
+    title: "View Order History",
+    des: "The customer app can allow the users of the app to view their order history along with the details for each grocery and item.",
+  },
+  {
+    id: 9,
+    category: "Customer-App",
+    image: Live,
+    title: "Live tracking",
+    des: "GPS is also integrated into the mobile app. Customers can track the grocery item delivery and can also check the Estimated Time of Arrival(ETA).",
+  },
+  {
+    id: 10,
+    category: "Vendor-App",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "A Vendor app can allow customers to create their profile by adding up the details like the store addresses, grocery items, price and all the other details.",
+  },
+  {
+    id: 11,
+    category: "Vendor-App",
+    image: GroceryCategoryManagement,
+    title: "Grocery Category Management",
+    des: "The grocery store app can allow the participating grocery store to create their product list. This list can be further classified into the categories like fruits, vegetables and more.",
+  },
+  {
+    id: 12,
+    category: "Vendor-App",
+    image: Grocerylistingmanagement,
+    title: "Grocery listing management",
+    des: "The Vendor panel grants to develop product categories and denominations to help easy search and viewing.",
+  },
+  {
+    id: 13,
+    category: "Vendor-App",
+    image: OrderManagement,
+    title: "Order Management",
+    des: "The grocery store can also enjoy a best order management system that allows communication through email, messaging and push notification.    ",
+  },
+  {
+    id: 14,
+    category: "Vendor-App",
+    image: DriverManagement,
+    title: "Driver Management",
+    des: "Vendors can assign the jobs to the drives as well as guide the drivers to deliver the product on time. They can easily do the live tracking of the driver.",
+  },
+  {
+    id: 15,
+    category: "Vendor-App",
+    image: Usermanagement,
+    title: "User management",
+    des: "Grocery Vendors can easily deal with the orders history, the grocery list of the users as well as can send the offers to the customers.",
+  },
+  {
+    id: 16,
+    category: "Vendor-App",
+    image: DriverTracking,
+    title: "LoDriver Trackinggin",
+    des: "Vendors can assign the jobs to the drives as well as guide the drivers to deliver the product on time. They can easily do the live tracking of the driver.",
+  },
+  {
+    id: 17,
+    category: "Vendor-App",
+    image: Reviewmanagement,
+    title: "Review management",
+    des: "Whenever customers can prove the reviews, the grocery store owners can see and respond to them. Feedback can help them to improve the quality of services.",
+  },
+  {
+    id: 18,
+    category: "Vendor-App",
+    image: Loyaltymanagement,
+    title: "Loyalty management",
+    des: "Grocery store owners can also add up some of the promo codes and discounts for the customers which can boost loyalty through the special offers.",
+  },
+  {
+    id: 19,
+    category: "Driver-App",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "The driver tracking app panel is consist of all the driver information, admin approval features of the driver and many features related to the driver’s profile.",
+  },
+  {
+    id: 20,
+    category: "Driver-App",
+    image: Setavailability,
+    title: "Set availability",
+    des: "Drivers can provide their availability time so that the grocery store owners can assign the delivery as per the availability f the driver.",
+  },
+  {
+    id: 21,
+    category: "Driver-App",
+    image: GetNotify,
+    title: "Get Notify",
+    des: "Drivers can easily get notified by app push notification, SMS or E-mail whenever a job is assigned to them. Drivers can easily accept and reject the order.",
+  },
+  {
+    id: 22,
+    category: "Driver-App",
+    image: Customerandroutedetails,
+    title: "Customer and route details",
+    des: "Drivers can get the details of the grocery store address or pick up point and drop location along with the customer’s details. Access to the GPS for easy route access.",
+  },
+  {
+    id: 23,
+    category: "Driver-App",
+    image: Tracktheroute,
+    title: "Track the route",
+    des: "Due to the GPS integration, the drivers can easily track the route to deliver the services on time and this can be also checked by the admin.",
+  },
+  {
+    id: 24,
+    category: "Driver-App",
+    image: Getacustomerfeedback,
+    title: "Get a customer feedback",
+    des: "In a driver app panel, the driver can also check the customer’s feedback and reviews. This can help them to improve the quality of their services.",
+  },
+  {
+    id: 25,
+    category: "Admin-panel",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "The driver tracking app panel is consist of all the driver information, admin approval features of the driver and many features related to the driver’s profile.",
+  },
+  {
+    id: 26,
+    category: "Admin-panel",
+    image: DriverManagement,
+    title: "Driver Management",
+    des: "A Grocery admin panel can be useful for checking the driver’s profiles or information and can also remove drivers based on their complaints.",
+  },
+  {
+    id: 27,
+    category: "Admin-panel",
+    image: SubscriptionManagement,
+    title: "Subscription Management",
+    des: "Drivers can easily get notified by app push notification, SMS or E-mail whenever a job is assigned to them. Drivers can easily accept and reject the order.",
+  },
+  {
+    id: 28,
+    category: "Admin-panel",
+    image: PaymentManagement,
+    title: "Payment Management",
+    des: "Admin panel can have the overall control of overpayment management and taking care of groceries tore withdrawal requests, customer payment disputes and more.",
+  },
+  {
+    id: 29,
+    category: "Admin-panel",
+    image: GroceryStoremanagement,
+    title: "Grocery Store management",
+    des: "Admin panel can help to easily track all the grocery store owners on the list and list grocery items based on the different categories.",
+  },
+  {
+    id: 30,
+    category: "Admin-panel",
+    image: Reports,
+    title: "Get a customer feedback",
+    des: "Admin Panel will offer access to different reports corresponding to orders, purchases, users as well as sales.",
+  },
+];
+
 const GroceryApp = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [item, setItems] = useState(GroceryData);
+
+  const filterItem = (cateItem) => {
+    const updateItems = GroceryData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
   return (
     <>
       {/* common Banner start */}
@@ -212,6 +463,7 @@ const GroceryApp = () => {
                   role="tab"
                   aria-controls="Customer-App"
                   aria-selected="true"
+                  onClick={() => filterItem("Customer-App")}
                 >
                   Customer App
                 </button>
@@ -226,6 +478,7 @@ const GroceryApp = () => {
                   role="tab"
                   aria-controls="Restaurent-App"
                   aria-selected="false"
+                  onClick={() => filterItem("Vendor-App")}
                 >
                   Vendor App &amp; Panel
                 </button>
@@ -240,6 +493,7 @@ const GroceryApp = () => {
                   role="tab"
                   aria-controls="Driver-Tracking"
                   aria-selected="false"
+                  onClick={() => filterItem("Driver-App")}
                 >
                   Driver Tracking App
                 </button>
@@ -254,6 +508,7 @@ const GroceryApp = () => {
                   role="tab"
                   aria-controls="Super-Admin"
                   aria-selected="false"
+                  onClick={() => filterItem("Admin-panel")}
                 >
                   Admin Panel
                 </button>
@@ -267,492 +522,26 @@ const GroceryApp = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={search}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Search Grocery Online</h4>
-                      <p>
-                        The custom app grants users to browse and check the
-                        grocery item list of the various grocery stores. This
-                        functionality works based on the location of the
-                        customers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Check}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Check details</h4>
-                      <p>
-                        With a food ordering app on their screen customers can
-                        easily add their preferred food in cart, provide
-                        shipping details and place the order instantly.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Orderonline}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Order online</h4>
-                      <p>
-                        With a food ordering app on their screen customers can
-                        easily add their preferred food in the cart, provide
-                        shipping details and place the order instantly.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={payonline}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Pay online</h4>
-                      <p>
-                        The customer-side of the food ordering app allows
-                        customers to make payments through net banking transfer,
-                        COD, digital wallets, PayPal, and other methods.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Reviews}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Reviews and ratings</h4>
-                      <p>
-                        Customers can also give their honest feedback through
-                        reviews and ratings about the food quality, taste, and
-                        several other factors.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Get}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Get cashback</h4>
-                      <p>
-                        Get cashback Users through these apps can also opt for a
-                        variety of offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Avail offers/view offers</h4>
-                      <p>
-                        Users can also browse foods based on available offers
-                        and promo codes and order foods with the best price and
-                        offer.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Checkorder}
-                        alt="Check-Order-History-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Check order history</h4>
-                      <p>
-                        The customer app also allows every customer to see their
-                        order history in detail along with the details for each
-                        restaurant and food item.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Live}
-                        alt="Live-Tracking-icons"
-                        className="img-fluid"
-                        style={{ width: "13%" }}
-                      />
-                      <h4>Live tracking</h4>
-                      <p>
-                        Through a GPS-enabled maps, customers can track their
-                        food delivery and can see the Estimated Time of Arrival
-                        (ETA).
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {item.map((elem) => {
+                    const { id, image, des, title } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="search-food-icon"
+                            className="img-fluid"
+                            style={{ height: "70px" }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
