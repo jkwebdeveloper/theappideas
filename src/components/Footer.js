@@ -345,7 +345,11 @@ const Footer = () => {
                 </a>
               </div>
               <div className="footer__sitemap my-3">
-                <a className="sitemap_btn">Sitemap</a>
+                <Link to="/sitemap">
+                  <a className="sitemap_btn" style={{ color: "#000" }}>
+                    Sitemap
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

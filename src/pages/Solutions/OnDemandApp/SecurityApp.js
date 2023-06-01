@@ -10,16 +10,24 @@ import FAQ from "../../../components/FAQ";
 import AOS from "aos";
 import "aos/dist/aos.css";
 
-//  Customer App
-import search from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/profile-manage-4.svg";
-import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Agency-Role.svg";
-import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Chat-With-The-Client.svg";
-import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get offers.svg";
-import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Time-Management-Tracking.svg";
-import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Paid-Online.svg";
-import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Rating _ Reviews.svg";
-import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/news.svg";
-import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/community.svg";
+//  Contractor App
+import ProfileManagement from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/profile-manage-4.svg";
+import Agency from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Agency-Role.svg";
+import Chatwith from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Chat-With-The-Client.svg";
+import GetOffers from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get offers.svg";
+import TimeManagement from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Time-Management-Tracking.svg";
+import GetPaid from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Paid-Online.svg";
+import Rating from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Rating _ Reviews.svg";
+import News from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/news.svg";
+import Community from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/community.svg";
+
+// Client-App
+import JobPosting from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Job-Posting.svg";
+import Contractor from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Search for Contractor Agency.svg";
+import LiveChat from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Live Chat.svg";
+import Hire from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/hire.svg";
+import PayOnline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Pay-Online.svg";
+import TimeTracking from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Time-Management-Tracking.svg";
 
 const SecurityData = [
   {
@@ -87,59 +95,59 @@ const SecurityData = [
   },
   {
     id: 10,
-    category: "User-App",
-    image: Usercanchat,
-    title: "User can chat",
-    des: "User can engage in real-time chat with the therapists and service-provider doctors and can explain their health issues.",
+    category: "Client-App",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "The client can register, login, create & manage his/her profile.",
   },
   {
     id: 11,
-    category: "User-App",
-    image: UsercanPay,
-    title: "User can Pay via PayPal",
-    des: "User can make payment to the doctors and therapists for their required medical services by using PayPal and an array of other payment gateways.",
+    category: "Client-App",
+    image: JobPosting,
+    title: "Job Posting",
+    des: "The client can post job/ jobs as per the need, the customer can specify the job type.",
   },
   {
     id: 12,
-    category: "User-App",
-    image: Userget,
-    title: "User get the Morning Quotes",
-    des: "User also get lucrative quote from the service provider doctors in the beginning of the day as promotional offers.",
+    category: "Client-App",
+    image: Contractor,
+    title: "Search for Contractor/Agency",
+    des: "The client can search for a suitable contractor or agency as per the need.",
   },
   {
     id: 13,
-    category: "Doctor-App-Development",
-    image: SignUp,
-    title: "SignUp",
-    des: "Doctors and therapists also need to signup by creating a fresh new account with the app.",
+    category: "Client-App",
+    image: LiveChat,
+    title: "Live Chat",
+    des: "The client can view the profile of a contractor and able to chat with the contractor/ agency.",
   },
   {
     id: 14,
-    category: "Doctor-App-Development",
-    image: Complaint,
-    title: "Complaint Management",
-    des: "The doctors for using the app need to sign in by using the login credentials.",
+    category: "Client-App",
+    image: Hire,
+    title: "Hire",
+    des: "The client can hire a contractor for a specific period.",
   },
   {
     id: 15,
-    category: "Doctor-App-Development",
-    image: Forgot,
-    title: "Forgot Password",
-    des: "Doctors can retrieve their password or create new password in case they have forgotten their password or login credentials.",
+    category: "Client-App",
+    image: PayOnline,
+    title: "Pay Online",
+    des: "The client can pay online via stripe.",
   },
   {
     id: 16,
-    category: "Doctor-App-Development",
-    image: Change,
-    title: "Change Password",
-    des: "Doctors can change or create new password from time to time for the sake of safeguarding their account.",
+    category: "Client-App",
+    image: TimeTracking,
+    title: "Time Management & Tracking",
+    des: "Contractor in time, out time, the timesheet will be approved by the customer.",
   },
   {
     id: 17,
-    category: "Doctor-App-Development",
-    image: profile,
-    title: "Create a profile",
-    des: "Doctors can create or manage their own profiles by providing all the professional details.",
+    category: "Client-App",
+    image: Rating,
+    title: "Rating & Reviews",
+    des: "After completion of the job, the client can drop his feedback.",
   },
 ];
 const SecurityApp = () => {
@@ -352,7 +360,7 @@ const SecurityApp = () => {
                   role="tab"
                   aria-controls="Client-App"
                   aria-selected="false"
-                  onChange={() => filterItem("Client-App")}
+                  onClick={() => filterItem("Client-App")}
                 >
                   Client App
                 </button>

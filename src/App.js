@@ -75,6 +75,7 @@ import LawyerWeb from "./components/LawyerWeb";
 import MobileAppToronto from "./pages/Sitemap/MobileAppToronto";
 import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
 import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
+import SiteMap from "./pages/SiteMap";
 
 const App = () => {
   return (
@@ -190,6 +191,7 @@ const App = () => {
         <Route path="/lawyer-website-solution" element={<LawyerWeb />} />
 
         {/* Sitemap Link */}
+        <Route path="/sitemap" element={<SiteMap />} />
         <Route
           path="/mobile-app-development-toronto"
           element={<MobileAppToronto />}
