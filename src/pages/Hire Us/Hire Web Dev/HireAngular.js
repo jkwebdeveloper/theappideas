@@ -7,11 +7,11 @@ import background from "../../../assets/images/Home-our-services/bg-download.svg
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/Enterprise Apps.svg";
-import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/CUSTOM ANGULAR APPS.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/E-COMMERCE APPS.svg";
+import Enterprise from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/Enterprise Apps.svg";
+import CUSTOM from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/CUSTOM ANGULAR APPS.svg";
+import eCOMMERCE from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1//E-COMMERCE APPS.svg";
 import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/INTERACTIVE APP DEVELOPMENT.svg";
-import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/FASTER TIME TO MARKET.svg";
+import FASTER from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/FASTER TIME TO MARKET.svg";
 import Unit from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/1/TOOLS AND CUSTOM WIDGETS.svg";
 
 import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/EXPERIENCE AND EXPERTISE.svg";
@@ -306,7 +306,7 @@ const HireAngular = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Laravel}
+                    src={Enterprise}
                     alt="Laravel Web Application Development"
                     style={{ width: "50px" }}
                   />
@@ -345,7 +345,7 @@ const HireAngular = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Offer}
+                    src={CUSTOM}
                     alt="Offer Customization"
                     style={{ width: "50px" }}
                   />
@@ -383,7 +383,7 @@ const HireAngular = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Features}
+                    src={eCOMMERCE}
                     alt="Laravel Features Integration"
                     style={{ width: "50px" }}
                   />
@@ -459,7 +459,7 @@ const HireAngular = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={Consulting}
+                    src={FASTER}
                     alt="Laravel Consulting Services"
                     style={{ width: "50px" }}
                   />

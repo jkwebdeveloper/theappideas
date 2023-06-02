@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,21 +7,239 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //  Customer App
-// import search from "../../../assets/images/SOLUTIONS/Registration and location setup.svg";
-// import Check from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Agency-Role.webp";
-// import Orderonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Chat-With-The-Client.webp";
-// import payonline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Offers.webp";
-// import Reviews from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Time-Management-Tracking.webp";
-// import Get from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Get-Paid-Online.webp";
-// import Avail from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/Rating _ Reviews.webp";
-// import Checkorder from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/news.webp";
-// import Live from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Contractor App/community.webp";
+import Registration from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Registration and location setup.svg";
+import Browse from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Browse-Salon1.svg";
+import Check from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Check details.svg";
+import Schedule from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Schedule an appointment.svg";
+import Calendar from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/In-App-Calendar.svg";
+import Interaction from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/In-App chat Interaction.svg";
+import Checkorderhistory from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Check-Order-History.svg";
+import Payment from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Payment-integration.svg";
+import Loyalty from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Loyalty-programs.svg";
+import reviews from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Driver-and-passenger-review-1.svg";
+import notification from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Customer App/Push notification.svg";
+
+// Beauty-App
+import ProfileManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/profile-management.svg";
+import Accept from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Accept Decline request.svg";
+import Appointment from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Appointment management.svg";
+import Catalogue from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/catalogue-management.svg";
+import Service from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Service management.svg";
+import Paymentmanagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Payment-Management-1.svg";
+import discount from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Offer-Management.svg";
+import Integrate from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Live Chat.svg";
+import Feedback from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Beauty App/Feedback and review management.svg";
+
+// Admin-App
+import Customer from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Customer Support.svg";
+import Salon from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Salon-management.svg";
+import Subscription from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Subscription management.svg";
+import Analytics from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Analytics and reports.svg";
+import PaymentManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Payment-Management-1.svg";
+
+const SalonData = [
+  {
+    id: 1,
+    category: "Customer-App",
+    image: Registration,
+    title: "Registration and location setup",
+    des: "Customer App can allow a customer to add up their personal details like Name, Address and more. Customers can also provide access to their location to find better results.",
+  },
+  {
+    id: 2,
+    category: "Customer-App",
+    image: Browse,
+    title: "Browse Salon",
+    des: "Customer App can easily check the list of the nearby salon or they can also browse the salon easily in a Salon Service app.",
+  },
+  {
+    id: 3,
+    category: "Customer-App",
+    image: Check,
+    title: "Check the details",
+    des: "Customer App or panel can allow the users to check the overall details of the salon services as well as the beautician list for hiring.",
+  },
+  {
+    id: 4,
+    category: "Customer-App",
+    image: Schedule,
+    title: "Schedule an appointment",
+    des: "Customers can easily access the list, check the reviews of the beautician and then easily schedule an appointment at the availability.",
+  },
+  {
+    id: 5,
+    category: "Customer-App",
+    image: Calendar,
+    title: "In-App Calendar",
+    des: "he calendar is also integrated into a customer app to conveniently manage the appointment. Customers can check the calendar and book appointments accordingly.",
+  },
+  {
+    id: 6,
+    category: "Customer-App",
+    image: Interaction,
+    title: "In-App chat Interaction",
+    des: "Customers can have access to the chat integration service. Through these features, they can easily chat for the support service.",
+  },
+  {
+    id: 7,
+    category: "Customer-App",
+    image: Checkorderhistory,
+    title: "Check order history",
+    des: "Customers can also have access to their history. They can see the past scheduled appointments with the salon name and payment history.",
+  },
+  {
+    id: 8,
+    category: "Customer-App",
+    image: Payment,
+    title: "Payment integration",
+    des: "The customer app is consist of multiple payment options by which customers can easily make the payment using various methods like Wallet, Debit/Credit and more.",
+  },
+  {
+    id: 9,
+    category: "Customer-App",
+    image: Loyalty,
+    title: "Loyalty programs",
+    des: "Customers can easily have access to loyalty programs. They can also be applied the new offers and discounts option to the services.",
+  },
+  {
+    id: 10,
+    category: "Customer-App",
+    image: reviews,
+    title: "Add reviews and Feedback",
+    des: "After receiving the salon service, customers can have access to share their experience by adding reviews and Feedback accordingly.",
+  },
+  {
+    id: 11,
+    category: "Customer-App",
+    image: notification,
+    title: "Push notification.",
+    des: "The customer app can also be integrated with such features by which they can receive alerts and notifications about the services and booking.",
+  },
+  {
+    id: 12,
+    category: "Beauty-App",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "A Beauty Salon App owner can allow developing their profile by adding on personal details like address, beautician details, experience, price and all.",
+  },
+  {
+    id: 13,
+    category: "Beauty-App",
+    image: Accept,
+    title: "Accept/ Decline request",
+    des: "This app allows the owner to check the customer request list. As per the availability, they can accept or reject the request of the customers.",
+  },
+  {
+    id: 14,
+    category: "Beauty-App",
+    image: Appointment,
+    title: "Appointment management",
+    des: "This panel can offer access to the panel owner to add the available time slots. Salon owners or managers can also add or edit the opening hour.",
+  },
+  {
+    id: 15,
+    category: "Beauty-App",
+    image: Catalogue,
+    title: "Catalogue management",
+    des: "This app panel allows the salon owner to manage their catalogue easily. They can easily list down their services in well alphabetic order.",
+  },
+  {
+    id: 16,
+    category: "Beauty-App",
+    image: Service,
+    title: "Service management",
+    des: "This app feature can grant access to the Salon manager to edit, add or delete the services as per their requirements. They can edit any information accordingly.",
+  },
+  {
+    id: 17,
+    category: "Beauty-App",
+    image: Paymentmanagement,
+    title: "Payment management",
+    des: "An important feature allows the panel owner to manage the payment methods of the services listed in the app. They can easily customize the payment.",
+  },
+  {
+    id: 18,
+    category: "Beauty-App",
+    image: discount,
+    title: "Offer and discount management",
+    des: "Beauty Salon app owners can also have access to update the offers and discount information at their convenience.",
+  },
+  {
+    id: 19,
+    category: "Beauty-App",
+    image: Integrate,
+    title: "Integrate Chat module",
+    des: "As in the customer panel, the Chat module is also integrated into the Beauty Salon app panel. These features can be helpful for both parties.",
+  },
+  {
+    id: 20,
+    category: "Beauty-App",
+    image: Feedback,
+    title: "Feedback and review management",
+    des: "Beauty Salon app owners can have access to the feedback and reviews of the customer. They can analyze and make the improvement as per the customer feedbacks.",
+  },
+  {
+    id: 21,
+    category: "Admin-App",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "A salon admin panel can allow the owner to check the details like customer details, beauty salon profile, payment information and all the other details.",
+  },
+  {
+    id: 22,
+    category: "Admin-App",
+    image: Customer,
+    title: "Customer Support",
+    des: "Admin panel can also have features that will directly connect with them to the customers or we can say by which they provide the customer support.",
+  },
+  {
+    id: 23,
+    category: "Admin-App",
+    image: Salon,
+    title: "Salon management",
+    des: "Admin can easily have overall access to the Salon services which are listed in the app. Admin can easily add, update or delete the Salon as well as manage the details.",
+  },
+  {
+    id: 24,
+    category: "Admin-App",
+    image: Subscription,
+    title: "Subscription management.",
+    des: "Salon app Admin app has features to manage all the salon owners subscriptions on the basis of which the listing of the salon store is decided.",
+  },
+  {
+    id: 25,
+    category: "Admin-App",
+    image: Analytics,
+    title: "Analytics and reports",
+    des: "Admin can easily analyze and generate reports based on past profits or losses. This feature can help to boost marketing to expand business with the proper planning.",
+  },
+  {
+    id: 26,
+    category: "Admin-App",
+    image: PaymentManagement,
+    title: "Payment Management",
+    des: "Admin Panel can have overall control over the payment module. Admin can also take care of the withdrawal requests, customer payment disputes and all.",
+  },
+];
 
 const SalonApp = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [items, setItems] = useState(SalonData);
+  const filterItem = (cateItem) => {
+    const updateItems = SalonData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
   return (
     <>
       {/* common Banner start */}
@@ -212,6 +430,7 @@ const SalonApp = () => {
                   role="tab"
                   aria-controls="Customer-App"
                   aria-selected="true"
+                  onClick={() => filterItem("Customer-App")}
                 >
                   Customer App
                 </button>
@@ -219,13 +438,14 @@ const SalonApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Beauty-App-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Beauty-App"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Beauty-App"
                   aria-selected="false"
+                  onClick={() => filterItem("Beauty-App")}
                 >
                   Beauty Salon Owner App
                 </button>
@@ -233,13 +453,14 @@ const SalonApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Admin-App-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Admin-App"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Admin-App"
                   aria-selected="false"
+                  onClick={() => filterItem("Admin-App")}
                 >
                   Admin App
                 </button>
@@ -253,525 +474,26 @@ const SalonApp = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Check}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Registration and location setup</h4>
-                      <p>
-                        Customer App can allow a customer to add up their
-                        personal details like Name, Address and more. Customers
-                        can also provide access to their location to find better
-                        results.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Orderonline}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Browse Salon</h4>
-                      <p>
-                        Customer App can easily check the list of the nearby
-                        salon or they can also browse the salon easily in a
-                        Salon Service app.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={payonline}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Check the details</h4>
-                      <p>
-                        Customer App or panel can allow the users to check the
-                        overall details of the salon services as well as the
-                        beautician list for hiring.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Reviews}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Schedule an appointment</h4>
-                      <p>
-                        Customers can easily access the list, check the reviews
-                        of the beautician and then easily schedule an
-                        appointment at the availability.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Get}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>In-App Calendar</h4>
-                      <p>
-                        The calendar is also integrated into a customer app to
-                        conveniently manage the appointment. Customers can check
-                        the calendar and book appointments accordingly.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>In-App chat Interaction</h4>
-                      <p>
-                        Customers can have access to the chat integration
-                        service. Through these features, they can easily chat
-                        for the support service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Check order history</h4>
-                      <p>
-                        Customers can also have access to their history. They
-                        can see the past scheduled appointments with the salon
-                        name and payment history.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Payment integration</h4>
-                      <p>
-                        The customer app is consist of multiple payment options
-                        by which customers can easily make the payment using
-                        various methods like Wallet, Debit/Credit and more.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Loyalty programs</h4>
-                      <p>
-                        Customers can easily have access to loyalty programs.
-                        They can also be applied the new offers and discounts
-                        option to the services.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Add reviews and Feedback</h4>
-                      <p>
-                        After receiving the salon service, customers can have
-                        access to share their experience by adding reviews and
-                        Feedback accordingly.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        // src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Push notification.</h4>
-                      <p>
-                        The customer app can also be integrated with such
-                        features by which they can receive alerts and
-                        notifications about the services and booking.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {items.map((elem) => {
+                    const { id, image, title, des } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="Check-Details-icons"
+                            className="img-fluid"
+                            style={{ height: "60px" }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>
@@ -992,7 +714,7 @@ const SalonApp = () => {
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
                 <p style={{ textAlign: "left" }}>
-                  Would you like to create a Salon booking App? 
+                  Would you like to create a Salon booking App?
                 </p>
               </div>
             </div>

@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,20 +7,208 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //  Customer App
 import search from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Search-Products.svg";
-import Check from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/View-Products-Categories-Wise.svg";
-import Orderonline from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Cart-Management.svg";
-import payonline from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Wish-Products.svg";
-import Reviews from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Avail-Offers.svg";
-import Get from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Purchase-Online.svg";
-import Avail from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Rating _ Reviews.svg";
-import Checkorder from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Check-Order-History.svg";
+import View from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/View-Products-Categories-Wise.svg";
+import Cart from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Cart-Management.svg";
+import Wish from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Wish-Products.svg";
+import AvailOffers from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Avail-Offers.svg";
+import Purchase from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Purchase-Online.svg";
+import give from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Rating _ Reviews.svg";
+import order from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Check-Order-History.svg";
 
+// Admin Penal
+import Vendor from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Vendor-Management.svg";
+import UserManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/User-Management.svg";
+import Payment from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Payment Management.svg";
+import Featured from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Featured-Profiles-Management.svg";
+import complaint from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/User-Complaint-Management.svg";
+import Seller from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Seller complaint management.svg";
+
+// Seller-Panel
+import Profile from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/profile-management.svg";
+import Product from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Product-Management.svg";
+import Category from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Category-Management.svg";
+import Management from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Order Management.svg";
+import Paymentmanagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Payment-Management-1.svg";
+import OfferManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Offer-Management.svg";
+import ShippingManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Shipping-Management.svg";
+import Inventory from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Inventory Management.svg";
+
+const EcommerceData = [
+  {
+    id: 1,
+    category: "User-App",
+    image: search,
+    title: "Search products",
+    des: "User can search for products by using a variety of filters.",
+  },
+  {
+    id: 2,
+    category: "User-App",
+    image: View,
+    title: "View products categories wise",
+    des: "Users can view and search for products across different categories.",
+  },
+  {
+    id: 3,
+    category: "User-App",
+    image: Cart,
+    title: "Cart management",
+    des: "Users can search and see lists of available courses.",
+  },
+  {
+    id: 4,
+    category: "User-App",
+    image: Wish,
+    title: "Wish Products",
+    des: "Users are also allowed to keep their chosen products under wish-list for future purchases.",
+  },
+  {
+    id: 5,
+    category: "User-App",
+    image: AvailOffers,
+    title: "Avail Offers",
+    des: "The user app also shows various offers available for the users.",
+  },
+  {
+    id: 6,
+    category: "User-App",
+    image: Purchase,
+    title: "Purchase Online",
+    des: "Through the user panel the user can make online purchases.",
+  },
+  {
+    id: 7,
+    category: "User-App",
+    image: give,
+    title: "give ratings and reviews",
+    des: "Users can write reviews and give ratings on the basis of their satisfaction with the products.",
+  },
+  {
+    id: 8,
+    category: "User-App",
+    image: order,
+    title: "check order history",
+    des: "Can see course details and fix the zoom meeting.",
+  },
+  {
+    id: 9,
+    category: "Admin-Panel",
+    image: Vendor,
+    title: "Vendor Management",
+    des: "App admin is allowed to take full control of the management of the vendors.",
+  },
+  {
+    id: 10,
+    category: "Admin-Panel",
+    image: UserManagement,
+    title: "User Management",
+    des: "App admin can easily manage user profiles right from the admin panel.",
+  },
+  {
+    id: 11,
+    category: "Admin-Panel",
+    image: Payment,
+    title: "Payment Management",
+    des: "The app admin can manage all payment gateways and payment procedures.",
+  },
+  {
+    id: 12,
+    category: "Admin-Panel",
+    image: Featured,
+    title: "Featured profile management",
+    des: "The app admin panel also allows handling a section relating to some chosen customer profiles.",
+  },
+  {
+    id: 13,
+    category: "Admin-Panel",
+    image: complaint,
+    title: "User complaint management",
+    des: "Through the admin panel the app admin can take cognisance if complaints and grievances and address them.",
+  },
+  {
+    id: 14,
+    category: "Admin-Panel",
+    image: Seller,
+    title: "Seller complaint management",
+    des: "Through the admin panel, the app admin can also take note of all the seller complaints in order to address them.",
+  },
+  {
+    id: 15,
+    category: "Seller-Panel",
+    image: Profile,
+    title: "Profile Management",
+    des: "The seller panel allows sellers to maintain and manage their own seller profiles equipped with business credentials and contact details.",
+  },
+  {
+    id: 16,
+    category: "Seller-Panel",
+    image: Product,
+    title: "Product Management",
+    des: "The seller through the seller panel can manage their products and decide to make a feature list and categories as applicable.",
+  },
+  {
+    id: 17,
+    category: "Seller-Panel",
+    image: Category,
+    title: "Category management",
+    des: "The seller panel allows creating product categories and denominations to help easy search and viewing.",
+  },
+  {
+    id: 18,
+    category: "Seller-Panel",
+    image: Management,
+    title: "Order Management",
+    des: "The seller panel also allows managing all customer orders.",
+  },
+  {
+    id: 19,
+    category: "Seller-Panel",
+    image: Paymentmanagement,
+    title: "Payment management",
+    des: "Through seller panel the seller can manage customer payment.",
+  },
+  {
+    id: 20,
+    category: "Seller-Panel",
+    image: OfferManagement,
+    title: "Offer Management",
+    des: "The seller panel also allows the seller to manage offers and promotions.",
+  },
+  {
+    id: 21,
+    category: "Seller-Panel",
+    image: ShippingManagement,
+    title: "Shipping Management",
+    des: "Through the seller panel, the seller can also manage the shipping of products.",
+  },
+  {
+    id: 22,
+    category: "User-App",
+    image: Inventory,
+    title: "Inventory management",
+    des: "The seller panel also comes with an inventory management suite to take control of the entire process.",
+  },
+];
 const EcommerceApp = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [item, setItems] = useState(EcommerceData);
+  const filterItem = (cateItem) => {
+    const updateItems = EcommerceData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
+
   return (
     <>
       {/* common Banner start */}
@@ -195,13 +383,14 @@ const EcommerceApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active"
-                  id="Customer-App-Tab"
+                  id="User-App-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Customer-App"
+                  data-bs-target="#User-App"
                   type="button"
                   role="tab"
-                  aria-controls="Customer-App"
+                  aria-controls="User-App"
                   aria-selected="true"
+                  onClick={() => filterItem("User-App")}
                 >
                   User App
                 </button>
@@ -209,13 +398,14 @@ const EcommerceApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Admin-Panel-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Admin-Panel"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Admin-Panel"
                   aria-selected="false"
+                  onClick={() => filterItem("Admin-Panel")}
                 >
                   Admin Panel
                 </button>
@@ -223,13 +413,14 @@ const EcommerceApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Seller-Panel-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Seller-Panel"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Seller-Panel"
                   aria-selected="false"
+                  onClick={() => filterItem("Seller-Panel")}
                 >
                   Seller Panel
                 </button>
@@ -238,471 +429,31 @@ const EcommerceApp = () => {
             <div className="tab-content mt-5" id="pills-tabContent">
               <div
                 className="tab-pane fade show active"
-                id="Customer-App"
+                id="User-App"
                 role="tabpanel"
-                aria-labelledby="Customer-App-Tab"
+                aria-labelledby="User-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={search}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Search products</h4>
-                      <p>
-                        User can search for products by using a variety of
-                        filters.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Check}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>View products categories wise</h4>
-                      <p>
-                        Users can view and search for products across different
-                        categories.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Orderonline}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Cart management</h4>
-                      <p>
-                        Users can search and see lists of available courses.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={payonline}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Wish Products</h4>
-                      <p>
-                        Users are also allowed to keep their chosen products
-                        under wish-list for future purchases.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Reviews}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Avail Offers</h4>
-                      <p>
-                        The user app also shows various offers available for the
-                        users.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Get}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Purchase Online</h4>
-                      <p>
-                        Through the user panel the user can make online
-                        purchases.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Avail}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "15%" }}
-                      />
-                      <h4>give ratings and reviews</h4>
-                      <p>
-                        Users can write reviews and give ratings on the basis of
-                        their satisfaction with the products.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Checkorder}
-                        alt="Check-Order-History-icons"
-                        className="img-fluid"
-                        style={{ width: "15%" }}
-                      />
-                      <h4>check order history</h4>
-                      <p>
-                        Admin post some news and contractors can view that news
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {item.map((elem) => {
+                    const { id, image, des, title } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="search-food-icon"
+                            className="img-fluid"
+                            style={{ height: "60px" }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

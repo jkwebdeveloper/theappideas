@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -7,20 +7,141 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 //  Customer App
 import Social from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Social Media Login.svg";
-import Profile from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/profile-manage-4.svg";
+import ProfileManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/profile-manage-4.svg";
 import Find from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Find-Nearby-Dates.svg";
 import Swipe from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Swipe feature for showing interest not interested.svg";
 import Create from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Create-And-Share-Post.svg";
 import Like from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Like-Dislike-Comment.svg";
 import Match from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Match-With-The-Right-Date.svg";
-import Video from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Chat, Audio and Video Call feature.svg";
+import Chat from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Chat, Audio and Video Call feature.svg";
+
+// Admin Features
+import User from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/User-Management-1.svg";
+import Payment from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Payment-Management-1.svg";
+import Black from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Black-List-User.svg";
+import Featured from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Featured-Profiles-Management.svg";
+import customizable from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Bad-words.svg";
+
+const DatingData = [
+  {
+    id: 1,
+    category: "User-Dating",
+    image: Social,
+    title: "Social Media Login",
+    des: "User can login and start using the app just by using their social media credentials.",
+  },
+  {
+    id: 2,
+    category: "User-Dating",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "User can manage their profiles that include their photos, personal information and contact details.",
+  },
+  {
+    id: 3,
+    category: "User-Dating",
+    image: Find,
+    title: "Find nearby dates",
+    des: "Users can see a variety of nearby dates and exercise their choice.",
+  },
+  {
+    id: 4,
+    category: "User-Dating",
+    image: Swipe,
+    title: "Swipe feature for showing interest / not interested",
+    des: "Users can express their liking or disliking for any available dates just by swiping left or right.",
+  },
+  {
+    id: 5,
+    category: "User-Dating",
+    image: Create,
+    title: "Create and share post",
+    des: "Users can make fresh content posts and share those posts for other users to reach out.",
+  },
+  {
+    id: 6,
+    category: "User-Dating",
+    image: Like,
+    title: "Like, dislike, comment",
+    des: "Users can like, dislike and comment on various posts and profiles.",
+  },
+  {
+    id: 7,
+    category: "User-Dating",
+    image: Match,
+    title: "Match with the right date",
+    des: "Users can find the match with their right date and can engage with them.",
+  },
+  {
+    id: 8,
+    category: "User-Dating",
+    image: Chat,
+    title: "Chat, Audio and Video Call feature",
+    des: "Users can use chat messaging, audio and video calling feature to connect to dates and other profiles.",
+  },
+  {
+    id: 9,
+    category: "Admin-Features",
+    image: ProfileManagement,
+    title: "Profile Management",
+    des: "The admin is able to manage all user profiles registered with the app.",
+  },
+  {
+    id: 10,
+    category: "Admin-Features",
+    image: User,
+    title: "User Management",
+    des: "The admin can manage all the app users as per the rules and the standard practices.",
+  },
+  {
+    id: 11,
+    category: "Admin-Features",
+    image: Payment,
+    title: "Payment Management",
+    des: "Admin panel takes care of origin easing and managing payments made by the user through different payment methods and gateways.",
+  },
+  {
+    id: 12,
+    category: "Admin-Features",
+    image: Black,
+    title: "Black list User",
+    des: "Admin can also black-list some users with records of abuses and malpractices.",
+  },
+  {
+    id: 13,
+    category: "Admin-Features",
+    image: Featured,
+    title: "Featured profiles management",
+    des: "The admin will also choose some users for featured profiles.",
+  },
+  {
+    id: 14,
+    category: "Admin-Features",
+    image: customizable,
+    title: "“Bad words” customizable filter",
+    des: "The admin to make the platform clean and civic will use a custom filter to stop the use of abusive words.",
+  },
+];
 
 const DatingApp = () => {
+  useEffect(() => {
+    AOS.init();
+  }, []);
   const prevRef = useRef(null);
   const nextRef = useRef(null);
+
+  const [items, setItems] = useState(DatingData);
+  const filterItem = (cateItem) => {
+    const updateItems = DatingData.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
+    setItems(updateItems);
+  };
   return (
     <>
       {/* common Banner start */}
@@ -195,13 +316,14 @@ const DatingApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link active"
-                  id="Customer-App-Tab"
+                  id="User-Dating-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Customer-App"
+                  data-bs-target="#User-Dating"
                   type="button"
                   role="tab"
-                  aria-controls="Customer-App"
+                  aria-controls="User-Dating"
                   aria-selected="true"
+                  onClick={() => filterItem("User-Dating")}
                 >
                   User Dating App
                 </button>
@@ -209,13 +331,14 @@ const DatingApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className="nav-link"
-                  id="Restaurent-App-Tab"
+                  id="Admin-Features-Tab"
                   data-bs-toggle="pill"
-                  data-bs-target="#Restaurent-App"
+                  data-bs-target="#Admin-Features"
                   type="button"
                   role="tab"
-                  aria-controls="Restaurent-App"
+                  aria-controls="Admin-Features"
                   aria-selected="false"
+                  onClick={() => filterItem("Admin-Features")}
                 >
                   Admin Features of Dating App
                 </button>
@@ -229,470 +352,26 @@ const DatingApp = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Social}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Social Media Login</h4>
-                      <p>
-                        User can login and start using the app just by using
-                        their social media credentials.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Profile}
-                        alt="Check-Details-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        User can manage their profiles that include their
-                        photos, personal information and contact details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Find}
-                        alt="Order-Online-icon"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Find nearby dates</h4>
-                      <p>
-                        Users can see a variety of nearby dates and exercise
-                        their choice.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Swipe}
-                        alt="Pay-Online-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>
-                        Swipe feature for showing interest / not interested
-                      </h4>
-                      <p>
-                        Users can express their liking or disliking for any
-                        available dates just by swiping left or right.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Create}
-                        alt="Reviews-And-Ratings-icons "
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Create and share post</h4>
-                      <p>
-                        Users can make fresh content posts and share those posts
-                        for other users to reach out.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Like}
-                        alt="Get-Cashback-icons"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Like, dislike, comment</h4>
-                      <p>
-                        Users can like, dislike and comment on various posts and
-                        profiles.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Match}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Match with the right date</h4>
-                      <p>
-                        Users can find the match with their right date and can
-                        engage with them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 col-xl-6 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src={Video}
-                        alt="search-food-icon"
-                        className="img-fluid"
-                        style={{ width: "20%" }}
-                      />
-                      <h4>Chat, Audio and Video Call feature</h4>
-                      <p>
-                        Users can use chat messaging, audio and video calling
-                        feature to connect to dates and other profiles.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Restaurent-App"
-                role="tabpanel"
-                aria-labelledby="Restaurent-App-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The food ordering app allows restaurants to create their
-                        profile with details like addresses, food images, and a
-                        host of other necessary details.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Category-Management-icons.png"
-                        alt="Food-Category-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Category Management</h4>
-                      <p>
-                        The app also allows the participating restaurants to
-                        create a food menu comprising both all categories such
-                        as starter, main course, beverages, desserts veg,
-                        non-veg, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Food-Listing-Management-icons.png"
-                        alt="Food-Listing-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Food Listing Management</h4>
-                      <p>
-                        The seller panel allows creating product categories and
-                        denominations to help easy search and viewing.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Order-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Order Management</h4>
-                      <p>
-                        Restaurants can also enjoy a very robust order
-                        management system that allows communication through push
-                        notifications, email, and messaging.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Order-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        Restaurants can also provide the rider details, track
-                        the availability of the driver in real-time, and
-                        accordingly assign delivery jobs to riders.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/User-Management-icons.png"
-                        alt="User-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>User management</h4>
-                      <p>
-                        Restaurants through the app can deal with the order
-                        history, preferred dishes of individual users and can
-                        send customers various offers.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Tracking-icons.png"
-                        alt="Driver-Tracking-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Tracking</h4>
-                      <p>
-                        Restaurants after assigning jobs to drivers can actually
-                        guide the drivers about the best and time-saving
-                        delivery route and do live tracking of driver movement.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Review-Management-icons.png"
-                        alt="Review-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Review management</h4>
-                      <p>
-                        As and when customers drop reviews, restaurants can see
-                        and respond to them and take measures to improve the
-                        quality of service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Loyalty-Management-icons.png"
-                        alt="Loyalty-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Loyalty management</h4>
-                      <p>
-                        Restaurants can also provide offers and promo codes to
-                        both new and existing customers and can boost loyalty
-                        through discounts and special offers.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Driver-Tracking"
-                role="tabpanel"
-                aria-labelledby="Driver-Tracking-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        The driver tracking app will furnish the driver profile
-                        with all driver information, get admin approval of the
-                        driver, and help to integrate as a driver for the
-                        service.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Set-Availability.png"
-                        alt="Set-Availability"
-                        className="img-fluid"
-                      />
-                      <h4>Set availability</h4>
-                      <p>
-                        Drivers can show their availability on the basis of
-                        which restaurants can actually assign delivery jobs to
-                        them.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-The-Pickup-Notification.png"
-                        alt="Get-The-Pickup-Notification"
-                        className="img-fluid"
-                      />
-                      <h4>Get the pickup notification</h4>
-                      <p>
-                        Driver through the app receives push notifications,
-                        email, or SMS whenever a new delivery job is assigned to
-                        them. The same notification will allow them to accept or
-                        rejecting the order.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Route-_-Customer-Details-icon.png"
-                        alt="Route-_-Customer-Details-icon"
-                        className="img-fluid"
-                      />
-                      <h4>Route &amp; Customer Details</h4>
-                      <p>
-                        Driver through the app becomes informed about the food
-                        pickup and drop location, customer details, and GPS
-                        based route to reach customer’s place at the earliest.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Track-The-Route.png"
-                        alt="Track-The-Route"
-                        className="img-fluid"
-                      />
-                      <h4>Track the route</h4>
-                      <p>
-                        On the way to the customer’s place, the drivers can
-                        track the route on a live map and after delivery, the
-                        real-time information is sent back to the admin.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Get-A-Customer-Feedback.png"
-                        alt="Get-A-Customer-Feedback"
-                        className="img-fluid"
-                      />
-                      <h4>Get a customer feedback</h4>
-                      <p>
-                        Users through these apps can also opt for a variety of
-                        offers, discounts, and cashback options.
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Super-Admin"
-                role="tabpanel"
-                aria-labelledby="Super-Admin-Tab"
-              >
-                <div className="row">
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Profile-Management-icons.png"
-                        alt="Profile-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Profile Management</h4>
-                      <p>
-                        Admin of the app can easily see user listing, number of
-                        users, specific user details, order history, payment
-                        details, and other important information.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Driver-Management-icons.png"
-                        alt="Driver-Management-icons"
-                        className="img-fluid"
-                      />
-                      <h4>Driver Management</h4>
-                      <p>
-                        The admin panel can check out driver profiles,
-                        individual driver information and can drop drivers from
-                        the list based on complaints.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Subscription-Management.png"
-                        alt="Subscription-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Subscription Management</h4>
-                      <p>
-                        The admin also manages all the restaurant subscriptions
-                        on the basis of which the listing of the restaurants is
-                        decided.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Payment-Management.png"
-                        alt="Payment-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Payment Management</h4>
-                      <p>
-                        The Admin panel also allows total control over payment
-                        management and taking care of restaurant withdrawal
-                        requests, customer payment dispute requests, etc.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Restaurant-Management.png"
-                        alt="Restaurant-Management"
-                        className="img-fluid"
-                      />
-                      <h4>Restaurant Management</h4>
-                      <p>
-                        The admin panel can track the restaurants in the list
-                        and various listed food items based on different
-                        categories and various details including price.
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4">
-                    <div className="food__delivery__box">
-                      <img
-                        src="assets/img/Reports.png"
-                        alt="Reports"
-                        className="img-fluid"
-                      />
-                      <h4>Reports</h4>
-                      <p>
-                        Admin panel will provide access to different reports
-                        corresponding to orders, sales, purchases, and users.
-                      </p>
-                    </div>
-                  </div>
+                  {items.map((elem) => {
+                    const { id, image, title, des } = elem;
+                    return (
+                      <div
+                        key={id}
+                        className="col-sm-12 col-md-6 col-lg-4 col-xl-4 mb-4"
+                      >
+                        <div className="food__delivery__box">
+                          <img
+                            src={image}
+                            alt="search-food-icon"
+                            className="img-fluid"
+                            style={{ height: "60px" }}
+                          />
+                          <h4>{title}</h4>
+                          <p>{des}</p>
+                        </div>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
             </div>

@@ -511,7 +511,7 @@ const Header = () => {
                           <a>Hire React JS Developer</a>
                         </li>
                       </Link>
-                      <Link to="/hire-hireangular-developer">
+                      <Link to="/hire-angular-developer">
                         <li>
                           <a>Hire Angular 2 Developer</a>
                         </li>

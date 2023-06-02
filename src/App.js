@@ -153,7 +153,7 @@ const App = () => {
         <Route path="/hire-php-developer" element={<HirePHPDev />} />
         <Route path="/Hire-python-developer" element={<HirePythonDev />} />
         <Route path="/hire-reactjs-developer" element={<HireReactJsDev />} />
-        <Route path="/hire-HireAngular-developer" element={<HireAngular />} />
+        <Route path="/hire-Angular-developer" element={<HireAngular />} />
         <Route path="/Hire-Shopify-Development" element={<HireShopify />} />
         <Route path="/Hire-Magento-Development" element={<HireMagento />} />
 

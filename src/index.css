@@ -2909,7 +2909,7 @@ section {
   font-size: 20px;
   letter-spacing: normal;
   border-radius: 42px;
-  width: 162px;
+  width: 220px;
   background: #e2bb3e;
   text-align: center;
   display: block;
@@ -2919,6 +2919,7 @@ section {
   font-weight: 700;
   transition: all 0.5s ease-in-out;
   border: 1px solid #e2bb3e;
+  margin-top: 40px;
 }
 
 .hire_btn:hover {
@@ -3055,3 +3056,139 @@ section {
 }
 
 /* -------------------- HireUs Css End -------------------- */
+
+/* -------------------- Our Team Css start -------------------- */
+
+/*  Our Team Banner Section Start */
+.team_banner {
+  background-image: url("./assets/images/COMPANY/our_team/hire-us-banner.webp");
+  width: 100%;
+  height: 100%;
+  padding: 170px 0;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  z-index: 9;
+}
+.team_banner::before {
+  content: "";
+  background-image: url("./assets/images/COMPANY/our_team/team-banner.webp");
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  opacity: 0.1;
+  background-position: center;
+  background-size: cover;
+}
+
+.team_banner h1 {
+  text-align: center;
+  color: #fff;
+  font-size: 47px;
+  font-weight: 700;
+}
+
+.team_banner p {
+  font-size: 18px;
+  line-height: 28px;
+  color: #fff;
+  max-width: 1100px;
+  margin: 20px auto 0 auto;
+  text-align: center;
+  padding: 0 20px;
+}
+/* Hire Banner Section End */
+.team_main_section {
+  padding: 100px 0 0 0;
+}
+.ornage_light-bg {
+  background-color: #fbf3f3;
+}
+.profile_main_card {
+  height: 100%;
+  padding-bottom: 100px;
+}
+.profile_main_card .profile-card {
+  position: relative;
+  font-family: sans-serif;
+  width: 100%;
+  height: 100%;
+  background: #fff;
+  padding: 30px 30px 0 30px;
+  box-shadow: 0 0 10px #33333347;
+  transition: 0.6s;
+}
+
+.profile_main_card .profile-card:hover {
+  border-radius: 10px;
+}
+
+.profile_main_card .profile-card .img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: 0.6s;
+  z-index: 99;
+}
+
+.profile_main_card .profile-card:hover .img {
+  transform: translateY(-30px);
+}
+
+.profile_main_card .img img {
+  width: 246px;
+  height: 280px;
+  object-fit: cover;
+  box-shadow: 0 0 22px #3336;
+  transition: 0.6s;
+  transform: translateY(-60px);
+}
+
+.profile_main_card .profile-card:hover img {
+  border-radius: 10px;
+}
+
+.profile_main_card .caption {
+  text-align: center;
+  transform: translateY(-100px);
+  opacity: 1;
+  transition: 0.6s;
+}
+
+.profile_main_card .caption h3 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #000;
+}
+
+.profile_main_card .caption p {
+  font-size: 15px;
+  color: #2f0e39;
+  margin: 2px 0 9px 0;
+}
+
+@media (max-width: 991px) {
+  .profile_main_card .img img {
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  .profile_main_card .img img {
+    height: 380px;
+  }
+  .team_banner h1 {
+    font-size: 30px;
+  }
+}
+@media (max-width: 575px) {
+  .profile_main_card .img img {
+    height: 300px;
+  }
+  .team_banner p {
+    font-size: 16px;
+  }
+}
+
+/* -------------------- Our Team Css End -------------------- */

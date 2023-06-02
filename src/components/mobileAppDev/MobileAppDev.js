@@ -127,7 +127,7 @@ const MobileAppDev = () => {
                   Mobile App Development Company Mobile App development is
                   considered as the expertise field of The App Ideas. The App
                   Ideas is a leading web and mobile app development Company. Due
-                  to the high demand for a digital soluti on, many business
+                  to the high demand for a digital solution, many business
                   owners and entrepreneurs are making a high investment in the
                   mobile application for increasing profit rates. The App Ideas
                   has a team of experts who provide the foremost native, cross
