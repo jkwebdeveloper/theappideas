@@ -9,7 +9,7 @@ import Banner from "../components/Home/Banner/Banner";
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Banner/>
       <About/>
       <Services/>
@@ -17,7 +17,7 @@ const Home = () => {
       <TestiMonial/>
       <Blog/>
       <Execute/>
-    </>
+    </div>
   );
 };
 
