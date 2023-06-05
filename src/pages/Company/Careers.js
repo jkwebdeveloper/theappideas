@@ -112,14 +112,14 @@ const Careers = () => {
                   </div>
                 </div>
               </div>
-              {/* Modal */}
+              {/*----------------- Modal------------- */}
 
               <div
                 className="modal fade career___modal"
                 id="business"
                 tabIndex={-1}
                 aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
+                // aria-hidden="true"
                 // show={show} onHide={handleClose}
               >
                 <div className="modal-dialog modal-dialog-centered">
