@@ -378,15 +378,7 @@ const Blog = () => {
             </div>
           </SwiperSlide>
         </Swiper>
-        {/* <div className="swiper-button-next swiper-navBtn" ref={prevRef} />
-        <div className="swiper-button-prev swiper-navBtn" ref={prevRef} /> */}
       </div>
-      {/* <button className="swiper-navBtn" ref={prevRef}>
-        prev
-      </button>
-      <button className="swiper-navBtn" ref={prevRef}>
-        next
-      </button> */}
     </div>
   );
 };

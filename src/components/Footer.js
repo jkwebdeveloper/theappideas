@@ -23,46 +23,50 @@ const Footer = () => {
             <div className="footer__box">
               <h2 className="footer_title">On Demand Apps</h2>
               <ul>
-                <li>
-                  <Link to="/taxi-booking-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Taxi Booking App
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/security-app-solution">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Security Guard App
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/food-delivery-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Food Delivery App
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/doctor-hiring-app-solution">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Doctor Hiring App
-                    </a>
-                  </Link>
-                </li>
+                <Link to="/taxi-booking-app-development">
+                  <li>
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Taxi Booking App
+                  </li>
+                </Link>
+                <Link to="/security-app-solution">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Security Guard App
+                  </li>
+                </Link>
+                <Link to="/food-delivery-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Food Delivery App
+                  </li>
+                </Link>
+                <Link to="/doctor-hiring-app-solution">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Doctor Hiring App
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
@@ -70,76 +74,90 @@ const Footer = () => {
             <div className="footer__box">
               <h2 className="footer_title">Quick Links</h2>
               <ul>
-                <li>
-                  <Link to="/">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Home
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/aboutus">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      About Us
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/portfolio">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Portfolio
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/blog">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Blog
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/contactus">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Contact Us
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/testimonial">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Testimonial
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/careers">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Careers{" "}
-                    </a>
-                  </Link>
-                </li>
+                <Link to="/">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Home
+                  </li>
+                </Link>
+                <Link to="/aboutus">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    About Us
+                  </li>
+                </Link>
+                <Link to="/portfolio">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Portfolio
+                  </li>
+                </Link>
+                <Link to="/blog">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Blog
+                  </li>
+                </Link>
+                <Link to="/contactus">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Contact Us
+                  </li>
+                </Link>
+                <Link to="/testimonial">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Testimonial
+                  </li>
+                </Link>
+                <Link to="/careers">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Careers{" "}
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
@@ -147,66 +165,78 @@ const Footer = () => {
             <div className="footer__box">
               <h2 className="footer_title">Services</h2>
               <ul>
-                <li>
-                  <Link to="/mobile-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Mobile App Development
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/iot-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      IOT Development
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/web-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Web Design &amp; Development
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/e-commerce-website-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      E-commerce Development
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/testimonial">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Testimonial
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/hire-us">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Hire A Developer
-                    </a>
-                  </Link>
-                </li>
+                <Link to="/mobile-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Mobile App Development
+                  </li>
+                </Link>
+                <Link to="/iot-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    IOT Development
+                  </li>
+                </Link>
+                <Link to="/web-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Web Design &amp; Development
+                  </li>
+                </Link>
+                <Link to="/e-commerce-website-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    E-commerce Development
+                  </li>
+                </Link>
+                <Link to="/testimonial">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Testimonial
+                  </li>
+                </Link>
+                <Link to="/hire-us">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Hire A Developer
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>
@@ -214,56 +244,66 @@ const Footer = () => {
             <div className="footer__box">
               <h2 className="footer_title">Solutions</h2>
               <ul>
-                <li>
-                  <Link to="/dating-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Dating App
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/lawyer-website-solution">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Lawyer Website Solution
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/driver-tracking-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Driver Tracking App Solution
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/e-commerce-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Ecommerce App Solution
-                    </a>
-                  </Link>
-                </li>
-                <li>
-                  <Link to="/e-learning-app-development">
-                    <a>
-                      <i className="right__arrow">
-                        <RiArrowRightSLine />
-                      </i>{" "}
-                      Elearning Website Solution
-                    </a>
-                  </Link>
-                </li>
+                <Link to="/dating-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Dating App
+                  </li>
+                </Link>
+                <Link to="/lawyer-website-solution">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Lawyer Website Solution
+                  </li>
+                </Link>
+                <Link to="/driver-tracking-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Driver Tracking App Solution
+                  </li>
+                </Link>
+                <Link to="/e-commerce-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Ecommerce App Solution
+                  </li>
+                </Link>
+                <Link to="/e-learning-app-development">
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <i className="right__arrow">
+                      <RiArrowRightSLine />
+                    </i>{" "}
+                    Elearning Website Solution
+                  </li>
+                </Link>
               </ul>
             </div>
           </div>

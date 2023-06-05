@@ -1,13 +1,18 @@
-import React from "react";
+import React, { useRef } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
 import { Link } from "react-router-dom";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 function LifeTAI() {
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <>
       <section className="life_tai_banner">
         <div className="container">
-          {/* <div className="row center-col padding-four-top">
-            <div className="col-lg-6 col-md-12 col-sm-12 col-12 margin-10px-tb xs-no-margin-top xs-no-margin-bottom"> */}
           <div className="life_tai_content">
             <h1>Life at @App Ideas</h1>
             <p>
@@ -26,16 +31,6 @@ function LifeTAI() {
               development.
             </p>
           </div>
-          {/* </div>
-            <div className="col-lg-6 col-md-12 col-sm-12 col-12 display-table margin-10px-tb xs-no-margin-top xs-no-margin-bottom">
-              <div className="right-img">
-                <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/Life at TAI.png")}
-                  alt="life-tai-bg"
-                />
-              </div>
-            </div> */}
-          {/* </div> */}
         </div>
       </section>
       <section className="life_section">
@@ -72,7 +67,7 @@ function LifeTAI() {
             <div className="col-lg-5 col-md-7 col-sm-12 col-12 order-2 order-md-1 order-sm-2 order-xs-2">
               <div className="life_img_rht life_img_rht_shift">
                 <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/christmas.webp")}
+                  src={require("../../assets/images/COMPANY/lifeAtTai/Christmas.gif")}
                   alt="christmas"
                   className="img-fluid"
                 />
@@ -95,13 +90,219 @@ function LifeTAI() {
             <div className="col-lg-5 col-md-7 col-sm-12 col-12">
               <div className="life_img_rht">
                 <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/diwali.webp")}
+                  src={require("../../assets/images/COMPANY/lifeAtTai/Diwali.gif")}
                   alt="diwali"
                   className="img-fluid"
                 />
               </div>
             </div>
           </div>
+        </div>
+      </section>
+      <section className="work_slider_section py-5">
+        <div className="container">
+          <Swiper
+            modules={[Pagination, Autoplay, Navigation]}
+            spaceBetween={20}
+            slidesPerView={3}
+            loop={true}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              425: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              640: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
+              768: {
+                slidesPerView: 2,
+                spaceBetween: 20,
+              },
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 20,
+              },
+            }}
+            autoplay={{
+              delay: 2000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true,
+            }}
+            speed={500}
+            direction={"horizontal"}
+            pagination={{ clickable: true }}
+            // navigation
+            onSwiper={(swiper) => {
+              // Delay execution for the refs to be defined
+              setTimeout(() => {
+                // Override prevEl & nextEl now that refs are defined
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
+
+                // Re-init navigation
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
+            }}
+            style={{ padding: "2.5rem 0px 7.2rem" }}
+          >
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img1-400x267.webp")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img10-400x267.png")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img2-400x267.webp")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img3-400x267.webp")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img4-400x267.webp")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img5-400x267.png")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img6-400x267.png")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img7-400x267.webp")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img8-400x267.png")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+            <SwiperSlide>
+              <div className="card">
+                <div className="image-box">
+                  <img
+                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img9-400x267.png")}
+                    alt=""
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      borderRadius: "7px",
+                    }}
+                  />
+                </div>
+              </div>
+            </SwiperSlide>
+          </Swiper>
         </div>
       </section>
       {/* Contact Section Start */}
