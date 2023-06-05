@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import "./header.css";
 import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
+// import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
 
@@ -61,15 +62,17 @@ const Header = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <Link to="/aboutus">
-                        <li>
-                          <a href="/" className="f">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Company/About Us.gif")}
-                              alt="About-us"
-                            />{" "}
-                            About Us
-                          </a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {" "}
+                          <img
+                            src={require("../../assets/images/Header/Company/About Us.gif")}
+                            alt="About-us"
+                          />{" "}
+                          About Us
                         </li>
                       </Link>
                     </ul>
@@ -77,15 +80,17 @@ const Header = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <Link to="/our-process">
-                        <li>
-                          <a className="company_text">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Company/Our Process.gif")}
-                              alt="Our-Team"
-                            />{" "}
-                            Our Process
-                          </a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {" "}
+                          <img
+                            src={require("../../assets/images/Header/Company/Our Process.gif")}
+                            alt="Our-Team"
+                          />{" "}
+                          Our Process
                         </li>
                       </Link>
                     </ul>
@@ -93,15 +98,17 @@ const Header = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <Link to="/our-team">
-                        <li>
-                          <a className="company_text">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Company/Our Team.gif")}
-                              alt="Our-Team"
-                            />{" "}
-                            Our Team
-                          </a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {" "}
+                          <img
+                            src={require("../../assets/images/Header/Company/Our Team.gif")}
+                            alt="Our-Team"
+                          />{" "}
+                          Our Team
                         </li>
                       </Link>
                     </ul>
@@ -111,15 +118,17 @@ const Header = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <Link to="/testimonial">
-                        <li>
-                          <a className="company_text">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Company/Testimonial.gif")}
-                              alt="Testamonials"
-                            />
-                            Testimonial
-                          </a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {" "}
+                          <img
+                            src={require("../../assets/images/Header/Company/Testimonial.gif")}
+                            alt="Testamonials"
+                          />
+                          Testimonial
                         </li>
                       </Link>
                     </ul>
@@ -127,15 +136,17 @@ const Header = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <Link to="/careers">
-                        <li>
-                          <a className="company_text">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Company/Careers.gif")}
-                              alt="Carrers"
-                            />{" "}
-                            Careers
-                          </a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {" "}
+                          <img
+                            src={require("../../assets/images/Header/Company/Careers.gif")}
+                            alt="Carrers"
+                          />{" "}
+                          Careers
                         </li>
                       </Link>
                     </ul>
@@ -143,15 +154,17 @@ const Header = () => {
                   <div className="row">
                     <ul className="mega-links">
                       <Link to="/life-at-tai">
-                        <li>
-                          <a className="company_text">
-                            {" "}
-                            <img
-                              src={require("../../assets/images/Header/Company/Life at TAI.gif")}
-                              alt="Life-at-TAI"
-                            />{" "}
-                            Life at TAI
-                          </a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {" "}
+                          <img
+                            src={require("../../assets/images/Header/Company/Life at TAI.gif")}
+                            alt="Life-at-TAI"
+                          />{" "}
+                          Life at TAI
                         </li>
                       </Link>
                     </ul>
@@ -166,8 +179,13 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <Link to="/careers">
-                          <a className="menu_contact_btn">Join Our Team</a>
+                        <Link
+                          to="/careers"
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          <div className="menu_contact_btn">Join Our Team</div>
                         </Link>
                       </div>
                     </div>
@@ -177,9 +195,9 @@ const Header = () => {
             </li>
             <li>
               <Link>
-                <a className="desktop-item">
+                <div className="desktop-item">
                   Services <MdKeyboardArrowDown />{" "}
-                </a>
+                </div>
               </Link>
               <input type="checkbox" id="showMega1" />
               <label htmlFor="showMega1" className="mobile-item">
@@ -188,7 +206,12 @@ const Header = () => {
               <div className="mega-box">
                 <div className="content">
                   <div className="row">
-                    <Link to="/mobile-app-development">
+                    <Link
+                      to="/mobile-app-development"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       <h4>
                         {" "}
                         <img
@@ -200,45 +223,61 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/android-app-development">
-                        <li>
-                          <a>Android App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Android App Development
                         </li>
                       </Link>
                       <Link to="iphone-app-development">
-                        <li>
-                          <a>IPhone App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          IPhone App Development
                         </li>
                       </Link>
                       <Link to="/ipad-app-development">
-                        <li>
-                          <a>IPad App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          IPad App Development
                         </li>
                       </Link>
                       <Link to="/react-native-development">
-                        <li>
-                          <a>React Native Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          React Native Development
                         </li>
                       </Link>
-                      {/* <Link to="/iBeacon-App-Development">
-                        <li>
-                          <a>iBeacon App Development</a>
-                        </li>
-                      </Link> */}
+
                       <Link to="/iot-app-development">
-                        <li>
-                          <a>IOT App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          IOT App Development
                         </li>
                       </Link>
-                      {/* <Link to="/watch-app-development">
-                        <li>
-                          <a>Apple Watch App Development</a>
-                        </li>
-                      </Link> */}
                     </ul>
                   </div>
 
                   <div className="row">
-                    <Link to="/digital-marketing-agency">
+                    <Link
+                      to="/digital-marketing-agency"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       <h4>
                         {" "}
                         <img
@@ -250,24 +289,41 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/seo">
-                        <li>
-                          <a>SEO</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          SEO
                         </li>
                       </Link>
                       <Link to="/social-media-marketing">
-                        <li>
-                          <a>Social Media Marketing</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Social Media Marketing
                         </li>
                       </Link>
                       <Link to="/aso-company">
-                        <li>
-                          <a>ASO</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          ASO
                         </li>
                       </Link>
                     </ul>
                   </div>
                   <div className="row">
-                    <Link to="/e-commerce-website-development">
+                    <Link
+                      to="/e-commerce-website-development"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       <h4>
                         {" "}
                         <img
@@ -279,29 +335,50 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/shopify-development">
-                        <li>
-                          <a>Shopify Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Shopify Developmen
                         </li>
                       </Link>
                       <Link to="/magento-development">
-                        <li>
-                          <a>Magento Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Magento Developmen
                         </li>
                       </Link>
                       <Link to="/joomla-development">
-                        <li>
-                          <a>Joomla Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Joomla Development{" "}
                         </li>
                       </Link>
                       <Link to="/drupal-development">
-                        <li>
-                          <a>Drupal Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Drupal Development{" "}
                         </li>
                       </Link>
                     </ul>
                   </div>
                   <div className="row">
-                    <Link to="/web-development">
+                    <Link
+                      to="/web-development"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       <h4>
                         {" "}
                         <img
@@ -313,31 +390,52 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/wordpress-development">
-                        <li>
-                          <a>WordPress Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          WordPress Development
                         </li>
                       </Link>
                       <Link to="/php-development">
-                        <li>
-                          <a>PHP Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          PHP Development
                         </li>
                       </Link>
                       <Link to="/angular-development">
-                        <li>
-                          <a>Angular Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Angular Development
                         </li>
                       </Link>
                       <Link to="/webflow-development">
-                        <li>
-                          <a>Webflow Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Webflow Development
                         </li>
                       </Link>
                     </ul>
                   </div>
                 </div>
-                <div className="content">
-                  <div className="row">
-                    <Link to="/software-development">
+                <div className="content_last content " style={{justifyContent:"flex-start"}}>
+                  <div className="row" style={{width:"28%"}}>
+                    <Link
+                      to="/software-development"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       <h4>
                         {" "}
                         <img
@@ -349,19 +447,32 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/asp-net-development">
-                        <li>
-                          <a>Asp.Net Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Asp.Net Development
                         </li>
                       </Link>
                       <Link to="/dotnetnuke-development">
-                        <li>
-                          <a>DotNetNuke Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          DotNetNuke Development
                         </li>
                       </Link>
                     </ul>
                   </div>
-                  <div className="row">
-                    <Link to="/designing-services">
+                  <div className="row" style={{width:"28%"}}>
+                    <Link
+                      to="/designing-services"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
                       <h4>
                         {" "}
                         <img
@@ -373,18 +484,26 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/graphics-design">
-                        <li>
-                          <a>Graphics Design</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Graphics Design
                         </li>
                       </Link>
                       <Link to="/mobile-app-design">
-                        <li>
-                          <a>Mobile App Design</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Mobile App Design
                         </li>
                       </Link>
                     </ul>
                   </div>
-                  <div className="row">
+                  <div className="row" style={{width:"28%"}}>
                     <Link>
                       <h4>
                         {" "}
@@ -397,8 +516,12 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/startup-services">
-                        <li>
-                          <a href="/">Startup Services</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Startup Services
                         </li>
                       </Link>
                     </ul>
@@ -413,8 +536,13 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <Link to="/contactus">
-                          <a className="menu_contact_btn">Contact Us</a>
+                        <Link
+                          to="/contactus"
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          <div className="menu_contact_btn">Contact Us</div>
                         </Link>
                       </div>
                     </div>
@@ -423,10 +551,15 @@ const Header = () => {
               </div>
             </li>
             <li>
-              <Link to="/hire-us">
-                <a href="/hire-us" className="desktop-item">
+              <Link
+                to="/hire-us"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="desktop-item">
                   Hire Us <MdKeyboardArrowDown />{" "}
-                </a>
+                </div>
               </Link>
               <input type="checkbox" id="showMega2" />
               <label htmlFor="showMega2" className="mobile-item">
@@ -445,23 +578,39 @@ const Header = () => {
                     </h4>
                     <ul className="mega-links">
                       <Link to="/hire-ios-developer">
-                        <li>
-                          <a>Hire IOS Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire IOS Developer
                         </li>
                       </Link>
                       <Link to="/hire-android-developer">
-                        <li>
-                          <a href="/">Hire Android Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Android Developer
                         </li>
                       </Link>
                       <Link to="/hire-react-native-developer">
-                        <li>
-                          <a href="/">Hire React Native Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire React Native Developer
                         </li>
                       </Link>
                       <Link to="/hire-flutter-developer">
-                        <li>
-                          <a href="/">Hire Flutter Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Flutter Developer
                         </li>
                       </Link>
                     </ul>
@@ -477,43 +626,75 @@ const Header = () => {
                     </h4>
                     <ul className="mega-links">
                       <Link to="/hire-laravel-developer">
-                        <li>
-                          <a>Hire Laravel Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Laravel Developer
                         </li>
                       </Link>
                       <Link to="/hire-wordpress-developer">
-                        <li>
-                          <a>Hire WordPress Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire WordPress Developer
                         </li>
                       </Link>
                       <Link to="/hire-nodejs-developer">
-                        <li>
-                          <a>Hire Node.js Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Node.js Developer
                         </li>
                       </Link>
                       <Link to="/hire-codeigniter-developer">
-                        <li>
-                          <a>Hire CodeIgniter Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire CodeIgniter Developer
                         </li>
                       </Link>
                       <Link to="/hire-php-developer">
-                        <li>
-                          <a>Hire PHP Developers</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire PHP Developers
                         </li>
                       </Link>
                       <Link to="/hire-python-developer">
-                        <li>
-                          <a>Hire Python Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Python Developer
                         </li>
                       </Link>
                       <Link to="/hire-reactjs-developer">
-                        <li>
-                          <a>Hire React JS Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire React JS Developer
                         </li>
                       </Link>
                       <Link to="/hire-angular-developer">
-                        <li>
-                          <a>Hire Angular 2 Developer</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Angular 2 Developer
                         </li>
                       </Link>
                     </ul>
@@ -529,13 +710,21 @@ const Header = () => {
                     </h4>
                     <ul className="mega-links">
                       <Link to="/hire-shopify-development">
-                        <li>
-                          <a>Hire Shopify Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Shopify Development
                         </li>
                       </Link>
                       <Link to="/hire-magento-development">
-                        <li>
-                          <a>Hire Magento 2 Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Hire Magento 2 Development
                         </li>
                       </Link>
                     </ul>
@@ -563,10 +752,15 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <Link to="/hire-us">
-                          <a className="menu_contact_btn">
+                        <Link
+                          to="/hire-us"
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          <div className="menu_contact_btn">
                             Hire Our Developer{" "}
-                          </a>
+                          </div>
                         </Link>
                       </div>
                     </div>
@@ -576,9 +770,9 @@ const Header = () => {
             </li>
             <li>
               <Link to="/solutions">
-                <a href="/solutions" className="desktop-item">
+                <div className="desktop-item">
                   Solutions <MdKeyboardArrowDown />{" "}
-                </a>
+                </div>
               </Link>
               <input type="checkbox" id="showMega3" />
               <label htmlFor="showMega3" className="mobile-item">
@@ -599,20 +793,33 @@ const Header = () => {
                     </Link>
                     <ul className="mega-links">
                       <Link to="/food-delivery-app-development">
-                        <li>
-                          <a>Food Delivery App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          {/* <IoMdArrowDropright /> */}
+                          Food Delivery App Development
                         </li>
                       </Link>
                       <Link to="/courier-pickup-management-solution">
-                        <li>
-                          <a>Courier Pickup Management Solution</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Courier Pickup Management Solution
                         </li>
                       </Link>
                       <Link to="/grocery-app-developer">
-                        <li>
-                          <a>Grocery App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Grocery App Development
                         </li>
-                      </Link>
+                      </Link>{" "}
                     </ul>
                   </div>
                   <div className="row">
@@ -626,18 +833,30 @@ const Header = () => {
                     </h4>
                     <ul className="mega-links">
                       <Link to="/taxi-booking-app-development">
-                        <li>
-                          <a>Taxi Booking App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Taxi Booking App Development
                         </li>
                       </Link>
                       <Link to="/doctor-hiring-app-solution">
-                        <li>
-                          <a>Doctor Hiring App Solution</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Doctor Hiring App Solution
                         </li>
                       </Link>
                       <Link to="/security-app-solution">
-                        <li>
-                          <a>Security App Solution</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Security App Solution
                         </li>
                       </Link>
                     </ul>
@@ -653,28 +872,48 @@ const Header = () => {
                     </h4>
                     <ul className="mega-links">
                       <Link to="/e-commerce-app-development">
-                        <li>
-                          <a>eCommerce App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          eCommerce App Development
                         </li>
                       </Link>
                       <Link to="/e-learning-app-development">
-                        <li>
-                          <a>E-learning App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          E-learning App Development
                         </li>
                       </Link>
                       <Link to="dating-app-development">
-                        <li>
-                          <a>Dating App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Dating App Development
                         </li>
                       </Link>
                       <Link to="/driver-tracking-app-development">
-                        <li>
-                          <a>Driver Tracking App Development</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Driver Tracking App Development
                         </li>
                       </Link>
                       <Link to="/salon-service-app">
-                        <li>
-                          <a>Salon Service App</a>
+                        <li
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          Salon Service App
                         </li>
                       </Link>
                     </ul>
@@ -692,8 +931,13 @@ const Header = () => {
                     </div>
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
-                        <Link to="/contactus">
-                          <a className="menu_contact_btn">Contact Us </a>
+                        <Link
+                          to="/contactus"
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          <div className="menu_contact_btn">Contact Us </div>
                         </Link>
                       </div>
                     </div>
@@ -702,27 +946,47 @@ const Header = () => {
               </div>
             </li>
             <li>
-              <Link to="/portfolio">
-                <a>Portfolio</a>
+              <Link
+                to="/portfolio"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Portfolio
               </Link>
             </li>
             <li>
-              <Link to="/contactus">
-                <a>Contact Us</a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Contact Us
               </Link>
             </li>
 
             <li>
-              <Link to="/blog">
-                <a>Blog</a>
+              <Link
+                to="/blog"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                Blog
               </Link>
             </li>
-            <li>
-              <a href="/" className="get_a_btn">
-                GET A QUOTE
-              </a>
-              {/* <button class="custom-btn btn-15">Read More</button> */}
-            </li>
+            <Link to="">
+              <li
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="quote_btn btn-1 hover-filled-opacity">
+                  <span>GET A QUOTE</span>
+                </div>
+              </li>
+            </Link>
           </ul>
           <label htmlFor="menu-btn" className="btn menu-btn">
             <AiOutlineMenu />
