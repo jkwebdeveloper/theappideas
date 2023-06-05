@@ -4,7 +4,6 @@ import "./index.css";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import Home from "./pages/Home";
 import Footer from "./components/Footer";
-import AboutUs from "./components/Aboutus/AboutUs";
 import Header from "./components/Header/Header";
 import MobileAppDev from "./components/mobileAppDev/MobileAppDev";
 import WebDev from "./components/webDevelopment/WebDev";
@@ -76,6 +75,7 @@ import MobileAppToronto from "./pages/Sitemap/MobileAppToronto";
 import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
 import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
 import SiteMap from "./pages/SiteMap";
+import ABoutUs from "./pages/Company/ABoutUs";
 
 const App = () => {
   return (
@@ -87,7 +87,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
 
         {/* Company Link */}
-        <Route path="/aboutus" element={<AboutUs />} />
+        <Route path="/aboutus" element={<ABoutUs />} />
         <Route path="/life-at-tai" element={<LifeTAI />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/testimonial" element={<Testimonial />} />

@@ -428,8 +428,11 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="content_last content " style={{justifyContent:"flex-start"}}>
-                  <div className="row" style={{width:"28%"}}>
+                <div
+                  className="content_last content "
+                  style={{ justifyContent: "flex-start", padding: "10px 13px" }}
+                >
+                  <div className="row" style={{ width: "28%" }}>
                     <Link
                       to="/software-development"
                       onClick={() => {
@@ -466,7 +469,7 @@ const Header = () => {
                       </Link>
                     </ul>
                   </div>
-                  <div className="row" style={{width:"28%"}}>
+                  <div className="row" style={{ width: "28%" }}>
                     <Link
                       to="/designing-services"
                       onClick={() => {
@@ -503,7 +506,7 @@ const Header = () => {
                       </Link>
                     </ul>
                   </div>
-                  <div className="row" style={{width:"28%"}}>
+                  <div className="row" style={{ width: "28%" }}>
                     <Link>
                       <h4>
                         {" "}
@@ -780,7 +783,7 @@ const Header = () => {
               </label>
               <div className="mega-box">
                 <div className="content">
-                  <div className="row">
+                  <div className="row" style={{width:"32%"}}>
                     <Link>
                       <h4>
                         {" "}
@@ -822,7 +825,7 @@ const Header = () => {
                       </Link>{" "}
                     </ul>
                   </div>
-                  <div className="row">
+                  <div className="row" style={{width:"32%"}}>
                     <h4>
                       {" "}
                       <img
@@ -861,7 +864,7 @@ const Header = () => {
                       </Link>
                     </ul>
                   </div>
-                  <div className="row">
+                  <div className="row" style={{width:"32%"}}>
                     <h4>
                       {" "}
                       <img
