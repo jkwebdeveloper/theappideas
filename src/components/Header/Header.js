@@ -976,12 +976,8 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-            <Link to="">
-              <li
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
+            <Link to="#">
+              <li>
                 <div className="quote_btn btn-1 hover-filled-opacity">
                   <span>GET A QUOTE</span>
                 </div>
