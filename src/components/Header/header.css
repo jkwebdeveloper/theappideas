@@ -103,7 +103,7 @@
   position: absolute;
   left: 0;
   width: 100%;
-  padding: 0 30px;
+  padding: 0 90px;
   top: 85px;
   opacity: 0;
   visibility: hidden;
@@ -124,7 +124,8 @@
 }
 
 .mega-box .content.content_sub {
-  padding: 14px 0px;
+  padding: 14px 20px;
+  justify-content: space-between;
 }
 
 .mega-box .content .row {
@@ -358,7 +359,7 @@ li .get_a_btn {
     color: #f2f2f2;
     font-size: 16px;
     font-weight: 700;
-    padding-left: 20px;
+    padding-left: 10px;
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s ease;
@@ -429,6 +430,7 @@ li .get_a_btn {
 
   .row .mega-links li {
     margin: 0;
+    color: #fff;
   }
 
   .content .row header {
@@ -544,5 +546,5 @@ nav input {
 
 .menu_bottom_content_box {
   border-top: 1px solid #ececec;
-  padding: 0 90px;
+  /* padding: 0 90px; */
 }
