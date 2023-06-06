@@ -1,15 +1,15 @@
 import { React, useState, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
-import "../Workdone/work.css";
+import "../../components/Workdone/Work";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { BiMinusCircle } from "react-icons/bi";
 import { BiPlusCircle } from "react-icons/bi";
-import "./mobileAppDev.css";
+import "./mobileAppDevelopment.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../Testimonial/TestiMonial";
+import TestiMonial from "../../components/Testimonial/TestiMonial";
 // import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
 import mobileApp from "../../assets/images/SERVICES/Mobile-App-dev/Mobile App Development.svg";
 import Application from "../../assets/images/SERVICES/Mobile-App-dev/Mobile Application Development Company.svg";

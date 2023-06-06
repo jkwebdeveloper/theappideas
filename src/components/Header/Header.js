@@ -428,8 +428,11 @@ const Header = () => {
                     </ul>
                   </div>
                 </div>
-                <div className="content_last content " style={{justifyContent:"flex-start"}}>
-                  <div className="row" style={{width:"28%"}}>
+                <div
+                  className="content_last content "
+                  style={{ justifyContent: "flex-start" }}
+                >
+                  <div className="row" style={{ width: "28%" }}>
                     <Link
                       to="/software-development"
                       onClick={() => {
@@ -466,7 +469,7 @@ const Header = () => {
                       </Link>
                     </ul>
                   </div>
-                  <div className="row" style={{width:"28%"}}>
+                  <div className="row" style={{ width: "28%" }}>
                     <Link
                       to="/designing-services"
                       onClick={() => {
@@ -503,7 +506,7 @@ const Header = () => {
                       </Link>
                     </ul>
                   </div>
-                  <div className="row" style={{width:"28%"}}>
+                  <div className="row" style={{ width: "28%" }}>
                     <Link>
                       <h4>
                         {" "}
@@ -976,12 +979,8 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-            <Link to="">
-              <li
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
-                }}
-              >
+            <Link to="#">
+              <li>
                 <div className="quote_btn btn-1 hover-filled-opacity">
                   <span>GET A QUOTE</span>
                 </div>

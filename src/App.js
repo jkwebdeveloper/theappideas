@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import AboutUs from "./components/Aboutus/AboutUs";
 import Header from "./components/Header/Header";
-import MobileAppDev from "./components/mobileAppDev/MobileAppDev";
+import MobileAppDevelopment from "./pages/MobileAppDevelopment/MobileAppDevelopment";
 import WebDev from "./components/webDevelopment/WebDev";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
@@ -20,11 +20,11 @@ import HireIOSDev from "./pages/Hire Us/Hire Mobile App Dev/HireIOSDev";
 import FoodDelivery from "./pages/Solutions/DeliveryApp/FoodDelivery";
 import PopUp from "./components/PopUp";
 import Error404 from "./pages/Error404";
-import AndroidAppDev from "./pages/MobileAppDev/AndroidAppDev";
-import IphoneAppDev from "./pages/MobileAppDev/IphoneAppDev";
-import IpadAppDev from "./pages/MobileAppDev/IpadAppDev";
-import ReactNativeDev from "./pages/MobileAppDev/ReactNativeDev";
-import IOTAppDev from "./pages/MobileAppDev/IOTAppDev";
+import AndroidAppDevelopment from "./pages/MobileAppDevelopment/AndroidAppDevelopment";
+import IphoneAppDevelopment from "./pages/MobileAppDevelopment/IphoneAppDevelopment";
+import IpadAppDevelopment from "./pages/MobileAppDevelopment/IpadAppDevelopment";
+import ReactNativeDevelopment from "./pages/MobileAppDevelopment/ReactNativeDevelopment";
+import IOTAppDevelopment from "./pages/MobileAppDevelopment/IOTAppDevelopment";
 import HireAndroidDev from "./pages/Hire Us/Hire Mobile App Dev/HireAndroidDev";
 import HireReactNativeDev from "./pages/Hire Us/Hire Mobile App Dev/HireReactNativeDev";
 import HireFlutterDev from "./pages/Hire Us/Hire Mobile App Dev/HireFlutterDev";
@@ -95,7 +95,10 @@ const App = () => {
         <Route path="/our-process" element={<OurProcess />} />
 
         {/* Services Link */}
-        <Route path="/mobile-app-development" element={<MobileAppDev />} />
+        <Route
+          path="/mobile-app-development"
+          element={<MobileAppDevelopment />}
+        />
         <Route
           path="/Digital-Marketing-Agency"
           element={<DigitalMarketing />}
@@ -109,11 +112,20 @@ const App = () => {
         <Route path="/Software-Development" element={<SoftwareDev />} />
         <Route path="/Designing-Services" element={<Designing />} />
         <Route path="/Startup-Services" element={<StartupServices />} />
-        <Route path="/Android-App-Development" element={<AndroidAppDev />} />
-        <Route path="/IPhone-App-Development" element={<IphoneAppDev />} />
-        <Route path="/ipad-app-development" element={<IpadAppDev />} />
-        <Route path="/React-Native-Development" element={<ReactNativeDev />} />
-        <Route path="/IOT-App-Development" element={<IOTAppDev />} />
+        <Route
+          path="/Android-App-Development"
+          element={<AndroidAppDevelopment />}
+        />
+        <Route
+          path="/IPhone-App-Development"
+          element={<IphoneAppDevelopment />}
+        />
+        <Route path="/ipad-app-development" element={<IpadAppDevelopment />} />
+        <Route
+          path="/React-Native-Development"
+          element={<ReactNativeDevelopment />}
+        />
+        <Route path="/IOT-App-Development" element={<IOTAppDevelopment />} />
         <Route path="/seo" element={<SEO />} />
         <Route path="/Social-Media-Marketing" element={<SocialMedia />} />
         <Route path="/ASO-company" element={<ASO />} />
