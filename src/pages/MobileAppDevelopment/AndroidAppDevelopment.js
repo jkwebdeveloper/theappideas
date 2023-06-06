@@ -20,7 +20,7 @@ import { Link } from "react-router-dom";
 // import WorkHand from "../../components/WorkHand";
 
 const AndroidAppDev = () => {
-const [activeService, setactiveService] = useState("custom_mobile")
+  const [activeService, setactiveService] = useState("custom_mobile");
 
   useEffect(() => {
     AOS.init();
@@ -563,8 +563,16 @@ const [activeService, setactiveService] = useState("custom_mobile")
                 <div className="Title">
                   <h3 className="Title_heading">Experience and Expertise.</h3>
                   <p className="Title_para">
-                    The App Ideas is a popular web and app development company.
-                    Along with website development, we also offer the services
+                    The App Ideas is a popular web and{" "}
+                    <Link
+                      to="/mobile-app-development"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      <b>app development company </b>
+                    </Link>{" "}
+                    . Along with website development, we also offer the services
                     of the best Android app which helps in the growth of your
                     business or startups. Many business owners are shifting
                     towards the Android app platform because of its increasing
@@ -607,10 +615,15 @@ const [activeService, setactiveService] = useState("custom_mobile")
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <Link to="/contactus">
-                  <a className="contact_btn" style={{ color: "#000" }}>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <div className="contact_btn" style={{ color: "#000" }}>
                     Contact us{" "}
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>

@@ -5,8 +5,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 // import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
+import GetAQuoteModal from "../GetAQuoteModal";
 
-const Header = () => {
+const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState("");
 
   // on render, set listener
@@ -976,8 +977,8 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-            <Link to="#">
-              <li>
+            <Link to="">
+              <li onClick={() => setOpenModal(true)}>
                 <div className="quote_btn btn-1 hover-filled-opacity">
                   <span>GET A QUOTE</span>
                 </div>

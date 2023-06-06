@@ -266,23 +266,27 @@ const IphoneAppDev = () => {
                 <div className="Title">
                   <h3 className="Title_heading">Support And Maintenance</h3>
                   <p className="Title_para">
-                    Every IOS system or iPhone mobile app service requires
-                    support and maintenance services over time. As we can
-                    clearly observe that we can see the updates in the
-                    technology with the time period. New features and
-                    functionality are introducing as per the demands as well as
-                    the requirement of the users. Due to the newly introduced
-                    features in the technology, it is very important for you to
-                    keep maintaining your mobile app to keep the user engagement
-                    of the users.
+                    The popularity of the custom mobile app is getting increase
+                    day by day. Similarly, iPhone users are also liking the
+                    customize features in the mobile apps because by this they
+                    get the customize features and functionality as per the
+                    requirements. Nowadays, As per the depend many business
+                    owners and entrepreneurs are now planning to launch the
+                    custom mobile app in the market.
                   </p>
                   <p className="Title_para">
-                    The App Ideas is one of the most popular web and app
-                    development company. We have a team of highly skilled IOS
-                    developers who will also offer the best support and
-                    maintenance services to our clients. For all our iPhone apps
-                    we offer full lifecycle support right from the development
-                    phase to the launch and marketing.
+                    The App Ideas is one of the leading web and{" "}
+                    <Link
+                      to="/mobile-app-development"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      <b>app Development Company</b>
+                    </Link>
+                    We have a team of highly skilled iPhone app developers who
+                    are experts in developing custom iPhone app for all types of
+                    consumers niches, enterprises and diverse categories.
                   </p>
                 </div>
               </div>
@@ -384,9 +388,17 @@ const IphoneAppDev = () => {
                   </p>
                   <p className="Title_para">
                     The App Ideas has a group of a skilled and dedicated team of
-                    IOS developers with years of experience. We boast of a
-                    robust team of experienced iPhone app developers having
-                    proven expertise across multiple niches.
+                    <Link
+                      to="/hire-ios-developer"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      <b> IOS developers</b>
+                    </Link>
+                    with years of experience. We boast of a robust team of
+                    experienced iPhone app developers having proven expertise
+                    across multiple niches.
                   </p>
                 </div>
               </div>

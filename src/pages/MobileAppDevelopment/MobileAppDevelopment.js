@@ -285,9 +285,14 @@ const MobileAppDev = () => {
             <p>
               Over the years, with a team of Experienced, Skilled and Creative
               bunch of the{" "}
-              <a href="#">
+              <Link
+                to="/hire-us"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 <b>Mobile app developers</b>
-              </a>
+              </Link>
               and UI/UX designer, We have worked on various themes based as well
               as customized mobile app solution which will be best for your
               Business. We help our clients with innovative ideas and unique

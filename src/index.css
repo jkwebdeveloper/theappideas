@@ -1852,7 +1852,7 @@ section {
   color: #000;
   font-size: 24px;
   vertical-align: middle;
-  line-height:20px;
+  line-height: 20px;
   opacity: 1;
   position: absolute;
   top: 10px;
@@ -2157,7 +2157,7 @@ section {
   /* color: #000; */
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: start;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
@@ -4232,3 +4232,113 @@ section {
 }
 
 /* -------------------- Our_Process Css End -------------------- */
+
+/* -------------------- GET A QUOTE Start -------------------- */
+
+.contact_form_section {
+  height: 100vh;
+  position: absolute;
+  width: 100%;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+.contact_form_box {
+  max-width: 600px;
+  margin: 0 auto;
+  background-color: #fff;
+  box-shadow: 0 0 10px #00000029;
+  /* border-radius: 9px; */
+  position: absolute;
+  overflow: hidden;
+  z-index: 1;
+  transition: 0.7s;
+  width: 100%;
+  left: 50%;
+  transform: translate(-50%, 0);
+  height: 80vh;
+  top: 6rem;
+}
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(246 192 0 / 8%);
+  width: 100rem;
+  height: 100rem;
+  right: 0px;
+  z-index: -1;
+  top: 25rem;
+  border-radius: 50%;
+  transform: rotate(234deg);
+  left: -57rem;
+  transition: all 0.7s ease 0s;
+}
+.contact_form_box:hover .hover_color_bubble {
+  top: 2.9rem;
+  background: rgb(246 192 0 / 40%);
+}
+.contact_form_box::before {
+  content: "";
+  position: absolute;
+  background: rgb(246 192 0 / 8%);
+  width: 170px;
+  height: 400px;
+  z-index: -1;
+  transform: rotate(42deg);
+  right: -56px;
+  bottom: -111px;
+  border-radius: 35px;
+}
+
+.contact_form_box .comtact_header {
+  border-top: 5px solid #f6c000;
+  padding: 10px;
+  background: #f9f9f9;
+  text-align: center;
+}
+.contact_form_box .comtact_header h2 {
+  text-transform: uppercase;
+  font-weight: 700;
+  margin: 0;
+  font-size: 20px;
+}
+
+.contact_form_box .contact_body {
+  padding: 16px;
+  outline: none;
+}
+.contact_form_box .contact_body form input,
+.contact_form_box .contact_body form select {
+  padding: 10px;
+  border: 1px solid #bdbaba;
+  font-size: 16px;
+  color: #000;
+  width: 100%;
+  outline: none;
+}
+.contact_form_box .contact_body form input:focus,
+.contact_form_box .contact_body form textarea:focus,
+.contact_form_box .contact_body form select:focus {
+  box-shadow: none;
+  border: 1px solid #bdbaba;
+}
+.contact_form_box .contact_body form input::placeholder,
+.contact_form_box .contact_body form textarea::placeholder {
+  color: #333;
+  font-size: 16px;
+}
+.submit__btn {
+  padding: 12px 41px;
+  background: #f6c000;
+  color: #000;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  font-size: 18px;
+  border-radius: 50px;
+  border: none;
+}
+.contact_form_box:hover .submit__btn {
+  background-color: #2f0e39;
+  color: #fff;
+  border: none;
+}
+/* -------------------- GET A QUOTE End -------------------- */
