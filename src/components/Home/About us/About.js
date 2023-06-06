@@ -1,5 +1,6 @@
 import React from "react";
 import "./About.css";
+import { Link } from "react-router-dom";
 
 const About = () => {
   return (
@@ -27,6 +28,14 @@ const About = () => {
               small milestones to reach every milestone with client approval and
               confirmation.
             </p>
+            <Link
+              to="/aboutus"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              <div className="find_more_btn">Find out More</div>
+            </Link>
           </div>
           <div className="col-lg-6 col-md-12">
             <div className="About-left-heading">

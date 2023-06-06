@@ -5,8 +5,9 @@ import { AiOutlineMenu } from "react-icons/ai";
 // import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { Link } from "react-router-dom";
+import GetAQuoteModal from "../GetAQuoteModal";
 
-const Header = () => {
+const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState("");
 
   // on render, set listener
@@ -32,13 +33,11 @@ const Header = () => {
         <div className="wrapper">
           <div className="logo">
             <Link to="/">
-              <a href="/">
-                <img
-                  src={require("../../assets/images/Header/logo.png")}
-                  alt="logo"
-                  className="img-fluid"
-                />
-              </a>
+              <img
+                src={require("../../assets/images/Header/logo.png")}
+                alt="logo"
+                className="img-fluid"
+              />
             </Link>
           </div>
           <input type="radio" name="slider" id="menu-btn" />
@@ -48,11 +47,10 @@ const Header = () => {
               <AiOutlineClose />
             </label>
             <li>
-              <Link>
-                <a href="/" className="desktop-item">
-                  Company <MdKeyboardArrowDown />
-                </a>
+              <Link to="/" className="desktop-item">
+                Company <MdKeyboardArrowDown />
               </Link>
+
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Company <MdKeyboardArrowDown />
@@ -979,8 +977,8 @@ const Header = () => {
                 Blog
               </Link>
             </li>
-            <Link to="#">
-              <li>
+            <Link to="">
+              <li onClick={() => setOpenModal(true)}>
                 <div className="quote_btn btn-1 hover-filled-opacity">
                   <span>GET A QUOTE</span>
                 </div>

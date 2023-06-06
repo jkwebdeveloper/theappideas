@@ -7,6 +7,7 @@ import "swiper/css/navigation";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
+import { Link } from "react-router-dom";
 
 const MagentoDev = () => {
   const prevRef = useRef(null);
@@ -584,9 +585,15 @@ const MagentoDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
+                <Link
+                  to="/contactus"
+                  className="contact_btn"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   Contact us{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

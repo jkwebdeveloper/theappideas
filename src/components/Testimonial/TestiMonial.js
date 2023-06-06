@@ -1,5 +1,6 @@
 import React from "react";
 import "./testimonial.css";
+import { Link } from "react-router-dom";
 
 const TestiMonial = () => {
   return (
@@ -49,10 +50,24 @@ const TestiMonial = () => {
           </div>
         </div>
         <div className="row">
-          <div className="col-12">
-            <div className="testi-btn">
-              <button className="view-more-btn">View More</button>
-            </div>
+          <div className="col-12" style={{ textAlign: "center" }}>
+            <Link
+              to="/testimonial"
+              style={{ display: "inline-block" }}
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+              }}
+            >
+              <div className="testi-btn">
+                <button
+                  type="button"
+                  className="view-more-btn"
+                  style={{ cursor: "pointer" }}
+                >
+                  View More
+                </button>
+              </div>
+            </Link>
           </div>
         </div>
       </div>

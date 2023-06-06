@@ -10,6 +10,7 @@ import Competitive from "../../assets/images/MobileAppDev/Android App Developmen
 
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
+import { Link } from "react-router-dom";
 
 const ReactNativeDevelopment = () => {
   const [activeService, setActiveService] = useState("cross_platform");
@@ -320,9 +321,17 @@ const ReactNativeDevelopment = () => {
                       React Native Cross-Platform App Development
                     </h3>
                     <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. We are highly expert in offering the
-                      best software solution including the React Native app
+                      The App Ideas is one of the leading web and
+                      <Link
+                        to="/mobile-app-development"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        <b> app development company.</b>
+                      </Link>
+                      app development company. We are highly expert in offering
+                      the best software solution including the React Native app
                       development. If we talk about the React native
                       Cross-platform app development services then this is one
                       of the most demanding things in the market because using
@@ -957,9 +966,15 @@ const ReactNativeDevelopment = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="" className="contact_btn">
+                <Link
+                  to="/contactus"
+                  className="contact_btn"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   Contact us{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>

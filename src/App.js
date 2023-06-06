@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 // import Header from "./components/Header/Header";
 import "./index.css";
 import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
@@ -76,12 +76,18 @@ import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
 import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
 import SiteMap from "./pages/SiteMap";
 import ABoutUs from "./pages/Company/ABoutUs";
+import GetAQuoteModal from "./components/GetAQuoteModal";
 
 const App = () => {
+  const [openModal, setOpenModal] = useState(false);
+
   return (
     <BrowserRouter>
+      {/* get a quote modal */}
+      {openModal && <GetAQuoteModal setOpenModal={setOpenModal} />}
+
       {/* <Header /> */}
-      <Header />
+      <Header setOpenModal={setOpenModal} openModal={openModal} />
       <Routes>
         {/* Home page Link */}
         <Route path="/" element={<Home />} />

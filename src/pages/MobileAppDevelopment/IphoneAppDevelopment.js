@@ -316,166 +316,32 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeService === "custom_and_development" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Support And Maintenance</h3>
-                    <p className="Title_para">
-                      Every IOS system or iPhone mobile app service requires
-                      support and maintenance services over time. As we can
-                      clearly observe that we can see the updates in the
-                      technology with the time period. New features and
-                      functionality are introducing as per the demands as well
-                      as the requirement of the users. Due to the newly
-                      introduced features in the technology, it is very
-                      important for you to keep maintaining your mobile app to
-                      keep the user engagement of the users.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is one of the most popular web and app
-                      development company. We have a team of highly skilled IOS
-                      developers who will also offer the best support and
-                      maintenance services to our clients. For all our iPhone
-                      apps we offer full lifecycle support right from the
-                      development phase to the launch and marketing.
-                    </p>
-                  </div>
+            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_rht">
+                <div className="Title">
+                  <h3 className="Title_heading">Support And Maintenance</h3>
+                  <p className="Title_para">
+                    Every IOS system or iPhone mobile app service requires
+                    support and maintenance services over time. As we can
+                    clearly observe that we can see the updates in the
+                    technology with the time period. New features and
+                    functionality are introducing as per the demands as well as
+                    the requirement of the users. Due to the newly introduced
+                    features in the technology, it is very important for you to
+                    keep maintaining your mobile app to keep the user engagement
+                    of the users.
+                  </p>
+                  <p className="Title_para">
+                    The App Ideas is one of the most popular web and app
+                    development company. We have a team of highly skilled IOS
+                    developers who will also offer the best support and
+                    maintenance services to our clients. For all our iPhone apps
+                    we offer full lifecycle support right from the development
+                    phase to the launch and marketing.
+                  </p>
                 </div>
               </div>
-            )}
-            {activeService === "ui_ux" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">iPhone UI/UX design</h3>
-                    <p className="Title_para">
-                      Not only iPhone but if we talk about any other services
-                      then designing software development services plays a vital
-                      role in the success of any business or startup. The
-                      designing of the iPhone mobile app helps in attracting
-                      more users towards the services and convert them into
-                      leads or consumers.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is a leading web and app development
-                      company. Along with development, we have a team of expert
-                      designers who are experienced in providing the best
-                      designing services for different business categories. We
-                      provide sophisticated UI/UX design services for iPhone
-                      apps and ensure following the latest design and
-                      development trends.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeService === "app_design" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">iPhone App Redesign</h3>
-                    <p className="Title_para">
-                      iPhone App redesign is one of the best and popular
-                      services in this present time. Many business owners and
-                      entrepreneurs avoid these services which sometimes impact
-                      badly into their business. It is very important to focus
-                      on the redesigning of the mobile app from time to time as
-                      per the modern trend to increase user engagement.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. We have a team of highly skilled
-                      developers as well as designers who are experienced in
-                      redesigning the iPhone app services. For all existing
-                      iPhone apps, we provide a highly user-centric app redesign
-                      service to boost engagement and business conversion.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeService === "app_migration" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">iPhone App migration</h3>
-                    <p className="Title_para">
-                      iPhone mobile apps are getting highly popular in the
-                      market because the number of IOS users are increasing day
-                      by day. This is the main reason why business owners and
-                      startups are getting into the iPhone app development and
-                      some of the businesses are also converting their services
-                      from different operating systems to IOS operating systems.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is one of the best software development
-                      company. We have a team of highly skilled iPhone app
-                      developers who provide the successful migration of the
-                      iPhone app. We help to migrate your existing website and
-                      the Android app to the iPhone app while ensuring a user
-                      experience optimised for the iPhone platform.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeService === "game_development" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">iPhone Game Development</h3>
-                    <p className="Title_para">
-                      We are from The App Ideas which is a leading web and app
-                      development company. We offer the best mobile app
-                      development services for both the operating system
-                      including the Android and IOS mobile app development
-                      services for the growth of the business or startups.
-                      iPhone mobile app solutions are highly popular in this
-                      present time.
-                    </p>
-                    <p className="Title_para">
-                      Similarly, if we talk about game app development then
-                      iPhone game app services are getting popular day by day.
-                      iPhone game app services are platforms that are compatible
-                      with mobile apps as well as other IOS devices. We have a
-                      team of highly skilled developers who are experts in
-                      building highly addictive iPhone games that can
-                      consistently generate revenue by offering an immersive
-                      gaming experience.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeService === "support_and_maintainance" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Support and maintenance</h3>
-                    <p className="Title_para">
-                      Every IOS system or iPhone mobile app service requires
-                      support and maintenance services over time. As we can
-                      clearly observe that we can see the updates in the
-                      technology with the time period. New features and
-                      functionality are introducing as per the demands as well
-                      as the requirement of the users. Due to the newly
-                      introduced features in the technology, it is very
-                      important for you to keep maintaining your mobile app to
-                      keep the user engagement of the users.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is one of the most popular web and app
-                      development company. We have a team of highly skilled IOS
-                      developers who will also offer the best support and
-                      maintenance services to our clients. For all our iPhone
-                      apps we offer full lifecycle support right from the
-                      development phase to the launch and marketing.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </section>
@@ -610,151 +476,27 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expersite" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Experience and Expertise.</h3>
-                    <p className="Title_para">
-                      The App Ideas is one of the leading app and web
-                      development. We have a team of high experts and
-                      experienced iPhone app developers which helps in the
-                      growth of your business or startups. Many startups and
-                      businesses are shifting towards mobile app development or
-                      IOS platforms to increase user engagement.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas has a group of a skilled and dedicated team
-                      of IOS developers with years of experience. We boast of a
-                      robust team of experienced iPhone app developers having
-                      proven expertise across multiple niches.
-                    </p>
-                  </div>
+            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_rht">
+                <div className="Title">
+                  <h3 className="Title_heading">Experience and Expertise.</h3>
+                  <p className="Title_para">
+                    The App Ideas is one of the leading app and web development.
+                    We have a team of high experts and experienced iPhone app
+                    developers which helps in the growth of your business or
+                    startups. Many startups and businesses are shifting towards
+                    mobile app development or IOS platforms to increase user
+                    engagement.
+                  </p>
+                  <p className="Title_para">
+                    The App Ideas has a group of a skilled and dedicated team of
+                    IOS developers with years of experience. We boast of a
+                    robust team of experienced iPhone app developers having
+                    proven expertise across multiple niches.
+                  </p>
                 </div>
               </div>
-            )}
-            {activeWhyChoose === "robust_portfolio" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Robust portfolio</h3>
-                    <p className="Title_para">
-                      It is very important for you to check the portfolio of the
-                      software development services you are about to hire for
-                      development. It is very important for you to have a look
-                      at the past projects because this will help you to get a
-                      clear idea about their experience in iPhone mobile app
-                      development.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is one of the popular software development
-                      company. We have a team of a highly expert team of
-                      developers who will offer the best solution for all types
-                      of business categories. We boast a portfolio of several
-                      successful iPhone apps across diverse niches and
-                      categories.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeWhyChoose === "ui_ux" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Unique UI/UX</h3>
-                    <p className="Title_para">
-                      If we talk about designing then this is one of the most
-                      important factors behind the success of any software
-                      solution including web and mobile apps Along with the
-                      development services, we also offer the best designing
-                      services for iPhone mobile apps.
-                    </p>
-                    <p className="Title_para">
-                      A proper design of your iPhone mobile app plays a very
-                      vital role in its success because designing can help you
-                      to increase the engagement of the users towards your
-                      services. The App Ideas offer the unique design of the
-                      software development. With each of our iPhone apps, we
-                      deliver a highly unique and user optimised user interface
-                      and user experience.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeWhyChoose === "agile_development" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Agile Development</h3>
-                    <p className="Title_para">
-                      The demand for the iPhone mobile app is increasing because
-                      it offers the convenience of using the services as per
-                      comfort. More than half of the population are using
-                      smartphones this is the main reason behind the shifting of
-                      business owners towards online platforms.
-                    </p>
-                    <p className="Title_para">
-                      We are from The App Ideas which is a leading web and app
-                      development. We strictly follow the agile app development
-                      methodology to ensure faster development without
-                      compromising on quality.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeWhyChoose === "deadline_milestones" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">
-                      Meet Deadlines and Milestones
-                    </h3>
-                    <p className="Title_para">
-                      The App Ideas is one of the software development services
-                      which offers the best web and app services for different
-                      categories. We mainly follow the deadlines and milestones
-                      for the deployment of the software development services.
-                    </p>
-                    <p className="Title_para">
-                      We divide the whole project into milestones, so we can
-                      work on the small parts of the project, ask for the
-                      client’s confirmation and then move to the other part of
-                      the project development. Without iPhone app development
-                      services, we strictly ensure meeting deadlines and project
-                      milestones.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
-            {activeWhyChoose === "competitive_pricing" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                <div className="service_rht">
-                  <div className="Title">
-                    <h3 className="Title_heading">Competitive Pricing</h3>
-                    <p className="Title_para">
-                      If you are thinking of launching an iPhone mobile app
-                      solution in the market for your business or startups then
-                      this is the right time for making an investment. The best
-                      iPhone mobile app can help you to stand out differently
-                      among the competition and increase user engagement towards
-                      the business.
-                    </p>
-                    <p className="Title_para">
-                      The App Ideas is one of the leading software development
-                      company. We have a team of highly skilled app and web
-                      developers who offer successful solutions at the best
-                      price. We offer highly competitive pricing for our iPhone
-                      app development services that remind affordable for every
-                      scale industry.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            )}
+            </div>
           </div>
         </div>
       </section>

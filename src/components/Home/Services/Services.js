@@ -4,6 +4,7 @@ import background1 from "../../../assets/images/Home-our-services/download (1).p
 import { HiOutlineArrowRight } from "react-icons/hi";
 import "./services.css";
 import { Link } from "react-router-dom";
+import { Button } from "react-bootstrap";
 
 const Services = () => {
   return (
@@ -44,17 +45,27 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <Link to="/web-development">
-                    <a>WEB DEVELOPMENT</a>
+                  <Link
+                    to="/web-development"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    <div>WEB DEVELOPMENT</div>
                   </Link>
                 </h5>
                 <div className="text">
                   We help you build robust web presence with our expertise ...
                 </div>
-                <Link to="/web-development">
-                  <a className="arrow-icon">
+                <Link
+                  to="/web-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <div className="arrow-icon">
                     <HiOutlineArrowRight />
-                  </a>
+                  </div>
                 </Link>
               </div>
             </div>
@@ -81,14 +92,28 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/e-commerce-website-development">E-COMMERCE DEVELOPMENT</a>
+                  <Link
+                    to="/e-commerce-website-development"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    E-COMMERCE DEVELOPMENT
+                  </Link>
                 </h5>
                 <div className="text">
                   We help your business connect to the customers over ...
                 </div>
-                <a href="/e-commerce-website-development" className="arrow-icon">
-                  <HiOutlineArrowRight />
-                </a>
+                <Link
+                  to="/e-commerce-website-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <div className="arrow-icon">
+                    <HiOutlineArrowRight />
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
@@ -114,14 +139,28 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">MOBILE APP DEVELOPMENT</a>
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    MOBILE APP DEVELOPMENT
+                  </Link>
                 </h5>
                 <div className="text">
                   We assist your brand to enjoy the edge of mobile by ...
                 </div>
-                <a href="/services" className="arrow-icon">
-                  <HiOutlineArrowRight />
-                </a>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <div className="arrow-icon">
+                    <HiOutlineArrowRight />
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
@@ -147,14 +186,28 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">INTERNET OF THINGS</a>
+                  <Link
+                    to="/iot-app-development"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    INTERNET OF THINGS
+                  </Link>
                 </h5>
                 <div className="text">
                   We build intuitive mobile apps connecting the gadgets in ...
                 </div>
-                <a href="/services" className="arrow-icon">
-                  <HiOutlineArrowRight />
-                </a>
+                <Link
+                  to="/iot-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <div className="arrow-icon">
+                    <HiOutlineArrowRight />
+                  </div>
+                </Link>
               </div>
             </div>
             <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
@@ -180,15 +233,28 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">GAME DEVELOPMENT</a>
+                  <Link
+                    to="/"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    GAME DEVELOPMENT
+                  </Link>
                 </h5>
                 <div className="text">
                   We build 2D & 3D engaging and addictive mobile games for all
                   ...
                 </div>
-                <a href="/services" className="arrow-icon">
+                <Link
+                  to="/"
+                  className="arrow-icon"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   <HiOutlineArrowRight />
-                </a>
+                </Link>
               </div>
             </div>
             <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
@@ -214,15 +280,28 @@ const Services = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">HIRE A DEVELOPER</a>
+                  <Link
+                    to="/hire-us"
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
+                  >
+                    HIRE A DEVELOPER
+                  </Link>
                 </h5>
                 <div className="text">
                   The App Ideas providing best skilled, experienced developers
                   ...
                 </div>
-                <a href="/services" className="arrow-icon">
+                <Link
+                  to="/hire-us"
+                  className="arrow-icon"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   <HiOutlineArrowRight />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

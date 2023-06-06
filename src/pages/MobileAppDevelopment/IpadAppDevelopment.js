@@ -3,8 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
-import AR from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad AR and VR apps.svg"
-import chat from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad Chat Apps.svg"
+import AR from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad AR and VR apps.svg";
+import chat from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad Chat Apps.svg";
 import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
 import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
 import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
@@ -15,6 +15,7 @@ import Competitive from "../../assets/images/MobileAppDev/Android App Developmen
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
 import WorkHand from "../../components/WorkHand";
+import { Link } from "react-router-dom";
 
 const IpadAppDev = () => {
   useEffect(() => {
@@ -314,7 +315,16 @@ const IpadAppDev = () => {
               and visually enticing UI. Our Android app development service over
               the years contributed to the commercial success of many businesses
               and helped them carve out a competitive mobile presence. Let’s
-              mention the key reasons to choose us for Android app development.
+              mention the key reasons to choose us for{" "}
+              <Link
+                to="/android-app-development"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                {" "}
+                <b>Android app development.</b>
+              </Link>
             </p>
           </div>
           <div className="row mt-5">
@@ -390,11 +400,20 @@ const IpadAppDev = () => {
                 <div className="Title">
                   <h3 className="Title_heading">Experience and Expertise.</h3>
                   <p className="Title_para">
-                    We are from The App Ideas is a leading web and app
-                    development company. We offer website development services
-                    as well as the best iPad App development service which will
-                    helps businesses to grow and increase the engagement of the
-                    users towards your services.
+                    We are from{" "}
+                    <Link
+                      to="/"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      {" "}
+                      <b>The App Ideas</b>
+                    </Link>{" "}
+                    is a leading web and app development company. We offer
+                    website development services as well as the best iPad App
+                    development service which will helps businesses to grow and
+                    increase the engagement of the users towards your services.
                   </p>
                   <p className="Title_para">
                     Before hiring any software development company, it is very
@@ -425,15 +444,22 @@ const IpadAppDev = () => {
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
                 <p style={{ textAlign: "left" }}>
-                Are you planning to launch a Successful iPad Mobile app in the market?
+                  Are you planning to launch a Successful iPad Mobile app in the
+                  market?
                 </p>
               </div>
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
+                <Link
+                  to="/contactus"
+                  className="contact_btn"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   Contact us{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
