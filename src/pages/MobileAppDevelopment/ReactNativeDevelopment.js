@@ -11,8 +11,12 @@ import Competitive from "../../assets/images/MobileAppDev/Android App Developmen
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
 
-const ReactNativeDev = () => {
+const ReactNativeDevelopment = () => {
   const [activeService, setActiveService] = useState("cross_platform");
+  const [activeWhyChoose, setActiveWhyChoose] = useState(
+    "experience_expertise"
+  );
+
   return (
     <>
       {/* Banner Section Start */}
@@ -486,7 +490,7 @@ const ReactNativeDev = () => {
       </section>
       {/* Service Section End */}
 
-      {/* Work Head Section Start */}
+      {/* Work Head done Section Start */}
       <section className="work_head_section py-5">
         <div className="container">
           <div className="Title">
@@ -637,7 +641,7 @@ const ReactNativeDev = () => {
           </div>
         </div>
       </section>
-      {/* Work Head Section End */}
+      {/* Work Head done Section End */}
 
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -650,10 +654,16 @@ const ReactNativeDev = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "experience_expertise" &&
+                      "service__provide_tab_active"
+                    } `}
                   >
                     <img
                       src={Experience}
@@ -663,8 +673,17 @@ const ReactNativeDev = () => {
                     <p>Experience and Expertise.</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("unmatched_protfolio")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "unmatched_protfolio" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={Robust}
                       alt="Robust-Portfolio"
@@ -673,8 +692,17 @@ const ReactNativeDev = () => {
                     <p>Unmatched Portfolio</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("dynamic_capabilities")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "dynamic_capabilities" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={Lifecycle}
                       alt="Full-Lifecycle-Support"
@@ -683,8 +711,18 @@ const ReactNativeDev = () => {
                     <p>Dynamic Capabilities</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("agile_development")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "agile_development" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    {" "}
                     <img
                       src={Agile}
                       alt="Agile-Development"
@@ -693,8 +731,18 @@ const ReactNativeDev = () => {
                     <p>Agile Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "competitive_pricing" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    {" "}
                     <img
                       src={Fast}
                       alt="Fast-Paced-Development"
@@ -703,8 +751,18 @@ const ReactNativeDev = () => {
                     <p>Competitive Pricing</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("sticking_to_deadlines")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "sticking_to_deadlines" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    {" "}
                     <img
                       src={Competitive}
                       alt="Competitive-Pricing"
@@ -715,26 +773,163 @@ const ReactNativeDev = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Experience and Expertise.</h3>
-                  <p className="Title_para">
-                    We are from The App Ideas is a leading web and app
-                    development company. We offer website development services
-                    as well as the best iPad App development service which will
-                    helps businesses to grow and increase the engagement of the
-                    users towards your services.
-                  </p>
-                  <p className="Title_para">
-                    Before hiring any software development company, it is very
-                    important for you to know the expertise of the team. We
-                    offer a talented pool of Ipad developers having years of
-                    experience proven expertise and great credentials.
-                  </p>
+            {activeWhyChoose === "experience_expertise" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Experience and Expertise.</h3>
+                    <p className="Title_para">
+                      We are from The App Ideas is a leading web and app
+                      development company. We offer website development services
+                      as well as the best iPad App development service which
+                      will helps businesses to grow and increase the engagement
+                      of the users towards your services.
+                    </p>
+                    <p className="Title_para">
+                      Before hiring any software development company, it is very
+                      important for you to know the expertise of the team. We
+                      offer a talented pool of Ipad developers having years of
+                      experience proven expertise and great credentials.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+
+            {activeWhyChoose === "unmatched_protfolio" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Unmatched Portfolio</h3>
+                    <p className="Title_para">
+                      If you are planning to launch a cross-platform mobile app
+                      in the market using React Native technology then it is
+                      very important for you that before hiring check the
+                      portfolio of the software development company. It is a
+                      must require to check the past projects to get a clear
+                      understanding of the expertise in React Native app
+                      development.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a team of highly skilled
+                      React Native developers who offer the best solution for
+                      all types of business categories including customization.
+                      We have a robust and unmatched portfolio of too many
+                      successful React Native apps developers over years for all
+                      niches and categories.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeWhyChoose === "dynamic_capabilities" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Dynamic Capabilities</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular and successful
+                      software development services which includes mobile app
+                      development, web app development and website development.
+                      If you are planning to launch a successful React Native
+                      mobile app in the market then choose us.
+                    </p>
+                    <p className="Title_para">
+                      We are highly expert as well as experienced in offering
+                      the best software solution and satisfy our clients with
+                      our designing as well as development services. We boast
+                      dynamic capabilities to utilise the power of React Native
+                      framework and have built a wide array of successful and
+                      feature-rich apps with the framework.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeWhyChoose === "agile_development" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Agile development</h3>
+                    <p className="Title_para">
+                      If we check the market then there are thousands of mobile
+                      app solutions available in the market. So it is very
+                      important for you to check the market before developing
+                      your business mobile app. If you are planning to target a
+                      high number of users then it is highly recommended to
+                      choose React Native Technology for cross mobile app
+                      development.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas which is one of the most popular
+                      web and app development company. Our developer’s team
+                      strictly follow the agile methodology for every software
+                      development. We follow the agile development process to
+                      ensure optimum speed, accuracy, precision and
+                      sophistication in mobile app development with a positive
+                      impact on development cost and time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeWhyChoose === "competitive_pricing" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Competitive Pricing</h3>
+                    <p className="Title_para">
+                      If you have already made your mind to launch to cross
+                      platforms technology using React Native Technology then
+                      this is the right time for you to make an investment. You
+                      will target Android users as well as IOS users with a
+                      single mobile app platform. A better mobile app can help
+                      you to stand out differently among the competitions and
+                      increase user engagement.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular software
+                      development company. We have a team of proficient React
+                      Native app developers who offer the best solution. We
+                      offer to React Native development services at a
+                      tremendously competitive rate as per the industry standard
+                      while always making sure that we don’t compromise with the
+                      quality.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+
+            {activeWhyChoose === "sticking_to_deadlines" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Sticking to deadlines</h3>
+                    <p className="Title_para">
+                      We are from The App Ideas, which is a leading web and app
+                      development company. We offer the best web and mobile app
+                      development services for different business categories. We
+                      strictly follow the agile methodology as well as sticking
+                      to the deadlines for the deployment of the best mobile app
+                      services to our clients.
+                    </p>
+                    <p className="Title_para">
+                      As we follow the agile methodology, we divide the project
+                      into small milestones, so we can work on the project in
+                      parts and ask for confirmation from the clients before
+                      moving further. We help our companies lead in respect of
+                      faster time to market by strictly completing the projects
+                      within deadlines and maintaining project milestones.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -775,4 +970,4 @@ const ReactNativeDev = () => {
   );
 };
 
-export default ReactNativeDev;
+export default ReactNativeDevelopment;
