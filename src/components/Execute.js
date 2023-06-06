@@ -13,10 +13,15 @@ const Execute = () => {
           </div>
           <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
             <div className="contact__rht">
-              <Link to="/contactus">
-                <a className="contact_btn" style={{color:"#000"}}>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="contact_btn" style={{ color: "#000" }}>
                   Contact us{" "}
-                </a>
+                </div>
               </Link>
             </div>
           </div>

@@ -359,9 +359,15 @@ const ABoutUs = () => {
                   smooth deployment to ensure smooth operation as it was meant
                   to deliver.
                 </p>
-                <a href="#" className="check_out_btn">
+                <Link
+                  to="/our-process"
+                  className="check_out_btn"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   Check Out Our Process
-                </a>
+                </Link>
               </div>
             </div>
           </div>
@@ -428,9 +434,15 @@ const ABoutUs = () => {
                   best possible way. If you are looking for a job then feel free
                   to reach us and join our team.
                 </p>
-                <a href="#" className="join-team-btn">
+                <Link
+                  to="/our-team"
+                  className="join-team-btn"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   Join Our Team
-                </a>
+                </Link>
               </div>
             </div>
           </div>

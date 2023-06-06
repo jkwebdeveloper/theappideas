@@ -40,7 +40,20 @@
   font-size: 18px;
   font-weight: 500;
 }
-
+.find_more_btn {
+  width: 180px;
+  background-color: #f6c000;
+  color: #000;
+  padding: 10px;
+  text-align: center;
+  border-radius: 25px;
+  font-weight: 600;
+}
+.find_more_btn:hover {
+  /* border: 1px solid #f6c000; */
+  background-color: #2f0e39;
+  color: #fff;
+}
 .achievements__section {
   display: flex;
   justify-content: space-between;

@@ -32,13 +32,11 @@ const Header = () => {
         <div className="wrapper">
           <div className="logo">
             <Link to="/">
-              <a href="/">
-                <img
-                  src={require("../../assets/images/Header/logo.png")}
-                  alt="logo"
-                  className="img-fluid"
-                />
-              </a>
+              <img
+                src={require("../../assets/images/Header/logo.png")}
+                alt="logo"
+                className="img-fluid"
+              />
             </Link>
           </div>
           <input type="radio" name="slider" id="menu-btn" />
@@ -48,11 +46,10 @@ const Header = () => {
               <AiOutlineClose />
             </label>
             <li>
-              <Link>
-                <a href="/" className="desktop-item">
-                  Company <MdKeyboardArrowDown />
-                </a>
+              <Link to="/" className="desktop-item">
+                Company <MdKeyboardArrowDown />
               </Link>
+
               <input type="checkbox" id="showMega" />
               <label htmlFor="showMega" className="mobile-item">
                 Company <MdKeyboardArrowDown />
@@ -783,7 +780,7 @@ const Header = () => {
               </label>
               <div className="mega-box">
                 <div className="content">
-                  <div className="row" style={{width:"32%"}}>
+                  <div className="row" style={{ width: "32%" }}>
                     <Link>
                       <h4>
                         {" "}
@@ -825,7 +822,7 @@ const Header = () => {
                       </Link>{" "}
                     </ul>
                   </div>
-                  <div className="row" style={{width:"32%"}}>
+                  <div className="row" style={{ width: "32%" }}>
                     <h4>
                       {" "}
                       <img
@@ -864,7 +861,7 @@ const Header = () => {
                       </Link>
                     </ul>
                   </div>
-                  <div className="row" style={{width:"32%"}}>
+                  <div className="row" style={{ width: "32%" }}>
                     <h4>
                       {" "}
                       <img
