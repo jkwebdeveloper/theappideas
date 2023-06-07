@@ -39,9 +39,12 @@ import health from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Se
 import { Link } from "react-router-dom";
 
 const MobileAppDev = () => {
+  const [selected, setSelected] = useState(null);
+  const [activeService, setActiveService] = useState("iphone_app");
+  const [activeServe, setActiveServe] = useState("shopping");
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
-  const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
     if (selected === i) {
@@ -284,7 +287,7 @@ const MobileAppDev = () => {
             <h3>Services we provide</h3>
             <p>
               Over the years, with a team of Experienced, Skilled and Creative
-              bunch of the{" "}
+              bunch of the &nbsp;
               <Link
                 to="/hire-us"
                 onClick={() => {
@@ -303,10 +306,16 @@ const MobileAppDev = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("iphone_app")}
+                >
                   <a
-                    href="#"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "iphone_app" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={IPhoneapp}
@@ -318,8 +327,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("iphone_mobile")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "iphone_mobile" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Ipadeapp}
                       alt="smartphone-tablet"
@@ -331,8 +349,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("android_app")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "android_app" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Androidapp}
                       alt="smartphone-tablet"
@@ -343,8 +370,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("android_tablet")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "android_tablet" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Androidtablet}
                       alt="smartphone-tablet"
@@ -356,8 +392,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("mobile_app")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "mobile_app" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Reskinning}
                       alt="smart-watch"
@@ -368,8 +413,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("mobile_app_redesign")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "mobile_app_redesign" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Redesigning}
                       alt="Mobile-App-Redesigning"
@@ -380,8 +434,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("mobile_app_upgrade")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "mobile_app_upgrade" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Upgradation}
                       alt="Mobile-App-Upgradation"
@@ -392,8 +455,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("mobile_app_support")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "mobile_app_support" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Mobileappsupport}
                       alt="service-icon"
@@ -404,8 +476,17 @@ const MobileAppDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("crossplatform")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab  ${
+                      activeService === "crossplatform" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Crossplatform}
                       alt="Cross-platform-Mobile-Apps"
@@ -418,37 +499,327 @@ const MobileAppDev = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">IPhone App Development</h3>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading web as well as mobile
-                    app development company. We are highly experienced in
-                    providing the best Mobile app services for Android devices
-                    as well as for IOS devices. We have a team of highly skilled
-                    IOS app developers who are efficient in providing successful
-                    iPhone app development services. We are highly expert in
-                    deploying successful iPhone Mobile app development as per
-                    the client’s requirements.
-                  </p>
-                  <p className="Title_para">
-                    Are you looking for the best iPhone App Development
-                    services?
-                  </p>
-                  <p className="Title_para">
-                    If Yes, then without taking much time, let’s get connected.
-                    We are happy to help you to launch a successful iPhone
-                    Mobile app services which will be very profitable for your
-                    business. We mainly follow the steps like initially, we
-                    gather the requirements, analyze the client’s requirements,
-                    have a meeting for clearing all the doubt of the clients,
-                    divide the overall project into milestones, take clients
-                    approval in every stage and deliver the project on time.
-                  </p>
+            {activeService === "iphone_app" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">IPhone App Development</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web as well as mobile
+                      app development company. We are highly experienced in
+                      providing the best Mobile app services for Android devices
+                      as well as for IOS devices. We have a team of highly
+                      skilled IOS app developers who are efficient in providing
+                      successful iPhone app development services. We are highly
+                      expert in deploying successful iPhone Mobile app
+                      development as per the client’s requirements.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best iPhone App Development
+                      services?
+                    </p>
+                    <p className="Title_para">
+                      If Yes, then without taking much time, let’s get
+                      connected. We are happy to help you to launch a successful
+                      iPhone Mobile app services which will be very profitable
+                      for your business. We mainly follow the steps like
+                      initially, we gather the requirements, analyze the
+                      client’s requirements, have a meeting for clearing all the
+                      doubt of the clients, divide the overall project into
+                      milestones, take clients approval in every stage and
+                      deliver the project on time.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}{" "}
+            {activeService === "iphone_mobile" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      IPad Mobile app development
+                    </h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading iPad mobile app
+                      development. We offer the best mobile app development
+                      services that assist various startups and businesses in
+                      converting their offline business to online business. We
+                      have a team of highly skilled and experienced developers
+                      in designing and developing mobile app solution which is
+                      stable, customize and can be future of the industry.
+                    </p>
+                    <p className="Title_para">
+                      In our portfolio section, you can check our past projects.
+                      Our iPad app developers are proficient in providing the
+                      best mobile app services for different niches and
+                      categories of the business. We first gather the overall
+                      requirements from the clients, analyze the requirements,
+                      arrange a meeting with the clients, provide a proposal and
+                      then after clearly everything finalizes the project at the
+                      best rates. For every mobile app and web app development
+                      including iPad app development, we strictly follow the
+                      agile methodology.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best iPad Mobile App Development
+                      Firm? <br /> If Yes, then feel free to reach us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "android_app" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Android Mobile app development{" "}
+                    </h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the top Android Mobile app
+                      development. We offer Mobile app development services that
+                      help various businesses and startups to digitalize their
+                      services and make them successful in the market. We have a
+                      team of highly skilled Android Mobile app developers who
+                      have years of experience in developing Mobile applications
+                      that are Stable, customize, future of the industry as well
+                      as a fully functional solution for an Android Mobile App.
+                    </p>
+                    <p className="Title_para">
+                      We have experience in developing Android Mobile app
+                      development for various niches and categories of the
+                      business. We initially gather the requirements from our
+                      clients, analyze them, discuss them further with the
+                      clients and finalize the project at the best rates. We
+                      mainly work on the agile methodology in which we divide
+                      projects into small milestones, start working on the
+                      projects and takes clients confirmation at every step.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best Android Mobile App
+                      Development Firm? <br /> If Yes, then feel free to reach
+                      us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "android_tablet" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Android Tablet app development{" "}
+                    </h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading software development
+                      company which offers Android Tablet app development
+                      services. Nowadays, along with the web and mobile app
+                      development, users are also more inclined towards the
+                      different sizes of devices for convenience. Due to the
+                      increasing popularity of Android devices, the demand for
+                      the Android app is also increased for different devices.
+                    </p>
+                    <p className="Title_para">
+                      Many of the businesses or startups are also making
+                      investments in the development of the Android Tablet app.
+                      We can initially gather, understand and analyze the
+                      requirements in a proper way. After that, our experts also
+                      suggest some of the changes to the requirements by keeping
+                      the future as a reference and then finalize the project at
+                      the best rates.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for services for successful Android Tablet
+                      app Development? <br /> If yes, then feel free to reach
+                      and discuss further.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "mobile_app" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Mobile App Reskinning </h3>
+                    <p className="Title_para">
+                      Currently, the field like Shopping and E-commerce business
+                      is booming in the market. Along with all the digital
+                      services, the E-commerce business, as well as Shopping
+                      markets, are converting their services into online
+                      platforms like websites, web apps and mobile apps in the
+                      market. In this digital era, many users are shifting
+                      towards the digital platform because it offers the
+                      convenience of services, time-saving and cost-effective
+                      for the people. Many of the new business owners and
+                      entrepreneurs are making high investments in an E-commerce
+                      store because the demand for these services is increasing
+                      day by day.
+                    </p>
+                    <p className="Title_para">
+                      E-commerce(Electronic Commerce) and Shopping is an online
+                      platform that helps in buying and selling goods as well as
+                      the services, transmitting of data and funds and the major
+                      requirement is the Internet. This business transaction
+                      occurs in business to business, consumer to consumer,
+                      business to consumer and consumer to business. E-commerce
+                      also encompasses other activities including internet
+                      banking, online auctions, online ticketing and payment
+                      gateways.
+                    </p>
+                    <p className="Title_para">
+                      Are you thinking of launching any Shopping and E-commerce
+                      digital solutions in the market? <br /> If Yes then feel
+                      free to reach us and get a free quote.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "mobile_app_redesign" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Mobile App Redesigning</h3>
+                    <p className="Title_para">
+                      Mobile app redesigning is one of the most popular services
+                      in the current trends. Some of the business owners
+                      launched the beta version before launching the final
+                      product in the market to gets user feedback. After
+                      gathering get feedback, sometimes mobile app owner has to
+                      redesign their mobile app before launching it into the
+                      market. Mobile App redesigning is a very important service
+                      because from time to time mobile app needs to be redesign
+                      to make them better as well as attractive as per the
+                      trend.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. Along with the best development
+                      services, we also offer the best mobile app designing and
+                      redesigning services at the best rates. We first gather
+                      the client’s requirements, understand as well as analyze
+                      them and then start the process. We have a team of highly
+                      skilled designers who will provide the best Mobile app
+                      redesigning services at the best rates.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best Mobile app Redesigning?
+                      <br /> If Yes, then feel free to reach us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "mobile_app_upgrade" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Mobile App Upgradation</h3>
+                    <p className="Title_para">
+                      Mobile App upgradation is very important for business
+                      owners who have a mobile application or who are running
+                      their business through a mobile app. With the timings,
+                      things need to change or upgrade like a mobile app to keep
+                      it relevant with the current business. To stay ahead with
+                      the competitors it is very important for you to upgrade
+                      your mobile app from time to time.
+                    </p>
+                    <p className="Title_para">
+                      Mobile app upgradation helps business owners to integrate
+                      newly introduced features and functionality into the app.
+                      If you observe the current trend then you can Clearly
+                      observe that an operating system updates in a short time
+                      period. Along with the mobile app development, The App
+                      Ideas also offer the services of Mobile app upgradation at
+                      the best possible price without changing the concept of
+                      the mobile app.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best Mobile App upgradation?
+                      <br />
+                      If Yes, then feel free to reach us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "mobile_app_support" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Mobile app Support and maintenance
+                    </h3>
+                    <p className="Title_para">
+                      Along with the mobile app and web app development, The App
+                      Ideas also offers the services like Mobile app Support and
+                      maintenance. The services and maintenance of the mobile
+                      app play a crucial role in the success of the business or
+                      an online business. Many of the business owners avoid
+                      these support and maintenance services which lead to the
+                      failure of the mobile app after some period because it is
+                      very important to maintain the code from time to time to
+                      make it compatible with the newly introduced software
+                      updates.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas offers the services of web and mobile app
+                      development, the UI/UX designing of the software as well
+                      as also offers the support and maintenance services after
+                      deploying the projects to the clients. We keep our team
+                      updated with the newly introduced technology and updates
+                      in the codes.
+                    </p>
+                    <p className="Title_para">
+                      If you are looking for Mobile app support and maintenance
+                      services then feel free to reach us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "crossplatform" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Cross-platform Mobile Apps
+                    </h3>
+                    <p className="Title_para">
+                      Nowadays, Cross-platform technology is getting popular day
+                      by day because there is a huge range of mobile devices and
+                      platforms are available in the market. Mobile app
+                      flexibility is very important in this present time if you
+                      are targeting a huge number of users. If you are planning
+                      to launch a single mobile app platform that can be
+                      compatible with various operating systems then
+                      Cross-platform technology is one of the best options for
+                      your business mobile app development.
+                    </p>
+                    <p className="Title_para">
+                      Along with the best web app and mobile app development,
+                      The App Ideas also provide the services like cross
+                      platforms app development. Cross-platform technology helps
+                      in developing mobile apps for multiple devices as well as
+                      multiple platforms. Cross-platform technology provides the
+                      flexibility and easy to use mobile app solution for a
+                      successful business. The App Ideas strictly follow the
+                      agile methodology for the development of the software
+                      services. We offer cross-platform technology with unique
+                      design and the best possible rates.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best cross-platform technology?{" "}
+                      <br />
+                      If Yes, then feel free to reach us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -561,10 +932,16 @@ const MobileAppDev = () => {
               <div className="row mt-5">
                 <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                   <div className="row">
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("shopping")}
+                    >
                       <a
-                        href="#"
-                        className="service__provide_tab service__provide_tab_active"
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "shopping" &&
+                          "service__provide_tab_active"
+                        }`}
                       >
                         <img
                           src={Shopping}
@@ -574,8 +951,17 @@ const MobileAppDev = () => {
                         <p>Shopping &amp; E-Commerce</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("health")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "health" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img
                           src={health}
                           alt="health-and-fitness-1"
@@ -584,8 +970,17 @@ const MobileAppDev = () => {
                         <p>Health &amp; Fitness</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("education")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "education" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img
                           src={Education}
                           alt="smartphone-tablet"
@@ -594,8 +989,17 @@ const MobileAppDev = () => {
                         <p>Education &amp; E-Learning</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("banking")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "banking" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img
                           src={Banking}
                           alt="banking-1"
@@ -604,20 +1008,47 @@ const MobileAppDev = () => {
                         <p>Banking &amp; Finance</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("travel")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "travel" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img src={Travel} alt="travel" className="img-fluid" />
                         <p>Travel &amp; Tourism</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("food")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "food" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img src={Food} alt="food-1-1" className="img-fluid" />
                         <p>Food &amp; Drink</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("socila_networking")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "socila_networking" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img
                           src={SocialNetworking}
                           alt="Social-Networking"
@@ -626,8 +1057,17 @@ const MobileAppDev = () => {
                         <p>Social Networking</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("lifestyle")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "lifestyle" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img
                           src={lifestyle}
                           alt="lifestyle"
@@ -636,8 +1076,17 @@ const MobileAppDev = () => {
                         <p>lifestyle &amp; mobility</p>
                       </a>
                     </div>
-                    <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                      <a href="#" className="service__provide_tab">
+                    <div
+                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                      onClick={() => setActiveServe("real_estate")}
+                    >
+                      <a
+                        href="##"
+                        className={`service__provide_tab ${
+                          activeServe === "real_estate" &&
+                          "service__provide_tab_active"
+                        }`}
+                      >
                         <img
                           src={Real}
                           alt="Real-Estate"
@@ -650,42 +1099,379 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                  <div className="service_rht">
-                    <div className="Title">
-                      <h3 className="Title_heading">
-                        Shopping &amp; E-Commerce
-                      </h3>
-                      <p className="Title_para">
-                        We are highly experienced in providing the best software
-                        development services to each niche with unique designing
-                        and development services as well as at the best costing.
-                        We have a team of highly skilled developers as well as
-                        designers who initially try to understand the client’s
-                        requirements.
-                      </p>
-                      <p className="Title_para">
-                        Currently, many business owners are shifting their
-                        services into online platforms like websites, web apps
-                        or mobile apps. It is beneficial to convert your
-                        business into online platforms because this makes the
-                        work easier for you as well as for your users.
-                      </p>
-                      <p className="Title_para">
-                        Are you planning to launch a Shopping and E-commerce
-                        Store in the market?
-                      </p>
-                      <p className="Title_para">
-                        If Yes, then feel free to connect with us. Let’s have a
-                        quick call to discuss your requirements in detail. Our
-                        Process starts from Requirements Gathering and Analysis,
-                        The meeting for clearing out the questions, Project
-                        Estimation and Proposal, Resources and team allocation,
-                        Daily/Weekly updates and the deployment of the projects
-                      </p>
+                {activeServe === "shopping" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">
+                          Shopping &amp; E-Commerce
+                        </h3>
+                        <p className="Title_para">
+                          We are highly experienced in providing the best
+                          software development services to each niche with
+                          unique designing and development services as well as
+                          at the best costing. We have a team of highly skilled
+                          developers as well as designers who initially try to
+                          understand the client’s requirements.
+                        </p>
+                        <p className="Title_para">
+                          Currently, many business owners are shifting their
+                          services into online platforms like websites, web apps
+                          or mobile apps. It is beneficial to convert your
+                          business into online platforms because this makes the
+                          work easier for you as well as for your users.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch a Shopping and E-commerce
+                          Store in the market?
+                        </p>
+                        <p className="Title_para">
+                          If Yes, then feel free to connect with us. Let’s have
+                          a quick call to discuss your requirements in detail.
+                          Our Process starts from Requirements Gathering and
+                          Analysis, The meeting for clearing out the questions,
+                          Project Estimation and Proposal, Resources and team
+                          allocation, Daily/Weekly updates and the deployment of
+                          the projects
+                        </p>
+                      </div>
                     </div>
                   </div>
-                </div>
+                )}
+                {activeServe === "health" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Health and Fitness</h3>
+                        <p className="Title_para">
+                          The App Ideas is one of the leading web and app
+                          development companies. We have a team of proficient
+                          developers and designers who are skilled to offer the
+                          best software development services. We offer software
+                          development like website development, web and mobile
+                          app development for various niches by integrating the
+                          best functionality with the unique designing
+                          components.
+                        </p>
+                        <p className="Title_para">
+                          If we talk about the Health and Fitness industry then
+                          this industry is also digitalizing its services to
+                          make it highly popular in today’s digital era. Many
+                          business owners are now shifting their services toward
+                          online platforms because it offers the convenience of
+                          managing the services in a much better way.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch Health and Fitness online
+                          platform?
+                        </p>
+                        <p className="Title_para">
+                          If the answer is yes, then without taking much time
+                          reach out and get a free quotation for a Heath and
+                          Fitness software development. Our working model is
+                          based on gathering the requirements of the clients,
+                          analyzing, offer them relevant suggestions, prepare
+                          proposals and finalize the project by allocating a
+                          project manager and deploy the project on the timeline
+                          with the best prices.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "education" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">
+                          Education and E-Learning
+                        </h3>
+                        <p className="Title_para">
+                          The App Ideas is one of the leading and best Software
+                          development service firms. We are highly expert and
+                          experiences in providing unique design and development
+                          services for different niches or categories of the
+                          business.
+                        </p>
+                        <p className="Title_para">
+                          Nowadays, we can clearly observe that many business
+                          owners, entrepreneurs and startups are making high
+                          investments in online platform development. Like all
+                          the other services, Educational institutes are also
+                          developing their web and mobile app to build their
+                          online presence in the market. Having an E-learning
+                          website or mobile app can be very beneficial if you
+                          are involved in the Educational industry.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch an E-learning website or
+                          Mobile app in the market?
+                        </p>
+                        <p className="Title_para">
+                          If yes, then What are you waiting for? Let’s have a
+                          quick call to discuss your requirements in detail. We
+                          initially start by gathering the requirements from the
+                          clients, analyze the requirements, prepare a proposal
+                          with the best costing, have a meeting, finalize the
+                          project and start working. After starting the
+                          projects, we provide daily/ weekly updates to our
+                          clients and deploy the project in time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "banking" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Banking and finance </h3>
+                        <p className="Title_para">
+                          The App Ideas is one of the leading web and app
+                          development company that offers the best website, web
+                          and mobile app development with unique UI/UX designing
+                          services. We also offer the best software development
+                          services to various industries like Food Industry,
+                          E-commerce industry also including finance and Baking
+                          services.
+                        </p>
+                        <p className="Title_para">
+                          In this present time, many of the services are now
+                          digitalizing their business to make it easily
+                          accessible for users as well as to manage the user’s
+                          data conveniently. Businesses like banking and
+                          finances are now shifting towards the website, web and
+                          mobile app platform for offering easily manageable
+                          resources.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch a successful solution for
+                          your Business and Finance?
+                        </p>
+                        <p className="Title_para">
+                          If yes, then without thinking much ping us. Let’s
+                          connect and have a quick call to discuss your
+                          requirements in more detail. Our process includes the
+                          requirements gathering from the clients, analyze the
+                          overall requirements, send them the feature list,
+                          allocate a project manager who provides daily/weekly
+                          updates to the clients and deploy the project at the
+                          best possible rates.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "travel" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Travel and Tourism</h3>
+                        <p className="Title_para">
+                          The App Ideas is one of the leading web and app
+                          development. We are highly experienced in providing
+                          the best software development like website
+                          development, web and mobile app development with
+                          unique UI/UX designing at the best rates. We are
+                          highly capable to offer successful technology-driven
+                          solutions for the Travel and Tourism Industry.
+                        </p>
+                        <p className="Title_para">
+                          Nowadays, it is very easy for people to directly check
+                          the transportation to accommodation facilities on
+                          their smartphones. There are a number of Travel and
+                          Tourism startups that had an investment in online
+                          platforms development are highly popular as well as
+                          successful now.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to take the first step towards
+                          launching a Successful Travel and Tourism Software in
+                          the market?
+                        </p>
+                        <p className="Title_para">
+                          If Yes, then feel free to reach out and get a free
+                          quotation for your Idea. Our working model is based on
+                          the steps like requirements gathering, analyzing
+                          requirements, take the client confirmation on the
+                          proposal, allocate a project manager who will provide
+                          the daily/ weekly update to the client, work on the
+                          projects with confirming everything with the client
+                          and deliver the project at the deadline.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "food" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Food and Drink</h3>
+                        <p className="Title_para">
+                          We are highly experienced in providing the best
+                          software solution for the Food and Drink industry or
+                          we can also say that we have worked on various
+                          projects and offer the overall restaurant business
+                          solution including the E-menu, Food Delivery app, Food
+                          Ordering app, kitchen management system, Waiter call
+                          app and much more.
+                        </p>
+                        <p className="Title_para">
+                          This era is mainly popular as a digital era because
+                          everyone including business owners, entrepreneurs and
+                          customers are now preferring websites or mobile apps
+                          for their services. If you are running a food industry
+                          or restaurant business the this is the time to take a
+                          step forwards and digitalize your business. Make your
+                          food business successful by integrating updated
+                          features.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch a new Food business online
+                          platform?
+                        </p>
+                        <p className="Title_para">
+                          If Yes, then feel free to connect with us. Our process
+                          includes the requirements gathering, understanding and
+                          analyzing the requirements, Discuss everything with
+                          the clients, provide the proposal, finalize the
+                          project by allocating a project manager who provides
+                          weekly updates to the client and at the end deliver
+                          the project at an estimated time at the best cost.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "socila_networking" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Social Networking</h3>
+                        <p className="Title_para">
+                          The App Ideas is a leading web and app development
+                          company. We are highly experienced in providing the
+                          best software solution like website development,
+                          mobile app development, web app development and
+                          E-commerce platforms development. We have a team of
+                          skilled as well as expert developers and designers who
+                          will provide the best solution which helps businesses
+                          and startups in growth.
+                        </p>
+                        <p className="Title_para">
+                          Social Networking sites or platforms are one of the
+                          most popular services in this present time. It is
+                          highly observed that every smartphone users uses at
+                          least one social networking site. Social Networking
+                          site is very popular because it helps users to stay
+                          connected with each other and which completely remove
+                          the distance barrier between the users.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch a Social Networking
+                          platform?
+                        </p>
+                        <p className="Title_para">
+                          If Yes then what are you waiting for? Connect with us
+                          and get a free quote for launching a successful Social
+                          networking site in the market. We strictly follow the
+                          agile methodology for software development. At the
+                          initial time, we gather the overall requirements of
+                          the clients, analyze as well as finalize the ideas by
+                          sending the proposal to the client, have a meeting for
+                          further discussion about the projects, start the
+                          project by taking client approval and deliver it on
+                          time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "lifestyle" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Lifestyle</h3>
+                        <p className="Title_para">
+                          The App Ideas is one of the leading web and app
+                          development services. We have a pool of talented
+                          developers and designers who provide unique as well as
+                          the best software solution for the business. We
+                          provide the software development services like website
+                          development, web app development, mobile app
+                          development and E-commerce platform development. Along
+                          with development, we also offer designing services to
+                          the customers.
+                        </p>
+                        <p className="Title_para">
+                          Lifestyle software solutions are getting popular day
+                          by day. As we know, people are more inclined toward
+                          online platforms for accessing the services as well as
+                          managing the services. Lifestyle software is also one
+                          of the demanding industries in this present time. This
+                          service includes fashion, health, news, culture,
+                          travel, beauty and more.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch a lifestyle software
+                          solution?
+                        </p>
+                        <p className="Title_para">
+                          If yes then this is the right time to move further by
+                          connecting with us and get a free quotation for your
+                          Lifestyle web and mobile app development. We initially
+                          get the clients requirements, analyze them, have a
+                          meeting to finalize the project, start working on the
+                          project and deploy the project on time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+                {activeServe === "real_estate" && (
+                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                    <div className="service_rht">
+                      <div className="Title">
+                        <h3 className="Title_heading">Real Estate</h3>
+                        <p className="Title_para">
+                          The App Ideas is one of the popular web app and mobile
+                          app development firms that offers the best software
+                          services at the best rates. The App Ideas has a team
+                          of talented developers and designers who provide the
+                          best solution for Web apps, mobile app, E-commerce as
+                          well as website development. We help businesses and
+                          startups to launch a successful online solution that
+                          increases the user base of the business.
+                        </p>
+                        <p className="Title_para">
+                          Real Estate is one of the most demanding as well as
+                          popular services in this present time. As per the
+                          increasing demand of this section, the real estate
+                          business owners are digitalizing their business to
+                          easily reach the customer through the online paths. As
+                          per the observation, it is clearly observed that
+                          people are now checking real estate services online.
+                        </p>
+                        <p className="Title_para">
+                          Are you planning to launch a Real Estate software
+                          solution?
+                        </p>
+                        <p className="Title_para">
+                          If yes then feel free to reach us and get a free
+                          quotation for your real estate software solution. We
+                          are highly expert in providing the best software
+                          solution for different business categories including
+                          the real estate business. For software development, we
+                          strictly follow the process like requirement
+                          gathering, analyze the requirements, have a meeting
+                          with the clients, finalize the project and deploy it
+                          on time.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
           </section>
@@ -927,11 +1713,11 @@ const MobileAppDev = () => {
                         <div className="item">
                           <h2 className="title" onClick={() => toggle(item.id)}>
                             {item.question}
-                            <span>
+                            <span style={{ marginLeft: "10px" }}>
                               {selected === item.id ? (
-                                <BiMinusCircle />
+                                <BiMinusCircle size={30} />
                               ) : (
-                                <BiPlusCircle />
+                                <BiPlusCircle size={30} />
                               )}
                             </span>
                           </h2>
@@ -954,11 +1740,11 @@ const MobileAppDev = () => {
                         <div className="item">
                           <h2 className="title" onClick={() => toggle(item.id)}>
                             {item.question}
-                            <span>
+                            <span style={{ margin: "10px" }}>
                               {selected === item.id ? (
-                                <BiMinusCircle />
+                                <BiMinusCircle size={30} />
                               ) : (
-                                <BiPlusCircle />
+                                <BiPlusCircle size={30} />
                               )}
                             </span>
                           </h2>

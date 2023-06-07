@@ -1,102 +1,102 @@
 import React from "react";
 
 // Core Pages
-import home from "../assets/images/sitemap/Home/Core_Pages/Home.svg";
-import about from "../assets/images/sitemap/Home/Core_Pages/About_us.svg";
-import ourprocess from "../assets/images/sitemap/Home/Core_Pages/our_process.svg";
-import ourteam from "../assets/images/sitemap/Home/Core_Pages/our_team.svg";
-import career from "../assets/images/sitemap/Home/Core_Pages/Career.svg";
-import portfolio from "../assets/images/sitemap/Home/Core_Pages/Portfolio.svg";
-import testimonial from "../assets/images/sitemap/Home/Core_Pages/Testimonial.svg";
+import home from "../../assets/images/sitemap/Home/Core_Pages/Home.svg";
+import about from "../../assets/images/sitemap/Home/Core_Pages/About_us.svg";
+import ourprocess from "../../assets/images/sitemap/Home/Core_Pages/our_process.svg";
+import ourteam from "../../assets/images/sitemap/Home/Core_Pages/our_team.svg";
+import career from "../../assets/images/sitemap/Home/Core_Pages/Career.svg";
+import portfolio from "../../assets/images/sitemap/Home/Core_Pages/Portfolio.svg";
+import testimonial from "../../assets/images/sitemap/Home/Core_Pages/Testimonial.svg";
 
 // Mobile Apps Development
-import Android from "../assets/images/sitemap/Home/Mobile_App_dev/Android_app.svg";
-import IPhone from "../assets/images/sitemap/Home/Mobile_App_dev/Iphone_app_dev.svg";
-import IPad from "../assets/images/sitemap/Home/Mobile_App_dev/ipad.svg";
-import Ionic from "../assets/images/sitemap/Home/Mobile_App_dev/ionic.svg";
-import Mobile from "../assets/images/sitemap/Home/Mobile_App_dev/Mobile_app_dev.svg";
-import INTERNET from "../assets/images/sitemap/Home/Mobile_App_dev/IOT app.svg";
+import Android from "../../assets/images/sitemap/Home/Mobile_App_dev/Android_app.svg";
+import IPhone from "../../assets/images/sitemap/Home/Mobile_App_dev/Iphone_app_dev.svg";
+import IPad from "../../assets/images/sitemap/Home/Mobile_App_dev/ipad.svg";
+import Ionic from "../../assets/images/sitemap/Home/Mobile_App_dev/ionic.svg";
+import Mobile from "../../assets/images/sitemap/Home/Mobile_App_dev/Mobile_app_dev.svg";
+import INTERNET from "../../assets/images/sitemap/Home/Mobile_App_dev/IOT app.svg";
 
 // Web Development
-import WordPress from "../assets/images/sitemap/Home/Web_Development/Wordpress.svg";
-import Angular from "../assets/images/sitemap/Home/Web_Development/Angular.svg";
-import PHP from "../assets/images/sitemap/Home/Web_Development/php.svg";
-import DotNetNuke from "../assets/images/sitemap/Home/Web_Development/dotnetnuke.svg";
-import Asp from "../assets/images/sitemap/Home/Web_Development/asp_net.svg";
-import ReactNative from "../assets/images/sitemap/Home/Web_Development/react_native.svg";
-import WEBDEVELOPMENT from "../assets/images/sitemap/Home/Web_Development/Web_Dev.svg";
+import WordPress from "../../assets/images/sitemap/Home/Web_Development/Wordpress.svg";
+import Angular from "../../assets/images/sitemap/Home/Web_Development/Angular.svg";
+import PHP from "../../assets/images/sitemap/Home/Web_Development/php.svg";
+import DotNetNuke from "../../assets/images/sitemap/Home/Web_Development/dotnetnuke.svg";
+import Asp from "../../assets/images/sitemap/Home/Web_Development/asp_net.svg";
+import ReactNative from "../../assets/images/sitemap/Home/Web_Development/react_native.svg";
+import WEBDEVELOPMENT from "../../assets/images/sitemap/Home/Web_Development/Web_Dev.svg";
 
 // Ecommerce Development
-import Magento from "../assets/images/sitemap/Home/Ecommerce_Dev/Magento_Dev.svg";
-import Drupal from "../assets/images/sitemap/Home/Ecommerce_Dev/Drupal_Development.svg";
-import Joomla from "../assets/images/sitemap/Home/Ecommerce_Dev/Joomla_Dev.svg";
-import Shopify from "../assets/images/sitemap/Home/Ecommerce_Dev/Shopify_Dev.svg";
-import Commerce from "../assets/images/sitemap/Home/Ecommerce_Dev/E_Commerce_Web_Dev.svg";
+import Magento from "../../assets/images/sitemap/Home/Ecommerce_Dev/Magento_Dev.svg";
+import Drupal from "../../assets/images/sitemap/Home/Ecommerce_Dev/Drupal_Development.svg";
+import Joomla from "../../assets/images/sitemap/Home/Ecommerce_Dev/Joomla_Dev.svg";
+import Shopify from "../../assets/images/sitemap/Home/Ecommerce_Dev/Shopify_Dev.svg";
+import Commerce from "../../assets/images/sitemap/Home/Ecommerce_Dev/E_Commerce_Web_Dev.svg";
 
 // Web & Graphics Designing
-import Designing from "../assets/images/sitemap/Home/Web_Graphics_Designing/web_design.svg";
-import MobileDesign from "../assets/images/sitemap/Home/Web_Graphics_Designing/mobile_app_design.svg";
-import Graphic from "../assets/images/sitemap/Home/Web_Graphics_Designing/graphic_design.svg";
+import Designing from "../../assets/images/sitemap/Home/Web_Graphics_Designing/web_design.svg";
+import MobileDesign from "../../assets/images/sitemap/Home/Web_Graphics_Designing/mobile_app_design.svg";
+import Graphic from "../../assets/images/sitemap/Home/Web_Graphics_Designing/graphic_design.svg";
 
 // Hire Developer
-import IOS from "../assets/images/sitemap/Home/Hire_Dev/IOS.svg";
-import AndroidDeveloper from "../assets/images/sitemap/Home/Hire_Dev/Android.svg";
-import WordPressDeveloper from "../assets/images/sitemap/Home/Hire_Dev/Wordpress.svg";
-import PHPDevelopers from "../assets/images/sitemap/Home/Hire_Dev/php.svg";
-import MagentoDeveloper from "../assets/images/sitemap/Home/Hire_Dev/Magento2.svg";
-import ShopifyDeveloper from "../assets/images/sitemap/Home/Hire_Dev/Shopify.svg";
-import CodeIgniter from "../assets/images/sitemap/Home/Hire_Dev/codlgniter.svg";
-import Angular2 from "../assets/images/sitemap/Home/Hire_Dev/Angular_2.svg";
-import Nodejs from "../assets/images/sitemap/Home/Hire_Dev/Node.js.svg";
-import Laravel from "../assets/images/sitemap/Home/Hire_Dev/Laravel.svg";
-import ReactJS from "../assets/images/sitemap/Home/Hire_Dev/Reactjs.svg";
-import Native from "../assets/images/sitemap/Home/Hire_Dev/React_Native.svg";
-import Flutter from "../assets/images/sitemap/Home/Hire_Dev/Flutter.svg";
-import Python from "../assets/images/sitemap/Home/Hire_Dev/Python.svg";
-import Avada from "../assets/images/sitemap/Home/Hire_Dev/Avada.svg";
-import Divi from "../assets/images/sitemap/Home/Hire_Dev/Divi.svg";
-import Enfold from "../assets/images/sitemap/Home/Hire_Dev/Enfold.svg";
+import IOS from "../../assets/images/sitemap/Home/Hire_Dev/IOS.svg";
+import AndroidDeveloper from "../../assets/images/sitemap/Home/Hire_Dev/Android.svg";
+import WordPressDeveloper from "../../assets/images/sitemap/Home/Hire_Dev/Wordpress.svg";
+import PHPDevelopers from "../../assets/images/sitemap/Home/Hire_Dev/php.svg";
+import MagentoDeveloper from "../../assets/images/sitemap/Home/Hire_Dev/Magento2.svg";
+import ShopifyDeveloper from "../../assets/images/sitemap/Home/Hire_Dev/Shopify.svg";
+import CodeIgniter from "../../assets/images/sitemap/Home/Hire_Dev/codlgniter.svg";
+import Angular2 from "../../assets/images/sitemap/Home/Hire_Dev/Angular_2.svg";
+import Nodejs from "../../assets/images/sitemap/Home/Hire_Dev/Node.js.svg";
+import Laravel from "../../assets/images/sitemap/Home/Hire_Dev/Laravel.svg";
+import ReactJS from "../../assets/images/sitemap/Home/Hire_Dev/Reactjs.svg";
+import Native from "../../assets/images/sitemap/Home/Hire_Dev/React_Native.svg";
+import Flutter from "../../assets/images/sitemap/Home/Hire_Dev/Flutter.svg";
+import Python from "../../assets/images/sitemap/Home/Hire_Dev/Python.svg";
+import Avada from "../../assets/images/sitemap/Home/Hire_Dev/Avada.svg";
+import Divi from "../../assets/images/sitemap/Home/Hire_Dev/Divi.svg";
+import Enfold from "../../assets/images/sitemap/Home/Hire_Dev/Enfold.svg";
 
 // Digital Marketing
-import SocialMedia from "../assets/images/sitemap/Home/Digital_Marketing/social_media_marketing.svg";
-import SEO from "../assets/images/sitemap/Home/Digital_Marketing/seo.svg";
-import ASO from "../assets/images/sitemap/Home/Digital_Marketing/aso.svg";
+import SocialMedia from "../../assets/images/sitemap/Home/Digital_Marketing/social_media_marketing.svg";
+import SEO from "../../assets/images/sitemap/Home/Digital_Marketing/seo.svg";
+import ASO from "../../assets/images/sitemap/Home/Digital_Marketing/aso.svg";
 
 // Ready Made Solutions
-import Food from "../assets/images/sitemap/Home/Ready_Made_Solutions/food_ordering_solutions.svg";
-import Dating from "../assets/images/sitemap/Home/Ready_Made_Solutions/Dating_Website_And_App_Solution.svg";
-import Lawyer from "../assets/images/sitemap/Home/Ready_Made_Solutions/Lawyer_Website_Solution.svg";
-import EcommerceApp from "../assets/images/sitemap/Home/Ready_Made_Solutions/Ecommerce_App_Solution.svg";
-import MLMWebsite from "../assets/images/sitemap/Home/Ready_Made_Solutions/MLM Website _ Mobile_App_Solution.svg";
-import ELearning from "../assets/images/sitemap/Home/Ready_Made_Solutions/E_Learning_Website_Dev.svg";
-import Taxi from "../assets/images/sitemap/Home/Ready_Made_Solutions/Taxi_Booking_App_Development.svg";
-import Doctor from "../assets/images/sitemap/Home/Ready_Made_Solutions/Doctor_Hiring_App_Solution.svg";
-import Courier from "../assets/images/sitemap/Home/Ready_Made_Solutions/Courier_Pickup_Management_Solution.svg";
-import Security from "../assets/images/sitemap/Home/Ready_Made_Solutions/Security_App_Solution.svg";
-import Driver from "../assets/images/sitemap/Home/Ready_Made_Solutions/Driver_Tracking_App_Dev.svg";
+import Food from "../../assets/images/sitemap/Home/Ready_Made_Solutions/food_ordering_solutions.svg";
+import Dating from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Dating_Website_And_App_Solution.svg";
+import Lawyer from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Lawyer_Website_Solution.svg";
+import EcommerceApp from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Ecommerce_App_Solution.svg";
+import MLMWebsite from "../../assets/images/sitemap/Home/Ready_Made_Solutions/MLM Website _ Mobile_App_Solution.svg";
+import ELearning from "../../assets/images/sitemap/Home/Ready_Made_Solutions/E_Learning_Website_Dev.svg";
+import Taxi from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Taxi_Booking_App_Development.svg";
+import Doctor from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Doctor_Hiring_App_Solution.svg";
+import Courier from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Courier_Pickup_Management_Solution.svg";
+import Security from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Security_App_Solution.svg";
+import Driver from "../../assets/images/sitemap/Home/Ready_Made_Solutions/Driver_Tracking_App_Dev.svg";
 
 // On-Demand Apps
-import SecurityApp from "../assets/images/sitemap/Home/On_Demand_Apps/Security_App_Dev.svg";
-import TaxiBooking from "../assets/images/sitemap/Home/On_Demand_Apps/Taxi_Booking_App_Dev.svg";
-import ElearningWebsite from "../assets/images/sitemap/Home/On_Demand_Apps/E_Learning_Website_Dev.svg";
-import Tracking from "../assets/images/sitemap/Home/On_Demand_Apps/Driver_Tracking_App_Dev.svg";
+import SecurityApp from "../../assets/images/sitemap/Home/On_Demand_Apps/Security_App_Dev.svg";
+import TaxiBooking from "../../assets/images/sitemap/Home/On_Demand_Apps/Taxi_Booking_App_Dev.svg";
+import ElearningWebsite from "../../assets/images/sitemap/Home/On_Demand_Apps/E_Learning_Website_Dev.svg";
+import Tracking from "../../assets/images/sitemap/Home/On_Demand_Apps/Driver_Tracking_App_Dev.svg";
 
 // Location Wise Services
-import Toronto from "../assets/images/sitemap/Home/Locationwise_services/toronto.svg";
-import York from "../assets/images/sitemap/Home/Locationwise_services/New_york.svg";
-import Barcelona from "../assets/images/sitemap/Home/Locationwise_services/barcelona.svg";
-import Sydney from "../assets/images/sitemap/Home/Locationwise_services/sydney.svg";
-import Adelaide from "../assets/images/sitemap/Home/Locationwise_services/Adelaide.svg";
-import Brisbane from "../assets/images/sitemap/Home/Locationwise_services/Brisbane.svg";
-import Bristol from "../assets/images/sitemap/Home/Locationwise_services/Bristol.svg";
-import Liverpool from "../assets/images/sitemap/Home/Locationwise_services/Liverpool.svg";
-import Manchester from "../assets/images/sitemap/Home/Locationwise_services/Manchester.svg";
-import Melbourne from "../assets/images/sitemap/Home/Locationwise_services/Melbourne.svg";
-import London from "../assets/images/sitemap/Home/Locationwise_services/London.svg";
+import Toronto from "../../assets/images/sitemap/Home/Locationwise_services/toronto.svg";
+import York from "../../assets/images/sitemap/Home/Locationwise_services/New_york.svg";
+import Barcelona from "../../assets/images/sitemap/Home/Locationwise_services/barcelona.svg";
+import Sydney from "../../assets/images/sitemap/Home/Locationwise_services/sydney.svg";
+import Adelaide from "../../assets/images/sitemap/Home/Locationwise_services/Adelaide.svg";
+import Brisbane from "../../assets/images/sitemap/Home/Locationwise_services/Brisbane.svg";
+import Bristol from "../../assets/images/sitemap/Home/Locationwise_services/Bristol.svg";
+import Liverpool from "../../assets/images/sitemap/Home/Locationwise_services/Liverpool.svg";
+import Manchester from "../../assets/images/sitemap/Home/Locationwise_services/Manchester.svg";
+import Melbourne from "../../assets/images/sitemap/Home/Locationwise_services/Melbourne.svg";
+import London from "../../assets/images/sitemap/Home/Locationwise_services/London.svg";
 
 // Other Services
-import Startup from "../assets/images/sitemap/Home/Other_Services/Startup_Services.svg";
-import Enterprise from "../assets/images/sitemap/Home/Other_Services/Enterprise_App_Dev.svg";
+import Startup from "../../assets/images/sitemap/Home/Other_Services/Startup_Services.svg";
+import Enterprise from "../../assets/images/sitemap/Home/Other_Services/Enterprise_App_Dev.svg";
 
 const SiteMap = () => {
   return (

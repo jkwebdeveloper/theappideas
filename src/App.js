@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 import MobileAppDevelopment from "./pages/MobileAppDevelopment/MobileAppDevelopment";
-import WebDev from "./components/webDevelopment/WebDev";
+import WebDev from "./pages/WebDevelopment/WebDevelopment";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
@@ -74,7 +74,7 @@ import LawyerWeb from "./components/LawyerWeb";
 import MobileAppToronto from "./pages/Sitemap/MobileAppToronto";
 import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
 import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
-import SiteMap from "./pages/SiteMap";
+import SiteMap from "./pages/Sitemap/SiteMap";
 import ABoutUs from "./pages/Company/ABoutUs";
 import GetAQuoteModal from "./components/GetAQuoteModal";
 

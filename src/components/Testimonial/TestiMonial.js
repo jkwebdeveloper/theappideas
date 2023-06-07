@@ -1,6 +1,7 @@
 import React from "react";
 import "./testimonial.css";
 import { Link } from "react-router-dom";
+import { BsPlayCircleFill } from "react-icons/bs";
 
 const TestiMonial = () => {
   return (
@@ -12,13 +13,33 @@ const TestiMonial = () => {
         <div className="row">
           <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="box my-5" style={{ cursor: "pointer" }}>
-              <div className="imgbox">
-                <img
-                  src={require("../../assets/images/Testimonial/maxresdefault.webp")}
-                  alt=""
-                  style={{ width: "330px" }}
+              <Link
+                to="https://www.youtube.com/watch?v=IBYadSoVF3c&feature=youtu.be"
+                target="_blank"
+              >
+                <BsPlayCircleFill
+                  size={60}
+                  color="white"
+                  style={{
+                    position: "absolute",
+                    top: "15%",
+                    left: "50%",
+                    transform: "translate(-50%,-50%)",
+                    zIndex: "997",
+                    backgroundColor: "red",
+                    borderRadius: "50%",
+                    width: "fit-content",
+                  }}
                 />
-              </div>
+                <div className="imgbox">
+                  <img
+                    src={require("../../assets/images/Testimonial/maxresdefault.webp")}
+                    alt=""
+                    style={{ width: "330px" }}
+                  />
+                </div>
+              </Link>
+
               <h4>
                 <span>Lloyd Medley</span>
               </h4>
@@ -31,13 +52,32 @@ const TestiMonial = () => {
           </div>
           <div className="col-lg-6 col-md-12 col-sm-12">
             <div className="box my-5" style={{ cursor: "pointer" }}>
-              <div className="imgbox">
-                <img
-                  src={require("../../assets/images/Testimonial/testimonial-2.webp")}
-                  alt=""
-                  style={{ width: "330px" }}
+              <Link
+                to="https://www.youtube.com/watch?v=8IXVtVkGNl8%3D&feature=youtu.be"
+                target="_blank"
+              >
+                <BsPlayCircleFill
+                  size={60}
+                  color="white"
+                  style={{
+                    position: "absolute",
+                    top: "15%",
+                    left: "50%",
+                    transform: "translate(-50%,-50%)",
+                    zIndex: "997",
+                    backgroundColor: "red",
+                    borderRadius: "50%",
+                    width: "fit-content",
+                  }}
                 />
-              </div>
+                <div className="imgbox">
+                  <img
+                    src={require("../../assets/images/Testimonial/testimonial-2.webp")}
+                    alt=""
+                    style={{ width: "330px" }}
+                  />
+                </div>
+              </Link>
               <h4>
                 <span>Roberto Valdovinos</span>
               </h4>
@@ -62,7 +102,11 @@ const TestiMonial = () => {
                 <button
                   type="button"
                   className="view-more-btn"
-                  style={{ cursor: "pointer" }}
+                  style={{
+                    cursor: "pointer",
+                    padding: "1rem 3rem",
+                    fontWeight: "bold",
+                  }}
                 >
                   View More
                 </button>

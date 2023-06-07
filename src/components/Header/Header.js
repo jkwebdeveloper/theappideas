@@ -977,13 +977,14 @@ const Header = ({ setOpenModal }) => {
                 Blog
               </a>
             </li>
-            <a href="">
-              <li onClick={() => setOpenModal(true)}>
-                <div className="quote_btn btn-1 hover-filled-opacity">
-                  <span>GET A QUOTE</span>
-                </div>
-              </li>
-            </a>
+            <li
+              onClick={() => setOpenModal(true)}
+              style={{ cursor: "pointer" }}
+            >
+              <div className="quote_btn btn-1 hover-filled-opacity">
+                <span>GET A QUOTE</span>
+              </div>
+            </li>
           </ul>
           <label htmlFor="menu-btn" className="btn menu-btn">
             <AiOutlineMenu />

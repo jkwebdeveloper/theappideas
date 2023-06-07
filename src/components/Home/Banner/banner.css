@@ -6,13 +6,13 @@
   font-family: "Open Sans", sans-serif;
 }
 .banner-section {
-  padding-top: 100px;
   background-image: url("../../../assets/images/sec1-background.webp");
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   padding-top: 160px;
   padding-bottom: 100px;
+  height: 100vh;
 }
 @media only screen and (max-width: 768px) {
   .banner-section {

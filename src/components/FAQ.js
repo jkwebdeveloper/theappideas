@@ -74,17 +74,21 @@ const FAQ = () => {
                 <div className="item">
                   <h2 className="title" onClick={() => toggle(item.id)}>
                     {item.question}
-                    <span>
+                    <span style={{ margin: "10px" }}>
                       {selected === item.id ? (
-                        <BiMinusCircle />
+                        <BiMinusCircle size={30} />
                       ) : (
-                        <BiPlusCircle />
+                        <BiPlusCircle size={30} />
                       )}
                     </span>
                   </h2>
                 </div>
                 <div
-                  className={selected === item.id ? "accordion_content show" : "accordion_content"}
+                  className={
+                    selected === item.id
+                      ? "accordion_content show"
+                      : "accordion_content"
+                  }
                 >
                   {item.answer}
                 </div>
@@ -97,17 +101,21 @@ const FAQ = () => {
                 <div className="item">
                   <h2 className="title" onClick={() => toggle(item.id)}>
                     {item.question}
-                    <span>
+                    <span style={{ margin: "10px" }}>
                       {selected === item.id ? (
-                        <BiMinusCircle />
+                        <BiMinusCircle size={30} />
                       ) : (
-                        <BiPlusCircle />
+                        <BiPlusCircle size={30} />
                       )}
                     </span>
                   </h2>
                 </div>
                 <div
-                  className={selected === item.id ? "accordion_content show" : "accordion_content"}
+                  className={
+                    selected === item.id
+                      ? "accordion_content show"
+                      : "accordion_content"
+                  }
                 >
                   {item.answer}
                 </div>

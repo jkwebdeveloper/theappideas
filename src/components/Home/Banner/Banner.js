@@ -14,7 +14,7 @@ const Banner = () => {
   return (
     <section className="banner-section" style={{ position: "relative" }}>
       <div style={{ position: "relative" }}>
-        <div className="container ">
+        <div className="container">
           <Swiper
             modules={[Pagination, Autoplay, Navigation]}
             spaceBetween={20}
@@ -64,7 +64,7 @@ const Banner = () => {
                 swiper.navigation.update();
               });
             }}
-            style={{ padding: "1rem 0px 4rem 0px" }}
+            style={{ padding: "1rem 0px 3rem 0px" }}
           >
             <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">

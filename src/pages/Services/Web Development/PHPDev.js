@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
@@ -14,6 +14,11 @@ import Developer from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/P
 import { Link } from "react-router-dom";
 
 const PHPDev = () => {
+  const [activeOffer, setActiveOffer] = useState("php_web");
+  const [activeWhyChoose, setActiveWhyChoose] = useState(
+    "expertise_experience"
+  );
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
@@ -196,10 +201,15 @@ const PHPDev = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveOffer("php_web")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeOffer === "php_web" && "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/ui-ux.png")}
@@ -209,8 +219,16 @@ const PHPDev = () => {
                     <p>Customize Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveOffer("php_cms")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeOffer === "php_cms" && "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/cms-icon1-1.png")}
                       alt="Group-235"
@@ -219,8 +237,17 @@ const PHPDev = () => {
                     <p>PHP Based CMS Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveOffer("php_framework")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeOffer === "php_framework" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/icons8-iphone-x-72-1.png")}
                       alt="icons8-smart-watch-100-1"
@@ -229,8 +256,17 @@ const PHPDev = () => {
                     <p>PHP Framework Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveOffer("php_mobile")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeOffer === "php_mobile" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mechanism-gears-1.png")}
                       alt="Group-53"
@@ -239,8 +275,17 @@ const PHPDev = () => {
                     <p>PHP Mobile Conversion</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveOffer("theme_plugin")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeOffer === "theme_plugin" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Group-184.png")}
                       alt="Group-184"
@@ -249,8 +294,17 @@ const PHPDev = () => {
                     <p>Theme & Plugins Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveOffer("php_support")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeOffer === "php_support" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mask-Group.png")}
                       alt="Mask-Group"
@@ -261,28 +315,170 @@ const PHPDev = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Custom PHP Web Development</h3>
-                  <p className="Title_para">
-                    The demand for online or digital platforms is increasing day
-                    by day. Many business owners and entrepreneurs are now
-                    converting their offline businesses to online businesses for
-                    offering a better user experience to their customers. PHP
-                    technology is a highly popular and demanding technology.
-                  </p>
-                  <p className="Title_para">
-                    The App Ideas is the most popular PHP web development
-                    company. We have a team of highly skilled PHP developers who
-                    has years of experience in developing future-ready PHP web
-                    development services. By utilizing the versatility and
-                    flexibility of PHP language we build a richly layered custom
-                    website for business niches across the spectrum.
-                  </p>
+            {activeOffer === "php_web" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Custom PHP Web Development
+                    </h3>
+                    <p className="Title_para">
+                      The demand for online or digital platforms is increasing
+                      day by day. Many business owners and entrepreneurs are now
+                      converting their offline businesses to online businesses
+                      for offering a better user experience to their customers.
+                      PHP technology is a highly popular and demanding
+                      technology.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is the most popular PHP web development
+                      company. We have a team of highly skilled PHP developers
+                      who has years of experience in developing future-ready PHP
+                      web development services. By utilizing the versatility and
+                      flexibility of PHP language we build a richly layered
+                      custom website for business niches across the spectrum.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeOffer === "php_cms" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      PHP Based CMS Development{" "}
+                    </h3>
+                    <p className="Title_para">
+                      Nowadays, due to advancements in the field of technology,
+                      we are observing that each and every business category are
+                      moving towards online platforms. Food business, Grocery
+                      business, E-commerce business and more are shifting
+                      towards online platforms for increasing the engagement of
+                      the user.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We are highly expert in offering PHP
+                      web development services for every business niches. We
+                      build custom CMS solutions using the power of the PHP
+                      programming language to address specific web development
+                      needs.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeOffer === "php_framework" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      PHP Framework Development{" "}
+                    </h3>
+                    <p className="Title_para">
+                      PHP is one of the most popular CMS platforms which is used
+                      for developing the best web platforms helps in enhancing
+                      future-ready solutions. This is probably the best time to
+                      make an investment in web development services to offer
+                      online services to the users or customers. Online services
+                      are getting popular because this provides convenient ways
+                      of accessing the services.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a team of highly skilled
+                      developers who are proficient in delivering future-ready
+                      PHP web services in the market. We also use PHP to build
+                      custom web development frameworks equipped with a rich
+                      feature set and functional capabilities.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeOffer === "php_mobile" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">PHP Mobile conversion </h3>
+                    <p className="Title_para">
+                      If you observe the market then you can clearly observe
+                      that every platform is now shifting towards the web and
+                      mobile app platform for offering satisfying services to
+                      the users. More than half the population are using
+                      smartphones for accessing daily life services. This is the
+                      main reason to digitalize your business.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a pool of talented PHP
+                      developers who have years of experience in offering the
+                      best PHP web as well as an app for every business niche.
+                      We also help to convert PHP based websites into
+                      richly-features and audience-specific cross platforms
+                      mobile apps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeOffer === "theme_plugin" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      PHP Custom Theme and Plugin Development
+                    </h3>
+                    <p className="Title_para">
+                      The demand for the online platform is getting popular day
+                      by day. People, as well as business owners, are shifting
+                      towards online platforms for increasing the profit rates
+                      of the business. Digital platforms are easy to use and
+                      easy to manage in a better way.PHP like web platforms
+                      offers additional features like custom theme development
+                      and plugin for better services development.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a team of highly skilled
+                      developers who are experienced in developing the best PHP
+                      web platforms at the best rates. We also utilize our PHP
+                      development expertise in building sophisticated custom
+                      website templates and plugins to deliver a high
+                      business-specific user experience.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeOffer === "php_support" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      PHP Support and Maintenance{" "}
+                    </h3>
+                    <p className="Title_para">
+                      If you are a business owner or planning to start an online
+                      business then this is the right time to make an investment
+                      in online web platform development. The development of the
+                      web is not the final stage, the maintenance and support
+                      are also important to keep it successful in the market.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the foremost software development
+                      company. We have a team of highly experienced and skilled
+                      developers who offer the best PHP web development
+                      services. For all PHP based websites, we also take
+                      responsibility for creating updates with relevant value
+                      additions. We offer robust post-development support and
+                      maintenance for all PHP based websites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -486,10 +682,16 @@ const PHPDev = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("expertise_experience")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "expertise_experience" &&
+                      "service__provide_tab_active"
+                    } `}
                   >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
@@ -499,8 +701,17 @@ const PHPDev = () => {
                     <p>Expertise and Experience</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "robust_portfolio" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
                       alt="robust-portfolio"
@@ -509,8 +720,17 @@ const PHPDev = () => {
                     <p>Robust Portfolio</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("unmatched_performance")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "unmatched_performance" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/why-Choose/icon.png")}
                       alt="Time-Bound-Development"
@@ -519,8 +739,17 @@ const PHPDev = () => {
                     <p>Unmatched Performance</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("agile")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "agile" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Superb-User-Experience"
@@ -529,8 +758,17 @@ const PHPDev = () => {
                     <p>Agile Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("competitive_rate")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "competitive_rate" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="Agile-Development"
@@ -539,8 +777,17 @@ const PHPDev = () => {
                     <p>Competitive Rate</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("adhering_strict")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "adhering_strict" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
                       alt="competitive-pricing"
@@ -551,30 +798,165 @@ const PHPDev = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Expertise and Experience.</h3>
-                  <p className="Title_para">
-                    We are from The App Ideas which is one of the foremost web
-                    and app development company. We have a group of highly
-                    skilled developers who are experienced in providing the best
-                    web development services. Many business owners and
-                    entrepreneurs are converting their businesses into web
-                    platforms.
-                  </p>
-                  <p className="Title_para">
-                    The main reason behind choosing The App Ideas is that we
-                    have years of experience in deploying the best business
-                    solution which can drive your business to the peak of the
-                    success. We initially understand the requirements then start
-                    the development. We flaunt a highly experienced team of
-                    WordPress developers with proven expertise in building the
-                    most sophisticated WordPress websites.
-                  </p>
+            {activeWhyChoose === "expertise_experience" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Expertise and Experience.</h3>
+                    <p className="Title_para">
+                      We are from The App Ideas which is one of the foremost web
+                      and app development company. We have a group of highly
+                      skilled developers who are experienced in providing the
+                      best web development services. Many business owners and
+                      entrepreneurs are converting their businesses into web
+                      platforms.
+                    </p>
+                    <p className="Title_para">
+                      The main reason behind choosing The App Ideas is that we
+                      have years of experience in deploying the best business
+                      solution which can drive your business to the peak of the
+                      success. We initially understand the requirements then
+                      start the development. We flaunt a highly experienced team
+                      of WordPress developers with proven expertise in building
+                      the most sophisticated WordPress websites.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyChoose === "robust_portfolio" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Robust Portfolio</h3>
+                    <p className="Title_para">
+                      Before hiring any software development company, it is very
+                      important for you to check the past projects of the
+                      software services before hiring. By checking the past
+                      projects, you probably get the overall ideas of software
+                      development services like the expertise or experienced
+                      developers.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas is one of the leading web and
+                      app development. We have a team of highly skilled and
+                      experienced PHP developers who are experts in providing
+                      the best web services at the best possible rates. We boast
+                      a solid portfolio of the most successful PHP website
+                      across a broad variety of niches and categories.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === "unmatched_performance" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Unmatched Performance</h3>
+                    <p className="Title_para">
+                      The demands of software development services are getting
+                      popular day by day in the market. The users or we can say
+                      the audience is loving the online platform for accessing
+                      all kinds of services because it is easy as well as
+                      time-saving. As the demand is increasing, this is high
+                      time for business owners to convert their business into
+                      online business.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas which is one of the leading web
+                      and app development company. We have a team of highly
+                      skilled developers and designers who are expert PHP
+                      developers and provides successful web platforms solution
+                      for all business categories. We utilise the PHP
+                      programming language to ensure unmatched performance and
+                      highly audience-centric design.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === "agile" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Agile Development</h3>
+                    <p className="Title_para">
+                      Nowadays, the demand for PHP web development is getting
+                      increasing because the web platforms provide the comfort
+                      as well as convenience of accessing the services. If we
+                      check the market then there are a high number of
+                      smartphones users in the market. So this is probably the
+                      perfect time for you to make an investment in developing
+                      the best web platforms.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a group of highly skilled and
+                      experienced PHP web developers who are highly experts in
+                      offering the best services. We follow an agile development
+                      methodology for faster development while ensuring optimum
+                      quality through concurrent testing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === "competitive_rate" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Competitive Rate</h3>
+                    <p className="Title_para">
+                      The demand for software solutions or online platforms is
+                      getting higher in the market. Many entrepreneurs, startups
+                      and business owners are now launching their web app
+                      platforms in the market. The online platform can help in
+                      reaching a high number of users which can help in
+                      increasing user engagement.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas which is one of the leading web
+                      and app development company. We have a group of highly
+                      skilled PHP developers who offer the best solutions for
+                      all kinds of business niches. Our PHP web developers are
+                      highly experienced who can offer you advanced features. We
+                      provide highly competitive PHP development pricing without
+                      compromising on the quality parameters.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === "adhering_strict" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Adhering to Strict Deadlines
+                    </h3>
+                    <p className="Title_para">
+                      This era is as highly popular as the digital era because
+                      now we have thousands of web app solutions in the market
+                      for every kind of business service. It is very easier for
+                      users to take out their smartphones or smart devices and
+                      start searching for the services they are looking for.
+                      This process is time-saving as well as cost-effective.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading PHP web development
+                      company. We have years of hands-on experience in deploying
+                      successful PHP web development services for different
+                      business categories. We also offer expert advice on
+                      integrating some unique and advanced features into your
+                      online service platforms. We adhere to strict project
+                      deadlines and milestones and allow continuous iteration to
+                      open scopes for consistent value addition
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
