@@ -6,7 +6,7 @@ import Home from "./pages/Home";
 import Footer from "./components/Footer";
 import Header from "./components/Header/Header";
 import MobileAppDevelopment from "./pages/MobileAppDevelopment/MobileAppDevelopment";
-import WebDev from "./pages/WebDevelopment/WebDevelopment";
+import WebDev from "./pages/Services/Web Development/WebDevelopment";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
