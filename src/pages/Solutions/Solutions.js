@@ -1,7 +1,8 @@
 import React from "react";
-import background from "../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../assets/images/Home-our-services/download (1).png";
+import background from "../../assets/images/Home-our-services/bg-download.svg";
+import background1 from "../../assets/images/Home-our-services/download (1).png";
 import { HiOutlineArrowRight } from "react-icons/hi";
+
 const Solutions = () => {
   return (
     <>
@@ -33,7 +34,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/Food Ordering Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/Food Ordering Solution.gif")}
                     alt="Food Ordering Solution"
                     style={{ width: "100px" }}
                   />
@@ -66,7 +67,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/Dating Apps and Solutin.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/Dating Apps and Solutin.gif")}
                     alt="Dating Website & App Solution"
                     style={{ width: "100px" }}
                   />
@@ -99,7 +100,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/Security App Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/Security App Solution.gif")}
                     alt="Security App Solution"
                     style={{ width: "100px" }}
                   />
@@ -135,7 +136,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/E-Commerce App Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/E-Commerce App Solution.gif")}
                     alt="Ecommerce App Solution"
                     style={{ width: "100px" }}
                   />
@@ -168,7 +169,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/Taxi Booking App Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/Taxi Booking App Solution.gif")}
                     alt="Taxi Booking App Solution"
                     style={{ width: "100px" }}
                   />
@@ -201,7 +202,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/E-Learning Website Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/E-Learning Website Solution.gif")}
                     alt="Elearning Website Solution"
                     style={{ width: "100px" }}
                   />
@@ -234,7 +235,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/Driver Tracking App Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/Driver Tracking App Solution.gif")}
                     alt="Driver Tracking App Solution"
                     style={{ width: "100px" }}
                   />
@@ -267,7 +268,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/MLM Website _ Mobile Application Development.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/MLM Website _ Mobile Application Development.gif")}
                     alt="MLM Website & Mobile App Solution"
                     style={{ width: "100px" }}
                   />
@@ -300,7 +301,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/Service App Solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/Service App Solution.gif")}
                     alt="Salon Service App Solution"
                     style={{ width: "100px" }}
                   />
@@ -335,7 +336,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/on demand therapist doctor hiring app solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/on demand therapist doctor hiring app solution.gif")}
                     alt="On Demand Therapist/ Doctor Hiring App Solution"
                     style={{ width: "100px" }}
                   />
@@ -370,7 +371,7 @@ const Solutions = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../assets/images/Header/Our Solutions/courier pickup management solution.gif")}
+                    src={require("../../assets/images/Header/Our Solutions/courier pickup management solution.gif")}
                     style={{ width: "100px" }}
                   />
                 </div>

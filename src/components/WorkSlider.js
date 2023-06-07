@@ -48,7 +48,7 @@ const WorkSlider = () => {
           }}
           speed={500}
           direction={"horizontal"}
-          pagination={{clickable: true}}
+          pagination={{ clickable: true }}
           // navigation
           onSwiper={(swiper) => {
             // Delay execution for the refs to be defined
@@ -63,9 +63,9 @@ const WorkSlider = () => {
               swiper.navigation.update();
             });
           }}
-        //   style={{ padding: "2.5rem 0" }}
+          //   style={{ padding: "2.5rem 0" }}
         >
-          <SwiperSlide style={{cursor: "pointer"}}>
+          <SwiperSlide style={{ cursor: "pointer" }}>
             <div className="row">
               <div className="col-12">
                 <img
@@ -77,7 +77,7 @@ const WorkSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide style={{cursor: "pointer"}}>
+          <SwiperSlide style={{ cursor: "pointer" }}>
             <div className="row">
               <div className="col-12">
                 <img
@@ -89,7 +89,7 @@ const WorkSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide style={{cursor: "pointer"}}>
+          <SwiperSlide style={{ cursor: "pointer" }}>
             <div className="row">
               <div className="col-12">
                 <img
@@ -104,7 +104,7 @@ const WorkSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide style={{cursor: "pointer"}}>
+          <SwiperSlide style={{ cursor: "pointer" }}>
             <div className="row">
               <div className="col-12">
                 <img
@@ -116,7 +116,7 @@ const WorkSlider = () => {
               </div>
             </div>
           </SwiperSlide>
-          <SwiperSlide style={{cursor: "pointer"}}>
+          <SwiperSlide style={{ cursor: "pointer" }}>
             <div className="row">
               <div className="col-12">
                 <img

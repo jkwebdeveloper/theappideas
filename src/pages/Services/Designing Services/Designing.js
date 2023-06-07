@@ -1,11 +1,11 @@
 import React from "react";
-import Work from "../../components/Workdone/Work";
-import TestiMonial from "../Testimonial/TestiMonial";
+import Work from "../../../components/Workdone/Work";
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
 
 // Service section image
-import MobileAppDesigning from "../../assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg";
-import WebAppDesigning from "../../assets/images/SERVICES/Designing/Services we provide/Web app designing.svg";
-import Graphic from "../../assets/images/SERVICES/Designing/Services we provide/Graphic designing.svg";
+import MobileAppDesigning from "../../../assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg";
+import WebAppDesigning from "../../../assets/images/SERVICES/Designing/Services we provide/Web app designing.svg";
+import Graphic from "../../../assets/images/SERVICES/Designing/Services we provide/Graphic designing.svg";
 
 // Industries  section images
 
@@ -132,7 +132,7 @@ const Designing = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Services we provide/banner-design.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/banner-design.png")}
                       alt="Banner-Designing"
                       className="img-fluid"
                     />
@@ -145,7 +145,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Services we provide/logo-design.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/logo-design.png")}
                       alt="Logo-Designing"
                       className="img-fluid"
                     />
@@ -158,7 +158,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Services we provide/template-design.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/template-design.png")}
                       alt="Custom-Template-Designing"
                       className="img-fluid"
                     />
@@ -188,7 +188,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Services we provide/redesign.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/redesign.png")}
                       alt="Re-Designing-Services"
                       className="img-fluid"
                     />
@@ -198,7 +198,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Services we provide/brochure-design.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/brochure-design.png")}
                       alt="Brochure-Designing"
                       className="img-fluid"
                     />
@@ -208,7 +208,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Services we provide/psd-html.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/psd-html.png")}
                       alt="PSD-to-Html"
                       className="img-fluid"
                     />
@@ -273,7 +273,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../assets/images/SERVICES/Software development/Technologies/asp.net_.png")}
+                  src={require("../../../assets/images/SERVICES/Software development/Technologies/asp.net_.png")}
                   alt="Asp.Net"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -284,7 +284,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -295,7 +295,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -306,7 +306,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -333,7 +333,7 @@ const Designing = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/security-guard.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/security-guard.png")}
                       alt="Academic-Education"
                       className="img-fluid"
                     />
@@ -343,7 +343,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/finance-ind.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/finance-ind.png")}
                       alt="Fintech-Industry"
                       className="img-fluid"
                     />
@@ -356,7 +356,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
                       alt="Real-Estate"
                       className="img-fluid"
                     />
@@ -366,7 +366,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
                       alt="Restaurant-Business"
                       className="img-fluid"
                     />
@@ -376,7 +376,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
                       alt="Travel-Tourism"
                       className="img-fluid"
                     />
@@ -386,7 +386,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
                       alt="Construction-Industry"
                       className="img-fluid"
                     />
@@ -396,7 +396,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/finance-ind.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/finance-ind.png")}
                       alt="IT-Industry"
                       className="img-fluid"
                     />
@@ -409,7 +409,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/healthcare.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/healthcare.png")}
                       alt="Healthcare-Industry"
                       className="img-fluid"
                     />
@@ -419,7 +419,7 @@ const Designing = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="#" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/SERVICES/Designing/Industries/logistic-ind.png")}
+                      src={require("../../../assets/images/SERVICES/Designing/Industries/logistic-ind.png")}
                       alt="Entertainment-Industry"
                       className="img-fluid"
                     />

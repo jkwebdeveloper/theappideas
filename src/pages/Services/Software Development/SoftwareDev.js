@@ -1,33 +1,33 @@
 import React from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
-import Work from "../../components/Workdone/Work";
-import TestiMonial from "../Testimonial/TestiMonial";
+import Work from "../../../components/Workdone/Work";
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
 
-import SoftwareDevelopment from "../../assets/images/SERVICES/Software development/Software Development.svg";
-import Custom from "../../assets/images/SERVICES/Software development/Custom Softwrare Development.svg";
-import SoftwareDeveloper from "../../assets/images/SERVICES/Software development/Software Developer.svg";
+import SoftwareDevelopment from "../../../assets/images/SERVICES/Software development/Software Development.svg";
+import Custom from "../../../assets/images/SERVICES/Software development/Custom Softwrare Development.svg";
+import SoftwareDeveloper from "../../../assets/images/SERVICES/Software development/Software Developer.svg";
 
 // Service section image
-import DesktopApplication from "../../assets/images/SERVICES/Software development/Services we provide/Desktop Application.svg";
-import WebApplication from "../../assets/images/SERVICES/Software development/Services we provide/Web Application.svg";
-import CRM from "../../assets/images/SERVICES/Software development/Services we provide/CRM Solution.svg";
-import ERP from "../../assets/images/SERVICES/Software development/Services we provide/ERP Solution.svg";
-import HRMS from "../../assets/images/SERVICES/Software development/Services we provide/HRMS System.svg";
-import SoftwareMaintenance from "../../assets/images/SERVICES/Software development/Services we provide/Software Maintenance Support.svg";
-import SoftwareIntegration from "../../assets/images/SERVICES/Software development/Services we provide/Software integration.svg";
-import SoftwareUIUX from "../../assets/images/SERVICES/Software development/Services we provide/Software UI UX designing services.svg";
-import SoftwareConsulting from "../../assets/images/SERVICES/Software development/Services we provide/Software consulting.svg";
+import DesktopApplication from "../../../assets/images/SERVICES/Software development/Services we provide/Desktop Application.svg";
+import WebApplication from "../../../assets/images/SERVICES/Software development/Services we provide/Web Application.svg";
+import CRM from "../../../assets/images/SERVICES/Software development/Services we provide/CRM Solution.svg";
+import ERP from "../../../assets/images/SERVICES/Software development/Services we provide/ERP Solution.svg";
+import HRMS from "../../../assets/images/SERVICES/Software development/Services we provide/HRMS System.svg";
+import SoftwareMaintenance from "../../../assets/images/SERVICES/Software development/Services we provide/Software Maintenance Support.svg";
+import SoftwareIntegration from "../../../assets/images/SERVICES/Software development/Services we provide/Software integration.svg";
+import SoftwareUIUX from "../../../assets/images/SERVICES/Software development/Services we provide/Software UI UX designing services.svg";
+import SoftwareConsulting from "../../../assets/images/SERVICES/Software development/Services we provide/Software consulting.svg";
 
 // Industries  section images
-import Academic from "../../assets/images/SERVICES/Software development/Industries We Serve/Academic and Education.svg";
-import Fintech from "../../assets/images/SERVICES/Software development/Industries We Serve/Fintech Industry.svg";
-import Real from "../../assets/images/SERVICES/Software development/Industries We Serve/Real Estate industry.svg";
-import Restaurant from "../../assets/images/SERVICES/Software development/Industries We Serve/Restaurant business.svg";
-import Travel from "../../assets/images/SERVICES/Software development/Industries We Serve/Travel and Tourism.svg";
-import Construction from "../../assets/images/SERVICES/Software development/Industries We Serve/Construction Industry.svg";
-import IT from "../../assets/images/SERVICES/Software development/Industries We Serve/IT industry.svg";
-import Healthcare from "../../assets/images/SERVICES/Software development/Industries We Serve/Healthcare Industry.svg";
-import Entertainment from "../../assets/images/SERVICES/Software development/Industries We Serve/Entertainment Industry.svg";
+import Academic from "../../../assets/images/SERVICES/Software development/Industries We Serve/Academic and Education.svg";
+import Fintech from "../../../assets/images/SERVICES/Software development/Industries We Serve/Fintech Industry.svg";
+import Real from "../../../assets/images/SERVICES/Software development/Industries We Serve/Real Estate industry.svg";
+import Restaurant from "../../../assets/images/SERVICES/Software development/Industries We Serve/Restaurant business.svg";
+import Travel from "../../../assets/images/SERVICES/Software development/Industries We Serve/Travel and Tourism.svg";
+import Construction from "../../../assets/images/SERVICES/Software development/Industries We Serve/Construction Industry.svg";
+import IT from "../../../assets/images/SERVICES/Software development/Industries We Serve/IT industry.svg";
+import Healthcare from "../../../assets/images/SERVICES/Software development/Industries We Serve/Healthcare Industry.svg";
+import Entertainment from "../../../assets/images/SERVICES/Software development/Industries We Serve/Entertainment Industry.svg";
 
 const SoftwareDev = () => {
   return (
@@ -362,7 +362,7 @@ const SoftwareDev = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../assets/images/SERVICES/Software development/Technologies/asp.net_.png")}
+                  src={require("../../../assets/images/SERVICES/Software development/Technologies/asp.net_.png")}
                   alt="Asp.Net"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -373,7 +373,7 @@ const SoftwareDev = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}

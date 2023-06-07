@@ -10,14 +10,13 @@ import WebDev from "./pages/Services/Web Development/WebDevelopment";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
 import Blog from "./pages/Blog";
-import DigitalMarketing from "./components/Digital-Marketing/DigitalMarketing";
-import ECommerceWeb from "./components/ECommerceWeb/ECommerceWeb";
-import SoftwareDev from "./components/Software Development/SoftwareDev";
-import Designing from "./components/DesigningServices/Designing";
+import DigitalMarketing from "./pages/Services/Digital Maketing/DigitalMarketing";
+import ECommerceWeb from "./pages/Services/ECommerceWeb/ECommerceWeb";
+import SoftwareDev from "./pages/Services/Software Development/SoftwareDev";
+import Designing from "./pages/Services/Designing Services/Designing";
 import StartupServices from "./pages/StartupServices";
 import HireIOSDev from "./pages/Hire Us/Hire Mobile App Dev/HireIOSDev";
 import FoodDelivery from "./pages/Solutions/DeliveryApp/FoodDelivery";
-import PopUp from "./components/PopUp";
 import Error404 from "./pages/Error404";
 import AndroidAppDevelopment from "./pages/MobileAppDevelopment/AndroidAppDevelopment";
 import IphoneAppDevelopment from "./pages/MobileAppDevelopment/IphoneAppDevelopment";
@@ -68,9 +67,9 @@ import Careers from "./pages/Company/Careers";
 import Testimonial from "./pages/Company/Testimonial";
 import OurTeam from "./pages/Company/OurTeam";
 import OurProcess from "./pages/Company/OurProcess";
-import Solutions from "./components/Solutions";
-import HireUs from "./components/HireUs";
-import LawyerWeb from "./components/LawyerWeb";
+import Solutions from "./pages/Solutions/Solutions";
+import HireUs from "./pages/Hire Us/HireUs";
+import LawyerWeb from "./pages/LawyerWeb";
 import MobileAppToronto from "./pages/Sitemap/MobileAppToronto";
 import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
 import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
@@ -204,7 +203,6 @@ const App = () => {
         {/* Blog Link */}
         <Route path="/blog" element={<Blog />} />
 
-        <Route path="/popup" element={<PopUp />} />
         <Route path="/*" element={<Error404 />} />
         <Route path="/lawyer-website-solution" element={<LawyerWeb />} />
 

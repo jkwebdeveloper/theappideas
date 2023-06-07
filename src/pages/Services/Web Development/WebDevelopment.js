@@ -702,65 +702,64 @@ const WebDev = () => {
         </div>
       </section>
       {/* Service Section End */}
-      <>
-        {/* Technologies Section Start */}
-        <section className="technologies__section py-5">
-          <div className="container">
-            <div className="Title__White mb-4">
-              <h3>Technologies we use</h3>
+      {/* Technologies Section Start */}
+      <section className="technologies__section py-5">
+        <div className="container">
+          <div className="Title__White mb-4">
+            <h3>Technologies we use</h3>
+          </div>
+          <div className="row">
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="technologies_box text-center">
+                <img
+                  src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/wp.png")}
+                  alt="Wordpress"
+                  className="img-fluid"
+                />
+                <h2>Wordpress</h2>
+              </div>
             </div>
-            <div className="row">
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
-                  <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/wp.png")}
-                    alt="Wordpress"
-                    className="img-fluid"
-                  />
-                  <h2>Wordpress</h2>
-                </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="technologies_box text-center">
+                <img
+                  src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/php.png")}
+                  alt="PHP"
+                  className="img-fluid"
+                />
+                <h2>PHP</h2>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
-                  <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/php.png")}
-                    alt="PHP"
-                    className="img-fluid"
-                  />
-                  <h2>PHP</h2>
-                </div>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="technologies_box text-center">
+                <img
+                  src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/an.png")}
+                  alt="Angular"
+                  className="img-fluid"
+                />
+                <h2>Angular</h2>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
-                  <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/an.png")}
-                    alt="Angular"
-                    className="img-fluid"
-                  />
-                  <h2>Angular</h2>
-                </div>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="technologies_box text-center">
+                <img
+                  src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/react-js.png")}
+                  alt="React-Js"
+                  className="img-fluid"
+                />
+                <h2>ReactJs</h2>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
-                  <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/react-js.png")}
-                    alt="React-Js"
-                    className="img-fluid"
-                  />
-                  <h2>ReactJs</h2>
-                </div>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="technologies_box text-center">
+                <img
+                  src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/node-js.png")}
+                  alt="Node-Js"
+                  className="img-fluid"
+                />
+                <h2>Node Js</h2>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
-                  <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/node-js.png")}
-                    alt="Node-Js"
-                    className="img-fluid"
-                  />
-                  <h2>Node Js</h2>
-                </div>
-              </div>
-              {/* <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+            </div>
+            {/* <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div className="technologies_box text-center">
                   <img
                     src={require("../../assets/images/MobileAppDev/technogies-img/flutter.png")}
@@ -770,901 +769,863 @@ const WebDev = () => {
                   <h2>Flutter</h2>
                 </div>
               </div> */}
+          </div>
+        </div>
+      </section>
+      {/* Technologies Section End */}
+      {/* Service Section Start */}
+      <section className="service__provide__section py-5">
+        <div className="container">
+          <div className="Title">
+            <h3>Industries We Serve</h3>
+          </div>
+          <div className="row mt-5">
+            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="row">
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("food_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "food_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img src={Food} alt="Food-Industry" className="img-fluid" />
+                    <p>
+                      Food <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("retail_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "retail_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Retail}
+                      alt="Retail-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Retail <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("transport_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "transport_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Transport}
+                      alt="Transport-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Transport <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("education_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "education_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Education}
+                      alt="Education-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Education <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("business_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "business_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Business}
+                      alt="Business-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Business <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("recruitment_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "recruitment_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Recruitment}
+                      alt="Recruitment-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Recruitment <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("software_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "software_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Software}
+                      alt="Software-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Software <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("finance_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "finance_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Finance}
+                      alt="Finance-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Finance <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+                <div
+                  className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("insurance_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "insurance_industry" &&
+                      "service__provide_tab_active"
+                    } `}
+                  >
+                    <img
+                      src={Insurance}
+                      alt="Insurance-Industry"
+                      className="img-fluid"
+                    />
+                    <p>
+                      Insurance <br />
+                      Industry
+                    </p>
+                  </a>
+                </div>
+              </div>
+            </div>
+            {activeServe === "food_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Food Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the Best Food Industry web and app
+                      development company. We have a team of highly skilled
+                      developers as well as designers who are proficient in
+                      offering the best software development services at the
+                      best possible rates. We have years of experience in
+                      providing the best solution for the Food or Restaurant
+                      Industry.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Food Industry Web App in the
+                      market?
+                    </p>
+
+                    <p className="Title_para">
+                      Nowadays, a high number of startups or business news are
+                      shifting towards digitization because it offers the
+                      convenience of accessing the services. On the other hand,
+                      people are also more inclined towards digital platforms
+                      because it is time effective. If you are planning then
+                      this is probably the time to take a step ahead and launch
+                      your own Food Industry web app in the market.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "retail_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Retail Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the Foremost Retail Industry web
+                      and app development company. We are highly experienced in
+                      providing the best software solution like E-commerce
+                      development, mobile app, web app and website development.
+                      We are also proficient in providing unique designing
+                      services for all kinds of industries including the retail
+                      business.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Retail Industry Web app in
+                      the market?
+                    </p>
+
+                    <p className="Title_para">
+                      If yes then connect with us and get a free quote. In this
+                      present time, all kinds of business industries are
+                      converting their services into digital services or online
+                      platforms because they offer convenience as well as
+                      time-saving methods. This is probably the best time for
+                      you to convert your retail business into a successful web
+                      app to generate high profits and get more users attention.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "transport_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Transport Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the popular Transport Industry web
+                      development services. We are highly skilled and expertise
+                      in offering the best online platforms development services
+                      including in the transport industry. In the Transport
+                      industry, it is very important to have a web app, so it
+                      will be very easy for the business owners to track down
+                      their services and manage the work accordingly.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Transport Industry Web app in
+                      the market?
+                    </p>
+
+                    <p className="Title_para">
+                      If Yes, then this is probably the best time for you to
+                      launch a Transport industry web app at the best rates. By
+                      having a Transport Industry web app, you can easily track
+                      down your drivers, manage the services from any place,
+                      convenience of managing the services at any time, have
+                      great staff management and more.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "education_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Education Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is highly proficient in developing the best
+                      Education industry web solution. We have a team of highly
+                      experienced web app developers who are experts in
+                      delivering the best education web and app solutions at the
+                      best rates. Along with the development services, we also
+                      offer the best designing services for an education
+                      website, web app and mobile app.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch an Education Industry Web app
+                      in the market?
+                    </p>
+
+                    <p className="Title_para">
+                      If yes, feel free to connect with us and get a free
+                      quotation for an Education web app development Service. We
+                      are just a text away from you. Education web apps are
+                      trending in the market. An Education web app can help you
+                      to easily list down all the courses and keep records of
+                      the students. If you are an educational institute owner
+                      then this is probably the time to digitalize your service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "business_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Business Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular Software
+                      development company. We are providing digital platform
+                      services like website development, web app development,
+                      mobile app development and unique graphic designing
+                      service. Nowadays, a high number of entrepreneurs are
+                      making a high investment in developing online Businesses
+                      for increasing the profit rate and offering the best
+                      services to their customers.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch an Online Business in the
+                      market?
+                    </p>
+
+                    <p className="Title_para">
+                      If Yes, then this is probably the best time for you to
+                      make an investment and launch your online business in the
+                      market. People are probably looking for some of the best
+                      web apps to be introduced in the market which can make
+                      their work easier and efficient. If you have an idea then
+                      feel free to connect with us and get a free quotation for
+                      your ideas.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "recruitment_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Recruitment Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the foremost recruitment industry
+                      web app development company. We have a team of highly
+                      skilled developers as well as designers, who will offer
+                      advanced features and unique graphics which can add value
+                      to your recruitment web app. In this present time, it is
+                      very important to have online platforms for your
+                      recruitment services to make the work more convenient.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a recruitment Web app in the
+                      market?
+                    </p>
+
+                    <p className="Title_para">
+                      If yes then, feel free to connect with us and discuss your
+                      requirements, we are just a click away. A Recruitment web
+                      app can make the process much easier for you as an owner.
+                      You can easily manage the data as well as recruit people
+                      easily online. We follow simple steps like requirements
+                      gathering, analyzing, resource allocation, updating
+                      clients related to the projects and deploying it on time.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "software_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Software Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We offer the foremost services like
+                      E-commerce development, mobile app development, web app
+                      development and website app development. We are highly
+                      expertise in providing designing services like offering
+                      unique graphics design along with the development. We have
+                      also provided the best solution to the Software Industry.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Software Industry Web
+                      solution in the market?
+                    </p>
+
+                    <p className="Title_para">
+                      If Yes , then feel free to connect with us. We have a pool
+                      of talented developers as well as designers who are
+                      proficient in offering the best online platforms services.
+                      We are also working with the software industry to deliver
+                      high-class web app to them which can increase their
+                      profit. We initially gather the requirements, analyze
+                      requirements, allocate the resources, take clients
+                      approval and deploy the project.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "finance_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Finance Industry</h3>
+                    <p className="Title_para">
+                      The App Idea is one of the successful Finance Software
+                      development services. We are highly efficient in offering
+                      the best online solution for the finance industry at the
+                      best rates. We have a team of highly skilled developers
+                      and designers who have years of experience in providing
+                      the victorious solution for the finance industry by adding
+                      some of the advanced features into the web app.
+                    </p>
+
+                    <p className="Title_para">
+                      If yes then, we are just a call away, Feel free to connect
+                      with us and get a free quotation for your Finance Industry
+                      Web App. Having a Finance Web App can help you to easily
+                      manage all the services through a web app. This web app
+                      can help you to easily track down your progress and make
+                      improvements as per requirements. At this present time, it
+                      is highly recommended to have the best web app for your
+                      Finance Industry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeServe === "insurance_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Insurance Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular IT services
+                      providers. We offer the services like web app development,
+                      mobile app development, website development, E-commerce
+                      platforms development and Graphic designing services at
+                      the best possible rates by integrating advanced features
+                      and unique designing services. The insurance industry is
+                      now also integrating digitization to make the process much
+                      easier.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch an Insurance Web app in the
+                      market?
+                    </p>
+
+                    <p className="Title_para">
+                      If you are, then this is probably the time for you to take
+                      a step ahead and connect with us. Let’s have a quick call
+                      about your requirements and we will offer you the best
+                      quotation for your insurance web app services. We follow a
+                      simple process of gathering information and analyzing it,
+                      providing the quotation, allocating dedicated developers,
+                      taking clients approval after every module development and
+                      deploying the project.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+          </div>
+        </div>
+      </section>
+      {/* Service Section End */}
+
+      {/* <!-- Work Slider Start --> */}
+      <WorkSlider />
+      {/* <!-- Work Slider End --> */}
+
+      {/* Client testimonial Section Start */}
+      <TestiMonial />
+      {/* Client testimonial Section End */}
+
+      {/* FAQ Section Start */}
+      <section className="accordion_section py-5">
+        <div className="container">
+          <div className="Title">
+            <h3>Frequently Asked Questions</h3>
+          </div>
+          <div className="row mt-5">
+            <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
+              <div
+                className="accordion accordion-flush"
+                id="accordionFlushExample"
+              >
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingOne">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseOne"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseOne"
+                    >
+                      What does Mobile App Development Require?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseOne"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="flush-headingOne"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      <b>Mobile app development</b> entails making computer
+                      programs that can run on a wide range of mobile platforms
+                      and devices. If you want to have a successful mobile app,
+                      you should choose a business that has experience making
+                      such apps and follows a tried-and-true process. Mobile app
+                      developers provide an all-encompassing development plan,
+                      interface design, software development, software
+                      distribution, and backend services to back up the app.
+                      Core features of the software are tested often during
+                      development.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingTwo">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseTwo"
+                    >
+                      What Are the Different Types of Mobile Apps You Can
+                      Develop?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseTwo"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="flush-headingTwo"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      Applications may be developed for mobile devices running
+                      both the Android and iOS operating systems. Customers,
+                      employees, or even vendors may promote certain apps for
+                      use.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingThree">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseThree"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseThree"
+                    >
+                      Which platform, Android or iOS, should our application be
+                      launched on?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseThree"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="flush-headingThree"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      In the past, companies had the option of creating software
+                      just for one OS. Even while major mobile OSes like Android
+                      and iOS have huge user bases, most companies still choose
+                      to create apps that work on both..
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingFour">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFour"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      What is the Difference Between Cross-Platform and Native
+                      App Development?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFour"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFour"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      Cross-platform development refers to the process of
+                      creating software for several platforms as opposed to only
+                      one. The process of creating applications specifically for
+                      different platforms, including Android and iOS, is known
+                      as native <b>app development</b>. A software that
+                      functions effectively on both systems may be made using
+                      cross-platform development approaches.
+                      <br />
+                      <div className="mt-3">
+                        <b>
+                          It’s recommended to use the OS’s native programming
+                          languages and integrated development environments when
+                          developing native apps (IDEs). Java or Kotlin
+                          proficiency and familiarity with Android Studio are
+                          often required for Android app development. You must
+                          use Xcode and either Objective C or Swift while
+                          developing an iOS app
+                        </b>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="flush-headingFive">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#flush-collapseFive"
+                      aria-expanded="false"
+                      aria-controls="flush-collapseFour"
+                    >
+                      Can You Work With Us if We Don’t Have a Fully Formed Idea
+                      for Our App?
+                    </button>
+                  </h2>
+                  <div
+                    id="flush-collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="flush-headingFive"
+                    data-bs-parent="#accordionFlushExample"
+                  >
+                    <div className="accordion-body">
+                      We engineers are used to collaborating with businesses
+                      whose app concepts are in varied phases of development.
+                      Let’s collaborate to bring your ideas to life as practical
+                      mobile applications.
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
+              <div className="accordion" id="accordionExample">
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingTwo">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseTwo"
+                      aria-expanded="false"
+                      aria-controls="collapseTwo"
+                    >
+                      Will You Sign an NDA for the App You’re Developing?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseTwo"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingTwo"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      We are willing to sign non-disclosure agreements
+                      throughout the development of your mobile app (NDAs). You
+                      can trust us to keep your development under wraps and out
+                      of the hands of your competitors at all times.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingThree">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseThree"
+                      aria-expanded="false"
+                      aria-controls="collapseThree"
+                    >
+                      Do I Need to Test My App?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseThree"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingThree"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      Our knowledgeable internal testing crew puts every mobile
+                      app through rigorous testing. This group works closely
+                      with the developers to make sure the applications being
+                      created are of the best quality possible. You are welcome
+                      to participate in our internal testing as well as your
+                      own, of course. You could have suggestions for other uses
+                      for the app, allowing you to develop test cases that are
+                      more difficult.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFour">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFour"
+                      aria-expanded="false"
+                      aria-controls="collapseFour"
+                    >
+                      Can an App connect to my existing systems/data store?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFour"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFour"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      You may rely on us to develop API-based applications that
+                      smoothly synchronise with your current infrastructure
+                      (API). Because to APIs that may be developed in any
+                      language, your datastore can be accessed and utilised by
+                      any software.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingFive">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseFive"
+                      aria-expanded="false"
+                      aria-controls="collapseFive"
+                    >
+                      Should I prepare my app's visual (wireframe)?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseFive"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingFive"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      Our development team may collaborate with you to create
+                      the app if you have access to a web designer and are
+                      prepared to give graphics. The We team would be pleased to
+                      assist you with visualising your concept and bringing it
+                      to life in the digital sphere, even if all you currently
+                      have is a conception or an idea.
+                    </div>
+                  </div>
+                </div>
+                <div className="accordion-item">
+                  <h2 className="accordion-header" id="headingSix">
+                    <button
+                      className="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      data-bs-target="#collapseSix"
+                      aria-expanded="false"
+                      aria-controls="v"
+                    >
+                      Who will own the intellectual property rights to my App?
+                    </button>
+                  </h2>
+                  <div
+                    id="collapseSix"
+                    className="accordion-collapse collapse"
+                    aria-labelledby="headingSix"
+                    data-bs-parent="#accordionExample"
+                  >
+                    <div className="accordion-body">
+                      The SPAR team’s obligations are limited to providing
+                      advice and support while you develop the App for your
+                      clients since the App is based on your idea, concept, and
+                      company, and you retain all rights to it.
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
-        </section>
-        {/* Technologies Section End */}
-        <>
-          {/* Service Section Start */}
-          <section className="service__provide__section py-5">
-            <div className="container">
-              <div className="Title">
-                <h3>Industries We Serve</h3>
-              </div>
-              <div className="row mt-5">
-                <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                  <div className="row">
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("food_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "food_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Food}
-                          alt="Food-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Food <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("retail_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "retail_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Retail}
-                          alt="Retail-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Retail <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("transport_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "transport_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Transport}
-                          alt="Transport-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Transport <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("education_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "education_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Education}
-                          alt="Education-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Education <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("business_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "business_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Business}
-                          alt="Business-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Business <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("recruitment_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "recruitment_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Recruitment}
-                          alt="Recruitment-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Recruitment <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("software_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "software_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Software}
-                          alt="Software-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Software <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("finance_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "finance_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Finance}
-                          alt="Finance-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Finance <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                    <div
-                      className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe("insurance_industry")}
-                    >
-                      <a
-                        href="##"
-                        className={`service__provide_tab ${
-                          activeServe === "insurance_industry" &&
-                          "service__provide_tab_active"
-                        } `}
-                      >
-                        <img
-                          src={Insurance}
-                          alt="Insurance-Industry"
-                          className="img-fluid"
-                        />
-                        <p>
-                          Insurance <br />
-                          Industry
-                        </p>
-                      </a>
-                    </div>
-                  </div>
-                </div>
-                {activeServe === "food_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Food Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the Best Food Industry web and
-                          app development company. We have a team of highly
-                          skilled developers as well as designers who are
-                          proficient in offering the best software development
-                          services at the best possible rates. We have years of
-                          experience in providing the best solution for the Food
-                          or Restaurant Industry.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch a Food Industry Web App in
-                          the market?
-                        </p>
-
-                        <p className="Title_para">
-                          Nowadays, a high number of startups or business news
-                          are shifting towards digitization because it offers
-                          the convenience of accessing the services. On the
-                          other hand, people are also more inclined towards
-                          digital platforms because it is time effective. If you
-                          are planning then this is probably the time to take a
-                          step ahead and launch your own Food Industry web app
-                          in the market.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "retail_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Retail Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the Foremost Retail Industry
-                          web and app development company. We are highly
-                          experienced in providing the best software solution
-                          like E-commerce development, mobile app, web app and
-                          website development. We are also proficient in
-                          providing unique designing services for all kinds of
-                          industries including the retail business.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch a Retail Industry Web app
-                          in the market?
-                        </p>
-
-                        <p className="Title_para">
-                          If yes then connect with us and get a free quote. In
-                          this present time, all kinds of business industries
-                          are converting their services into digital services or
-                          online platforms because they offer convenience as
-                          well as time-saving methods. This is probably the best
-                          time for you to convert your retail business into a
-                          successful web app to generate high profits and get
-                          more users attention.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "transport_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Transport Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the popular Transport Industry
-                          web development services. We are highly skilled and
-                          expertise in offering the best online platforms
-                          development services including in the transport
-                          industry. In the Transport industry, it is very
-                          important to have a web app, so it will be very easy
-                          for the business owners to track down their services
-                          and manage the work accordingly.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch a Transport Industry Web
-                          app in the market?
-                        </p>
-
-                        <p className="Title_para">
-                          If Yes, then this is probably the best time for you to
-                          launch a Transport industry web app at the best rates.
-                          By having a Transport Industry web app, you can easily
-                          track down your drivers, manage the services from any
-                          place, convenience of managing the services at any
-                          time, have great staff management and more.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "education_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Education Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is highly proficient in developing the
-                          best Education industry web solution. We have a team
-                          of highly experienced web app developers who are
-                          experts in delivering the best education web and app
-                          solutions at the best rates. Along with the
-                          development services, we also offer the best designing
-                          services for an education website, web app and mobile
-                          app.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch an Education Industry Web
-                          app in the market?
-                        </p>
-
-                        <p className="Title_para">
-                          If yes, feel free to connect with us and get a free
-                          quotation for an Education web app development
-                          Service. We are just a text away from you. Education
-                          web apps are trending in the market. An Education web
-                          app can help you to easily list down all the courses
-                          and keep records of the students. If you are an
-                          educational institute owner then this is probably the
-                          time to digitalize your service.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "business_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Business Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the most popular Software
-                          development company. We are providing digital platform
-                          services like website development, web app
-                          development, mobile app development and unique graphic
-                          designing service. Nowadays, a high number of
-                          entrepreneurs are making a high investment in
-                          developing online Businesses for increasing the profit
-                          rate and offering the best services to their
-                          customers.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch an Online Business in the
-                          market?
-                        </p>
-
-                        <p className="Title_para">
-                          If Yes, then this is probably the best time for you to
-                          make an investment and launch your online business in
-                          the market. People are probably looking for some of
-                          the best web apps to be introduced in the market which
-                          can make their work easier and efficient. If you have
-                          an idea then feel free to connect with us and get a
-                          free quotation for your ideas.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "recruitment_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Recruitment Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the foremost recruitment
-                          industry web app development company. We have a team
-                          of highly skilled developers as well as designers, who
-                          will offer advanced features and unique graphics which
-                          can add value to your recruitment web app. In this
-                          present time, it is very important to have online
-                          platforms for your recruitment services to make the
-                          work more convenient.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch a recruitment Web app in
-                          the market?
-                        </p>
-
-                        <p className="Title_para">
-                          If yes then, feel free to connect with us and discuss
-                          your requirements, we are just a click away. A
-                          Recruitment web app can make the process much easier
-                          for you as an owner. You can easily manage the data as
-                          well as recruit people easily online. We follow simple
-                          steps like requirements gathering, analyzing, resource
-                          allocation, updating clients related to the projects
-                          and deploying it on time.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "software_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Software Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the leading web and app
-                          development company. We offer the foremost services
-                          like E-commerce development, mobile app development,
-                          web app development and website app development. We
-                          are highly expertise in providing designing services
-                          like offering unique graphics design along with the
-                          development. We have also provided the best solution
-                          to the Software Industry.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch a Software Industry Web
-                          solution in the market?
-                        </p>
-
-                        <p className="Title_para">
-                          If Yes , then feel free to connect with us. We have a
-                          pool of talented developers as well as designers who
-                          are proficient in offering the best online platforms
-                          services. We are also working with the software
-                          industry to deliver high-class web app to them which
-                          can increase their profit. We initially gather the
-                          requirements, analyze requirements, allocate the
-                          resources, take clients approval and deploy the
-                          project.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "finance_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Finance Industry</h3>
-                        <p className="Title_para">
-                          The App Idea is one of the successful Finance Software
-                          development services. We are highly efficient in
-                          offering the best online solution for the finance
-                          industry at the best rates. We have a team of highly
-                          skilled developers and designers who have years of
-                          experience in providing the victorious solution for
-                          the finance industry by adding some of the advanced
-                          features into the web app.
-                        </p>
-
-                        <p className="Title_para">
-                          If yes then, we are just a call away, Feel free to
-                          connect with us and get a free quotation for your
-                          Finance Industry Web App. Having a Finance Web App can
-                          help you to easily manage all the services through a
-                          web app. This web app can help you to easily track
-                          down your progress and make improvements as per
-                          requirements. At this present time, it is highly
-                          recommended to have the best web app for your Finance
-                          Industry.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
-                {activeServe === "insurance_industry" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-                    <div className="service_rht">
-                      <div className="Title">
-                        <h3 className="Title_heading">Insurance Industry</h3>
-                        <p className="Title_para">
-                          The App Ideas is one of the most popular IT services
-                          providers. We offer the services like web app
-                          development, mobile app development, website
-                          development, E-commerce platforms development and
-                          Graphic designing services at the best possible rates
-                          by integrating advanced features and unique designing
-                          services. The insurance industry is now also
-                          integrating digitization to make the process much
-                          easier.
-                        </p>
-                        <p className="Title_para">
-                          Are you planning to launch an Insurance Web app in the
-                          market?
-                        </p>
-
-                        <p className="Title_para">
-                          If you are, then this is probably the time for you to
-                          take a step ahead and connect with us. Let’s have a
-                          quick call about your requirements and we will offer
-                          you the best quotation for your insurance web app
-                          services. We follow a simple process of gathering
-                          information and analyzing it, providing the quotation,
-                          allocating dedicated developers, taking clients
-                          approval after every module development and deploying
-                          the project.
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                )}
+        </div>
+      </section>
+      {/* FAQ Section End */}
+      {/* Contact Section Start */}
+      <section className="testi-bg py-4">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
+              <div className="contact__lft">
+                <p>
+                  Do you like to know more about our expertise in mobile app
+                  development?
+                </p>
               </div>
             </div>
-          </section>
-          {/* Service Section End */}
-
-          {/* <!-- Work Slider Start --> */}
-          <WorkSlider />
-          {/* <!-- Work Slider End --> */}
-
-          {/* Client testimonial Section Start */}
-          <TestiMonial />
-          {/* Client testimonial Section End */}
-
-          <>
-            {/* FAQ Section Start */}
-            <section className="accordion_section py-5">
-              <div className="container">
-                <div className="Title">
-                  <h3>Frequently Asked Questions</h3>
-                </div>
-                <div className="row mt-5">
-                  <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-                    <div
-                      className="accordion accordion-flush"
-                      id="accordionFlushExample"
-                    >
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingOne">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseOne"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseOne"
-                          >
-                            What does Mobile App Development Require?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseOne"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingOne"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            <b>Mobile app development</b> entails making
-                            computer programs that can run on a wide range of
-                            mobile platforms and devices. If you want to have a
-                            successful mobile app, you should choose a business
-                            that has experience making such apps and follows a
-                            tried-and-true process. Mobile app developers
-                            provide an all-encompassing development plan,
-                            interface design, software development, software
-                            distribution, and backend services to back up the
-                            app. Core features of the software are tested often
-                            during development.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseTwo"
-                          >
-                            What Are the Different Types of Mobile Apps You Can
-                            Develop?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingTwo"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Applications may be developed for mobile devices
-                            running both the Android and iOS operating systems.
-                            Customers, employees, or even vendors may promote
-                            certain apps for use.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2
-                          className="accordion-header"
-                          id="flush-headingThree"
-                        >
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseThree"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseThree"
-                          >
-                            Which platform, Android or iOS, should our
-                            application be launched on?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingThree"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            In the past, companies had the option of creating
-                            software just for one OS. Even while major mobile
-                            OSes like Android and iOS have huge user bases, most
-                            companies still choose to create apps that work on
-                            both..
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingFour">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFour"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseFour"
-                          >
-                            What is the Difference Between Cross-Platform and
-                            Native App Development?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseFour"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingFour"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            Cross-platform development refers to the process of
-                            creating software for several platforms as opposed
-                            to only one. The process of creating applications
-                            specifically for different platforms, including
-                            Android and iOS, is known as native{" "}
-                            <b>app development</b>. A software that functions
-                            effectively on both systems may be made using
-                            cross-platform development approaches.
-                            <br />
-                            <div className="mt-3">
-                              <b>
-                                It’s recommended to use the OS’s native
-                                programming languages and integrated development
-                                environments when developing native apps (IDEs).
-                                Java or Kotlin proficiency and familiarity with
-                                Android Studio are often required for Android
-                                app development. You must use Xcode and either
-                                Objective C or Swift while developing an iOS app
-                              </b>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="flush-headingFive">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#flush-collapseFive"
-                            aria-expanded="false"
-                            aria-controls="flush-collapseFour"
-                          >
-                            Can You Work With Us if We Don’t Have a Fully Formed
-                            Idea for Our App?
-                          </button>
-                        </h2>
-                        <div
-                          id="flush-collapseFive"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="flush-headingFive"
-                          data-bs-parent="#accordionFlushExample"
-                        >
-                          <div className="accordion-body">
-                            We engineers are used to collaborating with
-                            businesses whose app concepts are in varied phases
-                            of development. Let’s collaborate to bring your
-                            ideas to life as practical mobile applications.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-                    <div className="accordion" id="accordionExample">
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingTwo">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseTwo"
-                            aria-expanded="false"
-                            aria-controls="collapseTwo"
-                          >
-                            Will You Sign an NDA for the App You’re Developing?
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseTwo"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingTwo"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            We are willing to sign non-disclosure agreements
-                            throughout the development of your mobile app
-                            (NDAs). You can trust us to keep your development
-                            under wraps and out of the hands of your competitors
-                            at all times.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingThree">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseThree"
-                            aria-expanded="false"
-                            aria-controls="collapseThree"
-                          >
-                            Do I Need to Test My App?
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseThree"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingThree"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            Our knowledgeable internal testing crew puts every
-                            mobile app through rigorous testing. This group
-                            works closely with the developers to make sure the
-                            applications being created are of the best quality
-                            possible. You are welcome to participate in our
-                            internal testing as well as your own, of course. You
-                            could have suggestions for other uses for the app,
-                            allowing you to develop test cases that are more
-                            difficult.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingFour">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseFour"
-                            aria-expanded="false"
-                            aria-controls="collapseFour"
-                          >
-                            Can an App connect to my existing systems/data
-                            store?
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseFour"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingFour"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            You may rely on us to develop API-based applications
-                            that smoothly synchronise with your current
-                            infrastructure (API). Because to APIs that may be
-                            developed in any language, your datastore can be
-                            accessed and utilised by any software.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingFive">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseFive"
-                            aria-expanded="false"
-                            aria-controls="collapseFive"
-                          >
-                            Should I prepare my app's visual (wireframe)?
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseFive"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingFive"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            Our development team may collaborate with you to
-                            create the app if you have access to a web designer
-                            and are prepared to give graphics. The We team would
-                            be pleased to assist you with visualising your
-                            concept and bringing it to life in the digital
-                            sphere, even if all you currently have is a
-                            conception or an idea.
-                          </div>
-                        </div>
-                      </div>
-                      <div className="accordion-item">
-                        <h2 className="accordion-header" id="headingSix">
-                          <button
-                            className="accordion-button collapsed"
-                            type="button"
-                            data-bs-toggle="collapse"
-                            data-bs-target="#collapseSix"
-                            aria-expanded="false"
-                            aria-controls="v"
-                          >
-                            Who will own the intellectual property rights to my
-                            App?
-                          </button>
-                        </h2>
-                        <div
-                          id="collapseSix"
-                          className="accordion-collapse collapse"
-                          aria-labelledby="headingSix"
-                          data-bs-parent="#accordionExample"
-                        >
-                          <div className="accordion-body">
-                            The SPAR team’s obligations are limited to providing
-                            advice and support while you develop the App for
-                            your clients since the App is based on your idea,
-                            concept, and company, and you retain all rights to
-                            it.
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
+            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
+              <div className="contact__rht">
+                <a href="#" className="contact_btn">
+                  Contact us{" "}
+                </a>
               </div>
-            </section>
-            {/* FAQ Section End */}
-          </>
-
-          <>
-            {/* Contact Section Start */}
-            <section className="testi-bg py-4">
-              <div className="container">
-                <div className="row align-items-center">
-                  <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-                    <div className="contact__lft">
-                      <p>
-                        Do you like to know more about our expertise in mobile
-                        app development?
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-                    <div className="contact__rht">
-                      <a href="#" className="contact_btn">
-                        Contact us{" "}
-                      </a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
-            {/* Contact Section End */}
-          </>
-        </>
-      </>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* Contact Section End */}
     </>
   );
 };

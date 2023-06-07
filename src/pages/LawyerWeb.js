@@ -4,8 +4,8 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import TestiMonial from "./Testimonial/TestiMonial";
-import FAQ from "./FAQ";
+import TestiMonial from "../components/Testimonial/TestiMonial";
+import FAQ from "../components/FAQ";
 
 //  Customer App
 // import search from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/search foods online.svg";
