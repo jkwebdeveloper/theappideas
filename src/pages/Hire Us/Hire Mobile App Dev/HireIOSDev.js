@@ -6,19 +6,18 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import background from "../../../assets/images/Home-our-services/bg-download.svg";
 import background1 from "../../../assets/images/Home-our-services/download (1).png";
 import WorkHand from "../../../components/WorkHand";
-import custom from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/Hire Iphone App Developers.svg"
-import IOS from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/iOS-Game-Development.svg"
-import upgrade from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UPGRADE AND SUPPORT (1).svg"
-import WIDGET from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/CUSTOM WIDGET DEVELOPMENT.svg"
-import WEARABLE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/IOS WEARABLE APP DEVELOPMENT.svg"
-import uiux from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UIUX DEVELOPMENT.svg"
-import EXPERIENCE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/EXPERIENCE AND EXPERTISE.svg"
-import STRONG from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/STRONG PORTFOLIO.svg"
-import UNIQUE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/UNIQUE UI AND UX.svg"
-import FASTER from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/FASTER TIME-TO-MARKET.svg"
-import COMPETITIVE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/COMPETITIVE RATE _ SUPPORT.svg"
-
-
+import custom from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/Hire Iphone App Developers.svg";
+import IOS from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/iOS-Game-Development.svg";
+import upgrade from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UPGRADE AND SUPPORT (1).svg";
+import WIDGET from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/CUSTOM WIDGET DEVELOPMENT.svg";
+import WEARABLE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/IOS WEARABLE APP DEVELOPMENT.svg";
+import uiux from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UIUX DEVELOPMENT.svg";
+import EXPERIENCE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/EXPERIENCE AND EXPERTISE.svg";
+import STRONG from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/STRONG PORTFOLIO.svg";
+import UNIQUE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/UNIQUE UI AND UX.svg";
+import FASTER from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/FASTER TIME-TO-MARKET.svg";
+import COMPETITIVE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/COMPETITIVE RATE _ SUPPORT.svg";
+import { Link } from "react-router-dom";
 
 const HireIOSDev = () => {
   useEffect(() => {
@@ -49,7 +48,7 @@ const HireIOSDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                    7+ Years of experience in App Development
+                      7+ Years of experience in App Development
                     </span>
                   </li>
                   <li>
@@ -57,7 +56,7 @@ const HireIOSDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                    Best Iphone App Development Company
+                      Best Iphone App Development Company
                     </span>
                   </li>
                   <li>
@@ -65,7 +64,7 @@ const HireIOSDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                    Dedicated team for your Iphone App Development
+                      Dedicated team for your Iphone App Development
                     </span>
                   </li>
                   <li>
@@ -73,7 +72,7 @@ const HireIOSDev = () => {
                       <BsFillPatchCheckFill />
                     </span>
                     <span className="banner_list_rht_span">
-                    Complete Guidance from Designing to Deployment
+                      Complete Guidance from Designing to Deployment
                     </span>
                   </li>
                 </ul>
@@ -193,13 +192,15 @@ const HireIOSDev = () => {
             <h3>Our Feat in iPhone App Development</h3>
             <p>
               The App Ideas is an{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/iphone-app-development"
                 className="Title_Color"
-                target="_blank"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b>iPhone app development company</b>
-              </a>{" "}
+              </Link>{" "}
               capable to create most sophisticated, future ready iOS apps that
               can instantly give your business brand a recognition through a
               popular App Store presence. Over the years, we have produced a
@@ -215,9 +216,16 @@ const HireIOSDev = () => {
               mobile presence into successful iPhone apps.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -690,7 +698,7 @@ const HireIOSDev = () => {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{textAlign:"justify"}}>
+                <p style={{ textAlign: "justify" }}>
                   Do you want to know more about our iPhone app developers and
                   their expertise? Feel free to contact us.
                 </p>

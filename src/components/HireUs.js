@@ -163,231 +163,279 @@ const HireUs = () => {
         <div className="container">
           <div className="row">
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-react-native-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/react-native-1.png")}
-                      alt="react-native-1"
-                      className="img-fluid"
-                    />
-                    <h2>React Native Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-react-native-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/react-native-1.png")}
+                    alt="react-native-1"
+                    className="img-fluid"
+                  />
+                  <h2>React Native Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-flutter-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/flutter-1.png")}
-                      alt="flutter-1"
-                      className="img-fluid"
-                    />
-                    <h2>Flutter Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-flutter-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/flutter-1.png")}
+                    alt="flutter-1"
+                    className="img-fluid"
+                  />
+                  <h2>Flutter Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-android-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/android_logo-1.png")}
-                      alt="android_logo"
-                      className="img-fluid"
-                    />
-                    <h2>Android Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-android-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/android_logo-1.png")}
+                    alt="android_logo"
+                    className="img-fluid"
+                  />
+                  <h2>Android Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-ios-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/apple_logo.png")}
-                      alt="apple_logo"
-                      className="img-fluid"
-                    />
-                    <h2>IOS Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-ios-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/apple_logo.png")}
+                    alt="apple_logo"
+                    className="img-fluid"
+                  />
+                  <h2>IOS Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-wordpress-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/wordpress_logo.png")}
-                      alt="wordpress_logo"
-                      className="img-fluid"
-                    />
-                    <h2>WordPress Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-wordpress-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/wordpress_logo.png")}
+                    alt="wordpress_logo"
+                    className="img-fluid"
+                  />
+                  <h2>WordPress Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-shopify-development">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/shopify-brand.png")}
-                      alt="shopify-brand"
-                      className="img-fluid"
-                    />
-                    <h2>Shopify Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-shopify-development"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/shopify-brand.png")}
+                    alt="shopify-brand"
+                    className="img-fluid"
+                  />
+                  <h2>Shopify Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-codeigniter-developer">
-                <a href="#">
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/codeigniter-brand.png")}
-                      alt="codeigniter-brand"
-                      className="img-fluid"
-                    />
-                    <h2>CodeIgniter Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-codeigniter-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/codeigniter-brand.png")}
+                    alt="codeigniter-brand"
+                    className="img-fluid"
+                  />
+                  <h2>CodeIgniter Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-laravel-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/laravel.png")}
-                      alt="laravel"
-                      className="img-fluid"
-                    />
-                    <h2>Laravel Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-laravel-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/laravel.png")}
+                    alt="laravel"
+                    className="img-fluid"
+                  />
+                  <h2>Laravel Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-nodejs-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/node-js.png")}
-                      alt="node-js"
-                      className="img-fluid"
-                    />
-                    <h2>Node.js Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to="/hire-nodejs-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/node-js.png")}
+                    alt="node-js"
+                    className="img-fluid"
+                  />
+                  <h2>Node.js Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/vuejs.png")}
+                    alt="vuejs"
+                    className="img-fluid"
+                  />
+                  <h2>Vuejs Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to="/hire-reactjs-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/react-js.png")}
+                    alt="react-js"
+                    className="img-fluid"
+                  />
+                  <h2>React JS Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to="/hire-angular-developer"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/angular-brand.png")}
+                    alt="angular-brand"
+                    className="img-fluid"
+                  />
+                  <h2>Angular 2 Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/webflow.png")}
+                    alt="webflow"
+                    className="img-fluid"
+                  />
+                  <h2>Webflow Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/divi.png")}
+                    alt="Divi"
+                    className="img-fluid"
+                  />
+                  <h2>Divi Expert Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/enfold.png")}
+                    alt="enfold"
+                    className="img-fluid"
+                  />
+                  <h2>Enfold Expert Developer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to="/hire-magento-development"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/magento-brand.png")}
+                    alt="magento-brand"
+                    className="img-fluid"
+                  />
+                  <h2>Magento 2 Developer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
               <Link to="">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/vuejs.png")}
-                      alt="vuejs"
-                      className="img-fluid"
-                    />
-                    <h2>Vuejs Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-reactjs-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/react-js.png")}
-                      alt="react-js"
-                      className="img-fluid"
-                    />
-                    <h2>React JS Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-angular-developer">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/angular-brand.png")}
-                      alt="angular-brand"
-                      className="img-fluid"
-                    />
-                    <h2>Angular 2 Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/webflow.png")}
-                      alt="webflow"
-                      className="img-fluid"
-                    />
-                    <h2>Webflow Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/divi.png")}
-                      alt="Divi"
-                      className="img-fluid"
-                    />
-                    <h2>Divi Expert Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/enfold.png")}
-                      alt="enfold"
-                      className="img-fluid"
-                    />
-                    <h2>Enfold Expert Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="/hire-magento-development">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/magento-brand.png")}
-                      alt="magento-brand"
-                      className="img-fluid"
-                    />
-                    <h2>Magento 2 Developer</h2>
-                  </div>
-                </a>
-              </Link>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <a href="#">
                 <div className="valuable_box">
                   <img
                     src={require("../assets/images/Header/Hire Us/Available/app-icon.png")}
@@ -396,48 +444,57 @@ const HireUs = () => {
                   />
                   <h2>App Designer</h2>
                 </div>
-              </a>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="">
-                <a href="#">
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/web.png")}
-                      alt="Web"
-                      className="img-fluid"
-                    />
-                    <h2>Web Designer</h2>
-                  </div>
-                </a>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="">
-                <a>
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/graphic-design.png")}
-                      alt="graphic-design"
-                      className="img-fluid"
-                    />
-                    <h2>Graphics Designer</h2>
-                  </div>
-                </a>
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/web.png")}
+                    alt="Web"
+                    className="img-fluid"
+                  />
+                  <h2>Web Designer</h2>
+                </div>
               </Link>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
-              <Link to="">
-                <a href="#">
-                  <div className="valuable_box">
-                    <img
-                      src={require("../assets/images/Header/Hire Us/Available/html.png")}
-                      alt="html"
-                      className="img-fluid"
-                    />
-                    <h2>HTML Developer</h2>
-                  </div>
-                </a>
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/graphic-design.png")}
+                    alt="graphic-design"
+                    className="img-fluid"
+                  />
+                  <h2>Graphics Designer</h2>
+                </div>
+              </Link>
+            </div>
+            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+              <Link
+                to=""
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <div className="valuable_box">
+                  <img
+                    src={require("../assets/images/Header/Hire Us/Available/html.png")}
+                    alt="html"
+                    className="img-fluid"
+                  />
+                  <h2>HTML Developer</h2>
+                </div>
               </Link>
             </div>
           </div>
@@ -457,7 +514,12 @@ const HireUs = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <Link to="/contactus">
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   <a className="contact_btn" style={{ color: "#000" }}>
                     Contact us{" "}
                   </a>

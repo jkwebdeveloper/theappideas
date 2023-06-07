@@ -307,7 +307,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
             <div className="footer__box">
               <h2 className="footer_title">Get in Touch</h2>
               <p>
@@ -355,86 +355,13 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
-            <div className="footer__box">
-              <h2 className="footer_title">Follow us</h2>
-              <div className="social__footer">
-                <a href="https://www.facebook.com/Theappideas/" target="_blank">
-                  <RiFacebookFill />
-                </a>
-                <a href="https://twitter.com/theappidea" target="_blank">
-                  <BsTwitter />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/theappideas/"
-                  target="_blank"
-                >
-                  <FaLinkedinIn />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA"
-                  target="_blank"
-                >
-                  <AiFillYoutube />
-                </a>
-                <a href="https://dribbble.com/theappideas" target="_blank">
-                  <BsDribbble />
-                </a>
-                <a href="https://www.behance.net/theappidea" target="_blank">
-                  <AiOutlineBehance />
-                </a>
-              </div>
-              <div className="footer__sitemap my-3">
-                <Link to="/sitemap">
-                  <a className="sitemap_btn" style={{ color: "#000" }}>
-                    Sitemap
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-12 col-md-12 col-lg-12 col-xl-6">
+
+          <div className="col-12 col-md-12 col-lg-12 col-xl-5">
             <div className="footer__box">
               <h2 className="footer_title">Awards and Accolades</h2>
               <div className="footer__awards">
                 <ul>
-                  <li>
-                    <a className="footer__awards_achor"></a>
-                    <div className="d-flex">
-                      <a className="footer__awards_achor">
-                        <div>
-                          <img
-                            src={require("../assets/images/Footer/clutch-logo.png")}
-                            alt="app-development-img"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </a>
-                      <div className="rating_box">
-                        <a className="footer__awards_achor"></a>
-                        <a>
-                          <span>
-                            <i className="fa fa-star" />
-                          </span>
-                          <span>
-                            <i className="fa fa-star" />
-                          </span>
-                          <span>
-                            <i className="fa fa-star" />
-                          </span>
-                          <span>
-                            <i className="fa fa-star" />
-                          </span>
-                          <span>
-                            <i className="fa fa-star" />
-                          </span>
-                        </a>
-                        <a className="reviews-count">
-                          <span>42 reviews</span>
-                        </a>
-                      </div>
-                    </div>
-                  </li>
+                  <li></li>
                   <li>
                     <a
                       href="https://www.goodfirms.co/company/the-app-ideas"
@@ -474,20 +401,93 @@ const Footer = () => {
                       />
                     </a>
                   </li>
-                  <li>
-                    <a
-                      href="https://www.upwork.com/ag/theappideas/"
-                      className="footer__awards_achor"
-                      target="_blank"
-                    >
-                      <img
-                        src={require("../assets/images/Footer/upwork_new.webp")}
-                        alt="upwork_new"
-                        className="img-fluid"
-                      />
+                  <a className="footer__awards_achor"></a>
+                  <div className="d-flex">
+                    <a className="footer__awards_achor">
+                      <div>
+                        <img
+                          src={require("../assets/images/Footer/clutch-logo.png")}
+                          alt="app-development-img"
+                          className="img-fluid"
+                        />
+                      </div>
                     </a>
-                  </li>
+                    <div className="rating_box">
+                      <a className="footer__awards_achor"></a>
+                      <a>
+                        <span>
+                          <i className="fa fa-star" />
+                        </span>
+                        <span>
+                          <i className="fa fa-star" />
+                        </span>
+                        <span>
+                          <i className="fa fa-star" />
+                        </span>
+                        <span>
+                          <i className="fa fa-star" />
+                        </span>
+                        <span>
+                          <i className="fa fa-star" />
+                        </span>
+                      </a>
+                      <a className="reviews-count">
+                        <span>42 reviews</span>
+                      </a>
+                    </div>
+                    <li>
+                      <a
+                        href="https://www.upwork.com/ag/theappideas/"
+                        className="footer__awards_achor"
+                        target="_blank"
+                      >
+                        <img
+                          src={require("../assets/images/Footer/upwork_new.webp")}
+                          alt="upwork_new"
+                          className="img-fluid"
+                        />
+                      </a>
+                    </li>
+                  </div>
                 </ul>
+              </div>
+            </div>
+          </div>
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
+            <div className="footer__box">
+              <h2 className="footer_title">Follow us</h2>
+              <div className="social__footer">
+                <a href="https://www.facebook.com/Theappideas/" target="_blank">
+                  <RiFacebookFill />
+                </a>
+                <a href="https://twitter.com/theappidea" target="_blank">
+                  <BsTwitter />
+                </a>
+                <a
+                  href="https://www.linkedin.com/company/theappideas/"
+                  target="_blank"
+                >
+                  <FaLinkedinIn />
+                </a>
+                <a
+                  href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA"
+                  target="_blank"
+                >
+                  <AiFillYoutube />
+                </a>
+                <a href="https://dribbble.com/theappideas" target="_blank">
+                  <BsDribbble />
+                </a>
+                <a href="https://www.behance.net/theappidea" target="_blank">
+                  <AiOutlineBehance />
+                </a>
+              </div>
+              <div className="footer__sitemap my-3">
+                <Link to="/sitemap">
+                  <a className="sitemap_btn" style={{ color: "#000" }}>
+                    Sitemap
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

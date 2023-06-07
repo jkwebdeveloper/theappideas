@@ -11,6 +11,7 @@ import FAQ from "../../../components/FAQ";
 import CustomWordPress from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Web-Development.png";
 import WordPressWebsite from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Development-Services.png";
 import Developer from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Expert.png";
+import { Link } from "react-router-dom";
 
 const WebFlowDev = () => {
   const prevRef = useRef(null);
@@ -565,9 +566,15 @@ const WebFlowDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
+                <Link
+                  to="/contactus"
+                  className="contact_btn"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   Contact us{" "}
-                </a>
+                </Link>
               </div>
             </div>
           </div>
