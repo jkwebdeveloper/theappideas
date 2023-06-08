@@ -47,6 +47,7 @@ import Subscription from "../../../assets/images/SOLUTIONS/Delivery App/Food-app
 import Payment from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Super Admin Panel/Payment Management.svg";
 import Restaurant from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Super Admin Panel/Restaurant Management.svg";
 import Reports from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Super Admin Panel/Reports.svg";
+import { Link } from "react-router-dom";
 
 const FoodData = [
   {
@@ -874,9 +875,16 @@ const FoodDelivery = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

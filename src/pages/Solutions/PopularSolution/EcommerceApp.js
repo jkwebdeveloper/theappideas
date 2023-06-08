@@ -37,6 +37,7 @@ import Paymentmanagement from "../../../assets/images/SOLUTIONS/Popular Solution
 import OfferManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Offer-Management.svg";
 import ShippingManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Shipping-Management.svg";
 import Inventory from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Inventory Management.svg";
+import { Link } from "react-router-dom";
 
 const EcommerceData = [
   {
@@ -609,21 +610,21 @@ const EcommerceApp = () => {
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="service_rht">
                 <div className="Title">
-                  <h3 className="Title_heading">Highly Scalable</h3>
+                  <h3 className="Title_heading">Mobile shopping made simple</h3>
                   <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a team of highly skilled website and mobile
-                    app developers who will offer the best services at the best
-                    rates. We have years of experience in offering the best and
-                    advanced Grocery Store app development services.
-                  </p>
-                  <p className="Title_para">
-                    Along with the best design and advanced feature integration,
-                    we offer a highly scalable grocery store app solution. A
-                    highly scalable grocery store can be useful for you as they
-                    have easy availability, maintenance, better performance and
-                    more. If you are planning of launching the foremost grocery
-                    store app then feel free to reach us and get a free quote.
+                    As most users now access contents and online stores on their{" "}
+                    <Link
+                      to="/"
+                      className="Title_Color"
+                      style={{ color: "#d6aa0b" }}
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                    >
+                      <b> mobile app</b>
+                    </Link>{" "}
+                    screen, an eCommerce App Development for mobile is a natural
+                    value proposition.
                   </p>
                 </div>
               </div>
@@ -648,9 +649,16 @@ const EcommerceApp = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

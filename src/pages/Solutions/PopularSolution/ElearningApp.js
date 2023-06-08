@@ -32,6 +32,7 @@ import UserManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E
 import MentorManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Mentor-Management.svg";
 import Reviews from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Reviews Managemement.svg";
 import PaymentManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Payment-Management-1.svg";
+import { Link } from "react-router-dom";
 
 const ElearningData = [
   {
@@ -608,9 +609,16 @@ const ElearningApp = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

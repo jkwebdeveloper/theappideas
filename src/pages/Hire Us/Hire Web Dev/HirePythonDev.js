@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire Py
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/On-Time Project Deployment.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Competitive Charges.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Free Support Services.svg";
+import { Link } from "react-router-dom";
 
 const HirePythonDev = () => {
   useEffect(() => {
@@ -193,14 +194,16 @@ const HirePythonDev = () => {
             <h3>Our Feat in Python App Development</h3>
             <p>
               The App Ideas is a Python web and{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                href="/mobile-app-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> app development company </b>
-              </a>{" "}
+              </Link>{" "}
               that is highly capable of creating the most elegant, sophisticated
               and future-ready python web and app solution. The online python
               solution can help your business to increase brand awareness online
@@ -217,9 +220,16 @@ const HirePythonDev = () => {
               platforms solution.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -736,9 +746,16 @@ const HirePythonDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

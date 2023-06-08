@@ -272,14 +272,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">CUSTOM IPHONE APP DEVELOPMENT</a>
+                  <a>CUSTOM IPHONE APP DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   Our iOS app developers have the expertise and experience to
                   deliver the best of iOS platform to ensure optimum native
                   capabilities with your iPhone mobile app.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -310,14 +310,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">IOS GAME DEVELOPMENT</a>
+                  <a>IOS GAME DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   Our iOS app developers have the expertise and experience to
                   deliver the best of iOS platform to ensure optimum native
                   capabilities with your iPhone mobile app.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -348,14 +348,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">UPGRADE AND SUPPORT</a>
+                  <a>UPGRADE AND SUPPORT</a>
                 </h5>
                 <div className="text">
                   We also offer experienced IOS developers who can address
                   issues from time to time and give facelift to your apps with
                   timely and new updates and upgrades.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -386,13 +386,13 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">CUSTOM WIDGET DEVELOPMENT</a>
+                  <a>CUSTOM WIDGET DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   The developers at The App Ideas can also build custom widgets
                   to leverage unique user experience for your new IOS app.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -423,14 +423,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">UI/UX DEVELOPMENT</a>
+                  <a>UI/UX DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   We boast of a team of expert IOS app developers capable to
                   design and build most sophisticated and future ready UI and UX
                   for a wide variety of IOS apps.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -461,14 +461,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">IOS WEARABLE APP DEVELOPMENT</a>
+                  <a>IOS WEARABLE APP DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   Our iOS app developers also have the necessary expertise and
                   skills to build sophisticated Apple Watch apps and connected
                   apps for various IOT gadgets.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -490,9 +490,15 @@ const HireIOSDev = () => {
             <p>
               We have established our reputation as one of the leading iPhone
               app developers with a wide spectrum of{" "}
-              <a href="/" className="Title_Color" target="_blank">
+              <Link
+                to="/mobile-app-development"
+                className="Title_Color"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
                 <b>app development</b>
-              </a>{" "}
+              </Link>{" "}
               projects across the niches. Here are some of the key reasons to
               hire iPhone app developers from us.
             </p>
@@ -524,14 +530,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">EXPERIENCE AND EXPERTISE</a>
+                  <a>EXPERIENCE AND EXPERTISE</a>
                 </h5>
                 <div className="text">
                   We boast of a robust team of dedicated iOS app developers with
                   proven track record and several years of iOS development
                   experience.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -562,14 +568,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">STRONG PORTFOLIO</a>
+                  <a>STRONG PORTFOLIO</a>
                 </h5>
                 <div className="text">
                   We have a strong portfolio of several successful iOS apps
                   representing various niches and built for different devices
                   including latest iPhone devices and Apple Watches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -600,13 +606,13 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">UNIQUE UI AND UX</a>
+                  <a>UNIQUE UI AND UX</a>
                 </h5>
                 <div className="text">
                   Our iOS developers will guarantee delivering unique and
                   engaging UI and UX for apps of all niches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -637,14 +643,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">FASTER TIME TO MARKET</a>
+                  <a>FASTER TIME TO MARKET</a>
                 </h5>
                 <div className="text">
                   Thanks to agile development process coupled up with concurrent
                   testing we ensure quick development time without compromising
                   on the quality.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -675,14 +681,14 @@ const HireIOSDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">COMPETITIVE RATE</a>
+                  <a>COMPETITIVE RATE</a>
                 </h5>
                 <div className="text">
                   We offer one of the most competitive rate for most
                   sophisticated and quality-focused iOS app development service
                   across a wide variety of business niches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -706,9 +712,16 @@ const HireIOSDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

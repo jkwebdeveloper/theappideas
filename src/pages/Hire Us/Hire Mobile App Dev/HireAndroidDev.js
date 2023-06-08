@@ -191,13 +191,15 @@ const HireAndroidDev = () => {
             <h3>Our Feat in Android App Development</h3>
             <p>
               Over the years we mastered the art and science of{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/"
                 className="Title_Color"
-                target="_blank"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b>mobile app development</b>
-              </a>{" "}
+              </Link>{" "}
               with exceptional command over mobile app aesthetics and technical
               skills to build features that make an app useful. When it comes to
               the Android platform we build apps that cater to the versatility
@@ -214,9 +216,16 @@ const HireAndroidDev = () => {
               pricing and stringent deadline.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -259,13 +268,13 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">Contact us ANDROID APPS</a>
+                  <a>Contact us ANDROID APPS</a>
                 </h5>
                 <div className="text">
                   Our experienced and skilled team of Android developers can
                   build innovative Android apps across niches and categories.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -296,7 +305,7 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">ANDROID SUPPORT</a>
+                  <a>ANDROID SUPPORT</a>
                 </h5>
                 <div className="text">
                   We are also ready with a robust team of Android developers who
@@ -304,7 +313,7 @@ const HireAndroidDev = () => {
                   for addressing performance issues or for changing the user
                   interface or for integrating new features.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -335,14 +344,14 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">CROSS PLATFORM DEVELOPMENT</a>
+                  <a>CROSS PLATFORM DEVELOPMENT</a>
                 </h5>
                 <div className="text">
                   We have a large team of expert cross platform developers who
                   can turn your app idea into sophisticated apps across both
                   Android and iOS mobile platforms.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -392,14 +401,14 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">EXPERIENCE AND EXPERTISE</a>
+                  <a>EXPERIENCE AND EXPERTISE</a>
                 </h5>
                 <div className="text">
                   We boast of a long experience in Android mobile app
                   development with expertise in building apps across diverse
                   niches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -430,13 +439,13 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">STUNNING PORTFOLIO</a>
+                  <a>STUNNING PORTFOLIO</a>
                 </h5>
                 <div className="text">
                   We boast of a proven track record with a stunning portfolio of
                   a gamut of most successful Android apps across several niches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -467,13 +476,13 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">GREAT UI AND UX</a>
+                  <a>GREAT UI AND UX</a>
                 </h5>
                 <div className="text">
                   We guarantee delivering highly customer centric UI design and
                   engaging UX for Android apps of all types and niches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -504,13 +513,13 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">PERFORMANCE DRIVEN</a>
+                  <a>PERFORMANCE DRIVEN</a>
                 </h5>
                 <div className="text">
                   We build Android apps with unmatched performance and low
                   downtime guaranteed.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -541,14 +550,14 @@ const HireAndroidDev = () => {
                   />
                 </div>
                 <h5>
-                  <a href="/services">FAST PACED AND COMPETITIVE</a>
+                  <a>FAST PACED AND COMPETITIVE</a>
                 </h5>
                 <div className="text">
                   We ensure building Android apps at quick pace thanks to our
                   agile development process while maintaining most competitive
                   pricing for apps across niches.
                 </div>
-                {/* <a href="/services" className="arrow-icon">
+                {/* <a className="arrow-icon">
                   <HiOutlineArrowRight />
                 </a> */}
               </div>
@@ -571,7 +580,12 @@ const HireAndroidDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <Link to="/contactus">
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   <a className="contact_btn" style={{ color: "#000" }}>
                     Contact us{" "}
                   </a>

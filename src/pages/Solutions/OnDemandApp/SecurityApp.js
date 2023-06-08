@@ -28,6 +28,7 @@ import LiveChat from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand S
 import Hire from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/hire.svg";
 import PayOnline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Pay-Online.svg";
 import TimeTracking from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Time-Management-Tracking.svg";
+import { Link } from "react-router-dom";
 
 const SecurityData = [
   {
@@ -590,9 +591,16 @@ const SecurityApp = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

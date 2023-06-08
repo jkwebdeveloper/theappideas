@@ -18,6 +18,7 @@ import Deployment from "../../../assets/images/HIRE US/Hire Mobile App Developer
 import Affordable from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Affordable Costing.svg";
 import Client from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Client Satisfaction Guarantee.svg";
 import Process from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Agile Development Process.svg";
+import { Link } from "react-router-dom";
 
 const HireFlutterDev = () => {
   useEffect(() => {
@@ -209,9 +210,16 @@ const HireFlutterDev = () => {
               ideas into online platforms solutions.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -1024,9 +1032,16 @@ const HireFlutterDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

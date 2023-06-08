@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire La
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Affordable Costing.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Time-Bound Deployment.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Free Support Services.svg";
+import { Link } from "react-router-dom";
 
 const HireLaravelDev = () => {
   useEffect(() => {
@@ -38,14 +39,16 @@ const HireLaravelDev = () => {
                   Laravel is an open-source and free PHP web framework which is
                   developed by Tylor Otwell. Laravel is mainly introduced for
                   The App Ideas is an{" "}
-                  <a
-                    href="https://theappideas.com/iphone-app-development-company/"
+                  <Link
+                    to="/web-development"
                     className="Title_Color"
-                    target="_blank"
                     style={{ color: "#d6aa0b" }}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                   >
                     <b>web application development</b>
-                  </a>{" "}
+                  </Link>{" "}
                   following the model-view-controller(MVC) architecture and
                   highly based on the Symfony framework. Laravel offers the
                   syntaxes and features which helps in deploying high-end web
@@ -203,14 +206,16 @@ const HireLaravelDev = () => {
             <h3>Our Feat in Laravel Development</h3>
             <p>
               We are highly expert in providing the best{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/web-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> Laravel web solution</b>
-              </a>{" "}
+              </Link>{" "}
               to our clients and always satisfy them with our services. We have
               years of experience deploying the best software solutions at the
               best rates. Hire us and experience our expertise.
@@ -222,9 +227,16 @@ const HireLaravelDev = () => {
               also deployed the best laravel solutions.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -237,7 +249,10 @@ const HireLaravelDev = () => {
           </div>
           <div className="row mt-5">
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port_mobilebg_one">
+              <div
+                data-aos="fade-up"
+                className="work_head_box port_mobilebg_one"
+              >
                 <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
                   <a href="#" className="work_head_box_link"></a>
@@ -286,7 +301,10 @@ const HireLaravelDev = () => {
               </div>
             </div>
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port_mobilebg-02">
+              <div
+                data-aos="fade-up"
+                className="work_head_box port_mobilebg-02"
+              >
                 <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
                   <a href="#" className="work_head_box_link"></a>
@@ -329,7 +347,10 @@ const HireLaravelDev = () => {
               </div>
             </div>
             <div className="col-12 px-0 mb-4">
-              <div data-aos="fade-up" className="work_head_box port_mobilebg_sixteen">
+              <div
+                data-aos="fade-up"
+                className="work_head_box port_mobilebg_sixteen"
+              >
                 <a href="#" className="work_head_box_link"></a>
                 <div className="row w-100">
                   <a href="#" className="work_head_box_link"></a>
@@ -887,9 +908,16 @@ const HireLaravelDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -33,6 +33,7 @@ import Callwith from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver 
 import Panic from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Panic-Button.svg";
 import receive from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Receive-Tip.svg";
 import Historyy from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/History of trips.svg";
+import { Link } from "react-router-dom";
 
 const DriverTrackData = [
   {
@@ -617,9 +618,16 @@ const DriverTrackingApp = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

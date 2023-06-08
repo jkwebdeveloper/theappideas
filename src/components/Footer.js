@@ -483,7 +483,12 @@ const Footer = () => {
                 </a>
               </div>
               <div className="footer__sitemap my-3">
-                <Link to="/sitemap">
+                <Link
+                  to="/sitemap"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
                   <a className="sitemap_btn" style={{ color: "#000" }}>
                     Sitemap
                   </a>

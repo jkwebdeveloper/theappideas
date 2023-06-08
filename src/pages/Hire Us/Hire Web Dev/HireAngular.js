@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire An
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/FASTER TIME TO MARKET.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/ROBUST CUSTOMIZATION.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Angular 2 Developer/2/COMPETITIVE RATE _ SUPPORT.svg";
+import { Link } from "react-router-dom";
 
 const HireAngular = () => {
   useEffect(() => {
@@ -200,20 +201,29 @@ const HireAngular = () => {
               development services to a wide variety of business niches and app
               development needs. Over the years, our developers have built a
               wide spectrum of advanced{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/angular-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> Angular 2 web solutions</b>
-              </a>{" "}
+              </Link>{" "}
               for a variety of clients.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -781,9 +791,16 @@ const HireAngular = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

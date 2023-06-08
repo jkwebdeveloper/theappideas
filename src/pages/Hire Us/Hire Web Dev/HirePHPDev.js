@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire PH
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/FLEXIBILITY AND SCALABILITY.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/DEALING WITH ALL EXTENSIONS AND FRAMEWORKS.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/CROSS PLATFORM EXPERTISE.svg";
+import { Link } from "react-router-dom";
 
 const HirePHPDev = () => {
   useEffect(() => {
@@ -192,14 +193,16 @@ const HirePHPDev = () => {
             <h3>Our Feat in Web Industry</h3>
             <p>
               The PHP developers working in our{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/web-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> web development</b>
-              </a>{" "}
+              </Link>{" "}
               projects have years of experience and resulting expertise in
               delivering the most sophisticated features with PHP-based
               websites.
@@ -219,9 +222,16 @@ const HirePHPDev = () => {
               glitch-free performance, hire PHP developers.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -875,9 +885,16 @@ const HirePHPDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

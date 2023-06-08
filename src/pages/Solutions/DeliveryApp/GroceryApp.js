@@ -44,6 +44,7 @@ import SubscriptionManagement from "../../../assets/images/SOLUTIONS/Delivery Ap
 import PaymentManagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Payment Management.svg";
 import GroceryStoremanagement from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Grocery Store Management.svg";
 import Reports from "../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Reports.svg";
+import { Link } from "react-router-dom";
 
 const GroceryData = [
   {
@@ -798,9 +799,16 @@ const GroceryApp = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

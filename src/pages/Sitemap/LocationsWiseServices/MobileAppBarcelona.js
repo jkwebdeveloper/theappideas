@@ -1,13 +1,13 @@
 import { React, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
-import "../../components/Workdone/work.css";
+import "../../../components/Workdone/work.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import FAQ from "../../../components/FAQ";
 
 const MobileAppBarcelona = () => {
   const prevRef = useRef(null);
@@ -127,7 +127,7 @@ const MobileAppBarcelona = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png")}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
@@ -137,7 +137,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Group-235.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Group-235.png")}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
@@ -147,7 +147,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png")}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -157,7 +157,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png")}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -167,7 +167,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png")}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
@@ -177,7 +177,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png")}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -269,7 +269,7 @@ const MobileAppBarcelona = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/2.webp")}
+                      src={require("../../../assets/images/work/2.webp")}
                       style={{
                         width: "100%",
                         boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -321,7 +321,7 @@ const MobileAppBarcelona = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/bolt-app.webp")}
+                      src={require("../../../assets/images/work/bolt-app.webp")}
                       style={{
                         width: "100%",
                         boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -367,7 +367,7 @@ const MobileAppBarcelona = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/service-my-car.webp")}
+                      src={require("../../../assets/images/work/service-my-car.webp")}
                       style={{
                         width: "100%",
                         boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -431,7 +431,7 @@ const MobileAppBarcelona = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png")}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
@@ -444,7 +444,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png")}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
@@ -454,7 +454,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/latest-technology.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/latest-technology.png")}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -464,7 +464,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png")}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -474,7 +474,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/transperent-process.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/transperent-process.png")}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
@@ -484,7 +484,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png")}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />

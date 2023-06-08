@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire No
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/On-Time Delivery.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Agile Methodology.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Support And Help.svg";
+import { Link } from "react-router-dom";
 
 const HireNodeDev = () => {
   useEffect(() => {
@@ -192,14 +193,16 @@ const HireNodeDev = () => {
             <h3>Our Feat in Node JS Development</h3>
             <p>
               As a Best{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> software development company</b>
-              </a>{" "}
+              </Link>{" "}
               , we are highly experienced as well as experts in delivering the
               best Node js web platforms solution to our clients. We have 4+
               years of experience in developing the best software solution at
@@ -214,9 +217,16 @@ const HireNodeDev = () => {
               solutions.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -880,9 +890,16 @@ const HireNodeDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

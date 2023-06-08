@@ -17,6 +17,7 @@ import Designing from "./pages/Services/Designing Services/Designing";
 import StartupServices from "./pages/StartupServices";
 import HireIOSDev from "./pages/Hire Us/Hire Mobile App Dev/HireIOSDev";
 import FoodDelivery from "./pages/Solutions/DeliveryApp/FoodDelivery";
+import MLMWebsiteAndApp from "./pages/Solutions/MLMWebsiteAndApp";
 import Error404 from "./pages/Error404";
 import AndroidAppDevelopment from "./pages/MobileAppDevelopment/AndroidAppDevelopment";
 import IphoneAppDevelopment from "./pages/MobileAppDevelopment/IphoneAppDevelopment";
@@ -70,12 +71,20 @@ import OurProcess from "./pages/Company/OurProcess";
 import Solutions from "./pages/Solutions/Solutions";
 import HireUs from "./pages/Hire Us/HireUs";
 import LawyerWeb from "./pages/LawyerWeb";
-import MobileAppToronto from "./pages/Sitemap/MobileAppToronto";
-import MobileAppNewyork from "./pages/Sitemap/MobileAppNewyork";
-import MobileAppBarcelona from "./pages/Sitemap/MobileAppBarcelona";
+import MobileAppToronto from "./pages/Sitemap/LocationsWiseServices/MobileAppToronto";
+import MobileAppNewyork from "./pages/Sitemap/LocationsWiseServices/MobileAppNewyork";
+import MobileAppBarcelona from "./pages/Sitemap/LocationsWiseServices/MobileAppBarcelona";
 import SiteMap from "./pages/Sitemap/SiteMap";
 import ABoutUs from "./pages/Company/ABoutUs";
 import GetAQuoteModal from "./components/GetAQuoteModal";
+import MobileAppSydney from "./pages/Sitemap/LocationsWiseServices/MobileAppSydney";
+import MobileAppAdelaide from "./pages/Sitemap/LocationsWiseServices/MobileAppAdelaide";
+import MobileAppBrisbane from "./pages/Sitemap/LocationsWiseServices/MobileAppBrisbane";
+import MobileAppBristol from "./pages/Sitemap/LocationsWiseServices/MobileAppBristol";
+import MobileAppLiverpool from "./pages/Sitemap/LocationsWiseServices/MobileAppLiverpool";
+import MobileAppManchester from "./pages/Sitemap/LocationsWiseServices/MobileAppManchester";
+import MobileAppMelbourne from "./pages/Sitemap/LocationsWiseServices/MobileAppMelbourne";
+import MobileAppLondon from "./pages/Sitemap/LocationsWiseServices/MobileAppLondon";
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -176,6 +185,7 @@ const App = () => {
 
         {/* Solution Link */}
         <Route path="/solutions" element={<Solutions />} />
+        <Route path="/mlm-website" element={<MLMWebsiteAndApp />} />
         <Route
           path="/Food-Delivery-App-Development"
           element={<FoodDelivery />}
@@ -219,6 +229,38 @@ const App = () => {
         <Route
           path="/mobile-app-development-barcelona"
           element={<MobileAppBarcelona />}
+        />
+        <Route
+          path="/mobile-app-development-Sydney"
+          element={<MobileAppSydney />}
+        />
+        <Route
+          path="/mobile-app-development-adelaide"
+          element={<MobileAppAdelaide />}
+        />
+        <Route
+          path="/mobile-app-development-brisbane"
+          element={<MobileAppBrisbane />}
+        />
+        <Route
+          path="/mobile-app-development-Bristol"
+          element={<MobileAppBristol />}
+        />
+        <Route
+          path="/mobile-app-development-Liverpool"
+          element={<MobileAppLiverpool />}
+        />
+        <Route
+          path="/mobile-app-development-Manchester"
+          element={<MobileAppManchester />}
+        />
+        <Route
+          path="/mobile-app-development-Melbourne"
+          element={<MobileAppMelbourne />}
+        />
+        <Route
+          path="/mobile-app-development-London"
+          element={<MobileAppLondon />}
         />
       </Routes>
       <Footer />

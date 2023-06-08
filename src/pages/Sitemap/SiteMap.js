@@ -97,6 +97,7 @@ import London from "../../assets/images/sitemap/Home/Locationwise_services/Londo
 // Other Services
 import Startup from "../../assets/images/sitemap/Home/Other_Services/Startup_Services.svg";
 import Enterprise from "../../assets/images/sitemap/Home/Other_Services/Enterprise_App_Dev.svg";
+import { Link } from "react-router-dom";
 
 const SiteMap = () => {
   return (
@@ -112,79 +113,128 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={home}
-                  alt="home"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Home</h3>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={home}
+                    alt="home"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Home</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={about}
-                  alt="home"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>About Us</h3>
+                <Link
+                  to="/aboutus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={about}
+                    alt="home"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>About Us</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ourprocess}
-                  alt="Our-Process"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Our Process</h3>
+                <Link
+                  to="/our-process"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={ourprocess}
+                    alt="Our-Process"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Our Process</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ourteam}
-                  alt="Our-Team"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Our Team</h3>
+                <Link
+                  to="/our-team"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={ourteam}
+                    alt="Our-Team"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Our Team</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={career}
-                  alt="Career"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Career</h3>
+                <Link
+                  to="/careers"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={career}
+                    alt="Career"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Career</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={portfolio}
-                  alt="Portfolio"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Portfolio</h3>
+                <Link
+                  to="/portfolio"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={portfolio}
+                    alt="Portfolio"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Portfolio</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={testimonial}
-                  alt="testimonial"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Testimonial</h3>
+                <Link
+                  to="/testimonial"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={testimonial}
+                    alt="testimonial"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Testimonial</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -198,68 +248,110 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Android}
-                  alt="android"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Android App Development</h3>
+                <Link
+                  to="/android-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Android}
+                    alt="android"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Android App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={IPhone}
-                  alt="iphone"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>IPhone App Development</h3>
+                <Link
+                  to="/iphone-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={IPhone}
+                    alt="iphone"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>IPhone App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={IPad}
-                  alt="ipad"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>IPad App Development</h3>
+                <Link
+                  to="/ipad-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={IPad}
+                    alt="ipad"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>IPad App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Ionic}
-                  alt="ionic"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Ionic App Development</h3>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Ionic}
+                    alt="ionic"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Ionic App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Mobile}
-                  alt="mobile-app-development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development</h3>
+                <Link
+                  to="/mobile-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Mobile}
+                    alt="mobile-app-development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={INTERNET}
-                  alt="iot-app-development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>INTERNET OF THINGS (IOT) App DEVELOPMENT</h3>
+                <Link
+                  to="/iot-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={INTERNET}
+                    alt="iot-app-development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>INTERNET OF THINGS (IOT) App DEVELOPMENT</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -273,79 +365,129 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={WordPress}
-                  alt="WordPress-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>WordPress Development</h3>
+                <Link
+                  to="/wordpress-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={WordPress}
+                    alt="WordPress-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>WordPress Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Angular}
-                  alt="Angular-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Angular Development</h3>
+                <Link
+                  to="/angular-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  {" "}
+                  <img
+                    src={Angular}
+                    alt="Angular-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Angular Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={PHP}
-                  alt="PHP-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>PHP Development</h3>
+                <Link
+                  to="/php-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={PHP}
+                    alt="PHP-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>PHP Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={DotNetNuke}
-                  alt="DotNetNuke-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>DotNetNuke Development</h3>
+                <Link
+                  to="/dotnetnuke-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={DotNetNuke}
+                    alt="DotNetNuke-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>DotNetNuke Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Asp}
-                  alt="Asp-Net-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Asp.Net Development</h3>
+                <Link
+                  to="/asp-net-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Asp}
+                    alt="Asp-Net-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Asp.Net Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ReactNative}
-                  alt="React-Native-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>React Native Development</h3>
+                <Link
+                  to="/react-native-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={ReactNative}
+                    alt="React-Native-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>React Native Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={WEBDEVELOPMENT}
-                  alt="WEB-DEVELOPMENT"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>WEB DEVELOPMENT</h3>
+                <Link
+                  to="/web-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={WEBDEVELOPMENT}
+                    alt="WEB-DEVELOPMENT"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>WEB DEVELOPMENT</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -359,57 +501,92 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Magento}
-                  alt="Magento-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Magento Development</h3>
+                <Link
+                  to="/magento-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Magento}
+                    alt="Magento-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Magento Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Drupal}
-                  alt="Drupal-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Drupal Development</h3>
+                <Link
+                  to="/drupal-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Drupal}
+                    alt="Drupal-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Drupal Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Joomla}
-                  alt="Joomla-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Joomla Development</h3>
+                <Link
+                  to="/joomla-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Joomla}
+                    alt="Joomla-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Joomla Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Shopify}
-                  alt="Shopify-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Shopify Development</h3>
+                <Link
+                  to="/shopify-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Shopify}
+                    alt="Shopify-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Shopify Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Commerce}
-                  alt="E-Commerce-Website-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>E-Commerce Website Development</h3>
+                <Link
+                  to="/e-commerce-website-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Commerce}
+                    alt="E-Commerce-Website-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>E-Commerce Website Development</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -423,35 +600,56 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Designing}
-                  alt="WordPress-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Web Designing</h3>
+                <Link
+                  to="/designing-services"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Designing}
+                    alt="WordPress-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Web Designing</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={MobileDesign}
-                  alt="Mobile-App-Design"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Design</h3>
+                <Link
+                  to="/mobile-app-design"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={MobileDesign}
+                    alt="Mobile-App-Design"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Design</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Graphic}
-                  alt="Graphic-Designing"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Graphic Designing</h3>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Graphic}
+                    alt="Graphic-Designing"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Graphic Designing</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -465,189 +663,308 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={IOS}
-                  alt="Hire-IOS-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire IOS Developer</h3>
+                <Link
+                  to="/hire-ios-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={IOS}
+                    alt="Hire-IOS-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire IOS Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={AndroidDeveloper}
-                  alt="Hire-Android-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Android Developer</h3>
+                <Link
+                  to="/hire-android-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={AndroidDeveloper}
+                    alt="Hire-Android-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Android Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={WordPressDeveloper}
-                  alt="Hire-WordPress-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire WordPress Developer</h3>
+                <Link
+                  to="/hire-wordpress-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={WordPressDeveloper}
+                    alt="Hire-WordPress-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire WordPress Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={PHPDevelopers}
-                  alt="Hire-PHP-Developers"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire PHP Developers</h3>
+                <Link
+                  to="/hire-php-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={PHPDevelopers}
+                    alt="Hire-PHP-Developers"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire PHP Developers</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={MagentoDeveloper}
-                  alt="Hire-Magento-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Magento 2 Developer</h3>
+                <Link
+                  to="/hire-magento-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={MagentoDeveloper}
+                    alt="Hire-Magento-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Magento 2 Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ShopifyDeveloper}
-                  alt="Hire-Shopify-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Shopify Developer</h3>
+                <Link
+                  to="/hire-shopify-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={ShopifyDeveloper}
+                    alt="Hire-Shopify-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Shopify Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={CodeIgniter}
-                  alt="Hire-CodeIgniter-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire CodeIgniter Developer</h3>
+                <Link
+                  to="/hire-codeigniter-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={CodeIgniter}
+                    alt="Hire-CodeIgniter-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire CodeIgniter Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Angular2}
-                  alt="Hire-Angular-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Angular 2 Developer</h3>
+                <Link
+                  to="/hire-angular-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Angular2}
+                    alt="Hire-Angular-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Angular 2 Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Nodejs}
-                  alt="Hire-Node-JS-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Node.Js Developer</h3>
+                <Link
+                  to="/hire-nodejs-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Nodejs}
+                    alt="Hire-Node-JS-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Node.Js Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Laravel}
-                  alt="Hire-Laravel-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Laravel Developer</h3>
+                <Link
+                  to="/hire-laravel-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Laravel}
+                    alt="Hire-Laravel-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Laravel Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ReactJS}
-                  alt="Hire-React-js-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire React JS Developer</h3>
+                <Link
+                  to="/hire-reactjs-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={ReactJS}
+                    alt="Hire-React-js-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire React JS Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Native}
-                  alt="Hire-React-Native-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire React Native Developer</h3>
+                <Link
+                  to="/hire-react-native-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Native}
+                    alt="Hire-React-Native-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire React Native Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Flutter}
-                  alt="Hire-Flutter-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Flutter Developer</h3>
+                <Link
+                  to="/hire-flutter-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Flutter}
+                    alt="Hire-Flutter-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Flutter Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Python}
-                  alt="Hire-Python-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Python Developer</h3>
+                <Link
+                  to="/hire-python-developer"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Python}
+                    alt="Hire-Python-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Python Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Avada}
-                  alt="Hire-Avada-Expert-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Avada Expert Developer</h3>
+                <Link
+                  to=""
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Avada}
+                    alt="Hire-Avada-Expert-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Avada Expert Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Divi}
-                  alt="Hire-Divi-Expert-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Divi Expert Developer</h3>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Divi}
+                    alt="Hire-Divi-Expert-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Divi Expert Developer</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Enfold}
-                  alt="Hire-Enfold-Expert-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Hire Enfold Expert Developer</h3>
+                <Link
+                  to="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Enfold}
+                    alt="Hire-Enfold-Expert-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Hire Enfold Expert Developer</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -661,35 +978,56 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={SocialMedia}
-                  alt="Social Media Marketing"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Social Media Marketing</h3>
+                <Link
+                  to="/social-media-marketing"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={SocialMedia}
+                    alt="Social Media Marketing"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Social Media Marketing</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={SEO}
-                  alt="seo"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>SEO</h3>
+                <Link
+                  to="/seo"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={SEO}
+                    alt="seo"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>SEO</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ASO}
-                  alt="aso"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>ASO</h3>
+                <Link
+                  to="/aso-company"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={ASO}
+                    alt="aso"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>ASO</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -703,123 +1041,211 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Food}
-                  alt="Food Ordering Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Food Ordering Solution</h3>
+                <Link
+                  to="/food-delivery-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Food}
+                    alt="Food Ordering Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Food Ordering Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Dating}
-                  alt="Dating Website And App Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Dating Website And App Solution</h3>
+                <Link
+                  to="/dating-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Dating}
+                    alt="Dating Website And App Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Dating Website And App Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Lawyer}
-                  alt="Lawyer Website Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Lawyer Website Solution</h3>
+                <Link
+                  to="/lawyer-website-solution"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Lawyer}
+                    alt="Lawyer Website Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Lawyer Website Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={EcommerceApp}
-                  alt="Ecommerce App Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Ecommerce App Solution</h3>
+                <Link
+                  to="/e-commerce-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={EcommerceApp}
+                    alt="Ecommerce App Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Ecommerce App Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={MLMWebsite}
-                  alt="MLM-Website-Mobile"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>MLM Website & Mobile App Solution</h3>
+                <Link
+                  to=""
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={MLMWebsite}
+                    alt="MLM-Website-Mobile"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>MLM Website & Mobile App Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ELearning}
-                  alt="Hire-Shopify-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>E-Learning Website Development</h3>
+                <Link
+                  to="/e-learning-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={ELearning}
+                    alt="Hire-Shopify-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>E-Learning Website Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Taxi}
-                  alt="Taxi-Booking-App-Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Taxi Booking App Development</h3>
+                <Link
+                  to="/taxi-booking-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Taxi}
+                    alt="Taxi-Booking-App-Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Taxi Booking App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Doctor}
-                  alt="Doctor Hiring App Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Doctor Hiring App Solution</h3>
+                <Link
+                  to="/doctor-hiring-app-solution"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Doctor}
+                    alt="Doctor Hiring App Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Doctor Hiring App Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Courier}
-                  alt="Courier-Pickup-Management-Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Courier Pickup Management Solution</h3>
+                <Link
+                  to="/courier-pickup-management-solution"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Courier}
+                    alt="Courier-Pickup-Management-Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Courier Pickup Management Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Security}
-                  alt="Security App Solution"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Security App Solution</h3>
+                <Link
+                  to="/security-app-solution"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Security}
+                    alt="Security App Solution"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Security App Solution</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Driver}
-                  alt="Hire-Laravel-Developer"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Driver Tracking App Development</h3>
+                <Link
+                  to="/driver-tracking-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Driver}
+                    alt="Hire-Laravel-Developer"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Driver Tracking App Development</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -833,46 +1259,78 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={SecurityApp}
-                  alt="Security App Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Security App Development</h3>
+                <Link
+                  to="/security-app-solution"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={SecurityApp}
+                    alt="Security App Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Security App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={TaxiBooking}
-                  alt="Taxi Booking App Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Taxi Booking App Development</h3>
+                <Link
+                  to="/taxi-booking-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={TaxiBooking}
+                    alt="Taxi Booking App Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Taxi Booking App Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={ElearningWebsite}
-                  alt="Elearning Website Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Elearning Website Development</h3>
+                <Link
+                  to="/e-learning-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={ElearningWebsite}
+                    alt="Elearning Website Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Elearning Website Development</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Tracking}
-                  alt="Driver Tracking App Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Driver Tracking App Development</h3>
+                <Link
+                  to="/driver-tracking-app-development"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Tracking}
+                    alt="Driver Tracking App Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Driver Tracking App Development</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -886,123 +1344,211 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Toronto}
-                  alt="Mobile App Development Toronto"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Toronto</h3>
+                <Link
+                  to="/mobile-app-development-toronto"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Toronto}
+                    alt="Mobile App Development Toronto"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Toronto</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={York}
-                  alt="Mobile App Development New York"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development New York</h3>
+                <Link
+                  to="/mobile-app-development-new-york"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={York}
+                    alt="Mobile App Development New York"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development New York</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Barcelona}
-                  alt="Mobile App Development Barcelona"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Barcelona</h3>
+                <Link
+                  to="/mobile-app-development-barcelona"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Barcelona}
+                    alt="Mobile App Development Barcelona"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Barcelona</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Sydney}
-                  alt="Mobile App Development Sydney"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Sydney</h3>
+                <Link
+                  to="/mobile-app-development-Sydney"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Sydney}
+                    alt="Mobile App Development Sydney"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Sydney</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Adelaide}
-                  alt="Mobile App Development Adelaide"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Adelaide</h3>
+                <Link
+                  to="/mobile-app-development-adelaide"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Adelaide}
+                    alt="Mobile App Development Adelaide"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Adelaide</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Brisbane}
-                  alt="Mobile App Development Brisbane"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Brisbane</h3>
+                <Link
+                  to="/mobile-app-development-brisbane"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Brisbane}
+                    alt="Mobile App Development Brisbane"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Brisbane</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Bristol}
-                  alt="Mobile App Development Bristol"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Bristol</h3>
+                <Link
+                  to="/mobile-app-development-Bristol"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Bristol}
+                    alt="Mobile App Development Bristol"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Bristol</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Liverpool}
-                  alt="Mobile App Development Liverpool"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Liverpool</h3>
+                <Link
+                  to="/mobile-app-development-Liverpool"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Liverpool}
+                    alt="Mobile App Development Liverpool"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Liverpool</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Manchester}
-                  alt="Mobile App Development Manchester"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Manchester</h3>
+                <Link
+                  to="/mobile-app-development-Manchester"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Manchester}
+                    alt="Mobile App Development Manchester"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Manchester</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Melbourne}
-                  alt="Mobile App Development Melbourne"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development Melbourne</h3>
+                <Link
+                  to="/mobile-app-development-Melbourne"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={Melbourne}
+                    alt="Mobile App Development Melbourne"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development Melbourne</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={London}
-                  alt="Mobile App Development London"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Mobile App Development London</h3>
+                <Link
+                  to="/mobile-app-development-London"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                  target="_blank"
+                >
+                  <img
+                    src={London}
+                    alt="Mobile App Development London"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Mobile App Development London</h3>
+                </Link>
               </div>
             </div>
           </div>
@@ -1016,24 +1562,38 @@ const SiteMap = () => {
           <div className="row">
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Startup}
-                  alt="Startup Services"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Startup Services</h3>
+                <Link
+                  to="/startup-services"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Startup}
+                    alt="Startup Services"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Startup Services</h3>
+                </Link>
               </div>
             </div>
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
-                <img
-                  src={Enterprise}
-                  alt="Enterprise App Development"
-                  className="img-fluid"
-                  style={{ height: "60px" }}
-                />
-                <h3>Enterprise App Development</h3>
+                <Link
+                  to=""
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={Enterprise}
+                    alt="Enterprise App Development"
+                    className="img-fluid"
+                    style={{ height: "60px" }}
+                  />
+                  <h3>Enterprise App Development</h3>
+                </Link>
               </div>
             </div>
           </div>

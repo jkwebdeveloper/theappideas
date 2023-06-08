@@ -18,7 +18,7 @@ import Powerful from "../../../assets/images/HIRE US/Hire Mobile App Developer/H
 import Agile from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Agile Methodology.svg";
 import Free from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Free Maintenance Service.svg";
 import Deliver from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Deliver Secure App Solution.svg";
-
+import { Link } from "react-router-dom";
 
 const HireReactNativeDev = () => {
   useEffect(() => {
@@ -189,35 +189,40 @@ const HireReactNativeDev = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Our Feat in iPhone App Development</h3>
+            <h3>Our Feat in React Native App Development</h3>
             <p>
-              Over the years we mastered the art and science of{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
-                className="Title_Color"
-                target="_blank"
-              >
-                <b>mobile app development</b>
-              </a>{" "}
-              with exceptional command over mobile app aesthetics and technical
-              skills to build features that make an app useful. When it comes to
-              the Android platform we build apps that cater to the versatility
-              of the device ecosystem Android is known of. Instead of addressing
-              with an “one size fits all” kind of approach we build highly
-              responsive Android apps specifically to address the constraints of
-              each device screen and varied range of device functions. We have
-              built a gamut of successful Android apps across diver niches and
-              business needs.
+              The App Ideas is a React Native app development company. Our React
+              Native app developers are highly efficient in developing a
+              future-ready React Native app development. As React Native
+              Technology offers some of the best and unique features that many
+              business owners are now choosing this technology for developing
+              their business online platforms. Our React Native app development
+              solutions can help you in building awareness as well as easily
+              maintaining the Business.
             </p>
             <p>
-              The developers at The App Ideas can develop custom designed and
-              highly user optimised Android apps with a highly competitive
-              pricing and stringent deadline.
+              React Native is an open-source mobile application framework
+              developed and launched by Facebook. React Native is highly used
+              for the development of an online solution for Android, Android TV,
+              IOS, macOS, web, windows,tvOS and more. React Native framework
+              enables developers to develop software along with native platforms
+              capabilities. We have a team of highly skilled React Native
+              developers who are highly expert in proving the best software
+              solutions for business. Hire us and access our expertise to
+              convert your business ideas into the best Web and app platforms
+              solutions.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -635,15 +640,13 @@ const HireReactNativeDev = () => {
       <section className="HireIOSDev-section style-two py-5">
         <div className="container">
           <div className="HireIOSDev-heading">
-            <h2>WHY HIRE iPHONE APP DEVELOPERS FROM US?</h2>
+            <h2>Why Hire React Native app Developers from us?</h2>
             <p>
-              We have established our reputation as one of the leading iPhone
-              app developers with a wide spectrum of{" "}
-              <a href="/" className="Title_Color" target="_blank">
-                <b>app development</b>
-              </a>{" "}
-              projects across the niches. Here are some of the key reasons to
-              hire iPhone app developers from us.
+              In the market, we have established our reputation as one of the
+              leading React Native app development with a wide spectrum of
+              mobile app development projects across various niches. Here I am
+              listing some of the reasons to hire React Native app developers
+              from us.
             </p>
           </div>
           <div className="row clearfix">
@@ -888,16 +891,23 @@ const HireReactNativeDev = () => {
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
                 <p style={{ textAlign: "justify" }}>
-                  Do you want to know more about our React Native developers
-                  and their expertise? Feel free to contact us.
+                  Do you want to know more about our React Native developers and
+                  their expertise? Feel free to contact us.
                 </p>
               </div>
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

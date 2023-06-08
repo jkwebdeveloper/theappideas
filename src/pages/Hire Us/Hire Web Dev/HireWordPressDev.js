@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire La
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Affordable Costing.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Time-Bound Deployment.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Free Support Services.svg";
+import { Link } from "react-router-dom";
 
 const HireWordPressDev = () => {
   useEffect(() => {
@@ -200,14 +201,16 @@ const HireWordPressDev = () => {
               exceptionally fluid user experience. Our feat in building niche
               custom WordPress websites for variety of content needs, made us
               one of the most preferred{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/wordpress-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> WordPress development</b>
-              </a>{" "}
+              </Link>{" "}
               company for this popular CMS platform. Besides building custom
               WordPress websites our WordPress developers can also build and
               design custom themes and plugins to help our customers achieve
@@ -222,9 +225,16 @@ const HireWordPressDev = () => {
               performance, our Hire WordPress Developers in India.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -975,9 +985,16 @@ const HireWordPressDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

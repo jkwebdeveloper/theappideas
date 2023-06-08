@@ -3240,10 +3240,11 @@ section {
 }
 
 /* About Banner CSS End */
-.about_video {
-  padding: 0px 0px 60px 0px;
-}
 
+.about_video {
+  padding: 0 0 60px;
+  margin-top: -50px;
+}
 .about_video_box {
   max-width: 400px;
   margin: 0 auto;
@@ -3442,18 +3443,25 @@ section {
 }
 
 .missin_card .missin_card_img {
-  position: absolute;
   left: 50%;
-  transform: translate(-50%, -50%);
+  position: absolute;
   top: 1px;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   z-index: 3;
+  background: linear-gradient(45deg, #3a0f49, #5a1076);
+  border-radius: 50%;
+  padding: 25px;
+  box-shadow: 0 0 12px #fff;
+  transition: all 0.5s ease-in-out;
 }
 
 .missin_card .missin_card_img img {
-  width: 150px;
-  box-shadow: 0 0 12px #fff;
   border-radius: 50%;
   transition: all 0.5s ease-in-out;
+  width: 100px;
+  background: #fff;
+  padding: 10px;
 }
 
 .missin_card_content {
@@ -3474,7 +3482,7 @@ section {
   margin: 0;
 }
 
-.missin_card:hover .missin_card_img img {
+.missin_card:hover .missin_card_img {
   margin-top: -20px;
   transition: all 0.5s ease-in-out;
 }

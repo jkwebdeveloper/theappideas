@@ -16,8 +16,9 @@ import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire C
 import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/EXPERIENCE AND EXPERTISE.svg";
 import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/AGILE DEVELOPMENT.svg";
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/TRANSPARENT AND TIME HONOURED DEVELOPMENT.svg";
-import STRONG from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/A Strong Portfolio.svg"
-import PRICING from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/Competitive price.svg"
+import STRONG from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/A Strong Portfolio.svg";
+import PRICING from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/Competitive price.svg";
+import { Link } from "react-router-dom";
 
 const HireCodeIgniter = () => {
   useEffect(() => {
@@ -193,14 +194,16 @@ const HireCodeIgniter = () => {
             <h3>Our Feat in CodeIgniter Development</h3>
             <p>
               We are into{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/web-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> web development</b>
-              </a>{" "}
+              </Link>{" "}
               , we are highly experienced as well as experts in delivering the
               best Node js web platforms solution to our clients. We have 4+
               years of experience in developing the best software solution at
@@ -215,9 +218,16 @@ const HireCodeIgniter = () => {
               solutions.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -655,9 +665,16 @@ const HireCodeIgniter = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

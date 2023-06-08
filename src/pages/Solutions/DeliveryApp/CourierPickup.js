@@ -39,6 +39,7 @@ import CourierManagement from "../../../assets/images/SOLUTIONS/Delivery App/Cou
 import PaymentManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Payment-Management-1.svg";
 import ReportsManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Reports management.svg";
 import Contentmanagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/content-management.svg";
+import { Link } from "react-router-dom";
 
 const CourierData = [
   {
@@ -586,9 +587,16 @@ const CourierPickup = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="/" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

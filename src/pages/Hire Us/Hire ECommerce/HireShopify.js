@@ -19,6 +19,7 @@ import ROBUST from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hir
 import Implement from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/On-Time Deployment.svg";
 import Affordable from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/MOST COMPETITIVE PRICING.svg";
 import Time from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Shopify Developer/2/SEO FRIENDLY.svg";
+import { Link } from "react-router-dom";
 
 const HireShopify = () => {
   useEffect(() => {
@@ -193,14 +194,16 @@ const HireShopify = () => {
               outstanding ecommerce development service on the Shopify platform
               leveraging all the customisation benefits and features specific to
               this platform. Our dedicated{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/shopify-development"
                 className="Title_Color"
-                target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b>Shopify developers</b>
-              </a>{" "}
+              </Link>{" "}
               can shape your ecommerce website and online stores with the custom
               and business specific features and UI and UX elements offered by
               the Shopify platform. Uncompromising quality and robust
@@ -215,9 +218,16 @@ const HireShopify = () => {
               online stores using the Shopify platform.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -717,9 +727,16 @@ const HireShopify = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

@@ -19,6 +19,7 @@ import Sophisticated from "../../../assets/images/HIRE US/Hire E-commerce Develo
 import Implement from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Magento 2 Developer/2/UNIQUE UI AND UX.svg";
 import Affordable from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Magento 2 Developer/2/FASTER DEVELOPMENT.svg";
 import Time from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Magento 2 Developer/2/TIMELY DELIVERY.svg";
+import { Link } from "react-router-dom";
 
 const HireMagento = () => {
   useEffect(() => {
@@ -39,14 +40,16 @@ const HireMagento = () => {
                   find some expert Android app developers who can give shape to
                   your app idea with sophisticated Android development? Well,
                   the{" "}
-                  <a
-                    href="https://theappideas.com/iphone-app-development-company/"
+                  <Link
+                    to="/hire-android-developer"
                     className="Title_Color"
-                    target="_blank"
                     style={{ color: "#d6aa0b" }}
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: "smooth" });
+                    }}
                   >
                     <b>Android app developers</b>
-                  </a>{" "}
+                  </Link>{" "}
                   at The App Ideas ensure can ensure building highly objectively
                   designed Android apps with custom features to help your
                   business with a mobile presence.
@@ -208,14 +211,17 @@ const HireMagento = () => {
               delivering custom look and feel as per the business niche to
               helping a business reach wider audience with SEO friendly
               features, our{" "}
-              <a
-                href="https://theappideas.com/iphone-app-development-company/"
+              <Link
+                to="/magento-development"
                 className="Title_Color"
                 target="_blank"
                 style={{ color: "#d6aa0b" }}
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
               >
                 <b> Magento 2 development </b>
-              </a>{" "}
+              </Link>{" "}
               takes care of every aspect.
             </p>
             <p>
@@ -224,9 +230,16 @@ const HireMagento = () => {
               pricing and stringent deadline.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -697,9 +710,16 @@ const HireMagento = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>

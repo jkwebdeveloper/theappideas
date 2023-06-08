@@ -1,15 +1,15 @@
 import { React, useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Pagination, Autoplay, Navigation } from "swiper";
-import "../../components/Workdone/work.css";
+import "../../../components/Workdone/work.css";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import FAQ from "../../../components/FAQ";
 
-const MobileAppNewyork = () => {
+const MobileAppToronto = () => {
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
@@ -20,16 +20,15 @@ const MobileAppNewyork = () => {
           <div className="row">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
               <div className="common_banner_lft">
-                <h2>Mobile App Development New York</h2>
+                <h2>Mobile App Development Toronto, Canada</h2>
                 <p>
-                  It is the mobile app which is considered to be the prima facie
-                  of mobile presence instead of the mobile web. In fact, without
-                  a mobile app, and the branding and marketing effort of any
-                  business is incomplete now. Mobile apps opened the horizon of
-                  real-time and always-on access to a broad spectrum of services
-                  and contents. The App Ideas as a leading development company
-                  has made many businesses in New York proud with most
-                  value-driven custom mobile apps.
+                  Mobile apps opened the opportunity of anytime-anywhere access
+                  to contents and communication for the users and customers
+                  worldwide. The App Ideas is a leading Mobile App Development
+                  Toronto, Canada comprising leading brands as well as startups
+                  and small businesses. As a development company with a global
+                  footprint, we can build the most sophisticated custom apps
+                  that perfectly meets your business needs.
                 </p>
               </div>
             </div>
@@ -109,14 +108,13 @@ const MobileAppNewyork = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Your Best Mobile App Development Company New York</h3>
+            <h3>Mobile App Development Company Toronto, Canada</h3>
             <p>
-              At App Ideas, we deliver a whole array of{" "}
-              <strong> Mobile App Development Company New York </strong>,
-              businesses need. We conceptualize, design, prototype and build
-              future-ready, most advanced, scalable, and unique mobile apps that
-              give a business audience-engagement and conversion rate it really
-              deserves.
+              We at App Ideas provide a comprehensive range of{" "}
+              <strong> Mobile App Development Company Toronto </strong>, Canada
+              businesses require. We build highly sophisticated, future-ready,
+              scalable, and most innovative mobile app solutions for business
+              brands across the niches.
             </p>
           </div>
           <div className="row mt-5">
@@ -128,27 +126,30 @@ const MobileAppNewyork = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png")}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
-                    <p>Custom Mobile Apps</p>
+                    <p>Innovative Custom Mobile Apps</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Group-235.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Group-235.png")}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
-                    <p>Exceptional UI/UX</p>
+                    <p>
+                      Superb <br />
+                      UI/UX
+                    </p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png")}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -158,27 +159,27 @@ const MobileAppNewyork = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png")}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
-                    <p>QA And Beta Testing</p>
+                    <p>Mobile App Testing</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png")}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
-                    <p>App Marketing</p>
+                    <p>App Promotion And Marketing</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png")}
+                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png")}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -190,13 +191,22 @@ const MobileAppNewyork = () => {
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="service_rht">
                 <div className="Title">
-                  <h3 className="Title_heading">Custom Mobile Apps</h3>
+                  <h3 className="Title_heading">
+                    Innovative Custom Mobile Apps
+                  </h3>
                   <p className="Title_para">
                     The popularity of connected cars are getting popular day by
-                    We build innovative custom mobile apps for different
-                    categories and business niches to make sure they
-                    consistently deliver business conversion through steady user
-                    engagement.
+                    day, Nowadays many of the people are converting their car
+                    into smart cars to access the advanced features which smart
+                    cars are offering in this present time. Using such services
+                    can make the services more convenient and easy to use.
+                  </p>
+                  <p className="Title_para">
+                    Here we are at The App Ideas which is one of the most
+                    popular software development company. We are also offering
+                    the best IoT app development services at the best possible
+                    rates. Our developers can be skilled to deliver the
+                    best-connected car app based on the current trends.
                   </p>
                 </div>
               </div>
@@ -270,7 +280,7 @@ const MobileAppNewyork = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/2.webp")}
+                      src={require("../../../assets/images/work/2.webp")}
                       style={{
                         width: "100%",
                         boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -322,7 +332,7 @@ const MobileAppNewyork = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/bolt-app.webp")}
+                      src={require("../../../assets/images/work/bolt-app.webp")}
                       style={{
                         width: "100%",
                         boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -368,7 +378,7 @@ const MobileAppNewyork = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/service-my-car.webp")}
+                      src={require("../../../assets/images/work/service-my-car.webp")}
                       style={{
                         width: "100%",
                         boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
@@ -416,13 +426,12 @@ const MobileAppNewyork = () => {
           <div className="Title">
             <h3>Why Choose The App Ideas?</h3>
             <p>
-              <strong> Mobile App Development Company New York</strong>, service
-              provider are mostly known for their industry-acclaimed
-              professional output. But we always cut ourselves out from these
-              companies because of our excellent track record and exceptional
-              output through several successful apps. Let us have a look at the
-              key reasons to choose us for all mobile app development needs in
-              the city.
+              For <strong> Mobile App Development Company Toronto </strong>,
+              Canada, service providers are numerous, and but thanks to the
+              professionalism and commitment to excellence we stand out as a
+              leading development company in the city. Let us have a look at the
+              key reasons to choose us for your mobile app development needs in
+              Toronto.
             </p>
           </div>
           <div className="row mt-5">
@@ -434,39 +443,37 @@ const MobileAppNewyork = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png")}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
-                    <p>
-                      Solid <br /> Portfolio
-                    </p>
+                    <p>Unmatched Portfolio</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png")}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
-                    <p>Future-Ready Solutions</p>
+                    <p>Innovative Solutions</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/latest-technology.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/latest-technology.png")}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
-                    <p>Advanced Technology</p>
+                    <p>Latest Technology</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png")}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -476,17 +483,17 @@ const MobileAppNewyork = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/transperent-process.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/transperent-process.png")}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
-                    <p>Transparent Development Process</p>
+                    <p>Iterative And Transparent Process</p>
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png")}
+                      src={require("../../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png")}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -532,11 +539,12 @@ const MobileAppNewyork = () => {
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
                 <p style={{ textAlign: "justify" }}>
-                  Do you want to grab more details about our mobile app
-                  development services in New York? Let us tell you how we can
-                  make unique value additions to your business with our
-                  development service. Just free to drop us a message and let us
-                  get back to you.
+                  Do you want to know more about our Mobile App Development
+                  Toronto, Canada? Do you want to know how can we make
+                  substantial value additions to your business with unique and
+                  innovative mobile apps? Let us explain to you at length. Feel
+                  free to drop us a message to help us reach you at the
+                  earliest.
                 </p>
               </div>
             </div>
@@ -557,4 +565,4 @@ const MobileAppNewyork = () => {
   );
 };
 
-export default MobileAppNewyork;
+export default MobileAppToronto;

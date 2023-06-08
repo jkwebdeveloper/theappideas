@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire Re
 import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire React JS Developer/2/Affordable Pricing.svg";
 import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire React JS Developer/2/Deployment On Time.svg";
 import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire React JS Developer/2/Support And Maintenance.svg";
+import { Link } from "react-router-dom";
 
 const HireReactJsDev = () => {
   useEffect(() => {
@@ -205,9 +206,16 @@ const HireReactJsDev = () => {
               deploying the best solutions.
             </p>
             <div className="text-center">
-              <a href="#" className="contact_btn_new">
-                Contact us
-              </a>
+              <Link
+                to="/contactus"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+              >
+                <a className="contact_btn" style={{ color: "#000" }}>
+                  Contact us{" "}
+                </a>
+              </Link>
             </div>
           </div>
         </div>
@@ -886,9 +894,16 @@ const HireReactJsDev = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="contact_btn">
-                  Contact us{" "}
-                </a>
+                <Link
+                  to="/contactus"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <a className="contact_btn" style={{ color: "#000" }}>
+                    Contact us{" "}
+                  </a>
+                </Link>
               </div>
             </div>
           </div>
