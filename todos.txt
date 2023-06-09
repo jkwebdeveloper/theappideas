@@ -9,3 +9,8 @@ Enterprise App Development Page Pending
 
 4). change in every page banner section to component
 
+5. give animations to all pages
+
+6.add contact us component in all pages
+
+
