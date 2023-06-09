@@ -148,7 +148,7 @@ const App = () => {
         <Route path="/magento-development" element={<MagentoDev />} />
         <Route path="/joomla-development" element={<Joomla />} />
         <Route path="/drupal-development" element={<DrupalDev />} />
-        <Route path="/wordPress-wevelopment" element={<WordPressDeveloper />} />
+        <Route path="/wordpress-development" element={<WordPressDeveloper />} />
         <Route path="/php-development" element={<PHPDev />} />
         <Route path="/angular-development" element={<Angular />} />
         <Route path="/webflow-development" element={<WebFlowDev />} />

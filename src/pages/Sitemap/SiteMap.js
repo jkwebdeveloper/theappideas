@@ -102,9 +102,11 @@ import { Link } from "react-router-dom";
 const SiteMap = () => {
   return (
     <>
+    {/* Banner */}
       <section className="sitemap_banner">
         <h1>SITEMAP</h1>
       </section>
+      {/* Core page */}
       <section className="sitemap_container white_bg">
         <div className="sitemap_title">
           <h2>Core Pages</h2>
@@ -132,7 +134,7 @@ const SiteMap = () => {
             <div className="col-12 col-sm-4 col-md-4 col-lg-3">
               <div className="sitemap_box">
                 <Link
-                  to="/aboutus"
+                  to="/about-us"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
@@ -240,6 +242,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* Mobile App */}
       <section className="sitemap_container">
         <div className="sitemap_title">
           <h2>Mobile Apps Development</h2>
@@ -357,6 +360,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* Web Development */}
       <section className="sitemap_container white_bg">
         <div className="sitemap_title">
           <h2>Web Development</h2>
@@ -493,6 +497,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* E-commerce */}
       <section className="sitemap_container">
         <div className="sitemap_title">
           <h2>Ecommerce Development</h2>
@@ -592,6 +597,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* Web & Graphic */}
       <section className="sitemap_container white_bg">
         <div className="sitemap_title">
           <h2>Web & Graphics Designing</h2>
@@ -655,6 +661,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* Hire */}
       <section className="sitemap_container">
         <div className="sitemap_title">
           <h2>Hire Developer</h2>
@@ -970,6 +977,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* Digital Marketing */}
       <section className="sitemap_container white_bg">
         <div className="sitemap_title">
           <h2>Digital Marketing</h2>
@@ -1033,6 +1041,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+       {/* Ready_Made_Solutions */}
       <section className="sitemap_container">
         <div className="sitemap_title">
           <h2>Ready Made Solutions</h2>
@@ -1251,6 +1260,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* On_Demand_Apps */}
       <section className="sitemap_container white_bg">
         <div className="sitemap_title">
           <h2>On-Demand Apps</h2>
@@ -1336,6 +1346,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* location_map */}
       <section className="sitemap_container">
         <div className="sitemap_title">
           <h2>Location Wise Services</h2>
@@ -1554,6 +1565,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* Other_Services */}
       <section className="sitemap_container white_bg">
         <div className="sitemap_title">
           <h2>Other Services</h2>
@@ -1599,6 +1611,7 @@ const SiteMap = () => {
           </div>
         </div>
       </section>
+      {/* blog */}
       <section className="sitemap_container">
         <div className="sitemap_title">
           <h2>Blog</h2>

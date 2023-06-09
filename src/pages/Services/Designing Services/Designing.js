@@ -612,7 +612,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Software development/Technologies/asp.net_.png")}
+                  src={require("../../../assets/images/SERVICES/Designing/Technologies/photoshop.png")}
                   alt="Asp.Net"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -623,7 +623,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Designing/Technologies/Illustrator.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -634,7 +634,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Designing/Technologies/Figma.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}
@@ -645,7 +645,7 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require("../../../assets/images/SERVICES/Designing/Technologies/Adobe-XD.png")}
                   alt="DotNetNuke"
                   className="img-fluid"
                   style={{ width: "180px" }}

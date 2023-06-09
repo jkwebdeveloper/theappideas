@@ -7,7 +7,5 @@ Enterprise App Development Page Pending
 3) Design Services Mobile Web Designing
  Why Choose us Icons changing 
 
- 4) in footer add two icons pinterest & instagram 
-
-5. change in every page banner section to component
+4). change in every page banner section to component
 

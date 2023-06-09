@@ -5,7 +5,7 @@ import { BsFillPatchCheckFill } from "react-icons/bs";
 
 import AR from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad AR and VR apps.svg";
 import chat from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad Chat Apps.svg";
-import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
+import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Experience and Expertise.svg";
 import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
 import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
 import Agile from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg";
@@ -494,9 +494,26 @@ const IpadAppDev = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>
-              Why Choose App Ideas For React Native App Development Company?
-            </h3>
+            <h3>Why Choose App Ideas For IPad App Development?</h3>
+            <p>
+              At the App Ideas over the years we built a standout reputation for
+              outstanding Android app development service by producing an array
+              of widely benchmarked apps flaunting sophisticated user experience
+              and visually enticing UI. Our Android app development service over
+              the years contributed to the commercial success of many businesses
+              and helped them carve out a competitive mobile presence. Let’s
+              mention the key reasons to choose us for{" "}
+              <Link
+                to="/android-app-development"
+                onClick={() => {
+                  window.scrollTo({ top: 0, behavior: "smooth" });
+                }}
+                target="_blank"
+              >
+                {" "}
+                Android app development.
+              </Link>
+            </p>
           </div>
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
@@ -536,7 +553,10 @@ const IpadAppDev = () => {
                       alt="Robust-Portfolio"
                       className="img-fluid"
                     />
-                    <p>Robust Portfolio</p>
+                    <p>
+                      Unique <br />
+                      Designing
+                    </p>
                   </a>
                 </div>
                 <div
@@ -555,7 +575,7 @@ const IpadAppDev = () => {
                       alt="Full-Lifecycle-Support"
                       className="img-fluid"
                     />
-                    <p>Full Lifecycle support</p>
+                    <p>Robust Portfolio</p>
                   </a>
                 </div>
                 <div
@@ -595,7 +615,9 @@ const IpadAppDev = () => {
                       alt="Fast-Paced-Development"
                       className="img-fluid"
                     />
-                    <p>Fast-paced development</p>
+                    <p>
+                      Offshore <br /> Hiring
+                    </p>
                   </a>
                 </div>
                 <div
@@ -647,22 +669,24 @@ const IpadAppDev = () => {
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
-                    <h3 className="Title_heading">Robust Portfolio</h3>
+                    <h3 className="Title_heading">
+                      Unmatched Design Excellence
+                    </h3>
                     <p className="Title_para">
-                      Before hiring any software development services, it is
-                      very important for you to check the form detail as well as
-                      their past projects. By checking their past projects, you
-                      will get a clear idea about their experience and expertise
-                      in Android Mobile app development.
+                      If we talk about designing then you probably have an idea
+                      that design is one of the most important things behind the
+                      success of any software development service. Designing can
+                      help you to get more users towards your online platforms
+                      as well as also helps in increasing the user engagement
+                      towards the services.
                     </p>
                     <p className="Title_para">
-                      The App Ideas is one of the topmost software development
-                      company. We have a team of a highly experienced and expert
-                      team of Android app developers who provide the best
-                      solution for all types of business categories. As an
-                      expert Android development company, we boast a robust
-                      portfolio of the most successful android apps across the
-                      nices.
+                      The App Ideas is one of the best web and app development
+                      company. We are highly expert in providing the best iPad
+                      app development services along with unique designing
+                      services. With a highly talented pool of iPad app
+                      designers, we ensure delivering the most unique, beautiful
+                      and minimalist UI design output.
                     </p>
                   </div>
                 </div>
@@ -673,21 +697,20 @@ const IpadAppDev = () => {
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
-                    <h3 className="Title_heading">Full Lifecycle support</h3>
+                    <h3 className="Title_heading">Robust Portfolio</h3>
                     <p className="Title_para">
-                      The App Ideas is one of the leading web and app
-                      development company. Nowadays, from the current market
-                      scenario, we can clearly see the demand and the increasing
-                      popularity of Android app solutions in the market. Every
-                      business and startup is now launching their Android mobile
-                      app in the market for engaging more users.
+                      Before hiring us, you can probably check our Robust
+                      portfolio to see our expertise in the web and app
+                      development field. Past projects and testimonials can help
+                      you to get to know the software services experienced.
                     </p>
                     <p className="Title_para">
-                      By choosing The App Ideas for your Android app development
-                      you will get various advantages. One of the advantages is
-                      Full Lifecycle support which means we offer support for
-                      the full lifecycle of the app starting from the
-                      development and launching phase to post-launch marketing.
+                      The App Ideas is one of the foremost app and web
+                      development company. We have a team of highly skilled and
+                      experienced developers who offers the best iPad app
+                      development services. We boast a huge portfolio of the
+                      most successful iPad apps built for a variety of niches
+                      and business categories.
                     </p>
                   </div>
                 </div>
@@ -700,19 +723,19 @@ const IpadAppDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Agile development</h3>
                     <p className="Title_para">
-                      In this present time, the demand for Android app
-                      development is increasing because of its best convenience
-                      and comfort. More than half of the population own
-                      smartphones, so they prefer a mobile apps for accessing
-                      all kinds of services. This is the main reason why service
-                      owners are shifting towards online platforms.
+                      Nowadays, the demand for the iPad mobile app development
+                      is increasing very drastically and the reason behind this
+                      is very convenient to use for a place and any time. People
+                      are highly inclined towards smartphones for all kinds of
+                      services which makes business owners shift their business
+                      towards online platforms.
                     </p>
                     <p className="Title_para">
-                      We are from The App Ideas, which is a leading web and app
-                      development company. For Android app development, we
-                      strictly follow the agile methodology for delivering the
-                      best output without compromising on the qualitative
-                      parameters.
+                      The App Ideas is a leading web and app development
+                      company. We mainly follow the agile methodology or stick
+                      to an agile development methodology to ensure optimum
+                      quality while meeting deadlines and milestones with faster
+                      development.
                     </p>
                   </div>
                 </div>
@@ -723,23 +746,22 @@ const IpadAppDev = () => {
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
-                    <h3 className="Title_heading">Fast-paced development</h3>
+                    <h3 className="Title_heading">Offshore Hiring</h3>
                     <p className="Title_para">
-                      In this modern or we can say digital era, everything is
-                      digitalizing as quickly as possible. Similarly, it is very
-                      easy to access all kinds of services through smartphones
-                      which are cost-saving as well as time-saving. Business
-                      owners and entrepreneur are looking for the software
-                      development company which offer the fast-paced development
-                      services.
+                      As we know, the demand for online platforms is increasing
+                      day by day. Many people are investing in software
+                      development services like websites development or mobile
+                      app development. Many people are really investing in iPad
+                      mobile app development for expanding their business in
+                      other areas.
                     </p>
                     <p className="Title_para">
-                      The App Ideas are one of best web and app development
-                      company. We have a team of a highly skilled and expert
-                      team of Android app developers who provide the best
-                      solution for every business niche. With our Android
-                      development process, we ensure the fastest turnaround time
-                      and shortest time to market for each and every app.
+                      We are from The App Ideas, which is a leading web and app
+                      development company. We have a team of highly skilled
+                      developers who offer the best features as well as unique
+                      designs to the clients. We also deliver to your offshore
+                      development needs by allowing you to hire from our
+                      experienced iPad app development team.
                     </p>
                   </div>
                 </div>
@@ -752,19 +774,20 @@ const IpadAppDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Competitive price</h3>
                     <p className="Title_para">
-                      If you are planning to launch an Android app solution in
-                      the market for your business then this is the right time
-                      to make the investment, The Android mobile app can help
-                      you to stand out differently among the competitions and
-                      increase the user engagement towards your business.
+                      The market is full of web and app services. You can check
+                      the app store for any kinds of services you required. And
+                      if we talk about the popularity then the demand is also
+                      getting increase with the time. For iPad mobile app
+                      development it is very important for you to have some
+                      unique concept to increase the engagement of the user.
                     </p>
                     <p className="Title_para">
-                      The App Ideas is one of the leading software development
-                      company. We have a team of highly skilled web and app
-                      developers who offer the best solution at the best rates.
-                      We offer highly competitive pricing for our Android app
-                      development services that remains affordable even for
-                      small enterprises.
+                      The App Ideas is a highly experienced web and app
+                      development company. We have a pool of talented developers
+                      who offer the best iPad app development services. We offer
+                      the most competitive pricing for building the most
+                      sophisticated iPad app with guaranteed performance and app
+                      market success.
                     </p>
                   </div>
                 </div>
