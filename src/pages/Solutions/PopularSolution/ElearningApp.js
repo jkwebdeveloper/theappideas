@@ -34,141 +34,151 @@ import Reviews from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learni
 import PaymentManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Payment-Management-1.svg";
 import { Link } from "react-router-dom";
 
-const ElearningData = [
-  {
-    id: 1,
-    category: "User-Panel",
-    image: Login,
-    title: "Login & Register",
-    des: "Users can log in & register on the site.",
-  },
-  {
-    id: 2,
-    category: "User-Panel",
-    image: ProfileManagement,
-    title: "Profile Management",
-    des: "Manage his/her profile.",
-  },
-  {
-    id: 3,
-    category: "User-Panel",
-    image: View,
-    title: "Search & View",
-    des: "Users can search and see lists of available courses.",
-  },
-  {
-    id: 4,
-    category: "User-Panel",
-    image: Detailed,
-    title: "Detailed view",
-    des: "Contact tutor, check availability, check the detailed overview of the course.",
-  },
-  {
-    id: 5,
-    category: "User-Panel",
-    image: Course,
-    title: "Course selection & purchase",
-    des: "user can purchase any course, pay by visa or MasterCard.",
-  },
-  {
-    id: 6,
-    category: "User-Panel",
-    image: OrderHistory,
-    title: "Order History",
-    des: "User can see his/her purchased course history.",
-  },
-  {
-    id: 7,
-    category: "User-Panel",
-    image: availability,
-    title: "Set availability and Attend",
-    des: "Can see course details and fix the zoom meeting.",
-  },
-  {
-    id: 8,
-    category: "Admin-Panel",
-    image: UserManagement,
-    title: "User Management",
-    des: "Can manage users.",
-  },
-  {
-    id: 9,
-    category: "Admin-Panel",
-    image: MentorManagement,
-    title: "Mentor Management",
-    des: "Can manage mentors.",
-  },
-  {
-    id: 10,
-    category: "Admin-Panel",
-    image: Reviews,
-    title: "Reviews Managemement",
-    des: "Users can place a review for a mentor and according to reviews and ratings, their place on the site will be decided.",
-  },
-  {
-    id: 11,
-    category: "Admin-Panel",
-    image: PaymentManagement,
-    title: "Payment Management",
-    des: "Can manage payment or fees for each course.",
-  },
-  {
-    id: 12,
-    category: "Mentor-Panel",
-    image: LoginRegister,
-    title: "Login & Register",
-    des: "Users needs to register with their credentials and create and use login ID and password.",
-  },
-  {
-    id: 13,
-    category: "Mentor-Panel",
-    image: Profile,
-    title: "Profile Management",
-    des: "The mentor panel will have access to all user profiles with the ease of managing them.",
-  },
-  {
-    id: 14,
-    category: "Mentor-Panel",
-    image: List,
-    title: "List of Courses",
-    des: "The mentor panel will have a detailed list of courses and curriculums.",
-  },
-  {
-    id: 15,
-    category: "Mentor-Panel",
-    image: Historyy,
-    title: "History",
-    des: "The mentor panel will showcase a historical account of the user’s progress through the curriculum.",
-  },
-  {
-    id: 16,
-    category: "Mentor-Panel",
-    image: Schedule,
-    title: "Schedule a meeting",
-    des: "The mentor panel will help in scheduling meetings and study sessions between users and mentors.",
-  },
-  {
-    id: 17,
-    category: "Mentor-Panel",
-    image: Online,
-    title: "Online meeting",
-    des: "The mentor app will also help in conducting online meetings and study sessions between users and mentors.",
-  },
-];
 const ElearningApp = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("user_panel");
+  const [data, setData] = useState([]);
+  const [activeWhyShould, setActiveWhyShould] = useState("anywhere_anytime");
+
+  const ElearningData = [
+    {
+      id: 1,
+      category: "user_panel",
+      image: Login,
+      title: "Login & Register",
+      des: "Users can log in & register on the site.",
+    },
+    {
+      id: 2,
+      category: "user_panel",
+      image: ProfileManagement,
+      title: "Profile Management",
+      des: "Manage his/her profile.",
+    },
+    {
+      id: 3,
+      category: "user_panel",
+      image: View,
+      title: "Search & View",
+      des: "Users can search and see lists of available courses.",
+    },
+    {
+      id: 4,
+      category: "user_panel",
+      image: Detailed,
+      title: "Detailed view",
+      des: "Contact tutor, check availability, check the detailed overview of the course.",
+    },
+    {
+      id: 5,
+      category: "user_panel",
+      image: Course,
+      title: "Course selection & purchase",
+      des: "user can purchase any course, pay by visa or MasterCard.",
+    },
+    {
+      id: 6,
+      category: "user_panel",
+      image: OrderHistory,
+      title: "Order History",
+      des: "User can see his/her purchased course history.",
+    },
+    {
+      id: 7,
+      category: "user_panel",
+      image: availability,
+      title: "Set availability and Attend",
+      des: "Can see course details and fix the zoom meeting.",
+    },
+    {
+      id: 8,
+      category: "admin_panel",
+      image: UserManagement,
+      title: "User Management",
+      des: "Can manage users.",
+    },
+    {
+      id: 9,
+      category: "admin_panel",
+      image: MentorManagement,
+      title: "Mentor Management",
+      des: "Can manage mentors.",
+    },
+    {
+      id: 10,
+      category: "admin_panel",
+      image: Reviews,
+      title: "Reviews Managemement",
+      des: "Users can place a review for a mentor and according to reviews and ratings, their place on the site will be decided.",
+    },
+    {
+      id: 11,
+      category: "admin_panel",
+      image: PaymentManagement,
+      title: "Payment Management",
+      des: "Can manage payment or fees for each course.",
+    },
+    {
+      id: 12,
+      category: "mentor_panel",
+      image: LoginRegister,
+      title: "Login & Register",
+      des: "Users needs to register with their credentials and create and use login ID and password.",
+    },
+    {
+      id: 13,
+      category: "mentor_panel",
+      image: Profile,
+      title: "Profile Management",
+      des: "The mentor panel will have access to all user profiles with the ease of managing them.",
+    },
+    {
+      id: 14,
+      category: "mentor_panel",
+      image: List,
+      title: "List of Courses",
+      des: "The mentor panel will have a detailed list of courses and curriculums.",
+    },
+    {
+      id: 15,
+      category: "mentor_panel",
+      image: Historyy,
+      title: "History",
+      des: "The mentor panel will showcase a historical account of the user’s progress through the curriculum.",
+    },
+    {
+      id: 16,
+      category: "mentor_panel",
+      image: Schedule,
+      title: "Schedule a meeting",
+      des: "The mentor panel will help in scheduling meetings and study sessions between users and mentors.",
+    },
+    {
+      id: 17,
+      category: "mentor_panel",
+      image: Online,
+      title: "Online meeting",
+      des: "The mentor app will also help in conducting online meetings and study sessions between users and mentors.",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [items, setItems] = useState(ElearningData);
-  const filterItem = (cateItem) => {
+  const filterItem = () => {
     const updateItems = ElearningData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
 
   return (
     <>
@@ -343,7 +353,9 @@ const ElearningApp = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "user_panel" && "active"
+                  }`}
                   id="User-Panel-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#User-Panel"
@@ -351,14 +363,17 @@ const ElearningApp = () => {
                   role="tab"
                   aria-controls="User-Panel"
                   aria-selected="true"
-                  onClick={() => filterItem("User-Panel")}
+                  onClick={() => setActiveSection("user_panel")}
+                  style={{ cursor: "pointer" }}
                 >
                   User Panel
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "mentor_panel" && "active"
+                  }`}
                   id="Mentor-App-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Mentor-App"
@@ -366,14 +381,17 @@ const ElearningApp = () => {
                   role="tab"
                   aria-controls="Mentor-App"
                   aria-selected="false"
-                  onClick={() => filterItem("Mentor-Panel")}
+                  onClick={() => setActiveSection("mentor_panel")}
+                  style={{ cursor: "pointer" }}
                 >
                   Mentor Panel
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "admin_panel" && "active"
+                  }`}
                   id="Admin-App-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Admin-App"
@@ -381,7 +399,8 @@ const ElearningApp = () => {
                   role="tab"
                   aria-controls="Admin-App"
                   aria-selected="false"
-                  onClick={() => filterItem("Admin-Panel")}
+                  onClick={() => setActiveSection("admin_panel")}
+                  style={{ cursor: "pointer" }}
                 >
                   Admin Panel
                 </button>
@@ -395,7 +414,7 @@ const ElearningApp = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {items.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, title, des } = elem;
                     return (
                       <div
@@ -502,10 +521,16 @@ const ElearningApp = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("anywhere_anytime")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "anywhere_anytime" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Anywhere-Anytime-Access.png")}
@@ -515,8 +540,17 @@ const ElearningApp = () => {
                     <p>Anywhere-Anytime Access</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("custom_module")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "custom_module" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Custom-Module-For-Learners.png")}
                       alt="Android-Enterprise-App-Development"
@@ -525,8 +559,17 @@ const ElearningApp = () => {
                     <p>Custom Module For Learners</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("equipped")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "equipped" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Equipped-For-Hands-On-Training.png")}
                       alt="Android-Wearable-App-Development"
@@ -535,8 +578,17 @@ const ElearningApp = () => {
                     <p>Equipped For Hands-On Training</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("affordable")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "affordable" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Affordable-Education.png")}
                       alt="Android-Game-App-Development"
@@ -545,8 +597,17 @@ const ElearningApp = () => {
                     <p>Affordable Education</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("rigorous_learning")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "rigorous_learning" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Rigorous-Learning.png")}
                       alt="Android-App-Redesign"
@@ -555,8 +616,17 @@ const ElearningApp = () => {
                     <p>Rigorous Learning</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("real_time")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "real_time" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Real-Time-Industry-Exposure.png")}
                       alt="Android-Support-And-Maintenance"
@@ -567,28 +637,94 @@ const ElearningApp = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Anywhere-anytime access</h3>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a team of highly skilled website and mobile
-                    app developers who will offer the best services at the best
-                    rates. We have years of experience in offering the best and
-                    advanced Grocery Store app development services.
-                  </p>
-                  <p className="Title_para">
-                    Along with the best design and advanced feature integration,
-                    we offer a highly scalable grocery store app solution. A
-                    highly scalable grocery store can be useful for you as they
-                    have easy availability, maintenance, better performance and
-                    more. If you are planning of launching the foremost grocery
-                    store app then feel free to reach us and get a free quote.
-                  </p>
+            {activeWhyShould === "anywhere_anytime" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Anywhere-anytime access</h3>
+                    <p className="Title_para">
+                      Elearning websites help learners with anytime-anywhere
+                      access to content and courseware.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyShould === "custom_module" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Custom module for learners
+                    </h3>
+                    <p className="Title_para">
+                      Elearning websites can also allow more customization as
+                      per the aptitude and learning ability of the participants.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "equipped" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Equipped for hands-on training{" "}
+                    </h3>
+                    <p className="Title_para">
+                      Thanks to the latest technologies like AR, VR, 3D
+                      photography, and the use of aerial drone photography,
+                      delivering hands-on training through e-learning is no
+                      longer impossible.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "affordable" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Affordable education </h3>
+                    <p className="Title_para">
+                      Elearning websites allowing wider access to education
+                      beyond the constraints of institutions make education more
+                      affordable.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "rigorous_learning" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Rigorous learning</h3>
+                    <p className="Title_para">
+                      Elearning also allows learners to engage more rigorously
+                      to continue with multiple curriculums or completing a
+                      course at his own pace.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "real_time" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Real-time industry exposure
+                    </h3>
+                    <p className="Title_para">
+                      Thanks to the integrated digital platform, eLearning
+                      websites offer real-time industry exposure to people.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

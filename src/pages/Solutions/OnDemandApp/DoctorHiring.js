@@ -45,227 +45,235 @@ import Reports from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Do
 import Doctorsget from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Doctors-Get-Notification.svg";
 import { Link } from "react-router-dom";
 
-const DoctorData = [
-  {
-    id: 1,
-    category: "User-App",
-    image: SignUp,
-    title: "Sign Up",
-    des: "This feature of the user interface will allow you signup as a new user with all the credentials and required details.",
-  },
-  {
-    id: 2,
-    category: "User-App",
-    image: Signin,
-    title: "Signin",
-    des: "After being registered users need to sign in to the app by providing their signup credentials.",
-  },
-  {
-    id: 3,
-    category: "User-App",
-    image: ForgotPassword,
-    title: "Forgot Password",
-    des: "n case the user forgets password, this user app feature will allow him to retrieve the password by following some easy steps.",
-  },
-  {
-    id: 4,
-    category: "User-App",
-    image: ChangePassword,
-    title: "Change Password",
-    des: "The user can change his password from time to time in order to strengthen the security of the login credentials.",
-  },
-  {
-    id: 5,
-    category: "User-App",
-    image: Createaprofile,
-    title: "Create a profile",
-    des: "Users is allowed to chat with the drivers or the admin whenever needed.",
-  },
-  {
-    id: 6,
-    category: "User-App",
-    image: Manageprofile,
-    title: "Manage profile",
-    des: "Users can manage their profiles and edit them at ease by changing the profile information.",
-  },
-  {
-    id: 7,
-    category: "User-App",
-    image: Manage,
-    title: "Manage medical history profile",
-    des: "The users can also manage, edit, change and add new information to their medical history profile.",
-  },
-  {
-    id: 8,
-    category: "User-App",
-    image: available,
-    title: "Search available doctors",
-    des: "The users can search for specialist doctors from a variety of specialties through the search function and an array of filters.",
-  },
-  {
-    id: 9,
-    category: "User-App",
-    image: Ratings,
-    title: "Ratings and reviews",
-    des: "Users can provide feedback about the doctors and the app by giving ratings and publishing reviews about them.",
-  },
-  {
-    id: 10,
-    category: "User-App",
-    image: Usercanchat,
-    title: "User can chat",
-    des: "User can engage in real-time chat with the therapists and service-provider doctors and can explain their health issues.",
-  },
-  {
-    id: 11,
-    category: "User-App",
-    image: UsercanPay,
-    title: "User can Pay via PayPal",
-    des: "User can make payment to the doctors and therapists for their required medical services by using PayPal and an array of other payment gateways.",
-  },
-  {
-    id: 12,
-    category: "User-App",
-    image: Userget,
-    title: "User get the Morning Quotes",
-    des: "User also get lucrative quote from the service provider doctors in the beginning of the day as promotional offers.",
-  },
-  {
-    id: 13,
-    category: "Doctor-App-Development",
-    image: SignUp,
-    title: "SignUp",
-    des: "Doctors and therapists also need to signup by creating a fresh new account with the app.",
-  },
-  {
-    id: 14,
-    category: "Doctor-App-Development",
-    image: Complaint,
-    title: "Complaint Management",
-    des: "The doctors for using the app need to sign in by using the login credentials.",
-  },
-  {
-    id: 15,
-    category: "Doctor-App-Development",
-    image: Forgot,
-    title: "Forgot Password",
-    des: "Doctors can retrieve their password or create new password in case they have forgotten their password or login credentials.",
-  },
-  {
-    id: 16,
-    category: "Doctor-App-Development",
-    image: Change,
-    title: "Change Password",
-    des: "Doctors can change or create new password from time to time for the sake of safeguarding their account.",
-  },
-  {
-    id: 17,
-    category: "Doctor-App-Development",
-    image: profile,
-    title: "Create a profile",
-    des: "Doctors can create or manage their own profiles by providing all the professional details.",
-  },
-  {
-    id: 18,
-    category: "Doctor-App-Development",
-    image: Managepro,
-    title: "Manage profile",
-    des: "Doctors can manage their profiles by maintaining all their professional credentials and information in a discoverable manner.",
-  },
-  {
-    id: 19,
-    category: "Doctor-App-Development",
-    image: Setavailability,
-    title: "Set availability",
-    des: "Doctors can set availability of their services to opt for or opt out of requested services from patients.",
-  },
-  {
-    id: 20,
-    category: "Doctor-App-Development",
-    image: Requestwithdrawal,
-    title: "Request for a withdrawal",
-    des: "Doctors can also request for withdrawing from a previously opted service.",
-  },
-  {
-    id: 21,
-    category: "Doctor-App-Development",
-    image: Doctorscan,
-    title: "Doctors can see the reports",
-    des: "Doctors can withdrawing from a service can also choose to see the medical reports of the concerned patients.",
-  },
-  {
-    id: 22,
-    category: "Admin-Penal",
-    image: UserManagement,
-    title: "User Management",
-    des: "The admin panel of the app allows the app admin to manage different users.",
-  },
-  {
-    id: 23,
-    category: "Admin-Penal",
-    image: DoctorsManagement,
-    title: "Doctors Management",
-    des: "The doctors management section of the admin panel allows the app admin to manage the registered therapists and doctors.",
-  },
-  {
-    id: 24,
-    category: "Admin-Penal",
-    image: Featured,
-    title: "Featured profile management",
-    des: "The admin panel can also allow creating a list of featured profiles and managing them separately.",
-  },
-  {
-    id: 25,
-    category: "Admin-Penal",
-    image: Payment,
-    title: "Payment Management",
-    des: "The admin panel allows managing the payment methods, gateways and the actual payment made by the users.",
-  },
-  {
-    id: 26,
-    category: "Admin-Penal",
-    image: Suspend,
-    title: "Suspend account management",
-    des: "The admin panel can also suspend certain accounts and can evaluate the accounts for disciplinary actions.",
-  },
-  {
-    id: 27,
-    category: "Admin-Penal",
-    image: Dispute,
-    title: "Dispute management",
-    des: "The admin panel also helps sorting out any dispute between the service provider doctors and the patients.",
-  },
-  {
-    id: 28,
-    category: "Admin-Penal",
-    image: Reports,
-    title: "Reports Management",
-    des: "The admin panel also offers a report management feature to keep track of the doctor’s services and the patient’s feedback.",
-  },
-  {
-    id: 29,
-    category: "Admin-Penal",
-    image: Doctorsget,
-    title: "Doctors get notification",
-    des: "The admin panel also helps sending doctors and therapists notification messages with latest service update.",
-  },
-];
-
 const DoctorHiring = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("user_app");
+  const [data, setData] = useState([]);
+
+  const DoctorData = [
+    {
+      id: 1,
+      category: "user_app",
+      image: SignUp,
+      title: "Sign Up",
+      des: "This feature of the user interface will allow you signup as a new user with all the credentials and required details.",
+    },
+    {
+      id: 2,
+      category: "user_app",
+      image: Signin,
+      title: "Signin",
+      des: "After being registered users need to sign in to the app by providing their signup credentials.",
+    },
+    {
+      id: 3,
+      category: "user_app",
+      image: ForgotPassword,
+      title: "Forgot Password",
+      des: "n case the user forgets password, this user app feature will allow him to retrieve the password by following some easy steps.",
+    },
+    {
+      id: 4,
+      category: "user_app",
+      image: ChangePassword,
+      title: "Change Password",
+      des: "The user can change his password from time to time in order to strengthen the security of the login credentials.",
+    },
+    {
+      id: 5,
+      category: "user_app",
+      image: Createaprofile,
+      title: "Create a profile",
+      des: "Users is allowed to chat with the drivers or the admin whenever needed.",
+    },
+    {
+      id: 6,
+      category: "user_app",
+      image: Manageprofile,
+      title: "Manage profile",
+      des: "Users can manage their profiles and edit them at ease by changing the profile information.",
+    },
+    {
+      id: 7,
+      category: "user_app",
+      image: Manage,
+      title: "Manage medical history profile",
+      des: "The users can also manage, edit, change and add new information to their medical history profile.",
+    },
+    {
+      id: 8,
+      category: "user_app",
+      image: available,
+      title: "Search available doctors",
+      des: "The users can search for specialist doctors from a variety of specialties through the search function and an array of filters.",
+    },
+    {
+      id: 9,
+      category: "user_app",
+      image: Ratings,
+      title: "Ratings and reviews",
+      des: "Users can provide feedback about the doctors and the app by giving ratings and publishing reviews about them.",
+    },
+    {
+      id: 10,
+      category: "user_app",
+      image: Usercanchat,
+      title: "User can chat",
+      des: "User can engage in real-time chat with the therapists and service-provider doctors and can explain their health issues.",
+    },
+    {
+      id: 11,
+      category: "user_app",
+      image: UsercanPay,
+      title: "User can Pay via PayPal",
+      des: "User can make payment to the doctors and therapists for their required medical services by using PayPal and an array of other payment gateways.",
+    },
+    {
+      id: 12,
+      category: "user_app",
+      image: Userget,
+      title: "User get the Morning Quotes",
+      des: "User also get lucrative quote from the service provider doctors in the beginning of the day as promotional offers.",
+    },
+    {
+      id: 13,
+      category: "doctor_app_development",
+      image: SignUp,
+      title: "SignUp",
+      des: "Doctors and therapists also need to signup by creating a fresh new account with the app.",
+    },
+    {
+      id: 14,
+      category: "doctor_app_development",
+      image: Complaint,
+      title: "Complaint Management",
+      des: "The doctors for using the app need to sign in by using the login credentials.",
+    },
+    {
+      id: 15,
+      category: "doctor_app_development",
+      image: Forgot,
+      title: "Forgot Password",
+      des: "Doctors can retrieve their password or create new password in case they have forgotten their password or login credentials.",
+    },
+    {
+      id: 16,
+      category: "doctor_app_development",
+      image: Change,
+      title: "Change Password",
+      des: "Doctors can change or create new password from time to time for the sake of safeguarding their account.",
+    },
+    {
+      id: 17,
+      category: "doctor_app_development",
+      image: profile,
+      title: "Create a profile",
+      des: "Doctors can create or manage their own profiles by providing all the professional details.",
+    },
+    {
+      id: 18,
+      category: "doctor_app_development",
+      image: Managepro,
+      title: "Manage profile",
+      des: "Doctors can manage their profiles by maintaining all their professional credentials and information in a discoverable manner.",
+    },
+    {
+      id: 19,
+      category: "doctor_app_development",
+      image: Setavailability,
+      title: "Set availability",
+      des: "Doctors can set availability of their services to opt for or opt out of requested services from patients.",
+    },
+    {
+      id: 20,
+      category: "doctor_app_development",
+      image: Requestwithdrawal,
+      title: "Request for a withdrawal",
+      des: "Doctors can also request for withdrawing from a previously opted service.",
+    },
+    {
+      id: 21,
+      category: "doctor_app_development",
+      image: Doctorscan,
+      title: "Doctors can see the reports",
+      des: "Doctors can withdrawing from a service can also choose to see the medical reports of the concerned patients.",
+    },
+    {
+      id: 22,
+      category: "admin_penal",
+      image: UserManagement,
+      title: "User Management",
+      des: "The admin panel of the app allows the app admin to manage different users.",
+    },
+    {
+      id: 23,
+      category: "admin_penal",
+      image: DoctorsManagement,
+      title: "Doctors Management",
+      des: "The doctors management section of the admin panel allows the app admin to manage the registered therapists and doctors.",
+    },
+    {
+      id: 24,
+      category: "admin_penal",
+      image: Featured,
+      title: "Featured profile management",
+      des: "The admin panel can also allow creating a list of featured profiles and managing them separately.",
+    },
+    {
+      id: 25,
+      category: "admin_penal",
+      image: Payment,
+      title: "Payment Management",
+      des: "The admin panel allows managing the payment methods, gateways and the actual payment made by the users.",
+    },
+    {
+      id: 26,
+      category: "admin_penal",
+      image: Suspend,
+      title: "Suspend account management",
+      des: "The admin panel can also suspend certain accounts and can evaluate the accounts for disciplinary actions.",
+    },
+    {
+      id: 27,
+      category: "admin_penal",
+      image: Dispute,
+      title: "Dispute management",
+      des: "The admin panel also helps sorting out any dispute between the service provider doctors and the patients.",
+    },
+    {
+      id: 28,
+      category: "admin_penal",
+      image: Reports,
+      title: "Reports Management",
+      des: "The admin panel also offers a report management feature to keep track of the doctor’s services and the patient’s feedback.",
+    },
+    {
+      id: 29,
+      category: "admin_penal",
+      image: Doctorsget,
+      title: "Doctors get notification",
+      des: "The admin panel also helps sending doctors and therapists notification messages with latest service update.",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [item, setItems] = useState(DoctorData);
-
   const filterItem = (cateItem) => {
     const updateItems = DoctorData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
+
   return (
     <>
       {/* common Banner start */}
@@ -439,7 +447,9 @@ const DoctorHiring = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "user_app" && "active"
+                  }`}
                   id="User-App-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#User App"
@@ -447,14 +457,17 @@ const DoctorHiring = () => {
                   role="tab"
                   aria-controls="User App"
                   aria-selected="true"
-                  onClick={() => filterItem("User-App")}
+                  onClick={() => setActiveSection("user_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   User App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "doctor_app_development" && "active"
+                  }`}
                   id="Doctor-App-Development-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Doctor-App-Development"
@@ -462,14 +475,17 @@ const DoctorHiring = () => {
                   role="tab"
                   aria-controls="Doctor-App-Development"
                   aria-selected="false"
-                  onClick={() => filterItem("Doctor-App-Development")}
+                  onClick={() => setActiveSection("doctor_app_development")}
+                  style={{ cursor: "pointer" }}
                 >
                   On Demand Doctor App Development
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "admin_penal" && "active"
+                  }`}
                   id="Admin-Penal-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Admin-Penal"
@@ -477,7 +493,8 @@ const DoctorHiring = () => {
                   role="tab"
                   aria-controls="Admin-Penal"
                   aria-selected="false"
-                  onClick={() => filterItem("Admin-Penal")}
+                  onClick={() => setActiveSection("admin_penal")}
+                  style={{ cursor: "pointer" }}
                 >
                   Admin Penal
                 </button>
@@ -491,7 +508,7 @@ const DoctorHiring = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {item.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, des, title } = elem;
                     return (
                       <div

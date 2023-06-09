@@ -48,240 +48,250 @@ import Weekly from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking 
 import Email from "../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Email system.svg";
 import { Link } from "react-router-dom";
 
-const TaxiBookingData = [
-  {
-    id: 1,
-    category: "Passenger-App",
-    image: SignUp,
-    title: "Sign Up",
-    des: "Users need to register or sign up with the app.",
-  },
-  {
-    id: 2,
-    category: "Passenger-App",
-    image: Pickup,
-    title: "Pick up Location",
-    des: "Users need to choose their exact locations on a GPS enabled map.",
-  },
-  {
-    id: 3,
-    category: "Passenger-App",
-    image: Drop,
-    title: "Drop off Location",
-    des: "Users need to choose their preferred drop-off location or destination on the GPS map.",
-  },
-  {
-    id: 4,
-    category: "Passenger-App",
-    image: BookingTypes,
-    title: "Booking Types",
-    des: "Users need to choose one booking type from all the available types of booking.",
-  },
-  {
-    id: 5,
-    category: "Passenger-App",
-    image: Chat,
-    title: "Chat",
-    des: "Users is allowed to chat with the drivers or the admin whenever needed.",
-  },
-  {
-    id: 6,
-    category: "Passenger-App",
-    image: OnlinePayment,
-    title: "Online Payment",
-    des: "Users can pay their fare online by using any of the available payment methods.",
-  },
-  {
-    id: 7,
-    category: "Passenger-App",
-    image: Ratings,
-    title: "Ratings Reviews",
-    des: "Users can give rating to the driver and the app and post reviews on the basis of their feedback.",
-  },
-  {
-    id: 8,
-    category: "Passenger-App",
-    image: Order,
-    title: "Order History",
-    des: "Users can access their order history to have a detailed look at the rides availed by them through the app.",
-  },
-  {
-    id: 9,
-    category: "Passenger-App",
-    image: AvailOffers,
-    title: "Avail Offers",
-    des: "Users can avail various promotional offers and discount coupons that from time to time are sent through notifications.",
-  },
-  {
-    id: 10,
-    category: "Passenger-App",
-    image: Payvia,
-    title: "Pay via wallet money",
-    des: "Users can also pay for their ride by using a digital wallet app.",
-  },
-  {
-    id: 11,
-    category: "On-Demand-Driver-App",
-    image: Flexible,
-    title: "Flexible ride choice",
-    des: "Driver can select his visibility area and can make him available unavailable.",
-  },
-  {
-    id: 12,
-    category: "On-Demand-Driver-App",
-    image: Driverchat,
-    title: "Driver chat option",
-    des: "Driver can spot the nearby drivers on the map and can chat with them.",
-  },
-  {
-    id: 13,
-    category: "On-Demand-Driver-App",
-    image: Finding,
-    title: "Finding the available drivers.",
-    des: "The driver app also helps finding all the available drivers nearby.",
-  },
-  {
-    id: 14,
-    category: "On-Demand-Driver-App",
-    image: approaching,
-    title: "Driver approaching scenarios.",
-    des: "The driver app also shows on the GPS map the various on-road scenarios when the vehicle approaches.",
-  },
-  {
-    id: 15,
-    category: "On-Demand-Driver-App",
-    image: Boarding,
-    title: "Boarding process.",
-    des: "The driver app also guides the driver through the entire boarding process.",
-  },
-  {
-    id: 16,
-    category: "On-Demand-Driver-App",
-    image: cancellation,
-    title: "Ride cancellation scenarios",
-    des: "The driver app also allows cancelling rides with some statutory fines and actions against them.",
-  },
-  {
-    id: 17,
-    category: "On-Demand-Driver-App",
-    image: During,
-    title: "During the ride features",
-    des: "The driver app also offers a gamut of on-the-ride features including GPS based route guidance.",
-  },
-  {
-    id: 18,
-    category: "On-Demand-Driver-App",
-    image: Accepting,
-    title: "Accepting and not accepting rides",
-    des: "After the driver is called by the passenger, based upon the distance, rate, pick-up and drop-off location, he can accept or reject the ride.",
-  },
-  {
-    id: 19,
-    category: "On-Demand-Driver-App",
-    image: passenger,
-    title: "Driver and passenger review and rating system.",
-    des: "The driver app allows the driver to rate the passenger and review the experience while showing the same from passengers. ",
-  },
-  {
-    id: 20,
-    category: "Backend",
-    image: Driverstatus,
-    title: "Driver status and reports",
-    des: "",
-  },
-  {
-    id: 21,
-    category: "Backend",
-    image: Userstatus,
-    title: "User status and reports",
-    des: "",
-  },
-  {
-    id: 22,
-    category: "Backend",
-    image: Trip,
-    title: "Trip status and reports",
-    des: "",
-  },
-  {
-    id: 23,
-    category: "Backend",
-    image: Revenue,
-    title: "Revenue earning status and reports",
-    des: "",
-  },
-  {
-    id: 24,
-    category: "Backend",
-    image: Currentlyactive,
-    title: "Currently active drivers",
-    des: "",
-  },
-  {
-    id: 25,
-    category: "Backend",
-    image: Currently,
-    title: "Currently ongoing trips",
-    des: "",
-  },
-  {
-    id: 26,
-    category: "Backend",
-    image: Complaints,
-    title: "Complaints against driver",
-    des: "",
-  },
-  {
-    id: 27,
-    category: "Backend",
-    image: Disciplinary,
-    title: "Disciplinary actions on drivers and passengers",
-    des: "",
-  },
-  {
-    id: 28,
-    category: "Backend",
-    image: Liveevents,
-    title: "Live feed of events",
-    des: "",
-  },
-  {
-    id: 29,
-    category: "Backend",
-    image: Notificationclients,
-    title: "Notification to all clients",
-    des: "",
-  },
-  {
-    id: 30,
-    category: "Backend",
-    image: Weekly,
-    title: "Weekly/monthly payment invoicing",
-    des: "",
-  },
-  {
-    id: 31,
-    category: "Backend",
-    image: Email,
-    title: "Email system",
-    des: "",
-  },
-];
 const TaxiBooking = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("passenger_app");
+  const [data, setData] = useState([]);
+  const [activeWhyShould, setActiveWhyShould] = useState("smart_commute");
+
+  const TaxiBookingData = [
+    {
+      id: 1,
+      category: "passenger_app",
+      image: SignUp,
+      title: "Sign Up",
+      des: "Users need to register or sign up with the app.",
+    },
+    {
+      id: 2,
+      category: "passenger_app",
+      image: Pickup,
+      title: "Pick up Location",
+      des: "Users need to choose their exact locations on a GPS enabled map.",
+    },
+    {
+      id: 3,
+      category: "passenger_app",
+      image: Drop,
+      title: "Drop off Location",
+      des: "Users need to choose their preferred drop-off location or destination on the GPS map.",
+    },
+    {
+      id: 4,
+      category: "passenger_app",
+      image: BookingTypes,
+      title: "Booking Types",
+      des: "Users need to choose one booking type from all the available types of booking.",
+    },
+    {
+      id: 5,
+      category: "passenger_app",
+      image: Chat,
+      title: "Chat",
+      des: "Users is allowed to chat with the drivers or the admin whenever needed.",
+    },
+    {
+      id: 6,
+      category: "passenger_app",
+      image: OnlinePayment,
+      title: "Online Payment",
+      des: "Users can pay their fare online by using any of the available payment methods.",
+    },
+    {
+      id: 7,
+      category: "passenger_app",
+      image: Ratings,
+      title: "Ratings Reviews",
+      des: "Users can give rating to the driver and the app and post reviews on the basis of their feedback.",
+    },
+    {
+      id: 8,
+      category: "passenger_app",
+      image: Order,
+      title: "Order History",
+      des: "Users can access their order history to have a detailed look at the rides availed by them through the app.",
+    },
+    {
+      id: 9,
+      category: "passenger_app",
+      image: AvailOffers,
+      title: "Avail Offers",
+      des: "Users can avail various promotional offers and discount coupons that from time to time are sent through notifications.",
+    },
+    {
+      id: 10,
+      category: "passenger_app",
+      image: Payvia,
+      title: "Pay via wallet money",
+      des: "Users can also pay for their ride by using a digital wallet app.",
+    },
+    {
+      id: 11,
+      category: "on_demand_driver_app",
+      image: Flexible,
+      title: "Flexible ride choice",
+      des: "Driver can select his visibility area and can make him available unavailable.",
+    },
+    {
+      id: 12,
+      category: "on_demand_driver_app",
+      image: Driverchat,
+      title: "Driver chat option",
+      des: "Driver can spot the nearby drivers on the map and can chat with them.",
+    },
+    {
+      id: 13,
+      category: "on_demand_driver_app",
+      image: Finding,
+      title: "Finding the available drivers.",
+      des: "The driver app also helps finding all the available drivers nearby.",
+    },
+    {
+      id: 14,
+      category: "on_demand_driver_app",
+      image: approaching,
+      title: "Driver approaching scenarios.",
+      des: "The driver app also shows on the GPS map the various on-road scenarios when the vehicle approaches.",
+    },
+    {
+      id: 15,
+      category: "on_demand_driver_app",
+      image: Boarding,
+      title: "Boarding process.",
+      des: "The driver app also guides the driver through the entire boarding process.",
+    },
+    {
+      id: 16,
+      category: "on_demand_driver_app",
+      image: cancellation,
+      title: "Ride cancellation scenarios",
+      des: "The driver app also allows cancelling rides with some statutory fines and actions against them.",
+    },
+    {
+      id: 17,
+      category: "on_demand_driver_app",
+      image: During,
+      title: "During the ride features",
+      des: "The driver app also offers a gamut of on-the-ride features including GPS based route guidance.",
+    },
+    {
+      id: 18,
+      category: "on_demand_driver_app",
+      image: Accepting,
+      title: "Accepting and not accepting rides",
+      des: "After the driver is called by the passenger, based upon the distance, rate, pick-up and drop-off location, he can accept or reject the ride.",
+    },
+    {
+      id: 19,
+      category: "on_demand_driver_app",
+      image: passenger,
+      title: "Driver and passenger review and rating system.",
+      des: "The driver app allows the driver to rate the passenger and review the experience while showing the same from passengers. ",
+    },
+    {
+      id: 20,
+      category: "backend",
+      image: Driverstatus,
+      title: "Driver status and reports",
+      des: "",
+    },
+    {
+      id: 21,
+      category: "backend",
+      image: Userstatus,
+      title: "User status and reports",
+      des: "",
+    },
+    {
+      id: 22,
+      category: "backend",
+      image: Trip,
+      title: "Trip status and reports",
+      des: "",
+    },
+    {
+      id: 23,
+      category: "backend",
+      image: Revenue,
+      title: "Revenue earning status and reports",
+      des: "",
+    },
+    {
+      id: 24,
+      category: "backend",
+      image: Currentlyactive,
+      title: "Currently active drivers",
+      des: "",
+    },
+    {
+      id: 25,
+      category: "backend",
+      image: Currently,
+      title: "Currently ongoing trips",
+      des: "",
+    },
+    {
+      id: 26,
+      category: "backend",
+      image: Complaints,
+      title: "Complaints against driver",
+      des: "",
+    },
+    {
+      id: 27,
+      category: "backend",
+      image: Disciplinary,
+      title: "Disciplinary actions on drivers and passengers",
+      des: "",
+    },
+    {
+      id: 28,
+      category: "backend",
+      image: Liveevents,
+      title: "Live feed of events",
+      des: "",
+    },
+    {
+      id: 29,
+      category: "backend",
+      image: Notificationclients,
+      title: "Notification to all clients",
+      des: "",
+    },
+    {
+      id: 30,
+      category: "backend",
+      image: Weekly,
+      title: "Weekly/monthly payment invoicing",
+      des: "",
+    },
+    {
+      id: 31,
+      category: "backend",
+      image: Email,
+      title: "Email system",
+      des: "",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [item, setItems] = useState(TaxiBookingData);
-
-  const filterItem = (cateItem) => {
+  const filterItem = () => {
     const updateItems = TaxiBookingData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
+
   return (
     <>
       {/* common Banner start */}
@@ -456,7 +466,9 @@ const TaxiBooking = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "passenger_app" && "active"
+                  }`}
                   id="Passenger-App-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Passenger-App"
@@ -464,14 +476,17 @@ const TaxiBooking = () => {
                   role="tab"
                   aria-controls="Passenger-App"
                   aria-selected="true"
-                  onClick={() => filterItem("Passenger-App")}
+                  onClick={() => setActiveSection("passenger_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   Passenger App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "on_demand_driver_app" && "active"
+                  }`}
                   id="On-Demand-Driver-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#On-Demand-Driver"
@@ -479,14 +494,17 @@ const TaxiBooking = () => {
                   role="tab"
                   aria-controls="On-Demand-Driver"
                   aria-selected="false"
-                  onClick={() => filterItem("On-Demand-Driver-App")}
+                  onClick={() => setActiveSection("on_demand_driver_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   On Demand Driver App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "user_app" && "active"
+                  }`}
                   id="Backend-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Backend"
@@ -494,7 +512,8 @@ const TaxiBooking = () => {
                   role="tab"
                   aria-controls="Backend"
                   aria-selected="false"
-                  onClick={() => filterItem("Backend")}
+                  onClick={() => setActiveSection("backend")}
+                  style={{ cursor: "pointer" }}
                 >
                   Backend
                 </button>
@@ -508,7 +527,7 @@ const TaxiBooking = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {item.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, des, title } = elem;
                     return (
                       <div
@@ -631,93 +650,208 @@ const TaxiBooking = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("smart_commute")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "smart_commute" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/why-should/Website-Redesign.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
-                    <p>Highly Scalable</p>
+                    <p>Smart commute</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("increasing_demand")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "increasing_demand" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/why-should/Group-235.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
-                    <p>Fully Customizable</p>
+                    <p>Increasing demand</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() =>
+                    setActiveWhyShould("connected_transport_ecosystem")
+                  }
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "connected_transport_ecosystem" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/why-should/icons8-smart-watch-100-1.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
-                    <p>Time And Cost-Effective</p>
+                    <p>Connected transport ecosystem</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("win_win_business")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "win_win_business" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/why-should/Group-53.png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
-                    <p>Multi-Lingual Support</p>
+                    <p>Win-win business model</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("fuel_efficiency")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "fuel_efficiency" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/why-should/Group-184.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
-                    <p>Multi-Currency Support</p>
+                    <p>Fuel efficiency</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("employment_opportunity")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "employment_opportunity" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/why-should/Mask-Group.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
-                    <p>User-Friendly Design</p>
+                    <p>Employment opportunity</p>
                   </a>
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Highly Scalable</h3>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a team of highly skilled website and mobile
-                    app developers who will offer the best services at the best
-                    rates. We have years of experience in offering the best and
-                    advanced Grocery Store app development services.
-                  </p>
-                  <p className="Title_para">
-                    Along with the best design and advanced feature integration,
-                    we offer a highly scalable grocery store app solution. A
-                    highly scalable grocery store can be useful for you as they
-                    have easy availability, maintenance, better performance and
-                    more. If you are planning of launching the foremost grocery
-                    store app then feel free to reach us and get a free quote.
-                  </p>
+            {activeWhyShould === "smart_commute" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Smart commute</h3>
+                    <p className="Title_para">
+                      On Demand Taxi Booking App Development just make the right
+                      choice for the smart commuters in today’s market by
+                      allowing advanced and hi-tech solutions to book a ride.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyShould === "increasing_demand" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Increasing demand</h3>
+                    <p className="Title_para">
+                      As the demands of such services are skyrocketing because
+                      of the convenience, there is no possible downside in terms
+                      of growth opportunity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "connected_transport_ecosystem" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Connected transport ecosystem
+                    </h3>
+                    <p className="Title_para">
+                      Smart transport ecosystem with connected technologies is
+                      already a reality and many commuters all over the world
+                      are habituated to it.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "win_win_business" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Win-win business model</h3>
+                    <p className="Title_para">
+                      Taxi booking apps offer a complete win-win business model
+                      for every stakeholder including the commuters,
+                      transporters and the business running the app.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "fuel_efficiency" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Fuel efficiency</h3>
+                    <p className="Title_para">
+                      Smart and app connected vehicles are irreversible as they
+                      also play an important role in reducing fuel consumption.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "employment_opportunity" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Employment opportunity</h3>
+                    <p className="Title_para">
+                      Smart taxi booking apps will also create a lot of
+                      employment opportunities for many individuals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

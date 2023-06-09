@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -49,235 +49,244 @@ import Restaurant from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/S
 import Reports from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Super Admin Panel/Reports.svg";
 import { Link } from "react-router-dom";
 
-const FoodData = [
-  {
-    id: 1,
-    category: "Customer-App",
-    image: search,
-    title: "Search Foods Online",
-    des: "The customer app allows browsing and seeing the menu and all food items of various restaurants as per their location and preferred food choices.",
-  },
-  {
-    id: 2,
-    category: "Customer-App",
-    image: Check,
-    title: "Check details",
-    des: "With a food ordering app on their screen customers can easily add their preferred food in cart, provide shipping details and place the order instantly.",
-  },
-  {
-    id: 3,
-    category: "Customer-App",
-    image: Orderonline,
-    title: "Order online",
-    des: "With a food ordering app on their screen customers can easily add their preferred food in the cart, provide shipping details and place the order instantly.",
-  },
-  {
-    id: 4,
-    category: "Customer-App",
-    image: payonline,
-    title: "Pay online",
-    des: "The customer-side of the food ordering app allows customers to make payments through net banking transfer, COD, digital wallets, PayPal, and other methods.",
-  },
-  {
-    id: 5,
-    category: "Customer-App",
-    image: Reviews,
-    title: "Reviews and ratings",
-    des: "Customers can also give their honest feedback through reviews and ratings about the food quality, taste, and several other factors.",
-  },
-  {
-    id: 6,
-    category: "Customer-App",
-    image: Get,
-    title: "Get cashback",
-    des: "Users through these apps can also opt for a variety of offers, discounts, and cashback options.",
-  },
-  {
-    id: 7,
-    category: "Customer-App",
-    image: Avail,
-    title: "Avail offers/view offers",
-    des: "Users can also browse foods based on available offers and promo codes and order foods with the best price and offer.",
-  },
-  {
-    id: 8,
-    category: "Customer-App",
-    image: Checkorder,
-    title: "Check order history",
-    des: "The customer app also allows every customer to see their order history in detail along with the details for each restaurant and food item.",
-  },
-  {
-    id: 9,
-    category: "Customer-App",
-    image: Live,
-    title: "Live tracking",
-    des: "Through a GPS-enabled maps, customers can track their food delivery and can see the Estimated Time of Arrival (ETA).",
-  },
-  {
-    id: 10,
-    category: "Restaurent-App",
-    image: Profile,
-    title: "Profile Management",
-    des: "The food ordering app allows restaurants to create their profile with details like addresses, food images, and a host of other necessary details.",
-  },
-  {
-    id: 11,
-    category: "Restaurent-App",
-    image: Food,
-    title: "Food Category Management",
-    des: "The app also allows the participating restaurants to create a food menu comprising both all categories such as starter, main course, beverages, desserts veg, non-veg, etc.",
-  },
-  {
-    id: 12,
-    category: "Restaurent-App",
-    image: Listing,
-    title: "Food Listing Management",
-    des: "The seller panel allows creating product categories and denominations to help easy search and viewing.",
-  },
-  {
-    id: 13,
-    category: "Restaurent-App",
-    image: Order,
-    title: "Order Management",
-    des: "Restaurants can also enjoy a very robust order management system that allows communication through push notifications, email, and messaging.",
-  },
-  {
-    id: 14,
-    category: "Restaurent-App",
-    image: Driver,
-    title: "Driver Management",
-    des: "Restaurants can also provide the rider details, track the availability of the driver in real-time, and accordingly assign delivery jobs to riders.",
-  },
-  {
-    id: 15,
-    category: "Restaurent-App",
-    image: User,
-    title: "User management",
-    des: "Restaurants through the app can deal with the order history, preferred dishes of individual users and can send customers various offers.",
-  },
-  {
-    id: 16,
-    category: "Restaurent-App",
-    image: Tracking,
-    title: "Driver Tracking",
-    des: "Restaurants after assigning jobs to drivers can actually guide the drivers about the best and time-saving delivery route and do live tracking of driver movement.",
-  },
-  {
-    id: 17,
-    category: "Restaurent-App",
-    image: Reviewmanagement,
-    title: "Review management",
-    des: "As and when customers drop reviews, restaurants can see and respond to them and take measures to improve the quality of service.",
-  },
-  {
-    id: 18,
-    category: "Restaurent-App",
-    image: Loyalty,
-    title: "Loyalty management",
-    des: "Restaurants can also provide offers and promo codes to both new and existing customers and can boost loyalty through discounts and special offers.",
-  },
-  {
-    id: 19,
-    category: "Driver-Tracking",
-    image: ProfileManagement,
-    title: "Profile Management",
-    des: "The driver tracking app will furnish the driver profile with all driver information, get admin approval of the driver, and help to integrate as a driver for the service.",
-  },
-  {
-    id: 20,
-    category: "Driver-Tracking",
-    image: Set,
-    title: "Set availability",
-    des: "Drivers can show their availability on the basis of which restaurants can actually assign delivery jobs to them.",
-  },
-  {
-    id: 21,
-    category: "Driver-Tracking",
-    image: pickup,
-    title: "Get the pickup notification",
-    des: "Driver through the app receives push notifications, email, or SMS whenever a new delivery job is assigned to them. The same notification will allow them to accept or rejecting the order.",
-  },
-  {
-    id: 22,
-    category: "Driver-Tracking",
-    image: Route,
-    title: "Route & Customer Details",
-    des: "Driver through the app becomes informed about the food pickup and drop location, customer details, and GPS based route to reach customer’s place at the earliest.",
-  },
-  {
-    id: 23,
-    category: "Driver-Tracking",
-    image: Track,
-    title: "Track the route",
-    des: "On the way to the customer’s place, the drivers can track the route on a live map and after delivery, the real-time information is sent back to the admin.",
-  },
-  {
-    id: 24,
-    category: "Driver-Tracking",
-    image: Getcustomer,
-    title: "Get a customer feedback",
-    des: "Users through these apps can also opt for a variety of offers, discounts, and cashback options.",
-  },
-  {
-    id: 25,
-    category: "Super-Admin",
-    image: profile,
-    title: "Profile Management",
-    des: "Admin of the app can easily see user listing, number of users, specific user details, order history, payment details, and other important information.",
-  },
-  {
-    id: 26,
-    category: "Super-Admin",
-    image: DriverManagement,
-    title: "Driver Management",
-    des: "The admin panel can check out driver profiles, individual driver information and can drop drivers from the list based on complaints.",
-  },
-  {
-    id: 27,
-    category: "Super-Admin",
-    image: Subscription,
-    title: "Subscription Management",
-    des: "The admin also manages all the restaurant subscriptions on the basis of which the listing of the restaurants is decided.",
-  },
-  {
-    id: 28,
-    category: "Super-Admin",
-    image: Payment,
-    title: "Payment Management",
-    des: "The Admin panel also allows total control over payment management and taking care of restaurant withdrawal requests, customer payment dispute requests, etc.",
-  },
-  {
-    id: 29,
-    category: "Super-Admin",
-    image: Restaurant,
-    title: "Restaurant Management",
-    des: "The admin panel can track the restaurants in the list and various listed food items based on different categories and various details including price.",
-  },
-  {
-    id: 30,
-    category: "Super-Admin",
-    image: Reports,
-    title: "Reports",
-    des: "Admin panel will provide access to different reports corresponding to orders, sales, purchases, and users.",
-  },
-];
-
 const FoodDelivery = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("customer_app");
+  const [data, setData] = useState([]);
+  const [activeWhyShould, setActiveWhyShould] = useState("best_service");
+
+  const FoodData = [
+    {
+      id: 1,
+      category: "customer_app",
+      image: search,
+      title: "Search Foods Online",
+      des: "The customer app allows browsing and seeing the menu and all food items of various restaurants as per their location and preferred food choices.",
+    },
+    {
+      id: 2,
+      category: "customer_app",
+      image: Check,
+      title: "Check details",
+      des: "With a food ordering app on their screen customers can easily add their preferred food in cart, provide shipping details and place the order instantly.",
+    },
+    {
+      id: 3,
+      category: "customer_app",
+      image: Orderonline,
+      title: "Order online",
+      des: "With a food ordering app on their screen customers can easily add their preferred food in the cart, provide shipping details and place the order instantly.",
+    },
+    {
+      id: 4,
+      category: "customer_app",
+      image: payonline,
+      title: "Pay online",
+      des: "The customer-side of the food ordering app allows customers to make payments through net banking transfer, COD, digital wallets, PayPal, and other methods.",
+    },
+    {
+      id: 5,
+      category: "customer_app",
+      image: Reviews,
+      title: "Reviews and ratings",
+      des: "Customers can also give their honest feedback through reviews and ratings about the food quality, taste, and several other factors.",
+    },
+    {
+      id: 6,
+      category: "customer_app",
+      image: Get,
+      title: "Get cashback",
+      des: "Users through these apps can also opt for a variety of offers, discounts, and cashback options.",
+    },
+    {
+      id: 7,
+      category: "customer_app",
+      image: Avail,
+      title: "Avail offers/view offers",
+      des: "Users can also browse foods based on available offers and promo codes and order foods with the best price and offer.",
+    },
+    {
+      id: 8,
+      category: "customer_app",
+      image: Checkorder,
+      title: "Check order history",
+      des: "The customer app also allows every customer to see their order history in detail along with the details for each restaurant and food item.",
+    },
+    {
+      id: 9,
+      category: "customer_app",
+      image: Live,
+      title: "Live tracking",
+      des: "Through a GPS-enabled maps, customers can track their food delivery and can see the Estimated Time of Arrival (ETA).",
+    },
+    {
+      id: 10,
+      category: "restaurent_app",
+      image: Profile,
+      title: "Profile Management",
+      des: "The food ordering app allows restaurants to create their profile with details like addresses, food images, and a host of other necessary details.",
+    },
+    {
+      id: 11,
+      category: "restaurent_app",
+      image: Food,
+      title: "Food Category Management",
+      des: "The app also allows the participating restaurants to create a food menu comprising both all categories such as starter, main course, beverages, desserts veg, non-veg, etc.",
+    },
+    {
+      id: 12,
+      category: "restaurent_app",
+      image: Listing,
+      title: "Food Listing Management",
+      des: "The seller panel allows creating product categories and denominations to help easy search and viewing.",
+    },
+    {
+      id: 13,
+      category: "restaurent_app",
+      image: Order,
+      title: "Order Management",
+      des: "Restaurants can also enjoy a very robust order management system that allows communication through push notifications, email, and messaging.",
+    },
+    {
+      id: 14,
+      category: "restaurent_app",
+      image: Driver,
+      title: "Driver Management",
+      des: "Restaurants can also provide the rider details, track the availability of the driver in real-time, and accordingly assign delivery jobs to riders.",
+    },
+    {
+      id: 15,
+      category: "restaurent_app",
+      image: User,
+      title: "User management",
+      des: "Restaurants through the app can deal with the order history, preferred dishes of individual users and can send customers various offers.",
+    },
+    {
+      id: 16,
+      category: "restaurent_app",
+      image: Tracking,
+      title: "Driver Tracking",
+      des: "Restaurants after assigning jobs to drivers can actually guide the drivers about the best and time-saving delivery route and do live tracking of driver movement.",
+    },
+    {
+      id: 17,
+      category: "restaurent_app",
+      image: Reviewmanagement,
+      title: "Review management",
+      des: "As and when customers drop reviews, restaurants can see and respond to them and take measures to improve the quality of service.",
+    },
+    {
+      id: 18,
+      category: "restaurent_app",
+      image: Loyalty,
+      title: "Loyalty management",
+      des: "Restaurants can also provide offers and promo codes to both new and existing customers and can boost loyalty through discounts and special offers.",
+    },
+    {
+      id: 19,
+      category: "driver_tracking",
+      image: ProfileManagement,
+      title: "Profile Management",
+      des: "The driver tracking app will furnish the driver profile with all driver information, get admin approval of the driver, and help to integrate as a driver for the service.",
+    },
+    {
+      id: 20,
+      category: "driver_tracking",
+      image: Set,
+      title: "Set availability",
+      des: "Drivers can show their availability on the basis of which restaurants can actually assign delivery jobs to them.",
+    },
+    {
+      id: 21,
+      category: "driver_tracking",
+      image: pickup,
+      title: "Get the pickup notification",
+      des: "Driver through the app receives push notifications, email, or SMS whenever a new delivery job is assigned to them. The same notification will allow them to accept or rejecting the order.",
+    },
+    {
+      id: 22,
+      category: "driver_tracking",
+      image: Route,
+      title: "Route & Customer Details",
+      des: "Driver through the app becomes informed about the food pickup and drop location, customer details, and GPS based route to reach customer’s place at the earliest.",
+    },
+    {
+      id: 23,
+      category: "driver_tracking",
+      image: Track,
+      title: "Track the route",
+      des: "On the way to the customer’s place, the drivers can track the route on a live map and after delivery, the real-time information is sent back to the admin.",
+    },
+    {
+      id: 24,
+      category: "driver_tracking",
+      image: Getcustomer,
+      title: "Get a customer feedback",
+      des: "Users through these apps can also opt for a variety of offers, discounts, and cashback options.",
+    },
+    {
+      id: 25,
+      category: "super_admin",
+      image: profile,
+      title: "Profile Management",
+      des: "Admin of the app can easily see user listing, number of users, specific user details, order history, payment details, and other important information.",
+    },
+    {
+      id: 26,
+      category: "super_admin",
+      image: DriverManagement,
+      title: "Driver Management",
+      des: "The admin panel can check out driver profiles, individual driver information and can drop drivers from the list based on complaints.",
+    },
+    {
+      id: 27,
+      category: "super_admin",
+      image: Subscription,
+      title: "Subscription Management",
+      des: "The admin also manages all the restaurant subscriptions on the basis of which the listing of the restaurants is decided.",
+    },
+    {
+      id: 28,
+      category: "super_admin",
+      image: Payment,
+      title: "Payment Management",
+      des: "The Admin panel also allows total control over payment management and taking care of restaurant withdrawal requests, customer payment dispute requests, etc.",
+    },
+    {
+      id: 29,
+      category: "super_admin",
+      image: Restaurant,
+      title: "Restaurant Management",
+      des: "The admin panel can track the restaurants in the list and various listed food items based on different categories and various details including price.",
+    },
+    {
+      id: 30,
+      category: "super_admin",
+      image: Reports,
+      title: "Reports",
+      des: "Admin panel will provide access to different reports corresponding to orders, sales, purchases, and users.",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [items, setItems] = useState(FoodData);
-
-  const filterItem = (cateItem) => {
+  const filterItem = () => {
     const updateItems = FoodData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
 
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
+
   return (
     <>
       {/* common Banner start */}
@@ -451,7 +460,9 @@ const FoodDelivery = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "customer_app" && "active"
+                  }`}
                   id="Customer-App"
                   data-bs-toggle="pill"
                   data-bs-target="#Customer-App"
@@ -459,14 +470,19 @@ const FoodDelivery = () => {
                   role="tab"
                   aria-controls="Customer-App"
                   aria-selected="true"
-                  onClick={() => filterItem("Customer-App")}
+                  onClick={() => {
+                    setActiveSection("customer_app");
+                  }}
+                  style={{ cursor: "pointer" }}
                 >
                   Customer App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "restaurent_app" && "active"
+                  }`}
                   id="Restaurent-App"
                   data-bs-toggle="pill"
                   data-bs-target="#Restaurent-App"
@@ -474,14 +490,17 @@ const FoodDelivery = () => {
                   role="tab"
                   aria-controls="Restaurent-App"
                   aria-selected="false"
-                  onClick={() => filterItem("Restaurent-App")}
+                  onClick={() => setActiveSection("restaurent_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   Restaurant App &amp; Panel
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "driver_tracking" && "active"
+                  }`}
                   id="Driver-Tracking"
                   data-bs-toggle="pill"
                   data-bs-target="#Driver-Tracking"
@@ -489,14 +508,17 @@ const FoodDelivery = () => {
                   role="tab"
                   aria-controls="Driver-Tracking"
                   aria-selected="false"
-                  onClick={() => filterItem("Driver-Tracking")}
+                  onClick={() => setActiveSection("driver_tracking")}
+                  style={{ cursor: "pointer" }}
                 >
                   Driver Tracking App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "super_admin" && "active"
+                  }`}
                   id="Super-Admin"
                   data-bs-toggle="pill"
                   data-bs-target="#Super-Admin"
@@ -504,7 +526,8 @@ const FoodDelivery = () => {
                   role="tab"
                   aria-controls="Super-Admin"
                   aria-selected="false"
-                  onClick={() => filterItem("Super-Admin")}
+                  onClick={() => setActiveSection("super_admin")}
+                  style={{ cursor: "pointer" }}
                 >
                   Super Admin Panel
                 </button>
@@ -518,7 +541,7 @@ const FoodDelivery = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {items.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, des, title } = elem;
                     return (
                       <div
@@ -656,20 +679,40 @@ const FoodDelivery = () => {
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="swiper-container work_swiper-container food_delivery_swiper food_ordering_swiper">
                 {/* swiper slides */}
-                <div className="swiper-wrapper h-auto">
-                  <div
+                <Swiper
+                  modules={[Pagination, Autoplay]}
+                  spaceBetween={20}
+                  slidesPerView={1}
+                  loop={true}
+                  className="swiper-wrapper h-auto"
+                  autoplay={{
+                    delay: 2000,
+                    disableOnInteraction: true,
+                    pauseOnMouseEnter: true,
+                  }}
+                  speed={1000}
+                  direction={"horizontal"}
+                  pagination={{ clickable: true }}
+                >
+                  <SwiperSlide
                     className="swiper-slide d-block"
                     href="#"
                     target="_blank"
                   >
                     <div className="row">
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("best_service")}
+                      >
                         <a
-                          href="#"
-                          className="service__provide_tab service__provide_tab_active"
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "best_service" &&
+                            "service__provide_tab_active"
+                          }`}
                         >
                           <img
-                            src="assets/img/positive_customer.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/positive_customer.png")}
                             alt="positive_customer"
                             className="img-fluid"
                           />
@@ -679,10 +722,19 @@ const FoodDelivery = () => {
                         </a>
                       </div>
 
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("higher_order")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "higher_order" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/high_order.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/high_order.png")}
                             alt="high_order"
                             className="img-fluid"
                           />
@@ -692,10 +744,19 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("fast_quick")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "fast_quick" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/fast_quick.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/fast_quick.png")}
                             alt="fast_quick"
                             className="img-fluid"
                           />
@@ -705,10 +766,19 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("offers_deals")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "offers_deals" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/offer_deal.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/offer_deal.png")}
                             alt="offer-deal"
                             className="img-fluid"
                           />
@@ -717,10 +787,19 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("gps")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "gps" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/gps.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/gps.png")}
                             alt="gps"
                             className="img-fluid"
                           />
@@ -729,10 +808,21 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() =>
+                          setActiveWhyShould("customer_food_with_click")
+                        }
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "customer_food_with_click" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/customer_food.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/customer_food.png")}
                             alt="customer_food"
                             className="img-fluid"
                           />
@@ -742,21 +832,27 @@ const FoodDelivery = () => {
                         </a>
                       </div>
                     </div>
-                  </div>
+                  </SwiperSlide>
 
-                  {/* <div
+                  <SwiperSlide
                     className="swiper-slide d-block"
                     href="#"
                     target="_blank"
                   >
                     <div className="row">
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("sales")}
+                      >
                         <a
-                          href="#"
-                          className="service__provide_tab service__provide_tab_active"
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "sales" &&
+                            "service__provide_tab_active"
+                          }`}
                         >
                           <img
-                            src="assets/img/business.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/business.png")}
                             alt="business"
                             className="img-fluid"
                           />
@@ -765,10 +861,19 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("expanded")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "expanded" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/expand_market.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/expand_market.png")}
                             alt="expand_market"
                             className="img-fluid"
                           />
@@ -779,10 +884,21 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() =>
+                          setActiveWhyShould("enhance_relationship")
+                        }
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "enhance_relationship" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/customer_relation.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/customer_relation.png")}
                             alt="customer_relation"
                             className="img-fluid"
                           />
@@ -793,10 +909,19 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("customer_can_book")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "customer_can_book" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/customer.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/customer.png")}
                             alt="offer-deal"
                             className="img-fluid"
                           />
@@ -805,10 +930,19 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() => setActiveWhyShould("cost_effectivness")}
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "cost_effectivness" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/cost.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/cost.png")}
                             alt="cost"
                             className="img-fluid"
                           />
@@ -818,21 +952,32 @@ const FoodDelivery = () => {
                           </p>
                         </a>
                       </div>
-                      <div className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4">
-                        <a href="#" className="service__provide_tab">
+                      <div
+                        className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
+                        onClick={() =>
+                          setActiveWhyShould("easy_online_payment")
+                        }
+                      >
+                        <a
+                          href="##"
+                          className={`service__provide_tab ${
+                            activeWhyShould === "easy_online_payment" &&
+                            "service__provide_tab_active"
+                          }`}
+                        >
                           <img
-                            src="assets/img/online_payment.png"
+                            src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/why-should/online_payment.png")}
                             alt="online_payment"
                             className="img-fluid"
                           />
                           <p>
-                            customer_food <br /> with a click
+                            Easy online <br /> payment
                           </p>
                         </a>
                       </div>
                     </div>
-                  </div> */}
-                </div>
+                  </SwiperSlide>
+                </Swiper>
                 {/* !swiper slides */}
                 {/* pagination dots */}
                 <div className="swiper-pagination" />
@@ -840,20 +985,180 @@ const FoodDelivery = () => {
               </div>
             </div>
 
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">
-                    Customers can order food online with just one click
-                  </h3>
-                  <p className="Title_para">
-                    Since these apps allow customers to make precise choices of
-                    foods and customize the orders, there is no chance of any
-                    dispute about incorrect orders.
-                  </p>
+            {activeWhyShould === "best_service" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Best services </h3>
+                    <p className="Title_para">
+                      Food ordering apps offering real-time Chatbot messaging,
+                      phone calls, and live tracking services offer unmatched
+                      customer service.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyShould === "higher_order" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Higher order accuracy </h3>
+                    <p className="Title_para">
+                      Since these apps allow customers to make precise choice of
+                      foods and customise the orders, there is no chance of any
+                      dispute about incorrect orders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "fast_quick" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Fast and quick order processing{" "}
+                    </h3>
+                    <p className="Title_para">
+                      Food ordering apps also offer a low-cost option to reach
+                      customers and take on the growth opportunity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "offers_deals" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Offers and deals are the main part{" "}
+                    </h3>
+                    <p className="Title_para">
+                      To add more value to the food ordering experience, these
+                      apps always offer lucrative offers and deals for the
+                      customers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "gps" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      GPS enabled online food delivery system{" "}
+                    </h3>
+                    <p className="Title_para">
+                      Thanks to the inbuilt GPS tracking map, the customers, the
+                      restaurants, and the delivery valets can constantly remain
+                      updated about each other’s locations.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "customer_food_with_click" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Customers can order food online with just one click{" "}
+                    </h3>
+                    <p className="Title_para">
+                      Since these apps allow customers to make precise choices
+                      of foods and customize the orders, there is no chance of
+                      any dispute about incorrect orders.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "sales" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Sales forecasting </h3>
+                    <p className="Title_para">
+                      Food ordering app allows the food joints, restaurants and
+                      other stakeholders in this business to predict and
+                      forecast the sales and business revenue.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "expanded" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Expanded market reach </h3>
+                    <p className="Title_para">
+                      Thanks to food ordering apps restaurants can enjoy wider
+                      market reach way beyond their physical locations and can
+                      garner optimum business presence.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "enhance_relationship" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Enhance Relationship</h3>
+                    <p className="Title_para">
+                      Food ordering apps also allow restaurants and food
+                      businesses to build and nurture customer relationships
+                      through customer-friendly offers, promotions, and
+                      personalization.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "customer_can_book" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Customer can book easily </h3>
+                    <p className="Title_para">
+                      Users are also allowed to keep their chosen products under
+                      the wish-list for future purchases.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "cost_effectivness" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Cost-Effectiveness </h3>
+                    <p className="Title_para">
+                      Food ordering apps also offer a low-cost option to reach
+                      customers and take on the growth opportunity.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "easy_online_payment" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Easy Online Payment</h3>
+                    <p className="Title_para">
+                      Food ordering apps makes it extremely easy for the
+                      customers to make online payment without any worry for
+                      handling cash or other means.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -876,7 +1181,7 @@ const FoodDelivery = () => {
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
                 <Link
-                  to="/contactus"
+                  to="/contact-us"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}

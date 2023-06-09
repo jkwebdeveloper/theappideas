@@ -30,142 +30,152 @@ import PayOnline from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand 
 import TimeTracking from "../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Time-Management-Tracking.svg";
 import { Link } from "react-router-dom";
 
-const SecurityData = [
-  {
-    id: 1,
-    category: "Contractor-App",
-    image: ProfileManagement,
-    title: "Profile Management",
-    des: "The Contractor/ Agency can register, login, create & manage his/her profile.",
-  },
-  {
-    id: 2,
-    category: "Contractor-App",
-    image: Agency,
-    title: "Agency Role",
-    des: "The agency can add multiple contractors under them.",
-  },
-  {
-    id: 3,
-    category: "Contractor-App",
-    image: Chatwith,
-    title: "Chat with the Client",
-    des: "Once the client approves contractors interest then they can chat with each other.",
-  },
-  {
-    id: 4,
-    category: "Contractor-App",
-    image: GetOffers,
-    title: "Get Offers",
-    des: "Contractor gets offers, view offers and decide to accept or reject it.",
-  },
-  {
-    id: 5,
-    category: "Contractor-App",
-    image: TimeManagement,
-    title: "Time Management & Tracking",
-    des: "Contractor login his in time, out time, view and manage timesheet and get approved by the client.",
-  },
-  {
-    id: 6,
-    category: "Contractor-App",
-    image: GetPaid,
-    title: "Get Paid Online",
-    des: "The contractor sends withdraw the request and get paid.",
-  },
-  {
-    id: 7,
-    category: "Contractor-App",
-    image: Rating,
-    title: "Rating & Reviews",
-    des: "After completion of the job, the contractor can drop his/her feedback.",
-  },
-  {
-    id: 8,
-    category: "Contractor-App",
-    image: News,
-    title: "News",
-    des: "Admin post some news and contractors can view that news.",
-  },
-  {
-    id: 9,
-    category: "Contractor-App",
-    image: Community,
-    title: "Community",
-    des: "Contractors, participate in communities. ask questions and give answers and become engaged with each other.",
-  },
-  {
-    id: 10,
-    category: "Client-App",
-    image: ProfileManagement,
-    title: "Profile Management",
-    des: "The client can register, login, create & manage his/her profile.",
-  },
-  {
-    id: 11,
-    category: "Client-App",
-    image: JobPosting,
-    title: "Job Posting",
-    des: "The client can post job/ jobs as per the need, the customer can specify the job type.",
-  },
-  {
-    id: 12,
-    category: "Client-App",
-    image: Contractor,
-    title: "Search for Contractor/Agency",
-    des: "The client can search for a suitable contractor or agency as per the need.",
-  },
-  {
-    id: 13,
-    category: "Client-App",
-    image: LiveChat,
-    title: "Live Chat",
-    des: "The client can view the profile of a contractor and able to chat with the contractor/ agency.",
-  },
-  {
-    id: 14,
-    category: "Client-App",
-    image: Hire,
-    title: "Hire",
-    des: "The client can hire a contractor for a specific period.",
-  },
-  {
-    id: 15,
-    category: "Client-App",
-    image: PayOnline,
-    title: "Pay Online",
-    des: "The client can pay online via stripe.",
-  },
-  {
-    id: 16,
-    category: "Client-App",
-    image: TimeTracking,
-    title: "Time Management & Tracking",
-    des: "Contractor in time, out time, the timesheet will be approved by the customer.",
-  },
-  {
-    id: 17,
-    category: "Client-App",
-    image: Rating,
-    title: "Rating & Reviews",
-    des: "After completion of the job, the client can drop his feedback.",
-  },
-];
 const SecurityApp = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("contractor_app");
+  const [data, setData] = useState([]);
+  const [activeWhyShould, setActiveWhyShould] = useState("advanced_technology");
+
+  const SecurityData = [
+    {
+      id: 1,
+      category: "contractor_app",
+      image: ProfileManagement,
+      title: "Profile Management",
+      des: "The Contractor/ Agency can register, login, create & manage his/her profile.",
+    },
+    {
+      id: 2,
+      category: "contractor_app",
+      image: Agency,
+      title: "Agency Role",
+      des: "The agency can add multiple contractors under them.",
+    },
+    {
+      id: 3,
+      category: "contractor_app",
+      image: Chatwith,
+      title: "Chat with the Client",
+      des: "Once the client approves contractors interest then they can chat with each other.",
+    },
+    {
+      id: 4,
+      category: "contractor_app",
+      image: GetOffers,
+      title: "Get Offers",
+      des: "Contractor gets offers, view offers and decide to accept or reject it.",
+    },
+    {
+      id: 5,
+      category: "contractor_app",
+      image: TimeManagement,
+      title: "Time Management & Tracking",
+      des: "Contractor login his in time, out time, view and manage timesheet and get approved by the client.",
+    },
+    {
+      id: 6,
+      category: "contractor_app",
+      image: GetPaid,
+      title: "Get Paid Online",
+      des: "The contractor sends withdraw the request and get paid.",
+    },
+    {
+      id: 7,
+      category: "contractor_app",
+      image: Rating,
+      title: "Rating & Reviews",
+      des: "After completion of the job, the contractor can drop his/her feedback.",
+    },
+    {
+      id: 8,
+      category: "contractor_app",
+      image: News,
+      title: "News",
+      des: "Admin post some news and contractors can view that news.",
+    },
+    {
+      id: 9,
+      category: "contractor_app",
+      image: Community,
+      title: "Community",
+      des: "Contractors, participate in communities. ask questions and give answers and become engaged with each other.",
+    },
+    {
+      id: 10,
+      category: "client_app",
+      image: ProfileManagement,
+      title: "Profile Management",
+      des: "The client can register, login, create & manage his/her profile.",
+    },
+    {
+      id: 11,
+      category: "client_app",
+      image: JobPosting,
+      title: "Job Posting",
+      des: "The client can post job/ jobs as per the need, the customer can specify the job type.",
+    },
+    {
+      id: 12,
+      category: "client_app",
+      image: Contractor,
+      title: "Search for Contractor/Agency",
+      des: "The client can search for a suitable contractor or agency as per the need.",
+    },
+    {
+      id: 13,
+      category: "client_app",
+      image: LiveChat,
+      title: "Live Chat",
+      des: "The client can view the profile of a contractor and able to chat with the contractor/ agency.",
+    },
+    {
+      id: 14,
+      category: "client_app",
+      image: Hire,
+      title: "Hire",
+      des: "The client can hire a contractor for a specific period.",
+    },
+    {
+      id: 15,
+      category: "client_app",
+      image: PayOnline,
+      title: "Pay Online",
+      des: "The client can pay online via stripe.",
+    },
+    {
+      id: 16,
+      category: "client_app",
+      image: TimeTracking,
+      title: "Time Management & Tracking",
+      des: "Contractor in time, out time, the timesheet will be approved by the customer.",
+    },
+    {
+      id: 17,
+      category: "client_app",
+      image: Rating,
+      title: "Rating & Reviews",
+      des: "After completion of the job, the client can drop his feedback.",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [item, setItems] = useState(SecurityData);
-
-  const filterItem = (cateItem) => {
+  const filterItem = () => {
     const updateItems = SecurityData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
+
   return (
     <>
       {/* common Banner start */}
@@ -338,7 +348,9 @@ const SecurityApp = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "contractor_app" && "active"
+                  }`}
                   id="Contractor-App-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Contractor-App"
@@ -346,14 +358,17 @@ const SecurityApp = () => {
                   role="tab"
                   aria-controls="Contractor-App"
                   aria-selected="true"
-                  onClick={() => filterItem("Contractor-App")}
+                  onClick={() => setActiveSection("contractor_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   Contractor App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "client_app" && "active"
+                  }`}
                   id="Client-App-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Client-App"
@@ -361,7 +376,8 @@ const SecurityApp = () => {
                   role="tab"
                   aria-controls="Client-App"
                   aria-selected="false"
-                  onClick={() => filterItem("Client-App")}
+                  onClick={() => setActiveSection("client_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   Client App
                 </button>
@@ -375,7 +391,7 @@ const SecurityApp = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {item.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, des, title } = elem;
                     return (
                       <div
@@ -484,93 +500,203 @@ const SecurityApp = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("advanced_technology")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "advanced_technology" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Advanced-Technology-1.png")}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
-                    <p>Highly Scalable</p>
+                    <p>Advanced technology</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("custom_security")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "custom_security" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Custom-Security-Solution-1.png")}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
-                    <p>Fully Customizable</p>
+                    <p>Custom security solution</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("context_aware")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "context_aware" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Context-Aware-Security-Solution-1.png")}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
-                    <p>Time And Cost-Effective</p>
+                    <p>Context-aware security solution</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("seamless")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "seamless" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Seamless-Integration-1.png")}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
-                    <p>Multi-Lingual Support</p>
+                    <p>Seamless integration</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("scalable")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "scalable" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Scalable-Security-1.png")}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
-                    <p>Multi-Currency Support</p>
+                    <p>Scalable security</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("continuous_support")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "continuous_support" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/why-should/Continuous-Support-1.png")}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
-                    <p>User-Friendly Design</p>
+                    <p>Continuous support</p>
                   </a>
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Highly Scalable</h3>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a team of highly skilled website and mobile
-                    app developers who will offer the best services at the best
-                    rates. We have years of experience in offering the best and
-                    advanced Grocery Store app development services.
-                  </p>
-                  <p className="Title_para">
-                    Along with the best design and advanced feature integration,
-                    we offer a highly scalable grocery store app solution. A
-                    highly scalable grocery store can be useful for you as they
-                    have easy availability, maintenance, better performance and
-                    more. If you are planning of launching the foremost grocery
-                    store app then feel free to reach us and get a free quote.
-                  </p>
+            {activeWhyShould === "advanced_technology" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Advanced technology</h3>
+                    <p className="Title_para">
+                      Unlike the ready-to-use security solutions, on-demand
+                      security apps are built with cutting edge technologies.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyShould === "custom_security" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Custom security solution</h3>
+                    <p className="Title_para">
+                      These apps incorporate custom security solutions specific
+                      to the needs of the clients.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyShould === "context_aware" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Context-aware security solution
+                    </h3>
+                    <p className="Title_para">
+                      On-demand security apps are built keeping the context and
+                      use cases of the clients in mind.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "seamless" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Seamless integration</h3>
+                    <p className="Title_para">
+                      Thanks to such an app in real-time any security issue or
+                      challenge can be known and accordingly on-road traffic can
+                      be reached for help.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "scalable" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Scalable security</h3>
+                    <p className="Title_para">
+                      On-demand security apps, unlike readymade security
+                      solutions, remain scalable to increasing uses and traffic.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "continuous_support" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Continuous support</h3>
+                    <p className="Title_para">
+                      On-demand security apps continuous and consistent support
+                      from the developers.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

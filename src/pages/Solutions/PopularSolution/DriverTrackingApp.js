@@ -35,167 +35,177 @@ import receive from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver T
 import Historyy from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/History of trips.svg";
 import { Link } from "react-router-dom";
 
-const DriverTrackData = [
-  {
-    id: 1,
-    category: "Passenger-Driver",
-    image: Social,
-    title: "Social Logins",
-  },
-  {
-    id: 2,
-    category: "Passenger-Driver",
-    image: ProfileManagement,
-    title: "login type (leading Passenger or Travelling Passenger)",
-  },
-  {
-    id: 3,
-    category: "Passenger-Driver",
-    image: ProfileManagement,
-    title: "Profile Management",
-  },
-  {
-    id: 4,
-    category: "Passenger-Driver",
-    image: Current,
-    title: "Current Booking Details",
-  },
-  {
-    id: 5,
-    category: "Passenger-Driver",
-    image: Live,
-    title: "Live Driver Tracking",
-  },
-  {
-    id: 6,
-    category: "Passenger-Driver",
-    image: LiveChat,
-    title: "Live Chat",
-  },
-  {
-    id: 7,
-    category: "Passenger-Driver",
-    image: Call,
-    title: "Call with driver",
-  },
-  {
-    id: 8,
-    category: "Passenger-Driver",
-    image: Ratings,
-    title: "Ratings & Reviews",
-  },
-  {
-    id: 9,
-    category: "Passenger-Driver",
-    image: Give,
-    title: "Give a tip to the driver",
-  },
-  {
-    id: 10,
-    category: "Passenger-Driver",
-    image: Pay,
-    title: "Pay online",
-  },
-  {
-    id: 11,
-    category: "Passenger-Driver",
-    image: Requestt,
-    title: "Request for instant quote",
-  },
-  {
-    id: 12,
-    category: "Passenger-Driver",
-    image: card,
-    title: "card management",
-  },
-  {
-    id: 13,
-    category: "Driver-Tracking",
-    image: Register,
-    title: "Login/ Register as CH4U Driver or Contractor Driver",
-  },
-  {
-    id: 14,
-    category: "Driver-Tracking",
-    image: ProfileManagement,
-    title: "Profile Management",
-  },
-  {
-    id: 15,
-    category: "Driver-Tracking",
-    image: First,
-    title: "First use checkup list",
-  },
-  {
-    id: 16,
-    category: "Driver-Tracking",
-    image: Booking,
-    title: "Booking Details",
-  },
-  {
-    id: 17,
-    category: "Driver-Tracking",
-    image: Route,
-    title: "Route information",
-  },
-  {
-    id: 18,
-    category: "Driver-Tracking",
-    image: Start,
-    title: "“Start & End Journey",
-  },
-  {
-    id: 19,
-    category: "Driver-Tracking",
-    image: LiveChat,
-    title: "Live Chat",
-  },
-  {
-    id: 20,
-    category: "Driver-Tracking",
-    image: Callwith,
-    title: "Call with Passenger",
-  },
-  {
-    id: 21,
-    category: "Driver-Tracking",
-    image: Panic,
-    title: "Panic Button",
-  },
-  {
-    id: 22,
-    category: "Driver-Tracking",
-    image: Ratings,
-    title: "Ratings & Reviews",
-  },
-  {
-    id: 23,
-    category: "Driver-Tracking",
-    image: receive,
-    title: "receive Tip",
-  },
-  {
-    id: 24,
-    category: "Driver-Tracking",
-    image: Historyy,
-    title: "History of trips",
-  },
-];
-
 const DriverTrackingApp = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("passenger_driver");
+  const [data, setData] = useState([]);
+  const [activeWhyShould, setActiveWhyShould] = useState("driver_productivity");
+
+  const DriverTrackData = [
+    {
+      id: 1,
+      category: "passenger_driver",
+      image: Social,
+      title: "Social Logins",
+    },
+    {
+      id: 2,
+      category: "passenger_driver",
+      image: ProfileManagement,
+      title: "login type (leading Passenger or Travelling Passenger)",
+    },
+    {
+      id: 3,
+      category: "passenger_driver",
+      image: ProfileManagement,
+      title: "Profile Management",
+    },
+    {
+      id: 4,
+      category: "passenger_driver",
+      image: Current,
+      title: "Current Booking Details",
+    },
+    {
+      id: 5,
+      category: "passenger_driver",
+      image: Live,
+      title: "Live Driver Tracking",
+    },
+    {
+      id: 6,
+      category: "passenger_driver",
+      image: LiveChat,
+      title: "Live Chat",
+    },
+    {
+      id: 7,
+      category: "passenger_driver",
+      image: Call,
+      title: "Call with driver",
+    },
+    {
+      id: 8,
+      category: "passenger_driver",
+      image: Ratings,
+      title: "Ratings & Reviews",
+    },
+    {
+      id: 9,
+      category: "passenger_driver",
+      image: Give,
+      title: "Give a tip to the driver",
+    },
+    {
+      id: 10,
+      category: "passenger_driver",
+      image: Pay,
+      title: "Pay online",
+    },
+    {
+      id: 11,
+      category: "passenger_driver",
+      image: Requestt,
+      title: "Request for instant quote",
+    },
+    {
+      id: 12,
+      category: "passenger_driver",
+      image: card,
+      title: "card management",
+    },
+    {
+      id: 13,
+      category: "driver_tracking",
+      image: Register,
+      title: "Login/ Register as CH4U Driver or Contractor Driver",
+    },
+    {
+      id: 14,
+      category: "driver_tracking",
+      image: ProfileManagement,
+      title: "Profile Management",
+    },
+    {
+      id: 15,
+      category: "driver_tracking",
+      image: First,
+      title: "First use checkup list",
+    },
+    {
+      id: 16,
+      category: "driver_tracking",
+      image: Booking,
+      title: "Booking Details",
+    },
+    {
+      id: 17,
+      category: "driver_tracking",
+      image: Route,
+      title: "Route information",
+    },
+    {
+      id: 18,
+      category: "driver_tracking",
+      image: Start,
+      title: "“Start & End Journey",
+    },
+    {
+      id: 19,
+      category: "driver_tracking",
+      image: LiveChat,
+      title: "Live Chat",
+    },
+    {
+      id: 20,
+      category: "driver_tracking",
+      image: Callwith,
+      title: "Call with Passenger",
+    },
+    {
+      id: 21,
+      category: "driver_tracking",
+      image: Panic,
+      title: "Panic Button",
+    },
+    {
+      id: 22,
+      category: "driver_tracking",
+      image: Ratings,
+      title: "Ratings & Reviews",
+    },
+    {
+      id: 23,
+      category: "driver_tracking",
+      image: receive,
+      title: "receive Tip",
+    },
+    {
+      id: 24,
+      category: "driver_tracking",
+      image: Historyy,
+      title: "History of trips",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [items, setItems] = useState(DriverTrackData);
-  const filterItem = (cateItem) => {
+  const filterItem = () => {
     const updateItems = DriverTrackData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  useEffect(() => {
+    AOS.init();
+  }, []);
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
+
   return (
     <>
       {/* common Banner start */}
@@ -368,7 +378,9 @@ const DriverTrackingApp = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "passenger_driver" && "active"
+                  }`}
                   id="Passenger-Driver-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Passenger-Driver"
@@ -376,14 +388,17 @@ const DriverTrackingApp = () => {
                   role="tab"
                   aria-controls="Passenger-Driver"
                   aria-selected="true"
-                  onClick={() => filterItem("Passenger-Driver")}
+                  onClick={() => setActiveSection("passenger_driver")}
+                  style={{ cursor: "pointer" }}
                 >
                   Passenger Driver Tracking App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "driver_tracking" && "active"
+                  }`}
                   id="Driver-Tracking-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Driver-Tracking"
@@ -391,7 +406,8 @@ const DriverTrackingApp = () => {
                   role="tab"
                   aria-controls="Driver-Tracking"
                   aria-selected="false"
-                  onClick={() => filterItem("Driver-Tracking")}
+                  onClick={() => setActiveSection("driver_tracking")}
+                  style={{ cursor: "pointer" }}
                 >
                   Driver Tracking App
                 </button>
@@ -405,7 +421,7 @@ const DriverTrackingApp = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {items.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, title } = elem;
                     return (
                       <div
@@ -511,10 +527,16 @@ const DriverTrackingApp = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("driver_productivity")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "driver_productivity" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Driver-Productivity1.png")}
@@ -524,8 +546,17 @@ const DriverTrackingApp = () => {
                     <p>Driver Productivity</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("destination_faster")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "destination_faster" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Reaching-Destination-Faster1.png")}
                       alt="Android-Enterprise-App-Development"
@@ -534,8 +565,17 @@ const DriverTrackingApp = () => {
                     <p>Destination Faster</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("fuel_efficiency")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "fuel_efficiency" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Fuel-Efficiency1.png")}
                       alt="Android-Wearable-App-Development"
@@ -544,8 +584,17 @@ const DriverTrackingApp = () => {
                     <p>Fuel Efficiency</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("on_road")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "on_road" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/On-Road-Security1.png")}
                       alt="Android-Game-App-Development"
@@ -554,8 +603,17 @@ const DriverTrackingApp = () => {
                     <p>On-Road Security</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("better_vehicle")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "better_vehicle" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Better-Vehicle-Maintenance1.png")}
                       alt="Android-App-Redesign"
@@ -564,8 +622,17 @@ const DriverTrackingApp = () => {
                     <p>Better Vehicle Maintenance</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyShould("real_time")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyShould === "real_time" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Real-Time-Communication1.png")}
                       alt="Android-Support-And-Maintenance"
@@ -576,28 +643,91 @@ const DriverTrackingApp = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Anywhere-anytime access</h3>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have a team of highly skilled website and mobile
-                    app developers who will offer the best services at the best
-                    rates. We have years of experience in offering the best and
-                    advanced Grocery Store app development services.
-                  </p>
-                  <p className="Title_para">
-                    Along with the best design and advanced feature integration,
-                    we offer a highly scalable grocery store app solution. A
-                    highly scalable grocery store can be useful for you as they
-                    have easy availability, maintenance, better performance and
-                    more. If you are planning of launching the foremost grocery
-                    store app then feel free to reach us and get a free quote.
-                  </p>
+            {activeWhyShould === "driver_productivity" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Driver productivity</h3>
+                    <p className="Title_para">
+                      The driver tracking app will help to boost the
+                      productivity of drivers by keeping in constant touch.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyShould === "destination_faster" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Reaching destination faster
+                    </h3>
+                    <p className="Title_para">
+                      With the tracking app, real-time suggestions and advice
+                      can be delivered to help him reach the destination faster
+                      and safer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "fuel_efficiency" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Fuel efficiency</h3>
+                    <p className="Title_para">
+                      Real-time tracking of the vehicle will help to prevent
+                      misuses and unnecessary errands to boost fuel efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "on_road" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">On-road security</h3>
+                    <p className="Title_para">
+                      Thanks to such an app in real-time any security issue or
+                      challenge can be known and accordingly on-road traffic can
+                      be reached for help.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "better_vehicle" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Better vehicle maintenance
+                    </h3>
+                    <p className="Title_para">
+                      Real-time tracking of the vehicles will also help better
+                      maintenance and look-after of the vehicle.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyShould === "real_time" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Real-time communication</h3>
+                    <p className="Title_para">
+                      A driver tracking app will also help a business keeping in
+                      constant communication with the driver allowing them to
+                      give any instruction.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
           </div>
         </div>
       </section>

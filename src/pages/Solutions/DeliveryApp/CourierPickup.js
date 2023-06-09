@@ -41,186 +41,194 @@ import ReportsManagement from "../../../assets/images/SOLUTIONS/Delivery App/Cou
 import Contentmanagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/content-management.svg";
 import { Link } from "react-router-dom";
 
-const CourierData = [
-  {
-    id: 1,
-    category: "User-App",
-    image: search,
-    title: "Profile Management",
-    des: "Create/Maintain profile for every courier boy.",
-  },
-  {
-    id: 2,
-    category: "User-App",
-    image: Check,
-    title: "Create/Maintain clients list",
-    des: "Where operator enter the details of the client like name, Email id, Phone number.",
-  },
-  {
-    id: 3,
-    category: "User-App",
-    image: Orderonline,
-    title: "Create/Manage Sectors",
-    des: "based on the zip codes.",
-  },
-  {
-    id: 4,
-    category: "User-App",
-    image: payonline,
-    title: "Create/ Update orders",
-    des: "Operator will create the customer order by filling up name, email id, phone number, zip code, address, parcel type, approx. weight.",
-  },
-  {
-    id: 5,
-    category: "User-App",
-    image: Reviews,
-    title: "Assign the Sectors to courier boys",
-    des: "We need to create the zip code table where operator will enter the zip code.",
-  },
-  {
-    id: 6,
-    category: "User-App",
-    image: Get,
-    title: "Reports Management",
-    des: "View the list of the assigned jobs on a particular day for the courier boy.",
-  },
-  {
-    id: 7,
-    category: "Courier-Boy-App",
-    image: Login,
-    title: "Login",
-    des: "The courier boy needs to create login credentials and log in for use.",
-  },
-  {
-    id: 8,
-    category: "Courier-Boy-App",
-    image: Forgot,
-    title: "Forgot Password",
-    des: "In case of forgetting password the courier boy can follow the instructions to create a new password.",
-  },
-  {
-    id: 9,
-    category: "Courier-Boy-App",
-    image: Change,
-    title: "Change Password",
-    des: "Courier boy can change the password at any point of time.",
-  },
-  {
-    id: 10,
-    category: "Courier-Boy-App",
-    image: Seethe,
-    title: "See the assigned jobs list",
-    des: "Courier boy can see the list of all jobs assigned for him.",
-  },
-  {
-    id: 11,
-    category: "Courier-Boy-App",
-    image: Getthe,
-    title: "Get the details",
-    des: "Courier boy can access details about each and every job assigned to him.",
-  },
-  {
-    id: 12,
-    category: "Courier-Boy-App",
-    image: Timeline,
-    title: "Timeline",
-    des: "20 Working Days",
-  },
-  {
-    id: 13,
-    category: "Courier-Boy-App",
-    image: parcel,
-    title: "Picked up the parcel",
-    des: "They need to click on a Button Called “Parcel Picked up”.",
-  },
-  {
-    id: 14,
-    category: "Courier-Boy-App",
-    image: person,
-    title: "If person was not available",
-    des: "Courier boy click on Create a note button and generate a note and submit it.",
-  },
-  {
-    id: 15,
-    category: "Courier-Boy-App",
-    image: courier,
-    title: "courier boy see the job list.",
-    des: "",
-  },
-  {
-    id: 16,
-    category: "Courier-Boy-App",
-    image: clicked,
-    title:
-      "once they clicked on it, it will open the pickup and company details",
-    des: "",
-  },
-  {
-    id: 17,
-    category: "Courier-Boy-App",
-    image: They,
-    title: "They click on start journey button, live tracking will be started",
-    des: "",
-  },
-  {
-    id: 18,
-    category: "Admin-panel",
-    image: UserManagement,
-    title: "User Management",
-    des: "",
-  },
-  {
-    id: 19,
-    category: "Admin-panel",
-    image: CourierBoyManagement,
-    title: "Courier Boy Management",
-    des: "",
-  },
-  {
-    id: 20,
-    category: "Admin-panel",
-    image: CourierManagement,
-    title: "Courier Management",
-    des: "",
-  },
-  {
-    id: 21,
-    category: "Admin-panel",
-    image: PaymentManagement,
-    title: "Payment Management",
-    des: "",
-  },
-  {
-    id: 22,
-    category: "Admin-panel",
-    image: ReportsManagement,
-    title: "Reports Management",
-    des: "",
-  },
-  {
-    id: 23,
-    category: "Admin-panel",
-    image: Contentmanagement,
-    title: "Content management",
-    des: "",
-  },
-];
-
 const CourierPickup = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
+  const [activeSection, setActiveSection] = useState("user_app");
+  const [data, setData] = useState([]);
+
+  const CourierData = [
+    {
+      id: 1,
+      category: "user_app",
+      image: search,
+      title: "Profile Management",
+      des: "Create/Maintain profile for every courier boy.",
+    },
+    {
+      id: 2,
+      category: "user_app",
+      image: Check,
+      title: "Create/Maintain clients list",
+      des: "Where operator enter the details of the client like name, Email id, Phone number.",
+    },
+    {
+      id: 3,
+      category: "user_app",
+      image: Orderonline,
+      title: "Create/Manage Sectors",
+      des: "based on the zip codes.",
+    },
+    {
+      id: 4,
+      category: "user_app",
+      image: payonline,
+      title: "Create/ Update orders",
+      des: "Operator will create the customer order by filling up name, email id, phone number, zip code, address, parcel type, approx. weight.",
+    },
+    {
+      id: 5,
+      category: "user_app",
+      image: Reviews,
+      title: "Assign the Sectors to courier boys",
+      des: "We need to create the zip code table where operator will enter the zip code.",
+    },
+    {
+      id: 6,
+      category: "user_app",
+      image: Get,
+      title: "Reports Management",
+      des: "View the list of the assigned jobs on a particular day for the courier boy.",
+    },
+    {
+      id: 7,
+      category: "courier_boy_app",
+      image: Login,
+      title: "Login",
+      des: "The courier boy needs to create login credentials and log in for use.",
+    },
+    {
+      id: 8,
+      category: "courier_boy_app",
+      image: Forgot,
+      title: "Forgot Password",
+      des: "In case of forgetting password the courier boy can follow the instructions to create a new password.",
+    },
+    {
+      id: 9,
+      category: "courier_boy_app",
+      image: Change,
+      title: "Change Password",
+      des: "Courier boy can change the password at any point of time.",
+    },
+    {
+      id: 10,
+      category: "courier_boy_app",
+      image: Seethe,
+      title: "See the assigned jobs list",
+      des: "Courier boy can see the list of all jobs assigned for him.",
+    },
+    {
+      id: 11,
+      category: "courier_boy_app",
+      image: Getthe,
+      title: "Get the details",
+      des: "Courier boy can access details about each and every job assigned to him.",
+    },
+    {
+      id: 12,
+      category: "courier_boy_app",
+      image: Timeline,
+      title: "Timeline",
+      des: "20 Working Days",
+    },
+    {
+      id: 13,
+      category: "courier_boy_app",
+      image: parcel,
+      title: "Picked up the parcel",
+      des: "They need to click on a Button Called “Parcel Picked up”.",
+    },
+    {
+      id: 14,
+      category: "courier_boy_app",
+      image: person,
+      title: "If person was not available",
+      des: "Courier boy click on Create a note button and generate a note and submit it.",
+    },
+    {
+      id: 15,
+      category: "courier_boy_app",
+      image: courier,
+      title: "courier boy see the job list.",
+      des: "",
+    },
+    {
+      id: 16,
+      category: "courier_boy_app",
+      image: clicked,
+      title:
+        "once they clicked on it, it will open the pickup and company details",
+      des: "",
+    },
+    {
+      id: 17,
+      category: "courier_boy_app",
+      image: They,
+      title:
+        "They click on start journey button, live tracking will be started",
+      des: "",
+    },
+    {
+      id: 18,
+      category: "admin_panel",
+      image: UserManagement,
+      title: "User Management",
+      des: "",
+    },
+    {
+      id: 19,
+      category: "admin_panel",
+      image: CourierBoyManagement,
+      title: "Courier Boy Management",
+      des: "",
+    },
+    {
+      id: 20,
+      category: "admin_panel",
+      image: CourierManagement,
+      title: "Courier Management",
+      des: "",
+    },
+    {
+      id: 21,
+      category: "admin_panel",
+      image: PaymentManagement,
+      title: "Payment Management",
+      des: "",
+    },
+    {
+      id: 22,
+      category: "admin_panel",
+      image: ReportsManagement,
+      title: "Reports Management",
+      des: "",
+    },
+    {
+      id: 23,
+      category: "admin_panel",
+      image: Contentmanagement,
+      title: "Content management",
+      des: "",
+    },
+  ];
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
 
-  const [item, setItems] = useState(CourierData);
+  useEffect(() => {
+    AOS.init();
+  }, []);
 
   const filterItem = (cateItem) => {
     const updateItems = CourierData.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.category === activeSection;
     });
-    setItems(updateItems);
+    setData(updateItems);
   };
+
+  // run when activesection changes
+  useEffect(() => {
+    filterItem();
+  }, [activeSection]);
   return (
     <>
       {/* common Banner start */}
@@ -393,7 +401,9 @@ const CourierPickup = () => {
             <ul className="nav nav-pills mb-3" id="pills-tab" role="tablist">
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${
+                    activeSection === "user_app" && "active"
+                  }`}
                   id="User-App"
                   data-bs-toggle="pill"
                   data-bs-target="#Customer-App"
@@ -401,14 +411,17 @@ const CourierPickup = () => {
                   role="tab"
                   aria-controls="User-App"
                   aria-selected="true"
-                  onClick={() => filterItem("User-App")}
+                  onClick={() => setActiveSection("user_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   User App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "courier_boy_app" && "active"
+                  }`}
                   id="Courier-Boy-App"
                   data-bs-toggle="pill"
                   data-bs-target="#Courier-Boy-App"
@@ -416,14 +429,17 @@ const CourierPickup = () => {
                   role="tab"
                   aria-controls="Courier-Boy-App"
                   aria-selected="false"
-                  onClick={() => filterItem("Courier-Boy-App")}
+                  onClick={() => setActiveSection("courier_boy_app")}
+                  style={{ cursor: "pointer" }}
                 >
                   Courier Boy App
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activeSection === "admin_panel" && "active"
+                  }`}
                   id="Admin-panel-Tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Admin-panel"
@@ -431,7 +447,8 @@ const CourierPickup = () => {
                   role="tab"
                   aria-controls="Admin-panel"
                   aria-selected="false"
-                  onClick={() => filterItem("Admin-panel")}
+                  onClick={() => setActiveSection("admin_panel")}
+                  style={{ cursor: "pointer" }}
                 >
                   Admin Panel
                 </button>
@@ -445,7 +462,7 @@ const CourierPickup = () => {
                 aria-labelledby="Customer-App-Tab"
               >
                 <div className="row">
-                  {item.map((elem) => {
+                  {data.map((elem) => {
                     const { id, image, des, title } = elem;
                     return (
                       <div
@@ -588,7 +605,7 @@ const CourierPickup = () => {
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
                 <Link
-                  to="/contactus"
+                  to="/contact-us"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
