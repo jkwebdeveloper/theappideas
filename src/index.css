@@ -1383,13 +1383,14 @@ section {
 }
 
 .footer__box ul li:hover {
-  color: #f6c000;
+  color: #800080;
+  font-weight: 600;
 }
 
 .footer__box ul li:hover .right__arrow {
   opacity: 1;
   padding-right: 10px;
-  color: #d6aa0b;
+  color: #800080;
   transition: all 350ms ease-in-out 0s;
 }
 

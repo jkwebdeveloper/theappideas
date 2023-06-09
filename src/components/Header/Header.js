@@ -4,8 +4,7 @@ import { AiOutlineClose } from "react-icons/ai";
 import { AiOutlineMenu } from "react-icons/ai";
 // import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
-import { a } from "react-router-dom";
-import GetAQuoteModal from "../GetAQuoteModal";
+import { RiArrowRightSLine } from "react-icons/ri";
 
 const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState("");
@@ -46,6 +45,7 @@ const Header = ({ setOpenModal }) => {
             <label htmlFor="close-btn" className="btn close-btn">
               <AiOutlineClose />
             </label>
+            {/* company */}
             <li>
               <a href="/" className="desktop-item">
                 Company <MdKeyboardArrowDown />
@@ -59,7 +59,7 @@ const Header = ({ setOpenModal }) => {
                 <div className="content content_sub">
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/aboutus">
+                      <a href="/about-us">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -191,6 +191,7 @@ const Header = ({ setOpenModal }) => {
                 </div>
               </div>
             </li>
+            {/* services */}
             <li>
               <a href="#">
                 <div className="desktop-item">
@@ -226,6 +227,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Android App Development
                         </li>
                       </a>
@@ -235,6 +239,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           IPhone App Development
                         </li>
                       </a>
@@ -244,6 +251,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           IPad App Development
                         </li>
                       </a>
@@ -253,6 +263,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           React Native Development
                         </li>
                       </a>
@@ -263,6 +276,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           IOT App Development
                         </li>
                       </a>
@@ -292,6 +308,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           SEO
                         </li>
                       </a>
@@ -301,15 +320,21 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Social Media Marketing
                         </li>
                       </a>
-                      <a href="/aso-company">
+                      <a href="/aso">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           ASO
                         </li>
                       </a>
@@ -338,6 +363,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Shopify Development
                         </li>
                       </a>
@@ -347,6 +375,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Magento Development
                         </li>
                       </a>
@@ -356,6 +387,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Joomla Development{" "}
                         </li>
                       </a>
@@ -365,6 +399,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Drupal Development{" "}
                         </li>
                       </a>
@@ -393,6 +430,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           WordPress Development
                         </li>
                       </a>
@@ -402,6 +442,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           PHP Development
                         </li>
                       </a>
@@ -411,6 +454,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Angular Development
                         </li>
                       </a>
@@ -420,6 +466,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Webflow Development
                         </li>
                       </a>
@@ -453,6 +502,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Asp.Net Development
                         </li>
                       </a>
@@ -462,6 +514,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           DotNetNuke Development
                         </li>
                       </a>
@@ -490,6 +545,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Graphics Design
                         </li>
                       </a>
@@ -499,6 +557,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Mobile App Design
                         </li>
                       </a>
@@ -522,6 +583,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Startup Services
                         </li>
                       </a>
@@ -538,7 +602,7 @@ const Header = ({ setOpenModal }) => {
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
                         <a
-                          href="/contactus"
+                          href="/contact-us"
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
@@ -551,6 +615,7 @@ const Header = ({ setOpenModal }) => {
                 </div>
               </div>
             </li>
+            {/* hire us */}
             <li>
               <a
                 href="/hire-us"
@@ -584,6 +649,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire IOS Developer
                         </li>
                       </a>
@@ -593,6 +661,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Android Developer
                         </li>
                       </a>
@@ -602,6 +673,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire React Native Developer
                         </li>
                       </a>
@@ -611,6 +685,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Flutter Developer
                         </li>
                       </a>
@@ -632,6 +709,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Laravel Developer
                         </li>
                       </a>
@@ -641,6 +721,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire WordPress Developer
                         </li>
                       </a>
@@ -650,6 +733,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Node.js Developer
                         </li>
                       </a>
@@ -659,6 +745,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire CodeIgniter Developer
                         </li>
                       </a>
@@ -668,6 +757,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire PHP Developers
                         </li>
                       </a>
@@ -677,6 +769,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Python Developer
                         </li>
                       </a>
@@ -686,6 +781,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire React JS Developer
                         </li>
                       </a>
@@ -695,6 +793,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Angular 2 Developer
                         </li>
                       </a>
@@ -716,6 +817,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Shopify Development
                         </li>
                       </a>
@@ -725,6 +829,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Hire Magento 2 Development
                         </li>
                       </a>
@@ -769,6 +876,7 @@ const Header = ({ setOpenModal }) => {
                 </div>
               </div>
             </li>
+            {/* solutions */}
             <li>
               <a href="/solutions">
                 <div className="desktop-item">
@@ -799,6 +907,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           {/* <IoMdArrowDropright /> */}
                           Food Delivery App Development
                         </li>
@@ -809,6 +920,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Courier Pickup Management Solution
                         </li>
                       </a>
@@ -818,6 +932,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Grocery App Development
                         </li>
                       </a>{" "}
@@ -839,6 +956,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Taxi Booking App Development
                         </li>
                       </a>
@@ -848,6 +968,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Doctor Hiring App Solution
                         </li>
                       </a>
@@ -857,6 +980,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Security App Solution
                         </li>
                       </a>
@@ -878,6 +1004,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           eCommerce App Development
                         </li>
                       </a>
@@ -887,6 +1016,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           E-learning App Development
                         </li>
                       </a>
@@ -896,6 +1028,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Dating App Development
                         </li>
                       </a>
@@ -905,6 +1040,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Driver Tracking App Development
                         </li>
                       </a>
@@ -914,6 +1052,9 @@ const Header = ({ setOpenModal }) => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
                         >
+                          <i className="right__arrow">
+                            <RiArrowRightSLine />
+                          </i>
                           Salon Service App
                         </li>
                       </a>
@@ -946,6 +1087,7 @@ const Header = ({ setOpenModal }) => {
                 </div>
               </div>
             </li>
+            {/* portoflio */}
             <li>
               <a
                 href="/portfolio"
@@ -953,20 +1095,27 @@ const Header = ({ setOpenModal }) => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
+                <i className="right__arrow">
+                  <RiArrowRightSLine />
+                </i>
                 Portfolio
               </a>
             </li>
+            {/* contact us */}
             <li>
               <a
-                href="/contactus"
+                href="/contact-us"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
+                <i className="right__arrow">
+                  <RiArrowRightSLine />
+                </i>
                 Contact Us
               </a>
             </li>
-
+            {/* blog */}
             <li>
               <a
                 href="/blog"
@@ -977,6 +1126,7 @@ const Header = ({ setOpenModal }) => {
                 Blog
               </a>
             </li>
+            {/* get a quote */}
             <li
               onClick={() => setOpenModal(true)}
               style={{ cursor: "pointer" }}

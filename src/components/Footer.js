@@ -86,7 +86,7 @@ const Footer = () => {
                     Home
                   </li>
                 </Link>
-                <Link to="/aboutus">
+                <Link to="/about-us">
                   <li
                     onClick={() => {
                       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -122,7 +122,7 @@ const Footer = () => {
                     Blog
                   </li>
                 </Link>
-                <Link to="/contactus">
+                <Link to="/contact-us">
                   <li
                     onClick={() => {
                       window.scrollTo({ top: 0, behavior: "smooth" });
@@ -321,7 +321,10 @@ const Footer = () => {
               </p>
               <ul className="ms-2">
                 <li>
-                  <a>
+                  <a
+                    href="mailto:contact@theappideas.com"
+                    style={{ color: "black" }}
+                  >
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <GoMail style={{ color: "#d6aa0b" }} />
                     </i>
@@ -329,7 +332,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a href="tel:+918866564279" style={{ color: "black" }}>
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <BsFillTelephoneFill style={{ color: "#d6aa0b" }} />
                     </i>
@@ -337,7 +340,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a
+                    href="https://api.whatsapp.com/send?phone=918866564279"
+                    target="_blank"
+                    style={{ color: "black" }}
+                  >
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <BsWhatsapp style={{ color: "#d6aa0b" }} />
                     </i>
@@ -345,7 +352,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a>
+                  <a
+                    href="skype:chirag4141"
+                    target="_blank"
+                    style={{ color: "black" }}
+                  >
                     <i style={{ marginRight: "10px", marginLeft: "25px" }}>
                       <BsSkype style={{ color: "#d6aa0b" }} />
                     </i>

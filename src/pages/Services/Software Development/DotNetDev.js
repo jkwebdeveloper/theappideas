@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 
 import CustomWordPress from "../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-development-company.webp";
@@ -9,6 +9,11 @@ import FAQ from "../../../components/FAQ";
 import { Link } from "react-router-dom";
 
 const DotNetDev = () => {
+  const [activeWeProvide, setActiveWeProvide] = useState("website_development");
+  const [activeWhyChoose, setActiveWhyChoose] = useState(
+    "experience_expertise"
+  );
+
   return (
     <>
       {/* Banner Section Start */}
@@ -188,10 +193,16 @@ const DotNetDev = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("website_development")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "website_development" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png")}
@@ -201,8 +212,17 @@ const DotNetDev = () => {
                     <p>Web Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("module_development")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "module_development" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png")}
                       alt="Group-235"
@@ -211,8 +231,17 @@ const DotNetDev = () => {
                     <p>Module Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("app_maintanance")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "app_maintanance" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/3-10.png")}
                       alt="icons8-smart-watch-100-1"
@@ -223,8 +252,17 @@ const DotNetDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("dnn_migration")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "dnn_migration" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/4-10.png")}
                       alt="Group-53"
@@ -236,8 +274,17 @@ const DotNetDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("dnn_upgrades")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "dnn_upgrades" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/5-10.png")}
                       alt="Group-184"
@@ -249,8 +296,17 @@ const DotNetDev = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("dnn_web_skin_design")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "dnn_web_skin_design" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/6-10.png")}
                       alt="Mask-Group"
@@ -261,32 +317,155 @@ const DotNetDev = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">
-                    Enterprise Website Development
-                  </h3>
-                  <p className="Title_para">
-                    The demand for online solutions is increasing as per the
-                    increasing number of online users. Not only for the users
-                    but many of the large scale businesses are implementing the
-                    software or Enterprise solutions for managing things
-                    properly and keep the overall records of the data for future
-                    reference.
-                  </p>
-                  <p className="Title_para">
-                    Here we are at The App Ideas, which is one of the leading
-                    software development services. We have a team of highly
-                    skilled Asp.net developers who are experts in offering
-                    successful services at the best rates. We help you build
-                    robust and powerful enterprise websites and web apps with
-                    the Asp.net framework equipped with rich features and
-                    unmatched performance.
-                  </p>
+            {activeWeProvide === "website_development" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Web Development </h3>
+                    <p className="Title_para">
+                      This era is highly popular as the digital era, many
+                      businesses, startups and entrepreneurs are now making high
+                      investments in software development services. People are
+                      mostly more inclined towards digital platforms because
+                      they provide easy accessibility to the services.
+                    </p>
+                    <p className="Title_para">
+                      Here we are at The App Ideas, which is one of the foremost
+                      web and app development company. We have a team of highly
+                      skilled web developers who will offer the best services.
+                      We utilize the DotNetNuke framework for building
+                      sophisticated websites rich with the standout interface
+                      and user experience.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWeProvide === "module_development" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Module Development</h3>
+                    <p className="Title_para">
+                      Digitalization is one of the most important parts of
+                      business growth and success. Many of the businesses and
+                      industry are now launching DotNetNuke software solutions
+                      for making the growth of the business. It is very
+                      important for business owners to work on module
+                      development.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a team of highly skilled
+                      DotNetNuke developers who are experienced in offering the
+                      best software development services. We use the DotNetNuke
+                      framework for developing ready to use modules for use in
+                      websites, third-party apps, blogs and eCommerce websites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "app_maintanance" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">App Maintenance</h3>
+                    <p className="Title_para">
+                      Along with the development of the services, maintenance
+                      also plays a vital role in the success of the business.
+                      Along with the designing and development , maintenance is
+                      also provided by some of the software developers. If you
+                      are looking for the maintenance services of your software
+                      solution then feel free to reach us.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular software
+                      development company. We have a team of highly skilled
+                      DotNetNuke developers who are proficient in providing the
+                      best services. We offer robust DotNetNuke maintenance
+                      services and value-driven optimisation to all web apps
+                      built by us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "dnn_migration" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">DNN Migration</h3>
+                    <p className="Title_para">
+                      Software Services are now getting popular day by day. The
+                      software offers the easy manageability of the features as
+                      well as the data for the business owners. If you are
+                      running a business then it is very important for you to
+                      have a software solution that can help you to easily
+                      manage everything and grow your business.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas which is one of the leading web
+                      and app development company. We have a team of highly
+                      skilled and experienced DotNetNuke software developers who
+                      will offer the best services. Whether you have an existing
+                      website built on other platforms and want to shift to the
+                      DotNetNuke content management system or want to build a
+                      fresh site on this platform, we can undertake any project.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "dnn_upgrades" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">DNN Upgrades</h3>
+                    <p className="Title_para">
+                      The popularity of mobile app, web app and websites is very
+                      high in the market. People are more inclined towards the
+                      online platforms because it provides the convenience of
+                      accessing the services very easily. If you own an offline
+                      or online business then it is important for you to have a
+                      software solution.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the foremost software development
+                      company.DotNetNuke is one of the most popular software
+                      development technology. We help you upgrades and update
+                      your websites with recurrent as well as frequent value
+                      additions and feature integration when required.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "dnn_web_skin_design" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">DNN Web Skin Design</h3>
+                    <p className="Title_para">
+                      In this present time, many entrepreneurs, startups owners
+                      and business owners are now making investments in online
+                      platform development. A software service can help the
+                      business owner to easily manage the data as well as
+                      increase the profit rate of the business by providing the
+                      best platforms.
+                    </p>
+                    <p className="Title_para">
+                      Here at The App Ideas, which is one of the leading web and
+                      app development company. Along with the development of the
+                      online platform, we also offer software development
+                      services. We also design DotNetNuke skins for any website
+                      and ensure meeting the aesthetic as well as the functional
+                      standard for the website.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
           </div>
         </div>
       </section>
@@ -300,10 +479,16 @@ const DotNetDev = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "experience_expertise" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
@@ -313,8 +498,17 @@ const DotNetDev = () => {
                     <p>Expertise and Experience</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("solid_dnn_portfolio")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "solid_dnn_portfolio" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
                       alt="robust-portfolio"
@@ -323,8 +517,17 @@ const DotNetDev = () => {
                     <p>Solid DNN Portfolio</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("agile")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "agile" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Time-Bound-Development"
@@ -333,8 +536,17 @@ const DotNetDev = () => {
                     <p>Agile Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("after_deploy")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "after_deploy" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png")}
                       alt="Superb-User-Experience"
@@ -343,8 +555,17 @@ const DotNetDev = () => {
                     <p>After Deploy Support</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("timely_project")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "timely_project" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="Agile-Development"
@@ -353,8 +574,17 @@ const DotNetDev = () => {
                     <p>Timely Project Completion</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="/" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "competitive_pricing" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png")}
                       alt="competitive-pricing"
@@ -365,30 +595,156 @@ const DotNetDev = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Expertise and Experience.</h3>
-                  <p className="Title_para">
-                    We are from The App Ideas which is one of the foremost web
-                    and app development company. We have a group of highly
-                    skilled developers who are experienced in providing the best
-                    web development services. Many business owners and
-                    entrepreneurs are converting their businesses into web
-                    platforms.
-                  </p>
-                  <p className="Title_para">
-                    The main reason behind choosing The App Ideas is that we
-                    have years of experience in deploying the best business
-                    solution which can drive your business to the peak of the
-                    success. We initially understand the requirements then start
-                    the development. We flaunt a highly experienced team of
-                    WordPress developers with proven expertise in building the
-                    most sophisticated WordPress websites.
-                  </p>
+            {activeWhyChoose === "experience_expertise" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Expertise and Experience.</h3>
+                    <p className="Title_para">
+                      If you own a business then this is high time for you to
+                      convert your business into an online business. An online
+                      software solution can help you to reach out to a high
+                      audience or target a high number of users. Before hiring
+                      it is very important for you to hire experienced and
+                      Expertise of DotNetNuke developers.
+                    </p>
+                    <p className="Title_para">
+                      Here we are at The App Ideas, which is one of the leading
+                      web and app development company. We have a team of highly
+                      skilled software developers who are experts in offering
+                      the best IT services for all kinds of business categories.
+                      We boast of more than a decade of experience and proven
+                      expertise in building websites and web apps using this
+                      framework.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyChoose === "solid_dnn_portfolio" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Solid DNN Portfolio</h3>
+                    <p className="Title_para">
+                      Many entrepreneurs and business owners are now making
+                      investments in software development services for the
+                      growth of their businesses. If you are also shifting
+                      towards the software solution then this is the best time
+                      to take a step further. Before hiring any software
+                      development services, it is very important for you to
+                      check their portfolio.
+                    </p>
+                    <p className="Title_para">
+                      We are at The App Ideas, which is one of the leading
+                      software development company. We have an expert team of
+                      DotNetNuke developers who have years of experience in
+                      providing the best solution. We boast a solid portfolio of
+                      several successful websites and web apps built using the
+                      DotNetNuke content management platform.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "agile" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Agile Development</h3>
+                    <p className="Title_para">
+                      Before hiring any software development company, it is very
+                      important for you to research the market and then make the
+                      choice. A software solution can help you to easily manage
+                      the data, save the data and use it for future reference.
+                    </p>
+                    <p className="Title_para">
+                      We are at The App Ideas, which is one of the most popular
+                      web and app development company. We offer the best IT
+                      services like mobile app development, web app development,
+                      website development and software development company. We
+                      follow an agile development methodology to ensure faster
+                      development while taking care of performance and quality
+                      through rigorous and concurrent testing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "timely_project" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Timely Project Completion</h3>
+                    <p className="Title_para">
+                      The demand for a Software solution is increasing in the
+                      market. People are now more comfortable with the online
+                      solution rather do it by themselves. This is probably the
+                      main reason behind the business owners, who are making
+                      investments in software development services.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas, which is one of the leading web
+                      and app development company. We have years of experience
+                      on offering the best software solution at the best rates
+                      and on-time delivery. We ensure completing each and every
+                      development project within a stipulated time frame by
+                      strictly following the project deadlines and milestones.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "competitive_pricing" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Competitive pricing</h3>
+                    <p className="Title_para">
+                      Are you planning for launching a software solution for
+                      your business? If yes then, this is probably the best time
+                      for you to make an investment in the software development
+                      platforms. Presently, having software development services
+                      can be very beneficial for your online services.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is the foremost software development
+                      service. We have a team of highly skilled DotNetNuke
+                      developers, who will offer the best services. We offer
+                      highly competitive pricing to ensure the affordability of
+                      the development services for small and medium enterprises.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "after_deploy" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Great Post-Development support
+                    </h3>
+                    <p className="Title_para">
+                      The demand or the popularity of the software solution is
+                      increasing with time. If you are running a business then
+                      it is very important for you to have a software solution
+                      that can help you to easily manage the overall data easily
+                      from any place and at any time easily.
+                    </p>
+                    <p className="Title_para">
+                      Here at The App Ideas, which is one of the leading
+                      software development company. Along with the development,
+                      designing, consulting services, we also offer support and
+                      maintenance to our clients. We provide throughout
+                      post-development support through timely maintenance,
+                      upgrades and updates for all apps and websites built by
+                      us.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

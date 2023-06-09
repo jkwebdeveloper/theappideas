@@ -101,7 +101,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
 
         {/* Company Link */}
-        <Route path="/aboutus" element={<ABoutUs />} />
+        <Route path="/about-us" element={<ABoutUs />} />
         <Route path="/life-at-tai" element={<LifeTAI />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/testimonial" element={<Testimonial />} />
@@ -114,102 +114,102 @@ const App = () => {
           element={<MobileAppDevelopment />}
         />
         <Route
-          path="/Digital-Marketing-Agency"
+          path="/digital-Marketing-Agency"
           element={<DigitalMarketing />}
         />
         <Route path="/web-development" element={<WebDev />} />
         <Route
-          path="/E-commerce-website-Development"
+          path="/e-commerce-website-Development"
           element={<ECommerceWeb />}
         />
 
-        <Route path="/Software-Development" element={<SoftwareDev />} />
-        <Route path="/Designing-Services" element={<Designing />} />
-        <Route path="/Startup-Services" element={<StartupServices />} />
+        <Route path="/software-Development" element={<SoftwareDev />} />
+        <Route path="/designing-Services" element={<Designing />} />
+        <Route path="/startup-Services" element={<StartupServices />} />
         <Route
-          path="/Android-App-Development"
+          path="/android-App-Development"
           element={<AndroidAppDevelopment />}
         />
         <Route
-          path="/IPhone-App-Development"
+          path="/iPhone-App-Development"
           element={<IphoneAppDevelopment />}
         />
         <Route path="/ipad-app-development" element={<IpadAppDevelopment />} />
         <Route
-          path="/React-Native-Development"
+          path="/react-Native-Development"
           element={<ReactNativeDevelopment />}
         />
-        <Route path="/IOT-App-Development" element={<IOTAppDevelopment />} />
+        <Route path="/iot-app-development" element={<IOTAppDevelopment />} />
         <Route path="/seo" element={<SEO />} />
-        <Route path="/Social-Media-Marketing" element={<SocialMedia />} />
-        <Route path="/ASO-company" element={<ASO />} />
-        <Route path="/Guest-Blogging" element={<GuestBlogging />} />
-        <Route path="/Shopify-Development" element={<ShopifyDev />} />
-        <Route path="/Magento-Development" element={<MagentoDev />} />
-        <Route path="/Joomla-Development" element={<Joomla />} />
-        <Route path="/Drupal-Development" element={<DrupalDev />} />
-        <Route path="/WordPress-Development" element={<WordPressDeveloper />} />
-        <Route path="/PHP-Development" element={<PHPDev />} />
-        <Route path="/Angular-Development" element={<Angular />} />
-        <Route path="/Webflow-Development" element={<WebFlowDev />} />
+        <Route path="/social-media-marketing" element={<SocialMedia />} />
+        <Route path="/aso" element={<ASO />} />
+        <Route path="/guest-blogging" element={<GuestBlogging />} />
+        <Route path="/shopify-development" element={<ShopifyDev />} />
+        <Route path="/magento-development" element={<MagentoDev />} />
+        <Route path="/joomla-development" element={<Joomla />} />
+        <Route path="/drupal-development" element={<DrupalDev />} />
+        <Route path="/wordPress-wevelopment" element={<WordPressDeveloper />} />
+        <Route path="/php-development" element={<PHPDev />} />
+        <Route path="/angular-development" element={<Angular />} />
+        <Route path="/webflow-development" element={<WebFlowDev />} />
         <Route path="/asp-net-development" element={<AspNet />} />
-        <Route path="/DotNetNuke-Development" element={<DotNetDev />} />
-        <Route path="/Graphics-Design" element={<GraphicsDesign />} />
-        <Route path="/Mobile-App-Design" element={<MobileAppDesign />} />
+        <Route path="/dotNetNuke-development" element={<DotNetDev />} />
+        <Route path="/graphics-design" element={<GraphicsDesign />} />
+        <Route path="/mobile-app-design" element={<MobileAppDesign />} />
 
         {/* Hire Us Link */}
         <Route path="/hire-us" element={<HireUs />} />
-        <Route path="/Hire-IOS-Developer" element={<HireIOSDev />} />
+        <Route path="/hire-ios-developer" element={<HireIOSDev />} />
         <Route path="/hire-android-developer" element={<HireAndroidDev />} />
         <Route
           path="/hire-react-native-developer"
           element={<HireReactNativeDev />}
         />
         <Route path="/hire-flutter-developer" element={<HireFlutterDev />} />
-        <Route path="/Hire-Laravel-Developer" element={<HireLaravelDev />} />
+        <Route path="/hire-laravel-developer" element={<HireLaravelDev />} />
         <Route
-          path="/Hire-WordPress-Developer"
+          path="/hire-wordpress-developer"
           element={<HireWordPressDev />}
         />
-        <Route path="/Hire-nodejs-developer" element={<HireNodeDev />} />
+        <Route path="/hire-nodejs-developer" element={<HireNodeDev />} />
         <Route
-          path="/hire-CodeIgniter-developer"
+          path="/hire-codeIgniter-developer"
           element={<HireCodeIgniter />}
         />
         <Route path="/hire-php-developer" element={<HirePHPDev />} />
-        <Route path="/Hire-python-developer" element={<HirePythonDev />} />
+        <Route path="/hire-python-developer" element={<HirePythonDev />} />
         <Route path="/hire-reactjs-developer" element={<HireReactJsDev />} />
-        <Route path="/hire-Angular-developer" element={<HireAngular />} />
-        <Route path="/Hire-Shopify-Development" element={<HireShopify />} />
-        <Route path="/Hire-Magento-Development" element={<HireMagento />} />
+        <Route path="/hire-angular-developer" element={<HireAngular />} />
+        <Route path="/hire-shopify-development" element={<HireShopify />} />
+        <Route path="/hire-magento-development" element={<HireMagento />} />
 
         {/* Solution Link */}
         <Route path="/solutions" element={<Solutions />} />
         <Route path="/mlm-website" element={<MLMWebsiteAndApp />} />
         <Route
-          path="/Food-Delivery-App-Development"
+          path="/food-delivery-app-development"
           element={<FoodDelivery />}
         />
         <Route
-          path="/Courier-Pickup-Management-Solution"
+          path="/courier-pickup-management-solution"
           element={<CourierPickup />}
         />
-        <Route path="/Taxi-Booking-App-Development" element={<TaxiBooking />} />
+        <Route path="/taxi-booking-app-development" element={<TaxiBooking />} />
         <Route path="/grocery-app-developer" element={<GroceryApp />} />
-        <Route path="/Doctor-Hiring-App-Solution" element={<DoctorHiring />} />
-        <Route path="/Security-App-Solution" element={<SecurityApp />} />
-        <Route path="/Salon-Service-App" element={<SalonApp />} />
-        <Route path="/E-learning-App-Development" element={<ElearningApp />} />
-        <Route path="/Dating-App-Development" element={<DatingApp />} />
+        <Route path="/doctor-hiring-app-solution" element={<DoctorHiring />} />
+        <Route path="/security-app-solution" element={<SecurityApp />} />
+        <Route path="/salon-service-app" element={<SalonApp />} />
+        <Route path="/e-learning-app-development" element={<ElearningApp />} />
+        <Route path="/dating-app-development" element={<DatingApp />} />
         <Route path="/e-commerce-app-development" element={<EcommerceApp />} />
         <Route
-          path="/Driver-Tracking-App-Development"
+          path="/driver-tracking-app-development"
           element={<DriverTrackingApp />}
         />
         {/* PortFolio Link */}
         <Route path="/portfolio" element={<PortFolio />} />
         {/* Contact us Link */}
-        <Route path="/contactUs" element={<ContactUs />} />
+        <Route path="/contact-us" element={<ContactUs />} />
         {/* Blog Link */}
         <Route path="/blog" element={<Blog />} />
 
@@ -231,7 +231,7 @@ const App = () => {
           element={<MobileAppBarcelona />}
         />
         <Route
-          path="/mobile-app-development-Sydney"
+          path="/mobile-app-development-sydney"
           element={<MobileAppSydney />}
         />
         <Route
@@ -243,23 +243,23 @@ const App = () => {
           element={<MobileAppBrisbane />}
         />
         <Route
-          path="/mobile-app-development-Bristol"
+          path="/mobile-app-development-bristol"
           element={<MobileAppBristol />}
         />
         <Route
-          path="/mobile-app-development-Liverpool"
+          path="/mobile-app-development-liverpool"
           element={<MobileAppLiverpool />}
         />
         <Route
-          path="/mobile-app-development-Manchester"
+          path="/mobile-app-development-manchester"
           element={<MobileAppManchester />}
         />
         <Route
-          path="/mobile-app-development-Melbourne"
+          path="/mobile-app-development-melbourne"
           element={<MobileAppMelbourne />}
         />
         <Route
-          path="/mobile-app-development-London"
+          path="/mobile-app-development-london"
           element={<MobileAppLondon />}
         />
       </Routes>

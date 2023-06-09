@@ -54,7 +54,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Trusha_Soliya.webp")}
+                        src={require("../../assets/images/COMPANY/our_team/trusha.webp")}
                         className="img-fluid"
                         alt="trusha"
                       />

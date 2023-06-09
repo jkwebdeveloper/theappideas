@@ -69,9 +69,6 @@ const Data = [
   },
 ];
 const PortFolio = () => {
-  useEffect(() => {
-    AOS.init();
-  }, []);
   const [items, setItems] = useState(Data);
 
   const filterItem = (cateItem) => {
@@ -82,12 +79,16 @@ const PortFolio = () => {
     setItems(updateItems);
   };
 
+  useEffect(() => {
+    AOS.init();
+  }, []);
   return (
     <>
       <section
         className="blog__section"
         style={{ paddingTop: "120px", paddingBottom: "40px" }}
       >
+        {/* categories */}
         <div className="container">
           <h2 className="blog__title">Our Portfolio</h2>
           <p className="blog__para">

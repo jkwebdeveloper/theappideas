@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import Work from "../../../components/Workdone/Work";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
@@ -30,6 +30,9 @@ import Marketplace from "../../../assets/images/SERVICES/Digital Marketing Agenc
 import Beauty from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Beauty Industry.svg";
 
 const DigitalMarketing = () => {
+  const [activeService, setActiveService] = useState("seo");
+  const [activeServe, setActiveServe] = useState("real_estate");
+
   return (
     <>
       {/* Banner Section Start */}
@@ -212,10 +215,15 @@ const DigitalMarketing = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("seo")}
+                >
                   <a
-                    href="#"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "seo" && "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={SEO}
@@ -228,8 +236,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("keyword")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "keyword" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Keyword}
                       alt="Keyword-And-Market-Research"
@@ -241,8 +258,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("onsite_technical")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "onsite_technical" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Onsite}
                       alt="Onsite-Technical SEO"
@@ -254,8 +280,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("off_page")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "off_page" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img src={Off} alt="Off-Page-SEO" className="img-fluid" />
                     <p>
                       Off-Page <br />
@@ -263,8 +298,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("guest_blogging")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "guest_blogging" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Guest}
                       alt="Guest-Blogging"
@@ -276,8 +320,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("social_marketing")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "social_marketing" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Social}
                       alt="Social-Media-Marketing"
@@ -289,8 +342,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("pay_per_click")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "pay_per_click" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Pay}
                       alt="Pay-Per-Click-PPC"
@@ -302,8 +364,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("app_store")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "app_store" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={AppStore}
                       alt="App-Store-Optimization"
@@ -315,8 +386,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveService("content_marketing")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === "content_marketing" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Content}
                       alt="Content-Marketing"
@@ -330,34 +410,293 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">SEO Consultancy</h3>
-                  <p className="Title_para">
-                    Nowadays, the popularity of the online platform is reaching
-                    its peak because this provides an easy way of reaching
-                    people and increasing the profit rates. SEO(Search Engine
-                    Optimization) can help you to rank on the search engine and
-                    catch the eye of the customers. Along with the development
-                    of the software development solutions, it is also important
-                    to focus on the SEO of the websites which will help you to
-                    reach a high number of users.
-                  </p>
-                  <p className="Title_para">
-                    Are you looking for the Best SEO Consultancy Services?
-                  </p>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading Software development
-                    company and Digital marketing services. We offer expert SEO
-                    consultancy to business websites and help them to chase
-                    achievable and realistic search ranking goals and guide them
-                    in creating a content and SEO strategy for short and long
-                    term results.
-                  </p>
+            {activeService === "seo" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">SEO Consultancy</h3>
+                    <p className="Title_para">
+                      Nowadays, the popularity of the online platform is
+                      reaching its peak because this provides an easy way of
+                      reaching people and increasing the profit rates.
+                      SEO(Search Engine Optimization) can help you to rank on
+                      the search engine and catch the eye of the customers.
+                      Along with the development of the software development
+                      solutions, it is also important to focus on the SEO of the
+                      websites which will help you to reach a high number of
+                      users.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best SEO Consultancy Services?
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading Software development
+                      company and Digital marketing services. We offer expert
+                      SEO consultancy to business websites and help them to
+                      chase achievable and realistic search ranking goals and
+                      guide them in creating a content and SEO strategy for
+                      short and long term results.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeService === "keyword" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Keyword and Market Research
+                    </h3>
+                    <p className="Title_para">
+                      Digital Marketing services is one of the most important
+                      factors for making any kind of business successful.
+                      Digital marketing involves SEO as well as Keyword and
+                      Market research. Keyword and Market research can help you
+                      to understand the users and their search patterns. Many of
+                      the services are now integrating these services into their
+                      online platforms.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best Keyword and Market Research
+                      Services?
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas, which is one of the leading web
+                      and app development company. We boast of a robust and
+                      expertise-driven keyword and market research apparatus and
+                      professionals who can help you focus on the most relevant
+                      and useful low-competition keywords for the best SEO
+                      results. For more details on keyword and market research,
+                      feel free to reach us and discuss all your requirements
+                      After this we will offer the best rates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeService === "onsite_technical" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Onsite and Technical SEO</h3>
+                    <p className="Title_para">
+                      A software solution like websites, mobile apps and web
+                      apps popularity is increasing as per the increasing number
+                      of the users. The users are liking the online platforms
+                      because it is time-saving as well as cost-effective. In
+                      this digital era, businesses are now launching their
+                      online platforms to increase sales of the business. If you
+                      are planning to launch any software solution then this is
+                      probably the best time to do that.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best Onsite and Technical SEO
+                      Services?
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular software
+                      development company. We have a team of highly skilled
+                      digital marketing who will offer the best Onsite and
+                      Technical SEO services. We undertake on-site and technical
+                      SEO responsibilities for websites and help them boost site
+                      performance, loading speed, design elements and various
+                      aspects that help search engine crawlers to find content
+                      easily.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeService === "off_page" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Off-page SEO</h3>
+                    <p className="Title_para">
+                      Nowadays, Software solutions like mobile app, web app and
+                      website development services. If we talk about digital
+                      marketing services then Off-page SEO is also getting
+                      highly demanding in this present time. Off-Page SEO mainly
+                      works outside of your website to improve search engine
+                      rankings. This mainly refers to working on the article,
+                      blog, podcast, video, content, business listings,
+                      classified listing and more.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best Off-Page SEO Services?
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the highly popular web and app
+                      development company. We have a team of highly skilled team
+                      of expert people who are proficient in offering digital
+                      marketing services. We are also experienced in providing
+                      the best off-page services to our clients which can be
+                      very helpful for your business success. Feel free to
+                      connect with us and get a quote.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeService === "guest_blogging" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Guest Blogging</h3>
+                    <p className="Title_para">
+                      Guest Blogging is one of the most popular digital
+                      marketing services in this present time. Guest blogging is
+                      also known as guest posting which means writing blogs for
+                      another person or company. As people are launching their
+                      website or mobile app in the market, they also need to
+                      work on digital marketing. Digital marketing like guest
+                      blogging can help you to get your sales target by
+                      targeting the right audience.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best Guest Blogging Services?
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the foremost software development
+                      company. We have a team of highly expert designers as well
+                      as developers who are proficient in providing the best IT
+                      services at the best rates. We are also experienced with
+                      digital marketing services. If you are looking for
+                      software development services, then feel free to connect
+                      with us and get a free quotation for the same.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeService === "social_marketing" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Social Media Marketing</h3>
+                    <p className="Title_para">
+                      Social Media Marketing is one of the trending methods
+                      which can be very helpful for business owners as well as
+                      for startups. Nowadays, people are using social media a
+                      lot and this can be an advantage for business owners. Many
+                      business owners and startup owners are now working on
+                      social media marketing as it helps in increasing the sales
+                      rates or we can say it is more effective.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best Social Media Marketing
+                      Services?
+                    </p>
+                    <p className="Title_para">
+                      We are at The App Ideas, which is one of the leading
+                      Digital marketing services. We have a team of highly
+                      experienced and skilled people who are proficient in
+                      providing the best social media marketing services at the
+                      best rates Feel free to connect with us, discuss your
+                      requirements and get a free quote for your service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeService === "pay_per_click" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Pay per Click (PPC)</h3>
+                    <p className="Title_para">
+                      Pay Per click is one of the most crucial services of
+                      digital marketing. Pay Per Click (PPC) advertising method
+                      is accessible for Short as well as for the long-term
+                      digital marketing strategy to get your online platform at
+                      the top of the search engine. Sometimes you will get
+                      instant results by using the PPC methods. If you own a
+                      digital business then you can think of integrating PPC.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the Best Pay Per Click Services?
+                    </p>
+                    <p className="Title_para">
+                      We are at The App Ideas, which is one of the most popular
+                      software development company. We are proficient in
+                      offering various one platform development services like
+                      mobile app, web app and website development. Along with
+                      the development, we also offer designing and digital
+                      marketing services to the client. For more details feel
+                      free to connect with us and get a free quote.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeService === "app_store" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      App Store Optimization (ASO)
+                    </h3>
+                    <p className="Title_para">
+                      App Store optimization is very important for business
+                      owners as this helps in optimizing the rank of the app in
+                      the specific store. App Store Optimization is the process
+                      of increasing the visibility of the app and growing its
+                      organic downloads. This service can help you to easily
+                      increase the number of users for your services. If you own
+                      online platforms then this is the best time for you to
+                      integrate the ASO service.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best App Store Optimization
+                      services?
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a team of highly skilled
+                      developers and designers who are experts in providing the
+                      best services. Along with this we also offer digital
+                      marketing services to our clients to increase customer’s
+                      userbase. For more details, you can feel free to connect
+                      with us and get a free quotation for the best App Store
+                      Optimization service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === "content_marketing" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Content Marketing </h3>
+                    <p className="Title_para">
+                      If we talk about the current trend then content marketing
+                      is one of the most important factors for making any
+                      business more successful in the market. If we talk about
+                      today’s trend then the content is demanding because this
+                      will help in increasing the number of the targeted users.
+                      If you own a website or a mobile app, then this is the
+                      time for you to hire the best content marketing service
+                      provided to increase your profits.
+                    </p>
+                    <p className="Title_para">
+                      Are you looking for the best Content Marketing services?
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. Along with software development, we
+                      also offer the best services for digital marketing
+                      services. We boost your websites’ SEO prospects by helping
+                      you with quality content publishing and marketing at
+                      contents across highly credible and reputed websites
+                      access niches. For more details, connect with us and get a
+                      free quote for a content marketing service.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -426,10 +765,16 @@ const DigitalMarketing = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("real_estate")}
+                >
                   <a
-                    href="#"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "real_estate" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img src={Real} alt="Real-Estate" className="img-fluid" />
                     <p>
@@ -438,8 +783,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("small_industry")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "small_industry" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Small}
                       alt="Small-Industry"
@@ -451,8 +805,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("restaurant")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "restaurant" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Restaurant}
                       alt="Restaurant-Industry"
@@ -464,8 +827,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("apparel")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "apparel" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Apparel}
                       alt="Apparel-Industry"
@@ -477,8 +849,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("finance")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "finance" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Finance}
                       alt="Finance-Industry"
@@ -490,8 +871,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("sports")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "sports" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Sports}
                       alt="Sports-Industry"
@@ -503,8 +893,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("arts_entertainment")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "arts_entertainment" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Arts}
                       alt="Arts-And-Entertainment"
@@ -516,8 +915,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("marketplace")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "marketplace" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Marketplace}
                       alt="Marketplace-Industry"
@@ -529,8 +937,17 @@ const DigitalMarketing = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveServe("beauty")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeServe === "beauty" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={Beauty}
                       alt="Beauty-Industry"
@@ -544,38 +961,294 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Real Estate Industry</h3>
-                  <p className="Title_para">
-                    If yes, then feel free to reach us and get a free quotation
-                    for your Real Estate app development services. We have years
-                    of experience in providing the best developers and designers
-                    who are efficient in providing the best real estate industry
-                    app solution which can help you to increase the customer
-                    base easily.
-                  </p>
-                  <p className="Title_para">
-                    Are you planning to launch a Real Estate Industry app?
-                  </p>
-                  <p className="Title_para">
-                    If yes, then feel free to reach us and get a free quotation
-                    for your Real Estate app development services. We have years
-                    of experience in providing the best developers and designers
-                    who are efficient in providing the best real estate industry
-                    app solution which can help you to increase the customer
-                    base easily.
-                  </p>
+            {activeServe === "real_estate" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Real Estate Industry</h3>
+                    <p className="Title_para">
+                      If yes, then feel free to reach us and get a free
+                      quotation for your Real Estate app development services.
+                      We have years of experience in providing the best
+                      developers and designers who are efficient in providing
+                      the best real estate industry app solution which can help
+                      you to increase the customer base easily.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Real Estate Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then feel free to reach us and get a free
+                      quotation for your Real Estate app development services.
+                      We have years of experience in providing the best
+                      developers and designers who are efficient in providing
+                      the best real estate industry app solution which can help
+                      you to increase the customer base easily.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeServe === "small_industry" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Small Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the foremost software development
+                      company. We offer the services like mobile app
+                      development, web app development, Website development,
+                      Game app development as well as Digital Marketing service.
+                      We are also providing unique designing services for the
+                      small industry which can help to get more users attentions
+                      which can increase the sales of the business.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Small Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then feel free to connect with us and let’s have a
+                      quick discussion about your requirements. We have a team
+                      of highly skilled developers as well as designers who have
+                      years of experience in providing the best solution for the
+                      small industry. The demand of the small industry is
+                      getting popular. If you are planning to launch an Online
+                      app platform then connect with us now.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "restaurant" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Restaurant Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a group of experienced and
+                      skilful developers as well as designers who are experts in
+                      providing the best services at the best rates. We have
+                      also worked on various food and restaurant projects and
+                      provided the best solution which can drive their business
+                      to the top. If you own a restaurant then this is the time
+                      for you to digitize your business.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Restaurant Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then this is probably the time for you to connect
+                      with us, discuss your requirements and get a free
+                      quotation for your restaurant app. We have a team of the
+                      highly skilled team who are productive in providing unique
+                      services for a restaurant industry app or web solutions.
+                      The demand of the restaurant industry is increasing, so if
+                      you are thinking then feel free to connect with us and get
+                      a free quote.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "apparel" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Apparel Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the highly popular software
+                      development company. We have a group of highly experienced
+                      developers, designers as well a digital marketing team who
+                      are proficient in offering the best solution for the
+                      Apparel industry. Nowadays, Apparel Industries are now
+                      converting its services into online platforms to increase
+                      sales rates of the business. If you own an apparel
+                      industry then launch your mobile app.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Apparel Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then here we are, feel free to reach us, discuss
+                      your requirements and get a free quote for your business.
+                      You can clearly observe that people are more inclined
+                      towards the online platforms for all kinds of services
+                      because it is easy to access. Running an Apparel industry,
+                      then it is highly recommended to have an online platform
+                      that can make the work easier for the business owners.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "finance" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Finance Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the foremost software development
+                      company. We are highly experienced in providing the best
+                      services for mobile app, web app and website development.
+                      We are also offering designing services along with
+                      marketing services. If you own a finance industry or
+                      planning to invest in the finance industry then it is
+                      highly recommended to have an online platform for a
+                      finance industry to easily manage everything.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a finance Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then you are at the right place. We offer all
+                      kinds of software development services along with the
+                      finance industry. In the finance industry, it is very
+                      important to have an online platform because it makes the
+                      work easier for the business owners as well as for the
+                      users. For more details, feel free to reach us and get a
+                      free quotation for your finance industry app at the best
+                      rates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "sports" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Sports Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is a highly advanced web and app development
+                      company. We have a team of highly skilled and experienced
+                      developers who are proficient in developing the best
+                      online platform solution which can be very beneficial for
+                      all kinds of business niches. This thing is also
+                      applicable for the sports industry, as this industry is
+                      also moving towards the online platform to enhance the
+                      user experience.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Sports Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then this is probably the best time for you to
+                      reach us and discuss your requirements. We are experts and
+                      experienced in offering the best Sports Industry mobile
+                      app solution at the best rates. If you are planning to
+                      launch a Sports mobile app then it is very important for
+                      you to launch a better solution. You can check our
+                      expertise by hiring us for a Sports Industry app
+                      development.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "arts_entertainment" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Arts and Entertainment Industry
+                    </h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the best web and app development
+                      company. We have years of experience in providing the top
+                      solution for all kinds of business niches including the
+                      arts and entertainment industry. Nowadays, as we can
+                      clearly observe that people are more inclined towards
+                      online platforms because it is easier to access the
+                      services online easily and effectively.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Arts and Entertainment
+                      Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then feel free to connect with us at any time and
+                      discuss your requirements to get a free quotation. The
+                      Arts and Entertainment industries are now achieving
+                      success by digitizing their business. Users can easily
+                      check out your services and access them at any time as
+                      well as at any place. Please check out the market and plan
+                      to develop a unique app idea that can provide different
+                      Entertainment elements to the users.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "marketplace" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Marketplace Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading software development
+                      company. We have a team of highly skilled developers as
+                      well as designers who are experts in providing the best
+                      marketplace solutions. We offer marketplace Industry
+                      solutions like web app development, mobile app
+                      development, website development and more. Nowadays,
+                      people are more inclined towards online marketplace
+                      platforms because it offers the convenience of accessing
+                      the services.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Marketplace Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, this is probably the time for you to plan and
+                      launch an online platform to get more attention from the
+                      users. The marketplace Industry is getting highly popular
+                      because it offers an online platform to access the
+                      services from any place and at any time easily. Feel free
+                      to connect with us and get a free quotation for your
+                      Marketplace service at the best rates.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeServe === "beauty" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Beauty Industry</h3>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular software
+                      development services. We are highly proficient in
+                      providing the best solution for web app development,
+                      mobile app development and website development. Every
+                      industry is now launching its online platforms including
+                      the beauty industry. Nowadays, the beauty industries are
+                      moving towards digitization to increase sales.
+                    </p>
+                    <p className="Title_para">
+                      Are you planning to launch a Beauty Industry app?
+                    </p>
+                    <p className="Title_para">
+                      If yes, then here you are at the right place. We have
+                      provided the best solution for all of business niches. If
+                      you are planning to make an investment in the beauty
+                      industry or running a beauty industry then this is
+                      probably the time for you to choose us and launch your own
+                      beauty industry. Feel free to reach us, send your
+                      requirement and get the best quotation for launching a
+                      beauty industry.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
       {/* Service Section End */}
       {/* <!-- Work Slider Start --> */}
-      <Work/>
+      <Work />
       {/* <!-- Work Slider End --> */}
 
       {/* Client testimonial Section Start */}

@@ -1,10 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
 import { Link } from "react-router-dom";
 
 const SEO = () => {
+  const [activeWeProvide, setActiveWeProvide] = useState("seo");
+  const [activeWhyChoose, setActiveWhyChoose] = useState("timebound");
+
   return (
     <>
       {/* Banner Section Start */}
@@ -187,10 +190,15 @@ const SEO = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("seo")}
+                >
                   <a
-                    href="#"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "seo" && "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png")}
@@ -201,8 +209,17 @@ const SEO = () => {
                     <p>SEO Consultancy</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("keyword")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "keyword" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png")}
                       alt="Keyword And
@@ -212,8 +229,17 @@ const SEO = () => {
                     <p>Keyword And Market Research.</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("onsite")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "onsite" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png")}
                       alt="On-Site And
@@ -223,8 +249,17 @@ const SEO = () => {
                     <p>On-Site And Technical SEO</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("penalty")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "penalty" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png")}
                       alt="Penalty
@@ -234,8 +269,17 @@ const SEO = () => {
                     <p>Penalty Recovery</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("link_development")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "link_development" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png")}
                       alt="Link
@@ -245,8 +289,17 @@ const SEO = () => {
                     <p>Link Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWeProvide("content_marketing")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWeProvide === "content_marketing" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png")}
                       alt="Content
@@ -258,30 +311,165 @@ const SEO = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">SEO Consultancy</h3>
-                  <p className="Title_para">
-                    SEO which is also known as Search Engine Optimization which
-                    is one of the most demanding and popular services.SEO is
-                    free traffic generating process that is very helpful in
-                    increasing the engagement of the users towards the business.
-                    If you want to drive organic traffic then go for SEO.
-                  </p>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading software development
-                    services. We have years of experience in offering the best
-                    software development services along with the best digital
-                    marketing services. We offer expert SEO consultancy to
-                    business websites and help them to chase achievable and
-                    realistic search engine ranking goals and guide them in
-                    creating a content and SEO strategy for short and long term
-                    results.
-                  </p>
+            {activeWeProvide === "seo" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">SEO Consultancy</h3>
+                    <p className="Title_para">
+                      SEO which is also known as Search Engine Optimization
+                      which is one of the most demanding and popular
+                      services.SEO is free traffic generating process that is
+                      very helpful in increasing the engagement of the users
+                      towards the business. If you want to drive organic traffic
+                      then go for SEO.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading software development
+                      services. We have years of experience in offering the best
+                      software development services along with the best digital
+                      marketing services. We offer expert SEO consultancy to
+                      business websites and help them to chase achievable and
+                      realistic search engine ranking goals and guide them in
+                      creating a content and SEO strategy for short and long
+                      term results.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}{" "}
+            {activeWeProvide === "keyword" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Keyword and Market Research
+                    </h3>
+                    <p className="Title_para">
+                      Software solutions are one of the most popular ways of
+                      making a business successful and also to stand out
+                      differently in the market. Due to the high competition,
+                      you need to offer the best solutions as well as you also
+                      need to work on digital marketing for generating traffic.
+                    </p>
+                    <p className="Title_para">
+                      We are from The App Ideas, which is one of the popular web
+                      and app development company. We have a team of the highly
+                      skilled digital marketing team who will offer the best
+                      services. We boast of a robust and expertise-driven
+                      keyword and market research apparatus and professionals
+                      who can help you focus on the most relevant and useful
+                      low-competition Keywords for best SEO results.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "onsite" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">On-site and Technical SEO</h3>
+                    <p className="Title_para">
+                      Digital marketing is one of the most demanding services in
+                      this present time. If we talk about SEO(Search Engine
+                      Optimization) then this is very useful to attract users
+                      into your business. If you already have an online platform
+                      then it is very important for you to go for Onsite and
+                      Technical SEO to increase the userbase.
+                    </p>
+                    <p className="Title_para">
+                      Here we are at The App Ideas, which is one of the most
+                      popular web and app development company. We have a group
+                      of people who are experts in offering Onsite and Technical
+                      SEO services. We undertake on-site and technical SEO
+                      responsibilities for websites and help them boost site
+                      performance, loading speed, design elements and various
+                      aspects that help search engine crawlers to find content
+                      easily.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "penalty" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Penalty Recovery</h3>
+                    <p className="Title_para">
+                      If you have online platforms for your business then it is
+                      very important for you to know everything about the
+                      websites including the Digital marketing services.
+                      Sometimes due to some reasons, the website can be blocked
+                      or can be penalised for some reasons.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading software development
+                      company. We are highly experts in offering the best
+                      solution like mobile app development, web app development,
+                      website development as well as digital marketing services.
+                      If your website has ever been penalized or indexed by
+                      Google for black hat SEO practices, we can help you
+                      recovering and de-indexing the site and help it achieve
+                      search engine results through credible link development
+                      and content strategy.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "link_development" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Link Development</h3>
+                    <p className="Title_para">
+                      If we discuss digital marketing then this is probably one
+                      of the best services for the growth of the business. Many
+                      people are now planning of making investments in digital
+                      marketing for promoting their services and increasing the
+                      customer base of the users.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have a team of highly skilled
+                      developers as well as a team of digital marketers who are
+                      experts in offering the best services at the best rates.
+                      We help your websites to build a quality link profile by
+                      fetching links from top-notch links from respective niches
+                      as per the relevance of the context.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWeProvide === "content_marketing" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Content Marketing</h3>
+                    <p className="Title_para">
+                      Nowadays, the demand for content marketing is one of the
+                      most popular factors for promoting any kind of business
+                      and service at the best possible rates. Content is highly
+                      demanding in the market because this will help your
+                      business to reach out to the targeted audience and attract
+                      new customers.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We are highly experts in offering the
+                      best software development services like mobile app, web
+                      app, websites as well as a digital marketing team. We
+                      boost your websites’ SEO prospects by helping you with
+                      quality content publishing and marketing of content across
+                      highly credible and reputed websites across niches.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -294,10 +482,16 @@ const SEO = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("timebound")}
+                >
                   <a
-                    href="#"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "timebound" &&
+                      "service__provide_tab_active"
+                    }`}
                   >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png")}
@@ -307,8 +501,17 @@ const SEO = () => {
                     <p>Timebound and Result-Driven</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("agile_proactive")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "agile_proactive" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png")}
                       alt="Agile and Proactive"
@@ -317,8 +520,17 @@ const SEO = () => {
                     <p>Agile and Proactive</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "competitive_pricing" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png")}
                       alt="Competitive Pricing"
@@ -327,8 +539,17 @@ const SEO = () => {
                     <p>Competitive Pricing</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("comprehensive")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "comprehensive" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png")}
                       alt="Comprehensive Content Marketing"
@@ -337,8 +558,17 @@ const SEO = () => {
                     <p>Comprehensive Content Marketing</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("timebound_delivery")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "timebound_delivery" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png")}
                       alt="Time-Bound Delivery"
@@ -347,8 +577,17 @@ const SEO = () => {
                     <p>Time-Bound Delivery</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="#" className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose("continuous_support")}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === "continuous_support" &&
+                      "service__provide_tab_active"
+                    }`}
+                  >
                     <img
                       src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png")}
                       alt="Continuous Support"
@@ -359,29 +598,163 @@ const SEO = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">Timebound and Result-Driven</h3>
-                  <p className="Title_para">
-                    The demand for online platforms is increasing day by day.
-                    Many of the business owners are now planning of making
-                    investments in digital platforms for making the business
-                    more popular.SEO(Search Engine Optimization) is very helpful
-                    in getting the attention of new users into your websites
-                  </p>
-                  <p className="Title_para">
-                    The App Ideas is one of the leading web and app development
-                    company. We have years of experience in offering the best
-                    digital marketing and SEO services. We ensure providing
-                    outstanding SEO output within a specified time through our
-                    focused efforts through all facets of SEO including
-                    performance optimization, content publication and link
-                    building.
-                  </p>
+            {activeWhyChoose === "timebound" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Timebound and Result-Driven
+                    </h3>
+                    <p className="Title_para">
+                      The demand for online platforms is increasing day by day.
+                      Many of the business owners are now planning of making
+                      investments in digital platforms for making the business
+                      more popular.SEO(Search Engine Optimization) is very
+                      helpful in getting the attention of new users into your
+                      websites
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. We have years of experience in
+                      offering the best digital marketing and SEO services. We
+                      ensure providing outstanding SEO output within a specified
+                      time through our focused efforts through all facets of SEO
+                      including performance optimization, content publication
+                      and link building.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyChoose === "agile_proactive" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Agile and Proactive </h3>
+                    <p className="Title_para">
+                      Currently, the demand for online platforms is increasing
+                      for all kinds of services. People are more inclined
+                      towards online services. Online platforms provide the
+                      convenience of accessing the services more easily and it
+                      is also time-saving. Similarly, if we talk about the
+                      business owner then they are also making investments in
+                      online services.
+                    </p>
+                    <p className="Title_para">
+                      Here we are at The App Ideas which is one of the leading
+                      web and app development company. We strictly follow the
+                      agile methodology for the development of the services. Our
+                      SEO services are always proactive and agile to take on any
+                      trends and new methods to help our clients take on any
+                      opportunity to boost their search engine rank.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "competitive_pricing" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Competitive Pricing </h3>
+                    <p className="Title_para">
+                      As per the increasing demand for software solutions, the
+                      demand for software development services is also
+                      increasing with the increasing popularity. If you already
+                      own a website then it is very important for you to work on
+                      digital marketing to promote your services in the
+                      business.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular software
+                      development company. We offer web apps, websites and
+                      mobile app development. We offer SEO services at a highly
+                      competitive price and even remain approachable and
+                      accessible for startups and small enterprise websites.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "comprehensive" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Comprehensive Content Marketing{" "}
+                    </h3>
+                    <p className="Title_para">
+                      If we talk about the demand for digital marketing then
+                      digital marketing is one of the most popular as well as
+                      demanding services in the market. Content Marketing is one
+                      of the most important parts of digital marketing. This can
+                      help businesses to stand out differently among their
+                      competitors.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the leading web and app
+                      development company. Along with that we also offer digital
+                      marketing services like content marketing. With the App
+                      Ideas, you can get a comprehensive content marketing
+                      service spanning all channels and needs including guest
+                      posting, regular content publication, digital and social
+                      marketing content etc.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "timebound_delivery" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Time-Bound Delivery </h3>
+                    <p className="Title_para">
+                      Digital marketing is very helpful in this present time as
+                      well as also for the future. To beat up the high
+                      competition, it is very important for you to have the best
+                      online platform as well as the best team of digital
+                      marketing who will deliver the project on time and drive
+                      better results.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas is one of the most popular software
+                      development services. We have a team of the highly skilled
+                      web app, mobile apps, website development and digital
+                      marketing services. Our guest posting services will fulfil
+                      the publication and outreach commitments in a time-bound
+                      manner. We ensure delivering measurable results within a
+                      stipulated time frame.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}{" "}
+            {activeWhyChoose === "continuous_support" && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Continuous Support</h3>
+                    <p className="Title_para">
+                      If you own a business online platform then it is very
+                      important for you to hire the best digital marketing team
+                      who will offer continuous support and helps in increasing
+                      the engagement of the customers or users. Digital
+                      marketing is very important for business growth.
+                    </p>
+                    <p className="Title_para">
+                      The App Ideas offering the best digital marketing services
+                      including SEO, content marketing and more. We have years
+                      of experience in offering the best SEO services for
+                      business growth. We also offer continuous support for
+                      guest blogging and content marketing services with a
+                      dedicated help desk manned by seasoned content marketing
+                      professionals.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>

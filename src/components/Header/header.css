@@ -178,7 +178,22 @@
 
 .row .mega-links li:hover {
   color: #f6c000;
-  transition: all 0.5s ease;
+  /* transition: all 0.5s ease; */
+  font-weight: 600;
+}
+.row .mega-links li .right__arrow {
+  opacity: 0;
+  padding-right: 0px;
+  transition: all 350ms ease-in-out 0s;
+  font-size: 20px;
+  font-size: 24px;
+}
+
+.row .mega-links li:hover .right__arrow {
+  opacity: 1;
+  padding-right: 5px;
+  color: #f6c000;
+  transition: all 350ms ease-in-out 0s;
 }
 
 /* .nav-links li a:hover {
