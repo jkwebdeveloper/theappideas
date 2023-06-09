@@ -226,7 +226,7 @@ const DrupalDev = () => {
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Custom-Web-Development.png")}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Template-Theme-Development.png")}
                       alt="Drupal Template and Theme Development"
                       className="img-fluid"
                     />

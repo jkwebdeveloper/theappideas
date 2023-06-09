@@ -289,7 +289,7 @@ const CourierPickup = () => {
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Food Delivery App Development</h4>
+                      <h4>Courier Pickup Management App</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
@@ -300,7 +300,7 @@ const CourierPickup = () => {
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>Food Delivery App Development Company</h4>
+                      <h4>Courier Pickup Management App Development</h4>
                     </div>
                   </div>
                   <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
@@ -312,7 +312,7 @@ const CourierPickup = () => {
                         className="img-fluid"
                         style={{ width: "25%" }}
                       />
-                      <h4>On-Demand Food Delivery App Development</h4>
+                      <h4>Courier App Development</h4>
                     </div>
                   </div>
                 </div>

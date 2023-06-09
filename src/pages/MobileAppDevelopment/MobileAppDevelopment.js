@@ -33,7 +33,7 @@ import Banking from "../../assets/images/SERVICES/Mobile-App-dev/Industries We S
 import Travel from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Travel and Tourism.svg";
 import Food from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Food and Drink.svg";
 import SocialNetworking from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Social Networking.svg";
-import lifestyle from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg";
+import lifestyle from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Lifestyle.svg";
 import Real from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Real Estate.svg";
 import health from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg";
 import { Link } from "react-router-dom";

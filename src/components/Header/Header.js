@@ -5,6 +5,7 @@ import { AiOutlineMenu } from "react-icons/ai";
 // import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import { RiArrowRightSLine } from "react-icons/ri";
+import { Link } from "react-router-dom";
 
 const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState("");
@@ -1089,42 +1090,36 @@ const Header = ({ setOpenModal }) => {
             </li>
             {/* portoflio */}
             <li>
-              <a
-                href="/portfolio"
+              <Link
+                to="/portfolio"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                <i className="right__arrow">
-                  <RiArrowRightSLine />
-                </i>
                 Portfolio
-              </a>
+              </Link>
             </li>
             {/* contact us */}
             <li>
-              <a
-                href="/contact-us"
+              <Link
+                to="/contact-us"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
-                <i className="right__arrow">
-                  <RiArrowRightSLine />
-                </i>
                 Contact Us
-              </a>
+              </Link>
             </li>
             {/* blog */}
             <li>
-              <a
-                href="/blog"
+              <Link
+                to="/blog"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 Blog
-              </a>
+              </Link>
             </li>
             {/* get a quote */}
             <li

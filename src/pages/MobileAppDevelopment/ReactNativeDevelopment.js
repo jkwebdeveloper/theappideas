@@ -6,7 +6,7 @@ import Robust from "../../assets/images/MobileAppDev/Android App Development Com
 import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
 import Agile from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg";
 import Fast from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg";
-import Competitive from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
+import deadline from "../../assets/images/SERVICES/Mobile-App-dev/React-Native-App/deadline.png";
 
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
@@ -773,8 +773,8 @@ const ReactNativeDevelopment = () => {
                   >
                     {" "}
                     <img
-                      src={Competitive}
-                      alt="Competitive-Pricing"
+                      src={deadline}
+                      alt="Sticking-To-Deadlines"
                       className="img-fluid"
                     />
                     <p>Sticking To Deadlines</p>

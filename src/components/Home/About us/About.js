@@ -29,7 +29,7 @@ const About = () => {
               confirmation.
             </p>
             <Link
-              to="/aboutus"
+              to="/about-us"
               onClick={() => {
                 window.scrollTo({ top: 0, behavior: "smooth" });
               }}

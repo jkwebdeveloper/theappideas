@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Execute = () => {
+const ContactUs = () => {
   return (
     <section className="bg py-4">
       <div className="container">
@@ -14,7 +14,7 @@ const Execute = () => {
           <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
             <div className="contact__rht">
               <Link
-                to="/contactus"
+                to="/contact-us"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
@@ -31,4 +31,4 @@ const Execute = () => {
   );
 };
 
-export default Execute;
+export default ContactUs;

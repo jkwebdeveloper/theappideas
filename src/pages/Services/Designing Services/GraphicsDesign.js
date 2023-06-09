@@ -590,7 +590,7 @@ const GraphicsDesign = () => {
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
-                    <p>Expertise and Experience</p>
+                    <p>Expert Developers</p>
                   </a>
                 </div>
                 <div

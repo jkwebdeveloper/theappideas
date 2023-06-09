@@ -10,6 +10,8 @@ import { BsDribbble } from "react-icons/bs";
 import { AiOutlineBehance } from "react-icons/ai";
 import { BsWhatsapp } from "react-icons/bs";
 import { BsSkype } from "react-icons/bs";
+import { FaPinterestP } from "react-icons/fa";
+import { BsInstagram } from "react-icons/bs";
 import { RiArrowRightSLine } from "react-icons/ri";
 import appdeveloper from "../assets/images/Footer/app-development-img.svg";
 import { Link } from "react-router-dom";
@@ -468,30 +470,43 @@ const Footer = () => {
             <div className="footer__box">
               <h2 className="footer_title">Follow us</h2>
               <div className="social__footer">
-                <a href="https://www.facebook.com/Theappideas/" target="_blank">
-                  <RiFacebookFill />
-                </a>
-                <a href="https://twitter.com/theappidea" target="_blank">
-                  <BsTwitter />
-                </a>
-                <a
-                  href="https://www.linkedin.com/company/theappideas/"
-                  target="_blank"
-                >
-                  <FaLinkedinIn />
-                </a>
-                <a
-                  href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA"
-                  target="_blank"
-                >
-                  <AiFillYoutube />
-                </a>
-                <a href="https://dribbble.com/theappideas" target="_blank">
-                  <BsDribbble />
-                </a>
-                <a href="https://www.behance.net/theappidea" target="_blank">
-                  <AiOutlineBehance />
-                </a>
+                <div className="row">
+                  <a
+                    href="https://www.facebook.com/Theappideas/"
+                    target="_blank"
+                  >
+                    <RiFacebookFill />
+                  </a>
+                  <a href="https://twitter.com/theappidea" target="_blank">
+                    <BsTwitter />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/company/theappideas/"
+                    target="_blank"
+                  >
+                    <FaLinkedinIn />
+                  </a>
+                  <a
+                    href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA"
+                    target="_blank"
+                  >
+                    <AiFillYoutube />
+                  </a>
+                </div>
+                <div className="row">
+                  <a href="https://dribbble.com/theappideas" target="_blank">
+                    <BsDribbble />
+                  </a>
+                  <a href="https://www.behance.net/theappidea" target="_blank">
+                    <AiOutlineBehance />
+                  </a>
+                  <a href="https://dribbble.com/theappideas" target="_blank">
+                    <BsInstagram />
+                  </a>
+                  <a href="https://www.behance.net/theappidea" target="_blank">
+                    <FaPinterestP />
+                  </a>
+                </div>
               </div>
               <div className="footer__sitemap my-3">
                 <Link

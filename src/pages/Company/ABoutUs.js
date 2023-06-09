@@ -14,13 +14,20 @@ const ABoutUs = () => {
         </p>
         <p>
           The App Ideas is the leading Web &amp;{" "}
-          <a href="#">Mobile App Development</a> Company that can help your
-          business grow with innovative and engaging solutions. We build
-          cutting-edge digital solutions with the quick-engaging user interface
-          and user experience. Over the years we have established ourselves as
-          the leading service provider for mobile app development, web
-          development, Web and graphic design, e-commerce development, IOT
-          development and games development.
+          <Link
+            to="/mobile-app-development"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+          >
+            Mobile App Development
+          </Link>{" "}
+          Company that can help your business grow with innovative and engaging
+          solutions. We build cutting-edge digital solutions with the
+          quick-engaging user interface and user experience. Over the years we
+          have established ourselves as the leading service provider for mobile
+          app development, web development, Web and graphic design, e-commerce
+          development, IOT development and games development.
         </p>
       </section>
       {/* Banner Section End */}

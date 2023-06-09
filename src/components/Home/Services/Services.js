@@ -140,7 +140,7 @@ const Services = () => {
                 </div>
                 <h5>
                   <Link
-                    to="/"
+                    to="/mobile-app-development"
                     onClick={() => {
                       window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
