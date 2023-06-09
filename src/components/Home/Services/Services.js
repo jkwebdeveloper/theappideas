@@ -152,7 +152,7 @@ const Services = () => {
                   We assist your brand to enjoy the edge of mobile by ...
                 </div>
                 <Link
-                  to="/"
+                  to="/mobile-app-development"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
