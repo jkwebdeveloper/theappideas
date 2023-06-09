@@ -1074,7 +1074,7 @@ const Header = ({ setOpenModal }) => {
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
                         <a
-                          href="/contactus"
+                          href="/contact-us"
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
