@@ -1090,36 +1090,36 @@ const Header = ({ setOpenModal }) => {
             </li>
             {/* portoflio */}
             <li>
-              <Link
-                to="/portfolio"
+              <a
+                href="/portfolio"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 Portfolio
-              </Link>
+              </a>
             </li>
             {/* contact us */}
             <li>
-              <Link
-                to="/contact-us"
+              <a
+                href="/contact-us"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 Contact Us
-              </Link>
+              </a>
             </li>
             {/* blog */}
             <li>
-              <Link
-                to="/blog"
+              <a
+                href="/blog"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 Blog
-              </Link>
+              </a>
             </li>
             {/* get a quote */}
             <li

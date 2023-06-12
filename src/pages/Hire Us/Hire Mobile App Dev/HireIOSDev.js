@@ -18,6 +18,7 @@ import UNIQUE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hir
 import FASTER from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/FASTER TIME-TO-MARKET.svg";
 import COMPETITIVE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/COMPETITIVE RATE _ SUPPORT.svg";
 import { Link } from "react-router-dom";
+import ContactUs from "../../../components/ContactUs";
 
 const HireIOSDev = () => {
   useEffect(() => {
@@ -699,34 +700,10 @@ const HireIOSDev = () => {
       {/* Hire Section End */}
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: "justify" }}>
-                  Do you want to know more about our iPhone app developers and
-                  their expertise? Feel free to contact us.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs
+        question="Do you want to know more about our iPhone app developers and
+                  their expertise? Feel free to contact us."
+      />
       {/* Contact Section End */}
     </>
   );

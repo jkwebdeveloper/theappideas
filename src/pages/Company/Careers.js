@@ -1946,7 +1946,7 @@ const Careers = () => {
             </div>
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
-                <a href="#" className="mail_btn">
+                <a href="mailto:trusha@theappideas.com" className="mail_btn">
                   trusha@theappideas.com{" "}
                 </a>
               </div>

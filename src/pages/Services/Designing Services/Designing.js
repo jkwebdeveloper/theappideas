@@ -6,6 +6,8 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import MobileAppDesigning from "../../../assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg";
 import WebAppDesigning from "../../../assets/images/SERVICES/Designing/Services we provide/Web app designing.svg";
 import Graphic from "../../../assets/images/SERVICES/Designing/Services we provide/Graphic designing.svg";
+import FAQ from "../../../components/FAQ";
+import ContactUs from "../../../components/ContactUs";
 
 // Industries  section images
 
@@ -1140,6 +1142,8 @@ const Designing = () => {
       {/* Client testimonial Section Start */}
       <TestiMonial />
       {/* Client testimonial Section End */}
+      <FAQ />
+      <ContactUs question="Are you looking for the best Designing Agency?"/>
     </>
   );
 };

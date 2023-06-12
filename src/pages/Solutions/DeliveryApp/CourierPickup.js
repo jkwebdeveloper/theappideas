@@ -40,6 +40,7 @@ import PaymentManagement from "../../../assets/images/SOLUTIONS/Delivery App/Cou
 import ReportsManagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/Reports management.svg";
 import Contentmanagement from "../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/content-management.svg";
 import { Link } from "react-router-dom";
+import ContactUs from "../../../components/ContactUs";
 
 const CourierPickup = () => {
   const [activeSection, setActiveSection] = useState("user_app");
@@ -592,33 +593,7 @@ const CourierPickup = () => {
       <TestiMonial />
       <FAQ />
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
-                  Would you like to create a Courier Pickup Management App?
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contact-us"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs question="Would you like to create a Courier Pickup Management App?" />
       {/* Contact Section End */}
     </>
   );

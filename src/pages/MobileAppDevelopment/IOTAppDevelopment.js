@@ -9,6 +9,12 @@ import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
 import { Link } from "react-router-dom";
+import ContactUs from "../../components/ContactUs";
+import HeroSection from "../../components/HeroSection";
+
+import mobileAppdevelopment from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
+import mobileApplication from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
+import mobileappdeveloper from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
 
 const IOTAppDev = () => {
   const [activeService, setactiveService] = useState("connected_cars");
@@ -19,162 +25,20 @@ const IOTAppDev = () => {
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Internet of things (IOT) App Development</h2>
-                <p>
-                  We are at The App Ideas, which is one of the leading web and
-                  app development company. We have a group of people who are
-                  experts in offering the best software solution for each kind
-                  of category. We are skilled in offering the best IoT app
-                  development services as per the client’s requirements and with
-                  advanced features integration along with unique designing
-                  services.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best iBeacon App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your iBeacon App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment{" "}
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../assets/images/MobileAppDev/IOT App/IoT-App-Development.png")}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>IBeacon App Development Company</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../assets/images/MobileAppDev/IOT App/IoT-App-Development-Company.png")}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>IBeacon App Development Services</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../assets/images/MobileAppDev/IOT App/IoT-Application-Development-Services.png")}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>IBeacon Application Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                      "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Android App Development Company"
+        des="The App Ideas is one of the leading web and app development company. We have a team of highly skilled and experienced developers who will provide the best Android mobile app as well as a custom mobile app solution which will be very beneficial for the growth of your business and startups at the best rates."
+        list1="7+ Years of experience in App Development"
+        list2="Best Mobile App Development Company"
+        list3="Dedicated team for your Mobile App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Android App Development"
+        service2="Android Application Development"
+        service3="Android App Development Company"
+        image1={mobileAppdevelopment}
+        image2={mobileApplication}
+        image3={mobileappdeveloper}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -896,29 +760,7 @@ const IOTAppDev = () => {
       <FAQ />
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p>
-                  Are you planning to launch a Successful IoT Mobile app in the
-                  market?
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link to="/contactus">
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs question="Are you planning to launch a Successful IoT Mobile app in the market?" />
       {/* Contact Section End */}
     </>
   );

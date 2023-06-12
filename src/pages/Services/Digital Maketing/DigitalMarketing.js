@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { BsFillPatchCheckFill } from "react-icons/bs";
 import Work from "../../../components/Workdone/Work";
 import TestiMonial from "../../../components/Testimonial/TestiMonial";
 
@@ -28,6 +27,9 @@ import Sports from "../../../assets/images/SERVICES/Digital Marketing Agency/Ind
 import Arts from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Arts and Entertainment Industry.svg";
 import Marketplace from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Marketplace Industry.svg";
 import Beauty from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Beauty Industry.svg";
+import FAQ from "../../../components/FAQ";
+import ContactUs from "../../../components/ContactUs";
+import HeroSection from "../../../components/HeroSection";
 
 const DigitalMarketing = () => {
   const [activeService, setActiveService] = useState("seo");
@@ -36,165 +38,20 @@ const DigitalMarketing = () => {
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Digital Marketing Agency</h2>
-                <p>
-                  Digital marketing demand is getting demanding in the market
-                  because these services can help the business to promote their
-                  services and increase the profit rates of the business. Along
-                  with launching a mobile app or web app in the market, you also
-                  have to work on marketing strategies to make the platform
-                  successful in the market. We are from The App Ideas is one of
-                  the popular Digital Marketing Agency. We have a team of a
-                  highly skilled team for digital marketing who provides the
-                  best services at the best rates.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in Digital Marketing
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Digital Marketing Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Digital Marketing Agency
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={mobileweb}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Digital Marketing Company</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={mobileaap}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Digital Marketing Strategy </h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={webapp}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Digital Marketing Specialist</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                      "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                      "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Digital Marketing Agency"
+        des="Digital marketing demand is getting demanding in the market because these services can help the business to promote their services and increase the profit rates of the business. Along with launching a mobile app or web app in the market, you also have to work on marketing strategies to make the platform successful in the market. We are from The App Ideas is one of the popular Digital Marketing Agency. We have a team of a highly skilled team for digital marketing who provides the best services at the best rates."
+        list1="7+ Years of experience in Digital Marketing"
+        list2="Best Digital Marketing Company"
+        list3="Dedicated team for your Digital Marketing Agency"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Digital Marketing Company"
+        service2="Digital Marketing Strategy"
+        service3="Digital Marketing Specialist"
+        image1={mobileweb}
+        image2={mobileaap}
+        image3={webapp}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -834,8 +691,7 @@ const DigitalMarketing = () => {
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "apparel" &&
-                      "service__provide_tab_active"
+                      activeServe === "apparel" && "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -856,8 +712,7 @@ const DigitalMarketing = () => {
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "finance" &&
-                      "service__provide_tab_active"
+                      activeServe === "finance" && "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -878,8 +733,7 @@ const DigitalMarketing = () => {
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "sports" &&
-                      "service__provide_tab_active"
+                      activeServe === "sports" && "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -944,8 +798,7 @@ const DigitalMarketing = () => {
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "beauty" &&
-                      "service__provide_tab_active"
+                      activeServe === "beauty" && "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -1254,6 +1107,8 @@ const DigitalMarketing = () => {
       {/* Client testimonial Section Start */}
       <TestiMonial />
       {/* Client testimonial Section End */}
+      <FAQ />
+      <ContactUs question="Are you looking for the best Digital Marketing Agency?" />
     </>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import ContactUs from "../../components/ContactUs";
 
 const ABoutUs = () => {
   return (
@@ -547,33 +548,7 @@ const ABoutUs = () => {
       </section>
       {/* Our Client Section End */}
       {/* Contact Section Start */}
-      <section className="testi-bg py-4 my-2">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
-                  Would you like to execute any project?
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs question="Would you like to execute any project?" />
       {/* Contact Section End */}
     </>
   );

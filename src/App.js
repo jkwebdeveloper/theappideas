@@ -50,7 +50,6 @@ import HireMagento from "./pages/Hire Us/Hire ECommerce/HireMagento";
 import SEO from "./pages/Services/Digital Maketing/SEO";
 import SocialMedia from "./pages/Services/Digital Maketing/SocialMedia";
 import ASO from "./pages/Services/Digital Maketing/ASO";
-import GuestBlogging from "./pages/Services/Digital Maketing/GuestBlogging";
 import ShopifyDev from "./pages/Services/ECommerceWeb/ShopifyDev";
 import MagentoDev from "./pages/Services/ECommerceWeb/MagentoDev";
 import Joomla from "./pages/Services/ECommerceWeb/Joomla";
@@ -143,7 +142,6 @@ const App = () => {
         <Route path="/seo" element={<SEO />} />
         <Route path="/social-media-marketing" element={<SocialMedia />} />
         <Route path="/aso" element={<ASO />} />
-        <Route path="/guest-blogging" element={<GuestBlogging />} />
         <Route path="/shopify-development" element={<ShopifyDev />} />
         <Route path="/magento-development" element={<MagentoDev />} />
         <Route path="/joomla-development" element={<Joomla />} />

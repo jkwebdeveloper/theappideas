@@ -8,9 +8,9 @@ import "swiper/css/navigation";
 import { BiMinusCircle } from "react-icons/bi";
 import { BiPlusCircle } from "react-icons/bi";
 import "./mobileAppDevelopment.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 // import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
+
 import mobileApp from "../../assets/images/SERVICES/Mobile-App-dev/Mobile App Development.svg";
 import Application from "../../assets/images/SERVICES/Mobile-App-dev/Mobile Application Development Company.svg";
 import Mobileapplication from "../../assets/images/SERVICES/Mobile-App-dev/mobile app developer.svg";
@@ -37,6 +37,8 @@ import lifestyle from "../../assets/images/SERVICES/Mobile-App-dev/Industries We
 import Real from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Real Estate.svg";
 import health from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg";
 import { Link } from "react-router-dom";
+import ContactUs from "../../components/ContactUs";
+import HeroSection from "../../components/HeroSection";
 
 const MobileAppDev = () => {
   const [selected, setSelected] = useState(null);
@@ -120,165 +122,20 @@ const MobileAppDev = () => {
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Mobile App Development Company</h2>
-                <p>
-                  Mobile App Development Company Mobile App development is
-                  considered as the expertise field of The App Ideas. The App
-                  Ideas is a leading web and mobile app development Company. Due
-                  to the high demand for a digital solution, many business
-                  owners and entrepreneurs are making a high investment in the
-                  mobile application for increasing profit rates. The App Ideas
-                  has a team of experts who provide the foremost native, cross
-                  platforms and Hybrid platforms solutions at the best rates.
-                  Hire our developers and take advantages of our services at an
-                  affordable price.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Mobile App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Mobile App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={mobileApp}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Mobile App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={Application}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Mobile Application Development Company </h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={Mobileapplication}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Mobile Application Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                      "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Mobile App Development Company"
+        des="Mobile App development is considered as the expertise field of The App Ideas. The App Ideas is a leading web and mobile app development Company. Due to the high demand for a digital solution, many business owners and entrepreneurs are making a high investment in the mobile application for increasing profit rates. The App Ideas has a team of experts who provide the foremost native, cross platforms and Hybrid platforms solutions at the best rates. Hire our developers and take advantages of our services at an affordable price."
+        list1="7+ Years of experience in App Development"
+        list2="Best Mobile App Development Company"
+        list3="Dedicated team for your Mobile App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Mobile App Development"
+        service2="Mobile Application Development Company"
+        service3="Mobile Application Developer"
+        image1={mobileApp}
+        image2={Application}
+        image3={Mobileapplication}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -1769,29 +1626,7 @@ const MobileAppDev = () => {
 
           <>
             {/* Contact Section Start */}
-            <section className="testi-bg py-4">
-              <div className="container">
-                <div className="row align-items-center">
-                  <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-                    <div className="contact__lft">
-                      <p>
-                        Do you like to know more about our expertise in mobile
-                        app development?
-                      </p>
-                    </div>
-                  </div>
-                  <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-                    <div className="contact__rht">
-                      <Link to="/contactus">
-                        <a className="contact_btn" style={{ color: "#000" }}>
-                          Contact us{" "}
-                        </a>
-                      </Link>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </section>
+            <ContactUs question="Do you like to know more about our expertise in mobile app development?" />
             {/* Contact Section End */}
           </>
         </>

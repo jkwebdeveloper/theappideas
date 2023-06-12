@@ -10,13 +10,13 @@ import Banner from "../components/Home/Banner/Banner";
 const Home = () => {
   return (
     <>
-      <Banner/>
-      <About/>
-      <Services/>
-      <Work/>
-      <TestiMonial/>
-      <Blog/>
-      <ContactUs/>
+      <Banner />
+      <About />
+      <Services />
+      <Work />
+      <TestiMonial />
+      <Blog />
+      <ContactUs question="Would you like to execute any project?" />
     </>
   );
 };

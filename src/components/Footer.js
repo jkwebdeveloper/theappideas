@@ -500,10 +500,10 @@ const Footer = () => {
                   <a href="https://www.behance.net/theappidea" target="_blank">
                     <AiOutlineBehance />
                   </a>
-                  <a href="https://dribbble.com/theappideas" target="_blank">
+                  <a href="https://www.instagram.com/theappideas/" target="_blank">
                     <BsInstagram />
                   </a>
-                  <a href="https://www.behance.net/theappidea" target="_blank">
+                  <a href="https://in.pinterest.com/theappidea/" target="_blank">
                     <FaPinterestP />
                   </a>
                 </div>

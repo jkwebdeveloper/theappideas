@@ -41,6 +41,7 @@ import Subscription from "../../../assets/images/SOLUTIONS/Popular Solutions/Sal
 import Analytics from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Analytics and reports.svg";
 import PaymentManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Payment-Management-1.svg";
 import { Link } from "react-router-dom";
+import ContactUs from "../../../components/ContactUs";
 
 const SalonApp = () => {
   const [activeSection, setActiveSection] = useState("customer_app");
@@ -1027,33 +1028,7 @@ const SalonApp = () => {
       <TestiMonial />
       <FAQ />
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
-                  Would you like to create a Salon booking App?
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs question="Would you like to create a Salon booking App?" />
       {/* Contact Section End */}
     </>
   );

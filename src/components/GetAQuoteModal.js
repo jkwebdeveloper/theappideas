@@ -32,8 +32,8 @@ const GetAQuoteModal = ({ setOpenModal }) => {
                 />
               </div>
               <div className="mb-3">
-                <select className="form-select" aria-label="Country*">
-                  <option selected="">Country*</option>
+                <select className="form-select">
+                  <option label="Country"></option>
                   <option value={1}>One</option>
                   <option value={2}>Two</option>
                   <option value={3}>Three</option>

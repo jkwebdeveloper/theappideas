@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+
+import iphone1 from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png";
+import iphone2 from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png";
+import iphone3 from "../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png";
 
 import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
 import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
@@ -11,6 +14,8 @@ import deadline from "../../assets/images/SERVICES/Mobile-App-dev/React-Native-A
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 import FAQ from "../../components/FAQ";
 import { Link } from "react-router-dom";
+import ContactUs from "../../components/ContactUs";
+import HeroSection from "../../components/HeroSection";
 
 const ReactNativeDevelopment = () => {
   const [activeService, setActiveService] = useState("cross_platform");
@@ -21,161 +26,20 @@ const ReactNativeDevelopment = () => {
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>React Native App Development</h2>
-                <p>
-                  The App Ideas is a leading React Native development company
-                  with years of expertise and proven expertise. We have a team
-                  of highly skilled and expert developers who will offer the
-                  best React Native app development services with customization.
-                  Custom React Native app can be very helpful for your business
-                  as well as startups at the best rates.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best React Native App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your React Native App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png")}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>React Native App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png")}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Create React Native App</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png")}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>React Native Development Company</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                      "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="IPad App Development Company"
+        des="The App Ideas is one of the leading web and app development company. We are highly expert in providing the best software services including the IOS service platforms like iPad app development service. We also offer custom iPad app development which can be very helpful for your business at the best possible rates."
+        list1="7+ Years of experience in App Development"
+        list2="Best iPad App Development Company"
+        list3="Dedicated team for your iPad App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="IPad App Development"
+        service2="IPad App Development Services"
+        service3="Ipad Application Development"
+        image1={iphone1}
+        image2={iphone2}
+        image3={iphone3}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -953,33 +817,8 @@ const ReactNativeDevelopment = () => {
       {/* FAQ Section End */}
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
-                  Are you planning to launch a Successful iPad Mobile app in the
-                  market?
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  className="contact_btn"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  Contact us{" "}
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <ContactUs question="Are you planning to launch a Successful React Native Mobile app in the market?" />
       {/* Contact Section End */}
     </>
   );

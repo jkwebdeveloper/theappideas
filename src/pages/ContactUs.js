@@ -119,47 +119,47 @@ const ContactUs = () => {
                   Skype, Whatsapp, Email whatever works for you. We’ll be here.
                 </p>
                 <div className="contact__with__social">
-                  <a href="#">
+                  <a href="skype:chirag4141">
                     <BsSkype style={{ marginRight: "15px" }} />
                     skype
                   </a>
-                  <a href="#">
+                  <a href="https://api.whatsapp.com/send?phone=918866564279">
                     <BsWhatsapp style={{ marginRight: "15px" }} />
                     Whatsapp
                   </a>
-                  <a href="#">
+                  <a href="mailto:contact@theappideas.com">
                     <GoMail style={{ marginRight: "15px" }} />
                     Email
                   </a>
-                  <a href="#">
+                  <a href="tel:+918866564279">
                     <BsFillTelephoneFill style={{ marginRight: "15px" }} />
                     Phone
                   </a>
                 </div>
                 <div className="social__connection">
                   <h2>Socialize with us.</h2>
-                  <a href="#">
+                  <a href="https://www.facebook.com/Theappideas/">
                     <RiFacebookFill />
                   </a>
-                  <a href="#">
+                  <a href="https://www.linkedin.com/company/theappideas/">
                     <FaLinkedinIn />
                   </a>
-                  <a href="#">
+                  <a href="https://www.instagram.com/theappideas/">
                     <BsInstagram />
                   </a>
-                  <a href="#">
+                  <a href="https://twitter.com/theappidea">
                     <BsTwitter />
                   </a>
-                  <a href="#">
+                  <a href="https://www.youtube.com/channel/UC_18zGzO_zpXkKiy1WXi4oA">
                     <AiFillYoutube />
                   </a>
-                  <a href="#">
+                  <a href="https://in.pinterest.com/theappidea/">
                     <FaPinterestP />
                   </a>
-                  <a href="#">
+                  <a href="https://www.behance.net/theappidea">
                     <AiOutlineBehance />
                   </a>
-                  <a href="#">
+                  <a href="https://dribbble.com/theappideas">
                     <BsDribbble />
                   </a>
                 </div>

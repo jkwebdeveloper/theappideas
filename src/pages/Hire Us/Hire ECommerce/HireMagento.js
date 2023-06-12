@@ -20,6 +20,7 @@ import Implement from "../../../assets/images/HIRE US/Hire E-commerce Developer/
 import Affordable from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Magento 2 Developer/2/FASTER DEVELOPMENT.svg";
 import Time from "../../../assets/images/HIRE US/Hire E-commerce Developer/Hire Magento 2 Developer/2/TIMELY DELIVERY.svg";
 import { Link } from "react-router-dom";
+import ContactUs from "../../../components/ContactUs";
 
 const HireMagento = () => {
   useEffect(() => {
@@ -697,34 +698,10 @@ const HireMagento = () => {
       </section>
       {/* Hire Section End */}
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: "justify" }}>
-                  Do you want to know more about our Magento 2 developers? Just
-                  feel free to contact us.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
-                  }}
-                >
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs
+        question="Do you want to know more about our Magento 2 developers? Just
+                  feel free to contact us."
+      />
       {/* Contact Section End */}
     </>
   );

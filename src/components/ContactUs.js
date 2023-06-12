@@ -1,14 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ContactUs = () => {
+const ContactUs = ({ question }) => {
   return (
     <section className="bg py-4">
       <div className="container">
         <div className="row align-items-center">
           <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
             <div className="contact-lft">
-              <p>Would you like to execute any project?</p>
+              <p>{question}</p>
             </div>
           </div>
           <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
@@ -20,7 +20,7 @@ const ContactUs = () => {
                 }}
               >
                 <div className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                  Contact us
                 </div>
               </Link>
             </div>
