@@ -1,373 +1,233 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useRef, useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// Banner
+import Development from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver-Tracking-App.png'
+import Services from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver-Tracking-2.png'
+import developer from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/On-Demand-Driver-Tracking-App-Development.png'
 
 //  Passenger App
-import Social from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Social Login.svg";
-import ProfileManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/profile-management.svg";
-import Current from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Current Booking.svg";
-import Live from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Live-Driver-Tracking.svg";
-import LiveChat from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Live Chat.svg";
-import Call from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Call with driver.svg";
-import Ratings from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Rating _ Reviews.svg";
-import Give from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Give-A-Tip.svg";
-import Pay from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Pay-Online.svg";
-import Requestt from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/User-Get-The-.svg";
-import card from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/card management.svg";
+import Social from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Social Login.svg'
+import ProfileManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/profile-management.svg'
+import Current from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Current Booking.svg'
+import Live from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Live-Driver-Tracking.svg'
+import LiveChat from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Live Chat.svg'
+import Call from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Call with driver.svg'
+import Ratings from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Rating _ Reviews.svg'
+import Give from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Give-A-Tip.svg'
+import Pay from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/Pay-Online.svg'
+import Requestt from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/User-Get-The-.svg'
+import card from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Passenger Driver/card management.svg'
 
 //  Driver Tracking App
-import Register from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Login_Register.svg";
-import First from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/First use checkup list.svg";
-import Booking from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Booking Details.svg";
-import Route from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Route-Information.svg";
-import Start from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Start _ End Journey.svg";
-import Callwith from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Call with Passenger.svg";
-import Panic from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Panic-Button.svg";
-import receive from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Receive-Tip.svg";
-import Historyy from "../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/History of trips.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Register from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Login_Register.svg'
+import First from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/First use checkup list.svg'
+import Booking from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Booking Details.svg'
+import Route from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Route-Information.svg'
+import Start from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Start _ End Journey.svg'
+import Callwith from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Call with Passenger.svg'
+import Panic from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Panic-Button.svg'
+import receive from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/Receive-Tip.svg'
+import Historyy from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/History of trips.svg'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const DriverTrackingApp = () => {
-  const [activeSection, setActiveSection] = useState("passenger_driver");
-  const [data, setData] = useState([]);
-  const [activeWhyShould, setActiveWhyShould] = useState("driver_productivity");
+  const [activeSection, setActiveSection] = useState('passenger_driver')
+  const [data, setData] = useState([])
+  const [activeWhyShould, setActiveWhyShould] = useState('driver_productivity')
 
   const DriverTrackData = [
     {
       id: 1,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Social,
-      title: "Social Logins",
+      title: 'Social Logins',
     },
     {
       id: 2,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: ProfileManagement,
-      title: "login type (leading Passenger or Travelling Passenger)",
+      title: 'login type (leading Passenger or Travelling Passenger)',
     },
     {
       id: 3,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: ProfileManagement,
-      title: "Profile Management",
+      title: 'Profile Management',
     },
     {
       id: 4,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Current,
-      title: "Current Booking Details",
+      title: 'Current Booking Details',
     },
     {
       id: 5,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Live,
-      title: "Live Driver Tracking",
+      title: 'Live Driver Tracking',
     },
     {
       id: 6,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: LiveChat,
-      title: "Live Chat",
+      title: 'Live Chat',
     },
     {
       id: 7,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Call,
-      title: "Call with driver",
+      title: 'Call with driver',
     },
     {
       id: 8,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Ratings,
-      title: "Ratings & Reviews",
+      title: 'Ratings & Reviews',
     },
     {
       id: 9,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Give,
-      title: "Give a tip to the driver",
+      title: 'Give a tip to the driver',
     },
     {
       id: 10,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Pay,
-      title: "Pay online",
+      title: 'Pay online',
     },
     {
       id: 11,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: Requestt,
-      title: "Request for instant quote",
+      title: 'Request for instant quote',
     },
     {
       id: 12,
-      category: "passenger_driver",
+      category: 'passenger_driver',
       image: card,
-      title: "card management",
+      title: 'card management',
     },
     {
       id: 13,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Register,
-      title: "Login/ Register as CH4U Driver or Contractor Driver",
+      title: 'Login/ Register as CH4U Driver or Contractor Driver',
     },
     {
       id: 14,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: ProfileManagement,
-      title: "Profile Management",
+      title: 'Profile Management',
     },
     {
       id: 15,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: First,
-      title: "First use checkup list",
+      title: 'First use checkup list',
     },
     {
       id: 16,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Booking,
-      title: "Booking Details",
+      title: 'Booking Details',
     },
     {
       id: 17,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Route,
-      title: "Route information",
+      title: 'Route information',
     },
     {
       id: 18,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Start,
-      title: "“Start & End Journey",
+      title: '“Start & End Journey',
     },
     {
       id: 19,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: LiveChat,
-      title: "Live Chat",
+      title: 'Live Chat',
     },
     {
       id: 20,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Callwith,
-      title: "Call with Passenger",
+      title: 'Call with Passenger',
     },
     {
       id: 21,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Panic,
-      title: "Panic Button",
+      title: 'Panic Button',
     },
     {
       id: 22,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Ratings,
-      title: "Ratings & Reviews",
+      title: 'Ratings & Reviews',
     },
     {
       id: 23,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: receive,
-      title: "receive Tip",
+      title: 'receive Tip',
     },
     {
       id: 24,
-      category: "driver_tracking",
+      category: 'driver_tracking',
       image: Historyy,
-      title: "History of trips",
+      title: 'History of trips',
     },
-  ];
+  ]
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   const filterItem = () => {
     const updateItems = DriverTrackData.filter((curElem) => {
-      return curElem.category === activeSection;
-    });
-    setData(updateItems);
-  };
+      return curElem.category === activeSection
+    })
+    setData(updateItems)
+  }
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
 
   // run when activesection changes
   useEffect(() => {
-    filterItem();
-  }, [activeSection]);
+    filterItem()
+  }, [activeSection])
 
   return (
     <>
       {/* common Banner start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>On Demand Driver Tracking App</h2>
-                <p>
-                  Real-time tracking of on-road vehicles and drivers offers
-                  immense opportunity to boost the efficiency of manpower, fuel
-                  and the vehicle. This is why driver tracking apps with
-                  real-time tracking feature are getting so popular. We at the
-                  App Ideas build most advanced driver tracking apps with
-                  cutting-edge tracking technology to help GPS Tracking App
-                  driver and vehicle whereabouts precisely.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Driver Tracking App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Driver Tracking App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver-Tracking-App.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-Learning App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver-Tracking-2.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-learning Mobile App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/On-Demand-Driver-Tracking-App-Development.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-learning App Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>GET A FREE DEMO</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="On Demand Driver Tracking App"
+        des="Real-time tracking of on-road vehicles and drivers offers immense opportunity to boost the efficiency of manpower, fuel and the vehicle. This is why driver tracking apps with real-time tracking feature are getting so popular. We at the App Ideas build most advanced driver tracking apps with cutting-edge tracking technology to help GPS Tracking App driver and vehicle whereabouts precisely."
+        list1="7+ Years of experience in App Development"
+        list2="Best Dating App Development Company"
+        list3="Dedicated team for your Driver Tracking App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Driver Tracking App"
+        service2="Delivery Driver Tracking App"
+        service3="On-Demand Driver Tracking App Development"
+        image1={Development}
+        image2={Services}
+        image3={developer}
+      />
       {/* common banner end  */}
       {/* Food Delivery App Section Start */}
       <section className="service__provide__section py-5">
@@ -380,7 +240,7 @@ const DriverTrackingApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "passenger_driver" && "active"
+                    activeSection === 'passenger_driver' && 'active'
                   }`}
                   id="Passenger-Driver-Tab"
                   data-bs-toggle="pill"
@@ -389,8 +249,8 @@ const DriverTrackingApp = () => {
                   role="tab"
                   aria-controls="Passenger-Driver"
                   aria-selected="true"
-                  onClick={() => setActiveSection("passenger_driver")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('passenger_driver')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Passenger Driver Tracking App
                 </button>
@@ -398,7 +258,7 @@ const DriverTrackingApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "driver_tracking" && "active"
+                    activeSection === 'driver_tracking' && 'active'
                   }`}
                   id="Driver-Tracking-Tab"
                   data-bs-toggle="pill"
@@ -407,8 +267,8 @@ const DriverTrackingApp = () => {
                   role="tab"
                   aria-controls="Driver-Tracking"
                   aria-selected="false"
-                  onClick={() => setActiveSection("driver_tracking")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('driver_tracking')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Driver Tracking App
                 </button>
@@ -423,7 +283,7 @@ const DriverTrackingApp = () => {
               >
                 <div className="row">
                   {data.map((elem) => {
-                    const { id, image, title } = elem;
+                    const { id, image, title } = elem
                     return (
                       <div
                         key={id}
@@ -434,12 +294,12 @@ const DriverTrackingApp = () => {
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
-                            style={{ height: "60px" }}
+                            style={{ height: '60px' }}
                           />
                           <h4>{title}</h4>
                         </div>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -486,31 +346,31 @@ const DriverTrackingApp = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
+                    src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
@@ -530,17 +390,17 @@ const DriverTrackingApp = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("driver_productivity")}
+                  onClick={() => setActiveWhyShould('driver_productivity')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "driver_productivity" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'driver_productivity' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Driver-Productivity1.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Driver-Productivity1.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -549,17 +409,17 @@ const DriverTrackingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("destination_faster")}
+                  onClick={() => setActiveWhyShould('destination_faster')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "destination_faster" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'destination_faster' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Reaching-Destination-Faster1.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Reaching-Destination-Faster1.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -568,17 +428,17 @@ const DriverTrackingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("fuel_efficiency")}
+                  onClick={() => setActiveWhyShould('fuel_efficiency')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "fuel_efficiency" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'fuel_efficiency' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Fuel-Efficiency1.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Fuel-Efficiency1.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -587,17 +447,17 @@ const DriverTrackingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("on_road")}
+                  onClick={() => setActiveWhyShould('on_road')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "on_road" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'on_road' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/On-Road-Security1.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/On-Road-Security1.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -606,17 +466,17 @@ const DriverTrackingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("better_vehicle")}
+                  onClick={() => setActiveWhyShould('better_vehicle')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "better_vehicle" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'better_vehicle' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Better-Vehicle-Maintenance1.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Better-Vehicle-Maintenance1.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -625,17 +485,17 @@ const DriverTrackingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("real_time")}
+                  onClick={() => setActiveWhyShould('real_time')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "real_time" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'real_time' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Real-Time-Communication1.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/why-should/Real-Time-Communication1.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -644,7 +504,7 @@ const DriverTrackingApp = () => {
                 </div>
               </div>
             </div>
-            {activeWhyShould === "driver_productivity" && (
+            {activeWhyShould === 'driver_productivity' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -657,7 +517,7 @@ const DriverTrackingApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "destination_faster" && (
+            {activeWhyShould === 'destination_faster' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -672,8 +532,8 @@ const DriverTrackingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "fuel_efficiency" && (
+            )}{' '}
+            {activeWhyShould === 'fuel_efficiency' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -685,8 +545,8 @@ const DriverTrackingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "on_road" && (
+            )}{' '}
+            {activeWhyShould === 'on_road' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -699,8 +559,8 @@ const DriverTrackingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "better_vehicle" && (
+            )}{' '}
+            {activeWhyShould === 'better_vehicle' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -714,8 +574,8 @@ const DriverTrackingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "real_time" && (
+            )}{' '}
+            {activeWhyShould === 'real_time' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -728,7 +588,7 @@ const DriverTrackingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
+            )}{' '}
           </div>
         </div>
       </section>
@@ -740,7 +600,7 @@ const DriverTrackingApp = () => {
       <ContactUs question="Would you like to create a Driver tracking App?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default DriverTrackingApp;
+export default DriverTrackingApp

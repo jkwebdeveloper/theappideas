@@ -1,388 +1,263 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useRef, useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// Banner
+import Development from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/eCommerce-App-Development.png'
+import Services from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/eCommerce-Mobile-App-Development.png'
+import developer from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/eCommerce-Application-Development-Company.png'
 
 //  Customer App
-import search from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Search-Products.svg";
-import View from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/View-Products-Categories-Wise.svg";
-import Cart from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Cart-Management.svg";
-import Wish from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Wish-Products.svg";
-import AvailOffers from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Avail-Offers.svg";
-import Purchase from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Purchase-Online.svg";
-import give from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Rating _ Reviews.svg";
-import order from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Check-Order-History.svg";
+import search from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Search-Products.svg'
+import View from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/View-Products-Categories-Wise.svg'
+import Cart from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Cart-Management.svg'
+import Wish from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Wish-Products.svg'
+import AvailOffers from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Avail-Offers.svg'
+import Purchase from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Purchase-Online.svg'
+import give from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Rating _ Reviews.svg'
+import order from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/User App/Check-Order-History.svg'
 
 // Admin Penal
-import Vendor from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Vendor-Management.svg";
-import UserManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/User-Management.svg";
-import Payment from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Payment Management.svg";
-import Featured from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Featured-Profiles-Management.svg";
-import complaint from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/User-Complaint-Management.svg";
-import Seller from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Seller complaint management.svg";
+import Vendor from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Vendor-Management.svg'
+import UserManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/User-Management.svg'
+import Payment from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Payment Management.svg'
+import Featured from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Featured-Profiles-Management.svg'
+import complaint from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/User-Complaint-Management.svg'
+import Seller from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Admin Panel/Seller complaint management.svg'
 
 // Seller-Panel
-import Profile from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/profile-management.svg";
-import Product from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Product-Management.svg";
-import Category from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Category-Management.svg";
-import Management from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Order Management.svg";
-import Paymentmanagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Payment-Management-1.svg";
-import OfferManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Offer-Management.svg";
-import ShippingManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Shipping-Management.svg";
-import Inventory from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Inventory Management.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Profile from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/profile-management.svg'
+import Product from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Product-Management.svg'
+import Category from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Category-Management.svg'
+import Management from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Order Management.svg'
+import Paymentmanagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Payment-Management-1.svg'
+import OfferManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Offer-Management.svg'
+import ShippingManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Shipping-Management.svg'
+import Inventory from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/Seller Panel/Inventory Management.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const EcommerceApp = () => {
-  const [activeSection, setActiveSection] = useState("user_app");
-  const [data, setData] = useState([]);
-  const [activeWhyShould, setActiveWhyShould] = useState("mobile_shopping");
+  const [activeSection, setActiveSection] = useState('user_app')
+  const [data, setData] = useState([])
+  const [activeWhyShould, setActiveWhyShould] = useState('mobile_shopping')
 
   const EcommerceData = [
     {
       id: 1,
-      category: "user_app",
+      category: 'user_app',
       image: search,
-      title: "Search products",
-      des: "User can search for products by using a variety of filters.",
+      title: 'Search products',
+      des: 'User can search for products by using a variety of filters.',
     },
     {
       id: 2,
-      category: "user_app",
+      category: 'user_app',
       image: View,
-      title: "View products categories wise",
-      des: "Users can view and search for products across different categories.",
+      title: 'View products categories wise',
+      des:
+        'Users can view and search for products across different categories.',
     },
     {
       id: 3,
-      category: "user_app",
+      category: 'user_app',
       image: Cart,
-      title: "Cart management",
-      des: "Users can search and see lists of available courses.",
+      title: 'Cart management',
+      des: 'Users can search and see lists of available courses.',
     },
     {
       id: 4,
-      category: "user_app",
+      category: 'user_app',
       image: Wish,
-      title: "Wish Products",
-      des: "Users are also allowed to keep their chosen products under wish-list for future purchases.",
+      title: 'Wish Products',
+      des:
+        'Users are also allowed to keep their chosen products under wish-list for future purchases.',
     },
     {
       id: 5,
-      category: "user_app",
+      category: 'user_app',
       image: AvailOffers,
-      title: "Avail Offers",
-      des: "The user app also shows various offers available for the users.",
+      title: 'Avail Offers',
+      des: 'The user app also shows various offers available for the users.',
     },
     {
       id: 6,
-      category: "user_app",
+      category: 'user_app',
       image: Purchase,
-      title: "Purchase Online",
-      des: "Through the user panel the user can make online purchases.",
+      title: 'Purchase Online',
+      des: 'Through the user panel the user can make online purchases.',
     },
     {
       id: 7,
-      category: "user_app",
+      category: 'user_app',
       image: give,
-      title: "give ratings and reviews",
-      des: "Users can write reviews and give ratings on the basis of their satisfaction with the products.",
+      title: 'give ratings and reviews',
+      des:
+        'Users can write reviews and give ratings on the basis of their satisfaction with the products.',
     },
     {
       id: 8,
-      category: "user_app",
+      category: 'user_app',
       image: order,
-      title: "check order history",
-      des: "Can see course details and fix the zoom meeting.",
+      title: 'check order history',
+      des: 'Can see course details and fix the zoom meeting.',
     },
     {
       id: 9,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: Vendor,
-      title: "Vendor Management",
-      des: "App admin is allowed to take full control of the management of the vendors.",
+      title: 'Vendor Management',
+      des:
+        'App admin is allowed to take full control of the management of the vendors.',
     },
     {
       id: 10,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: UserManagement,
-      title: "User Management",
-      des: "App admin can easily manage user profiles right from the admin panel.",
+      title: 'User Management',
+      des:
+        'App admin can easily manage user profiles right from the admin panel.',
     },
     {
       id: 11,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: Payment,
-      title: "Payment Management",
-      des: "The app admin can manage all payment gateways and payment procedures.",
+      title: 'Payment Management',
+      des:
+        'The app admin can manage all payment gateways and payment procedures.',
     },
     {
       id: 12,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: Featured,
-      title: "Featured profile management",
-      des: "The app admin panel also allows handling a section relating to some chosen customer profiles.",
+      title: 'Featured profile management',
+      des:
+        'The app admin panel also allows handling a section relating to some chosen customer profiles.',
     },
     {
       id: 13,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: complaint,
-      title: "User complaint management",
-      des: "Through the admin panel the app admin can take cognisance if complaints and grievances and address them.",
+      title: 'User complaint management',
+      des:
+        'Through the admin panel the app admin can take cognisance if complaints and grievances and address them.',
     },
     {
       id: 14,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: Seller,
-      title: "Seller complaint management",
-      des: "Through the admin panel, the app admin can also take note of all the seller complaints in order to address them.",
+      title: 'Seller complaint management',
+      des:
+        'Through the admin panel, the app admin can also take note of all the seller complaints in order to address them.',
     },
     {
       id: 15,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: Profile,
-      title: "Profile Management",
-      des: "The seller panel allows sellers to maintain and manage their own seller profiles equipped with business credentials and contact details.",
+      title: 'Profile Management',
+      des:
+        'The seller panel allows sellers to maintain and manage their own seller profiles equipped with business credentials and contact details.',
     },
     {
       id: 16,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: Product,
-      title: "Product Management",
-      des: "The seller through the seller panel can manage their products and decide to make a feature list and categories as applicable.",
+      title: 'Product Management',
+      des:
+        'The seller through the seller panel can manage their products and decide to make a feature list and categories as applicable.',
     },
     {
       id: 17,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: Category,
-      title: "Category management",
-      des: "The seller panel allows creating product categories and denominations to help easy search and viewing.",
+      title: 'Category management',
+      des:
+        'The seller panel allows creating product categories and denominations to help easy search and viewing.',
     },
     {
       id: 18,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: Management,
-      title: "Order Management",
-      des: "The seller panel also allows managing all customer orders.",
+      title: 'Order Management',
+      des: 'The seller panel also allows managing all customer orders.',
     },
     {
       id: 19,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: Paymentmanagement,
-      title: "Payment management",
-      des: "Through seller panel the seller can manage customer payment.",
+      title: 'Payment management',
+      des: 'Through seller panel the seller can manage customer payment.',
     },
     {
       id: 20,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: OfferManagement,
-      title: "Offer Management",
-      des: "The seller panel also allows the seller to manage offers and promotions.",
+      title: 'Offer Management',
+      des:
+        'The seller panel also allows the seller to manage offers and promotions.',
     },
     {
       id: 21,
-      category: "seller_panel",
+      category: 'seller_panel',
       image: ShippingManagement,
-      title: "Shipping Management",
-      des: "Through the seller panel, the seller can also manage the shipping of products.",
+      title: 'Shipping Management',
+      des:
+        'Through the seller panel, the seller can also manage the shipping of products.',
     },
     {
       id: 22,
-      category: "user_app",
+      category: 'user_app',
       image: Inventory,
-      title: "Inventory management",
-      des: "The seller panel also comes with an inventory management suite to take control of the entire process.",
+      title: 'Inventory management',
+      des:
+        'The seller panel also comes with an inventory management suite to take control of the entire process.',
     },
-  ];
+  ]
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   const filterItem = () => {
     const updateItems = EcommerceData.filter((curElem) => {
-      return curElem.category === activeSection;
-    });
-    setData(updateItems);
-  };
+      return curElem.category === activeSection
+    })
+    setData(updateItems)
+  }
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
 
   // run when activesection changes
   useEffect(() => {
-    filterItem();
-  }, [activeSection]);
+    filterItem()
+  }, [activeSection])
 
   return (
     <>
       {/* common Banner start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>E-Commerce App Store</h2>
-                <p>
-                  As most businesses are coming onto the digital space to stay
-                  competitive, there is a boom in the eCommerce App Development
-                  stores. Ecommerce stores offering a level-playing field for
-                  businesses of all sizes and niches are opening the next big
-                  growth opportunity. We build robust ecommerce stores with
-                  cutting edge technologies and the latest design protocols to
-                  help business brands take on the growth opportunities in the
-                  online marketplace.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best E-Commerce App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your E-Commerce App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/eCommerce-App-Development.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>eCommerce App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/eCommerce-Mobile-App-Development.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>eCommerce Mobile App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/eCommerce-Application-Development-Company.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>eCommerce Application Development Company</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>GET A FREE DEMO</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="E-Commerce App Store"
+        des="As most businesses are coming onto the digital space to stay competitive, there is a boom in the eCommerce App Development stores. Ecommerce stores offering a level-playing field for businesses of all sizes and niches are opening the next big growth opportunity. We build robust ecommerce stores with cutting edge technologies and the latest design protocols to help business brands take on the growth opportunities in the online marketplace."
+        list1="7+ Years of experience in App Development"
+        list2="Best E-Commerce App Development Company"
+        list3="Dedicated team for your E-Commerce App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="eCommerce App Development"
+        service2="eCommerce Mobile App Development"
+        service3="eCommerce Application Development Company"
+        image1={Development}
+        image2={Services}
+        image3={developer}
+      />
       {/* common banner end  */}
       {/* Food Delivery App Section Start */}
       <section className="service__provide__section py-5">
@@ -395,7 +270,7 @@ const EcommerceApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "user_app" && "active"
+                    activeSection === 'user_app' && 'active'
                   }`}
                   id="User-App-Tab"
                   data-bs-toggle="pill"
@@ -404,8 +279,8 @@ const EcommerceApp = () => {
                   role="tab"
                   aria-controls="User-App"
                   aria-selected="true"
-                  onClick={() => setActiveSection("user_app")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('user_app')}
+                  style={{ cursor: 'pointer' }}
                 >
                   User App
                 </button>
@@ -413,7 +288,7 @@ const EcommerceApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "passenger_app" && "active"
+                    activeSection === 'passenger_app' && 'active'
                   }`}
                   id="Admin-Panel-Tab"
                   data-bs-toggle="pill"
@@ -422,8 +297,8 @@ const EcommerceApp = () => {
                   role="tab"
                   aria-controls="Admin-Panel"
                   aria-selected="false"
-                  onClick={() => setActiveSection("admin_panel")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('admin_panel')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Admin Panel
                 </button>
@@ -431,7 +306,7 @@ const EcommerceApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "passenger_app" && "active"
+                    activeSection === 'passenger_app' && 'active'
                   }`}
                   id="Seller-Panel-Tab"
                   data-bs-toggle="pill"
@@ -440,8 +315,8 @@ const EcommerceApp = () => {
                   role="tab"
                   aria-controls="Seller-Panel"
                   aria-selected="false"
-                  onClick={() => setActiveSection("seller_panel")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('seller_panel')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Seller Panel
                 </button>
@@ -456,7 +331,7 @@ const EcommerceApp = () => {
               >
                 <div className="row">
                   {data.map((elem) => {
-                    const { id, image, des, title } = elem;
+                    const { id, image, des, title } = elem
                     return (
                       <div
                         key={id}
@@ -467,13 +342,13 @@ const EcommerceApp = () => {
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
-                            style={{ height: "60px" }}
+                            style={{ height: '60px' }}
                           />
                           <h4>{title}</h4>
                           <p>{des}</p>
                         </div>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -520,31 +395,31 @@ const EcommerceApp = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
+                    src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
@@ -564,17 +439,17 @@ const EcommerceApp = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("mobile_shopping")}
+                  onClick={() => setActiveWhyShould('mobile_shopping')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "mobile_shopping" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'mobile_shopping' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Mobile-Shopping-Made-Simple.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Mobile-Shopping-Made-Simple.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -583,17 +458,17 @@ const EcommerceApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("always_open")}
+                  onClick={() => setActiveWhyShould('always_open')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "always_open" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'always_open' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Always-Open-Storefront.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Always-Open-Storefront.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -602,17 +477,17 @@ const EcommerceApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("always_accessible")}
+                  onClick={() => setActiveWhyShould('always_accessible')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "always_accessible" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'always_accessible' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Always-Accessible-Customer-Support.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Always-Accessible-Customer-Support.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -621,17 +496,17 @@ const EcommerceApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("sophisticated_experience")}
+                  onClick={() => setActiveWhyShould('sophisticated_experience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "sophisticated_experience" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'sophisticated_experience' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Always-Open-Storefront.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Always-Open-Storefront.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -640,17 +515,17 @@ const EcommerceApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("easier_product")}
+                  onClick={() => setActiveWhyShould('easier_product')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "easier_product" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'easier_product' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Easier-Product-Promotions.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Easier-Product-Promotions.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -659,17 +534,17 @@ const EcommerceApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("higher_roi")}
+                  onClick={() => setActiveWhyShould('higher_roi')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "higher_roi" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'higher_roi' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Higher-ROI-Growth.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Commerce App Store/why-should/Higher-ROI-Growth.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -678,7 +553,7 @@ const EcommerceApp = () => {
                 </div>
               </div>
             </div>
-            {activeWhyShould === "mobile_shopping" && (
+            {activeWhyShould === 'mobile_shopping' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -687,17 +562,17 @@ const EcommerceApp = () => {
                     </h3>
                     <p className="Title_para">
                       As most users now access contents and online stores on
-                      their{" "}
+                      their{' '}
                       <Link
                         to="/"
                         className="Title_Color"
-                        style={{ color: "#d6aa0b" }}
+                        style={{ color: '#d6aa0b' }}
                         onClick={() => {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
                         }}
                       >
                         <b> mobile app</b>
-                      </Link>{" "}
+                      </Link>{' '}
                       screen, an eCommerce App Development for mobile is a
                       natural value proposition.
                     </p>
@@ -705,7 +580,7 @@ const EcommerceApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "always_open" && (
+            {activeWhyShould === 'always_open' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -719,7 +594,7 @@ const EcommerceApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "always_accessible" && (
+            {activeWhyShould === 'always_accessible' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -735,12 +610,12 @@ const EcommerceApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "sophisticated_experience" && (
+            {activeWhyShould === 'sophisticated_experience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Sophisticated shopping experience{" "}
+                      Sophisticated shopping experience{' '}
                     </h3>
                     <p className="Title_para">
                       By integrating sophisticated features and design elements
@@ -751,12 +626,12 @@ const EcommerceApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "easier_product" && (
+            {activeWhyShould === 'easier_product' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Easier product promotions{" "}
+                      Easier product promotions{' '}
                     </h3>
                     <p className="Title_para">
                       An eCommerce App Development allows more lucrative and
@@ -767,7 +642,7 @@ const EcommerceApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "higher_roi" && (
+            {activeWhyShould === 'higher_roi' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -792,7 +667,7 @@ const EcommerceApp = () => {
       <ContactUs question="Would you like to create an E-Commerce App?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default EcommerceApp;
+export default EcommerceApp

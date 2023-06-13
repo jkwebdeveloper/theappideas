@@ -1,40 +1,45 @@
-import React, { useState } from "react";
-import Work from "../../../components/Workdone/Work";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import React, { useState, useEffect } from 'react'
+import Work from '../../../components/Workdone/Work'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import mobileweb from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg";
-import mobileaap from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg";
-import webapp from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Website Development Company.svg";
+import mobileweb from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg'
+import mobileaap from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg'
+import webapp from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Website Development Company.svg'
 
 // Service section image
-import SEO from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/SEO Consultancy.svg";
-import Keyword from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Keyword and Market Research.svg";
-import Onsite from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Onsite and Technical SEO.svg";
-import Off from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Off-page SEO.svg";
-import Guest from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Guest Blogging.svg";
-import Social from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Social Media Marketing.svg";
-import Pay from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Pay per Click (PPC).svg";
-import AppStore from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/App Store Optimization (ASO).svg";
-import Content from "../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Content Marketing.svg";
+import SEO from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/SEO Consultancy.svg'
+import Keyword from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Keyword and Market Research.svg'
+import Onsite from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Onsite and Technical SEO.svg'
+import Off from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Off-page SEO.svg'
+import Guest from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Guest Blogging.svg'
+import Social from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Social Media Marketing.svg'
+import Pay from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Pay per Click (PPC).svg'
+import AppStore from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/App Store Optimization (ASO).svg'
+import Content from '../../../assets/images/SERVICES/Digital Marketing Agency/Services we provide/Content Marketing.svg'
 
 // service provide section images
-import Real from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Real Estate Industry.svg";
-import Small from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Small Industry.svg";
-import Restaurant from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Restaurant Industry.svg";
-import Apparel from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Apparel Industry.svg";
-import Finance from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Finance Industry.svg";
-import Sports from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Sports Industry.svg";
-import Arts from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Arts and Entertainment Industry.svg";
-import Marketplace from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Marketplace Industry.svg";
-import Beauty from "../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Beauty Industry.svg";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import Real from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Real Estate Industry.svg'
+import Small from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Small Industry.svg'
+import Restaurant from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Restaurant Industry.svg'
+import Apparel from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Apparel Industry.svg'
+import Finance from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Finance Industry.svg'
+import Sports from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Sports Industry.svg'
+import Arts from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Arts and Entertainment Industry.svg'
+import Marketplace from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Marketplace Industry.svg'
+import Beauty from '../../../assets/images/SERVICES/Digital Marketing Agency/Industries We Serve/Beauty Industry.svg'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const DigitalMarketing = () => {
-  const [activeService, setActiveService] = useState("seo");
-  const [activeServe, setActiveServe] = useState("real_estate");
+  const [activeService, setActiveService] = useState('seo')
+  const [activeServe, setActiveServe] = useState('real_estate')
 
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
@@ -74,12 +79,12 @@ const DigitalMarketing = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("seo")}
+                  onClick={() => setActiveService('seo')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "seo" && "service__provide_tab_active"
+                      activeService === 'seo' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -95,13 +100,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("keyword")}
+                  onClick={() => setActiveService('keyword')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "keyword" &&
-                      "service__provide_tab_active"
+                      activeService === 'keyword' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -117,13 +122,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("onsite_technical")}
+                  onClick={() => setActiveService('onsite_technical')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "onsite_technical" &&
-                      "service__provide_tab_active"
+                      activeService === 'onsite_technical' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -139,13 +144,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("off_page")}
+                  onClick={() => setActiveService('off_page')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "off_page" &&
-                      "service__provide_tab_active"
+                      activeService === 'off_page' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={Off} alt="Off-Page-SEO" className="img-fluid" />
@@ -157,13 +162,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("guest_blogging")}
+                  onClick={() => setActiveService('guest_blogging')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "guest_blogging" &&
-                      "service__provide_tab_active"
+                      activeService === 'guest_blogging' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -179,13 +184,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("social_marketing")}
+                  onClick={() => setActiveService('social_marketing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "social_marketing" &&
-                      "service__provide_tab_active"
+                      activeService === 'social_marketing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -201,13 +206,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("pay_per_click")}
+                  onClick={() => setActiveService('pay_per_click')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "pay_per_click" &&
-                      "service__provide_tab_active"
+                      activeService === 'pay_per_click' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -223,13 +228,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_store")}
+                  onClick={() => setActiveService('app_store')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "app_store" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_store' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -245,13 +250,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("content_marketing")}
+                  onClick={() => setActiveService('content_marketing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "content_marketing" &&
-                      "service__provide_tab_active"
+                      activeService === 'content_marketing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -267,7 +272,7 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             </div>
-            {activeService === "seo" && (
+            {activeService === 'seo' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -298,7 +303,7 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             )}
-            {activeService === "keyword" && (
+            {activeService === 'keyword' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -331,8 +336,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "onsite_technical" && (
+            )}{' '}
+            {activeService === 'onsite_technical' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -364,8 +369,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "off_page" && (
+            )}{' '}
+            {activeService === 'off_page' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -395,8 +400,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "guest_blogging" && (
+            )}{' '}
+            {activeService === 'guest_blogging' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -426,8 +431,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "social_marketing" && (
+            )}{' '}
+            {activeService === 'social_marketing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -456,8 +461,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "pay_per_click" && (
+            )}{' '}
+            {activeService === 'pay_per_click' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -486,8 +491,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "app_store" && (
+            )}{' '}
+            {activeService === 'app_store' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -522,7 +527,7 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             )}
-            {activeService === "content_marketing" && (
+            {activeService === 'content_marketing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -566,45 +571,61 @@ const DigitalMarketing = () => {
           </div>
           <div className="row">
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/SEO.webp")}
+                  src={require('../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/SEO.webp')}
                   alt="SEO"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>SEO</h2>
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/digital-marketing.webp")}
+                  src={require('../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/digital-marketing.webp')}
                   alt="digital-marketing"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Social Media Marketing</h2>
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/ASO.webp")}
+                  src={require('../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/ASO.webp')}
                   alt="ASO"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>ASO</h2>
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/guest-blogging.webp")}
+                  src={require('../../../assets/images/SERVICES/Digital Marketing Agency/Technologies/guest-blogging.webp')}
                   alt="guest-blogging"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Guest Blogging</h2>
               </div>
@@ -624,13 +645,13 @@ const DigitalMarketing = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("real_estate")}
+                  onClick={() => setActiveServe('real_estate')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "real_estate" &&
-                      "service__provide_tab_active"
+                      activeServe === 'real_estate' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={Real} alt="Real-Estate" className="img-fluid" />
@@ -642,13 +663,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("small_industry")}
+                  onClick={() => setActiveServe('small_industry')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "small_industry" &&
-                      "service__provide_tab_active"
+                      activeServe === 'small_industry' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -664,13 +685,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("restaurant")}
+                  onClick={() => setActiveServe('restaurant')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "restaurant" &&
-                      "service__provide_tab_active"
+                      activeServe === 'restaurant' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -686,12 +707,12 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("apparel")}
+                  onClick={() => setActiveServe('apparel')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "apparel" && "service__provide_tab_active"
+                      activeServe === 'apparel' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -707,12 +728,12 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("finance")}
+                  onClick={() => setActiveServe('finance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "finance" && "service__provide_tab_active"
+                      activeServe === 'finance' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -728,12 +749,12 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("sports")}
+                  onClick={() => setActiveServe('sports')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "sports" && "service__provide_tab_active"
+                      activeServe === 'sports' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -749,13 +770,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("arts_entertainment")}
+                  onClick={() => setActiveServe('arts_entertainment')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "arts_entertainment" &&
-                      "service__provide_tab_active"
+                      activeServe === 'arts_entertainment' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -771,13 +792,13 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("marketplace")}
+                  onClick={() => setActiveServe('marketplace')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "marketplace" &&
-                      "service__provide_tab_active"
+                      activeServe === 'marketplace' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -793,12 +814,12 @@ const DigitalMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("beauty")}
+                  onClick={() => setActiveServe('beauty')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "beauty" && "service__provide_tab_active"
+                      activeServe === 'beauty' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -814,7 +835,7 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             </div>
-            {activeServe === "real_estate" && (
+            {activeServe === 'real_estate' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -842,7 +863,7 @@ const DigitalMarketing = () => {
                 </div>
               </div>
             )}
-            {activeServe === "small_industry" && (
+            {activeServe === 'small_industry' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -871,8 +892,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "restaurant" && (
+            )}{' '}
+            {activeServe === 'restaurant' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -903,8 +924,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "apparel" && (
+            )}{' '}
+            {activeServe === 'apparel' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -934,8 +955,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "finance" && (
+            )}{' '}
+            {activeServe === 'finance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -966,8 +987,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "sports" && (
+            )}{' '}
+            {activeServe === 'sports' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -998,8 +1019,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "arts_entertainment" && (
+            )}{' '}
+            {activeServe === 'arts_entertainment' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1032,8 +1053,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "marketplace" && (
+            )}{' '}
+            {activeServe === 'marketplace' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1064,8 +1085,8 @@ const DigitalMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "beauty" && (
+            )}{' '}
+            {activeServe === 'beauty' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1110,7 +1131,7 @@ const DigitalMarketing = () => {
       <FAQ />
       <ContactUs question="Are you looking for the best Digital Marketing Agency?" />
     </>
-  );
-};
+  )
+}
 
-export default DigitalMarketing;
+export default DigitalMarketing

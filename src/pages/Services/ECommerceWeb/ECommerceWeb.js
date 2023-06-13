@@ -1,40 +1,44 @@
-import React, { useState } from "react";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import React, { useState, useEffect } from 'react'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import mobileweb from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg";
-import mobileaap from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg";
-import webapp from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Website Development Company.svg";
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import mobileweb from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg'
+import mobileaap from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg'
+import webapp from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Website Development Company.svg'
 
 // Service section image
-import Custom from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Custom E-Commerce Website Development.svg";
-import Cart from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/E-commerce Cart Development.svg";
-import Plugin from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Plugin And Extensions Development.svg";
-import Redevelopment from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Redevelopment Service.svg";
-import Maintenance from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Maintenance And Support.svg";
-import Redesigning from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Redesigning Service.svg";
-import ThirdParty from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Third-party APIs integration.svg";
-import ECommerceSEO from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/E-commerce SEO.svg";
-import Site from "../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Site Migration.svg";
+import Custom from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Custom E-Commerce Website Development.svg'
+import Cart from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/E-commerce Cart Development.svg'
+import Plugin from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Plugin And Extensions Development.svg'
+import Redevelopment from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Redevelopment Service.svg'
+import Maintenance from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Maintenance And Support.svg'
+import Redesigning from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Redesigning Service.svg'
+import ThirdParty from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Third-party APIs integration.svg'
+import ECommerceSEO from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/E-commerce SEO.svg'
+import Site from '../../../assets/images/SERVICES/E-Commerce Website/Services we provide/Site Migration.svg'
 
 // Industries We Serve section images
-import Grocery from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Grocery Industry.svg";
-import Food from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Food and Beverage Industry.svg";
-import Electronics from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Electronics Industry.svg";
-import Logistics from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Logistics Industry.svg";
-import Fashion from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Fashion Industry.svg";
-import Retail from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Retail Industry.svg";
-import Business from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Business Industry.svg";
-import Education from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Education Industry.svg";
-import Rental from "../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Rental Industry.svg";
-import WorkSlider from "../../../components/WorkSlider";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import Grocery from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Grocery Industry.svg'
+import Food from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Food and Beverage Industry.svg'
+import Electronics from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Electronics Industry.svg'
+import Logistics from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Logistics Industry.svg'
+import Fashion from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Fashion Industry.svg'
+import Retail from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Retail Industry.svg'
+import Business from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Business Industry.svg'
+import Education from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Education Industry.svg'
+import Rental from '../../../assets/images/SERVICES/E-Commerce Website/Industries We Serve/Rental Industry.svg'
+import WorkSlider from '../../../components/WorkSlider'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const ECommerceWeb = () => {
-  const [activeService, setActiveService] = useState("custom_e_commerce");
-  const [activeWeServe, setActiveWeServe] = useState("grocery_industry");
-
+  const [activeService, setActiveService] = useState('custom_e_commerce')
+  const [activeWeServe, setActiveWeServe] = useState('grocery_industry')
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
@@ -73,13 +77,13 @@ const ECommerceWeb = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("custom_e_commerce")}
+                  onClick={() => setActiveService('custom_e_commerce')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "custom_e_commerce" &&
-                      "service__provide_tab_active"
+                      activeService === 'custom_e_commerce' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -95,13 +99,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("e_commerce_cart")}
+                  onClick={() => setActiveService('e_commerce_cart')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "e_commerce_cart" &&
-                      "service__provide_tab_active"
+                      activeService === 'e_commerce_cart' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -117,13 +121,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("plugin")}
+                  onClick={() => setActiveService('plugin')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "plugin" &&
-                      "service__provide_tab_active"
+                      activeService === 'plugin' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -139,13 +143,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("maintenance_support")}
+                  onClick={() => setActiveService('maintenance_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "maintenance_support" &&
-                      "service__provide_tab_active"
+                      activeService === 'maintenance_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -161,13 +165,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("redesigning_service")}
+                  onClick={() => setActiveService('redesigning_service')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "redesigning_service" &&
-                      "service__provide_tab_active"
+                      activeService === 'redesigning_service' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -183,13 +187,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("redevelopment")}
+                  onClick={() => setActiveService('redevelopment')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "redevelopment" &&
-                      "service__provide_tab_active"
+                      activeService === 'redevelopment' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img src={Redevelopment} alt="Redevelopment-Service" />
@@ -201,13 +205,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("third_party_api")}
+                  onClick={() => setActiveService('third_party_api')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "third_party_api" &&
-                      "service__provide_tab_active"
+                      activeService === 'third_party_api' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -223,13 +227,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("e_commerce_seo")}
+                  onClick={() => setActiveService('e_commerce_seo')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "e_commerce_seo" &&
-                      "service__provide_tab_active"
+                      activeService === 'e_commerce_seo' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -245,13 +249,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("site_migration")}
+                  onClick={() => setActiveService('site_migration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "site_migration" &&
-                      "service__provide_tab_active"
+                      activeService === 'site_migration' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -267,7 +271,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             </div>
-            {activeService === "custom_e_commerce" && (
+            {activeService === 'custom_e_commerce' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -302,12 +306,12 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "e_commerce_cart" && (
+            {activeService === 'e_commerce_cart' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      E-commerce Cart Development{" "}
+                      E-commerce Cart Development{' '}
                     </h3>
                     <p className="Title_para">
                       The App Ideas is one of the most popular E-commerce Cart
@@ -337,7 +341,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "plugin" && (
+            {activeService === 'plugin' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -370,7 +374,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "maintenance_support" && (
+            {activeService === 'maintenance_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -401,7 +405,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "redesigning_service" && (
+            {activeService === 'redesigning_service' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -433,7 +437,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "redevelopment" && (
+            {activeService === 'redevelopment' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -463,7 +467,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "third_party_api" && (
+            {activeService === 'third_party_api' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -497,7 +501,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "e_commerce_seo" && (
+            {activeService === 'e_commerce_seo' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -528,7 +532,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeService === "site_migration" && (
+            {activeService === 'site_migration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -573,56 +577,72 @@ const ECommerceWeb = () => {
           <div className="row">
             <div
               className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             >
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/shopify.png")}
+                  src={require('../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/shopify.png')}
                   alt="Shopify"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Shopify</h2>
               </div>
             </div>
             <div
               className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             >
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/magento.png")}
+                  src={require('../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/magento.png')}
                   alt="Magento"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Magento</h2>
               </div>
             </div>
             <div
               className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             >
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/joomla.png")}
+                  src={require('../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/joomla.png')}
                   alt="Joomla"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Joomla</h2>
               </div>
             </div>
             <div
               className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4"
-              style={{ cursor: "pointer" }}
+              style={{ cursor: 'pointer' }}
             >
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                data-aos-duration="1000"
+                className="technologies_box text-center"
+              >
                 <img
-                  src={require("../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/drupal.png")}
+                  src={require('../../../assets/images/SERVICES/E-Commerce Website/Tecnologies/drupal.png')}
                   alt="Drupal"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Drupal</h2>
               </div>
@@ -642,13 +662,13 @@ const ECommerceWeb = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("grocery_industry")}
+                  onClick={() => setActiveWeServe('grocery_industry')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "grocery_industry" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'grocery_industry' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -661,13 +681,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("food_beverage")}
+                  onClick={() => setActiveWeServe('food_beverage')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "food_beverage" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'food_beverage' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -683,13 +703,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("electronics")}
+                  onClick={() => setActiveWeServe('electronics')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "electronics" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'electronics' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -705,13 +725,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("logistics")}
+                  onClick={() => setActiveWeServe('logistics')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "logistics" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'logistics' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -727,13 +747,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("fashion")}
+                  onClick={() => setActiveWeServe('fashion')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "fashion" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'fashion' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -749,13 +769,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("retail")}
+                  onClick={() => setActiveWeServe('retail')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "retail" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'retail' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img src={Retail} alt="Retail-Industry" />
@@ -767,13 +787,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("business")}
+                  onClick={() => setActiveWeServe('business')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "business" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'business' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -789,13 +809,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("education")}
+                  onClick={() => setActiveWeServe('education')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "education" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'education' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -811,13 +831,13 @@ const ECommerceWeb = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("rental")}
+                  onClick={() => setActiveWeServe('rental')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "rental" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'rental' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -833,7 +853,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             </div>
-            {activeWeServe === "grocery_industry" && (
+            {activeWeServe === 'grocery_industry' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -864,7 +884,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "food_beverage" && (
+            {activeWeServe === 'food_beverage' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -898,7 +918,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "electronics" && (
+            {activeWeServe === 'electronics' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -929,7 +949,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "logistics" && (
+            {activeWeServe === 'logistics' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -961,7 +981,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "fashion" && (
+            {activeWeServe === 'fashion' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -994,7 +1014,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "retail" && (
+            {activeWeServe === 'retail' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1025,7 +1045,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "business" && (
+            {activeWeServe === 'business' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1056,7 +1076,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "education" && (
+            {activeWeServe === 'education' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1087,7 +1107,7 @@ const ECommerceWeb = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "rental" && (
+            {activeWeServe === 'rental' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1132,7 +1152,7 @@ const ECommerceWeb = () => {
       <FAQ />
       <ContactUs question="Are you looking for the best E-commerce Platform development company?" />
     </>
-  );
-};
+  )
+}
 
-export default ECommerceWeb;
+export default ECommerceWeb

@@ -1,321 +1,191 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useRef, useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// Banner
+import Development from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Dating-App.png'
+import Services from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Create-A-Dating-App.png'
+import developer from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Dating-App-Developer.png'
 
 //  Customer App
-import Social from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Social Media Login.svg";
-import ProfileManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/profile-manage-4.svg";
-import Find from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Find-Nearby-Dates.svg";
-import Swipe from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Swipe feature for showing interest not interested.svg";
-import Create from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Create-And-Share-Post.svg";
-import Like from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Like-Dislike-Comment.svg";
-import Match from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Match-With-The-Right-Date.svg";
-import Chat from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Chat, Audio and Video Call feature.svg";
+import Social from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Social Media Login.svg'
+import ProfileManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/profile-manage-4.svg'
+import Find from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Find-Nearby-Dates.svg'
+import Swipe from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Swipe feature for showing interest not interested.svg'
+import Create from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Create-And-Share-Post.svg'
+import Like from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Like-Dislike-Comment.svg'
+import Match from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Match-With-The-Right-Date.svg'
+import Chat from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/User Dating App/Chat, Audio and Video Call feature.svg'
 
 // Admin Features
-import User from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/User-Management-1.svg";
-import Payment from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Payment-Management-1.svg";
-import Black from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Black-List-User.svg";
-import Featured from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Featured-Profiles-Management.svg";
-import customizable from "../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Bad-words.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import User from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/User-Management-1.svg'
+import Payment from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Payment-Management-1.svg'
+import Black from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Black-List-User.svg'
+import Featured from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Featured-Profiles-Management.svg'
+import customizable from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Bad-words.svg'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const DatingApp = () => {
-  const [activeSection, setActiveSection] = useState("user_dating");
-  const [data, setData] = useState([]);
-  const [activeWhyShould, setActiveWhyShould] = useState("knowing_new_people");
+  const [activeSection, setActiveSection] = useState('user_dating')
+  const [data, setData] = useState([])
+  const [activeWhyShould, setActiveWhyShould] = useState('knowing_new_people')
 
   const DatingData = [
     {
       id: 1,
-      category: "user_dating",
+      category: 'user_dating',
       image: Social,
-      title: "Social Media Login",
-      des: "User can login and start using the app just by using their social media credentials.",
+      title: 'Social Media Login',
+      des:
+        'User can login and start using the app just by using their social media credentials.',
     },
     {
       id: 2,
-      category: "user_dating",
+      category: 'user_dating',
       image: ProfileManagement,
-      title: "Profile Management",
-      des: "User can manage their profiles that include their photos, personal information and contact details.",
+      title: 'Profile Management',
+      des:
+        'User can manage their profiles that include their photos, personal information and contact details.',
     },
     {
       id: 3,
-      category: "user_dating",
+      category: 'user_dating',
       image: Find,
-      title: "Find nearby dates",
-      des: "Users can see a variety of nearby dates and exercise their choice.",
+      title: 'Find nearby dates',
+      des: 'Users can see a variety of nearby dates and exercise their choice.',
     },
     {
       id: 4,
-      category: "user_dating",
+      category: 'user_dating',
       image: Swipe,
-      title: "Swipe feature for showing interest / not interested",
-      des: "Users can express their liking or disliking for any available dates just by swiping left or right.",
+      title: 'Swipe feature for showing interest / not interested',
+      des:
+        'Users can express their liking or disliking for any available dates just by swiping left or right.',
     },
     {
       id: 5,
-      category: "user_dating",
+      category: 'user_dating',
       image: Create,
-      title: "Create and share post",
-      des: "Users can make fresh content posts and share those posts for other users to reach out.",
+      title: 'Create and share post',
+      des:
+        'Users can make fresh content posts and share those posts for other users to reach out.',
     },
     {
       id: 6,
-      category: "user_dating",
+      category: 'user_dating',
       image: Like,
-      title: "Like, dislike, comment",
-      des: "Users can like, dislike and comment on various posts and profiles.",
+      title: 'Like, dislike, comment',
+      des: 'Users can like, dislike and comment on various posts and profiles.',
     },
     {
       id: 7,
-      category: "user_dating",
+      category: 'user_dating',
       image: Match,
-      title: "Match with the right date",
-      des: "Users can find the match with their right date and can engage with them.",
+      title: 'Match with the right date',
+      des:
+        'Users can find the match with their right date and can engage with them.',
     },
     {
       id: 8,
-      category: "user_dating",
+      category: 'user_dating',
       image: Chat,
-      title: "Chat, Audio and Video Call feature",
-      des: "Users can use chat messaging, audio and video calling feature to connect to dates and other profiles.",
+      title: 'Chat, Audio and Video Call feature',
+      des:
+        'Users can use chat messaging, audio and video calling feature to connect to dates and other profiles.',
     },
     {
       id: 9,
-      category: "admin_features",
+      category: 'admin_features',
       image: ProfileManagement,
-      title: "Profile Management",
-      des: "The admin is able to manage all user profiles registered with the app.",
+      title: 'Profile Management',
+      des:
+        'The admin is able to manage all user profiles registered with the app.',
     },
     {
       id: 10,
-      category: "admin_features",
+      category: 'admin_features',
       image: User,
-      title: "User Management",
-      des: "The admin can manage all the app users as per the rules and the standard practices.",
+      title: 'User Management',
+      des:
+        'The admin can manage all the app users as per the rules and the standard practices.',
     },
     {
       id: 11,
-      category: "admin_features",
+      category: 'admin_features',
       image: Payment,
-      title: "Payment Management",
-      des: "Admin panel takes care of origin easing and managing payments made by the user through different payment methods and gateways.",
+      title: 'Payment Management',
+      des:
+        'Admin panel takes care of origin easing and managing payments made by the user through different payment methods and gateways.',
     },
     {
       id: 12,
-      category: "admin_features",
+      category: 'admin_features',
       image: Black,
-      title: "Black list User",
-      des: "Admin can also black-list some users with records of abuses and malpractices.",
+      title: 'Black list User',
+      des:
+        'Admin can also black-list some users with records of abuses and malpractices.',
     },
     {
       id: 13,
-      category: "admin_features",
+      category: 'admin_features',
       image: Featured,
-      title: "Featured profiles management",
-      des: "The admin will also choose some users for featured profiles.",
+      title: 'Featured profiles management',
+      des: 'The admin will also choose some users for featured profiles.',
     },
     {
       id: 14,
-      category: "admin_features",
+      category: 'admin_features',
       image: customizable,
-      title: "“Bad words” customizable filter",
-      des: "The admin to make the platform clean and civic will use a custom filter to stop the use of abusive words.",
+      title: '“Bad words” customizable filter',
+      des:
+        'The admin to make the platform clean and civic will use a custom filter to stop the use of abusive words.',
     },
-  ];
+  ]
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   const filterItem = () => {
     const updateItems = DatingData.filter((curElem) => {
-      return curElem.category === activeSection;
-    });
-    setData(updateItems);
-  };
+      return curElem.category === activeSection
+    })
+    setData(updateItems)
+  }
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
 
   // run when activesection changes
   useEffect(() => {
-    filterItem();
-  }, [activeSection]);
+    filterItem()
+  }, [activeSection])
 
   return (
     <>
       {/* common Banner start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Dating App Development Company</h2>
-                <p>
-                  Love is no longer in the air but it is now visible and
-                  accessible right on the mobile screen thanks to the Dating App
-                  Development india. The dating apps are no longer meant for
-                  Generation Y but for people across all age groups. Every new
-                  dating app now focuses on catering to lovebirds of specific
-                  preferences or age groups or orientations. The kind of popular
-                  dating app market faces, there are enough rooms for new dating
-                  apps to get popular. Would you like to create a dating app?
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best E-learning App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Dating App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Dating-App.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-Learning App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Create-A-Dating-App.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-learning Mobile App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Dating-App-Developer.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-learning App Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>GET A FREE DEMO</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Dating App Development Company"
+        des="Love is no longer in the air but it is now visible and accessible right on the mobile screen thanks to the Dating App Development india. The dating apps are no longer meant for Generation Y but for people across all age groups. Every new dating app now focuses on catering to lovebirds of specific preferences or age groups or orientations. The kind of popular dating app market faces, there are enough rooms for new dating apps to get popular. Would you like to create a dating app?"
+        list1="7+ Years of experience in App Development"
+        list2="Best Dating App Development Company"
+        list3="Dedicated team for your Dating App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Dating App Development"
+        service2="Create A Dating App"
+        service3="Dating App Developer"
+        image1={Development}
+        image2={Services}
+        image3={developer}
+      />
       {/* common banner end  */}
       {/* Food Delivery App Section Start */}
       <section className="service__provide__section py-5">
@@ -328,7 +198,7 @@ const DatingApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "user_dating" && "active"
+                    activeSection === 'user_dating' && 'active'
                   }`}
                   id="User-Dating-Tab"
                   data-bs-toggle="pill"
@@ -337,8 +207,8 @@ const DatingApp = () => {
                   role="tab"
                   aria-controls="User-Dating"
                   aria-selected="true"
-                  onClick={() => setActiveSection("user_dating")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('user_dating')}
+                  style={{ cursor: 'pointer' }}
                 >
                   User Dating App
                 </button>
@@ -346,7 +216,7 @@ const DatingApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "admin_features" && "active"
+                    activeSection === 'admin_features' && 'active'
                   }`}
                   id="Admin-Features-Tab"
                   data-bs-toggle="pill"
@@ -355,8 +225,8 @@ const DatingApp = () => {
                   role="tab"
                   aria-controls="Admin-Features"
                   aria-selected="false"
-                  onClick={() => setActiveSection("admin_features")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('admin_features')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Admin Features of Dating App
                 </button>
@@ -371,7 +241,7 @@ const DatingApp = () => {
               >
                 <div className="row">
                   {data.map((elem) => {
-                    const { id, image, title, des } = elem;
+                    const { id, image, title, des } = elem
                     return (
                       <div
                         key={id}
@@ -382,13 +252,13 @@ const DatingApp = () => {
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
-                            style={{ height: "60px" }}
+                            style={{ height: '60px' }}
                           />
                           <h4>{title}</h4>
                           <p>{des}</p>
                         </div>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -435,31 +305,31 @@ const DatingApp = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
+                    src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
@@ -481,17 +351,17 @@ const DatingApp = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("knowing_new_people")}
+                  onClick={() => setActiveWhyShould('knowing_new_people')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "knowing_new_people" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'knowing_new_people' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Knowing-New-People.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Knowing-New-People.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -500,17 +370,17 @@ const DatingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("meeting_like")}
+                  onClick={() => setActiveWhyShould('meeting_like')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "meeting_like" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'meeting_like' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Meeting-Like-Minded-People.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Meeting-Like-Minded-People.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -519,17 +389,17 @@ const DatingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("branding_marketing")}
+                  onClick={() => setActiveWhyShould('branding_marketing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "branding_marketing" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'branding_marketing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Branding-And-Marketing.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Branding-And-Marketing.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -538,17 +408,17 @@ const DatingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("finding_travel")}
+                  onClick={() => setActiveWhyShould('finding_travel')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "finding_travel" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'finding_travel' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Finding-Travel-Buddies.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/Finding-Travel-Buddies.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -557,17 +427,17 @@ const DatingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("an_entretaining")}
+                  onClick={() => setActiveWhyShould('an_entretaining')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "an_entretaining" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'an_entretaining' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/An-Entertaining-Social-Space.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/An-Entertaining-Social-Space.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -576,17 +446,17 @@ const DatingApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("a_market_research")}
+                  onClick={() => setActiveWhyShould('a_market_research')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "a_market_research" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'a_market_research' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/A-Market-Research-Opportunity.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/why-should/A-Market-Research-Opportunity.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -595,7 +465,7 @@ const DatingApp = () => {
                 </div>
               </div>
             </div>
-            {activeWhyShould === "knowing_new_people" && (
+            {activeWhyShould === 'knowing_new_people' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -608,7 +478,7 @@ const DatingApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "meeting_like" && (
+            {activeWhyShould === 'meeting_like' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -622,8 +492,8 @@ const DatingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "branding_marketing" && (
+            )}{' '}
+            {activeWhyShould === 'branding_marketing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -636,8 +506,8 @@ const DatingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "finding_travel" && (
+            )}{' '}
+            {activeWhyShould === 'finding_travel' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -649,8 +519,8 @@ const DatingApp = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyShould === "an_entretaining" && (
+            )}{' '}
+            {activeWhyShould === 'an_entretaining' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -666,12 +536,12 @@ const DatingApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "a_market_research" && (
+            {activeWhyShould === 'a_market_research' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      A market research opportunity{" "}
+                      A market research opportunity{' '}
                     </h3>
                     <p className="Title_para">
                       Dating apps accommodating intimate conversation of people
@@ -693,7 +563,7 @@ const DatingApp = () => {
       <ContactUs question="Would you like to create an On Demand Dating App?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default DatingApp;
+export default DatingApp

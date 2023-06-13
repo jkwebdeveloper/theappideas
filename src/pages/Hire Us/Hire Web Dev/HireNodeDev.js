@@ -1,209 +1,70 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Faster Software Development.svg";
-import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Provide Customization.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Offer Node.Js Consulting Services.svg";
-import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Complete And Secure Web Solutions.svg";
-import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Web And App Development.svg";
-import Unit from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Features.svg";
+import VRApplicationDeveloper from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/VRApplicationDeveloper.webp'
+import Apps from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Mobile-Apps-Development.png'
+import Angular from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Game-App-Development-Company.webp'
 
-import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Expertise In Cross Platforms.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Robust Portfolio.svg";
-import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Best And Affordable Costing.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/On-Time Delivery.svg";
-import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Agile Methodology.svg";
-import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Support And Help.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Offer from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Faster Software Development.svg'
+import Features from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Provide Customization.svg'
+import Consulting from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Offer Node.Js Consulting Services.svg'
+import Secure from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Complete And Secure Web Solutions.svg'
+import Laravel from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Web And App Development.svg'
+import Unit from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/1/Node.Js Features.svg'
+
+import Expertise from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Expertise In Cross Platforms.svg'
+import Sophisticated from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Robust Portfolio.svg'
+import Implement from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Best And Affordable Costing.svg'
+import Affordable from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/On-Time Delivery.svg'
+import Time from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Agile Methodology.svg'
+import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/2/Support And Help.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HireNodeDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire Node JS App Developers In India</h2>
-                <p>
-                  Node js is a Software development platform that is open source
-                  and free server environment. The software platform developed
-                  in Node.js is compatible with various operating systems like
-                  Windows, Linux, Mac OS, and more. Node js is a Server-side
-                  platform for easily and quickly developing scalable network
-                  applications.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Node js development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Node js development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/VRApplicationDeveloper.webp")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Node js Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Mobile-Apps-Development.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Node js Development Company</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/Game-App-Development-Company.webp")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Node js Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire Node JS App Developers In India"
+        des="Node js is a Software development platform that is open source and free server environment. The software platform developed in Node.js is compatible with various operating systems like Windows, Linux, Mac OS, and more. Node js is a Server-side platform for easily and quickly developing scalable network applications."
+        list1="7+ Years of experience in App Development"
+        list2="Best Node js development Company"
+        list3="Dedicated team for your Node js development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Node js Development"
+        service2="Node js Development Company"
+        service3="Node js Developer"
+        image1={VRApplicationDeveloper}
+        image2={Apps}
+        image3={Angular}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
             <h3>Our Feat in Node JS Development</h3>
             <p>
-              As a Best{" "}
+              As a Best{' '}
               <Link
                 to="/"
                 className="Title_Color"
-                style={{ color: "#d6aa0b" }}
+                style={{ color: '#d6aa0b' }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b> software development company</b>
-              </Link>{" "}
+              </Link>{' '}
               , we are highly experienced as well as experts in delivering the
               best Node js web platforms solution to our clients. We have 4+
               years of experience in developing the best software solution at
@@ -221,11 +82,11 @@ const HireNodeDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -254,14 +115,14 @@ const HireNodeDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -272,7 +133,7 @@ const HireNodeDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/quiz-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/quiz-1536x948.webp')}
                         alt="port-ecommerce-website"
                         className="img-fluid"
                       />
@@ -296,14 +157,14 @@ const HireNodeDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -314,7 +175,7 @@ const HireNodeDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/Device-Image-5-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/Device-Image-5-1536x948.webp')}
                         alt="port-ecommerce-website-one"
                         className="img-fluid"
                       />
@@ -338,22 +199,22 @@ const HireNodeDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Web Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
-                            {" "}
+                            {' '}
                             Wordpress
                           </a>
                         </li>
@@ -363,7 +224,7 @@ const HireNodeDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/Device-Image-50-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS App Developer/work-hand/Device-Image-50-1536x948.webp')}
                         alt="port-webdevelop-webiste-two"
                         className="img-fluid"
                       />
@@ -391,7 +252,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -406,7 +267,7 @@ const HireNodeDev = () => {
                   <img
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -431,7 +292,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -446,7 +307,7 @@ const HireNodeDev = () => {
                   <img
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -471,7 +332,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -486,7 +347,7 @@ const HireNodeDev = () => {
                   <img
                     src={Features}
                     alt="CUSTOM WORDPRESS DEVELOPMENT"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -511,7 +372,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -526,7 +387,7 @@ const HireNodeDev = () => {
                   <img
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -551,7 +412,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -566,7 +427,7 @@ const HireNodeDev = () => {
                   <img
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -591,7 +452,7 @@ const HireNodeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -606,7 +467,7 @@ const HireNodeDev = () => {
                   <img
                     src={Unit}
                     alt="Unit Testing Methods"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -664,7 +525,7 @@ const HireNodeDev = () => {
                   <img
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -703,13 +564,13 @@ const HireNodeDev = () => {
                   <img
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Robust Portfolio</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   With 4+ years of experience, we have worked on various Node.js
                   projects and Successful platforms for different categories or
                   niches.
@@ -741,7 +602,7 @@ const HireNodeDev = () => {
                   <img
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -780,13 +641,13 @@ const HireNodeDev = () => {
                   <img
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">On-Time Delivery</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   Along with the quotation or the costing of software
                   development, we also provide the timeline based on the
                   requirements. We strictly follow the timeline and deliver the
@@ -819,7 +680,7 @@ const HireNodeDev = () => {
                   <img
                     src={Time}
                     alt="Time-Bound Deployment"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -857,13 +718,13 @@ const HireNodeDev = () => {
                   <img
                     src={Free}
                     alt="Free Support Services"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Support And Help</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "25px" }}>
+                <div className="text" style={{ marginBottom: '25px' }}>
                   Along with the quality of the software and on-time delivery of
                   the services, after deployment, we offer support and
                   maintenance to our clients.
@@ -884,7 +745,7 @@ const HireNodeDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireNodeDev;
+export default HireNodeDev

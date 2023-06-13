@@ -1,210 +1,70 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Best UI UX Designing Services.svg";
-import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Custom Python Online Solution_1.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Python Web And App Development.svg";
-import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Deploy Secure Solution.svg";
-import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Python Cross-Platform Development.svg";
-import Unit from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Dynamic Website Development.svg";
+import VRApplicationDeveloper from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/Mobile-Apps-Development.png'
+import Apps from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/VRAppDevelopmentCompany.webp'
+import Angular from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/Game-App-Development-Company.webp'
 
-import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Skilled And Experienced Developers.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Robust Portfolio.svg";
-import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/AGILE DEVELOPMENT.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/On-Time Project Deployment.svg";
-import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Competitive Charges.svg";
-import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Free Support Services.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Offer from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Best UI UX Designing Services.svg'
+import Features from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Custom Python Online Solution_1.svg'
+import Consulting from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Python Web And App Development.svg'
+import Secure from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Deploy Secure Solution.svg'
+import Laravel from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Python Cross-Platform Development.svg'
+import Unit from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/1/Dynamic Website Development.svg'
+
+import Expertise from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Skilled And Experienced Developers.svg'
+import Sophisticated from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Robust Portfolio.svg'
+import Implement from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/AGILE DEVELOPMENT.svg'
+import Affordable from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/On-Time Project Deployment.svg'
+import Time from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Competitive Charges.svg'
+import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/2/Free Support Services.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HirePythonDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire Python App Developers In India</h2>
-                <p>
-                  Hire the Python Developer in India from The App Ideas. The App
-                  Ideas is one of the most popular web and app development
-                  company. We are highly expert in understanding the
-                  requirements of our client, analyze it and develop a perfect
-                  business solution which will be very helpful in your business
-                  growth. We offer the most sophisticated UI/UX design elements,
-                  better quality functionality and high-end features.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Python App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Python Web & App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/Mobile-Apps-Development.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>PHP Web Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/VRAppDevelopmentCompany.webp")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>PHP Development Services</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Python App Developer/Game-App-Development-Company.webp")}
-                        alt="
-                    IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>PHP Expert</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire Python App Developers In India"
+        des="Hire the Python Developer in India from The App Ideas. The App Ideas is one of the most popular web and app development company. We are highly expert in understanding the requirements of our client, analyze it and develop a perfect business solution which will be very helpful in your business growth. We offer the most sophisticated UI/UX design elements, better quality functionality and high-end features. "
+        list1="7+ Years of experience in App Development"
+        list2="Best Python App Development Company"
+        list3="Dedicated team for your Python Web &  App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Python Web & App Development"
+        service2="Python Development Company"
+        service3="Python Developers"
+        image1={VRApplicationDeveloper}
+        image2={Apps}
+        image3={Angular}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
             <h3>Our Feat in Python App Development</h3>
             <p>
-              The App Ideas is a Python web and{" "}
+              The App Ideas is a Python web and{' '}
               <Link
                 href="/mobile-app-development"
                 className="Title_Color"
-                style={{ color: "#d6aa0b" }}
+                style={{ color: '#d6aa0b' }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b> app development company </b>
-              </Link>{" "}
+              </Link>{' '}
               that is highly capable of creating the most elegant, sophisticated
               and future-ready python web and app solution. The online python
               solution can help your business to increase brand awareness online
@@ -224,11 +84,11 @@ const HirePythonDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -253,7 +113,7 @@ const HirePythonDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -268,7 +128,7 @@ const HirePythonDev = () => {
                   <img
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -293,7 +153,7 @@ const HirePythonDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -308,7 +168,7 @@ const HirePythonDev = () => {
                   <img
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -332,7 +192,7 @@ const HirePythonDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -347,7 +207,7 @@ const HirePythonDev = () => {
                   <img
                     src={Features}
                     alt="Laravel Features Integration"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -371,7 +231,7 @@ const HirePythonDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -386,7 +246,7 @@ const HirePythonDev = () => {
                   <img
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -411,7 +271,7 @@ const HirePythonDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -426,7 +286,7 @@ const HirePythonDev = () => {
                   <img
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -450,7 +310,7 @@ const HirePythonDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -465,7 +325,7 @@ const HirePythonDev = () => {
                   <img
                     src={Unit}
                     alt="Unit Testing Methods"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -523,7 +383,7 @@ const HirePythonDev = () => {
                   <img
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -561,13 +421,13 @@ const HirePythonDev = () => {
                   <img
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Strong Portfolio</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   We have developed a strong portfolio of various successful
                   python apps for various niches and developed for different
                   devices including the latest devices.
@@ -599,7 +459,7 @@ const HirePythonDev = () => {
                   <img
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -638,13 +498,13 @@ const HirePythonDev = () => {
                   <img
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">On-Time Project Deployment</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   Along with the best development services and best quotation,
                   we also offer the on-time deployment of the projects. We
                   strictly follow the timeline and deliver the services on time.
@@ -676,7 +536,7 @@ const HirePythonDev = () => {
                   <img
                     src={Time}
                     alt="Time-Bound Deployment"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -714,13 +574,13 @@ const HirePythonDev = () => {
                   <img
                     src={Free}
                     alt="Free Support Services"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Free Support Services</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "25px" }}>
+                <div className="text" style={{ marginBottom: '25px' }}>
                   After deployment of the app solution, we provide free
                   three-month support and maintenance services to our clients.
                 </div>
@@ -740,7 +600,7 @@ const HirePythonDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HirePythonDev;
+export default HirePythonDev

@@ -1,348 +1,215 @@
-import React, { useRef, useEffect, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useRef, useEffect, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+
+// Banner
+import Development from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-Learning-App-Development.png'
+import Services from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-learning-Mobile-App-Development.png'
+import developer from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-learning-App-Developer.png'
 
 //  User Panel
-import Login from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Login _ Register.svg";
-import ProfileManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/profile-management.svg";
-import View from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Search-and-view.svg";
-import Detailed from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Detailed-View.svg";
-import Course from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Course-Selection-Purchase.svg";
-import OrderHistory from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Check-Order-History.svg";
-import availability from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Set-availability.svg";
+import Login from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Login _ Register.svg'
+import ProfileManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/profile-management.svg'
+import View from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Search-and-view.svg'
+import Detailed from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Detailed-View.svg'
+import Course from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Course-Selection-Purchase.svg'
+import OrderHistory from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Check-Order-History.svg'
+import availability from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/User Panel/Set-availability.svg'
 
 //  Mentor Panel
-import LoginRegister from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Login _ Register.svg";
-import Profile from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/profile-manage-4.svg";
-import List from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/list-of-courses.svg";
-import Historyy from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Login _ Register.svg";
-import Schedule from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Schedule a meeting.svg";
-import Online from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Online-Meeting.svg";
+import LoginRegister from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Login _ Register.svg'
+import Profile from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/profile-manage-4.svg'
+import List from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/list-of-courses.svg'
+import Historyy from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Login _ Register.svg'
+import Schedule from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Schedule a meeting.svg'
+import Online from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Mentor Panel/Online-Meeting.svg'
 
 // Admin Panel
-import UserManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/User-Management-1.svg";
-import MentorManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Mentor-Management.svg";
-import Reviews from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Reviews Managemement.svg";
-import PaymentManagement from "../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Payment-Management-1.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import UserManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/User-Management-1.svg'
+import MentorManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Mentor-Management.svg'
+import Reviews from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Reviews Managemement.svg'
+import PaymentManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Payment-Management-1.svg'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const ElearningApp = () => {
-  const [activeSection, setActiveSection] = useState("user_panel");
-  const [data, setData] = useState([]);
-  const [activeWhyShould, setActiveWhyShould] = useState("anywhere_anytime");
+  const [activeSection, setActiveSection] = useState('user_panel')
+  const [data, setData] = useState([])
+  const [activeWhyShould, setActiveWhyShould] = useState('anywhere_anytime')
 
   const ElearningData = [
     {
       id: 1,
-      category: "user_panel",
+      category: 'user_panel',
       image: Login,
-      title: "Login & Register",
-      des: "Users can log in & register on the site.",
+      title: 'Login & Register',
+      des: 'Users can log in & register on the site.',
     },
     {
       id: 2,
-      category: "user_panel",
+      category: 'user_panel',
       image: ProfileManagement,
-      title: "Profile Management",
-      des: "Manage his/her profile.",
+      title: 'Profile Management',
+      des: 'Manage his/her profile.',
     },
     {
       id: 3,
-      category: "user_panel",
+      category: 'user_panel',
       image: View,
-      title: "Search & View",
-      des: "Users can search and see lists of available courses.",
+      title: 'Search & View',
+      des: 'Users can search and see lists of available courses.',
     },
     {
       id: 4,
-      category: "user_panel",
+      category: 'user_panel',
       image: Detailed,
-      title: "Detailed view",
-      des: "Contact tutor, check availability, check the detailed overview of the course.",
+      title: 'Detailed view',
+      des:
+        'Contact tutor, check availability, check the detailed overview of the course.',
     },
     {
       id: 5,
-      category: "user_panel",
+      category: 'user_panel',
       image: Course,
-      title: "Course selection & purchase",
-      des: "user can purchase any course, pay by visa or MasterCard.",
+      title: 'Course selection & purchase',
+      des: 'user can purchase any course, pay by visa or MasterCard.',
     },
     {
       id: 6,
-      category: "user_panel",
+      category: 'user_panel',
       image: OrderHistory,
-      title: "Order History",
-      des: "User can see his/her purchased course history.",
+      title: 'Order History',
+      des: 'User can see his/her purchased course history.',
     },
     {
       id: 7,
-      category: "user_panel",
+      category: 'user_panel',
       image: availability,
-      title: "Set availability and Attend",
-      des: "Can see course details and fix the zoom meeting.",
+      title: 'Set availability and Attend',
+      des: 'Can see course details and fix the zoom meeting.',
     },
     {
       id: 8,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: UserManagement,
-      title: "User Management",
-      des: "Can manage users.",
+      title: 'User Management',
+      des: 'Can manage users.',
     },
     {
       id: 9,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: MentorManagement,
-      title: "Mentor Management",
-      des: "Can manage mentors.",
+      title: 'Mentor Management',
+      des: 'Can manage mentors.',
     },
     {
       id: 10,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: Reviews,
-      title: "Reviews Managemement",
-      des: "Users can place a review for a mentor and according to reviews and ratings, their place on the site will be decided.",
+      title: 'Reviews Managemement',
+      des:
+        'Users can place a review for a mentor and according to reviews and ratings, their place on the site will be decided.',
     },
     {
       id: 11,
-      category: "admin_panel",
+      category: 'admin_panel',
       image: PaymentManagement,
-      title: "Payment Management",
-      des: "Can manage payment or fees for each course.",
+      title: 'Payment Management',
+      des: 'Can manage payment or fees for each course.',
     },
     {
       id: 12,
-      category: "mentor_panel",
+      category: 'mentor_panel',
       image: LoginRegister,
-      title: "Login & Register",
-      des: "Users needs to register with their credentials and create and use login ID and password.",
+      title: 'Login & Register',
+      des:
+        'Users needs to register with their credentials and create and use login ID and password.',
     },
     {
       id: 13,
-      category: "mentor_panel",
+      category: 'mentor_panel',
       image: Profile,
-      title: "Profile Management",
-      des: "The mentor panel will have access to all user profiles with the ease of managing them.",
+      title: 'Profile Management',
+      des:
+        'The mentor panel will have access to all user profiles with the ease of managing them.',
     },
     {
       id: 14,
-      category: "mentor_panel",
+      category: 'mentor_panel',
       image: List,
-      title: "List of Courses",
-      des: "The mentor panel will have a detailed list of courses and curriculums.",
+      title: 'List of Courses',
+      des:
+        'The mentor panel will have a detailed list of courses and curriculums.',
     },
     {
       id: 15,
-      category: "mentor_panel",
+      category: 'mentor_panel',
       image: Historyy,
-      title: "History",
-      des: "The mentor panel will showcase a historical account of the user’s progress through the curriculum.",
+      title: 'History',
+      des:
+        'The mentor panel will showcase a historical account of the user’s progress through the curriculum.',
     },
     {
       id: 16,
-      category: "mentor_panel",
+      category: 'mentor_panel',
       image: Schedule,
-      title: "Schedule a meeting",
-      des: "The mentor panel will help in scheduling meetings and study sessions between users and mentors.",
+      title: 'Schedule a meeting',
+      des:
+        'The mentor panel will help in scheduling meetings and study sessions between users and mentors.',
     },
     {
       id: 17,
-      category: "mentor_panel",
+      category: 'mentor_panel',
       image: Online,
-      title: "Online meeting",
-      des: "The mentor app will also help in conducting online meetings and study sessions between users and mentors.",
+      title: 'Online meeting',
+      des:
+        'The mentor app will also help in conducting online meetings and study sessions between users and mentors.',
     },
-  ];
+  ]
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   const filterItem = () => {
     const updateItems = ElearningData.filter((curElem) => {
-      return curElem.category === activeSection;
-    });
-    setData(updateItems);
-  };
+      return curElem.category === activeSection
+    })
+    setData(updateItems)
+  }
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
 
   // run when activesection changes
   useEffect(() => {
-    filterItem();
-  }, [activeSection]);
+    filterItem()
+  }, [activeSection])
 
   return (
     <>
       {/* common Banner start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>E-Learning App Store</h2>
-                <p>
-                  The modern education system is continuing to grow beyond the
-                  four walls of the classrooms thanks to the unprecedented
-                  growth in the elearning websites and apps in the last few
-                  years. As the demands for anywhere-anytime access to education
-                  is growing, more elearning websites and mobile apps will
-                  appear in the near future. We build sophisticated and
-                  future-ready elearning websites and apps for education and
-                  training curriculums of all types and categories.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best E-learning App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your E-learning App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-Learning-App-Development.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-Learning App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-learning-Mobile-App-Development.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-learning Mobile App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/E-learning-App-Developer.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>E-learning App Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>GET A FREE DEMO</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="E-Learning App Store"
+        des="The modern education system is continuing to grow beyond the four walls of the classrooms thanks to the unprecedented growth in the elearning websites and apps in the last few years. As the demands for anywhere-anytime access to education is growing, more elearning websites and mobile apps will appear in the near future. We build sophisticated and future-ready elearning websites and apps for education and training curriculums of all types and categories."
+        list1="7+ Years of experience in App Development"
+        list2="Best E-learning App Development Company"
+        list3="Dedicated team for your E-learning App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="E-Learning App Development"
+        service2="E-learning Mobile App Development"
+        service3="E-learning App Developer"
+        image1={Development}
+        image2={Services}
+        image3={developer}
+      />
       {/* common banner end  */}
       {/* Food Delivery App Section Start */}
       <section className="service__provide__section py-5">
@@ -355,7 +222,7 @@ const ElearningApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "user_panel" && "active"
+                    activeSection === 'user_panel' && 'active'
                   }`}
                   id="User-Panel-Tab"
                   data-bs-toggle="pill"
@@ -364,8 +231,8 @@ const ElearningApp = () => {
                   role="tab"
                   aria-controls="User-Panel"
                   aria-selected="true"
-                  onClick={() => setActiveSection("user_panel")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('user_panel')}
+                  style={{ cursor: 'pointer' }}
                 >
                   User Panel
                 </button>
@@ -373,7 +240,7 @@ const ElearningApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "mentor_panel" && "active"
+                    activeSection === 'mentor_panel' && 'active'
                   }`}
                   id="Mentor-App-Tab"
                   data-bs-toggle="pill"
@@ -382,8 +249,8 @@ const ElearningApp = () => {
                   role="tab"
                   aria-controls="Mentor-App"
                   aria-selected="false"
-                  onClick={() => setActiveSection("mentor_panel")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('mentor_panel')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Mentor Panel
                 </button>
@@ -391,7 +258,7 @@ const ElearningApp = () => {
               <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
-                    activeSection === "admin_panel" && "active"
+                    activeSection === 'admin_panel' && 'active'
                   }`}
                   id="Admin-App-Tab"
                   data-bs-toggle="pill"
@@ -400,8 +267,8 @@ const ElearningApp = () => {
                   role="tab"
                   aria-controls="Admin-App"
                   aria-selected="false"
-                  onClick={() => setActiveSection("admin_panel")}
-                  style={{ cursor: "pointer" }}
+                  onClick={() => setActiveSection('admin_panel')}
+                  style={{ cursor: 'pointer' }}
                 >
                   Admin Panel
                 </button>
@@ -416,7 +283,7 @@ const ElearningApp = () => {
               >
                 <div className="row">
                   {data.map((elem) => {
-                    const { id, image, title, des } = elem;
+                    const { id, image, title, des } = elem
                     return (
                       <div
                         key={id}
@@ -427,13 +294,13 @@ const ElearningApp = () => {
                             src={image}
                             alt="search-food-icon"
                             className="img-fluid"
-                            style={{ height: "60px" }}
+                            style={{ height: '60px' }}
                           />
                           <h4>{title}</h4>
                           <p>{des}</p>
                         </div>
                       </div>
-                    );
+                    )
                   })}
                 </div>
               </div>
@@ -480,31 +347,31 @@ const ElearningApp = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp")}
+                    src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
@@ -524,17 +391,17 @@ const ElearningApp = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("anywhere_anytime")}
+                  onClick={() => setActiveWhyShould('anywhere_anytime')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "anywhere_anytime" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'anywhere_anytime' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Anywhere-Anytime-Access.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Anywhere-Anytime-Access.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -543,17 +410,17 @@ const ElearningApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("custom_module")}
+                  onClick={() => setActiveWhyShould('custom_module')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "custom_module" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'custom_module' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Custom-Module-For-Learners.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Custom-Module-For-Learners.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -562,17 +429,17 @@ const ElearningApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("equipped")}
+                  onClick={() => setActiveWhyShould('equipped')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "equipped" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'equipped' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Equipped-For-Hands-On-Training.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Equipped-For-Hands-On-Training.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -581,17 +448,17 @@ const ElearningApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("affordable")}
+                  onClick={() => setActiveWhyShould('affordable')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "affordable" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'affordable' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Affordable-Education.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Affordable-Education.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -600,17 +467,17 @@ const ElearningApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("rigorous_learning")}
+                  onClick={() => setActiveWhyShould('rigorous_learning')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "rigorous_learning" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'rigorous_learning' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Rigorous-Learning.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Rigorous-Learning.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -619,17 +486,17 @@ const ElearningApp = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyShould("real_time")}
+                  onClick={() => setActiveWhyShould('real_time')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyShould === "real_time" &&
-                      "service__provide_tab_active"
+                      activeWhyShould === 'real_time' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Real-Time-Industry-Exposure.png")}
+                      src={require('../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/why-should/Real-Time-Industry-Exposure.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -638,7 +505,7 @@ const ElearningApp = () => {
                 </div>
               </div>
             </div>
-            {activeWhyShould === "anywhere_anytime" && (
+            {activeWhyShould === 'anywhere_anytime' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -651,7 +518,7 @@ const ElearningApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "custom_module" && (
+            {activeWhyShould === 'custom_module' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -666,12 +533,12 @@ const ElearningApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "equipped" && (
+            {activeWhyShould === 'equipped' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Equipped for hands-on training{" "}
+                      Equipped for hands-on training{' '}
                     </h3>
                     <p className="Title_para">
                       Thanks to the latest technologies like AR, VR, 3D
@@ -683,7 +550,7 @@ const ElearningApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "affordable" && (
+            {activeWhyShould === 'affordable' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -697,7 +564,7 @@ const ElearningApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "rigorous_learning" && (
+            {activeWhyShould === 'rigorous_learning' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -711,7 +578,7 @@ const ElearningApp = () => {
                 </div>
               </div>
             )}
-            {activeWhyShould === "real_time" && (
+            {activeWhyShould === 'real_time' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -737,7 +604,7 @@ const ElearningApp = () => {
       <ContactUs question="Would you like to create E-learning Website or Mobile App?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default ElearningApp;
+export default ElearningApp

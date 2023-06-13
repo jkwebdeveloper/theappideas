@@ -1,209 +1,70 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/CUSTOM PHP DEVELOPMENT.svg";
-import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1//CROSS PLATFORM PHP WEB APPLICATIONS.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/MAINTENANCE _ SUPPORT.svg";
-import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/DYNAMIC WEBSITE DEVELOPMENT.svg";
-import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/PHP E-COMMERCE DEVELOPMENT.svg";
-import Unit from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/SEAMLESS PHP PROGRAMMING.svg";
+import VRApplicationDeveloper from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/PHP-Web-Development.png'
+import Apps from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/PHP-Development-Services.png'
+import Angular from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/PHP-Expert.png'
 
-import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/DEDICATED FOR EXCELLENCE.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/Robust Portfolio.svg";
-import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/ROBUST SECURITY.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/FLEXIBILITY AND SCALABILITY.svg";
-import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/DEALING WITH ALL EXTENSIONS AND FRAMEWORKS.svg";
-import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/CROSS PLATFORM EXPERTISE.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Offer from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/CUSTOM PHP DEVELOPMENT.svg'
+import Features from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1//CROSS PLATFORM PHP WEB APPLICATIONS.svg'
+import Consulting from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/MAINTENANCE _ SUPPORT.svg'
+import Secure from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/DYNAMIC WEBSITE DEVELOPMENT.svg'
+import Laravel from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/PHP E-COMMERCE DEVELOPMENT.svg'
+import Unit from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/1/SEAMLESS PHP PROGRAMMING.svg'
+
+import Expertise from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/DEDICATED FOR EXCELLENCE.svg'
+import Sophisticated from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/Robust Portfolio.svg'
+import Implement from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/ROBUST SECURITY.svg'
+import Affordable from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/FLEXIBILITY AND SCALABILITY.svg'
+import Time from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/DEALING WITH ALL EXTENSIONS AND FRAMEWORKS.svg'
+import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/2/CROSS PLATFORM EXPERTISE.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HirePHPDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire PHP Developers In India</h2>
-                <p>
-                  The App Ideas is a leading Web development, Hire PHP
-                  developers company with a robust team of an expert PHP
-                  developer, Having years of front-line experience in building
-                  sophisticated websites and web apps with PHP as the active
-                  programming language, we have hundreds of satisfied clients
-                  across several niches and specialties.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best PHP Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your PHP Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/PHP-Web-Development.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>PHP Web Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/PHP-Development-Services.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>PHP Development Services</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/PHP-Expert.png")}
-                        alt="
-                    IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>PHP Expert</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire PHP Developers In India"
+        des="The App Ideas is a leading Web development, Hire PHP developers company with a robust team of an expert PHP developer, Having years of front-line experience in building sophisticated websites and web apps with PHP as the active programming language, we have hundreds of satisfied clients across several niches and specialties."
+        list1="7+ Years of experience in App Development"
+        list2="Best PHP Development Company"
+        list3="Dedicated team for your PHP Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="PHP Web Development"
+        service2="PHP Development Services"
+        service3="PHP Expert"
+        image1={VRApplicationDeveloper}
+        image2={Apps}
+        image3={Angular}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
             <h3>Our Feat in Web Industry</h3>
             <p>
-              The PHP developers working in our{" "}
+              The PHP developers working in our{' '}
               <Link
                 to="/web-development"
                 className="Title_Color"
-                style={{ color: "#d6aa0b" }}
+                style={{ color: '#d6aa0b' }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b> web development</b>
-              </Link>{" "}
+              </Link>{' '}
               projects have years of experience and resulting expertise in
               delivering the most sophisticated features with PHP-based
               websites.
@@ -226,11 +87,11 @@ const HirePHPDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -259,14 +120,14 @@ const HirePHPDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             PHP
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Web Development
                           </a>
@@ -277,7 +138,7 @@ const HirePHPDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/work-hand/Device-Image-6-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/work-hand/Device-Image-6-1536x948.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -301,14 +162,14 @@ const HirePHPDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             PHP
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Web Development
                           </a>
@@ -319,7 +180,7 @@ const HirePHPDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/work-hand/Device-Image-7-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/work-hand/Device-Image-7-1536x948.webp')}
                         alt="port-webdevelop-webiste-one"
                         className="img-fluid"
                       />
@@ -343,14 +204,14 @@ const HirePHPDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             PHP
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Web Development
                           </a>
@@ -361,7 +222,7 @@ const HirePHPDev = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/work-hand/Device-Image-3.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Developer/work-hand/Device-Image-3.webp')}
                         alt="port-webdevelop-webiste-sevan"
                         className="img-fluid"
                       />
@@ -392,7 +253,7 @@ const HirePHPDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -407,7 +268,7 @@ const HirePHPDev = () => {
                   <img
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -431,7 +292,7 @@ const HirePHPDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -446,7 +307,7 @@ const HirePHPDev = () => {
                   <img
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -470,7 +331,7 @@ const HirePHPDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -485,7 +346,7 @@ const HirePHPDev = () => {
                   <img
                     src={Features}
                     alt="Laravel Features Integration"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -509,7 +370,7 @@ const HirePHPDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -524,7 +385,7 @@ const HirePHPDev = () => {
                   <img
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -548,7 +409,7 @@ const HirePHPDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -563,7 +424,7 @@ const HirePHPDev = () => {
                   <img
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -587,7 +448,7 @@ const HirePHPDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -602,7 +463,7 @@ const HirePHPDev = () => {
                   <img
                     src={Unit}
                     alt="Unit Testing Methods"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -657,7 +518,7 @@ const HirePHPDev = () => {
                   <img
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -695,13 +556,13 @@ const HirePHPDev = () => {
                   <img
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">STRONG CREDENTIALS AND PORTFOLIO</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   Our Web developers having immense skills in website & web app
                   development and having robust portfolio of the websites built
                   by them.
@@ -733,7 +594,7 @@ const HirePHPDev = () => {
                   <img
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -771,13 +632,13 @@ const HirePHPDev = () => {
                   <img
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">FLEXIBILITY AND SCALABILITY</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   Our expert PHP developers are capable to build a website that
                   can be flexible to incorporate any type of contents with ease
                   and we build websites that can be scaled up in capacity to
@@ -810,7 +671,7 @@ const HirePHPDev = () => {
                   <img
                     src={Time}
                     alt="Time-Bound Deployment"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -850,13 +711,13 @@ const HirePHPDev = () => {
                   <img
                     src={Free}
                     alt="Free Support Services"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">CROSS PLATFORM EXPERTISE</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "25px" }}>
+                <div className="text" style={{ marginBottom: '25px' }}>
                   One of the core strengths of our PHP developers is the
                   capability to code with a wide range if databases for all
                   popular platforms including Windows, Linux and Mac OSX and a
@@ -879,7 +740,7 @@ const HirePHPDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HirePHPDev;
+export default HirePHPDev

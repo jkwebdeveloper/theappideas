@@ -1,18 +1,18 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import Mobile from "../../../assets/images/SERVICES/Designing/Mobile-app-design/Mobile-Apps-Development.png";
-import Application from "../../../assets/images/SERVICES/Designing/Mobile-app-design/Mobile-Application-Design.png";
-import Best from "../../../assets/images/SERVICES/Designing/Mobile-app-design/Best-Mobile-App-Design.png";
+import Mobile from '../../../assets/images/SERVICES/Designing/Mobile-app-design/Mobile-Apps-Development.png'
+import Application from '../../../assets/images/SERVICES/Designing/Mobile-app-design/Mobile-Application-Design.png'
+import Best from '../../../assets/images/SERVICES/Designing/Mobile-app-design/Best-Mobile-App-Design.png'
 
-import Work from "../../../components/Workdone/Work";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import Work from '../../../components/Workdone/Work'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const MobileAppDesign = () => {
-  const [activeWeOffer, setActiveWeOffer] = useState("ui_design");
-  const [activeWhyChoose, setActiveWhyChoose] = useState("strong_portfolio");
+  const [activeWeOffer, setActiveWeOffer] = useState('ui_design')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('strong_portfolio')
 
   return (
     <>
@@ -52,17 +52,17 @@ const MobileAppDesign = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("ui_design")}
+                  onClick={() => setActiveWeOffer('ui_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "ui_design" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'ui_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/ui.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/ui.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -74,17 +74,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("ux_design")}
+                  onClick={() => setActiveWeOffer('ux_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "ux_design" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'ux_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/ux.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/ux.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -96,17 +96,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("mobile_app")}
+                  onClick={() => setActiveWeOffer('mobile_app')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "mobile_app" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'mobile_app' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/redesign-1.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/redesign-1.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -115,17 +115,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("mobile_app_skinning")}
+                  onClick={() => setActiveWeOffer('mobile_app_skinning')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "mobile_app_skinning" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'mobile_app_skinning' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/skinning.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/skinning.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -134,17 +134,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("design_updates")}
+                  onClick={() => setActiveWeOffer('design_updates')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "design_updates" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'design_updates' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/updates.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/updates.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -156,17 +156,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("ui_ux_testing")}
+                  onClick={() => setActiveWeOffer('ui_ux_testing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "ui_ux_testing" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'ui_ux_testing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/testing.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/testing.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -175,7 +175,7 @@ const MobileAppDesign = () => {
                 </div>
               </div>
             </div>
-            {activeWeOffer === "ui_design" && (
+            {activeWeOffer === 'ui_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -202,7 +202,7 @@ const MobileAppDesign = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "ux_design" && (
+            {activeWeOffer === 'ux_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -227,7 +227,7 @@ const MobileAppDesign = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "mobile_app" && (
+            {activeWeOffer === 'mobile_app' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -252,8 +252,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeOffer === "mobile_app_skinning" && (
+            )}{' '}
+            {activeWeOffer === 'mobile_app_skinning' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -277,8 +277,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeOffer === "design_updates" && (
+            )}{' '}
+            {activeWeOffer === 'design_updates' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -302,8 +302,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeOffer === "ui_ux_testing" && (
+            )}{' '}
+            {activeWeOffer === 'ui_ux_testing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -345,17 +345,17 @@ const MobileAppDesign = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("strong_portfolio")}
+                  onClick={() => setActiveWhyChoose('strong_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "strong_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'strong_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/ui.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/why_choose/portfolio.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -366,17 +366,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/ux.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/why_choose/pricing.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -385,17 +385,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/redesign-1.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/why_choose/experience-expertise.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -404,17 +404,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("industry")}
+                  onClick={() => setActiveWhyChoose('industry')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "industry" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'industry' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/skinning.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/why_choose/industries-acc.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -423,17 +423,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("great_testing")}
+                  onClick={() => setActiveWhyChoose('great_testing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "great_testing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'great_testing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/updates.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/why_choose/testing-process.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -442,17 +442,17 @@ const MobileAppDesign = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("later_support")}
+                  onClick={() => setActiveWhyChoose('later_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "later_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'later_support' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Mobile-app-design/what-do/testing.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Mobile-app-design/why_choose/Mask-Group.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -463,7 +463,7 @@ const MobileAppDesign = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "strong_portfolio" && (
+            {activeWhyChoose === 'strong_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -488,7 +488,7 @@ const MobileAppDesign = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "competitive_pricing" && (
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -514,8 +514,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "experience_expertise" && (
+            )}{' '}
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -540,8 +540,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "industry" && (
+            )}{' '}
+            {activeWhyChoose === 'industry' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -566,8 +566,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "great_testing" && (
+            )}{' '}
+            {activeWhyChoose === 'great_testing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -591,8 +591,8 @@ const MobileAppDesign = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "later_support" && (
+            )}{' '}
+            {activeWhyChoose === 'later_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -632,7 +632,7 @@ const MobileAppDesign = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default MobileAppDesign;
+export default MobileAppDesign

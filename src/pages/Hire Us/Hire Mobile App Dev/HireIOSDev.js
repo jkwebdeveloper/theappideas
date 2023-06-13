@@ -1,207 +1,67 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import WorkHand from "../../../components/WorkHand";
-import custom from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/Hire Iphone App Developers.svg";
-import IOS from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/iOS-Game-Development.svg";
-import upgrade from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UPGRADE AND SUPPORT (1).svg";
-import WIDGET from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/CUSTOM WIDGET DEVELOPMENT.svg";
-import WEARABLE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/IOS WEARABLE APP DEVELOPMENT.svg";
-import uiux from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UIUX DEVELOPMENT.svg";
-import EXPERIENCE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/EXPERIENCE AND EXPERTISE.svg";
-import STRONG from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/STRONG PORTFOLIO.svg";
-import UNIQUE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/UNIQUE UI AND UX.svg";
-import FASTER from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/FASTER TIME-TO-MARKET.svg";
-import COMPETITIVE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/COMPETITIVE RATE _ SUPPORT.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import WorkHand from '../../../components/WorkHand'
+
+import Company from '../../../assets/images/HIRE US/IPhone-App-Development-Company.png'
+import Service from '../../../assets/images/HIRE US/IPhone-App-Development-Service.png'
+import ApplicationDevelopment from '../../../assets/images/HIRE US/IPhone-Application-Development.png'
+
+import custom from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/Hire Iphone App Developers.svg'
+import IOS from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/iOS-Game-Development.svg'
+import upgrade from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UPGRADE AND SUPPORT (1).svg'
+import WIDGET from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/CUSTOM WIDGET DEVELOPMENT.svg'
+import WEARABLE from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/IOS WEARABLE APP DEVELOPMENT.svg'
+import uiux from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/1/UIUX DEVELOPMENT.svg'
+import EXPERIENCE from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/EXPERIENCE AND EXPERTISE.svg'
+import STRONG from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/STRONG PORTFOLIO.svg'
+import UNIQUE from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/UNIQUE UI AND UX.svg'
+import FASTER from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/FASTER TIME-TO-MARKET.svg'
+import COMPETITIVE from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire IOS app developer/2/COMPETITIVE RATE _ SUPPORT.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HireIOSDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire Iphone App Developers In India</h2>
-                <p>
-                  Hire iPhone app developers in India from The App Ideas. as the
-                  world’s prestigious mobile platform and App Store as the most
-                  popular app marketplace populated by majority of mobile apps
-                  are invincible for the mobile strategy of any business. With
-                  high-end features, most sophisticated design elements and
-                  strict quality control measures iOS is also the platform to
-                  give your app a stamp of quality as and when the app enters
-                  the App Store.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Iphone App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Iphone App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/IPhone-App-Development-Company.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>IPhone App Development Company</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/IPhone-App-Development-Service.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>IPhone App Development Service</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/IPhone-Application-Development.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>IPhone Application Development</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire Iphone App Developers In India"
+        des="Hire iPhone app developers in India from The App Ideas. as the world’s prestigious mobile platform and App Store as the most popular app marketplace populated by majority of mobile apps are invincible for the mobile strategy of any business. With high-end features, most sophisticated design elements and strict quality control measures iOS is also the platform to give your app a stamp of quality as and when the app enters the App Store."
+        list1="7+ Years of experience in App Development"
+        list2="Best Iphone App Development Company"
+        list3="Dedicated team for your Iphone App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="IPhone App Development Company"
+        service2="IPhone App Development Service"
+        service3="IPhone Application Development"
+        image1={Company}
+        image2={Service}
+        image3={ApplicationDevelopment}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
             <h3>Our Feat in iPhone App Development</h3>
             <p>
-              The App Ideas is an{" "}
+              The App Ideas is an{' '}
               <Link
                 to="/iphone-app-development"
                 className="Title_Color"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b>iPhone app development company</b>
-              </Link>{" "}
+              </Link>{' '}
               capable to create most sophisticated, future ready iOS apps that
               can instantly give your business brand a recognition through a
               popular App Store presence. Over the years, we have produced a
@@ -220,11 +80,11 @@ const HireIOSDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -269,7 +129,7 @@ const HireIOSDev = () => {
                   <img
                     src={custom}
                     alt="Web Development"
-                    style={{ width: "13%" }}
+                    style={{ width: '13%' }}
                   />
                 </div>
                 <h5>
@@ -307,7 +167,7 @@ const HireIOSDev = () => {
                   <img
                     src={IOS}
                     alt="E-COMMERCE DEVELOPMENT"
-                    style={{ width: "15%" }}
+                    style={{ width: '15%' }}
                   />
                 </div>
                 <h5>
@@ -345,7 +205,7 @@ const HireIOSDev = () => {
                   <img
                     src={upgrade}
                     alt="MOBILE APP DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -383,7 +243,7 @@ const HireIOSDev = () => {
                   <img
                     src={WIDGET}
                     alt="INTERNET OF THING"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -420,7 +280,7 @@ const HireIOSDev = () => {
                   <img
                     src={uiux}
                     alt="GAME DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -458,7 +318,7 @@ const HireIOSDev = () => {
                   <img
                     src={WEARABLE}
                     alt="Hire Developer"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -490,16 +350,16 @@ const HireIOSDev = () => {
             <h2>WHY HIRE iPHONE APP DEVELOPERS FROM US?</h2>
             <p>
               We have established our reputation as one of the leading iPhone
-              app developers with a wide spectrum of{" "}
+              app developers with a wide spectrum of{' '}
               <Link
                 to="/mobile-app-development"
                 className="Title_Color"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b>app development</b>
-              </Link>{" "}
+              </Link>{' '}
               projects across the niches. Here are some of the key reasons to
               hire iPhone app developers from us.
             </p>
@@ -527,7 +387,7 @@ const HireIOSDev = () => {
                   <img
                     src={EXPERIENCE}
                     alt="Web Development"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -565,7 +425,7 @@ const HireIOSDev = () => {
                   <img
                     src={STRONG}
                     alt="E-COMMERCE DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -603,7 +463,7 @@ const HireIOSDev = () => {
                   <img
                     src={UNIQUE}
                     alt="MOBILE APP DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -640,7 +500,7 @@ const HireIOSDev = () => {
                   <img
                     src={FASTER}
                     alt="INTERNET OF THING"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -678,7 +538,7 @@ const HireIOSDev = () => {
                   <img
                     src={COMPETITIVE}
                     alt="GAME DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -706,7 +566,7 @@ const HireIOSDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireIOSDev;
+export default HireIOSDev

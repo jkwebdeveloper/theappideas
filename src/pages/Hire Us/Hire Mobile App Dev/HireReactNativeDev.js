@@ -1,191 +1,53 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import Customization from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Customization Of The Platforms.svg";
-import Stunning from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Stunning Portfolio.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Sophisticated UI UX Designing.svg";
-import Cross from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Cross Platforms Expertise.svg";
-import Custom from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Custom Widget Development.svg";
-import Reactnative from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/React Native Integrations.svg";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import EXPERIENCE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Expertise And Experience.svg";
-import Integration from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/3rd Party API Integration.svg";
-import Powerful from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Powerful Portfolio.svg";
-import Agile from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Agile Methodology.svg";
-import Free from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Free Maintenance Service.svg";
-import Deliver from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Deliver Secure App Solution.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import app from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/Ceate-React-Native-App.png"
+import development from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/React-Native-App-Development.png"
+import company from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/React-Native-Development-Company.png"
+
+
+import Customization from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Customization Of The Platforms.svg'
+import Stunning from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Stunning Portfolio.svg'
+import Sophisticated from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Sophisticated UI UX Designing.svg'
+import Cross from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Cross Platforms Expertise.svg'
+import Custom from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/Custom Widget Development.svg'
+import Reactnative from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/1/React Native Integrations.svg'
+
+import EXPERIENCE from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Expertise And Experience.svg'
+import Integration from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/3rd Party API Integration.svg'
+import Powerful from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Powerful Portfolio.svg'
+import Agile from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Agile Methodology.svg'
+import Free from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Free Maintenance Service.svg'
+import Deliver from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire React Native App Developer/2/Deliver Secure App Solution.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HireReactNativeDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire React Native App Developers In India</h2>
-                <p>
-                  Hire the best React Native Developers in India from The App
-                  Ideas. App Ideas is one of the most popular mobile app and web
-                  development company. We have a team of highly experienced and
-                  skilled developers who first understand the client’s
-                  requirements, analyze and plan the projects, develop the
-                  projects and deliver the project along with client
-                  satisfaction.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best React Native App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your React Native App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-App-Development.png")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>React Native App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-Application-Development.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Create React Native App</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-App-Development-Company.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>React Native Development Company</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire React Native App Developers In India"
+        des="Hire the best React Native Developers in India from The App Ideas. App Ideas is one of the most popular mobile app and web development company. We have a team of highly experienced and skilled developers who first understand the client’s requirements, analyze and plan the projects, develop the projects and deliver the project along with client satisfaction."
+        list1="7+ Years of experience in App Development"
+        list2="Best React Native App Development Company"
+        list3="Dedicated team for your React Native App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="React Native App Development"
+        service2="Create React Native App"
+        service3="React Native Development Company"
+        image1={app}
+        image2={development}
+        image3={company}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
@@ -217,11 +79,11 @@ const HireReactNativeDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -250,20 +112,20 @@ const HireReactNativeDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
-                            Mobile Application Development{" "}
+                            Mobile Application Development{' '}
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -275,7 +137,7 @@ const HireReactNativeDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-three.webp")}
+                        src={require('../../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-three.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -299,20 +161,20 @@ const HireReactNativeDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -324,7 +186,7 @@ const HireReactNativeDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twenty.webp")}
+                        src={require('../../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twenty.webp')}
                         alt="Device-Image-one"
                         className="img-fluid"
                       />
@@ -351,7 +213,7 @@ const HireReactNativeDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
@@ -359,7 +221,7 @@ const HireReactNativeDev = () => {
                         </li>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             React Native
@@ -372,7 +234,7 @@ const HireReactNativeDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twentyfive.webp")}
+                        src={require('../../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twentyfive.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -403,7 +265,7 @@ const HireReactNativeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -418,7 +280,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Customization}
                     alt="Customization Of The Platforms"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -444,7 +306,7 @@ const HireReactNativeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -459,7 +321,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Stunning}
                     alt="Stunning Portfolio"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -483,7 +345,7 @@ const HireReactNativeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -498,7 +360,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Sophisticated}
                     alt="Sophisticated UI/UX Designing"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -522,7 +384,7 @@ const HireReactNativeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -537,7 +399,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Cross}
                     alt="Cross Platforms Expertise"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -561,7 +423,7 @@ const HireReactNativeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -576,7 +438,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Custom}
                     alt="GAME DEVELOPMENT"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -600,7 +462,7 @@ const HireReactNativeDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -615,7 +477,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Reactnative}
                     alt="React Native Integrations"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -673,7 +535,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={EXPERIENCE}
                     alt="EXPERIENCE AND EXPERTISE"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -711,13 +573,13 @@ const HireReactNativeDev = () => {
                   <img
                     src={Integration}
                     alt="3rd Party API Integration"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">3rd Party API Integration</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   With the support of our expert React Native developers, you
                   can also integrate third-party API as per the business
                   requirements and help in boosting the user experience of the
@@ -750,7 +612,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Powerful}
                     alt="Powerful Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -788,13 +650,13 @@ const HireReactNativeDev = () => {
                   <img
                     src={Agile}
                     alt="Agile Methodology"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Agile Methodology</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   We strictly follow the agile methodology for project
                   development with the continuous iteration of the software
                   development. This will help you to easily track the software
@@ -827,7 +689,7 @@ const HireReactNativeDev = () => {
                   <img
                     src={Free}
                     alt="GAME DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -865,13 +727,13 @@ const HireReactNativeDev = () => {
                   <img
                     src={Deliver}
                     alt="Deliver Secure App Solution"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Deliver Secure App Solution</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "25px" }}>
+                <div className="text" style={{ marginBottom: '25px' }}>
                   Along with deploying the best feature app solution to our
                   clients, we also ensure the security and privacy of the user
                   data.
@@ -892,7 +754,7 @@ const HireReactNativeDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireReactNativeDev;
+export default HireReactNativeDev

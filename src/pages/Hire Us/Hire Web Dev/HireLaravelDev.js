@@ -1,222 +1,70 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Offer Customization.svg";
-import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Features Integration.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Consulting Services.svg";
-import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Secure Web Solutions.svg";
-import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Web Application Development.svg";
-import Unit from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Unit Testing Methods.svg";
+import VRApplicationDeveloper from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/VRApplicationDeveloper.webp'
+import Apps from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/Mobile-Apps-Development.png'
+import Angular from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/Angular-JS-developer.png'
 
-import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Expertise In Web Solutions.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Sophisticated Portfolio.svg";
-import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Implement Agile Methods.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Affordable Costing.svg";
-import Time from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Time-Bound Deployment.svg";
-import Free from "../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Free Support Services.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Offer from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Offer Customization.svg'
+import Features from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Features Integration.svg'
+import Consulting from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Consulting Services.svg'
+import Secure from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Secure Web Solutions.svg'
+import Laravel from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Laravel Web Application Development.svg'
+import Unit from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/1/Unit Testing Methods.svg'
+
+import Expertise from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Expertise In Web Solutions.svg'
+import Sophisticated from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Sophisticated Portfolio.svg'
+import Implement from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Implement Agile Methods.svg'
+import Affordable from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Affordable Costing.svg'
+import Time from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Time-Bound Deployment.svg'
+import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/2/Free Support Services.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HireLaravelDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire Laravel Developers</h2>
-                <p>
-                  Laravel is an open-source and free PHP web framework which is
-                  developed by Tylor Otwell. Laravel is mainly introduced for
-                  The App Ideas is an{" "}
-                  <Link
-                    to="/web-development"
-                    className="Title_Color"
-                    style={{ color: "#d6aa0b" }}
-                    onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
-                    }}
-                  >
-                    <b>web application development</b>
-                  </Link>{" "}
-                  following the model-view-controller(MVC) architecture and
-                  highly based on the Symfony framework. Laravel offers the
-                  syntaxes and features which helps in deploying high-end web
-                  applications. Laravel Technology facilitates the developer to
-                  save a huge amount of time to develop the entire website from
-                  scratch.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Laravel Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Laravel Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/VRApplicationDeveloper.webp")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Laravel App Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/Mobile-Apps-Development.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Laravel App Development Company</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/Angular-JS-developer.png")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Laravel App Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire Laravel Developers"
+        des="Laravel is an open-source and free PHP web framework which is developed by Tylor Otwell. Laravel is mainly introduced for web application development following the model-view-controller(MVC) architecture and highly based on the Symfony framework. Laravel offers the syntaxes and features which helps in deploying high-end web applications. Laravel Technology facilitates the developer to save a huge amount of time to develop the entire website from scratch."
+        list1="7+ Years of experience in App Development"
+        list2="Best Laravel Development Company"
+        list3="Dedicated team for your Laravel Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Laravel App Development"
+        service2="Laravel App Development Company"
+        service3="Laravel App Developer"
+        image1={VRApplicationDeveloper}
+        image2={Apps}
+        image3={Angular}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
             <h3>Our Feat in Laravel Development</h3>
             <p>
-              We are highly expert in providing the best{" "}
+              We are highly expert in providing the best{' '}
               <Link
                 to="/web-development"
                 className="Title_Color"
-                style={{ color: "#d6aa0b" }}
+                style={{ color: '#d6aa0b' }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b> Laravel web solution</b>
-              </Link>{" "}
+              </Link>{' '}
               to our clients and always satisfy them with our services. We have
               years of experience deploying the best software solutions at the
               best rates. Hire us and experience our expertise.
@@ -231,11 +79,11 @@ const HireLaravelDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -267,20 +115,20 @@ const HireLaravelDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             Laravel
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Mobile Application Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Reactjs
                           </a>
@@ -292,7 +140,7 @@ const HireLaravelDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-left"
-                        src={require("../../../assets/images/Portfolio/port-mobile-app-mobile-one.webp")}
+                        src={require('../../../assets/images/Portfolio/port-mobile-app-mobile-one.webp')}
                         alt="Device-Image-two"
                         className="img-fluid"
                       />
@@ -319,14 +167,14 @@ const HireLaravelDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             Laravel
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Mobile Application Development
                           </a>
@@ -338,7 +186,7 @@ const HireLaravelDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-left"
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/workhand/port-mobile-app-mobile-fifteen.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel Developers/workhand/port-mobile-app-mobile-fifteen.webp')}
                         alt="port-mobile-app-mobile-fifteen"
                         className="img-fluid"
                       />
@@ -365,14 +213,14 @@ const HireLaravelDev = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             Laravel
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Mobile Application Development
                           </a>
@@ -384,7 +232,7 @@ const HireLaravelDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-left"
-                        src={require("../../../assets/images/Portfolio/port-mobile-app-mobile-sixteen.webp")}
+                        src={require('../../../assets/images/Portfolio/port-mobile-app-mobile-sixteen.webp')}
                         alt="port-mobile-app-mobile-sixeen"
                         className="img-fluid"
                       />
@@ -412,7 +260,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -427,7 +275,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -453,7 +301,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -468,7 +316,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -493,7 +341,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -508,7 +356,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Features}
                     alt="Laravel Features Integration"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -532,7 +380,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -547,7 +395,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -571,7 +419,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -586,7 +434,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -611,7 +459,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -626,7 +474,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Unit}
                     alt="Unit Testing Methods"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -684,7 +532,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -722,13 +570,13 @@ const HireLaravelDev = () => {
                   <img
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Sophisticated Portfolio</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   With years of experience, We have worked on various Laravel
                   projects and successful web solutions or applications for
                   different niches.
@@ -760,7 +608,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -798,13 +646,13 @@ const HireLaravelDev = () => {
                   <img
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Affordable Costing</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   Based on the projects, modules, and features of the
                   requirements, we offer the best competitive rates without
                   embracing the quality of the projects.
@@ -836,7 +684,7 @@ const HireLaravelDev = () => {
                   <img
                     src={Time}
                     alt="Time-Bound Deployment"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -874,13 +722,13 @@ const HireLaravelDev = () => {
                   <img
                     src={Free}
                     alt="Free Support Services"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Free Support Services</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "25px" }}>
+                <div className="text" style={{ marginBottom: '25px' }}>
                   After deployment of the projects within the timeline, we also
                   offer our clients three months of free support and maintenance
                   services. You can easily connect with us through various
@@ -902,7 +750,7 @@ const HireLaravelDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireLaravelDev;
+export default HireLaravelDev

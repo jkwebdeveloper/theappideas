@@ -1,210 +1,68 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import Laravel from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CUSTOM CODEIGNITER APPS.svg";
-import Offer from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CODEIGNITER THEME INTEGRATION.svg";
-import Features from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/Provide UPGRADE AND SUPPORT.svg";
-import Secure from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/WEB DEVELOPMENT.svg";
-import Consulting from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/3RD PARTY API INTEGRATION.svg";
+import UnityMobileApp from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/UnityMobileApp.webp'
+import Apps from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Mobile-Apps-Development.png'
+import Game from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Game-App-Development-Company.webp'
 
-import Expertise from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/EXPERIENCE AND EXPERTISE.svg";
-import Implement from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/AGILE DEVELOPMENT.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/TRANSPARENT AND TIME HONOURED DEVELOPMENT.svg";
-import STRONG from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/A Strong Portfolio.svg";
-import PRICING from "../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/Competitive price.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
+import Laravel from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CUSTOM CODEIGNITER APPS.svg'
+import Offer from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/CODEIGNITER THEME INTEGRATION.svg'
+import Features from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/Provide UPGRADE AND SUPPORT.svg'
+import Secure from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/WEB DEVELOPMENT.svg'
+import Consulting from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/1/3RD PARTY API INTEGRATION.svg'
+
+import Expertise from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/EXPERIENCE AND EXPERTISE.svg'
+import Implement from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/AGILE DEVELOPMENT.svg'
+import Affordable from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/TRANSPARENT AND TIME HONOURED DEVELOPMENT.svg'
+import STRONG from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/A Strong Portfolio.svg'
+import PRICING from '../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/2/Competitive price.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
 
 const HireCodeIgniter = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Hire CodeIgniter App Developers In India</h2>
-                <p>
-                  CodeIgniter is one of the most popular open source, PHP based,
-                  MVC framework widely embraced for building fast paced and
-                  dynamic web apps across niches. Besides versatility and ease
-                  of use this framework is known for easy setup and deployment.
-                  CodeIgniter is a dynamic framework that helps developers
-                  building highly interactive, simple to use and efficient web
-                  apps with the use of PHP as base language. Simple and easy to
-                  use coding and fast paced development are the key strengths of
-                  this framework.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best CodeIgniter App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your CodeIgniter App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/UnityMobileApp.webp")}
-                        alt="IPhone-App-Development-Company"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Node js Development</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Mobile-Apps-Development.png")}
-                        alt="IPhone-App-Development-Service"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Node js Development Company</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/HIRE US/Hire Web Developer/Hire CodeIgniter App Developer/Game-App-Development-Company.webp")}
-                        alt="
-                        IPhone-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Node js Developer</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*
-                                    "
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                    "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Hire CodeIgniter App Developers In India"
+        des="CodeIgniter is one of the most popular open source, PHP based, MVC framework widely embraced for building fast paced and dynamic web apps across niches. Besides versatility and ease of use this framework is known for easy setup and deployment. CodeIgniter is a dynamic framework that helps developers building highly interactive, simple to use and efficient web apps with the use of PHP as base language. Simple and easy to use coding and fast paced development are the key strengths of this framework."
+        list1="7+ Years of experience in App Development"
+        list2="Best CodeIgniter App Development Company"
+        list3="Dedicated team for your CodeIgniter App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="CodeIgniter App"
+        service2="CodeIgniter App Development"
+        service3="CodeIgniter App Developer"
+        image1={UnityMobileApp}
+        image2={Apps}
+        image3={Game}
+      />
       {/* Banner Section End */}
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
             <h3>Our Feat in CodeIgniter Development</h3>
             <p>
-              We are into{" "}
+              We are into{' '}
               <Link
                 to="/web-development"
                 className="Title_Color"
-                style={{ color: "#d6aa0b" }}
+                style={{ color: '#d6aa0b' }}
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b> web development</b>
-              </Link>{" "}
+              </Link>{' '}
               , we are highly experienced as well as experts in delivering the
               best Node js web platforms solution to our clients. We have 4+
               years of experience in developing the best software solution at
@@ -222,11 +80,11 @@ const HireCodeIgniter = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -251,7 +109,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -266,7 +124,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Laravel}
                     alt="Laravel Web Application Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -290,7 +148,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -305,7 +163,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Offer}
                     alt="Offer Customization"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -329,7 +187,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "425px" }}
+                style={{ height: '425px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -344,7 +202,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Features}
                     alt="CUSTOM WORDPRESS DEVELOPMENT"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -368,7 +226,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -383,7 +241,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Secure}
                     alt="Secure Web Solutions"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -407,7 +265,7 @@ const HireCodeIgniter = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -422,7 +280,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Consulting}
                     alt="Laravel Consulting Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -479,7 +337,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Expertise}
                     alt="Expertise In Web Solutions"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -517,13 +375,13 @@ const HireCodeIgniter = () => {
                   <img
                     src={STRONG}
                     alt="Sophisticated Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">A STRONG PORTFOLIO</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   As of now we are credited with a bounty of most successful
                   CodeIgniter apps across several business niches.
                 </div>
@@ -554,7 +412,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Implement}
                     alt="Implement Agile Methods"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -592,7 +450,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -600,7 +458,7 @@ const HireCodeIgniter = () => {
                     TRANSPARENT AND TIME HONOURED DEVELOPMENT
                   </a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   With our CodeIgniter developers, you can ensure a transparent
                   development process and completion of project deadlines.
                 </div>
@@ -631,7 +489,7 @@ const HireCodeIgniter = () => {
                   <img
                     src={PRICING}
                     alt="Time-Bound Deployment"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -655,10 +513,10 @@ const HireCodeIgniter = () => {
       <ContactUs
         question="Do you want to know more about the expertise of our
                   CodeIgniter developers? Just feel free to contact us."
-      />{" "}
+      />{' '}
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireCodeIgniter;
+export default HireCodeIgniter
