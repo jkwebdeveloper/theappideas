@@ -1533,6 +1533,9 @@ section {
   .footer__awards a img {
     margin-left: 17px;
   }
+  /* .footer__box ul li {
+    display: none;
+  } */
 }
 
 @media (max-width: 575px) {
@@ -3618,7 +3621,6 @@ section {
 .achievement_section .progress .progress-value {
   display: flex;
   border-radius: 50%;
-  font-size: 36px;
   text-align: center;
   line-height: 20px;
   align-items: center;
@@ -4362,3 +4364,341 @@ section {
   border: none;
 }
 /* -------------------- GET A QUOTE End -------------------- */
+
+/* -------------------- Career Apply Css Start -------------------- */
+.carrer_banner {
+  width: 100%;
+  height: 100%;
+  background-image: url("./assets/images/careers/career-bg.jpg");
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  text-align: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  padding: 60px 16px;
+}
+
+.carrer_banner::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: #280e41e8;
+}
+
+.carrer_banner_content {
+  position: relative;
+  padding-top: 7%;
+}
+
+.carrer_banner_content h1 {
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 26px;
+}
+
+.carrer_banner_content .career_location {
+  margin: 20px 0;
+}
+
+.carrer_banner_content .career_location i {
+  color: #f6c000;
+  font-size: 24px;
+}
+
+.carrer_banner_content .career_location span {
+  color: #fff;
+  font-size: 20px;
+}
+
+.carrer_banner_content .carrer__content p {
+  font-size: 16px;
+  color: #fff;
+}
+
+/* .apply_btn {
+  text-decoration: none;
+  border: 2px solid #f6c000;
+  padding: 12px 20px;
+  font-weight: 700;
+  border-radius: 5px;
+  transition: all 0.5s;
+  background-color: #f6c000;
+  min-width: 126px;
+  display: inline-block;
+  color: #000;
+  font-size: 16px;
+} */
+
+/* .apply_btn:hover {
+  background-color: transparent;
+  border: 2px solid #f6c000;
+  color: #f6c000;
+} */
+
+.roles_section {
+  background-color: #280e41;
+  padding: 30px 0;
+  position: relative;
+}
+
+.roles_section::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  max-width: 1000px;
+  height: 2px;
+  margin: 0 auto;
+  background: linear-gradient(
+    to right,
+    rgba(248, 176, 0, 0) 0,
+    #f8b000 50%,
+    rgba(248, 176, 0, 0) 100%
+  );
+}
+
+.roles_title h2 {
+  text-align: center;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 700;
+  padding-top: 10px;
+}
+
+.roles_title h2::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #fff;
+  display: block;
+  margin: 8px auto;
+}
+
+.roles_box {
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.roles_box p {
+  color: #fff;
+  font-size: 15px;
+  position: relative;
+}
+
+.roles_box_icons {
+  color: #f6c000;
+  left: 0;
+  font-size: 17px;
+  left: -26px;
+  top: 3px;
+  position: absolute;
+  font-weight: normal;
+}
+
+.roles_box_contact {
+  margin-top: 30px;
+}
+
+.roles_box_contact p {
+  color: #fff;
+  font-size: 15px;
+  line-height: 24px;
+}
+
+.roles_box_contact h2 {
+  font-size: 24px;
+  color: #f6c000;
+  font-weight: 700;
+}
+
+.roles_box_contact p span {
+  line-height: 30px;
+}
+
+.roles_box_contact ul {
+  padding-left: 0;
+}
+
+.roles_box_contact ul li {
+  color: #fff;
+  list-style-type: none;
+  margin-bottom: 16px;
+}
+
+.roles_box_contact ul li i,
+.roles_box_contact p i {
+  margin-right: 5px;
+  font-size: 20px;
+}
+
+.roles_box_contact ul li span {
+  font-size: 18px;
+}
+
+.career_mdl_rht {
+  background: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 600px;
+  margin: 30px auto 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+.career_mdl_rht::before {
+  content: "";
+  position: absolute;
+  background: rgb(246 192 0 / 8%);
+  width: 170px;
+  height: 400px;
+  z-index: 1;
+  transform: rotate(42deg);
+  right: -56px;
+  bottom: -111px;
+  border-radius: 35px;
+}
+.career_mdl_rht form {
+  position: relative;
+  z-index: 2;
+}
+.hover_color_bubble {
+  position: absolute;
+  background: rgb(246 192 0 / 8%);
+  width: 100rem;
+  height: 100rem;
+  right: 0px;
+  top: 25rem;
+  border-radius: 50%;
+  transform: rotate(234deg);
+  left: -57rem;
+  transition: all 0.7s ease 0s;
+  z-index: -1;
+}
+.career_mdl_rht:hover .hover_color_bubble {
+  top: 2.9rem;
+  background: rgb(246 192 0 / 40%);
+}
+
+.career_mdl_rht form input {
+  height: 50px;
+  border-radius: 2px;
+  font-size: 16px;
+  color: #000;
+}
+
+.upload-btn-wrapper {
+  position: relative;
+  overflow: hidden;
+  display: inline-block;
+  width: 100%;
+  padding: 40px 0;
+  text-align: center;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+}
+
+.upload-btn-wrapper .Upload_Btn {
+  border: 2px solid #c3c3c3;
+  padding: 8px 12px;
+  font-size: 16px;
+  font-weight: bold;
+  background: #280e41;
+  color: #fff;
+  border-color: #280e41;
+  border-radius: 50px;
+  cursor: pointer !important;
+}
+
+.upload-btn-wrapper input[type="file"] {
+  font-size: 100px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  height: 100%;
+}
+
+.submit_btn {
+  background: #f6c000;
+  color: #000;
+  border-color: #f6c000;
+  padding: 10px 27px;
+  border-radius: 50px;
+  text-transform: uppercase;
+  font-weight: 700;
+  border: none;
+  font-size: 16px;
+  transition: all 0.5s ease-in-out;
+}
+
+.career_mdl_rht:hover .submit_btn {
+  color: #fff;
+  transition: all 0.5s ease-in-out;
+  background: #280e41;
+}
+
+@media (max-width: 767px) {
+  .carrer_banner_content h1 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 575px) {
+  .roles_box {
+    padding-left: 20px;
+  }
+
+  .roles_box,
+  .roles_box_contact p,
+  .carrer_banner_content .carrer__content p {
+    font-size: 14px;
+  }
+
+  .roles_box p::before {
+    font-size: 15px;
+    top: 2px;
+    left: -20px;
+  }
+
+  .roles_box_contact h2,
+  .carrer_banner_content .career_location span,
+  .carrer_banner_content .career_location i {
+    font-size: 18px;
+  }
+
+  .roles_box_contact ul li span {
+    font-size: 15px;
+  }
+
+  .carrer_banner_content h1 {
+    font-size: 20px;
+  }
+
+  .roles_title h2 {
+    font-size: 22px;
+  }
+
+  .roles_box p {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 320px) {
+  .carrer_banner_content h1 {
+    font-size: 18px;
+  }
+
+  .roles_title h2 {
+    font-size: 18px;
+  }
+
+  .roles_box_contact h2 {
+    font-size: 16px;
+  }
+}
+/* -------------------- Career Apply Css End -------------------- */

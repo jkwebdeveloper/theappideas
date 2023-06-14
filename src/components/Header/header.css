@@ -280,7 +280,7 @@ li .get_a_btn {
   color: #000;
   transition: 0.2s 0.1s;
 }
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1049px) {
   .header__section nav .wrapper {
     padding: 0 30px;
   }
@@ -532,7 +532,7 @@ li .get_a_btn {
     font-size: 14px;
   }
 }
-@media (max-width: 1279px) and (min-width: 1024px) {
+@media (max-width: 1279px) and (min-width: 1049px) {
   .nav-links li {
     margin: 0 4px;
   }

@@ -1,19 +1,20 @@
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "./banner.css";
+import React, { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import './banner.css'
 // Import Swiper styles
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import { Link } from 'react-router-dom'
 
 const Banner = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   return (
-    <section className="banner-section" style={{ position: "relative" }}>
-      <div style={{ position: "relative" }}>
+    <section className="banner-section" style={{ position: 'relative' }}>
+      <div style={{ position: 'relative' }}>
         <div className="container">
           <Swiper
             modules={[Pagination, Autoplay, Navigation]}
@@ -48,32 +49,32 @@ const Banner = () => {
               pauseOnMouseEnter: true,
             }}
             speed={1000}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
-            style={{ padding: "1rem 0px", marginBottom: "5rem" }}
+            style={{ padding: '0px 0px 5rem' }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
                     <img
-                      src={require("../../../assets/images/banner-slider/mobile-app-slider-1.webp")}
+                      src={require('../../../assets/images/banner-slider/mobile-app-slider-1.webp')}
                       alt=""
-                      style={{ width: "60%", marginLeft: "130px" }}
+                      style={{ width: '60%', marginLeft: '130px' }}
                     />
                   </div>
                 </div>
@@ -90,21 +91,21 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <a href="" className="slider-get_btn">
+                    <Link to="" className="slider-get_btn">
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
                     <img
-                      src={require("../../../assets/images/banner-slider/ecommerce.webp")}
+                      src={require('../../../assets/images/banner-slider/ecommerce.webp')}
                       alt=""
-                      style={{ width: "70%", marginLeft: "120px" }}
+                      style={{ width: '70%', marginLeft: '120px' }}
                     />
                   </div>
                 </div>
@@ -122,21 +123,21 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <a href="" className="slider-get_btn">
+                    <Link to="" className="slider-get_btn">
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
                     <img
-                      src={require("../../../assets/images/banner-slider/game.webp")}
+                      src={require('../../../assets/images/banner-slider/game.webp')}
                       alt=""
-                      style={{ width: "80%", marginLeft: "40px" }}
+                      style={{ width: '80%', marginLeft: '40px' }}
                     />
                   </div>
                 </div>
@@ -155,21 +156,21 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <a href="" className="slider-get_btn">
+                    <Link to="" className="slider-get_btn">
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
                     <img
-                      src={require("../../../assets/images/banner-slider/create-web.webp")}
+                      src={require('../../../assets/images/banner-slider/create-web.webp')}
                       alt=""
-                      style={{ width: "80%", marginLeft: "40px" }}
+                      style={{ width: '80%', marginLeft: '40px' }}
                     />
                   </div>
                 </div>
@@ -187,21 +188,21 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <a href="" className="slider-get_btn">
+                    <Link href="" className="slider-get_btn">
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="slider-img">
                     <img
-                      src={require("../../../assets/images/banner-slider/iot.webp")}
+                      src={require('../../../assets/images/banner-slider/iot.webp')}
                       alt=""
-                      style={{ width: "80%", marginLeft: "40px" }}
+                      style={{ width: '80%', marginLeft: '40px' }}
                     />
                   </div>
                 </div>
@@ -219,9 +220,9 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <a href="" className="slider-get_btn">
+                    <Link href="" className="slider-get_btn">
                       Contact Us
-                    </a>
+                    </Link>
                   </div>
                 </div>
               </div>
@@ -234,9 +235,9 @@ const Banner = () => {
             next
           </button> */}
         </div>
-      </div>{" "}
+      </div>{' '}
     </section>
-  );
-};
+  )
+}
 
-export default Banner;
+export default Banner
