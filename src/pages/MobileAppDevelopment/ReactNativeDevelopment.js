@@ -1,30 +1,30 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import iphone1 from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png";
-import iphone2 from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png";
-import iphone3 from "../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png";
+import iphone1 from '../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png'
+import iphone2 from '../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png'
+import iphone3 from '../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png'
 
-import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
-import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
-import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
-import Agile from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg";
-import Fast from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg";
-import deadline from "../../assets/images/SERVICES/Mobile-App-dev/React-Native-App/deadline.png";
+import Experience from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg'
+import Robust from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg'
+import Lifecycle from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg'
+import Agile from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg'
+import Fast from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg'
+import deadline from '../../assets/images/SERVICES/Mobile-App-dev/React-Native-App/deadline.png'
 
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
-import HeroSection from "../../components/HeroSection";
+import TestiMonial from '../../components/Testimonial/TestiMonial'
+import FAQ from '../../components/FAQ'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import HeroSection from '../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const ReactNativeDevelopment = () => {
-  const [activeService, setActiveService] = useState("cross_platform");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeService, setActiveService] = useState('cross_platform')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
   return (
     <>
+      <Helmet title="React Native App Development Company India - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="IPad App Development Company"
@@ -62,17 +62,17 @@ const ReactNativeDevelopment = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("cross_platform")}
+                  onClick={() => setActiveService('cross_platform')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "cross_platform" &&
-                      "service__provide_tab_active"
+                      activeService === 'cross_platform' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -81,17 +81,17 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("native_web")}
+                  onClick={() => setActiveService('native_web')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "native_web" &&
-                      "service__provide_tab_active"
+                      activeService === 'native_web' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -100,17 +100,17 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("consulting_service")}
+                  onClick={() => setActiveService('consulting_service')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "consulting_service" &&
-                      "service__provide_tab_active"
+                      activeService === 'consulting_service' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -119,16 +119,16 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ui_ux")}
+                  onClick={() => setActiveService('ui_ux')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ui_ux" && "service__provide_tab_active"
+                      activeService === 'ui_ux' && 'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -137,17 +137,17 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("react_native_integration")}
+                  onClick={() => setActiveService('react_native_integration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "react_native_integration" &&
-                      "service__provide_tab_active"
+                      activeService === 'react_native_integration' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -156,17 +156,17 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("support_maintenance")}
+                  onClick={() => setActiveService('support_maintenance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "support_maintenance" &&
-                      "service__provide_tab_active"
+                      activeService === 'support_maintenance' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -177,7 +177,7 @@ const ReactNativeDevelopment = () => {
             </div>
             {/* right side content */}
             {/* cross platform */}
-            {activeService === "cross_platform" && (
+            {activeService === 'cross_platform' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -189,7 +189,7 @@ const ReactNativeDevelopment = () => {
                       <Link
                         to="/mobile-app-development"
                         onClick={() => {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
                         }}
                       >
                         <b> app development company.</b>
@@ -217,7 +217,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
             {/* native web */}
-            {activeService === "native_web" && (
+            {activeService === 'native_web' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -243,7 +243,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
             {/* consulting service */}
-            {activeService === "consulting_service" && (
+            {activeService === 'consulting_service' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -274,7 +274,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
             {/* ui & ux */}
-            {activeService === "ui_ux" && (
+            {activeService === 'ui_ux' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -304,7 +304,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
             {/* react_native_integration */}
-            {activeService === "react_native_integration" && (
+            {activeService === 'react_native_integration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -331,7 +331,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
             {/* support_maintenance */}
-            {activeService === "support_maintenance" && (
+            {activeService === 'support_maintenance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -385,20 +385,20 @@ const ReactNativeDevelopment = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
-                            Mobile Application Development{" "}
+                            Mobile Application Development{' '}
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -410,7 +410,7 @@ const ReactNativeDevelopment = () => {
                     <div className="work_head_rht">
                       <img
                         // src={("assets/img/port-webdevelop-webiste.webp")}
-                        src={require("../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-three.webp")}
+                        src={require('../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-three.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -434,20 +434,20 @@ const ReactNativeDevelopment = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -458,7 +458,7 @@ const ReactNativeDevelopment = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twenty.webp")}
+                        src={require('../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twenty.webp')}
                         alt="Device-Image-one"
                         className="img-fluid"
                       />
@@ -482,7 +482,7 @@ const ReactNativeDevelopment = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
@@ -490,7 +490,7 @@ const ReactNativeDevelopment = () => {
                         </li>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             React Native
@@ -502,7 +502,7 @@ const ReactNativeDevelopment = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twentyfive.webp")}
+                        src={require('../../assets/images/MobileAppDev/React Native App/port-mobile-app-mobile-twentyfive.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -529,13 +529,13 @@ const ReactNativeDevelopment = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -548,13 +548,13 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("unmatched_protfolio")}
+                  onClick={() => setActiveWhyChoose('unmatched_protfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "unmatched_protfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'unmatched_protfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -567,13 +567,13 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("dynamic_capabilities")}
+                  onClick={() => setActiveWhyChoose('dynamic_capabilities')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "dynamic_capabilities" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'dynamic_capabilities' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -586,16 +586,16 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile_development")}
+                  onClick={() => setActiveWhyChoose('agile_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Agile}
                       alt="Agile-Development"
@@ -606,16 +606,16 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Fast}
                       alt="Fast-Paced-Development"
@@ -626,16 +626,16 @@ const ReactNativeDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("sticking_to_deadlines")}
+                  onClick={() => setActiveWhyChoose('sticking_to_deadlines')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "sticking_to_deadlines" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'sticking_to_deadlines' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={deadline}
                       alt="Sticking-To-Deadlines"
@@ -646,7 +646,7 @@ const ReactNativeDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -669,7 +669,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "unmatched_protfolio" && (
+            {activeWhyChoose === 'unmatched_protfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -697,7 +697,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "dynamic_capabilities" && (
+            {activeWhyChoose === 'dynamic_capabilities' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -722,7 +722,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "agile_development" && (
+            {activeWhyChoose === 'agile_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -750,7 +750,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "competitive_pricing" && (
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -778,7 +778,7 @@ const ReactNativeDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "sticking_to_deadlines" && (
+            {activeWhyChoose === 'sticking_to_deadlines' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -821,7 +821,7 @@ const ReactNativeDevelopment = () => {
       <ContactUs question="Are you planning to launch a Successful React Native Mobile app in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default ReactNativeDevelopment;
+export default ReactNativeDevelopment

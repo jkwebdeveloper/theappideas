@@ -52,6 +52,7 @@ import Weekly from '../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking 
 import Email from '../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/Backend/Email system.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const TaxiBooking = () => {
   const [activeSection, setActiveSection] = useState('passenger_app')
@@ -315,6 +316,7 @@ const TaxiBooking = () => {
 
   return (
     <>
+      <Helmet title="On-Demand Taxi App Development Company | The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="Taxi Booking App"

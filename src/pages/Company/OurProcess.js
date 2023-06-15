@@ -1,15 +1,16 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
+import React from 'react'
+import ContactUs from '../../components/ContactUs'
+import { Helmet } from 'react-helmet'
 
 const OurProcess = () => {
   return (
     <>
+      <Helmet title="Our Web and Mobile App Development Process" />
       <section className="process_banner">
         <div className="banner_contact text-center">
           <h2>Our 6 Steps Process</h2>
           <img
-            src={require("../../assets/images/COMPANY/process/process-banner.png")}
+            src={require('../../assets/images/COMPANY/process/process-banner.png')}
             alt=""
             className="img-fluid"
             width=""
@@ -25,7 +26,7 @@ const OurProcess = () => {
                   <div className="road-map-circle">
                     <span className="road-map-circle-text d-flex align-items-center justify-content-center">
                       <img
-                        src={require("../../assets/images/COMPANY/process/REQUIREMENTS.gif")}
+                        src={require('../../assets/images/COMPANY/process/REQUIREMENTS.gif')}
                         alt="requirement"
                         className="img-fluid"
                       />
@@ -47,7 +48,7 @@ const OurProcess = () => {
                   <div className="road-map-circle">
                     <span className="road-map-circle-text d-flex align-items-center justify-content-center">
                       <img
-                        src={require("../../assets/images/COMPANY/process/INITIAL.gif")}
+                        src={require('../../assets/images/COMPANY/process/INITIAL.gif')}
                         alt="meeting"
                         className="img-fluid"
                       />
@@ -71,7 +72,7 @@ const OurProcess = () => {
                   <div className="road-map-circle">
                     <span className="road-map-circle-text d-flex align-items-center justify-content-center">
                       <img
-                        src={require("../../assets/images/COMPANY/process/PROJECT_ESTIMATION.gif")}
+                        src={require('../../assets/images/COMPANY/process/PROJECT_ESTIMATION.gif')}
                         alt="project-praposal"
                         className="img-fluid"
                       />
@@ -95,7 +96,7 @@ const OurProcess = () => {
                   <div className="road-map-circle">
                     <span className="road-map-circle-text d-flex align-items-center justify-content-center">
                       <img
-                        src={require("../../assets/images/COMPANY/process/RESOURCE_TEAM.gif")}
+                        src={require('../../assets/images/COMPANY/process/RESOURCE_TEAM.gif')}
                         alt="settings"
                         className="img-fluid"
                       />
@@ -118,7 +119,7 @@ const OurProcess = () => {
                   <div className="road-map-circle">
                     <span className="road-map-circle-text d-flex align-items-center justify-content-center">
                       <img
-                        src={require("../../assets/images/COMPANY/process/DAILY_WEEKLY.gif")}
+                        src={require('../../assets/images/COMPANY/process/DAILY_WEEKLY.gif')}
                         alt="update"
                         className="img-fluid"
                       />
@@ -140,7 +141,7 @@ const OurProcess = () => {
                   <div className="road-map-circle">
                     <span className="road-map-circle-text d-flex align-items-center justify-content-center">
                       <img
-                        src={require("../../assets/images/COMPANY/process/PROJECT_HANDOVER.gif")}
+                        src={require('../../assets/images/COMPANY/process/PROJECT_HANDOVER.gif')}
                         alt="support"
                         className="img-fluid"
                       />
@@ -168,7 +169,7 @@ const OurProcess = () => {
       <ContactUs question="Would you like to know more?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default OurProcess;
+export default OurProcess

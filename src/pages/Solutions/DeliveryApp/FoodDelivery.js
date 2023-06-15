@@ -53,6 +53,7 @@ import Restaurant from '../../../assets/images/SOLUTIONS/Delivery App/Food-app/S
 import Reports from '../../../assets/images/SOLUTIONS/Delivery App/Food-app/Super Admin Panel/Reports.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const FoodDelivery = () => {
   const [activeSection, setActiveSection] = useState('customer_app')
@@ -324,8 +325,9 @@ const FoodDelivery = () => {
 
   return (
     <>
+      <Helmet title="On-Demand Food Delivery App Development | The App Ideas" />
       {/* common Banner start */}
-      <HeroSection 
+      <HeroSection
         title="Food Delivery App Development"
         des="Food ordering apps became the new fad that fit into our instantly gratifying digital lifestyle. While the market potential for such app is huge, food apps also represent a highly competitive niche of apps. We at the App Ideas build highly sophisticated, feature-rich and user-optimised food ordering apps that can withstand the market competition."
         list1="7+ Years of experience in App Development"

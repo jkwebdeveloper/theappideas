@@ -32,6 +32,7 @@ import WorkSlider from '../../../components/WorkSlider'
 import FAQ from '../../../components/FAQ'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const ECommerceWeb = () => {
   const [activeService, setActiveService] = useState('custom_e_commerce')
@@ -41,6 +42,7 @@ const ECommerceWeb = () => {
   }, [])
   return (
     <>
+      <Helmet title="Best eCommerce Web Development Company India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="E-Commerce Website Development Company"

@@ -1,21 +1,23 @@
-import React, { useState } from "react";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
+import React, { useState } from 'react'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
 
-import service from "../../../assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing.webp";
-import Specialist from "../../../assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing-Services.webp";
-import optimization from "../../../assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing-Agency.webp";
-import HeroSection from "../../../components/HeroSection";
+import service from '../../../assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing.webp'
+import Specialist from '../../../assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing-Services.webp'
+import optimization from '../../../assets/images/SERVICES/Digital Marketing Agency/social_media/Social-Media-Marketing-Agency.webp'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const SocialMediaMarketing = () => {
   const [activeSocialBox, setActiveSocialBox] = useState(
-    "social_media_stratergy"
-  );
-  const [activeWhyChoose, setActiveWhyChoose] = useState("experience");
+    'social_media_stratergy',
+  )
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience')
 
   return (
     <>
+      <Helmet title="Social Media Marketing Agency in India, USA - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Social Media Marketing"
@@ -52,17 +54,17 @@ const SocialMediaMarketing = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveSocialBox("social_media_stratergy")}
+                  onClick={() => setActiveSocialBox('social_media_stratergy')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeSocialBox === "social_media_stratergy" &&
-                      "service__provide_tab_active"
+                      activeSocialBox === 'social_media_stratergy' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png')}
                       alt="Social Media Strategy"
                       className="img-fluid"
                     />
@@ -71,17 +73,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveSocialBox("social_branding")}
+                  onClick={() => setActiveSocialBox('social_branding')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeSocialBox === "social_branding" &&
-                      "service__provide_tab_active"
+                      activeSocialBox === 'social_branding' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png')}
                       alt="Social Branding"
                       className="img-fluid"
                     />
@@ -90,17 +92,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveSocialBox("social_engagement")}
+                  onClick={() => setActiveSocialBox('social_engagement')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeSocialBox === "social_engagement" &&
-                      "service__provide_tab_active"
+                      activeSocialBox === 'social_engagement' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png')}
                       alt="Social Engagement"
                       className="img-fluid"
                     />
@@ -109,17 +111,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveSocialBox("social_monitoring")}
+                  onClick={() => setActiveSocialBox('social_monitoring')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeSocialBox === "social_monitoring" &&
-                      "service__provide_tab_active"
+                      activeSocialBox === 'social_monitoring' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png')}
                       alt="Social Monitoring"
                       className="img-fluid"
                     />
@@ -128,17 +130,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveSocialBox("social_media_paid")}
+                  onClick={() => setActiveSocialBox('social_media_paid')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeSocialBox === "social_media_paid" &&
-                      "service__provide_tab_active"
+                      activeSocialBox === 'social_media_paid' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png')}
                       alt="Social Media Paid Campaigns"
                       className="img-fluid"
                     />
@@ -147,17 +149,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveSocialBox("social_pr")}
+                  onClick={() => setActiveSocialBox('social_pr')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeSocialBox === "social_pr" &&
-                      "service__provide_tab_active"
+                      activeSocialBox === 'social_pr' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png')}
                       alt="Social PR"
                       className="img-fluid"
                     />
@@ -166,7 +168,7 @@ const SocialMediaMarketing = () => {
                 </div>
               </div>
             </div>
-            {activeSocialBox === "social_media_stratergy" && (
+            {activeSocialBox === 'social_media_stratergy' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -190,7 +192,7 @@ const SocialMediaMarketing = () => {
                 </div>
               </div>
             )}
-            {activeSocialBox === "social_branding" && (
+            {activeSocialBox === 'social_branding' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -206,8 +208,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeSocialBox === "social_engagement" && (
+            )}{' '}
+            {activeSocialBox === 'social_engagement' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -231,8 +233,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeSocialBox === "social_monitoring" && (
+            )}{' '}
+            {activeSocialBox === 'social_monitoring' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -256,8 +258,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeSocialBox === "social_media_paid" && (
+            )}{' '}
+            {activeSocialBox === 'social_media_paid' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -283,8 +285,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeSocialBox === "social_pr" && (
+            )}{' '}
+            {activeSocialBox === 'social_pr' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -323,17 +325,17 @@ const SocialMediaMarketing = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience")}
+                  onClick={() => setActiveWhyChoose('experience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png')}
                       alt="Experience"
                       className="img-fluid"
                     />
@@ -342,17 +344,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("expertise")}
+                  onClick={() => setActiveWhyChoose('expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'expertise' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png')}
                       alt="Expertise"
                       className="img-fluid"
                     />
@@ -361,17 +363,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                  onClick={() => setActiveWhyChoose('robust_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png')}
                       alt="Robust"
                       className="img-fluid"
                     />
@@ -380,17 +382,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("sophisticated_tools")}
+                  onClick={() => setActiveWhyChoose('sophisticated_tools')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "sophisticated_tools" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'sophisticated_tools' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png')}
                       alt="Sophisticated"
                       className="img-fluid"
                     />
@@ -399,17 +401,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("result_driven")}
+                  onClick={() => setActiveWhyChoose('result_driven')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "result_driven" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'result_driven' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png')}
                       alt="Timebound And"
                       className="img-fluid"
                     />
@@ -418,17 +420,17 @@ const SocialMediaMarketing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("pricing")}
+                  onClick={() => setActiveWhyChoose('pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png')}
                       alt="Competitive"
                       className="img-fluid"
                     />
@@ -437,7 +439,7 @@ const SocialMediaMarketing = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience" && (
+            {activeWhyChoose === 'experience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -460,8 +462,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "expertise" && (
+            )}{' '}
+            {activeWhyChoose === 'expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -485,8 +487,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "robust_portfolio" && (
+            )}{' '}
+            {activeWhyChoose === 'robust_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -510,8 +512,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "tools" && (
+            )}{' '}
+            {activeWhyChoose === 'tools' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -535,8 +537,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "result_driven" && (
+            )}{' '}
+            {activeWhyChoose === 'result_driven' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -563,8 +565,8 @@ const SocialMediaMarketing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "pricing" && (
+            )}{' '}
+            {activeWhyChoose === 'pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -600,7 +602,7 @@ const SocialMediaMarketing = () => {
       <ContactUs question="Are you planning to Launch Successful Social Media Marketing in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default SocialMediaMarketing;
+export default SocialMediaMarketing

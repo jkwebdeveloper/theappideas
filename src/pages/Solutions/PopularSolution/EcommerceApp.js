@@ -44,6 +44,7 @@ import Inventory from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Comm
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const EcommerceApp = () => {
   const [activeSection, setActiveSection] = useState('user_app')
@@ -243,6 +244,7 @@ const EcommerceApp = () => {
 
   return (
     <>
+      <Helmet title="eCommerce App Development Company In India | The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="E-Commerce App Store"

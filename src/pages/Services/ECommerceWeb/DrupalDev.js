@@ -1,28 +1,28 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
 
-import Services from "../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Development-Services.webp";
-import Development from "../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Website-Development.webp";
-import Expert from "../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Expert.webp";
-import HeroSection from "../../../components/HeroSection";
+import Services from '../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Development-Services.webp'
+import Development from '../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Website-Development.webp'
+import Expert from '../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Joomla-Expert.webp'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const DrupalDev = () => {
-  const [activeWeProvide, setActiveWeProvide] = useState("drupal_website");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeWeProvide, setActiveWeProvide] = useState('drupal_website')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Drupal Web Development Company In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Drupal Web Development Company"
@@ -59,17 +59,17 @@ const DrupalDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("drupal_website")}
+                  onClick={() => setActiveWeProvide('drupal_website')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "drupal_website" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'drupal_website' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Custom-Web-Development.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Custom-Web-Development.png')}
                       alt="Drupal Custom web development"
                       className="img-fluid"
                     />
@@ -78,17 +78,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("theme_templates")}
+                  onClick={() => setActiveWeProvide('theme_templates')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "theme_templates" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'theme_templates' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Template-Theme-Development.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Template-Theme-Development.png')}
                       alt="Drupal Template and Theme Development"
                       className="img-fluid"
                     />
@@ -97,17 +97,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("custom_plugin")}
+                  onClick={() => setActiveWeProvide('custom_plugin')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "custom_plugin" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'custom_plugin' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Custom-Plugin-Development.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Custom-Plugin-Development.png')}
                       alt=" Custom Plugin Development"
                       className="img-fluid"
                     />
@@ -116,17 +116,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("app_conversion")}
+                  onClick={() => setActiveWeProvide('app_conversion')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "app_conversion" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'app_conversion' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Mobile-App-Conversion-1.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Mobile-App-Conversion-1.png')}
                       alt="App Conversion"
                       className="img-fluid"
                     />
@@ -135,17 +135,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("drupal_website_redesign")}
+                  onClick={() => setActiveWeProvide('drupal_website_redesign')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "drupal_website_redesign" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'drupal_website_redesign' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Website-Redesign.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Drupal-Website-Redesign.png')}
                       alt="Drupal Website Redesign"
                       className="img-fluid"
                     />
@@ -155,18 +155,18 @@ const DrupalDev = () => {
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
                   onClick={() =>
-                    setActiveWeProvide("drupal_support_maintanance")
+                    setActiveWeProvide('drupal_support_maintanance')
                   }
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "drupal_support_maintanance" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'drupal_support_maintanance' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Strong-Support.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/What-Do/Strong-Support.png')}
                       alt="Drupal Support & Maintenance"
                       className="img-fluid"
                     />
@@ -175,7 +175,7 @@ const DrupalDev = () => {
                 </div>
               </div>
             </div>
-            {activeWeProvide === "drupal_website" && (
+            {activeWeProvide === 'drupal_website' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -203,12 +203,12 @@ const DrupalDev = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "theme_templates" && (
+            {activeWeProvide === 'theme_templates' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Drupal Template and Theme Development{" "}
+                      Drupal Template and Theme Development{' '}
                     </h3>
                     <p className="Title_para">
                       The advancement in technology has made the business
@@ -231,12 +231,12 @@ const DrupalDev = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "custom_plugin" && (
+            {activeWeProvide === 'custom_plugin' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Custom Plugin Development{" "}
+                      Custom Plugin Development{' '}
                     </h3>
                     <p className="Title_para">
                       Currently, the demand for the digital platform is
@@ -259,12 +259,12 @@ const DrupalDev = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "app_conversion" && (
+            {activeWeProvide === 'app_conversion' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Drupal Mobile App Conversion{" "}
+                      Drupal Mobile App Conversion{' '}
                     </h3>
                     <p className="Title_para">
                       Nowadays, online platforms like websites and mobile apps
@@ -286,7 +286,7 @@ const DrupalDev = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "drupal_website_redesign" && (
+            {activeWeProvide === 'drupal_website_redesign' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -312,12 +312,12 @@ const DrupalDev = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "drupal_support_maintanance" && (
+            {activeWeProvide === 'drupal_support_maintanance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Drupal Support and Maintenance{" "}
+                      Drupal Support and Maintenance{' '}
                     </h3>
                     <p className="Title_para">
                       If you are thinking of launching an online platform or
@@ -382,55 +382,55 @@ const DrupalDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -439,13 +439,13 @@ const DrupalDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -454,13 +454,13 @@ const DrupalDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -469,13 +469,13 @@ const DrupalDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -484,13 +484,13 @@ const DrupalDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -499,13 +499,13 @@ const DrupalDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -514,13 +514,13 @@ const DrupalDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -545,17 +545,17 @@ const DrupalDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Experience-And-Expertise-1.png')}
                       alt="Experience and Expertise"
                       className="img-fluid"
                     />
@@ -564,17 +564,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("storng_portfolio")}
+                  onClick={() => setActiveWhyChoose('storng_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "storng_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'storng_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/robust-portfolio.png')}
                       alt="Strong Portfolio"
                       className="img-fluid"
                     />
@@ -583,17 +583,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("indudtry_leading_team")}
+                  onClick={() => setActiveWhyChoose('indudtry_leading_team')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "indudtry_leading_team" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'indudtry_leading_team' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Industry-Leading-Team.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Industry-Leading-Team.png')}
                       alt="Industry Leading Team"
                       className="img-fluid"
                     />
@@ -602,17 +602,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile")}
+                  onClick={() => setActiveWhyChoose('agile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/Agile-Development-1.png')}
                       alt="Agile Development"
                       className="img-fluid"
                     />
@@ -621,17 +621,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("strict_project")}
+                  onClick={() => setActiveWhyChoose('strict_project')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "strict_project" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'strict_project' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Time-Bound-Development..png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/DrupalDev/What-Do/Time-Bound-Development..png')}
                       alt="Adhering to strict Project Deadlines"
                       className="img-fluid"
                     />
@@ -640,17 +640,17 @@ const DrupalDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/JoomlaDev/Why-Choose/competitive-pricing.png')}
                       alt="Competitive Pricing"
                       className="img-fluid"
                     />
@@ -659,7 +659,7 @@ const DrupalDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -685,7 +685,7 @@ const DrupalDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "storng_portfolio" && (
+            {activeWhyChoose === 'storng_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -710,8 +710,8 @@ const DrupalDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "indudtry_leading_team" && (
+            )}{' '}
+            {activeWhyChoose === 'indudtry_leading_team' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -735,8 +735,8 @@ const DrupalDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "agile" && (
+            )}{' '}
+            {activeWhyChoose === 'agile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -761,8 +761,8 @@ const DrupalDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "strict_project" && (
+            )}{' '}
+            {activeWhyChoose === 'strict_project' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -789,8 +789,8 @@ const DrupalDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "competitive_pricing" && (
+            )}{' '}
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -824,7 +824,7 @@ const DrupalDev = () => {
       <ContactUs question="Are you planning to launch a Successful Drupal website in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default DrupalDev;
+export default DrupalDev

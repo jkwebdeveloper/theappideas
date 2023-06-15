@@ -11,6 +11,7 @@ import TestiMonial from "../../../components/Testimonial/TestiMonial";
 import FAQ from "../../../components/FAQ";
 import ContactUs from "../../../components/ContactUs";
 import HeroSection from "../../../components/HeroSection";
+import { Helmet } from "react-helmet";
 
 const GraphicsDesign = () => {
   const [activeWeOffer, setActiveWeOffer] = useState("logo_designing");
@@ -22,6 +23,7 @@ const GraphicsDesign = () => {
   const nextRef = useRef(null);
   return (
     <>
+    <Helmet title="Best Graphics Design Company in India | The App Ideas"/>
       {/* Banner Section Start */}
       <HeroSection
         title="Best Graphic Design Company"

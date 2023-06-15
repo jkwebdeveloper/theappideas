@@ -3,10 +3,12 @@ import { BsTelephoneFill } from 'react-icons/bs'
 import { FaRegDotCircle } from 'react-icons/fa'
 import { MdLocationPin } from 'react-icons/md'
 import { HiOutlineMail } from 'react-icons/hi'
+import { Helmet } from 'react-helmet'
 
 const CareerApply = () => {
   return (
     <>
+    <Helmet title='The App Ideas Careers Application'/>
       <section className="carrer_banner">
         <div className="carrer_banner_content">
           <h1>Business Development Executive</h1>

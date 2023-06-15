@@ -9,6 +9,7 @@ import TestiMonial from '../../../components/Testimonial/TestiMonial'
 import FAQ from '../../../components/FAQ'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const MobileAppDesign = () => {
   const [activeWeOffer, setActiveWeOffer] = useState('ui_design')
@@ -16,6 +17,7 @@ const MobileAppDesign = () => {
 
   return (
     <>
+      <Helmet title="Mobile App Design Company India - The app ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Mobile App Designing Company"

@@ -1,28 +1,28 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
 
-import mobileweb from "../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Website-Development.webp";
-import mobileaap from "../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Custom-Theme-Developmen.webp";
-import webapp from "../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Experts.webp";
-import HeroSection from "../../../components/HeroSection";
+import mobileweb from '../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Website-Development.webp'
+import mobileaap from '../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Custom-Theme-Developmen.webp'
+import webapp from '../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Experts.webp'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const ShopifyDev = () => {
-  const [activeService, setActiveService] = useState(
-    "shopify_e_commerce_store"
-  );
-  const [activeWhyChoose, setActiveWhyChoose] = useState("years_experience");
+  const [activeService, setActiveService] = useState('shopify_e_commerce_store')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('years_experience')
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Shopify Web & App Development Company India - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Shopify Development Company"
@@ -59,17 +59,17 @@ const ShopifyDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("shopify_e_commerce_store")}
+                  onClick={() => setActiveService('shopify_e_commerce_store')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "shopify_e_commerce_store" &&
-                      "service__provide_tab_active"
+                      activeService === 'shopify_e_commerce_store' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/icons8-shopify-72.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/icons8-shopify-72.png')}
                       alt="E-Commerce Development"
                       className="img-fluid"
                     />
@@ -78,17 +78,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("customize")}
+                  onClick={() => setActiveService('customize')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "customize" &&
-                      "service__provide_tab_active"
+                      activeService === 'customize' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Custom-Shopify-E-Commerce-Development.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Custom-Shopify-E-Commerce-Development.png')}
                       alt="Customize"
                       className="img-fluid"
                     />
@@ -97,17 +97,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("shopify_mobile_ecommerce")}
+                  onClick={() => setActiveService('shopify_mobile_ecommerce')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "shopify_mobile_ecommerce" &&
-                      "service__provide_tab_active"
+                      activeService === 'shopify_mobile_ecommerce' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Shopify-Mobile-Commerce-Development.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Shopify-Mobile-Commerce-Development.png')}
                       alt="Mobile
                       Development"
                       className="img-fluid"
@@ -117,17 +117,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("shopify_plugin")}
+                  onClick={() => setActiveService('shopify_plugin')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "shopify_plugin" &&
-                      "service__provide_tab_active"
+                      activeService === 'shopify_plugin' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Shopify-Plugin-Development.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Shopify-Plugin-Development.png')}
                       alt="Shopify Plugin development"
                       className="img-fluid"
                     />
@@ -136,17 +136,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("shopify_theme")}
+                  onClick={() => setActiveService('shopify_theme')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "shopify_theme" &&
-                      "service__provide_tab_active"
+                      activeService === 'shopify_theme' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Group-184.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Group-184.png')}
                       alt="Shopify Theme Development"
                       className="img-fluid"
                     />
@@ -155,17 +155,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("support_maintanance")}
+                  onClick={() => setActiveService('support_maintanance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "support_maintanance" &&
-                      "service__provide_tab_active"
+                      activeService === 'support_maintanance' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Mask-Group.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/What Do/Mask-Group.png')}
                       alt="Support and maintenance"
                       className="img-fluid"
                     />
@@ -174,7 +174,7 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </div>
-            {activeService === "shopify_e_commerce_store" && (
+            {activeService === 'shopify_e_commerce_store' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -204,12 +204,12 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "customize" && (
+            {activeService === 'customize' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Custom Shopify E-commerce Development{" "}
+                      Custom Shopify E-commerce Development{' '}
                     </h3>
                     <p className="Title_para">
                       Shopify is one of the most popular as well as demanding
@@ -231,12 +231,12 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "shopify_mobile_ecommerce" && (
+            {activeService === 'shopify_mobile_ecommerce' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Shopify Mobile Commerce development{" "}
+                      Shopify Mobile Commerce development{' '}
                     </h3>
                     <p className="Title_para">
                       If we talk about the demand for mobile app services then
@@ -258,12 +258,12 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "shopify_plugin" && (
+            {activeService === 'shopify_plugin' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Shopify Plugin development{" "}
+                      Shopify Plugin development{' '}
                     </h3>
                     <p className="Title_para">
                       Nowadays, we can clearly see that the demand for
@@ -287,12 +287,12 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "shopify_theme" && (
+            {activeService === 'shopify_theme' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Shopify Theme Development{" "}
+                      Shopify Theme Development{' '}
                     </h3>
                     <p className="Title_para">
                       As you know, there are thousands of E-commerce technology
@@ -315,7 +315,7 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "support_maintanance" && (
+            {activeService === 'support_maintanance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -386,55 +386,55 @@ const ShopifyDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/baristaswag.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/baristaswag.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/berripro.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/berripro.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/blessestore.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/blessestore.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -443,13 +443,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/dashwallets.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/dashwallets.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -458,13 +458,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/glowrecipe.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/glowrecipe.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -473,13 +473,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/momzjoy.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/momzjoy.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -488,13 +488,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/monbebecouture.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/monbebecouture.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -503,13 +503,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/moroccanfurniturebazaar.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/moroccanfurniturebazaar.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -518,13 +518,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/purebodynaturals.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/purebodynaturals.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -533,13 +533,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/resipsausa.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/resipsausa.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -548,13 +548,13 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/terracomo.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/terracomo.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -577,17 +577,17 @@ const ShopifyDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("years_experience")}
+                  onClick={() => setActiveWhyChoose('years_experience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "years_experience" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'years_experience' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Experience-And-Expertise-1.png')}
                       alt="Years of Experience"
                       className="img-fluid"
                     />
@@ -596,17 +596,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust")}
+                  onClick={() => setActiveWhyChoose('robust')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/robust-portfolio.png')}
                       alt="Robust Portfolio"
                       className="img-fluid"
                     />
@@ -615,17 +615,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("business")}
+                  onClick={() => setActiveWhyChoose('business')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "business" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'business' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/icons8-business-network-72.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/icons8-business-network-72.png')}
                       alt="Business Specific"
                       className="img-fluid"
                     />
@@ -634,17 +634,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("dedicated_project")}
+                  onClick={() => setActiveWhyChoose('dedicated_project')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "dedicated_project" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'dedicated_project' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Smart-Retail.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Smart-Retail.png')}
                       alt="Dedicated Project Manager"
                       className="img-fluid"
                     />
@@ -653,17 +653,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("highly_result")}
+                  onClick={() => setActiveWhyChoose('highly_result')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "highly_result" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'highly_result' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Performance-Driven..png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/Performance-Driven..png')}
                       alt="Highly Result Driven"
                       className="img-fluid"
                     />
@@ -672,17 +672,17 @@ const ShopifyDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Why Choose/competitive-pricing.png')}
                       alt="Competitive Pricing"
                       className="img-fluid"
                     />
@@ -691,7 +691,7 @@ const ShopifyDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "years_experience" && (
+            {activeWhyChoose === 'years_experience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -715,7 +715,7 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "robust" && (
+            {activeWhyChoose === 'robust' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -740,7 +740,7 @@ const ShopifyDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "business" && (
+            {activeWhyChoose === 'business' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -766,8 +766,8 @@ const ShopifyDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "dedicated_project" && (
+            )}{' '}
+            {activeWhyChoose === 'dedicated_project' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -790,8 +790,8 @@ const ShopifyDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "highly_result" && (
+            )}{' '}
+            {activeWhyChoose === 'highly_result' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -816,8 +816,8 @@ const ShopifyDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "competitive_pricing" && (
+            )}{' '}
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -851,7 +851,7 @@ const ShopifyDev = () => {
       <ContactUs question="Are you planning to launch a Successful Shopify E-commerce platform in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default ShopifyDev;
+export default ShopifyDev

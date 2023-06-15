@@ -32,6 +32,7 @@ import Featured from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating 
 import customizable from '../../../assets/images/SOLUTIONS/Popular Solutions/Dating App Development Company/Admin Features of Dating App/Bad-words.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const DatingApp = () => {
   const [activeSection, setActiveSection] = useState('user_dating')
@@ -171,6 +172,7 @@ const DatingApp = () => {
 
   return (
     <>
+      <Helmet title="Dating App Development Company India | Dating App Developers India" />
       {/* common Banner start */}
       <HeroSection
         title="Dating App Development Company"

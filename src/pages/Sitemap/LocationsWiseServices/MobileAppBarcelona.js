@@ -1,19 +1,21 @@
-import { React, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "../../../components/Workdone/work.css";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { Link } from "react-router-dom";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
+import { React, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import '../../../components/Workdone/work.css'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import { Link } from 'react-router-dom'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import { Helmet } from 'react-helmet'
 
 const MobileAppBarcelona = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Best Mobile App Development Company Barcelona" />
       {/* Banner Section Start */}
       <section className="common__banner__section">
         <div className="container">
@@ -86,7 +88,7 @@ const MobileAppBarcelona = () => {
                             id="exampleFormControlTextarea1"
                             rows={3}
                             placeholder="Project Requirement*"
-                            defaultValue={""}
+                            defaultValue={''}
                           />
                         </div>
                         <div className="col-sm-12 text-center py-5">
@@ -111,7 +113,7 @@ const MobileAppBarcelona = () => {
           <div className="Title">
             <h3>Mobile App Development Company Barcelona, Spain</h3>
             <p>
-              We at App Ideas offer a comprehensive array of{" "}
+              We at App Ideas offer a comprehensive array of{' '}
               <strong> Mobile App Development Company Barcelona </strong>, Spain
               businesses need. We develop future-ready, cutting-edge scalable,
               and most innovative mobile apps that meet the requirements of
@@ -127,7 +129,7 @@ const MobileAppBarcelona = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png")}
+                      src={require('../../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png')}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
@@ -137,7 +139,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Group-235.png")}
+                      src={require('../../../assets/images/sitemap/toronto/mobile-app/Group-235.png')}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
@@ -147,7 +149,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png")}
+                      src={require('../../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png')}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -157,7 +159,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png")}
+                      src={require('../../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png')}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -167,7 +169,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png")}
+                      src={require('../../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png')}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
@@ -177,7 +179,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png")}
+                      src={require('../../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png')}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -243,23 +245,23 @@ const MobileAppBarcelona = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
-            style={{ padding: "2.5rem 0" }}
+            style={{ padding: '2.5rem 0' }}
           >
             <SwiperSlide>
               <Link
@@ -269,16 +271,16 @@ const MobileAppBarcelona = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../../assets/images/work/2.webp")}
+                      src={require('../../../assets/images/work/2.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">
                       Mindweel - On Demand Psychologist Hiring App
                     </div>
@@ -321,16 +323,16 @@ const MobileAppBarcelona = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../../assets/images/work/bolt-app.webp")}
+                      src={require('../../../assets/images/work/bolt-app.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">Bold Delivery</div>
                     <p>
                       It’s a Food Ordering & Food Delivery App. We have created
@@ -367,16 +369,16 @@ const MobileAppBarcelona = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../../assets/images/work/service-my-car.webp")}
+                      src={require('../../../assets/images/work/service-my-car.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">Service my car</div>
                     <p>
                       It’s an On Demand Car Servicing App, It has 2 main
@@ -415,7 +417,7 @@ const MobileAppBarcelona = () => {
           <div className="Title">
             <h3>Why Choose The App Ideas?</h3>
             <p>
-              <strong> Mobile App Development Company Barcelona</strong>{" "}
+              <strong> Mobile App Development Company Barcelona</strong>{' '}
               providers are too many, but due to our committed approach and
               industry-acclaimed professional output we always stand out from
               the rest. Here we explain the principal reasons to choose us for
@@ -431,7 +433,7 @@ const MobileAppBarcelona = () => {
                     className="service__provide_tab service__provide_tab_active"
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png')}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
@@ -444,7 +446,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png")}
+                      src={require('../../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png')}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
@@ -454,7 +456,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/why-choose/latest-technology.png")}
+                      src={require('../../../assets/images/sitemap/toronto/why-choose/latest-technology.png')}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -464,7 +466,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png')}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -474,7 +476,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/why-choose/transperent-process.png")}
+                      src={require('../../../assets/images/sitemap/toronto/why-choose/transperent-process.png')}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
@@ -484,7 +486,7 @@ const MobileAppBarcelona = () => {
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
                   <a href="" className="service__provide_tab">
                     <img
-                      src={require("../../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png')}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -529,7 +531,7 @@ const MobileAppBarcelona = () => {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{ textAlign: "justify" }}>
+                <p style={{ textAlign: 'justify' }}>
                   Do you want to know in more details about our Mobile App
                   Development Barcelona? Let us explain how our development
                   output can make substantial value addition to your business.
@@ -541,8 +543,8 @@ const MobileAppBarcelona = () => {
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
                 <Link to="/contactus">
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
+                  <a className="contact_btn" style={{ color: '#000' }}>
+                    Contact us{' '}
                   </a>
                 </Link>
               </div>
@@ -552,7 +554,7 @@ const MobileAppBarcelona = () => {
       </section>
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default MobileAppBarcelona;
+export default MobileAppBarcelona

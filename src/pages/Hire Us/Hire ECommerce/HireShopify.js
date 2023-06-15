@@ -25,6 +25,7 @@ import Time from '../../../assets/images/HIRE US/Hire E-commerce Developer/Hire 
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireShopify = () => {
   useEffect(() => {
@@ -32,6 +33,7 @@ const HireShopify = () => {
   }, [])
   return (
     <>
+    <Helmet title='Hire Dedicated Shopify Developers in India | The App Ideas'/>
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Shopify Developers In India"

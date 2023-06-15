@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import CustomWordPress from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Angular-JS-Development.png";
-import WordPressWebsite from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Angular-JS-Development-Services.png";
-import Developer from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Angular-JS-developer.png";
+import CustomWordPress from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Angular-JS-Development.png'
+import WordPressWebsite from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Angular-JS-Development-Services.png'
+import Developer from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Angular-JS-developer.png'
 
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const Angular = () => {
-  const [activeOffer, setActiveOffer] = useState("cross_platform");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "expertise_experience"
-  );
+  const [activeOffer, setActiveOffer] = useState('cross_platform')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('expertise_experience')
 
   return (
     <>
+      <Helmet title="Angular Development Company In India | The app Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Angular JS Development Company"
@@ -54,17 +54,17 @@ const Angular = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("cross_platform")}
+                  onClick={() => setActiveOffer('cross_platform')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "cross_platform" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'cross_platform' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/js.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/js.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -73,17 +73,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("web_development")}
+                  onClick={() => setActiveOffer('web_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "web_development" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'web_development' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Angular-JS-Web-Development-icon.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Angular-JS-Web-Development-icon.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -92,17 +92,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("consulting_service")}
+                  onClick={() => setActiveOffer('consulting_service')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "consulting_service" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'consulting_service' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Strong-Support.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Strong-Support.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -111,17 +111,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("custom_app")}
+                  onClick={() => setActiveOffer('custom_app')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "custom_app" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'custom_app' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Angular-JS-Custom-Apps-icon.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Angular-JS-Custom-Apps-icon.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -130,16 +130,16 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("support")}
+                  onClick={() => setActiveOffer('support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "support" && "service__provide_tab_active"
+                      activeOffer === 'support' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Strong-Support.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Strong-Support.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -148,17 +148,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("integration")}
+                  onClick={() => setActiveOffer('integration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "integration" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'integration' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Angular-JS-Integration.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/what do/Angular-JS-Integration.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -167,7 +167,7 @@ const Angular = () => {
                 </div>
               </div>
             </div>
-            {activeOffer === "cross_platform" && (
+            {activeOffer === 'cross_platform' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -196,12 +196,12 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "web_development" && (
+            {activeOffer === 'web_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Angular JS Web Development{" "}
+                      Angular JS Web Development{' '}
                     </h3>
                     <p className="Title_para">
                       If we talk about the web app platforms then these kinds of
@@ -223,12 +223,12 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "consulting_service" && (
+            {activeOffer === 'consulting_service' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Angular JS Consulting services{" "}
+                      Angular JS Consulting services{' '}
                     </h3>
                     <p className="Title_para">
                       If you are planning to launch a web app solution for your
@@ -251,7 +251,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "custom_app" && (
+            {activeOffer === 'custom_app' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -276,7 +276,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "support" && (
+            {activeOffer === 'support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -302,7 +302,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "integration" && (
+            {activeOffer === 'integration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -344,17 +344,17 @@ const Angular = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("expertise_experience")}
+                  onClick={() => setActiveWhyChoose('expertise_experience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "expertise_experience" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'expertise_experience' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -363,17 +363,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("sound_porfolio")}
+                  onClick={() => setActiveWhyChoose('sound_porfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "sound_porfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'sound_porfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -382,17 +382,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("exceptional_dynamic")}
+                  onClick={() => setActiveWhyChoose('exceptional_dynamic')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "exceptional_dynamic" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'exceptional_dynamic' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png')}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -401,17 +401,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile")}
+                  onClick={() => setActiveWhyChoose('agile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png')}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -421,17 +421,17 @@ const Angular = () => {
 
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -440,17 +440,17 @@ const Angular = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("timely_project")}
+                  onClick={() => setActiveWhyChoose('timely_project')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "timely_project" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'timely_project' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -459,7 +459,7 @@ const Angular = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "expertise_experience" && (
+            {activeWhyChoose === 'expertise_experience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -483,7 +483,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "sound_porfolio" && (
+            {activeWhyChoose === 'sound_porfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -508,7 +508,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "exceptional_dynamic" && (
+            {activeWhyChoose === 'exceptional_dynamic' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -533,7 +533,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "agile" && (
+            {activeWhyChoose === 'agile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -558,7 +558,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "competitive_pricing" && (
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -583,7 +583,7 @@ const Angular = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "timely_project" && (
+            {activeWhyChoose === 'timely_project' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -621,7 +621,7 @@ const Angular = () => {
       <ContactUs question="Are you planning to launch a Successful Angular JS app in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default Angular;
+export default Angular

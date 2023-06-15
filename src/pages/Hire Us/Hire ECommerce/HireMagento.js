@@ -25,6 +25,7 @@ import Time from '../../../assets/images/HIRE US/Hire E-commerce Developer/Hire 
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireMagento = () => {
   useEffect(() => {
@@ -43,6 +44,7 @@ const HireMagento = () => {
   // console.log(link)
   return (
     <>
+      <Helmet title="Hire Certified Magento 2 Developers In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Magento 2 Developers In India"

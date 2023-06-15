@@ -1,22 +1,24 @@
-import React, { useState } from "react";
-import Work from "../../../components/Workdone/Work";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import React, { useState } from 'react'
+import Work from '../../../components/Workdone/Work'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
 // Service section image
-import MobileAppDesigning from "../../../assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg";
-import WebAppDesigning from "../../../assets/images/SERVICES/Designing/Services we provide/Web app designing.svg";
-import Graphic from "../../../assets/images/SERVICES/Designing/Services we provide/Graphic designing.svg";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
+import MobileAppDesigning from '../../../assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg'
+import WebAppDesigning from '../../../assets/images/SERVICES/Designing/Services we provide/Web app designing.svg'
+import Graphic from '../../../assets/images/SERVICES/Designing/Services we provide/Graphic designing.svg'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import { Helmet } from 'react-helmet'
 
 // Industries  section images
 
 const Designing = () => {
-  const [activeService, setActiveService] = useState("banner_designing");
-  const [activeWeServe, setActiveWeServe] = useState("security_gaurd");
+  const [activeService, setActiveService] = useState('banner_designing')
+  const [activeWeServe, setActiveWeServe] = useState('security_gaurd')
 
   return (
     <>
+      <Helmet title="designing services - THE APP IDEAS" />
       {/* Banner Section Start */}
       <section className="common__banner__section">
         <div className="container">
@@ -103,7 +105,7 @@ const Designing = () => {
                             id="exampleFormControlTextarea1"
                             rows={3}
                             placeholder="Project Requirement*"
-                            defaultValue={""}
+                            defaultValue={''}
                           />
                         </div>
                         <div className="col-sm-12 text-center py-5">
@@ -133,17 +135,17 @@ const Designing = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("banner_designing")}
+                  onClick={() => setActiveService('banner_designing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "banner_designing" &&
-                      "service__provide_tab_active"
+                      activeService === 'banner_designing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/banner-design.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Services we provide/banner-design.png')}
                       alt="Banner-Designing"
                       className="img-fluid"
                     />
@@ -155,17 +157,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("logo_designing")}
+                  onClick={() => setActiveService('logo_designing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "logo_designing" &&
-                      "service__provide_tab_active"
+                      activeService === 'logo_designing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/logo-design.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Services we provide/logo-design.png')}
                       alt="Logo-Designing"
                       className="img-fluid"
                     />
@@ -177,17 +179,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("custom_template_designing")}
+                  onClick={() => setActiveService('custom_template_designing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "custom_template_designing" &&
-                      "service__provide_tab_active"
+                      activeService === 'custom_template_designing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/template-design.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Services we provide/template-design.png')}
                       alt="Custom-Template-Designing"
                       className="img-fluid"
                     />
@@ -196,13 +198,13 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("mobile_app_designing")}
+                  onClick={() => setActiveService('mobile_app_designing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "mobile_app_designing" &&
-                      "service__provide_tab_active"
+                      activeService === 'mobile_app_designing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -215,13 +217,13 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("web_app")}
+                  onClick={() => setActiveService('web_app')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "web_app" &&
-                      "service__provide_tab_active"
+                      activeService === 'web_app' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -234,17 +236,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("redesigning")}
+                  onClick={() => setActiveService('redesigning')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "redesigning" &&
-                      "service__provide_tab_active"
+                      activeService === 'redesigning' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/redesign.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Services we provide/redesign.png')}
                       alt="Re-Designing-Services"
                       className="img-fluid"
                     />
@@ -253,17 +255,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("brouchure_designing")}
+                  onClick={() => setActiveService('brouchure_designing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "brouchure_designing" &&
-                      "service__provide_tab_active"
+                      activeService === 'brouchure_designing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/brochure-design.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Services we provide/brochure-design.png')}
                       alt="Brochure-Designing"
                       className="img-fluid"
                     />
@@ -272,17 +274,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("psd_html")}
+                  onClick={() => setActiveService('psd_html')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "psd_html" &&
-                      "service__provide_tab_active"
+                      activeService === 'psd_html' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Services we provide/psd-html.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Services we provide/psd-html.png')}
                       alt="PSD-to-Html"
                       className="img-fluid"
                     />
@@ -294,13 +296,13 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("graphic_desinging")}
+                  onClick={() => setActiveService('graphic_desinging')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "graphic_desinging" &&
-                      "service__provide_tab_active"
+                      activeService === 'graphic_desinging' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -313,7 +315,7 @@ const Designing = () => {
                 </div>
               </div>
             </div>
-            {activeService === "banner_designing" && (
+            {activeService === 'banner_designing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -344,7 +346,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "logo_designing" && (
+            {activeService === 'logo_designing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -376,7 +378,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "custom_template_designing" && (
+            {activeService === 'custom_template_designing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -408,7 +410,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "mobile_app_designing" && (
+            {activeService === 'mobile_app_designing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -442,7 +444,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "web_app" && (
+            {activeService === 'web_app' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -473,7 +475,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "redesigning" && (
+            {activeService === 'redesigning' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -504,7 +506,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "brouchure_designing" && (
+            {activeService === 'brouchure_designing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -535,7 +537,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "psd_html" && (
+            {activeService === 'psd_html' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -568,7 +570,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeService === "graphic_desinging" && (
+            {activeService === 'graphic_desinging' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -614,10 +616,10 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Designing/Technologies/photoshop.png")}
+                  src={require('../../../assets/images/SERVICES/Designing/Technologies/photoshop.png')}
                   alt="Asp.Net"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Photoshop</h2>
               </div>
@@ -625,10 +627,10 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Designing/Technologies/Illustrator.png")}
+                  src={require('../../../assets/images/SERVICES/Designing/Technologies/Illustrator.png')}
                   alt="DotNetNuke"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Illustrator</h2>
               </div>
@@ -636,10 +638,10 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Designing/Technologies/Figma.png")}
+                  src={require('../../../assets/images/SERVICES/Designing/Technologies/Figma.png')}
                   alt="DotNetNuke"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Figma</h2>
               </div>
@@ -647,10 +649,10 @@ const Designing = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Designing/Technologies/Adobe-XD.png")}
+                  src={require('../../../assets/images/SERVICES/Designing/Technologies/Adobe-XD.png')}
                   alt="DotNetNuke"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Adobe XD</h2>
               </div>
@@ -670,17 +672,17 @@ const Designing = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("security_gaurd")}
+                  onClick={() => setActiveWeServe('security_gaurd')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "security_gaurd" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'security_gaurd' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/security-guard.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/security-guard.png')}
                       alt="Academic-Education"
                       className="img-fluid"
                     />
@@ -689,17 +691,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("fashion")}
+                  onClick={() => setActiveWeServe('fashion')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "fashion" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'fashion' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/fashion-ind.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/fashion-ind.png')}
                       alt="Fintech-Industry"
                       className="img-fluid"
                     />
@@ -711,17 +713,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("e_comm")}
+                  onClick={() => setActiveWeServe('e_comm')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "e_comm" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'e_comm' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/ecommerce-ind.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/ecommerce-ind.png')}
                       alt="Real-Estate"
                       className="img-fluid"
                     />
@@ -730,17 +732,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("restaurant")}
+                  onClick={() => setActiveWeServe('restaurant')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "restaurant" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'restaurant' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/restaurant-business.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/restaurant-business.png')}
                       alt="Restaurant-Business"
                       className="img-fluid"
                     />
@@ -749,17 +751,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("education")}
+                  onClick={() => setActiveWeServe('education')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "education" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'education' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/academic-education.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/academic-education.png')}
                       alt="Travel-Tourism"
                       className="img-fluid"
                     />
@@ -768,17 +770,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("entertainment")}
+                  onClick={() => setActiveWeServe('entertainment')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "entertainment" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'entertainment' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/entertainment.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/entertainment.png')}
                       alt="Construction-Industry"
                       className="img-fluid"
                     />
@@ -787,17 +789,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("finance")}
+                  onClick={() => setActiveWeServe('finance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "finance" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'finance' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/finance-ind.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/finance-ind.png')}
                       alt="IT-Industry"
                       className="img-fluid"
                     />
@@ -809,17 +811,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("healthcare")}
+                  onClick={() => setActiveWeServe('healthcare')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "healthcare" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'healthcare' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/healthcare.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/healthcare.png')}
                       alt="Healthcare-Industry"
                       className="img-fluid"
                     />
@@ -828,17 +830,17 @@ const Designing = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeServe("logistics")}
+                  onClick={() => setActiveWeServe('logistics')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeServe === "logistics" &&
-                      "service__provide_tab_active"
+                      activeWeServe === 'logistics' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Designing/Industries/logistic-ind.png")}
+                      src={require('../../../assets/images/SERVICES/Designing/Industries/logistic-ind.png')}
                       alt="Entertainment-Industry"
                       className="img-fluid"
                     />
@@ -850,7 +852,7 @@ const Designing = () => {
                 </div>
               </div>
             </div>
-            {activeWeServe === "security_gaurd" && (
+            {activeWeServe === 'security_gaurd' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -882,7 +884,7 @@ const Designing = () => {
                 </div>
               </div>
             )}
-            {activeWeServe === "fashion" && (
+            {activeWeServe === 'fashion' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -912,8 +914,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "e_comm" && (
+            )}{' '}
+            {activeWeServe === 'e_comm' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -943,8 +945,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "education" && (
+            )}{' '}
+            {activeWeServe === 'education' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -973,8 +975,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "entertainment" && (
+            )}{' '}
+            {activeWeServe === 'entertainment' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1005,8 +1007,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "finance" && (
+            )}{' '}
+            {activeWeServe === 'finance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1037,8 +1039,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "healthcare" && (
+            )}{' '}
+            {activeWeServe === 'healthcare' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1068,8 +1070,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "logistics" && (
+            )}{' '}
+            {activeWeServe === 'logistics' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1098,8 +1100,8 @@ const Designing = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeServe === "restaurant" && (
+            )}{' '}
+            {activeWeServe === 'restaurant' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1143,9 +1145,9 @@ const Designing = () => {
       <TestiMonial />
       {/* Client testimonial Section End */}
       <FAQ />
-      <ContactUs question="Are you looking for the best Designing Agency?"/>
+      <ContactUs question="Are you looking for the best Designing Agency?" />
     </>
-  );
-};
+  )
+}
 
-export default Designing;
+export default Designing

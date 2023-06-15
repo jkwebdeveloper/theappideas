@@ -1,11 +1,13 @@
-import React from "react";
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
+import React from 'react'
+import TestiMonial from '../../components/Testimonial/TestiMonial'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import { Helmet } from 'react-helmet'
 
 const HireUs = () => {
   return (
     <>
+      <Helmet title="Hire The Best Web & App Developers | The App Ideas" />
       <section className="hire_banner">
         <div className="container">
           <div className="row">
@@ -15,7 +17,7 @@ const HireUs = () => {
                   <div className="col-12 col-sm-6 col-md-6">
                     <div className="hire_banner_lft_box">
                       <img
-                        src={require("../../assets/images/Header/Hire Us/dedicated-developer.png")}
+                        src={require('../../assets/images/Header/Hire Us/dedicated-developer.png')}
                         alt="dedicated-developer"
                         className="img-fluid"
                       />
@@ -27,7 +29,7 @@ const HireUs = () => {
                   <div className="col-12 col-sm-6 col-md-6">
                     <div className="hire_banner_lft_box">
                       <img
-                        src={require("../../assets/images/Header/Hire Us/part-time.png")}
+                        src={require('../../assets/images/Header/Hire Us/part-time.png')}
                         alt="part-time"
                         className="img-fluid"
                       />
@@ -39,7 +41,7 @@ const HireUs = () => {
                   <div className="col-12 col-sm-6 col-md-6">
                     <div className="hire_banner_lft_box">
                       <img
-                        src={require("../../assets/images/Header/Hire Us/hourly-base.png")}
+                        src={require('../../assets/images/Header/Hire Us/hourly-base.png')}
                         alt="hourly-base"
                         className="img-fluid"
                       />
@@ -51,7 +53,7 @@ const HireUs = () => {
                   <div className="col-12 col-sm-6 col-md-6">
                     <div className="hire_banner_lft_box">
                       <img
-                        src={require("../../assets/images/Header/Hire Us/maintenance.png")}
+                        src={require('../../assets/images/Header/Hire Us/maintenance.png')}
                         alt="maintenance"
                         className="img-fluid"
                       />
@@ -94,7 +96,7 @@ const HireUs = () => {
             <div className="col-12 col-sm-6 col-md-4 mb-4">
               <div className="hire_should_box">
                 <img
-                  src={require("../../assets/images/Header/Hire Us/why-should/exp1.png")}
+                  src={require('../../assets/images/Header/Hire Us/why-should/exp1.png')}
                   alt="exp1"
                   className="img-fluid"
                 />
@@ -104,7 +106,7 @@ const HireUs = () => {
             <div className="col-12 col-sm-6 col-md-4 mb-4">
               <div className="hire_should_box">
                 <img
-                  src={require("../../assets/images/Header/Hire Us/why-should/exp2.png")}
+                  src={require('../../assets/images/Header/Hire Us/why-should/exp2.png')}
                   alt="exp2"
                   className="img-fluid"
                 />
@@ -114,7 +116,7 @@ const HireUs = () => {
             <div className="col-12 col-sm-6 col-md-4 mb-4">
               <div className="hire_should_box">
                 <img
-                  src={require("../../assets/images/Header/Hire Us/why-should/exp3.png")}
+                  src={require('../../assets/images/Header/Hire Us/why-should/exp3.png')}
                   alt="exp3"
                   className="img-fluid"
                 />
@@ -124,7 +126,7 @@ const HireUs = () => {
             <div className="col-12 col-sm-6 col-md-4 mb-4">
               <div className="hire_should_box">
                 <img
-                  src={require("../../assets/images/Header/Hire Us/why-should/exp4.png")}
+                  src={require('../../assets/images/Header/Hire Us/why-should/exp4.png')}
                   alt="exp4"
                   className="img-fluid"
                 />
@@ -134,7 +136,7 @@ const HireUs = () => {
             <div className="col-12 col-sm-6 col-md-4 mb-4">
               <div className="hire_should_box">
                 <img
-                  src={require("../../assets/images/Header/Hire Us/why-should/Deadline-icon.png")}
+                  src={require('../../assets/images/Header/Hire Us/why-should/Deadline-icon.png')}
                   alt="exp5"
                   className="img-fluid"
                 />
@@ -144,7 +146,7 @@ const HireUs = () => {
             <div className="col-12 col-sm-6 col-md-4 mb-4">
               <div className="hire_should_box">
                 <img
-                  src={require("../../assets/images/Header/Hire Us/why-should/exp6.png")}
+                  src={require('../../assets/images/Header/Hire Us/why-should/exp6.png')}
                   alt="exp6"
                   className="img-fluid"
                 />
@@ -167,12 +169,12 @@ const HireUs = () => {
               <Link
                 to="/hire-react-native-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/react-native-1.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/react-native-1.png')}
                     alt="react-native-1"
                     className="img-fluid"
                   />
@@ -184,12 +186,12 @@ const HireUs = () => {
               <Link
                 to="/hire-flutter-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/flutter-1.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/flutter-1.png')}
                     alt="flutter-1"
                     className="img-fluid"
                   />
@@ -201,12 +203,12 @@ const HireUs = () => {
               <Link
                 to="/hire-android-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/android_logo-1.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/android_logo-1.png')}
                     alt="android_logo"
                     className="img-fluid"
                   />
@@ -218,12 +220,12 @@ const HireUs = () => {
               <Link
                 to="/hire-ios-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/apple_logo.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/apple_logo.png')}
                     alt="apple_logo"
                     className="img-fluid"
                   />
@@ -235,12 +237,12 @@ const HireUs = () => {
               <Link
                 to="/hire-wordpress-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/wordpress_logo.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/wordpress_logo.png')}
                     alt="wordpress_logo"
                     className="img-fluid"
                   />
@@ -252,12 +254,12 @@ const HireUs = () => {
               <Link
                 to="/hire-shopify-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/shopify-brand.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/shopify-brand.png')}
                     alt="shopify-brand"
                     className="img-fluid"
                   />
@@ -269,12 +271,12 @@ const HireUs = () => {
               <Link
                 to="/hire-codeigniter-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/codeigniter-brand.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/codeigniter-brand.png')}
                     alt="codeigniter-brand"
                     className="img-fluid"
                   />
@@ -286,12 +288,12 @@ const HireUs = () => {
               <Link
                 to="/hire-laravel-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/laravel.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/laravel.png')}
                     alt="laravel"
                     className="img-fluid"
                   />
@@ -303,12 +305,12 @@ const HireUs = () => {
               <Link
                 to="/hire-nodejs-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/node-js.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/node-js.png')}
                     alt="node-js"
                     className="img-fluid"
                   />
@@ -320,12 +322,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/vuejs.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/vuejs.png')}
                     alt="vuejs"
                     className="img-fluid"
                   />
@@ -337,12 +339,12 @@ const HireUs = () => {
               <Link
                 to="/hire-reactjs-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/react-js.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/react-js.png')}
                     alt="react-js"
                     className="img-fluid"
                   />
@@ -354,12 +356,12 @@ const HireUs = () => {
               <Link
                 to="/hire-angular-developer"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/angular-brand.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/angular-brand.png')}
                     alt="angular-brand"
                     className="img-fluid"
                   />
@@ -371,12 +373,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/webflow.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/webflow.png')}
                     alt="webflow"
                     className="img-fluid"
                   />
@@ -388,12 +390,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/divi.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/divi.png')}
                     alt="Divi"
                     className="img-fluid"
                   />
@@ -405,12 +407,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/enfold.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/enfold.png')}
                     alt="enfold"
                     className="img-fluid"
                   />
@@ -422,12 +424,12 @@ const HireUs = () => {
               <Link
                 to="/hire-magento-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/magento-brand.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/magento-brand.png')}
                     alt="magento-brand"
                     className="img-fluid"
                   />
@@ -439,7 +441,7 @@ const HireUs = () => {
               <Link to="">
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/app-icon.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/app-icon.png')}
                     alt="app-icon"
                     className="img-fluid"
                   />
@@ -451,12 +453,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/web.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/web.png')}
                     alt="Web"
                     className="img-fluid"
                   />
@@ -468,12 +470,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/graphic-design.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/graphic-design.png')}
                     alt="graphic-design"
                     className="img-fluid"
                   />
@@ -485,12 +487,12 @@ const HireUs = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <div className="valuable_box">
                   <img
-                    src={require("../../assets/images/Header/Hire Us/Available/html.png")}
+                    src={require('../../assets/images/Header/Hire Us/Available/html.png')}
                     alt="html"
                     className="img-fluid"
                   />
@@ -505,7 +507,7 @@ const HireUs = () => {
       <ContactUs question="Would you like to hire a dedicated resources for your projects?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireUs;
+export default HireUs

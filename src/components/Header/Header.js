@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import './header.css'
 import { AiOutlineClose } from 'react-icons/ai'
-import { AiOutlineMenu } from 'react-icons/ai'
+import { CgMenuRound } from 'react-icons/cg'
 // import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { RiArrowRightSLine } from 'react-icons/ri'
@@ -480,7 +480,10 @@ const Header = ({ setOpenModal }) => {
                   className="content_last content "
                   style={{ justifyContent: 'flex-start', padding: '10px 13px' }}
                 >
-                  <div className="row" style={{ width: '28%' }}>
+                  <div
+                    className="row responsive_width"
+                    style={{ width: '28%' }}
+                  >
                     <a
                       href="/software-development"
                       onClick={() => {
@@ -523,7 +526,10 @@ const Header = ({ setOpenModal }) => {
                       </a>
                     </ul>
                   </div>
-                  <div className="row" style={{ width: '28%' }}>
+                  <div
+                    className="row responsive_width"
+                    style={{ width: '28%' }}
+                  >
                     <a
                       href="/designing-services"
                       onClick={() => {
@@ -566,7 +572,10 @@ const Header = ({ setOpenModal }) => {
                       </a>
                     </ul>
                   </div>
-                  <div className="row" style={{ width: '28%' }}>
+                  <div
+                    className="row responsive_width"
+                    style={{ width: '28%' }}
+                  >
                     <a>
                       <h4>
                         {' '}
@@ -890,7 +899,10 @@ const Header = ({ setOpenModal }) => {
               </label>
               <div className="mega-box">
                 <div className="content">
-                  <div className="row" style={{ width: '32%' }}>
+                  <div
+                    className="row responsive_width"
+                    style={{ width: '32%' }}
+                  >
                     <a>
                       <h4>
                         {' '}
@@ -941,7 +953,10 @@ const Header = ({ setOpenModal }) => {
                       </a>{' '}
                     </ul>
                   </div>
-                  <div className="row" style={{ width: '32%' }}>
+                  <div
+                    className="row responsive_width"
+                    style={{ width: '32%' }}
+                  >
                     <h4>
                       {' '}
                       <img
@@ -989,7 +1004,10 @@ const Header = ({ setOpenModal }) => {
                       </a>
                     </ul>
                   </div>
-                  <div className="row" style={{ width: '32%' }}>
+                  <div
+                    className="row responsive_width"
+                    style={{ width: '32%' }}
+                  >
                     <h4>
                       {' '}
                       <img
@@ -1132,7 +1150,7 @@ const Header = ({ setOpenModal }) => {
             </li>
           </ul>
           <label htmlFor="menu-btn" className="btn menu-btn">
-            <AiOutlineMenu />
+            <CgMenuRound />
           </label>
         </div>
       </nav>

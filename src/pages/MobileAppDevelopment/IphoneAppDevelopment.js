@@ -1,36 +1,36 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import iphonecompany from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png";
-import iphoneservice from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png";
-import iphonedevelopment from "../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png";
+import iphonecompany from '../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png'
+import iphoneservice from '../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png'
+import iphonedevelopment from '../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png'
 
-import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Experience and Expertise.svg";
-import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
-import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
-import Agile from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg";
-import Fast from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg";
-import Competitive from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
+import Experience from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Experience and Expertise.svg'
+import Robust from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg'
+import Lifecycle from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg'
+import Agile from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg'
+import Fast from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg'
+import Competitive from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg'
 
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
-import WorkHand from "../../components/WorkHand";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
-import HeroSection from "../../components/HeroSection";
+import TestiMonial from '../../components/Testimonial/TestiMonial'
+import FAQ from '../../components/FAQ'
+import WorkHand from '../../components/WorkHand'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import HeroSection from '../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const IphoneAppDevelopment = () => {
-  const [activeService, setActiveService] = useState("custom_and_development");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expersite"
-  );
+  const [activeService, setActiveService] = useState('custom_and_development')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expersite')
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="iphone App Development Company India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="IPhone App Development Company"
@@ -67,17 +67,17 @@ const IphoneAppDevelopment = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("custom_and_development")}
+                  onClick={() => setActiveService('custom_and_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === "custom_and_development" &&
-                      "service__provide_tab_active"
+                      activeService === 'custom_and_development' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -86,16 +86,16 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ui_ux")}
+                  onClick={() => setActiveService('ui_ux')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === "ui_ux" && "service__provide_tab_active"
+                      activeService === 'ui_ux' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -104,17 +104,17 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_design")}
+                  onClick={() => setActiveService('app_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === "app_design" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -123,17 +123,17 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_migration")}
+                  onClick={() => setActiveService('app_migration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === "app_migration" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_migration' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -142,17 +142,17 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("game_development")}
+                  onClick={() => setActiveService('game_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === "game_development" &&
-                      "service__provide_tab_active"
+                      activeService === 'game_development' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -161,17 +161,17 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("support_and_maintainance")}
+                  onClick={() => setActiveService('support_and_maintainance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === "support_and_maintainance" &&
-                      "service__provide_tab_active"
+                      activeService === 'support_and_maintainance' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -180,7 +180,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeService === "custom_and_development" && (
+            {activeService === 'custom_and_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -199,7 +199,7 @@ const IphoneAppDevelopment = () => {
                       <Link
                         to="/mobile-app-development"
                         onClick={() => {
-                          window.scrollTo({ top: 0, behavior: "smooth" });
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
                         }}
                       >
                         <b>app Development Company.</b>
@@ -212,7 +212,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "ui_ux" && (
+            {activeService === 'ui_ux' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -238,7 +238,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "app_design" && (
+            {activeService === 'app_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -263,7 +263,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "app_migration" && (
+            {activeService === 'app_migration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -288,7 +288,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "game_development" && (
+            {activeService === 'game_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -316,7 +316,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "support_and_maintainance" && (
+            {activeService === 'support_and_maintainance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -364,13 +364,13 @@ const IphoneAppDevelopment = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expersite")}
+                  onClick={() => setActiveWhyChoose('experience_expersite')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expersite" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expersite' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -383,13 +383,13 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                  onClick={() => setActiveWhyChoose('robust_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_portfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -402,13 +402,13 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("ui_ux")}
+                  onClick={() => setActiveWhyChoose('ui_ux')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "ui_ux" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'ui_ux' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -421,13 +421,13 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile_development")}
+                  onClick={() => setActiveWhyChoose('agile_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -440,13 +440,13 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("deadline_milestones")}
+                  onClick={() => setActiveWhyChoose('deadline_milestones')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "deadline_milestones" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'deadline_milestones' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -459,13 +459,13 @@ const IphoneAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -478,7 +478,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expersite" && (
+            {activeWhyChoose === 'experience_expersite' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -501,7 +501,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "robust_portfolio" && (
+            {activeWhyChoose === 'robust_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -526,7 +526,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "ui_ux" && (
+            {activeWhyChoose === 'ui_ux' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -551,7 +551,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "agile_development" && (
+            {activeWhyChoose === 'agile_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -576,7 +576,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "deadline_milestones" && (
+            {activeWhyChoose === 'deadline_milestones' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -601,7 +601,7 @@ const IphoneAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "competitive_pricing" && (
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -643,7 +643,7 @@ const IphoneAppDevelopment = () => {
       <ContactUs question="Are you planning to launch a Successful iPhone Mobile app in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default IphoneAppDevelopment;
+export default IphoneAppDevelopment

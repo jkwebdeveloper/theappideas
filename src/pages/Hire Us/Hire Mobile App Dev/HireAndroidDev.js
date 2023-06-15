@@ -1,35 +1,37 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import WorkHand from "../../../components/WorkHand";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import WorkHand from '../../../components/WorkHand'
 
-import appdev from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-App-Development.png";
-import Application from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-Application-Development.png";
-import Company from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-App-Development-Company.png";
+import appdev from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-App-Development.png'
+import Application from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-Application-Development.png'
+import Company from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/Android-App-Development-Company.png'
 // import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import { Link } from "react-router-dom";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import { Link } from 'react-router-dom'
 
-import Contactus from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/CUSTOM ANDROID APPS.svg";
-import ANDROID from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/ANDROID SUPPORT.svg";
-import CROSS from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/CROSS PLATFORM DEVELOPMENT.svg";
+import Contactus from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/CUSTOM ANDROID APPS.svg'
+import ANDROID from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/ANDROID SUPPORT.svg'
+import CROSS from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/1/CROSS PLATFORM DEVELOPMENT.svg'
 
-import EXPERIENCE from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/EXPERIENCE AND EXPERTISE.svg";
-import STUNNING from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/STUNNING PORTFOLIO.svg";
-import GREAT from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/GREAT UI AND UX.svg";
-import INTERNET from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/PERFORMANCE DRIVEN.svg";
-import FAST from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/FAST PACED AND COMPETITIVE.svg";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import EXPERIENCE from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/EXPERIENCE AND EXPERTISE.svg'
+import STUNNING from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/STUNNING PORTFOLIO.svg'
+import GREAT from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/GREAT UI AND UX.svg'
+import INTERNET from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/PERFORMANCE DRIVEN.svg'
+import FAST from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Android App/2/FAST PACED AND COMPETITIVE.svg'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireAndroidDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="Hire Dedicated Android App Developers In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Android App Developers In India"
@@ -51,16 +53,16 @@ const HireAndroidDev = () => {
           <div className="Title">
             <h3>Our Feat in Android App Development</h3>
             <p>
-              Over the years we mastered the art and science of{" "}
+              Over the years we mastered the art and science of{' '}
               <Link
                 to="/"
                 className="Title_Color"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
                 <b>mobile app development</b>
-              </Link>{" "}
+              </Link>{' '}
               with exceptional command over mobile app aesthetics and technical
               skills to build features that make an app useful. When it comes to
               the Android platform we build apps that cater to the versatility
@@ -80,11 +82,11 @@ const HireAndroidDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -125,7 +127,7 @@ const HireAndroidDev = () => {
                   <img
                     src={Contactus}
                     alt="Web Development"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -162,7 +164,7 @@ const HireAndroidDev = () => {
                   <img
                     src={ANDROID}
                     alt="E-COMMERCE DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -201,7 +203,7 @@ const HireAndroidDev = () => {
                   <img
                     src={CROSS}
                     alt="MOBILE APP DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -258,7 +260,7 @@ const HireAndroidDev = () => {
                   <img
                     src={EXPERIENCE}
                     alt="Web Development"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -296,7 +298,7 @@ const HireAndroidDev = () => {
                   <img
                     src={STUNNING}
                     alt="E-COMMERCE DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -333,7 +335,7 @@ const HireAndroidDev = () => {
                   <img
                     src={GREAT}
                     alt="MOBILE APP DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -370,7 +372,7 @@ const HireAndroidDev = () => {
                   <img
                     src={INTERNET}
                     alt="INTERNET OF THING"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -407,7 +409,7 @@ const HireAndroidDev = () => {
                   <img
                     src={FAST}
                     alt="GAME DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -434,7 +436,7 @@ const HireAndroidDev = () => {
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireAndroidDev;
+export default HireAndroidDev

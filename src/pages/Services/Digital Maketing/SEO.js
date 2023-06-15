@@ -8,6 +8,7 @@ import Specialist from "../../../assets/images/SERVICES/Digital Marketing Agency
 import optimization from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-optimization.png";
 
 import HeroSection from "../../../components/HeroSection";
+import { Helmet } from "react-helmet";
 
 const SEO = () => {
   const [activeWeProvide, setActiveWeProvide] = useState("seo");
@@ -15,6 +16,7 @@ const SEO = () => {
 
   return (
     <>
+    <Helmet title="App Search Engine Optimization (SEO) Company Serivices - The App Ideas"/>
       {/* Banner Section Start */}
       <HeroSection
         title="SEO Agency in London"

@@ -46,6 +46,7 @@ import Analytics from '../../../assets/images/SOLUTIONS/Popular Solutions/Salon 
 import PaymentManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/Salon Booking App Development/Admin App/Payment-Management-1.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const SalonApp = () => {
   const [activeSection, setActiveSection] = useState('customer_app')
@@ -284,6 +285,7 @@ const SalonApp = () => {
 
   return (
     <>
+      <Helmet title="Salon Booking App Development Company | The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="Salon Booking App Development"

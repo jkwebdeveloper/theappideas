@@ -1,17 +1,19 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import background from "../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../assets/images/Home-our-services/download (1).png";
-import { HiOutlineArrowRight } from "react-icons/hi";
-import { Link } from "react-router-dom";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import background from '../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../assets/images/Home-our-services/download (1).png'
+import { HiOutlineArrowRight } from 'react-icons/hi'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 
 const Solutions = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="Best Mobile App Development Services Solutions - The App Ideas" />
       <section className="solution-section">
         <div className="container">
           <h2 className="solution-title">Our Solutions</h2>
@@ -24,7 +26,7 @@ const Solutions = () => {
               <Link
                 to="/food-delivery-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -39,7 +41,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -48,9 +50,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/Food Ordering Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/Food Ordering Solution.gif')}
                       alt="Food Ordering Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -66,7 +68,7 @@ const Solutions = () => {
               <Link
                 to="/dating-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -81,7 +83,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -90,9 +92,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/Dating Apps and Solutin.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/Dating Apps and Solutin.gif')}
                       alt="Dating Website & App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -108,7 +110,7 @@ const Solutions = () => {
               <Link
                 to="/security-app-solution"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -123,7 +125,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -132,9 +134,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/Security App Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/Security App Solution.gif')}
                       alt="Security App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -153,7 +155,7 @@ const Solutions = () => {
               <Link
                 to="/e-commerce-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -168,7 +170,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -177,9 +179,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/E-Commerce App Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/E-Commerce App Solution.gif')}
                       alt="Ecommerce App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -195,7 +197,7 @@ const Solutions = () => {
               <Link
                 to="/taxi-booking-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -210,7 +212,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -219,9 +221,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/Taxi Booking App Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/Taxi Booking App Solution.gif')}
                       alt="Taxi Booking App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -237,7 +239,7 @@ const Solutions = () => {
               <Link
                 to="/e-learning-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -252,7 +254,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -261,9 +263,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/E-Learning Website Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/E-Learning Website Solution.gif')}
                       alt="Elearning Website Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -279,7 +281,7 @@ const Solutions = () => {
               <Link
                 to="/driver-tracking-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -294,7 +296,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -303,9 +305,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/Driver Tracking App Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/Driver Tracking App Solution.gif')}
                       alt="Driver Tracking App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -321,7 +323,7 @@ const Solutions = () => {
               <Link
                 to=""
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -336,7 +338,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -345,9 +347,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/MLM Website _ Mobile Application Development.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/MLM Website _ Mobile Application Development.gif')}
                       alt="MLM Website & Mobile App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -363,7 +365,7 @@ const Solutions = () => {
               <Link
                 to="/salon-service-app"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -378,7 +380,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -387,9 +389,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/Service App Solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/Service App Solution.gif')}
                       alt="Salon Service App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -407,7 +409,7 @@ const Solutions = () => {
               <Link
                 to="/doctor-hiring-app-solution"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -422,7 +424,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -431,9 +433,9 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/on demand therapist doctor hiring app solution.gif")}
+                      src={require('../../assets/images/Header/Our Solutions/on demand therapist doctor hiring app solution.gif')}
                       alt="On Demand Therapist/ Doctor Hiring App Solution"
-                      style={{ width: "100px" }}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -451,7 +453,7 @@ const Solutions = () => {
               <Link
                 to="/courier-pickup-management-solution"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
@@ -466,7 +468,7 @@ const Solutions = () => {
                     className="pattern-layer-one"
                     style={{
                       backgroundImage: `url(${background})`,
-                      width: "220px",
+                      width: '220px',
                     }}
                   />
                   <div
@@ -475,8 +477,8 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
-                      src={require("../../assets/images/Header/Our Solutions/courier pickup management solution.gif")}
-                      style={{ width: "100px" }}
+                      src={require('../../assets/images/Header/Our Solutions/courier pickup management solution.gif')}
+                      style={{ width: '100px' }}
                     />
                   </div>
                   <h5>
@@ -494,7 +496,7 @@ const Solutions = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Solutions;
+export default Solutions

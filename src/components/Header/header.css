@@ -37,9 +37,9 @@
 
 .wrapper .nav-links {
   display: inline-flex;
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  height: 100%;
 }
-
 .nav-links li {
   list-style: none;
   margin: 0 8px;
@@ -216,7 +216,7 @@
 
 .menu_bottomm_content_left h4 {
   color: #000;
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 700;
 }
 
@@ -273,7 +273,7 @@ li .get_a_btn {
   transition: 0.3s ease-out;
 }
 .btn-1 span {
-  color: rgb(255,255,255);
+  color: rgb(255, 255, 255);
   transition: 0.2s 0.1s;
 }
 .btn-1 span:hover {
@@ -420,10 +420,10 @@ li .get_a_btn {
     flex-direction: column;
     padding: 20px 20px 0 20px;
   }
-  .content_last{
+  .content_last {
     justify-content: flex-start !important;
   }
-  .content_last .row{
+  .content_last .row {
     width: 27%;
   }
 
@@ -492,6 +492,11 @@ li .get_a_btn {
   }
 }
 
+@media (max-width: 1049px) {
+  .responsive_width {
+    width: 100% !important;
+  }
+}
 @media (max-width: 575px) {
   .mega-box {
     padding: 0;
@@ -519,12 +524,22 @@ li .get_a_btn {
   .content .row .mega-links,
   .row .mega-links li {
     padding-right: 0px;
+    padding-left: 12px;
   }
   .row .mega-links li a {
     font-size: 13px;
   }
   .wrapper .logo a img {
     width: 150px;
+  }
+}
+
+@media (max-width: 380px) {
+  .content .row h4 {
+    font-size: 13px;
+  }
+  .row .mega-links li {
+    font-size: 12px;
   }
 }
 @media (max-width: 1365px) and (min-width: 1280px) {

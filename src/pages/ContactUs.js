@@ -11,10 +11,12 @@ import { BsDribbble } from "react-icons/bs";
 import { BsInstagram } from "react-icons/bs";
 import { FaPinterestP } from "react-icons/fa";
 import { AiOutlineBehance } from "react-icons/ai";
+import { Helmet } from "react-helmet";
 
 const ContactUs = () => {
   return (
     <>
+    <Helmet title="Contact Us - THE APP IDEAS"/>
       <section
         className="blog__section"
         style={{ paddingTop: "23px", paddingBottom: "70px" }}

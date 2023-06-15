@@ -49,6 +49,7 @@ import Reports from '../../../assets/images/SOLUTIONS/On-Demand App/On Demand Do
 import Doctorsget from '../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/Admin Panel/Doctors-Get-Notification.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const DoctorHiring = () => {
   const [activeSection, setActiveSection] = useState('user_app')
@@ -310,6 +311,7 @@ const DoctorHiring = () => {
 
   return (
     <>
+      <Helmet title="On Demand Doctor App Development In India | The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="On Demand Doctor App"

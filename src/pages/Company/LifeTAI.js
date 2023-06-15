@@ -1,16 +1,18 @@
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import { Link } from "react-router-dom";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
+import React, { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import { Link } from 'react-router-dom'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import { Helmet } from 'react-helmet'
 
 function LifeTAI() {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Life at TAI - THE APP IDEAS" />
       <section className="life_tai_banner">
         <div className="container">
           <div className="life_tai_content">
@@ -41,7 +43,7 @@ function LifeTAI() {
           <div className="life_content_img text-center">
             <h1>LIFE @</h1>
             <img
-              src={require("../../assets/images/COMPANY/lifeAtTai/life-tai.png")}
+              src={require('../../assets/images/COMPANY/lifeAtTai/life-tai.png')}
               alt="life-tai"
               className="img-fluid my-4"
             />
@@ -56,7 +58,7 @@ function LifeTAI() {
             <div className="col-lg-5 col-md-7 col-sm-12 col-12">
               <div className="life_img_rht">
                 <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/Ganesh Chaturthi.gif")}
+                  src={require('../../assets/images/COMPANY/lifeAtTai/Ganesh Chaturthi.gif')}
                   alt="ganesh-chaturthi"
                   className="img-fluid"
                 />
@@ -67,7 +69,7 @@ function LifeTAI() {
             <div className="col-lg-5 col-md-7 col-sm-12 col-12 order-2 order-md-1 order-sm-2 order-xs-2">
               <div className="life_img_rht life_img_rht_shift">
                 <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/Christmas.gif")}
+                  src={require('../../assets/images/COMPANY/lifeAtTai/Christmas.gif')}
                   alt="christmas"
                   className="img-fluid"
                 />
@@ -90,7 +92,7 @@ function LifeTAI() {
             <div className="col-lg-5 col-md-7 col-sm-12 col-12">
               <div className="life_img_rht">
                 <img
-                  src={require("../../assets/images/COMPANY/lifeAtTai/Diwali.gif")}
+                  src={require('../../assets/images/COMPANY/lifeAtTai/Diwali.gif')}
                   alt="diwali"
                   className="img-fluid"
                 />
@@ -107,6 +109,10 @@ function LifeTAI() {
             slidesPerView={3}
             loop={true}
             breakpoints={{
+              200: {
+                slidesPerView: 1,
+                spaceBetween: 30,
+              },
               320: {
                 slidesPerView: 1,
                 spaceBetween: 30,
@@ -134,34 +140,34 @@ function LifeTAI() {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
-            style={{ padding: "2.5rem 0px 7.2rem" }}
+            style={{ padding: '2.5rem 0px 7.2rem' }}
           >
             <SwiperSlide>
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img1-400x267.webp")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img1-400x267.webp')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -171,12 +177,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img10-400x267.png")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img10-400x267.png')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -186,12 +192,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img2-400x267.webp")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img2-400x267.webp')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -201,12 +207,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img3-400x267.webp")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img3-400x267.webp')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -216,12 +222,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img4-400x267.webp")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img4-400x267.webp')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -231,12 +237,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img5-400x267.png")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img5-400x267.png')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -246,12 +252,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img6-400x267.png")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img6-400x267.png')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -261,12 +267,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img7-400x267.webp")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img7-400x267.webp')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -276,12 +282,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img8-400x267.png")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img8-400x267.png')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -291,12 +297,12 @@ function LifeTAI() {
               <div className="card">
                 <div className="image-box">
                   <img
-                    src={require("../../assets/images/COMPANY/lifeAtTai/slider/life_img9-400x267.png")}
+                    src={require('../../assets/images/COMPANY/lifeAtTai/slider/life_img9-400x267.png')}
                     alt=""
                     style={{
-                      width: "100%",
-                      height: "auto",
-                      borderRadius: "7px",
+                      width: '100%',
+                      height: 'auto',
+                      borderRadius: '7px',
                     }}
                   />
                 </div>
@@ -311,7 +317,7 @@ function LifeTAI() {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
+                <p style={{ textAlign: 'left' }}>
                   Would you like to build your career with us?
                 </p>
               </div>
@@ -319,8 +325,8 @@ function LifeTAI() {
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
                 <Link to="/contactus">
-                  <a className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
+                  <a className="contact_btn" style={{ color: '#000' }}>
+                    Contact us{' '}
                   </a>
                 </Link>
               </div>
@@ -330,7 +336,7 @@ function LifeTAI() {
       </section>
       {/* Contact Section End */}
     </>
-  );
+  )
 }
 
-export default LifeTAI;
+export default LifeTAI

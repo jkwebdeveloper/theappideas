@@ -1,38 +1,38 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import company from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png";
-import service from "../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png";
-import development from "../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png";
+import company from '../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Company.png'
+import service from '../../assets/images/MobileAppDev/IPhone App/IPhone-App-Development-Service.png'
+import development from '../../assets/images/MobileAppDev/IPhone App/IPhone-Application-Development.png'
 
-import AR from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad AR and VR apps.svg";
-import chat from "../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad Chat Apps.svg";
-import Experience from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Experience and Expertise.svg";
-import Robust from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg";
-import Lifecycle from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg";
-import Agile from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg";
-import Fast from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg";
-import Competitive from "../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg";
+import AR from '../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad AR and VR apps.svg'
+import chat from '../../assets/images/MobileAppDev/IPad App Development Company/iPad Art and Design Apps/iPad Chat Apps.svg'
+import Experience from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Experience and Expertise.svg'
+import Robust from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Robust Portfolio.svg'
+import Lifecycle from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Full Lifecycle support.svg'
+import Agile from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Agile Development.svg'
+import Fast from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Fast-paced development.svg'
+import Competitive from '../../assets/images/MobileAppDev/Android App Development Company/Why Choose/Competitive price.svg'
 
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
-import WorkHand from "../../components/WorkHand";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
-import HeroSection from "../../components/HeroSection";
+import TestiMonial from '../../components/Testimonial/TestiMonial'
+import FAQ from '../../components/FAQ'
+import WorkHand from '../../components/WorkHand'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import HeroSection from '../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const IpadAppDev = () => {
-  const [activeService, setActiveService] = useState("ipad_enterprise");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeService, setActiveService] = useState('ipad_enterprise')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="Custom ipad Application Development Company | The app ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="IPad App Development Company"
@@ -70,17 +70,17 @@ const IpadAppDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ipad_enterprise")}
+                  onClick={() => setActiveService('ipad_enterprise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ipad_enterprise" &&
-                      "service__provide_tab_active"
+                      activeService === 'ipad_enterprise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/enterprise.png")}
+                      src={require('../../assets/images/MobileAppDev/IPad App Development Company/enterprise.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -89,17 +89,17 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ipad_entertainment")}
+                  onClick={() => setActiveService('ipad_entertainment')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ipad_entertainment" &&
-                      "service__provide_tab_active"
+                      activeService === 'ipad_entertainment' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/ipad-media.png")}
+                      src={require('../../assets/images/MobileAppDev/IPad App Development Company/ipad-media.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -110,17 +110,17 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ipad_game")}
+                  onClick={() => setActiveService('ipad_game')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ipad_game" &&
-                      "service__provide_tab_active"
+                      activeService === 'ipad_game' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/ipad-game.png")}
+                      src={require('../../assets/images/MobileAppDev/IPad App Development Company/ipad-game.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -131,13 +131,13 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ipad_ar_vr")}
+                  onClick={() => setActiveService('ipad_ar_vr')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ipad_ar_vr" &&
-                      "service__provide_tab_active"
+                      activeService === 'ipad_ar_vr' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -150,13 +150,13 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ipad_chat")}
+                  onClick={() => setActiveService('ipad_chat')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ipad_chat" &&
-                      "service__provide_tab_active"
+                      activeService === 'ipad_chat' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -172,17 +172,17 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("ipad_art_design")}
+                  onClick={() => setActiveService('ipad_art_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "ipad_art_design" &&
-                      "service__provide_tab_active"
+                      activeService === 'ipad_art_design' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IPad App Development Company/Website-Redesign.png")}
+                      src={require('../../assets/images/MobileAppDev/IPad App Development Company/Website-Redesign.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -191,7 +191,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             </div>
-            {activeService === "ipad_enterprise" && (
+            {activeService === 'ipad_enterprise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -216,7 +216,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "ipad_entertainment" && (
+            {activeService === 'ipad_entertainment' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -244,7 +244,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "ipad_game" && (
+            {activeService === 'ipad_game' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -269,7 +269,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "ipad_ar_vr" && (
+            {activeService === 'ipad_ar_vr' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -295,7 +295,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "ipad_chat" && (
+            {activeService === 'ipad_chat' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -320,7 +320,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "ipad_art_design" && (
+            {activeService === 'ipad_art_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -366,15 +366,15 @@ const IpadAppDev = () => {
               and visually enticing UI. Our Android app development service over
               the years contributed to the commercial success of many businesses
               and helped them carve out a competitive mobile presence. Let’s
-              mention the key reasons to choose us for{" "}
+              mention the key reasons to choose us for{' '}
               <Link
                 to="/android-app-development"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
                 target="_blank"
               >
-                {" "}
+                {' '}
                 Android app development.
               </Link>
             </p>
@@ -384,13 +384,13 @@ const IpadAppDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -403,13 +403,13 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_protfolio")}
+                  onClick={() => setActiveWhyChoose('robust_protfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_protfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_protfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -425,13 +425,13 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("full_lifestyle_support")}
+                  onClick={() => setActiveWhyChoose('full_lifestyle_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "full_lifestyle_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'full_lifestyle_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -444,16 +444,16 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile_development")}
+                  onClick={() => setActiveWhyChoose('agile_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Agile}
                       alt="Agile-Development"
@@ -464,16 +464,16 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("fast_paced_development")}
+                  onClick={() => setActiveWhyChoose('fast_paced_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "fast_paced_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'fast_paced_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Fast}
                       alt="Fast-Paced-Development"
@@ -486,16 +486,16 @@ const IpadAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_price")}
+                  onClick={() => setActiveWhyChoose('competitive_price')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_price" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_price' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Competitive}
                       alt="Competitive-Pricing"
@@ -506,7 +506,7 @@ const IpadAppDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -529,7 +529,7 @@ const IpadAppDev = () => {
               </div>
             )}
 
-            {activeWhyChoose === "robust_protfolio" && (
+            {activeWhyChoose === 'robust_protfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -557,7 +557,7 @@ const IpadAppDev = () => {
               </div>
             )}
 
-            {activeWhyChoose === "full_lifestyle_support" && (
+            {activeWhyChoose === 'full_lifestyle_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -581,7 +581,7 @@ const IpadAppDev = () => {
               </div>
             )}
 
-            {activeWhyChoose === "agile_development" && (
+            {activeWhyChoose === 'agile_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -606,7 +606,7 @@ const IpadAppDev = () => {
               </div>
             )}
 
-            {activeWhyChoose === "fast_paced_development" && (
+            {activeWhyChoose === 'fast_paced_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -632,7 +632,7 @@ const IpadAppDev = () => {
               </div>
             )}
 
-            {activeWhyChoose === "competitive_price" && (
+            {activeWhyChoose === 'competitive_price' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -674,7 +674,7 @@ const IpadAppDev = () => {
       <ContactUs question="Are you planning to launch a Successful iPad Mobile app in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default IpadAppDev;
+export default IpadAppDev

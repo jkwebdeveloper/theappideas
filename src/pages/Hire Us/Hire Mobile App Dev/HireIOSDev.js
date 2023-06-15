@@ -24,6 +24,7 @@ import COMPETITIVE from '../../../assets/images/HIRE US/Hire Mobile App Develope
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireIOSDev = () => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const HireIOSDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire iPhone App Developers | Dedicated iOS App Developers" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Iphone App Developers In India"

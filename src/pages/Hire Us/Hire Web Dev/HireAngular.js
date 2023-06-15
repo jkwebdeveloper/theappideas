@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Angular
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireAngular = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HireAngular = () => {
   }, [])
   return (
     <>
+      <Helmet title='Hire Angular 2 Developers | Dedicated Angular JS Developers'/>
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Angular 2 Developers In India"

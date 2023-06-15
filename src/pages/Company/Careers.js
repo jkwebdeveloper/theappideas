@@ -23,6 +23,7 @@ import Designer from '../../assets/images/careers/Graphic Desiner (Fresher).svg'
 import Graphics from '../../assets/images/careers/Graphic Desiner (Fresher).svg'
 
 import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
 // import ApplicationModal from "./ApplicationModal";
 
 const Careers = () => {
@@ -30,6 +31,7 @@ const Careers = () => {
 
   return (
     <>
+      <Helmet title="The App Ideas Careers | Learn, Grow & Ace Your Career" />
       <section
         className="blog__section"
         style={{ paddingTop: '23px', paddingBottom: '70px' }}
@@ -248,7 +250,7 @@ const Careers = () => {
                       data-bs-toggle="modal"
                       data-bs-target="#business"
                       // onClick={handleShow}
-                      target='_blank'
+                      target="_blank"
                     >
                       Apply Now
                     </Link>

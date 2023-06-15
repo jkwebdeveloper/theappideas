@@ -1,10 +1,12 @@
-import React from "react";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
+import React from 'react'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import { Helmet } from 'react-helmet'
 
 const ABoutUs = () => {
   return (
     <>
+      <Helmet title="About Us | Company Overview | App Ides Infotech Pvt Ltd" />
       {/* Banner Section Start */}
       <section className="about_banner">
         <h1>Company Overview</h1>
@@ -14,15 +16,15 @@ const ABoutUs = () => {
           niches.
         </p>
         <p>
-          The App Ideas is the leading Web &amp;{" "}
+          The App Ideas is the leading Web &amp;{' '}
           <Link
             to="/mobile-app-development"
             onClick={() => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
+              window.scrollTo({ top: 0, behavior: 'smooth' })
             }}
           >
             Mobile App Development
-          </Link>{" "}
+          </Link>{' '}
           Company that can help your business grow with innovative and engaging
           solutions. We build cutting-edge digital solutions with the
           quick-engaging user interface and user experience. Over the years we
@@ -62,7 +64,7 @@ const ABoutUs = () => {
               <div className="missin_card">
                 <div className="missin_card_img">
                   <img
-                    src={require("../../assets/images/COMPANY/aboutUs/Our Vision.gif")}
+                    src={require('../../assets/images/COMPANY/aboutUs/Our Vision.gif')}
                     alt="visson"
                     className="img-fluid"
                   />
@@ -89,7 +91,7 @@ const ABoutUs = () => {
               <div className="missin_card">
                 <div className="missin_card_img">
                   <img
-                    src={require("../../assets/images/COMPANY/aboutUs/Our Mission.gif")}
+                    src={require('../../assets/images/COMPANY/aboutUs/Our Mission.gif')}
                     alt="Our-Mission"
                     className="img-fluid"
                   />
@@ -126,7 +128,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-2">
               <div className="skill_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/website-dev-icon-1.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/website-dev-icon-1.png')}
                   alt="website-dev-icon-1"
                   className="img-fluid"
                 />
@@ -136,7 +138,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-2">
               <div className="skill_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/Ecommerce-dev-icon-2.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/Ecommerce-dev-icon-2.png')}
                   alt="website-dev-icon-1"
                   className="img-fluid"
                 />
@@ -146,7 +148,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-2">
               <div className="skill_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/mobile-dev.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/mobile-dev.png')}
                   alt="mobile-dev"
                   className="img-fluid"
                 />
@@ -156,7 +158,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-2">
               <div className="skill_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/IOT-Dev.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/IOT-Dev.png')}
                   alt="IOT-Dev"
                   className="img-fluid"
                 />
@@ -166,7 +168,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-2">
               <div className="skill_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/Game-Development.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/Game-Development.png')}
                   alt="Game-Development"
                   className="img-fluid"
                 />
@@ -176,7 +178,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-6 col-md-4 col-lg-2">
               <div className="skill_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/Digital-Marketing.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/Digital-Marketing.png')}
                   alt="Digital-Marketing"
                   className="img-fluid"
                 />
@@ -349,7 +351,7 @@ const ABoutUs = () => {
             <div className="col-12 col-sm-12 col-md-12 col-lg-6">
               <div className="process_box">
                 <img
-                  src={require("../../assets/images/COMPANY/aboutUs/process.png")}
+                  src={require('../../assets/images/COMPANY/aboutUs/process.png')}
                   alt="process-svg"
                   className="img-fluid"
                 />
@@ -371,7 +373,7 @@ const ABoutUs = () => {
                   to="/our-process"
                   className="check_out_btn"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   Check Out Our Process
@@ -392,7 +394,7 @@ const ABoutUs = () => {
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="team_box">
                       <img
-                        src={require("../../assets/images/COMPANY/aboutUs/chirag.png")}
+                        src={require('../../assets/images/COMPANY/aboutUs/chirag.png')}
                         alt="chirag"
                         className="img-fluid"
                       />
@@ -401,7 +403,7 @@ const ABoutUs = () => {
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="team_box">
                       <img
-                        src={require("../../assets/images/COMPANY/aboutUs/Ankita.webp")}
+                        src={require('../../assets/images/COMPANY/aboutUs/Ankita.webp')}
                         alt="Ankita"
                         className="img-fluid"
                       />
@@ -410,7 +412,7 @@ const ABoutUs = () => {
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="team_box">
                       <img
-                        src={require("../../assets/images/COMPANY/aboutUs/Payal.jpg")}
+                        src={require('../../assets/images/COMPANY/aboutUs/Payal.jpg')}
                         alt="Payal"
                         className="img-fluid"
                       />
@@ -419,7 +421,7 @@ const ABoutUs = () => {
                   <div className="col-sm-6 col-md-6 col-lg-6">
                     <div className="team_box">
                       <img
-                        src={require("../../assets/images/COMPANY/aboutUs/Mansi-Shah.jpg")}
+                        src={require('../../assets/images/COMPANY/aboutUs/Mansi-Shah.jpg')}
                         alt="Mansi"
                         className="img-fluid"
                       />
@@ -446,7 +448,7 @@ const ABoutUs = () => {
                   to="/our-team"
                   className="join-team-btn"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   Join Our Team
@@ -469,7 +471,7 @@ const ABoutUs = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-4 margin_bottom">
                   <div className="client_lft_box">
                     <img
-                      src={require("../../assets/images/COMPANY/aboutUs/bolt_new.png")}
+                      src={require('../../assets/images/COMPANY/aboutUs/bolt_new.png')}
                       alt="bolt_new"
                       className="img-fluid"
                     />
@@ -478,7 +480,7 @@ const ABoutUs = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-4 margin_bottom">
                   <div className="client_lft_box">
                     <img
-                      src={require("../../assets/images/COMPANY/aboutUs/footnote_new.png")}
+                      src={require('../../assets/images/COMPANY/aboutUs/footnote_new.png')}
                       alt="footnote_new"
                       className="img-fluid"
                     />
@@ -487,7 +489,7 @@ const ABoutUs = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-4 margin_bottom">
                   <div className="client_lft_box">
                     <img
-                      src={require("../../assets/images/COMPANY/aboutUs/mindweel_new.png")}
+                      src={require('../../assets/images/COMPANY/aboutUs/mindweel_new.png')}
                       alt="mindweel_new"
                       className="img-fluid"
                     />
@@ -496,7 +498,7 @@ const ABoutUs = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-4 margin_bottom">
                   <div className="client_lft_box">
                     <img
-                      src={require("../../assets/images/COMPANY/aboutUs/bravura_new.webp")}
+                      src={require('../../assets/images/COMPANY/aboutUs/bravura_new.webp')}
                       alt="bravura_new"
                       className="img-fluid"
                     />
@@ -505,7 +507,7 @@ const ABoutUs = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-4 margin_bottom">
                   <div className="client_lft_box">
                     <img
-                      src={require("../../assets/images/COMPANY/aboutUs/chef_club_new1.png")}
+                      src={require('../../assets/images/COMPANY/aboutUs/chef_club_new1.png')}
                       alt="chef_club_new1"
                       className="img-fluid"
                     />
@@ -514,7 +516,7 @@ const ABoutUs = () => {
                 <div className="col-12 col-sm-12 col-md-6 col-lg-4 margin_bottom">
                   <div className="client_lft_box">
                     <img
-                      src={require("../../assets/images/COMPANY/aboutUs/snagpay_new.png")}
+                      src={require('../../assets/images/COMPANY/aboutUs/snagpay_new.png')}
                       alt="snagpay_new"
                       className="img-fluid"
                     />
@@ -551,7 +553,7 @@ const ABoutUs = () => {
       <ContactUs question="Would you like to execute any project?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default ABoutUs;
+export default ABoutUs

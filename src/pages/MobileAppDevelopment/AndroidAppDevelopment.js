@@ -18,6 +18,7 @@ import FAQ from "../../components/FAQ";
 import { Link } from "react-router-dom";
 import ContactUs from "../../components/ContactUs";
 import HeroSection from "../../components/HeroSection";
+import { Helmet } from "react-helmet";
 // import WorkHand from "../../components/WorkHand";
 
 const AndroidAppDevelopment = () => {
@@ -31,6 +32,7 @@ const AndroidAppDevelopment = () => {
   }, []);
   return (
     <>
+    <Helmet title="Top Android App Development Comapny India - The app ideas"/>
       {/* Banner Section Start */}
       <HeroSection
         title="Android App Development Company"

@@ -1,42 +1,44 @@
-import React, { useState } from "react";
-import Work from "../../../components/Workdone/Work";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import React, { useState } from 'react'
+import Work from '../../../components/Workdone/Work'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
 
-import SoftwareDevelopment from "../../../assets/images/SERVICES/Software development/Software Development.svg";
-import Custom from "../../../assets/images/SERVICES/Software development/Custom Softwrare Development.svg";
-import SoftwareDeveloper from "../../../assets/images/SERVICES/Software development/Software Developer.svg";
+import SoftwareDevelopment from '../../../assets/images/SERVICES/Software development/Software Development.svg'
+import Custom from '../../../assets/images/SERVICES/Software development/Custom Softwrare Development.svg'
+import SoftwareDeveloper from '../../../assets/images/SERVICES/Software development/Software Developer.svg'
 
 // Service section image
-import DesktopApplication from "../../../assets/images/SERVICES/Software development/Services we provide/Desktop Application.svg";
-import WebApplication from "../../../assets/images/SERVICES/Software development/Services we provide/Web Application.svg";
-import CRM from "../../../assets/images/SERVICES/Software development/Services we provide/CRM Solution.svg";
-import ERP from "../../../assets/images/SERVICES/Software development/Services we provide/ERP Solution.svg";
-import HRMS from "../../../assets/images/SERVICES/Software development/Services we provide/HRMS System.svg";
-import SoftwareMaintenance from "../../../assets/images/SERVICES/Software development/Services we provide/Software Maintenance Support.svg";
-import SoftwareIntegration from "../../../assets/images/SERVICES/Software development/Services we provide/Software integration.svg";
-import SoftwareUIUX from "../../../assets/images/SERVICES/Software development/Services we provide/Software UI UX designing services.svg";
-import SoftwareConsulting from "../../../assets/images/SERVICES/Software development/Services we provide/Software consulting.svg";
+import DesktopApplication from '../../../assets/images/SERVICES/Software development/Services we provide/Desktop Application.svg'
+import WebApplication from '../../../assets/images/SERVICES/Software development/Services we provide/Web Application.svg'
+import CRM from '../../../assets/images/SERVICES/Software development/Services we provide/CRM Solution.svg'
+import ERP from '../../../assets/images/SERVICES/Software development/Services we provide/ERP Solution.svg'
+import HRMS from '../../../assets/images/SERVICES/Software development/Services we provide/HRMS System.svg'
+import SoftwareMaintenance from '../../../assets/images/SERVICES/Software development/Services we provide/Software Maintenance Support.svg'
+import SoftwareIntegration from '../../../assets/images/SERVICES/Software development/Services we provide/Software integration.svg'
+import SoftwareUIUX from '../../../assets/images/SERVICES/Software development/Services we provide/Software UI UX designing services.svg'
+import SoftwareConsulting from '../../../assets/images/SERVICES/Software development/Services we provide/Software consulting.svg'
 
 // Industries  section images
-import Academic from "../../../assets/images/SERVICES/Software development/Industries We Serve/Academic and Education.svg";
-import Fintech from "../../../assets/images/SERVICES/Software development/Industries We Serve/Fintech Industry.svg";
-import Real from "../../../assets/images/SERVICES/Software development/Industries We Serve/Real Estate industry.svg";
-import Restaurant from "../../../assets/images/SERVICES/Software development/Industries We Serve/Restaurant business.svg";
-import Travel from "../../../assets/images/SERVICES/Software development/Industries We Serve/Travel and Tourism.svg";
-import Construction from "../../../assets/images/SERVICES/Software development/Industries We Serve/Construction Industry.svg";
-import IT from "../../../assets/images/SERVICES/Software development/Industries We Serve/IT industry.svg";
-import Healthcare from "../../../assets/images/SERVICES/Software development/Industries We Serve/Healthcare Industry.svg";
-import Entertainment from "../../../assets/images/SERVICES/Software development/Industries We Serve/Entertainment Industry.svg";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import Academic from '../../../assets/images/SERVICES/Software development/Industries We Serve/Academic and Education.svg'
+import Fintech from '../../../assets/images/SERVICES/Software development/Industries We Serve/Fintech Industry.svg'
+import Real from '../../../assets/images/SERVICES/Software development/Industries We Serve/Real Estate industry.svg'
+import Restaurant from '../../../assets/images/SERVICES/Software development/Industries We Serve/Restaurant business.svg'
+import Travel from '../../../assets/images/SERVICES/Software development/Industries We Serve/Travel and Tourism.svg'
+import Construction from '../../../assets/images/SERVICES/Software development/Industries We Serve/Construction Industry.svg'
+import IT from '../../../assets/images/SERVICES/Software development/Industries We Serve/IT industry.svg'
+import Healthcare from '../../../assets/images/SERVICES/Software development/Industries We Serve/Healthcare Industry.svg'
+import Entertainment from '../../../assets/images/SERVICES/Software development/Industries We Serve/Entertainment Industry.svg'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const SoftwareDev = () => {
-  const [activeService, setActiveService] = useState("desktop_application");
-  const [activeServe, setActiveServe] = useState("academic_education");
+  const [activeService, setActiveService] = useState('desktop_application')
+  const [activeServe, setActiveServe] = useState('academic_education')
 
   return (
     <>
+      <Helmet title="Software Development Services in India | The App ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Software development company"
@@ -73,13 +75,13 @@ const SoftwareDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("desktop_application")}
+                  onClick={() => setActiveService('desktop_application')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "desktop_application" &&
-                      "service__provide_tab_active"
+                      activeService === 'desktop_application' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -92,13 +94,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("web_application")}
+                  onClick={() => setActiveService('web_application')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "web_application" &&
-                      "service__provide_tab_active"
+                      activeService === 'web_application' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -114,13 +116,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("crm_solution")}
+                  onClick={() => setActiveService('crm_solution')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "crm_solution" &&
-                      "service__provide_tab_active"
+                      activeService === 'crm_solution' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={CRM} alt="CRM-Solution" className="img-fluid" />
@@ -132,13 +134,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("erp_solution")}
+                  onClick={() => setActiveService('erp_solution')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "erp_solution" &&
-                      "service__provide_tab_active"
+                      activeService === 'erp_solution' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={ERP} alt="ERP-Solution" className="img-fluid" />
@@ -150,13 +152,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("hrms_system")}
+                  onClick={() => setActiveService('hrms_system')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "hrms_system" &&
-                      "service__provide_tab_active"
+                      activeService === 'hrms_system' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={HRMS} alt="HRMS-System" className="img-fluid" />
@@ -168,13 +170,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("software_maintanance")}
+                  onClick={() => setActiveService('software_maintanance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "software_maintanance" &&
-                      "service__provide_tab_active"
+                      activeService === 'software_maintanance' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -190,13 +192,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("software_integration")}
+                  onClick={() => setActiveService('software_integration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "software_integration" &&
-                      "service__provide_tab_active"
+                      activeService === 'software_integration' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -212,13 +214,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("software_ui_ux")}
+                  onClick={() => setActiveService('software_ui_ux')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "software_ui_ux" &&
-                      "service__provide_tab_active"
+                      activeService === 'software_ui_ux' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -234,13 +236,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("software_consulting")}
+                  onClick={() => setActiveService('software_consulting')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "software_consulting" &&
-                      "service__provide_tab_active"
+                      activeService === 'software_consulting' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -256,7 +258,7 @@ const SoftwareDev = () => {
                 </div>
               </div>
             </div>
-            {activeService === "desktop_application" && (
+            {activeService === 'desktop_application' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -287,7 +289,7 @@ const SoftwareDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "web_application" && (
+            {activeService === 'web_application' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -318,8 +320,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "crm_solution" && (
+            )}{' '}
+            {activeService === 'crm_solution' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -350,8 +352,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "erp_solution" && (
+            )}{' '}
+            {activeService === 'erp_solution' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -381,8 +383,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "hrms_system" && (
+            )}{' '}
+            {activeService === 'hrms_system' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -411,8 +413,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "software_maintanance" && (
+            )}{' '}
+            {activeService === 'software_maintanance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -444,8 +446,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "software_integration" && (
+            )}{' '}
+            {activeService === 'software_integration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -478,8 +480,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "software_ui_ux" && (
+            )}{' '}
+            {activeService === 'software_ui_ux' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -515,8 +517,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "software_consulting" && (
+            )}{' '}
+            {activeService === 'software_consulting' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -563,10 +565,10 @@ const SoftwareDev = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Software development/Technologies/asp.net_.png")}
+                  src={require('../../../assets/images/SERVICES/Software development/Technologies/asp.net_.png')}
                   alt="Asp.Net"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>Asp.Net</h2>
               </div>
@@ -574,10 +576,10 @@ const SoftwareDev = () => {
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
               <div className="technologies_box text-center">
                 <img
-                  src={require("../../../assets/images/SERVICES/Software development/Technologies/dnn.png")}
+                  src={require('../../../assets/images/SERVICES/Software development/Technologies/dnn.png')}
                   alt="DotNetNuke"
                   className="img-fluid"
-                  style={{ width: "180px" }}
+                  style={{ width: '180px' }}
                 />
                 <h2>DotNetNuke</h2>
               </div>
@@ -597,13 +599,13 @@ const SoftwareDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("academic_education")}
+                  onClick={() => setActiveServe('academic_education')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "academic_education" &&
-                      "service__provide_tab_active"
+                      activeServe === 'academic_education' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -619,12 +621,12 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("fintech")}
+                  onClick={() => setActiveServe('fintech')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "fintech" && "service__provide_tab_active"
+                      activeServe === 'fintech' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -640,13 +642,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("real_estate")}
+                  onClick={() => setActiveServe('real_estate')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "real_estate" &&
-                      "service__provide_tab_active"
+                      activeServe === 'real_estate' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={Real} alt="Real-Estate" className="img-fluid" />
@@ -658,13 +660,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("restaurant_business")}
+                  onClick={() => setActiveServe('restaurant_business')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "restaurant_business" &&
-                      "service__provide_tab_active"
+                      activeServe === 'restaurant_business' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -680,13 +682,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("travel_tourism")}
+                  onClick={() => setActiveServe('travel_tourism')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "travel_tourism" &&
-                      "service__provide_tab_active"
+                      activeServe === 'travel_tourism' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -702,13 +704,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("construction")}
+                  onClick={() => setActiveServe('construction')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "construction" &&
-                      "service__provide_tab_active"
+                      activeServe === 'construction' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -724,13 +726,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("IT_industry")}
+                  onClick={() => setActiveServe('IT_industry')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "IT_industry" &&
-                      "service__provide_tab_active"
+                      activeServe === 'IT_industry' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img src={IT} alt="IT-Industry" className="img-fluid" />
@@ -742,13 +744,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("healthcare")}
+                  onClick={() => setActiveServe('healthcare')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "healthcare" &&
-                      "service__provide_tab_active"
+                      activeServe === 'healthcare' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -764,13 +766,13 @@ const SoftwareDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveServe("entertainment")}
+                  onClick={() => setActiveServe('entertainment')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeServe === "entertainment" &&
-                      "service__provide_tab_active"
+                      activeServe === 'entertainment' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
@@ -786,7 +788,7 @@ const SoftwareDev = () => {
                 </div>
               </div>
             </div>
-            {activeServe === "academic_education" && (
+            {activeServe === 'academic_education' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -819,7 +821,7 @@ const SoftwareDev = () => {
                 </div>
               </div>
             )}
-            {activeServe === "fintech" && (
+            {activeServe === 'fintech' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -848,8 +850,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "real_estate" && (
+            )}{' '}
+            {activeServe === 'real_estate' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -880,8 +882,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "restaurant_business" && (
+            )}{' '}
+            {activeServe === 'restaurant_business' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -912,8 +914,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "travel_tourism" && (
+            )}{' '}
+            {activeServe === 'travel_tourism' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -945,8 +947,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "construction" && (
+            )}{' '}
+            {activeServe === 'construction' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -978,8 +980,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "IT_industry" && (
+            )}{' '}
+            {activeServe === 'IT_industry' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1009,8 +1011,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "healthcare" && (
+            )}{' '}
+            {activeServe === 'healthcare' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1040,8 +1042,8 @@ const SoftwareDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeServe === "entertainment" && (
+            )}{' '}
+            {activeServe === 'entertainment' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -1087,7 +1089,7 @@ const SoftwareDev = () => {
       <FAQ />
       <ContactUs question="Are you looking for the best Software development Agency?" />
     </>
-  );
-};
+  )
+}
 
-export default SoftwareDev;
+export default SoftwareDev

@@ -15,6 +15,7 @@ import HeroSection from "../../components/HeroSection";
 import mobileAppdevelopment from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
 import mobileApplication from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
 import mobileappdeveloper from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
+import { Helmet } from "react-helmet";
 
 const IOTAppDev = () => {
   const [activeService, setactiveService] = useState("connected_cars");
@@ -24,6 +25,7 @@ const IOTAppDev = () => {
   const nextRef = useRef(null);
   return (
     <>
+    <Helmet title="IoT App Dvelopment Company | Internet of Things Application"/>
       {/* Banner Section Start */}
       <HeroSection
         title="Android App Development Company"

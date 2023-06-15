@@ -1,22 +1,22 @@
-import React, { useState } from "react";
-import TestiMonial from "../components/Testimonial/TestiMonial";
-import ContactUs from "../components/ContactUs";
-import FAQ from "../components/FAQ";
+import React, { useState } from 'react'
+import TestiMonial from '../components/Testimonial/TestiMonial'
+import ContactUs from '../components/ContactUs'
+import FAQ from '../components/FAQ'
 
-import Development from "../assets/images/SERVICES/StartupServices/StartupServicesDevelopment.webp";
-import Redesigning from "../assets/images/SERVICES/StartupServices/StartupServicesRedesigning.webp";
-import Developer from "../assets/images/SERVICES/StartupServices/StartupServicesDeveloper.webp";
+import Development from '../assets/images/SERVICES/StartupServices/StartupServicesDevelopment.webp'
+import Redesigning from '../assets/images/SERVICES/StartupServices/StartupServicesRedesigning.webp'
+import Developer from '../assets/images/SERVICES/StartupServices/StartupServicesDeveloper.webp'
 
-import HeroSection from "../components/HeroSection";
+import HeroSection from '../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const StartupServices = () => {
-  const [activeService, setActiveService] = useState("logo_design");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeService, setActiveService] = useState('logo_design')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
   return (
     <>
+      <Helmet title="Startup Services for Business Startup | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Startup Services"
@@ -54,17 +54,17 @@ const StartupServices = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("logo_design")}
+                  onClick={() => setActiveService('logo_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "logo_design" &&
-                      "service__provide_tab_active"
+                      activeService === 'logo_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/1-12.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/1-12.png')}
                       alt="Desktop-Application"
                       className="img-fluid"
                     />
@@ -76,17 +76,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("business_card")}
+                  onClick={() => setActiveService('business_card')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "business_card" &&
-                      "service__provide_tab_active"
+                      activeService === 'business_card' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/2-13.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/2-13.png')}
                       alt="Web-Application"
                       className="img-fluid"
                     />
@@ -98,17 +98,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("brouchure_design")}
+                  onClick={() => setActiveService('brouchure_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "brouchure_design" &&
-                      "service__provide_tab_active"
+                      activeService === 'brouchure_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/3-12.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/3-12.png')}
                       alt="CRM-Solution"
                       className="img-fluid"
                     />
@@ -120,17 +120,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("letter_head")}
+                  onClick={() => setActiveService('letter_head')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "letter_head" &&
-                      "service__provide_tab_active"
+                      activeService === 'letter_head' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/4-12.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/4-12.png')}
                       alt="ERP-Solution"
                       className="img-fluid"
                     />
@@ -142,17 +142,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("social_media")}
+                  onClick={() => setActiveService('social_media')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "social_media" &&
-                      "service__provide_tab_active"
+                      activeService === 'social_media' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/5-12.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/5-12.png')}
                       alt="HRMS-System"
                       className="img-fluid"
                     />
@@ -164,17 +164,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("html_signature")}
+                  onClick={() => setActiveService('html_signature')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "html_signature" &&
-                      "service__provide_tab_active"
+                      activeService === 'html_signature' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/6-12.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/6-12.png')}
                       alt="Software-Maintenance-Support"
                       className="img-fluid"
                     />
@@ -186,17 +186,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("email_signature")}
+                  onClick={() => setActiveService('email_signature')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "email_signature" &&
-                      "service__provide_tab_active"
+                      activeService === 'email_signature' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/7.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/7.png')}
                       alt="Software-Integration"
                       className="img-fluid"
                     />
@@ -208,17 +208,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("landing_page")}
+                  onClick={() => setActiveService('landing_page')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "landing_page" &&
-                      "service__provide_tab_active"
+                      activeService === 'landing_page' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/8.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/8.png')}
                       alt="Software-UI/UX-Designing Services"
                       className="img-fluid"
                     />
@@ -230,17 +230,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("newsletter")}
+                  onClick={() => setActiveService('newsletter')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "newsletter" &&
-                      "service__provide_tab_active"
+                      activeService === 'newsletter' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Services we provide/9.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Services we provide/9.png')}
                       alt="Software-Consulting"
                       className="img-fluid"
                     />
@@ -249,7 +249,7 @@ const StartupServices = () => {
                 </div>
               </div>
             </div>
-            {activeService === "logo_design" && (
+            {activeService === 'logo_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -274,7 +274,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeService === "business_card" && (
+            {activeService === 'business_card' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -299,8 +299,8 @@ const StartupServices = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "brouchure_design" && (
+            )}{' '}
+            {activeService === 'brouchure_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -326,8 +326,8 @@ const StartupServices = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "letter_head" && (
+            )}{' '}
+            {activeService === 'letter_head' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -353,8 +353,8 @@ const StartupServices = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "social_media" && (
+            )}{' '}
+            {activeService === 'social_media' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -379,8 +379,8 @@ const StartupServices = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "html_signature" && (
+            )}{' '}
+            {activeService === 'html_signature' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -402,8 +402,8 @@ const StartupServices = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "email_signature" && (
+            )}{' '}
+            {activeService === 'email_signature' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -426,8 +426,8 @@ const StartupServices = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "landing_page" && (
+            )}{' '}
+            {activeService === 'landing_page' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -454,7 +454,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeService === "newsletter" && (
+            {activeService === 'newsletter' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -493,17 +493,17 @@ const StartupServices = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Why Choose Us/1-13.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Why Choose Us/1-13.png')}
                       alt="Academic-Education"
                       className="img-fluid"
                     />
@@ -512,17 +512,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("we_partner")}
+                  onClick={() => setActiveWhyChoose('we_partner')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "we_partner" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'we_partner' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Why Choose Us/2-14.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Why Choose Us/2-14.png')}
                       alt="Fintech-Industry"
                       className="img-fluid"
                     />
@@ -534,17 +534,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                  onClick={() => setActiveWhyChoose('robust_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Why Choose Us/3-13.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Why Choose Us/3-13.png')}
                       alt="Real-Estate"
                       className="img-fluid"
                     />
@@ -556,17 +556,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("committed")}
+                  onClick={() => setActiveWhyChoose('committed')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "committed" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'committed' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Why Choose Us/4-13.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Why Choose Us/4-13.png')}
                       alt="Restaurant-Business"
                       className="img-fluid"
                     />
@@ -578,17 +578,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("latest_technology")}
+                  onClick={() => setActiveWhyChoose('latest_technology')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "latest_technology" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'latest_technology' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Why Choose Us/5-13.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Why Choose Us/5-13.png')}
                       alt="Travel-Tourism"
                       className="img-fluid"
                     />
@@ -600,17 +600,17 @@ const StartupServices = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../assets/images/SERVICES/StartupServices/Why Choose Us/6-13.png")}
+                      src={require('../assets/images/SERVICES/StartupServices/Why Choose Us/6-13.png')}
                       alt="Construction-Industry"
                       className="img-fluid"
                     />
@@ -622,7 +622,7 @@ const StartupServices = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -647,7 +647,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "we_partner" && (
+            {activeWhyChoose === 'we_partner' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -672,7 +672,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "robust_portfolio" && (
+            {activeWhyChoose === 'robust_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -696,7 +696,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "committed" && (
+            {activeWhyChoose === 'committed' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -723,7 +723,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "latest_technology" && (
+            {activeWhyChoose === 'latest_technology' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -748,7 +748,7 @@ const StartupServices = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "competitive_pricing" && (
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -784,7 +784,7 @@ const StartupServices = () => {
       <FAQ />
       <ContactUs question="Are you planning to launch a Successful Startup Services in the market?" />
     </>
-  );
-};
+  )
+}
 
-export default StartupServices;
+export default StartupServices

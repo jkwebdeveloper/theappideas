@@ -1,9 +1,11 @@
-import React from "react";
-import { BiSearch } from "react-icons/bi";
+import React from 'react'
+import { Helmet } from 'react-helmet'
+import { BiSearch } from 'react-icons/bi'
 
 const Blog = () => {
   return (
     <>
+      <Helmet title="BLOG - THE APP IDEAS" />
       <section className="blog__section py-5">
         <div className="container">
           <h2 className="blog-title-heading">Our Blogs</h2>
@@ -11,7 +13,7 @@ const Blog = () => {
             <div className="blog__search">
               <input type="text" placeholder="Search..." />
               <button>
-                <BiSearch style={{ fontSize: "20px" }} />
+                <BiSearch style={{ fontSize: '20px' }} />
               </button>
             </div>
           </form>
@@ -137,7 +139,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-1.jpg")}
+                            src={require('../assets/images/blog/blog_banner-1.jpg')}
                             alt="blog_banner-1"
                             className="img-fluid"
                           />
@@ -155,7 +157,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-2.jpg")}
+                            src={require('../assets/images/blog/blog_banner-2.jpg')}
                             alt="blog_banner-2"
                             className="img-fluid"
                           />
@@ -171,7 +173,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-3.webp")}
+                            src={require('../assets/images/blog/blog_banner-3.webp')}
                             alt="blog_banner-3"
                             className="img-fluid"
                           />
@@ -189,7 +191,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-4.webp")}
+                            src={require('../assets/images/blog/blog_banner-4.webp')}
                             alt="blog_banner-4"
                             className="img-fluid"
                           />
@@ -208,7 +210,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-5.webp")}
+                            src={require('../assets/images/blog/blog_banner-5.webp')}
                             alt="blog_banner-5"
                             className="img-fluid"
                           />
@@ -227,7 +229,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-6.webp")}
+                            src={require('../assets/images/blog/blog_banner-6.webp')}
                             alt="blog_banner-6"
                             className="img-fluid"
                           />
@@ -246,7 +248,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-7.webp")}
+                            src={require('../assets/images/blog/blog_banner-7.webp')}
                             alt="blog_banner-7"
                             className="img-fluid"
                           />
@@ -265,7 +267,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-8.webp")}
+                            src={require('../assets/images/blog/blog_banner-8.webp')}
                             alt="blog_banner-8"
                             className="img-fluid"
                           />
@@ -284,7 +286,7 @@ const Blog = () => {
                       <a href="#">
                         <div className="blog__box__img">
                           <img
-                            src={require("../assets/images/blog/blog_banner-9.webp")}
+                            src={require('../assets/images/blog/blog_banner-9.webp')}
                             alt="blog_banner-9"
                             className="img-fluid"
                           />
@@ -392,7 +394,7 @@ const Blog = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default Blog;
+export default Blog

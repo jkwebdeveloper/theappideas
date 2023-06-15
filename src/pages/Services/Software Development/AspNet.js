@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import CustomWordPress from "../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development.webp";
-import WordPressWebsite from "../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development-services.webp";
-import Developer from "../../../assets/images/SERVICES/Software development/asp-net-dev/full-stack-aspnet-development-company.webp";
+import CustomWordPress from '../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development.webp'
+import WordPressWebsite from '../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development-services.webp'
+import Developer from '../../../assets/images/SERVICES/Software development/asp-net-dev/full-stack-aspnet-development-company.webp'
 
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const AspNet = () => {
-  const [activeWeProvide, setActiveWeProvide] = useState("enterprise_website");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeWeProvide, setActiveWeProvide] = useState('enterprise_website')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
   return (
     <>
+      <Helmet title="Best Asp.Net Development Company India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Asp.net Development"
@@ -52,17 +52,17 @@ const AspNet = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("enterprise_website")}
+                  onClick={() => setActiveWeProvide('enterprise_website')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "enterprise_website" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'enterprise_website' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -71,17 +71,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("mobile_app")}
+                  onClick={() => setActiveWeProvide('mobile_app')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "mobile_app" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'mobile_app' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -90,17 +90,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("video_live_steraming")}
+                  onClick={() => setActiveWeProvide('video_live_steraming')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "video_live_steraming" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'video_live_steraming' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/3-8.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/3-8.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -109,17 +109,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("e_comm")}
+                  onClick={() => setActiveWeProvide('e_comm')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "e_comm" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'e_comm' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/4-8.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/4-8.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -128,17 +128,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("asp.net_integration")}
+                  onClick={() => setActiveWeProvide('asp.net_integration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "asp.net_integration" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'asp.net_integration' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/5-8.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/5-8.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -147,17 +147,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("asp.net_maintenance")}
+                  onClick={() => setActiveWeProvide('asp.net_maintenance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "asp.net_maintenance" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'asp.net_maintenance' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/6-8.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/6-8.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -166,7 +166,7 @@ const AspNet = () => {
                 </div>
               </div>
             </div>
-            {activeWeProvide === "enterprise_website" && (
+            {activeWeProvide === 'enterprise_website' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -194,7 +194,7 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "mobile_app" && (
+            {activeWeProvide === 'mobile_app' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -218,7 +218,7 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "video_live_steraming" && (
+            {activeWeProvide === 'video_live_steraming' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -243,12 +243,12 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "e_comm" && (
+            {activeWeProvide === 'e_comm' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      E-commerce Web Store Development{" "}
+                      E-commerce Web Store Development{' '}
                     </h3>
                     <p className="Title_para">
                       The online store provides the proper flexibility of
@@ -271,7 +271,7 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "asp.net_integration" && (
+            {activeWeProvide === 'asp.net_integration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -297,12 +297,12 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "asp.net_maintenance" && (
+            {activeWeProvide === 'asp.net_maintenance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Asp.Net Support and Maintenance{" "}
+                      Asp.Net Support and Maintenance{' '}
                     </h3>
                     <p className="Title_para">
                       If you are planning on making an investment in developing
@@ -339,17 +339,17 @@ const AspNet = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -358,17 +358,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                  onClick={() => setActiveWhyChoose('robust_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -377,17 +377,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile")}
+                  onClick={() => setActiveWhyChoose('agile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -396,17 +396,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("timely_delivery")}
+                  onClick={() => setActiveWhyChoose('timely_delivery')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "timely_delivery" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'timely_delivery' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png')}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -415,17 +415,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("affordable_pricing")}
+                  onClick={() => setActiveWhyChoose('affordable_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "affordable_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'affordable_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -434,17 +434,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("post_deploy_support")}
+                  onClick={() => setActiveWhyChoose('post_deploy_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "post_deploy_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'post_deploy_support' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png')}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -453,7 +453,7 @@ const AspNet = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -479,7 +479,7 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "robust_portfolio" && (
+            {activeWhyChoose === 'robust_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -504,8 +504,8 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "agile" && (
+            )}{' '}
+            {activeWhyChoose === 'agile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -528,8 +528,8 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "timely_delivery" && (
+            )}{' '}
+            {activeWhyChoose === 'timely_delivery' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -552,8 +552,8 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "affordable_pricing" && (
+            )}{' '}
+            {activeWhyChoose === 'affordable_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -577,8 +577,8 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "post_deploy_support" && (
+            )}{' '}
+            {activeWhyChoose === 'post_deploy_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -614,7 +614,7 @@ const AspNet = () => {
       <ContactUs question="Are you planning to launch a Successful Asp.net Software development in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default AspNet;
+export default AspNet

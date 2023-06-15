@@ -1,29 +1,31 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
 
-import Webflowservice from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-Development-Services.png";
-import webflow from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-web-development.png";
-import webflowdeveloper from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-Developer.png";
+import Webflowservice from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-Development-Services.png'
+import webflow from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-web-development.png'
+import webflowdeveloper from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/Webflow-Developer.png'
 
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const WebFlowDev = () => {
-  const [activeWeOffer, setActiveWeOffer] = useState("website_management");
+  const [activeWeOffer, setActiveWeOffer] = useState('website_management')
   const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experienced_developers"
-  );
+    'experienced_developers',
+  )
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Webflow Web Development Services In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Webflow Development Services"
@@ -61,17 +63,17 @@ const WebFlowDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("website_management")}
+                  onClick={() => setActiveWeOffer('website_management')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "website_management" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'website_management' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/website-management.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/website-management.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -80,17 +82,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("custom_theme")}
+                  onClick={() => setActiveWeOffer('custom_theme')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "custom_theme" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'custom_theme' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/custom-theme.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/custom-theme.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -99,17 +101,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("psd_webflow")}
+                  onClick={() => setActiveWeOffer('psd_webflow')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "psd_webflow" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'psd_webflow' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/psd2webflow.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/psd2webflow.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -118,17 +120,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("web_flow")}
+                  onClick={() => setActiveWeOffer('web_flow')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "web_flow" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'web_flow' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/webflow-ecommerce.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/webflow-ecommerce.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -137,17 +139,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("easy_integration")}
+                  onClick={() => setActiveWeOffer('easy_integration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "easy_integration" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'easy_integration' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/intration.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/intration.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -156,17 +158,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("website_maintenance")}
+                  onClick={() => setActiveWeOffer('website_maintenance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "website_maintenance" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'website_maintenance' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/maintenance.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/what do/maintenance.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -175,7 +177,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             </div>
-            {activeWeOffer === "website_management" && (
+            {activeWeOffer === 'website_management' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -200,7 +202,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "custom_theme" && (
+            {activeWeOffer === 'custom_theme' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -226,7 +228,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "psd_webflow" && (
+            {activeWeOffer === 'psd_webflow' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -251,7 +253,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "web_flow" && (
+            {activeWeOffer === 'web_flow' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -276,7 +278,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "easy_integration" && (
+            {activeWeOffer === 'easy_integration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -301,7 +303,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "website_maintenance" && (
+            {activeWeOffer === 'website_maintenance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -370,31 +372,31 @@ const WebFlowDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/Cyber_Risk.webp")}
+                    src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/Cyber_Risk.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
@@ -415,17 +417,17 @@ const WebFlowDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experienced_developers")}
+                  onClick={() => setActiveWhyChoose('experienced_developers')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experienced_developers" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experienced_developers' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/experienced-developers.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/experienced-developers.png')}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -434,17 +436,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("ui_ux")}
+                  onClick={() => setActiveWhyChoose('ui_ux')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "ui_ux" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'ui_ux' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/ui-ux.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/ui-ux.png')}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -453,17 +455,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("ecom_dev")}
+                  onClick={() => setActiveWhyChoose('ecom_dev')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "ecom_dev" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'ecom_dev' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/ecommerce-development.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/ecommerce-development.png')}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -472,17 +474,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("migration_support")}
+                  onClick={() => setActiveWhyChoose('migration_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "migration_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'migration_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/migration-support.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/migration-support.png')}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -491,17 +493,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("support_maintanance")}
+                  onClick={() => setActiveWhyChoose('support_maintanance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "support_maintanance" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'support_maintanance' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/support-and-maintenance.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/support-and-maintenance.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -510,17 +512,17 @@ const WebFlowDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("cost")}
+                  onClick={() => setActiveWhyChoose('cost')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "cost" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'cost' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/affordable-cost.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Webflow-Dev/why-Choose/affordable-cost.png')}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -529,7 +531,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experienced_developers" && (
+            {activeWhyChoose === 'experienced_developers' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -554,7 +556,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "ui_ux" && (
+            {activeWhyChoose === 'ui_ux' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -579,7 +581,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "ecom_dev" && (
+            {activeWhyChoose === 'ecom_dev' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -604,7 +606,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "migration_support" && (
+            {activeWhyChoose === 'migration_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -628,7 +630,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "support_maintanance" && (
+            {activeWhyChoose === 'support_maintanance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -652,7 +654,7 @@ const WebFlowDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "cost" && (
+            {activeWhyChoose === 'cost' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -720,46 +722,46 @@ const WebFlowDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/certificate-1_page-0001-1200x849.jpg")}
+                    src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/certificate-1_page-0001-1200x849.jpg')}
                     style={{
-                      height: "80%",
-                      width: "80%",
+                      height: '80%',
+                      width: '80%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/certificate_page-0001-1200x849.jpg")}
+                    src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/certificate_page-0001-1200x849.jpg')}
                     style={{
-                      height: "80%",
-                      width: "80%",
-                      textAlign: "center",
+                      height: '80%',
+                      width: '80%',
+                      textAlign: 'center',
                     }}
                   />
                 </div>
@@ -776,7 +778,7 @@ const WebFlowDev = () => {
       <ContactUs question="Are you planning to launch a Successful Webflow Web in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default WebFlowDev;
+export default WebFlowDev

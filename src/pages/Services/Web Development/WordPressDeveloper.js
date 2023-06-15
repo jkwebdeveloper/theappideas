@@ -1,27 +1,29 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import CustomWordPress from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/Custom-WordPress-Development-Services.png";
-import WordPressWebsite from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Development-Company.png";
-import Developer from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Developer.png";
+import CustomWordPress from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/Custom-WordPress-Development-Services.png'
+import WordPressWebsite from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Development-Company.png'
+import Developer from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Developer.png'
 
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const WordPressDeveloper = () => {
-  const [activeWeOffer, setActiveWeOffer] = useState("wordpress_web");
+  const [activeWeOffer, setActiveWeOffer] = useState('wordpress_web')
   const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "expertise_exprerience"
-  );
+    'expertise_exprerience',
+  )
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="Certified WordPress development Company In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="WordPress Development Company"
@@ -58,17 +60,17 @@ const WordPressDeveloper = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("wordpress_web")}
+                  onClick={() => setActiveWeOffer('wordpress_web')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "wordpress_web" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'wordpress_web' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -77,17 +79,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("wordpress_theme")}
+                  onClick={() => setActiveWeOffer('wordpress_theme')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "wordpress_theme" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'wordpress_theme' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -96,17 +98,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("location_based")}
+                  onClick={() => setActiveWeOffer('location_based')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "location_based" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'location_based' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -115,17 +117,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("wordpress_plugin")}
+                  onClick={() => setActiveWeOffer('wordpress_plugin')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "wordpress_plugin" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'wordpress_plugin' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -134,17 +136,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("wordpress_mobile")}
+                  onClick={() => setActiveWeOffer('wordpress_mobile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "wordpress_mobile" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'wordpress_mobile' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -153,17 +155,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer("manitenance_support")}
+                  onClick={() => setActiveWeOffer('manitenance_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === "manitenance_support" &&
-                      "service__provide_tab_active"
+                      activeWeOffer === 'manitenance_support' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -172,7 +174,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             </div>
-            {activeWeOffer === "wordpress_web" && (
+            {activeWeOffer === 'wordpress_web' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -200,12 +202,12 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "wordpress_theme" && (
+            {activeWeOffer === 'wordpress_theme' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      WordPress Theme Development{" "}
+                      WordPress Theme Development{' '}
                     </h3>
                     <p className="Title_para">
                       Currently, the demand for online platforms is increasing
@@ -229,7 +231,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "location_based" && (
+            {activeWeOffer === 'location_based' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -254,7 +256,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "wordpress_plugin" && (
+            {activeWeOffer === 'wordpress_plugin' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -282,7 +284,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "wordpress_mobile" && (
+            {activeWeOffer === 'wordpress_mobile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -308,7 +310,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === "manitenance_support" && (
+            {activeWeOffer === 'manitenance_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -359,14 +361,14 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -377,7 +379,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/Portfolio/port-ecommerce-website.webp")}
+                        src={require('../../../assets/images/Portfolio/port-ecommerce-website.webp')}
                         alt="port-ecommerce-website"
                         className="img-fluid"
                       />
@@ -401,14 +403,14 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -419,7 +421,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-one.webp")}
+                        src={require('../../../assets/images/Portfolio/port-ecommerce-website-one.webp')}
                         alt="port-ecommerce-website-one"
                         className="img-fluid"
                       />
@@ -443,22 +445,22 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Web Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
-                            {" "}
+                            {' '}
                             Wordpress
                           </a>
                         </li>
@@ -468,7 +470,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/Portfolio/port-webdevelop-webiste-two.webp")}
+                        src={require('../../../assets/images/Portfolio/port-webdevelop-webiste-two.webp')}
                         alt="port-webdevelop-webiste-two"
                         className="img-fluid"
                       />
@@ -492,14 +494,14 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -510,7 +512,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-tan.webp")}
+                        src={require('../../../assets/images/Portfolio/port-ecommerce-website-tan.webp')}
                         alt="port-ecommerce-website-tan"
                         className="img-fluid"
                       />
@@ -534,20 +536,20 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="#" className="work_head_item">
                             Wordpress
                           </a>
@@ -558,7 +560,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-eleven.webp")}
+                        src={require('../../../assets/images/Portfolio/port-ecommerce-website-eleven.webp')}
                         alt="port-ecommerce-website-eleven"
                         className="img-fluid"
                       />
@@ -582,17 +584,17 @@ const WordPressDeveloper = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("expertise_exprerience")}
+                  onClick={() => setActiveWhyChoose('expertise_exprerience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "expertise_exprerience" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'expertise_exprerience' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -601,17 +603,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("strong_portfolio")}
+                  onClick={() => setActiveWhyChoose('strong_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "strong_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'strong_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -620,17 +622,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("time_bound")}
+                  onClick={() => setActiveWhyChoose('time_bound')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "time_bound" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'time_bound' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png')}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -639,17 +641,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("superb_user")}
+                  onClick={() => setActiveWhyChoose('superb_user')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "superb_user" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'superb_user' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png')}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -658,17 +660,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile")}
+                  onClick={() => setActiveWhyChoose('agile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -677,17 +679,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitve_pricing")}
+                  onClick={() => setActiveWhyChoose('competitve_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitve_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitve_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -696,7 +698,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "expertise_exprerience" && (
+            {activeWhyChoose === 'expertise_exprerience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -722,7 +724,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "strong_portfolio" && (
+            {activeWhyChoose === 'strong_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -748,7 +750,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "time_bound" && (
+            {activeWhyChoose === 'time_bound' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -775,7 +777,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "superb_user" && (
+            {activeWhyChoose === 'superb_user' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -802,7 +804,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "agile" && (
+            {activeWhyChoose === 'agile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -829,7 +831,7 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "competitve_pricing" && (
+            {activeWhyChoose === 'competitve_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -866,7 +868,7 @@ const WordPressDeveloper = () => {
       <ContactUs question="Are you planning to launch a Successful WordPress Web in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default WordPressDeveloper;
+export default WordPressDeveloper

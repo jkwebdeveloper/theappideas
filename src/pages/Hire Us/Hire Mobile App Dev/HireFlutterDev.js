@@ -1,37 +1,39 @@
-import React, { useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import VRApplicationDeveloper from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/VRApplicationDeveloper.webp";
-import appDevelopment from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Mobile-App-Development.png";
-import Wordpress from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Wordpress-Developer.png";
+import VRApplicationDeveloper from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/VRApplicationDeveloper.webp'
+import appDevelopment from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Mobile-App-Development.png'
+import Wordpress from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Wordpress-Developer.png'
 
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import Elegant from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/The Elegant Designing Services.svg";
-import Platforms from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Cross Platforms Development.svg";
-import Deliver from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Deliver Secure App Solution.svg";
-import Support from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Support And Maintenance.svg";
-import Custom from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Custom Flutter App Development.svg";
-import Flutter from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Flutter Consulting Services.svg";
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import Elegant from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/The Elegant Designing Services.svg'
+import Platforms from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Cross Platforms Development.svg'
+import Deliver from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Deliver Secure App Solution.svg'
+import Support from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Support And Maintenance.svg'
+import Custom from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Custom Flutter App Development.svg'
+import Flutter from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/1/Flutter Consulting Services.svg'
 
-import Highly from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Highly Skilled Developers.svg";
-import Sophisticated from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Sophisticated Portfolio.svg";
-import Deployment from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/On-Time Deployment.svg";
-import Affordable from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Affordable Costing.svg";
-import Client from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Client Satisfaction Guarantee.svg";
-import Process from "../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Agile Development Process.svg";
-import { Link } from "react-router-dom";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import Highly from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Highly Skilled Developers.svg'
+import Sophisticated from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Sophisticated Portfolio.svg'
+import Deployment from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/On-Time Deployment.svg'
+import Affordable from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Affordable Costing.svg'
+import Client from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Client Satisfaction Guarantee.svg'
+import Process from '../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/2/Agile Development Process.svg'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireFlutterDev = () => {
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="Hire Flutter App Developers | Offshore Flutter Developers India" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Flutter Developers In India"
@@ -74,11 +76,11 @@ const HireFlutterDev = () => {
               <Link
                 to="/contactus"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: "smooth" });
+                  window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <a className="contact_btn" style={{ color: "#000" }}>
-                  Contact us{" "}
+                <a className="contact_btn" style={{ color: '#000' }}>
+                  Contact us{' '}
                 </a>
               </Link>
             </div>
@@ -107,20 +109,20 @@ const HireFlutterDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
-                            Mobile Application Development{" "}
+                            Mobile Application Development{' '}
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -132,7 +134,7 @@ const HireFlutterDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-53-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-53-1536x948.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -156,20 +158,20 @@ const HireFlutterDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -181,7 +183,7 @@ const HireFlutterDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-52-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-52-1536x948.webp')}
                         alt="Device-Image-one"
                         className="img-fluid"
                       />
@@ -205,7 +207,7 @@ const HireFlutterDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
@@ -213,7 +215,7 @@ const HireFlutterDev = () => {
                         </li>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             React Native
@@ -226,7 +228,7 @@ const HireFlutterDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-51-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-51-1536x948.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -250,20 +252,20 @@ const HireFlutterDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
-                            Mobile Application Development{" "}
+                            Mobile Application Development{' '}
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -275,7 +277,7 @@ const HireFlutterDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-26-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-26-1536x948.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -299,20 +301,20 @@ const HireFlutterDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             React Native
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="" className="work_head_item">
                             Reactjs
                           </a>
@@ -324,7 +326,7 @@ const HireFlutterDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/app-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/app-1536x948.webp')}
                         alt="Device-Image-one"
                         className="img-fluid"
                       />
@@ -348,7 +350,7 @@ const HireFlutterDev = () => {
                         <a href="" className="work_head_box_link"></a>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             Mobile Application Development
@@ -356,7 +358,7 @@ const HireFlutterDev = () => {
                         </li>
                         <li>
                           <a href="" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="" className="work_head_item">
                             React Native
@@ -369,7 +371,7 @@ const HireFlutterDev = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-up-left"
-                        src={require("../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-1-1536x948.webp")}
+                        src={require('../../../assets/images/HIRE US/Hire Mobile App Developer/Hire Flutter Developers/Workhand/Device-Image-1-1536x948.webp')}
                         alt="port-mobile-app-mobile-thirteen"
                         className="img-fluid"
                       />
@@ -400,7 +402,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -415,7 +417,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Custom}
                     alt="Custom Flutter App Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -440,7 +442,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -455,7 +457,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Elegant}
                     alt="The Elegant Designing Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -479,7 +481,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -494,7 +496,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Platforms}
                     alt="Cross Platforms Development"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -518,7 +520,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -533,7 +535,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Support}
                     alt="Support And Maintenance"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -557,7 +559,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -572,7 +574,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Deliver}
                     alt="Deliver Secure App Solution"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -597,7 +599,7 @@ const HireFlutterDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
-                style={{ height: "400px" }}
+                style={{ height: '400px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -612,7 +614,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Flutter}
                     alt="Flutter Consulting Services"
-                    style={{ width: "50px" }}
+                    style={{ width: '50px' }}
                   />
                 </div>
                 <h5>
@@ -669,7 +671,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Highly}
                     alt="Highly Skilled Developers"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -707,13 +709,13 @@ const HireFlutterDev = () => {
                   <img
                     src={Sophisticated}
                     alt="Sophisticated Portfolio"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Sophisticated Portfolio</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-26px" }}>
+                <div className="text" style={{ marginBottom: '-26px' }}>
                   We have proven our expertise in the web and app development
                   field by creating a sophisticated portfolio of web and app
                   development services.
@@ -745,7 +747,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Deployment}
                     alt="On-Time Deployment"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -783,13 +785,13 @@ const HireFlutterDev = () => {
                   <img
                     src={Affordable}
                     alt="Affordable Costing"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Affordable Costing</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "-25px" }}>
+                <div className="text" style={{ marginBottom: '-25px' }}>
                   After requirements gathering, we analyze the overall projects
                   and features of the client. And based on that we offer the
                   best and competitive rates without compromising the quality of
@@ -822,7 +824,7 @@ const HireFlutterDev = () => {
                   <img
                     src={Client}
                     alt="Client Satisfaction Guarantee"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
@@ -860,13 +862,13 @@ const HireFlutterDev = () => {
                   <img
                     src={Process}
                     alt="Agile Development Process"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <a href="/services">Agile Development Process</a>
                 </h5>
-                <div className="text" style={{ marginBottom: "25px" }}>
+                <div className="text" style={{ marginBottom: '25px' }}>
                   Our Flutter developers follow the Agile Development process to
                   ensure the fast paced development.
                 </div>
@@ -883,7 +885,7 @@ const HireFlutterDev = () => {
       <ContactUs question="Do you want to know more about our Flutter developers and their expertise?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default HireFlutterDev;
+export default HireFlutterDev

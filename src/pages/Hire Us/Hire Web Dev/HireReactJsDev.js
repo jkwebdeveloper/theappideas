@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire React J
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireReactJsDev = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HireReactJsDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire ReactJS Developers | Hire Dedicated ReactJS Developers India " />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire React JS Developers In India"

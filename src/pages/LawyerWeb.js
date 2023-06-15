@@ -1,11 +1,12 @@
-import React, { useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import TestiMonial from "../components/Testimonial/TestiMonial";
-import FAQ from "../components/FAQ";
+import React, { useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../components/Testimonial/TestiMonial'
+import FAQ from '../components/FAQ'
+import { Helmet } from 'react-helmet'
 
 //  Customer App
 // import search from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/search foods online.svg";
@@ -19,10 +20,11 @@ import FAQ from "../components/FAQ";
 // import Live from "../../../assets/images/SOLUTIONS/Delivery App/Food-app/Coustmer App/Live tracking.svg";
 
 const LawyerWeb = () => {
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Best Lawyer Website Design Company India - The App Ideas" />
       {/* common Banner start */}
       <section className="common__banner__section">
         <div className="container">
@@ -103,7 +105,7 @@ const LawyerWeb = () => {
                             id="exampleFormControlTextarea1"
                             rows={3}
                             placeholder="Project Requirement*"
-                            defaultValue={""}
+                            defaultValue={''}
                           />
                         </div>
                         <div className="col-sm-12 text-center py-5">
@@ -160,43 +162,43 @@ const LawyerWeb = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../assets/images/Footer/lawyer-web/slider/lawyer_bg1.png")}
+                    src={require('../assets/images/Footer/lawyer-web/slider/lawyer_bg1.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../assets/images/Footer/lawyer-web/slider/lawyer_bg.png")}
+                    src={require('../assets/images/Footer/lawyer-web/slider/lawyer_bg.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
@@ -270,7 +272,7 @@ const LawyerWeb = () => {
                         // src={search}
                         alt="search-food-icon"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>User login module</h4>
                       <p>
@@ -287,7 +289,7 @@ const LawyerWeb = () => {
                         // src={Check}
                         alt="Check-Details-icons"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>Find a Lawyer</h4>
                       <p>
@@ -304,7 +306,7 @@ const LawyerWeb = () => {
                         // src={Orderonline}
                         alt="Order-Online-icon"
                         className="img-fluid"
-                        style={{ width: "25%" }}
+                        style={{ width: '25%' }}
                       />
                       <h4>Check the details about the services</h4>
                       <p>
@@ -319,7 +321,7 @@ const LawyerWeb = () => {
                         // src={payonline}
                         alt="Pay-Online-icons"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>Check the testimonials</h4>
                       <p>
@@ -335,7 +337,7 @@ const LawyerWeb = () => {
                         // src={Reviews}
                         alt="Reviews-And-Ratings-icons "
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>Hire a Lawyer</h4>
                       <p>
@@ -351,7 +353,7 @@ const LawyerWeb = () => {
                         // src={Get}
                         alt="Get-Cashback-icons"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>Check the case studies</h4>
                       <p>
@@ -367,7 +369,7 @@ const LawyerWeb = () => {
                         // src={Avail}
                         alt="search-food-icon"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>Chat with the experts</h4>
                       <p>
@@ -383,7 +385,7 @@ const LawyerWeb = () => {
                         // src={Checkorder}
                         alt="Check-Order-History-icons"
                         className="img-fluid"
-                        style={{ width: "20%" }}
+                        style={{ width: '20%' }}
                       />
                       <h4>Book a consultation</h4>
                       <p>
@@ -399,7 +401,7 @@ const LawyerWeb = () => {
                         // src={Live}
                         alt="Live-Tracking-icons"
                         className="img-fluid"
-                        style={{ width: "13%" }}
+                        style={{ width: '13%' }}
                       />
                       <h4>Add ratings and reviews</h4>
                       <p>
@@ -875,7 +877,7 @@ const LawyerWeb = () => {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
+                <p style={{ textAlign: 'left' }}>
                   Would you like to launch a successful Lawyer website in the
                   market?
                 </p>
@@ -884,7 +886,7 @@ const LawyerWeb = () => {
             <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
               <div className="contact__rht">
                 <a href="/" className="contact_btn">
-                  Contact us{" "}
+                  Contact us{' '}
                 </a>
               </div>
             </div>
@@ -893,7 +895,7 @@ const LawyerWeb = () => {
       </section>
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default LawyerWeb;
+export default LawyerWeb

@@ -32,6 +32,7 @@ import Beauty from '../../../assets/images/SERVICES/Digital Marketing Agency/Ind
 import FAQ from '../../../components/FAQ'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const DigitalMarketing = () => {
   const [activeService, setActiveService] = useState('seo')
@@ -42,6 +43,7 @@ const DigitalMarketing = () => {
   }, [])
   return (
     <>
+      <Helmet title="#1 Digital Marketing Agency in India, USA | The app Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Digital Marketing Agency"

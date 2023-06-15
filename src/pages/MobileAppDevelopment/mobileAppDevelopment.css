@@ -416,7 +416,6 @@ Title .Title_Color {
 
 /* Accordian Section CSS Start */
 
-
 /* Contact Section CSS Start */
 .contact__lft p {
   font-size: 20px;
@@ -451,6 +450,14 @@ Title .Title_Color {
   border: 1px solid #351040;
   color: #000;
   background: #fff;
+}
+@media (max-width: 767px) {
+  .contact-lft p {
+    font-size: 16px;
+  }
+  .contact__rht {
+    border-left: 0;
+  }
 }
 
 /* Contact Section CSS End */

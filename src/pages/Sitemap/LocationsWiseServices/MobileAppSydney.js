@@ -1,187 +1,51 @@
-import React, { useEffect, useState, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import AOS from "aos";
-import "aos/dist/aos.css";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
+import { BsFillPatchCheckFill } from 'react-icons/bs'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import { Link } from 'react-router-dom'
+import { Helmet } from 'react-helmet'
+
+import Company from '../../../assets/images/sitemap/sydney/Mobile-Application-Development-Company.png'
+import Development from '../../../assets/images/sitemap/sydney/Mobile-App-Development.png'
+import Native from '../../../assets/images/sitemap/sydney/Ceate-React-Native-App.png'
+
+import HeroSection from '../../../components/HeroSection'
 
 const MobileAppSydney = () => {
-  const [activeService, setactiveService] = useState("custom_mobile");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeService, setactiveService] = useState('custom_mobile')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title="Top Mobile App Development Company In Sydney" />
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Mobile App Development Sydney</h2>
-                <p>
-                  Without the mobile app having a mobile presence is practically
-                  impossible. Thanks to mobile apps access to a broad and wide
-                  spectrum of services and contents have opened to the worldwide
-                  audience. The App Ideas a globally acclaimed development
-                  company has provided many reputed and promising businesses in
-                  Sydney and other parts of Australia with unique and
-                  customer-centric mobile apps.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Mobile App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Mobile App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/sitemap/sydney/Mobile-Application-Development-Company.png")}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Mobile App Development Sydney</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/sitemap/sydney/Mobile-App-Development.png")}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>Mobile App Development Company Sydney</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require("../../../assets/images/sitemap/sydney/Ceate-React-Native-App.png")}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: "25%" }}
-                      />
-                      <h4>App Development Sydney</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                  "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={""}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Mobile App Development Sydney"
+        des="Without the mobile app having a mobile presence is practically impossible. Thanks to mobile apps access to a broad and wide spectrum of services and contents have opened to the worldwide audience. The App Ideas a globally acclaimed development company has provided many reputed and promising businesses in Sydney and other parts of Australia with unique and customer-centric mobile apps."
+        list1="7+ Years of experience in App Development"
+        list2="Best Mobile App Development Company"
+        list3="Dedicated team for your Mobile App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Mobile App Development Sydney"
+        service2="Mobile App Development Company Sydney"
+        service3="App Development Sydney"
+        image1={Company}
+        image2={Development}
+        image3={Native}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -189,7 +53,7 @@ const MobileAppSydney = () => {
           <div className="Title">
             <h3>Mobile App Development Company in Sydney from the App Ideas</h3>
             <p>
-              At App Ideas, we provide end to end{" "}
+              At App Ideas, we provide end to end{' '}
               <b>Mobile App Development Company in Sydney</b> businesses
               require. We create an idea, design, prototype, and develop highly
               sophisticated, cutting-edge, scalable, and unique mobile apps to
@@ -202,17 +66,17 @@ const MobileAppSydney = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("custom_mobile")}
+                  onClick={() => setactiveService('custom_mobile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "custom_mobile" &&
-                      "service__provide_tab_active"
+                      activeService === 'custom_mobile' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/mobile_app/icons8-iphone-x-72-1.png")}
+                      src={require('../../../assets/images/sitemap/sydney/mobile_app/icons8-iphone-x-72-1.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -221,17 +85,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_enterprise")}
+                  onClick={() => setactiveService('android_enterprise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_enterprise" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_enterprise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/mobile_app/Group-235.png")}
+                      src={require('../../../assets/images/sitemap/sydney/mobile_app/Group-235.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -243,17 +107,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_wearable")}
+                  onClick={() => setactiveService('android_wearable')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_wearable" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_wearable' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/mobile_app/games.png")}
+                      src={require('../../../assets/images/sitemap/sydney/mobile_app/games.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -262,17 +126,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_game")}
+                  onClick={() => setactiveService('android_game')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_game" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_game' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/mobile_app/mobile-app-testing.png")}
+                      src={require('../../../assets/images/sitemap/sydney/mobile_app/mobile-app-testing.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -281,17 +145,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_app_redesign")}
+                  onClick={() => setactiveService('android_app_redesign')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_app_redesign" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_app_redesign' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/mobile_app/Branding-And-Marketing.png")}
+                      src={require('../../../assets/images/sitemap/sydney/mobile_app/Branding-And-Marketing.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -302,17 +166,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_support")}
+                  onClick={() => setactiveService('android_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_support" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/mobile_app/Mask-Group.png")}
+                      src={require('../../../assets/images/sitemap/sydney/mobile_app/Mask-Group.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -321,7 +185,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             </div>
-            {activeService === "custom_mobile" && (
+            {activeService === 'custom_mobile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -337,7 +201,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_enterprise" && (
+            {activeService === 'android_enterprise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -352,7 +216,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_wearable" && (
+            {activeService === 'android_wearable' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -366,7 +230,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_game" && (
+            {activeService === 'android_game' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -380,7 +244,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_app_redesign" && (
+            {activeService === 'android_app_redesign' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -395,7 +259,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_support" && (
+            {activeService === 'android_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -441,17 +305,17 @@ const MobileAppSydney = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/why_choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/sitemap/sydney/why_choose/robust-portfolio.png')}
                       alt="Experience-and-Expertise."
                       className="img-fluid"
                     />
@@ -460,17 +324,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_protfolio")}
+                  onClick={() => setActiveWhyChoose('robust_protfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_protfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_protfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/why_choose/Custom-Security-Solution-1.png")}
+                      src={require('../../../assets/images/sitemap/sydney/why_choose/Custom-Security-Solution-1.png')}
                       alt="Robust-Portfolio"
                       className="img-fluid"
                     />
@@ -479,17 +343,17 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("full_lifestyle_support")}
+                  onClick={() => setActiveWhyChoose('full_lifestyle_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "full_lifestyle_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'full_lifestyle_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/why_choose/art.png")}
+                      src={require('../../../assets/images/sitemap/sydney/why_choose/art.png')}
                       alt="Full-Lifecycle-Support"
                       className="img-fluid"
                     />
@@ -498,18 +362,18 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile_development")}
+                  onClick={() => setActiveWhyChoose('agile_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/why_choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/sitemap/sydney/why_choose/Agile-Development-1.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -518,18 +382,18 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("fast_paced_development")}
+                  onClick={() => setActiveWhyChoose('fast_paced_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "fast_paced_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'fast_paced_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/why_choose/transperent-process.png")}
+                      src={require('../../../assets/images/sitemap/sydney/why_choose/transperent-process.png')}
                       alt="Fast-Paced-Development"
                       className="img-fluid"
                     />
@@ -538,18 +402,18 @@ const MobileAppSydney = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_price")}
+                  onClick={() => setActiveWhyChoose('competitive_price')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_price" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_price' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
-                      src={require("../../../assets/images/sitemap/sydney/why_choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/sitemap/sydney/why_choose/competitive-pricing.png')}
                       alt="Competitive-Pricing"
                       className="img-fluid"
                     />
@@ -558,7 +422,7 @@ const MobileAppSydney = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -573,7 +437,7 @@ const MobileAppSydney = () => {
               </div>
             )}
 
-            {activeWhyChoose === "robust_protfolio" && (
+            {activeWhyChoose === 'robust_protfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -588,7 +452,7 @@ const MobileAppSydney = () => {
               </div>
             )}
 
-            {activeWhyChoose === "full_lifestyle_support" && (
+            {activeWhyChoose === 'full_lifestyle_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -605,7 +469,7 @@ const MobileAppSydney = () => {
               </div>
             )}
 
-            {activeWhyChoose === "agile_development" && (
+            {activeWhyChoose === 'agile_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -620,7 +484,7 @@ const MobileAppSydney = () => {
               </div>
             )}
 
-            {activeWhyChoose === "fast_paced_development" && (
+            {activeWhyChoose === 'fast_paced_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -637,7 +501,7 @@ const MobileAppSydney = () => {
               </div>
             )}
 
-            {activeWhyChoose === "competitive_price" && (
+            {activeWhyChoose === 'competitive_price' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -694,23 +558,23 @@ const MobileAppSydney = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
-            style={{ padding: "2.5rem 0" }}
+            style={{ padding: '2.5rem 0' }}
           >
             <SwiperSlide>
               <Link
@@ -720,16 +584,16 @@ const MobileAppSydney = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../../assets/images/work/2.webp")}
+                      src={require('../../../assets/images/work/2.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">
                       Mindweel - On Demand Psychologist Hiring App
                     </div>
@@ -772,16 +636,16 @@ const MobileAppSydney = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../../assets/images/work/bolt-app.webp")}
+                      src={require('../../../assets/images/work/bolt-app.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">Bold Delivery</div>
                     <p>
                       It’s a Food Ordering & Food Delivery App. We have created
@@ -818,16 +682,16 @@ const MobileAppSydney = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../../assets/images/work/service-my-car.webp")}
+                      src={require('../../../assets/images/work/service-my-car.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">Service my car</div>
                     <p>
                       It’s an On Demand Car Servicing App, It has 2 main
@@ -875,7 +739,7 @@ const MobileAppSydney = () => {
           <div className="row align-items-center">
             <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
               <div className="contact__lft">
-                <p style={{ textAlign: "left" }}>
+                <p style={{ textAlign: 'left' }}>
                   Do you want to know in more detail about our mobile app
                   development services in Sydney? Let us explain to you how we
                   can provide a unique value proposition with our development
@@ -888,11 +752,11 @@ const MobileAppSydney = () => {
                 <Link
                   to="/contactus"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
-                  <div className="contact_btn" style={{ color: "#000" }}>
-                    Contact us{" "}
+                  <div className="contact_btn" style={{ color: '#000' }}>
+                    Contact us{' '}
                   </div>
                 </Link>
               </div>
@@ -902,7 +766,7 @@ const MobileAppSydney = () => {
       </section>
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default MobileAppSydney;
+export default MobileAppSydney

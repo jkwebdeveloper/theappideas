@@ -34,6 +34,7 @@ import PayOnline from '../../../assets/images/SOLUTIONS/On-Demand App/On Demand 
 import TimeTracking from '../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/Client App/Time-Management-Tracking.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const SecurityApp = () => {
   const [activeSection, setActiveSection] = useState('contractor_app')
@@ -193,6 +194,7 @@ const SecurityApp = () => {
 
   return (
     <>
+      <Helmet title="On Demand Security Guard App Development - The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="On Demand Security Guard App"

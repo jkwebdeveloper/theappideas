@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireLaravelDev = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HireLaravelDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire Laravel Developers | Laravel Development Company India" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Laravel Developers"

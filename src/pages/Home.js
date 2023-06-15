@@ -6,10 +6,12 @@ import About from "../components/Home/About us/About";
 import ContactUs from "../components/ContactUs";
 import Work from "../components/Workdone/Work";
 import Banner from "../components/Home/Banner/Banner";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
   return (
     <>
+    <Helmet title="Best Web & Mobile App Development Company"/>
       <Banner />
       <About />
       <Services />

@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire PHP Dev
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HirePHPDev = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HirePHPDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire Dedicated PHP Developers India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire PHP Developers In India"

@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Python 
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HirePythonDev = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HirePythonDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire Expert Python App Developers In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Python App Developers In India"

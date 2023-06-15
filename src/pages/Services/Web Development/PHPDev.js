@@ -1,29 +1,29 @@
-import React, { useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
+import React, { useRef, useState } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
 
-import CustomWordPress from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Web-Development.png";
-import WordPressWebsite from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Development-Services.png";
-import Developer from "../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Expert.png";
+import CustomWordPress from '../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Web-Development.png'
+import WordPressWebsite from '../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Development-Services.png'
+import Developer from '../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/PHP-Expert.png'
 
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const PHPDev = () => {
-  const [activeOffer, setActiveOffer] = useState("php_web");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "expertise_experience"
-  );
+  const [activeOffer, setActiveOffer] = useState('php_web')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('expertise_experience')
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
+      <Helmet title="Best PHP Development Company In India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="PHP Development Company"
@@ -62,16 +62,16 @@ const PHPDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("php_web")}
+                  onClick={() => setActiveOffer('php_web')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "php_web" && "service__provide_tab_active"
+                      activeOffer === 'php_web' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/ui-ux.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/ui-ux.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -80,16 +80,16 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("php_cms")}
+                  onClick={() => setActiveOffer('php_cms')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "php_cms" && "service__provide_tab_active"
+                      activeOffer === 'php_cms' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/cms-icon1-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/cms-icon1-1.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -98,17 +98,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("php_framework")}
+                  onClick={() => setActiveOffer('php_framework')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "php_framework" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'php_framework' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/icons8-iphone-x-72-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/icons8-iphone-x-72-1.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -117,17 +117,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("php_mobile")}
+                  onClick={() => setActiveOffer('php_mobile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "php_mobile" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'php_mobile' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mechanism-gears-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mechanism-gears-1.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -136,17 +136,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("theme_plugin")}
+                  onClick={() => setActiveOffer('theme_plugin')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "theme_plugin" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'theme_plugin' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Group-184.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Group-184.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -155,17 +155,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveOffer("php_support")}
+                  onClick={() => setActiveOffer('php_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeOffer === "php_support" &&
-                      "service__provide_tab_active"
+                      activeOffer === 'php_support' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mask-Group.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/what do/Mask-Group.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -174,7 +174,7 @@ const PHPDev = () => {
                 </div>
               </div>
             </div>
-            {activeOffer === "php_web" && (
+            {activeOffer === 'php_web' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -201,12 +201,12 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "php_cms" && (
+            {activeOffer === 'php_cms' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      PHP Based CMS Development{" "}
+                      PHP Based CMS Development{' '}
                     </h3>
                     <p className="Title_para">
                       Nowadays, due to advancements in the field of technology,
@@ -228,12 +228,12 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "php_framework" && (
+            {activeOffer === 'php_framework' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      PHP Framework Development{" "}
+                      PHP Framework Development{' '}
                     </h3>
                     <p className="Title_para">
                       PHP is one of the most popular CMS platforms which is used
@@ -256,7 +256,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "php_mobile" && (
+            {activeOffer === 'php_mobile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -282,7 +282,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "theme_plugin" && (
+            {activeOffer === 'theme_plugin' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -311,12 +311,12 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeOffer === "php_support" && (
+            {activeOffer === 'php_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      PHP Support and Maintenance{" "}
+                      PHP Support and Maintenance{' '}
                     </h3>
                     <p className="Title_para">
                       If you are a business owner or planning to start an online
@@ -381,55 +381,55 @@ const PHPDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -438,13 +438,13 @@ const PHPDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -453,13 +453,13 @@ const PHPDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -468,13 +468,13 @@ const PHPDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -483,13 +483,13 @@ const PHPDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -498,13 +498,13 @@ const PHPDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -513,13 +513,13 @@ const PHPDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: "pointer" }}>
+            <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
                 <div className="col-12">
                   <img
-                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp")}
+                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp')}
                     style={{
-                      width: "100%",
+                      width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -543,17 +543,17 @@ const PHPDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("expertise_experience")}
+                  onClick={() => setActiveWhyChoose('expertise_experience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "expertise_experience" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'expertise_experience' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -562,17 +562,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                  onClick={() => setActiveWhyChoose('robust_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_portfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -581,17 +581,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("unmatched_performance")}
+                  onClick={() => setActiveWhyChoose('unmatched_performance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "unmatched_performance" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'unmatched_performance' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/why-Choose/icon.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/PHP-Dev/why-Choose/icon.png')}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -600,17 +600,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile")}
+                  onClick={() => setActiveWhyChoose('agile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -619,17 +619,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_rate")}
+                  onClick={() => setActiveWhyChoose('competitive_rate')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_rate" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_rate' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -638,17 +638,17 @@ const PHPDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("adhering_strict")}
+                  onClick={() => setActiveWhyChoose('adhering_strict')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "adhering_strict" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'adhering_strict' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png')}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -657,7 +657,7 @@ const PHPDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "expertise_experience" && (
+            {activeWhyChoose === 'expertise_experience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -683,7 +683,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "robust_portfolio" && (
+            {activeWhyChoose === 'robust_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -708,7 +708,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "unmatched_performance" && (
+            {activeWhyChoose === 'unmatched_performance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -735,7 +735,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "agile" && (
+            {activeWhyChoose === 'agile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -761,7 +761,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "competitive_rate" && (
+            {activeWhyChoose === 'competitive_rate' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -787,7 +787,7 @@ const PHPDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "adhering_strict" && (
+            {activeWhyChoose === 'adhering_strict' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -827,7 +827,7 @@ const PHPDev = () => {
       <ContactUs question="Are you planning to launch a Successful PHP Mobile app in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default PHPDev;
+export default PHPDev

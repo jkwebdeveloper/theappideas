@@ -38,6 +38,7 @@ import Reviews from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learni
 import PaymentManagement from '../../../assets/images/SOLUTIONS/Popular Solutions/E-Learning App Store/Admin Panel/Payment-Management-1.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const ElearningApp = () => {
   const [activeSection, setActiveSection] = useState('user_panel')
@@ -195,6 +196,7 @@ const ElearningApp = () => {
 
   return (
     <>
+      <Helmet title="E-Learning Mobile App Development Company India - The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="E-Learning App Store"

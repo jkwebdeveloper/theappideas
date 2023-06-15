@@ -45,6 +45,7 @@ import ReportsManagement from '../../../assets/images/SOLUTIONS/Delivery App/Cou
 import Contentmanagement from '../../../assets/images/SOLUTIONS/Delivery App/Courier-app/Admin Panel/content-management.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const CourierPickup = () => {
   const [activeSection, setActiveSection] = useState('user_app')
@@ -244,6 +245,7 @@ const CourierPickup = () => {
   }, [activeSection])
   return (
     <>
+      <Helmet title="Courier Pickup Management Software Solution - The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="Courier Pickup Management App"

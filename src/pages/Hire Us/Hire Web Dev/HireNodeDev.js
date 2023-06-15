@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Node JS
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireNodeDev = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HireNodeDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire Top Node JS App Developers In India - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Node JS App Developers In India"

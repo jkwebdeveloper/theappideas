@@ -224,6 +224,11 @@ section {
   border: 1px solid #f6c000;
   color: #000;
 }
+@media (max-width: 575px) {
+  .contact__form_box h2 {
+    font-size: 20px;
+  }
+}
 /* Contact Page CSS End */
 
 /* Blog Page CSS Start */
@@ -4038,7 +4043,7 @@ section {
 /* -------------------- Our_Process Css Start -------------------- */
 .process_banner {
   background-color: #262262;
-  padding: 160px 0;
+  padding: 180px 0;
 }
 .banner_contact {
   padding: 0 20px;
@@ -4222,7 +4227,7 @@ section {
     display: none;
   }
   .process_banner {
-    padding: 60px 0;
+    padding: 120px 0;
   }
   .process_banner .banner_contact h2 {
     margin: 0;
@@ -4367,19 +4372,19 @@ section {
 
 /* -------------------- Career Apply Css Start -------------------- */
 .carrer_banner {
-  width: 100%;
-  height: 100%;
   background-image: url("./assets/images/careers/career-bg.jpg");
+  align-items: center;
+  background-position: 50%;
+  background-repeat: no-repeat;
+  background-size: cover;
   color: #fff;
   display: flex;
+  height: 100%;
   justify-content: center;
-  align-items: center;
+  padding: 90px 16px;
   position: relative;
   text-align: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  padding: 60px 16px;
+  width: 100%;
 }
 
 .carrer_banner::before {

@@ -1,8 +1,10 @@
-import React from "react";
+import React from 'react'
+import { Helmet } from 'react-helmet'
 
 const OurTeam = () => {
   return (
     <>
+      <Helmet title='Our Team | THE APP IDEAS'/>
       <section className="team_banner">
         <h1>OUR TEAM</h1>
         <p>
@@ -20,7 +22,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/chirag.png")}
+                        src={require('../../assets/images/COMPANY/our_team/chirag.png')}
                         className="img-fluid"
                         alt="chirag"
                       />
@@ -37,7 +39,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Ankita.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Ankita.webp')}
                         className="img-fluid"
                         alt="Ankita"
                       />
@@ -54,7 +56,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/trusha.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/trusha.webp')}
                         className="img-fluid"
                         alt="trusha"
                       />
@@ -71,7 +73,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Payal.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Payal.webp')}
                         className="img-fluid"
                         alt="Payal"
                       />
@@ -96,7 +98,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Bhavin.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Bhavin.webp')}
                         className="img-fluid"
                         alt="Bhavin"
                       />
@@ -113,7 +115,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Mansi-Shah.jpg")}
+                        src={require('../../assets/images/COMPANY/our_team/Mansi-Shah.jpg')}
                         className="img-fluid"
                         alt="Mansi-Shah"
                       />
@@ -130,7 +132,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Ankit.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Ankit.webp')}
                         className="img-fluid"
                         alt="Ankit"
                       />
@@ -147,7 +149,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Jignasa.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Jignasa.webp')}
                         className="img-fluid"
                         alt="Jignasa"
                       />
@@ -164,7 +166,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Harnish-Rathod.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Harnish-Rathod.webp')}
                         className="img-fluid"
                         alt="Harnish-Rathod"
                       />
@@ -189,7 +191,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Diksha-SEO.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Diksha-SEO.webp')}
                         className="img-fluid"
                         alt="Diskha-seo"
                       />
@@ -206,7 +208,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Ankit-mistry.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Ankit-mistry.webp')}
                         className="img-fluid"
                         alt="ankit"
                       />
@@ -223,7 +225,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Suraj.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Suraj.webp')}
                         className="img-fluid"
                         alt="suraj"
                       />
@@ -240,7 +242,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Raj.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Raj.webp')}
                         className="img-fluid"
                         alt="Raj"
                       />
@@ -257,10 +259,10 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/juhi.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/juhi.webp')}
                         className="img-fluid"
                         alt="juhi"
-                      />{" "}
+                      />{' '}
                     </div>
                     <div className="caption">
                       <h3>Juhi Patel</h3>
@@ -274,7 +276,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Hardi-patel.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Hardi-patel.webp')}
                         className="img-fluid"
                         alt="Hardi-patel"
                       />
@@ -291,7 +293,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Ronak-Yadav.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Ronak-Yadav.webp')}
                         className="img-fluid"
                         alt="Ronak-Yadav"
                       />
@@ -308,7 +310,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Trusha_Soliya.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Trusha_Soliya.webp')}
                         className="img-fluid"
                         alt="Trusha_Soliya"
                       />
@@ -325,7 +327,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Ashish.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Ashish.webp')}
                         className="img-fluid"
                         alt="Ashish"
                       />
@@ -342,7 +344,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Urvi.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Urvi.webp')}
                         className="img-fluid"
                         alt="Urvi"
                       />
@@ -359,7 +361,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Jaydeep.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Jaydeep.webp')}
                         className="img-fluid"
                         alt="Jaydeep"
                       />
@@ -376,7 +378,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Darshan-Koshti.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Darshan-Koshti.webp')}
                         className="img-fluid"
                         alt="Darshan-Koshti"
                       />
@@ -393,7 +395,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/DhvaniPatel.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/DhvaniPatel.webp')}
                         className="img-fluid"
                         alt="DhvaniPatel"
                       />
@@ -410,7 +412,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Jignesh_Koshti.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Jignesh_Koshti.webp')}
                         className="img-fluid"
                         alt="Jignesh-Koshti"
                       />
@@ -427,7 +429,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Kinnari-Vaghela.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Kinnari-Vaghela.webp')}
                         className="img-fluid"
                         alt="Kinnari-Vaghela"
                       />
@@ -444,7 +446,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Nikhi-Mandaliya.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Nikhi-Mandaliya.webp')}
                         className="img-fluid"
                         alt="Nikhi-Mandaliya"
                       />
@@ -461,7 +463,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Priyanka-Patel.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Priyanka-Patel.webp')}
                         className="img-fluid"
                         alt="Priyanka-Patel"
                       />
@@ -478,7 +480,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Pooja_Rathod.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Pooja_Rathod.webp')}
                         className="img-fluid"
                         alt="Pooja_Rathod"
                       />
@@ -495,7 +497,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Vikas_Chauhan.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Vikas_Chauhan.webp')}
                         className="img-fluid"
                         alt="Vikas_Chauhan"
                       />
@@ -512,7 +514,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Dhara_Khandhediya.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Dhara_Khandhediya.webp')}
                         className="img-fluid"
                         alt="Dhara_Khandhediya"
                       />
@@ -529,7 +531,7 @@ const OurTeam = () => {
                   <div className="profile-card">
                     <div className="img">
                       <img
-                        src={require("../../assets/images/COMPANY/our_team/Rahul_Patel.webp")}
+                        src={require('../../assets/images/COMPANY/our_team/Rahul_Patel.webp')}
                         className="img-fluid"
                         alt="Rahul_Patel"
                       />
@@ -546,7 +548,7 @@ const OurTeam = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default OurTeam;
+export default OurTeam

@@ -39,6 +39,7 @@ import receive from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver T
 import Historyy from '../../../assets/images/SOLUTIONS/Popular Solutions/Driver Tracking App/Driver Tracking App/History of trips.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const DriverTrackingApp = () => {
   const [activeSection, setActiveSection] = useState('passenger_driver')
@@ -213,6 +214,7 @@ const DriverTrackingApp = () => {
 
   return (
     <>
+      <Helmet title="On-Demand Driver Tracking App Development | The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="On Demand Driver Tracking App"

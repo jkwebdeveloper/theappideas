@@ -1,20 +1,22 @@
-import React, { useState } from "react";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
+import React, { useState } from 'react'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
 
-import asoservice from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Services.png";
-import Specialist from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Specialist.png";
-import optimization from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-optimization.png";
+import asoservice from '../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Services.png'
+import Specialist from '../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Specialist.png'
+import optimization from '../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-optimization.png'
 
-import HeroSection from "../../../components/HeroSection";
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const ASO = () => {
-  const [activeService, setActiveService] = useState("app_icon_design");
-  const [activeWhyChoose, setActiveWhyChoose] = useState("experience");
+  const [activeService, setActiveService] = useState('app_icon_design')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience')
 
   return (
     <>
+      <Helmet title="App Store Optimization Company India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="ASO"
@@ -52,17 +54,17 @@ const ASO = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_icon_design")}
+                  onClick={() => setActiveService('app_icon_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "app_icon_design" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_icon_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png')}
                       alt="App Icon Design"
                       className="img-fluid"
                     />
@@ -71,17 +73,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_store")}
+                  onClick={() => setActiveService('app_store')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "app_store" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_store' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png')}
                       alt="App Store Presence Optimization"
                       className="img-fluid"
                     />
@@ -90,17 +92,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("keyword")}
+                  onClick={() => setActiveService('keyword')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "keyword" &&
-                      "service__provide_tab_active"
+                      activeService === 'keyword' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png')}
                       alt="Keyword Optimization"
                       className="img-fluid"
                     />
@@ -109,17 +111,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_description")}
+                  onClick={() => setActiveService('app_description')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "app_description" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_description' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png')}
                       alt="App Description"
                       className="img-fluid"
                     />
@@ -128,17 +130,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("app_marketing")}
+                  onClick={() => setActiveService('app_marketing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "app_marketing" &&
-                      "service__provide_tab_active"
+                      activeService === 'app_marketing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png')}
                       alt="App Description"
                       className="img-fluid"
                     />
@@ -147,17 +149,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService("retareting_campaigns")}
+                  onClick={() => setActiveService('retareting_campaigns')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "retareting_campaigns" &&
-                      "service__provide_tab_active"
+                      activeService === 'retareting_campaigns' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png')}
                       alt="Retargeting Campaigns"
                       className="img-fluid"
                     />
@@ -166,7 +168,7 @@ const ASO = () => {
                 </div>
               </div>
             </div>
-            {activeService === "app_icon_design" && (
+            {activeService === 'app_icon_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -194,7 +196,7 @@ const ASO = () => {
                 </div>
               </div>
             )}
-            {activeService === "app_store" && (
+            {activeService === 'app_store' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -222,8 +224,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "keyword" && (
+            )}{' '}
+            {activeService === 'keyword' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -248,8 +250,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "app_description" && (
+            )}{' '}
+            {activeService === 'app_description' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -273,8 +275,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "app_marketing" && (
+            )}{' '}
+            {activeService === 'app_marketing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -299,8 +301,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeService === "retareting_campaigns" && (
+            )}{' '}
+            {activeService === 'retareting_campaigns' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -340,17 +342,17 @@ const ASO = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience")}
+                  onClick={() => setActiveWhyChoose('experience')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png')}
                       alt="Experience"
                       className="img-fluid"
                     />
@@ -359,17 +361,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("multichannel")}
+                  onClick={() => setActiveWhyChoose('multichannel')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "multichannel" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'multichannel' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png')}
                       alt="Multichannel Marketing Expertise"
                       className="img-fluid"
                     />
@@ -378,17 +380,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_portfolio")}
+                  onClick={() => setActiveWhyChoose('robust_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png')}
                       alt="Robust Portfolio"
                       className="img-fluid"
                     />
@@ -397,17 +399,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("industry_best_team")}
+                  onClick={() => setActiveWhyChoose('industry_best_team')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "industry_best_team" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'industry_best_team' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png')}
                       alt="Industry’s Best team"
                       className="img-fluid"
                     />
@@ -416,17 +418,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("timebound")}
+                  onClick={() => setActiveWhyChoose('timebound')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "timebound" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'timebound' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png')}
                       alt="Timebound and Result-Driven"
                       className="img-fluid"
                     />
@@ -435,17 +437,17 @@ const ASO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png')}
                       alt="Competitive Pricing"
                       className="img-fluid"
                     />
@@ -454,7 +456,7 @@ const ASO = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience" && (
+            {activeWhyChoose === 'experience' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -478,8 +480,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "multichannel" && (
+            )}{' '}
+            {activeWhyChoose === 'multichannel' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -505,8 +507,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "robust_portfolio" && (
+            )}{' '}
+            {activeWhyChoose === 'robust_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -530,8 +532,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "industry_best_team" && (
+            )}{' '}
+            {activeWhyChoose === 'industry_best_team' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -555,8 +557,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "timebound" && (
+            )}{' '}
+            {activeWhyChoose === 'timebound' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -584,8 +586,8 @@ const ASO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "competitive_pricing" && (
+            )}{' '}
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -620,7 +622,7 @@ const ASO = () => {
       <ContactUs question="Are you planning to launch a Successful App Search Optimization in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default ASO;
+export default ASO

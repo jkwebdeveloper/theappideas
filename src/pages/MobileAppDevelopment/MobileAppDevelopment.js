@@ -41,6 +41,7 @@ import health from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Se
 import { Link } from 'react-router-dom'
 import ContactUs from '../../components/ContactUs'
 import HeroSection from '../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const MobileAppDev = () => {
   const [selected, setSelected] = useState(null)
@@ -126,6 +127,7 @@ const MobileAppDev = () => {
   }, [])
   return (
     <>
+      <Helmet title='Top Mobile App Development Company India & USA - THE APP IDEAS'/>
       {/* Banner Section Start */}
       <HeroSection
         title="Mobile App Development Company"

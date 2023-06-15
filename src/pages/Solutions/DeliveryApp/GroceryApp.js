@@ -50,6 +50,7 @@ import GroceryStoremanagement from '../../../assets/images/SOLUTIONS/Delivery Ap
 import Reports from '../../../assets/images/SOLUTIONS/Delivery App/Grocery-app/Admin Panel/Reports.svg'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const GroceryApp = () => {
   const [activeSection, setActiveSection] = useState('user_app')
@@ -320,6 +321,7 @@ const GroceryApp = () => {
 
   return (
     <>
+      <Helmet title="Grocery Store App Development Company | The App Ideas" />
       {/* common Banner start */}
       <HeroSection
         title="Grocery Store App"

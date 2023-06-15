@@ -1,22 +1,22 @@
-import React, { useState } from "react";
+import React, { useState } from 'react'
 
-import CustomWordPress from "../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-development-company.webp";
-import WordPressWebsite from "../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-custom-module-developmen.webp";
-import Developer from "../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-development-services.webp";
+import CustomWordPress from '../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-development-company.webp'
+import WordPressWebsite from '../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-custom-module-developmen.webp'
+import Developer from '../../../assets/images/SERVICES/Software development/dotnet-dev/dotnetnuke-development-services.webp'
 
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
-import HeroSection from "../../../components/HeroSection";
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const DotNetDev = () => {
-  const [activeWeProvide, setActiveWeProvide] = useState("website_development");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeWeProvide, setActiveWeProvide] = useState('website_development')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
   return (
     <>
+      <Helmet title="Ditnrtnuke Development Company India, USA - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="DotNetNuke Development Company"
@@ -53,17 +53,17 @@ const DotNetDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("website_development")}
+                  onClick={() => setActiveWeProvide('website_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "website_development" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'website_development' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png')}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -72,17 +72,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("module_development")}
+                  onClick={() => setActiveWeProvide('module_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "module_development" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'module_development' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png')}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -91,17 +91,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("app_maintanance")}
+                  onClick={() => setActiveWeProvide('app_maintanance')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "app_maintanance" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'app_maintanance' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/3-10.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/3-10.png')}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -112,17 +112,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("dnn_migration")}
+                  onClick={() => setActiveWeProvide('dnn_migration')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "dnn_migration" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'dnn_migration' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/4-10.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/4-10.png')}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -134,17 +134,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("dnn_upgrades")}
+                  onClick={() => setActiveWeProvide('dnn_upgrades')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "dnn_upgrades" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'dnn_upgrades' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/5-10.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/5-10.png')}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -156,17 +156,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("dnn_web_skin_design")}
+                  onClick={() => setActiveWeProvide('dnn_web_skin_design')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "dnn_web_skin_design" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'dnn_web_skin_design' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/6-10.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/dotnet-dev/what-do/6-10.png')}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -175,7 +175,7 @@ const DotNetDev = () => {
                 </div>
               </div>
             </div>
-            {activeWeProvide === "website_development" && (
+            {activeWeProvide === 'website_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -199,7 +199,7 @@ const DotNetDev = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === "module_development" && (
+            {activeWeProvide === 'module_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -223,8 +223,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "app_maintanance" && (
+            )}{' '}
+            {activeWeProvide === 'app_maintanance' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -248,8 +248,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "dnn_migration" && (
+            )}{' '}
+            {activeWeProvide === 'dnn_migration' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -274,8 +274,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "dnn_upgrades" && (
+            )}{' '}
+            {activeWeProvide === 'dnn_upgrades' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -298,8 +298,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "dnn_web_skin_design" && (
+            )}{' '}
+            {activeWeProvide === 'dnn_web_skin_design' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -323,7 +323,7 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
+            )}{' '}
           </div>
         </div>
       </section>
@@ -339,17 +339,17 @@ const DotNetDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -358,17 +358,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("solid_dnn_portfolio")}
+                  onClick={() => setActiveWhyChoose('solid_dnn_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "solid_dnn_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'solid_dnn_portfolio' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -377,17 +377,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile")}
+                  onClick={() => setActiveWhyChoose('agile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -396,17 +396,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("after_deploy")}
+                  onClick={() => setActiveWhyChoose('after_deploy')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "after_deploy" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'after_deploy' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png')}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -415,17 +415,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("timely_project")}
+                  onClick={() => setActiveWhyChoose('timely_project')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "timely_project" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'timely_project' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
+                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -434,17 +434,17 @@ const DotNetDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png")}
+                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png')}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -453,7 +453,7 @@ const DotNetDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -479,7 +479,7 @@ const DotNetDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "solid_dnn_portfolio" && (
+            {activeWhyChoose === 'solid_dnn_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -504,8 +504,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "agile" && (
+            )}{' '}
+            {activeWhyChoose === 'agile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -528,8 +528,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "timely_project" && (
+            )}{' '}
+            {activeWhyChoose === 'timely_project' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -552,8 +552,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "competitive_pricing" && (
+            )}{' '}
+            {activeWhyChoose === 'competitive_pricing' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -575,8 +575,8 @@ const DotNetDev = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "after_deploy" && (
+            )}{' '}
+            {activeWhyChoose === 'after_deploy' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -613,7 +613,7 @@ const DotNetDev = () => {
       <ContactUs question="Are you planning to launch a Successful DotNetNuke Development service in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default DotNetDev;
+export default DotNetDev

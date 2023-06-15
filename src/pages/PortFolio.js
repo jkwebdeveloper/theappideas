@@ -1,92 +1,94 @@
-import React, { useState, useEffect } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useState, useEffect } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 // backgroundImage
-import Gogenus from "../assets/images/Portfolio/header-portflio/Gogenus-web.webp";
-import covid from "../assets/images/Portfolio/header-portflio/covid-BG.webp";
-import Human from "../assets/images/Portfolio/header-portflio/human-BG.webp";
-import paddock from "../assets/images/Portfolio/header-portflio/paddock-BG.webp";
-import resipsausa from "../assets/images/Portfolio/header-portflio/resipsausa-BG.webp";
-import purebody from "../assets/images/Portfolio/header-portflio/purebody-BG.webp";
+import Gogenus from '../assets/images/Portfolio/header-portflio/Gogenus-web.webp'
+import covid from '../assets/images/Portfolio/header-portflio/covid-BG.webp'
+import Human from '../assets/images/Portfolio/header-portflio/human-BG.webp'
+import paddock from '../assets/images/Portfolio/header-portflio/paddock-BG.webp'
+import resipsausa from '../assets/images/Portfolio/header-portflio/resipsausa-BG.webp'
+import purebody from '../assets/images/Portfolio/header-portflio/purebody-BG.webp'
 
 // DeviceImage
-import GogenusDevice from "../assets/images/Portfolio/header-portflio/Gogenus-Device.webp";
-import covidDevice from "../assets/images/Portfolio/header-portflio/covid-Device.webp";
-import HumanDevice from "../assets/images/Portfolio/header-portflio/human-Device.webp";
-import paddockDevice from "../assets/images/Portfolio/header-portflio/paddock-Device.webp";
-import resipsausaDevice from "../assets/images/Portfolio/header-portflio/resipsausa-Device.webp";
-import purebodyDevice from "../assets/images/Portfolio/header-portflio/purebody-Device.webp";
+import GogenusDevice from '../assets/images/Portfolio/header-portflio/Gogenus-Device.webp'
+import covidDevice from '../assets/images/Portfolio/header-portflio/covid-Device.webp'
+import HumanDevice from '../assets/images/Portfolio/header-portflio/human-Device.webp'
+import paddockDevice from '../assets/images/Portfolio/header-portflio/paddock-Device.webp'
+import resipsausaDevice from '../assets/images/Portfolio/header-portflio/resipsausa-Device.webp'
+import purebodyDevice from '../assets/images/Portfolio/header-portflio/purebody-Device.webp'
+import { Helmet } from 'react-helmet'
 
 const Data = [
   {
     id: 1,
     image: GogenusDevice,
     bg: Gogenus,
-    category: "web",
-    projectName: "Gogenus",
-    tags: ["PHP", "Web development"],
+    category: 'web',
+    projectName: 'Gogenus',
+    tags: ['PHP', 'Web development'],
   },
   {
     id: 2,
     image: covidDevice,
     bg: covid,
-    category: "Application",
-    projectName: "Covid",
-    tags: ["Android App", "IOS", "Mobile Application Development"],
+    category: 'Application',
+    projectName: 'Covid',
+    tags: ['Android App', 'IOS', 'Mobile Application Development'],
   },
   {
     id: 3,
     image: HumanDevice,
     bg: Human,
-    category: "web",
-    projectName: "Human Perform",
-    tags: ["PHP", "Web development"],
+    category: 'web',
+    projectName: 'Human Perform',
+    tags: ['PHP', 'Web development'],
   },
   {
     id: 4,
     image: paddockDevice,
     bg: paddock,
-    category: "Application",
-    projectName: "Paddock",
-    tags: ["Android App", "Flutter", "IOS", "Mobile Application Development"],
+    category: 'Application',
+    projectName: 'Paddock',
+    tags: ['Android App', 'Flutter', 'IOS', 'Mobile Application Development'],
   },
   {
     id: 5,
     image: resipsausaDevice,
     bg: resipsausa,
-    category: "e-com",
-    projectName: "Resipsausa",
-    tags: ["E-Commerce", "Hire Wordpress"],
+    category: 'e-com',
+    projectName: 'Resipsausa',
+    tags: ['E-Commerce', 'Hire Wordpress'],
   },
   {
     id: 6,
     image: purebodyDevice,
     bg: purebody,
-    category: "e-com",
-    projectName: "Resipsausa",
-    tags: ["E-Commerce", "Hire Wordpress"],
+    category: 'e-com',
+    projectName: 'Resipsausa',
+    tags: ['E-Commerce', 'Hire Wordpress'],
   },
-];
+]
 const PortFolio = () => {
-  const [items, setItems] = useState(Data);
+  const [items, setItems] = useState(Data)
 
   const filterItem = (cateItem) => {
     const updateItems = Data.filter((curElem) => {
-      return curElem.category === cateItem;
-    });
+      return curElem.category === cateItem
+    })
 
-    setItems(updateItems);
-  };
+    setItems(updateItems)
+  }
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
+      <Helmet title='PORTFOLIO | THE APP IDEAS'/>
       <section
         className="blog__section"
-        style={{ paddingTop: "120px", paddingBottom: "40px" }}
+        style={{ paddingTop: '120px', paddingBottom: '40px' }}
       >
         {/* categories */}
         <div className="container">
@@ -128,7 +130,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="Application"
                   aria-selected="false"
-                  onClick={() => filterItem("Application")}
+                  onClick={() => filterItem('Application')}
                 >
                   Mobile Application Development
                 </div>
@@ -143,7 +145,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="App-idea"
                   aria-selected="false"
-                  onClick={() => filterItem("web")}
+                  onClick={() => filterItem('web')}
                 >
                   Web development
                 </div>
@@ -158,7 +160,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="bussiness"
                   aria-selected="false"
-                  onClick={() => filterItem("e-com")}
+                  onClick={() => filterItem('e-com')}
                 >
                   E-commerce
                 </div>
@@ -178,7 +180,7 @@ const PortFolio = () => {
             >
               <div className="row">
                 {items.map((elem) => {
-                  const { id, image, bg, category, projectName, tags } = elem;
+                  const { id, image, bg, category, projectName, tags } = elem
                   return (
                     <div key={id} className="col-12 px-0 mb-4">
                       <div
@@ -204,13 +206,13 @@ const PortFolio = () => {
                                         href="#"
                                         className="work_head_box_link"
                                       >
-                                        {" "}
+                                        {' '}
                                       </a>
                                       <a href="#" className="work_head_item">
                                         {tag}
                                       </a>
                                     </li>
-                                  );
+                                  )
                                 })}
                               </ul>
                             </div>
@@ -228,7 +230,7 @@ const PortFolio = () => {
                         </div>
                       </div>
                     </div>
-                  );
+                  )
                 })}
                 {/* <div className="col-12 px-0 mb-4">
                   <div
@@ -521,7 +523,7 @@ const PortFolio = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default PortFolio;
+export default PortFolio

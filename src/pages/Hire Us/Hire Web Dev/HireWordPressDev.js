@@ -26,6 +26,7 @@ import Free from '../../../assets/images/HIRE US/Hire Web Developer/Hire Laravel
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireWordPressDev = () => {
   useEffect(() => {
@@ -33,6 +34,7 @@ const HireWordPressDev = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire Wordpress Developers | Dedicated Wordpress Developers" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire WordPress Developers In India"

@@ -24,6 +24,7 @@ import PRICING from '../../../assets/images/HIRE US/Hire Web Developer/Hire Code
 import { Link } from 'react-router-dom'
 import ContactUs from '../../../components/ContactUs'
 import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 
 const HireCodeIgniter = () => {
   useEffect(() => {
@@ -31,6 +32,7 @@ const HireCodeIgniter = () => {
   }, [])
   return (
     <>
+      <Helmet title="Hire CodeIgniter Developers | Hire Expert CodeIgniter Web Developer" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire CodeIgniter App Developers In India"
