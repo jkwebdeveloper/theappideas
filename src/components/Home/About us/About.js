@@ -1,6 +1,6 @@
-import React from "react";
-import "./About.css";
-import { Link } from "react-router-dom";
+import React from 'react'
+import './About.css'
+import { Link } from 'react-router-dom'
 
 const About = () => {
   return (
@@ -12,13 +12,13 @@ const About = () => {
               <h2>About us</h2>
             </div>
             <p className="about-text">WEB & MOBILE APP DEVELOPMENT COMPANY</p>
-            <p>
+            <p style={{ textAlign: 'justify' }}>
               The App Ideas is the leading Web and Mobile App Development
               Company that can help your business grow with innovative and
               engaging solutions. We build cutting edge digital solutions with a
               quick-engaging user interface and user experience.
             </p>
-            <p>
+            <p style={{ textAlign: 'justify' }}>
               We have a team of highly experienced as well as proficient Web and
               Mobile App Developers as well as designers, who will first
               understand and analyze our client’s requirements in a much better
@@ -31,7 +31,7 @@ const About = () => {
             <Link
               to="/about-us"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: "smooth" });
+                window.scrollTo({ top: 0, behavior: 'smooth' })
               }}
             >
               <div className="find_more_btn">Find out More</div>
@@ -44,7 +44,7 @@ const About = () => {
 
             <section
               className="Portfolio_section_wrapper"
-              style={{ paddingTop: "50px" }}
+              style={{ paddingTop: '50px' }}
             >
               <div className="achievements__section">
                 <div className="achievements_box">
@@ -69,7 +69,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default About;
+export default About

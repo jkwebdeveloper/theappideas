@@ -1,42 +1,41 @@
-import { React, useState, useRef } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Pagination, Autoplay, Navigation } from "swiper";
-import "../../components/Workdone/work.css";
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-import { BsFillPatchCheckFill } from "react-icons/bs";
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
-import HeroSection from "../../components/HeroSection";
+import { React, useState, useRef } from 'react'
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination, Autoplay, Navigation } from 'swiper'
+import '../../components/Workdone/work.css'
+import 'swiper/css'
+import 'swiper/css/pagination'
+import 'swiper/css/navigation'
+import TestiMonial from '../../components/Testimonial/TestiMonial'
+import FAQ from '../../components/FAQ'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import HeroSection from '../../components/HeroSection'
 
-import mobileAppdevelopment from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
-import mobileApplication from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
-import mobileappdeveloper from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
-import { Helmet } from "react-helmet";
+import mobileAppdevelopment from '../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg'
+import mobileApplication from '../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg'
+import mobileappdeveloper from '../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg'
+import { Helmet } from 'react-helmet'
 
 const IOTAppDev = () => {
-  const [activeService, setactiveService] = useState("connected_cars");
-  const [activeWhyChoose, setActiveWhyChoose] = useState("expert_developers");
+  const [activeService, setactiveService] = useState('connected_cars')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('expert_developers')
 
-  const prevRef = useRef(null);
-  const nextRef = useRef(null);
+  const prevRef = useRef(null)
+  const nextRef = useRef(null)
   return (
     <>
-    <Helmet title="IoT App Dvelopment Company | Internet of Things Application"/>
+      <Helmet title="IoT App Dvelopment Company | Internet of Things Application" />
       {/* Banner Section Start */}
       <HeroSection
-        title="Android App Development Company"
-        des="The App Ideas is one of the leading web and app development company. We have a team of highly skilled and experienced developers who will provide the best Android mobile app as well as a custom mobile app solution which will be very beneficial for the growth of your business and startups at the best rates."
+        title="Internet of things (IOT) App Development"
+        des="We are at The App Ideas, which is one of the leading web and app development company. We have a group of people who are experts in offering the best software solution for each kind of category. We are skilled in offering the best IoT app development services as per the client’s requirements and with advanced features integration along with unique designing services."
         list1="7+ Years of experience in App Development"
-        list2="Best Mobile App Development Company"
-        list3="Dedicated team for your Mobile App Development"
+        list2="Best Internet Of Things App Development Company"
+        list3="Dedicated team for your Internet Of Things App Development"
         list4="Complete Guidance from Designing to Deployment"
-        service1="Android App Development"
-        service2="Android Application Development"
-        service3="Android App Development Company"
+        service1="IoT App Development"
+        service2="IoT App Development Company"
+        service3="IoT Application Development Services"
         image1={mobileAppdevelopment}
         image2={mobileApplication}
         image3={mobileappdeveloper}
@@ -62,17 +61,17 @@ const IOTAppDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("connected_cars")}
+                  onClick={() => setactiveService('connected_cars')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "connected_cars" &&
-                      "service__provide_tab_active"
+                      activeService === 'connected_cars' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Connected-Cars.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Connected-Cars.png')}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
@@ -84,17 +83,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("industrial_internet")}
+                  onClick={() => setactiveService('industrial_internet')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "industrial_internet" &&
-                      "service__provide_tab_active"
+                      activeService === 'industrial_internet' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png')}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
@@ -106,17 +105,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("smart_cities")}
+                  onClick={() => setactiveService('smart_cities')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "smart_cities" &&
-                      "service__provide_tab_active"
+                      activeService === 'smart_cities' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Cities.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Cities.png')}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -128,17 +127,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("iot_agriculture")}
+                  onClick={() => setactiveService('iot_agriculture')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "iot_agriculture" &&
-                      "service__provide_tab_active"
+                      activeService === 'iot_agriculture' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/IoT-In-Agriculture.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/IoT-In-Agriculture.png')}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -150,17 +149,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("smart_retail")}
+                  onClick={() => setactiveService('smart_retail')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "smart_retail" &&
-                      "service__provide_tab_active"
+                      activeService === 'smart_retail' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Retail.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Retail.png')}
                       alt="Smart-Retail"
                       className="img-fluid"
                     />
@@ -172,17 +171,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("iot_healthcare")}
+                  onClick={() => setactiveService('iot_healthcare')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "iot_healthcare" &&
-                      "service__provide_tab_active"
+                      activeService === 'iot_healthcare' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Internet Of Things/Mask-Group.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Mask-Group.png')}
                       alt="IoT-In-Healthcare"
                       className="img-fluid"
                     />
@@ -194,7 +193,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             </div>
-            {activeService === "connected_cars" && (
+            {activeService === 'connected_cars' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -218,7 +217,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "industrial_internet" && (
+            {activeService === 'industrial_internet' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -242,7 +241,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "smart_cities" && (
+            {activeService === 'smart_cities' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -267,7 +266,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "iot_agriculture" && (
+            {activeService === 'iot_agriculture' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -294,7 +293,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "smart_retail" && (
+            {activeService === 'smart_retail' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -320,7 +319,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === "iot_healthcare" && (
+            {activeService === 'iot_healthcare' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -387,23 +386,23 @@ const IOTAppDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={"horizontal"}
+            direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current;
-                swiper.params.navigation.nextEl = nextRef.current;
+                swiper.params.navigation.prevEl = prevRef.current
+                swiper.params.navigation.nextEl = nextRef.current
 
                 // Re-init navigation
-                swiper.navigation.destroy();
-                swiper.navigation.init();
-                swiper.navigation.update();
-              });
+                swiper.navigation.destroy()
+                swiper.navigation.init()
+                swiper.navigation.update()
+              })
             }}
-            style={{ padding: "2.5rem 0" }}
+            style={{ padding: '2.5rem 0' }}
           >
             <SwiperSlide>
               <Link
@@ -413,43 +412,43 @@ const IOTAppDev = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/2.webp")}
+                      src={require('../../assets/images/work/2.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">
                       Mindweel - On Demand Psychologist Hiring App
                     </div>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       It’s an On Demand Psychologist OR Doctor Hiring App. It
                       has been very useful app in the current scenario of the
                       world where everyone is facing depression, anxiety and
                       mental health issues.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       This project has three main modules, Patient App,
                       Psychologist / Doctor App, and Admin Panel.
                     </p>
 
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Patient can able to create and manage their medical
                       profile, find the best available Psychologist / Doctors,
                       Check their profiles, availability, ratings and reviews,
                       Book them online, make a payment, give ratings and
                       reviews.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Psychologist OR Doctor can able to register themselves,
                       create their specialist profile, manage availability,
                       patient, booking, payment and other stuffs.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Admin can able to manage Patients, Doctors, Payment,
                       Reports, Content and other stuffs.
                     </p>
@@ -465,37 +464,37 @@ const IOTAppDev = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/bolt-app.webp")}
+                      src={require('../../assets/images/work/bolt-app.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">Bold Delivery</div>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       It’s a Food Ordering & Food Delivery App. We have created
                       a User app, Restaurant App, Driver App, and Admin panel.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       User can able to search, filter, check food details, place
                       an online order, make payment, track their orders, give
                       ratings and reviews.
                     </p>
 
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Restaurant can able to register themselves, list and
                       manage their food items, manage orders, track drivers and
                       orders.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Driver can able to register, manage their availabilities,
                       deliver the food items to the users.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Admin can able to manage users, food category & sub
                       category, restaurants, drivers, payment and other things.
                     </p>
@@ -511,16 +510,16 @@ const IOTAppDev = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
-                      src={require("../../assets/images/work/service-my-car.webp")}
+                      src={require('../../assets/images/work/service-my-car.webp')}
                       style={{
-                        width: "100%",
-                        boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
-                        borderRadius: "10px",
-                        marginLeft: "10px",
+                        width: '100%',
+                        boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
+                        borderRadius: '10px',
+                        marginLeft: '10px',
                       }}
                     />
                   </div>
-                  <div className="col-lg-7 col-md-12" style={{ color: "#000" }}>
+                  <div className="col-lg-7 col-md-12" style={{ color: '#000' }}>
                     <div className="dec">Service my car</div>
                     <p>
                       It’s an On Demand Car Servicing App, It has 2 main
@@ -531,7 +530,7 @@ const IOTAppDev = () => {
                       2) Admin Web Backend
                     </p>
 
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       User can able to check out all the services packages
                       offered by a service center, check in details and compare
                       them, choose the service package and book online, pay
@@ -540,7 +539,7 @@ const IOTAppDev = () => {
                       inspections on their app, provide ratings and reviews of
                       the services.
                     </p>
-                    <p>
+                    <p style={{ textAlign: 'justify' }}>
                       Admin can able to list down all the services packages,
                       manage booking, extra repair services, payment, content of
                       an app, offers and other stuffs
@@ -564,17 +563,17 @@ const IOTAppDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("expert_developers")}
+                  onClick={() => setActiveWhyChoose('expert_developers')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "expert_developers" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'expert_developers' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Why Choose/Expert-Developers.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Why Choose/Expert-Developers.png')}
                       alt="Connected-Cars"
                       className="img-fluid"
                     />
@@ -583,17 +582,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("great_portfolio")}
+                  onClick={() => setActiveWhyChoose('great_portfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "great_portfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'great_portfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Why Choose/robust-portfolio.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Why Choose/robust-portfolio.png')}
                       alt="Industrial-Internet"
                       className="img-fluid"
                     />
@@ -605,17 +604,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("performance_driven")}
+                  onClick={() => setActiveWhyChoose('performance_driven')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "performance_driven" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'performance_driven' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Why Choose/Performance-Driven..png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Why Choose/Performance-Driven..png')}
                       alt="Smart-Cities"
                       className="img-fluid"
                     />
@@ -624,17 +623,17 @@ const IOTAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("strong_support")}
+                  onClick={() => setActiveWhyChoose('strong_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "strong_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'strong_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/IOT App/Why Choose/Strong-Support.png")}
+                      src={require('../../assets/images/MobileAppDev/IOT App/Why Choose/Strong-Support.png')}
                       alt="IoT-In-Agriculture"
                       className="img-fluid"
                     />
@@ -646,7 +645,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "expert_developers" && (
+            {activeWhyChoose === 'expert_developers' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -658,7 +657,7 @@ const IOTAppDev = () => {
                       life. The demand for smart devices, as well as smart
                       applications, are also raising because this will provide
                       the proper comfort and convenience of accessing all the
-                      services.{" "}
+                      services.{' '}
                     </p>
                     <p className="Title_para">
                       The App Ideas is one of the most popular software
@@ -675,7 +674,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "great_portfolio" && (
+            {activeWhyChoose === 'great_portfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -701,7 +700,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "performance_driven" && (
+            {activeWhyChoose === 'performance_driven' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -726,7 +725,7 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "strong_support" && (
+            {activeWhyChoose === 'strong_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -765,7 +764,7 @@ const IOTAppDev = () => {
       <ContactUs question="Are you planning to launch a Successful IoT Mobile app in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default IOTAppDev;
+export default IOTAppDev

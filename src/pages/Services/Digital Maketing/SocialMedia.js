@@ -513,7 +513,7 @@ const SocialMediaMarketing = () => {
                 </div>
               </div>
             )}{' '}
-            {activeWhyChoose === 'tools' && (
+            {activeWhyChoose === 'sophisticated_tools' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">

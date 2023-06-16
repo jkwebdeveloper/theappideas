@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   font-family: "Open Sans", sans-serif;
+  box-sizing: border-box;
 }
 section {
   overflow: hidden;
@@ -1418,63 +1419,54 @@ section {
 
 .social__footer a {
   display: inline-block;
-  height: 35px;
-  width: 35px;
+  height: 30px;
+  width: 30px;
   text-align: center;
   background: white;
-  line-height: 32px;
+  line-height: 30px;
   border-radius: 2px;
   background-size: 100% 200%;
   background-position: 5% 5%;
   transition: background-position 0.3s, color 0.3s;
   margin-bottom: 10px;
-  font-size: 20px;
 }
 
-.social__footer div a:nth-child(1) {
+.social__footer a:nth-child(1) {
   color: #fff;
-  background-image: linear-gradient(#5e2b87 50%, #4077ee 50%);
-  margin: 0px 5px 0px 0px;
+  background-image: linear-gradient(#5e2b87 50%, #2f66d9 50%);
 }
 
-.social__footer div a:nth-child(2) {
+.social__footer a:nth-child(2) {
   color: #fff;
   background-image: linear-gradient(#5e2b87 50%, #00acee 50%);
-  margin: 0px 5px 0px 0px;
 }
 
-.social__footer div a:nth-child(3) {
+.social__footer a:nth-child(3) {
   color: #fff;
-  background-image: linear-gradient(#5e2b87 50%, #e424a4 50%);
-  margin: 0px 5px 0px 0px;
+  background-image: linear-gradient(#5e2b87 50%, #0a66c2 50%);
 }
 
-.social__footer div a:nth-child(4) {
+.social__footer a:nth-child(4) {
   color: #fff;
   background-image: linear-gradient(#5e2b87 50%, #ff0000 50%);
-  /* margin: 6px 5px 10px 0px; */
 }
 
-.social__footer div a:nth-child(5) {
+.social__footer_one a:nth-child(1) {
   color: #fff;
   background-image: linear-gradient(#5e2b87 50%, #ea4c89 50%);
-  margin: 0px 5px 0px 0px;
 }
 
-.social__footer div a:nth-child(6) {
+.social__footer_one a:nth-child(2) {
   color: #fff;
   background-image: linear-gradient(#5e2b87 50%, #0057ff 50%);
-  margin: 0px 5px 0px 0px;
 }
-.social__footer div a:nth-child(7) {
+.social__footer a:nth-child(3) {
   color: #fff;
-  background-image: linear-gradient(#5e2b87 50%, #932e9c 50%);
-  margin: 0px 5px 0px 0px;
+  background-image: linear-gradient(#5e2b87 50%, #e424a4 50%);
 }
-.social__footer div a:nth-child(8) {
+.social__footer a:nth-child(4) {
   color: #fff;
-  background-image: linear-gradient(#5e2b87 50%, #0057ff 50%);
-  margin: 0px 5px 0px 0px;
+  background-image: linear-gradient(#5e2b87 50%, #c8232c 50%);
 }
 
 .social__footer a:hover {

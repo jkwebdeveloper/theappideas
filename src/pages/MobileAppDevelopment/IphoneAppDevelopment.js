@@ -202,7 +202,7 @@ const IphoneAppDevelopment = () => {
                           window.scrollTo({ top: 0, behavior: 'smooth' })
                         }}
                       >
-                        <b>app Development Company.</b>
+                        <b> app Development Company.</b>
                       </Link>
                       We have a team of highly skilled iPhone app developers who
                       are experts in developing custom iPhone app for all types

@@ -65,18 +65,19 @@ const HireCodeIgniter = () => {
               >
                 <b> web development</b>
               </Link>{' '}
-              , we are highly experienced as well as experts in delivering the
-              best Node js web platforms solution to our clients. We have 4+
-              years of experience in developing the best software solution at
-              the best rates.
+              for years and our experience with the PHP and PHP based frameworks
+              goes well beyond a decade. We are one of the early adopters of
+              CodeIgniter framework and over the years have built an array of
+              most sophisticated and future ready web apps across diverse niches
+              by using the framework. By utilizing the dynamic capabilities of
+              CodeIgniter we built an array of most sophisticated and feature
+              rich apps. We ensure optimum flexibility, scalability and fast
+              pace of development with CodeIgniter framework.
             </p>
             <p>
-              Node js offers the various rich library of Javascript modules
-              which simplifies the development of the web applications .Node js
-              is a lightweight and efficient platform which helps in developing
-              the best web application. The App Ideas is one of the experienced
-              Node js development company and also deployed the best Node js
-              solutions.
+              We at The App Ideas boast of a solid team of experienced and
+              expert CodeIgniter developers capable to build a variety of apps
+              across niches.
             </p>
             <div className="text-center">
               <Link

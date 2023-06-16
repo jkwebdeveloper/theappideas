@@ -1,9 +1,7 @@
 import React, { useState } from 'react'
-// import Header from "./components/Header/Header";
 import './index.css'
-import { BrowserRouter, Route, Router, Routes } from 'react-router-dom'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
-import Footer from './components/Footer'
 import Header from './components/Header/Header'
 import MobileAppDevelopment from './pages/MobileAppDevelopment/MobileAppDevelopment'
 import WebDev from './pages/Services/Web Development/WebDevelopment'
@@ -85,6 +83,7 @@ import MobileAppManchester from './pages/Sitemap/LocationsWiseServices/MobileApp
 import MobileAppMelbourne from './pages/Sitemap/LocationsWiseServices/MobileAppMelbourne'
 import MobileAppLondon from './pages/Sitemap/LocationsWiseServices/MobileAppLondon'
 import CareerApply from './pages/CareerApply'
+import Footer from './components/Footer'
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false)

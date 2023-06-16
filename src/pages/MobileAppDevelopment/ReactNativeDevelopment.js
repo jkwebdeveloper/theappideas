@@ -27,15 +27,15 @@ const ReactNativeDevelopment = () => {
       <Helmet title="React Native App Development Company India - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
-        title="IPad App Development Company"
+        title="React Native App Development"
         des="The App Ideas is one of the leading web and app development company. We are highly expert in providing the best software services including the IOS service platforms like iPad app development service. We also offer custom iPad app development which can be very helpful for your business at the best possible rates."
         list1="7+ Years of experience in App Development"
-        list2="Best iPad App Development Company"
-        list3="Dedicated team for your iPad App Development"
+        list2="Best React Native App Development Company"
+        list3="Dedicated team for your React Native App Development"
         list4="Complete Guidance from Designing to Deployment"
-        service1="IPad App Development"
-        service2="IPad App Development Services"
-        service3="Ipad Application Development"
+        service1="React Native App Development"
+        service2="Create React Native App"
+        service3="React Native Development Company"
         image1={iphone1}
         image2={iphone2}
         image3={iphone3}
