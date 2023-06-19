@@ -256,7 +256,7 @@ li .get_a_btn {
   font-size: 16px;
   transition: 0.3s;
   background-color: #f6c000;
-  padding: 15px;
+  padding: 10px 15px 10px 15px;
   border-radius: 37px;
   border: none;
 }
@@ -530,7 +530,7 @@ li .get_a_btn {
     font-size: 13px;
   }
   .wrapper .logo a img {
-    width: 150px;
+    height: 50px;
   }
 }
 

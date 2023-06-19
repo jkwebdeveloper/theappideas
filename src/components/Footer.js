@@ -39,16 +39,16 @@ const Footer = () => {
                     href="mailto:contact@theappideas.com"
                     style={{ color: 'black' }}
                   >
-                    <i style={{ marginRight: '10px' }}>
-                      <GoMail style={{ color: '#d6aa0b' }} />
+                    <i className="get_in_icons">
+                      <GoMail style={{ color: '#000' }} />
                     </i>
                     <span>contact@theappideas.com</span>
                   </a>
                 </li>
                 <li>
                   <a href="tel:+918866564279" style={{ color: 'black' }}>
-                    <i style={{ marginRight: '10px' }}>
-                      <BsFillTelephoneFill style={{ color: '#d6aa0b' }} />
+                    <i className="get_in_icons">
+                      <BsFillTelephoneFill style={{ color: '#000' }} />
                     </i>
                     <span>+91 8866564279</span>
                   </a>
@@ -59,8 +59,8 @@ const Footer = () => {
                     target="_blank"
                     style={{ color: 'black' }}
                   >
-                    <i style={{ marginRight: '10px' }}>
-                      <BsWhatsapp style={{ color: '#d6aa0b' }} />
+                    <i className="get_in_icons">
+                      <BsWhatsapp style={{ color: 'rgb(36 184 28)' }} />
                     </i>
                     <span>Whats App Me</span>
                   </a>
@@ -71,8 +71,8 @@ const Footer = () => {
                     target="_blank"
                     style={{ color: 'black' }}
                   >
-                    <i style={{ marginRight: '10px' }}>
-                      <BsSkype style={{ color: '#d6aa0b' }} />
+                    <i className="get_in_icons">
+                      <BsSkype style={{ color: 'rgb(43 158 255)' }} />
                     </i>
                     <span>Skype</span>
                   </a>

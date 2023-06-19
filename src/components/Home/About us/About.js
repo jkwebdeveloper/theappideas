@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './About.css'
 import { Link } from 'react-router-dom'
 import CountUp from 'react-countup'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const About = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <section className="about-section">
       <div className="container">
         <div className="row">
-          <div className="col-lg-6 col-md-12">
+          <div data-aos="fade-right" className="col-lg-6 col-md-12">
             <div className="about-heading">
               <h2>About us</h2>
             </div>
@@ -38,7 +43,7 @@ const About = () => {
               <div className="find_more_btn">Find out More</div>
             </Link>
           </div>
-          <div className="col-lg-6 col-md-12">
+          <div data-aos="fade-left" className="col-lg-6 col-md-12">
             <div className="About-left-heading">
               <h2>Our Achievements</h2>
             </div>

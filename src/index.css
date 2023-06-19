@@ -809,71 +809,6 @@ section {
 /* PortFolio css End */
 /* --------------------------------------------------------------------------- */
 
-/* Contact Section CSS Start */
-.contact__lft p {
-  font-size: 20px;
-  color: #fff;
-  margin-bottom: 0;
-  text-align: center;
-}
-
-.contact__rht {
-  border-left: 1px solid #fff;
-  border-left-style: dotted;
-  border-left-width: unset;
-}
-
-.contact_btn {
-  background: #f6c000;
-  padding: 14px 0;
-  display: block;
-  margin: 7px auto;
-  width: 180px;
-  text-align: center;
-  border-radius: 50px;
-  font-size: 14px;
-  color: #000;
-  font-weight: 700;
-  border: 1px solid #f6c000;
-  transition: 0.3s all;
-  text-transform: uppercase;
-}
-
-.contact_btn:hover {
-  border: 1px solid #351040;
-  color: #000;
-  background: #fff;
-}
-
-/* Contact Section CSS End */
-
-/* Mobile App Development Company Page CSS End */
-
-/* Hire IOS Developer Page CSS Start */
-
-/* Our Feat Section CSS Start */
-.contact_btn_new {
-  background: #f6c000;
-  padding: 14px 35px;
-  display: block;
-  margin: 7px auto;
-  width: 180px;
-  text-align: center;
-  border-radius: 50px;
-  font-size: 14px;
-  color: #000;
-  font-weight: 700;
-  border: 1px solid #f6c000;
-  transition: 0.3s all;
-  text-transform: uppercase;
-  overflow: hidden;
-  position: relative;
-}
-
-.contact_btn_new:hover {
-  color: red;
-}
-
 /* HIRE US CSS START */
 
 .hire__card {
@@ -1400,7 +1335,7 @@ section {
 
 .footer__box ul li:hover .right__arrow {
   opacity: 1;
-  padding-right: 10px;
+  padding-right: 6px;
   color: #800080;
   transition: all 350ms ease-in-out 0s;
 }
@@ -1411,7 +1346,7 @@ section {
 }
 
 .footer__box .location_map {
-  color: #d6aa0b;
+  color: #ff0000;
   margin-right: 10px;
   width: 26px;
   background: #fff;
@@ -1421,7 +1356,11 @@ section {
   border-radius: 4px;
   font-size: 20px;
 }
-
+.get_in_icons {
+  margin-right: 10px;
+  padding-left: 26px;
+  font-size: 18px;
+}
 .social__footer a {
   background: #fff;
   background-position: 5% 5%;
@@ -2934,6 +2873,7 @@ section {
   font-size: 18px;
   line-height: 28px;
   margin: 20px 0;
+  text-align: justify;
 }
 
 .hire_btn {

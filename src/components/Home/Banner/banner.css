@@ -65,7 +65,7 @@
 @media only screen and (max-width: 768px) {
   .slider-heading-dec {
     font-size: 20px;
-    text-align: center;
+    text-align: justify;
   }
   .slider-dec {
     font-size: 18px;
@@ -73,11 +73,11 @@
 }
 @media only screen and (max-width: 320px) {
   .slider-heading-dec {
-    font-size: 15px;
-    text-align: center;
+    font-size: 16px;
+    text-align: justify;
   }
   .slider-dec {
-    font-size: 16px;
-    text-align: center;
+    font-size: 14px;
+    text-align: justify;
   }
 }

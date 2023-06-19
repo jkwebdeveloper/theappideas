@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import './header.css'
 import { AiOutlineClose } from 'react-icons/ai'
-import { CgMenuRound } from 'react-icons/cg'
-// import { IoMdArrowDropright } from "react-icons/io";
 import { MdKeyboardArrowDown } from 'react-icons/md'
-import { RiArrowRightSLine } from 'react-icons/ri'
+import { RiArrowRightSLine, RiMenu3Line } from 'react-icons/ri'
+import { Link } from 'react-router-dom'
 
 const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState('')
@@ -31,14 +30,19 @@ const Header = ({ setOpenModal }) => {
       <nav>
         <div className="wrapper">
           <div className="logo">
-            <a href="/">
+            <Link
+              to="/"
+              onClick={() => {
+                window.scrollTo({ top: 0, behavior: 'smooth' })
+              }}
+            >
               <img
                 src={require('../../assets/images/Header/logo.png')}
                 alt="logo"
                 className="img-fluid"
-                style={{ height: '60px ' }}
+                // style={{ height: '60px ' }}
               />
-            </a>
+            </Link>
           </div>
           <input type="radio" name="slider" id="menu-btn" />
           <input type="radio" name="slider" id="close-btn" />
@@ -1150,7 +1154,7 @@ const Header = ({ setOpenModal }) => {
             </li>
           </ul>
           <label htmlFor="menu-btn" className="btn menu-btn">
-            <CgMenuRound />
+            <RiMenu3Line style={{ fontSize: '27px' }} />
           </label>
         </div>
       </nav>

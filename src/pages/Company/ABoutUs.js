@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import ContactUs from '../../components/ContactUs'
 import { Helmet } from 'react-helmet'
 import CountUp from 'react-countup'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const ABoutUs = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Helmet title="About Us | Company Overview | App Ides Infotech Pvt Ltd" />
@@ -61,7 +66,10 @@ const ABoutUs = () => {
             <h2>Our vision &amp; mission</h2>
           </div>
           <div className="row ">
-            <div className="col-12 col-sm-12 col-md-6 card_bottom">
+            <div
+              data-aos="fade-right"
+              className="col-12 col-sm-12 col-md-6 card_bottom"
+            >
               <div className="missin_card">
                 <div className="missin_card_img">
                   <img
@@ -88,7 +96,10 @@ const ABoutUs = () => {
                 </div>
               </div>
             </div>
-            <div className="col-12 col-sm-12 col-md-6 card_bottom">
+            <div
+              data-aos="fade-left"
+              className="col-12 col-sm-12 col-md-6 card_bottom"
+            >
               <div className="missin_card">
                 <div className="missin_card_img">
                   <img

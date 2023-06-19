@@ -1,12 +1,16 @@
-import React from "react";
-import background from "../../../assets/images/Home-our-services/bg-download.svg";
-import background1 from "../../../assets/images/Home-our-services/download (1).png";
-import { HiOutlineArrowRight } from "react-icons/hi";
-import "./services.css";
-import { Link } from "react-router-dom";
-import { Button } from "react-bootstrap";
+import React, { useEffect } from 'react'
+import background from '../../../assets/images/Home-our-services/bg-download.svg'
+import background1 from '../../../assets/images/Home-our-services/download (1).png'
+import { HiOutlineArrowRight } from 'react-icons/hi'
+import './services.css'
+import { Link } from 'react-router-dom'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const Services = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       {/* ======= Services Section ======= */}
@@ -22,7 +26,10 @@ const Services = () => {
             Development.
           </p>
           <div className="row clearfix">
-            <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
+            <div
+              data-aos="fade-up"
+              className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
               <div
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
@@ -39,16 +46,16 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT.gif")}
+                    src={require('../../../assets/images/Home-our-services/WEB DEVELOPMENT.gif')}
                     alt="Web Development"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <Link
                     to="/web-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
                     <div>WEB DEVELOPMENT</div>
@@ -60,7 +67,7 @@ const Services = () => {
                 <Link
                   to="/web-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <div className="arrow-icon">
@@ -69,7 +76,10 @@ const Services = () => {
                 </Link>
               </div>
             </div>
-            <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
+            <div
+              data-aos="fade-up"
+              className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
               <div
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
@@ -86,16 +96,16 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif")}
+                    src={require('../../../assets/images/Home-our-services/E-COMMERCE DEVELOPMENT.gif')}
                     alt="E-COMMERCE DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <Link
                     to="/e-commerce-website-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
                     E-COMMERCE DEVELOPMENT
@@ -107,7 +117,7 @@ const Services = () => {
                 <Link
                   to="/e-commerce-website-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <div className="arrow-icon">
@@ -116,7 +126,10 @@ const Services = () => {
                 </Link>
               </div>
             </div>
-            <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
+            <div
+              data-aos="fade-up"
+              className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
               <div
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
@@ -133,16 +146,16 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/WEB DEVELOPMENT (1).gif")}
+                    src={require('../../../assets/images/Home-our-services/WEB DEVELOPMENT (1).gif')}
                     alt="MOBILE APP DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <Link
                     to="/mobile-app-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
                     MOBILE APP DEVELOPMENT
@@ -154,7 +167,7 @@ const Services = () => {
                 <Link
                   to="/mobile-app-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <div className="arrow-icon">
@@ -163,7 +176,10 @@ const Services = () => {
                 </Link>
               </div>
             </div>
-            <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
+            <div
+              data-aos="fade-up"
+              className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
               <div
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
@@ -180,16 +196,16 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/INTERNET OF THINGS.gif")}
+                    src={require('../../../assets/images/Home-our-services/INTERNET OF THINGS.gif')}
                     alt="INTERNET OF THING"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <Link
                     to="/iot-app-development"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
                     INTERNET OF THINGS
@@ -201,7 +217,7 @@ const Services = () => {
                 <Link
                   to="/iot-app-development"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <div className="arrow-icon">
@@ -210,7 +226,10 @@ const Services = () => {
                 </Link>
               </div>
             </div>
-            <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
+            <div
+              data-aos="fade-up"
+              className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
               <div
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
@@ -227,16 +246,16 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/GAME DEVELOPMENT.gif")}
+                    src={require('../../../assets/images/Home-our-services/GAME DEVELOPMENT.gif')}
                     alt="GAME DEVELOPMENT"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <Link
                     to="/"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
                     GAME DEVELOPMENT
@@ -250,14 +269,17 @@ const Services = () => {
                   to="/"
                   className="arrow-icon"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <HiOutlineArrowRight />
                 </Link>
               </div>
             </div>
-            <div className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3">
+            <div
+              data-aos="fade-up"
+              className="service-block style-two col-lg-4 col-md-6 col-sm-12 my-3"
+            >
               <div
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
@@ -274,16 +296,16 @@ const Services = () => {
                 />
                 <div className="icon-box">
                   <img
-                    src={require("../../../assets/images/Home-our-services/Hire Developer.gif")}
+                    src={require('../../../assets/images/Home-our-services/Hire Developer.gif')}
                     alt="Hire Developer"
-                    style={{ width: "70px" }}
+                    style={{ width: '70px' }}
                   />
                 </div>
                 <h5>
                   <Link
                     to="/hire-us"
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: "smooth" });
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
                     HIRE A DEVELOPER
@@ -297,7 +319,7 @@ const Services = () => {
                   to="/hire-us"
                   className="arrow-icon"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: "smooth" });
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
                   }}
                 >
                   <HiOutlineArrowRight />
@@ -310,7 +332,7 @@ const Services = () => {
 
       {/* End Services Section */}
     </>
-  );
-};
+  )
+}
 
-export default Services;
+export default Services
