@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import TestiMonial from '../../../components/Testimonial/TestiMonial'
 import FAQ from '../../../components/FAQ'
 import { Helmet } from 'react-helmet'
+import ContactUs from '../../../components/ContactUs'
 
 const MobileAppToronto = () => {
   const prevRef = useRef(null)
@@ -535,33 +536,14 @@ const MobileAppToronto = () => {
 
       <FAQ />
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: 'justify' }}>
-                  Do you want to know more about our Mobile App Development
+      <ContactUs
+        question="Do you want to know more about our Mobile App Development
                   Toronto, Canada? Do you want to know how can we make
                   substantial value additions to your business with unique and
                   innovative mobile apps? Let us explain to you at length. Feel
                   free to drop us a message to help us reach you at the
-                  earliest.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link to="/contactus">
-                  <a className="contact_btn" style={{ color: '#000' }}>
-                    Contact us{' '}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  earliest."
+      />
       {/* Contact Section End */}
     </>
   )

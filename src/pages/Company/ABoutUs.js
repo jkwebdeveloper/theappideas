@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import ContactUs from '../../components/ContactUs'
 import { Helmet } from 'react-helmet'
+import CountUp from 'react-countup'
 
 const ABoutUs = () => {
   return (
@@ -206,7 +207,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>7+</span>
+                    <span>
+                      <CountUp start={1} end={7} duration={5} />+
+                    </span>
                   </div>
                 </div>
               </div>
@@ -224,7 +227,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>50+</span>
+                    <span>
+                      <CountUp start={1} end={50} duration={3} />+
+                    </span>
                   </div>
                 </div>
               </div>
@@ -242,7 +247,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>200+</span>
+                    <span>
+                      <CountUp start={1} end={200} duration={3} />+
+                    </span>
                   </div>
                 </div>
               </div>
@@ -260,7 +267,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>120+</span>
+                    <span>
+                      <CountUp start={1} end={120} duration={3} />+
+                    </span>
                   </div>
                 </div>
               </div>
@@ -278,7 +287,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>200+</span>
+                    <span>
+                      <CountUp start={1} end={200} duration={3} /> +
+                    </span>
                   </div>
                 </div>
               </div>
@@ -296,7 +307,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>150+</span>
+                    <span>
+                      <CountUp start={1} end={150} duration={3} />+
+                    </span>
                   </div>
                 </div>
               </div>
@@ -314,7 +327,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>60+</span>
+                    <span>
+                      <CountUp start={1} end={60} duration={3} />+
+                    </span>
                   </div>
                 </div>
               </div>
@@ -332,7 +347,9 @@ const ABoutUs = () => {
                 </span>
                 <div className="progress-value">
                   <div>
-                    <span>12+</span>
+                    <span>
+                      <CountUp start={1} end={12} duration={3} />+
+                    </span>
                   </div>
                 </div>
               </div>

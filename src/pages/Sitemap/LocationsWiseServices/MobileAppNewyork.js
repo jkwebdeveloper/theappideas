@@ -9,6 +9,7 @@ import { Link } from 'react-router-dom'
 import TestiMonial from '../../../components/Testimonial/TestiMonial'
 import FAQ from '../../../components/FAQ'
 import { Helmet } from 'react-helmet'
+import ContactUs from '../../../components/ContactUs'
 
 const MobileAppNewyork = () => {
   const prevRef = useRef(null)
@@ -528,32 +529,13 @@ const MobileAppNewyork = () => {
 
       <FAQ />
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: 'justify' }}>
-                  Do you want to grab more details about our mobile app
+      <ContactUs
+        question="Do you want to grab more details about our mobile app
                   development services in New York? Let us tell you how we can
                   make unique value additions to your business with our
                   development service. Just free to drop us a message and let us
-                  get back to you.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link to="/contactus">
-                  <a className="contact_btn" style={{ color: '#000' }}>
-                    Contact us{' '}
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  get back to you."
+      />
       {/* Contact Section End */}
     </>
   )

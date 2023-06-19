@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, Navigation } from 'swiper'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { BsFillPatchCheckFill } from 'react-icons/bs'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -16,6 +15,7 @@ import Company from '../../../assets/images/sitemap/adelaide/Wordpress-Developer
 import Development from '../../../assets/images/sitemap/adelaide/Build-Taxi-App.png'
 import Native from '../../../assets/images/sitemap/adelaide/Top-Mobile-Game-App-Developers.webp'
 import HeroSection from '../../../components/HeroSection'
+import ContactUs from '../../../components/ContactUs'
 
 const MobileAppAdelaide = () => {
   const [activeService, setactiveService] = useState('custom_mobile')
@@ -924,35 +924,11 @@ const MobileAppAdelaide = () => {
       {/* FAQ Section End */}
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: 'left' }}>
-                  Do you want to know more about our Mobile App Development
+      <ContactUs
+        question="Do you want to know more about our Mobile App Development
                   Adelaide? Let us explain in length how we can make value
-                  additions with our apps. Feel free to drop us a message.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                  }}
-                >
-                  <div className="contact_btn" style={{ color: '#000' }}>
-                    Contact us{' '}
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  additions with our apps. Feel free to drop us a message."
+      />
       {/* Contact Section End */}
     </>
   )

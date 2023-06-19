@@ -100,6 +100,11 @@ section {
   color: #000;
   background: #fff;
 }
+@media (max-width: 767px) {
+  .contact-lft p {
+    font-size: 16px;
+  }
+}
 /*--------------------------------------------------------------
 # Execute Section end
 --------------------------------------------------------------*/
@@ -1418,17 +1423,18 @@ section {
 }
 
 .social__footer a {
+  background: #fff;
+  background-position: 5% 5%;
+  background-size: 100% 200%;
+  border-radius: 2px;
   display: inline-block;
   height: 30px;
-  width: 30px;
-  text-align: center;
-  background: white;
   line-height: 30px;
-  border-radius: 2px;
-  background-size: 100% 200%;
-  background-position: 5% 5%;
-  transition: background-position 0.3s, color 0.3s;
   margin-bottom: 10px;
+  text-align: center;
+  transition: background-position 0.3s, color 0.3s;
+  width: 30px;
+  margin-right: 10px;
 }
 
 .social__footer a:nth-child(1) {
@@ -1543,7 +1549,11 @@ section {
     display: none;
   }
 }
-
+@media (max-width: 767px) {
+  .footer__awards ul li {
+    margin-right: 50px;
+  }
+}
 /* Footer css End */
 
 .error-banner-section {
@@ -3391,9 +3401,9 @@ section {
 }
 
 .missin_card .card-border span {
+  background-color: #f6c014;
   display: inline-block;
   position: absolute;
-  background-color: #c9c9c9a3;
   transition: all 0.3s linear;
   z-index: 2;
 }
@@ -4699,3 +4709,42 @@ section {
   }
 }
 /* -------------------- Career Apply Css End -------------------- */
+
+/* -------------------- Scroll To Top css Start -------------------- */
+
+.button {
+  /* display: inline-block; */
+  background-color: #ff9800;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+  border-radius: 4px;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
+  opacity: 0;
+  visibility: hidden;
+  /* z-index: 1000; */
+}
+.button::after {
+  content: "\f077";
+  /* font-family: FontAwesome; */
+  font-weight: normal;
+  font-style: normal;
+  font-size: 2em;
+  line-height: 500px;
+  color: #be1212;
+}
+.button:hover {
+  cursor: pointer;
+  background-color: #333;
+}
+.button:active {
+  background-color: #555;
+}
+.button.show {
+  opacity: 1;
+  visibility: visible;
+}
+/* -------------------- Scroll To Top css ENd -------------------- */

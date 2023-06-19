@@ -17,6 +17,7 @@ import Development from '../../../assets/images/sitemap/sydney/Mobile-App-Develo
 import Native from '../../../assets/images/sitemap/sydney/Ceate-React-Native-App.png'
 
 import HeroSection from '../../../components/HeroSection'
+import ContactUs from '../../../components/ContactUs'
 
 const MobileAppSydney = () => {
   const [activeService, setactiveService] = useState('custom_mobile')
@@ -734,36 +735,12 @@ const MobileAppSydney = () => {
       {/* FAQ Section End */}
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: 'left' }}>
-                  Do you want to know in more detail about our mobile app
+      <ContactUs
+        question="Do you want to know in more detail about our mobile app
                   development services in Sydney? Let us explain to you how we
                   can provide a unique value proposition with our development
-                  service. Just free to drop us a message.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                  }}
-                >
-                  <div className="contact_btn" style={{ color: '#000' }}>
-                    Contact us{' '}
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  service. Just free to drop us a message."
+      />
       {/* Contact Section End */}
     </>
   )

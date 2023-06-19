@@ -608,6 +608,7 @@ const HireWordPressDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -646,6 +647,7 @@ const HireWordPressDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -684,6 +686,7 @@ const HireWordPressDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -722,6 +725,7 @@ const HireWordPressDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -760,6 +764,7 @@ const HireWordPressDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -798,6 +803,7 @@ const HireWordPressDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div

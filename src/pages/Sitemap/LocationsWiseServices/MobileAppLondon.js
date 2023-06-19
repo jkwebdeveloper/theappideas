@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, Navigation } from 'swiper'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { BsFillPatchCheckFill } from 'react-icons/bs'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -11,6 +10,12 @@ import TestiMonial from '../../../components/Testimonial/TestiMonial'
 import FAQ from '../../../components/FAQ'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+
+import Company from '../../../assets/images/sitemap/london/Mobile-Application-Design.png'
+import Development from '../../../assets/images/sitemap/sydney/Mobile-App-Development.png'
+import Native from '../../../assets/images/sitemap/london/Android-App-Development.png'
+import HeroSection from '../../../components/HeroSection'
+import ContactUs from '../../../components/ContactUs'
 
 const MobileAppLondon = () => {
   const [activeService, setactiveService] = useState('custom_mobile')
@@ -25,165 +30,20 @@ const MobileAppLondon = () => {
     <>
       <Helmet title="Best Mobile App Development Company London" />
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Mobile App Development London</h2>
-                <p>
-                  Since mobile apps play the invincible role of completing the
-                  digital presence for all business brands, every company now
-                  makes it a priority to build apps that pushes business
-                  conversion. When it comes to Mobile App Development London as
-                  a city has some of the best developer talents and development
-                  companies with amazing track record and development output.
-                  The App Ideas as a global development company has a great
-                  presence in the app development scene of London and over the
-                  years built several industry-leading and successful apps
-                  across the niches.
-                </p>
-                <ul className="common__banner__list ps-0 mt-4">
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      7+ Years of experience in App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Best Mobile App Development Company
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Dedicated team for your Mobile App Development
-                    </span>
-                  </li>
-                  <li>
-                    <span className="banner_list_lft_span">
-                      <BsFillPatchCheckFill />
-                    </span>
-                    <span className="banner_list_rht_span">
-                      Complete Guidance from Designing to Deployment
-                    </span>
-                  </li>
-                </ul>
-                <div className="row">
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require('../../../assets/images/sitemap/london/Mobile-Application-Design.png')}
-                        alt="Mobile-App-Development"
-                        className="img-fluid"
-                        style={{ width: '25%' }}
-                      />
-                      <h4>Mobile App Development London</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require('../../../assets/images/sitemap/sydney/Mobile-App-Development.png')}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: '25%' }}
-                      />
-                      <h4>App Development Company London</h4>
-                    </div>
-                  </div>
-                  <div className="col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4 mb-2 ">
-                    <div className="banner__boxes">
-                      <img
-                        src={require('../../../assets/images/sitemap/london/Android-App-Development.png')}
-                        alt="Mobile-Application-Development"
-                        className="img-fluid"
-                        style={{ width: '25%' }}
-                      />
-                      <h4>App Development Companies London</h4>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Contact us</h4>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={''}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <HeroSection
+        title="Mobile App Development London"
+        des="Since mobile apps play the invincible role of completing the digital presence for all business brands, every company now makes it a priority to build apps that pushes business conversion. When it comes to Mobile App Development London as a city has some of the best developer talents and development companies with amazing track record and development output. The App Ideas as a global development company has a great presence in the app development scene of London and over the years built several industry-leading and successful apps across the niches."
+        list1="7+ Years of experience in Mobile App Development"
+        list2="Best Mobile App Development Company"
+        list3="Dedicated team for your Mobile App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="Mobile App Development London"
+        service2="App Development Company London"
+        service3="App Development Companies London"
+        image1={Company}
+        image2={Development}
+        image3={Native}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -860,36 +720,7 @@ const MobileAppLondon = () => {
       {/* FAQ Section End */}
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: 'left' }}>
-                  Do you need expert Mobile App Development London? Let us
-                  explain our strengths in more detail and the ways we can add
-                  value to your business. Just feel free to call us or drop a
-                  message.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                  }}
-                >
-                  <div className="contact_btn" style={{ color: '#000' }}>
-                    Contact us{' '}
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <ContactUs question="Do you need expert Mobile App Development London? Let us explain our strengths in more detail and the ways we can add value to your business. Just feel free to call us or drop a message." />
       {/* Contact Section End */}
     </>
   )

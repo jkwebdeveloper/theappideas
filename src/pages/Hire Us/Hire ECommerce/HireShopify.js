@@ -33,7 +33,7 @@ const HireShopify = () => {
   }, [])
   return (
     <>
-    <Helmet title='Hire Dedicated Shopify Developers in India | The App Ideas'/>
+      <Helmet title="Hire Dedicated Shopify Developers in India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Shopify Developers In India"
@@ -393,6 +393,7 @@ const HireShopify = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -431,6 +432,7 @@ const HireShopify = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -468,6 +470,7 @@ const HireShopify = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -506,6 +509,7 @@ const HireShopify = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -544,6 +548,7 @@ const HireShopify = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div

@@ -34,7 +34,7 @@ const HireAngular = () => {
   }, [])
   return (
     <>
-      <Helmet title='Hire Angular 2 Developers | Dedicated Angular JS Developers'/>
+      <Helmet title="Hire Angular 2 Developers | Dedicated Angular JS Developers" />
       {/* Banner Section Start */}
       <HeroSection
         title="Hire Angular 2 Developers In India"
@@ -417,6 +417,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -454,6 +455,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -492,6 +494,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -529,6 +532,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -568,6 +572,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -606,6 +611,7 @@ const HireAngular = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div

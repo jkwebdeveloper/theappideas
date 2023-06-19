@@ -84,12 +84,14 @@ import MobileAppMelbourne from './pages/Sitemap/LocationsWiseServices/MobileAppM
 import MobileAppLondon from './pages/Sitemap/LocationsWiseServices/MobileAppLondon'
 import CareerApply from './pages/CareerApply'
 import Footer from './components/Footer'
+import ScrollToTop from './components/ScrollToTop'
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false)
 
   return (
     <BrowserRouter>
+      <ScrollToTop />
       {/* get a quote modal */}
       {openModal && <GetAQuoteModal setOpenModal={setOpenModal} />}
 

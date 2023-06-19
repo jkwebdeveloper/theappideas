@@ -520,6 +520,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -558,6 +559,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -596,6 +598,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -634,6 +637,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -672,6 +676,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div
@@ -710,6 +715,7 @@ const HireLaravelDev = () => {
                 className="inner-box wow fadeInLeft"
                 data-wow-delay="0ms"
                 data-wow-duration="1500ms"
+                style={{ height: '385px' }}
               >
                 <div className="color-layer" />
                 <div

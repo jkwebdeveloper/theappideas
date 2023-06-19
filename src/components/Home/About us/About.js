@@ -1,6 +1,7 @@
 import React from 'react'
 import './About.css'
 import { Link } from 'react-router-dom'
+import CountUp from 'react-countup'
 
 const About = () => {
   return (
@@ -49,19 +50,29 @@ const About = () => {
               <div className="achievements__section">
                 <div className="achievements_box">
                   <p>Our Team</p>
-                  <h4>50+</h4>
+
+                  <h4>
+                    <CountUp start={1} end={50} duration={3} />+
+                  </h4>
                 </div>
                 <div className="achievements_box achievements_box_top">
                   <p>Completed Projects</p>
-                  <h4>350+</h4>
+                  <h4>
+                    <CountUp start={1} end={350} duration={3} />+
+                  </h4>
                 </div>
                 <div className="achievements_box">
                   <p>Mobile Apps</p>
-                  <h4>150+</h4>
+                  <h4>
+                    <CountUp start={1} end={150} duration={3} />+
+                  </h4>
                 </div>
                 <div className="achievements_box achievements_box_top">
                   <p>Worked With Clients</p>
-                  <h4>200+</h4>
+                  <h4>
+                    {' '}
+                    <CountUp start={1} end={200} duration={3} /> +
+                  </h4>
                 </div>
               </div>
             </section>

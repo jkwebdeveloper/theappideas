@@ -3,7 +3,6 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, Navigation } from 'swiper'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
-import { BsFillPatchCheckFill } from 'react-icons/bs'
 import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
@@ -16,6 +15,7 @@ import Company from '../../../assets/images/sitemap/brisbane/VRApplicationDevelo
 import Development from '../../../assets/images/sitemap/brisbane/Wordpress-Developer.png'
 import Native from '../../../assets/images/sitemap/brisbane/Mobile-Apps-Development.png'
 import HeroSection from '../../../components/HeroSection'
+import ContactUs from '../../../components/ContactUs'
 
 const MobileAppBrisbane = () => {
   const [activeService, setactiveService] = useState('custom_mobile')
@@ -931,37 +931,13 @@ const MobileAppBrisbane = () => {
       {/* FAQ Section End */}
 
       {/* Contact Section Start */}
-      <section className="testi-bg py-4">
-        <div className="container">
-          <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
-              <div className="contact__lft">
-                <p style={{ textAlign: 'left' }}>
-                  Do you want to know more about the mobile app development
+      <ContactUs
+        question="Do you want to know more about the mobile app development
                   services in Brisbane provided by us? Do you want to know-how
                   with our app development expertise can make value additions to
                   your business? Let us explain everything in length. Feel free
-                  to drop us a message and let us reach you at the earliest.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-4 col-lg-4 mb-3">
-              <div className="contact__rht">
-                <Link
-                  to="/contactus"
-                  onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
-                  }}
-                >
-                  <div className="contact_btn" style={{ color: '#000' }}>
-                    Contact us{' '}
-                  </div>
-                </Link>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+                  to drop us a message and let us reach you at the earliest."
+      />
       {/* Contact Section End */}
     </>
   )
