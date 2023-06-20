@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import TestiMonial from '../../components/Testimonial/TestiMonial'
 import { Link } from 'react-router-dom'
 import ContactUs from '../../components/ContactUs'
 import { Helmet } from 'react-helmet'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const HireUs = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Helmet title="Hire The Best Web & App Developers | The App Ideas" />
@@ -165,7 +170,10 @@ const HireUs = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-react-native-developer"
                 onClick={() => {
@@ -182,7 +190,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-flutter-developer"
                 onClick={() => {
@@ -199,7 +210,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-android-developer"
                 onClick={() => {
@@ -216,7 +230,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-ios-developer"
                 onClick={() => {
@@ -233,7 +250,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-wordpress-developer"
                 onClick={() => {
@@ -250,7 +270,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-shopify-development"
                 onClick={() => {
@@ -267,7 +290,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-codeigniter-developer"
                 onClick={() => {
@@ -284,7 +310,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-laravel-developer"
                 onClick={() => {
@@ -301,7 +330,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-nodejs-developer"
                 onClick={() => {
@@ -318,7 +350,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to=""
                 onClick={() => {
@@ -335,7 +370,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-reactjs-developer"
                 onClick={() => {
@@ -352,7 +390,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-angular-developer"
                 onClick={() => {
@@ -369,9 +410,12 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
-                to=""
+                to="/webflow-development"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
@@ -386,7 +430,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to=""
                 onClick={() => {
@@ -403,7 +450,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to=""
                 onClick={() => {
@@ -420,7 +470,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to="/hire-magento-development"
                 onClick={() => {
@@ -437,7 +490,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link to="">
                 <div className="valuable_box">
                   <img
@@ -449,7 +505,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to=""
                 onClick={() => {
@@ -466,7 +525,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to=""
                 onClick={() => {
@@ -483,7 +545,10 @@ const HireUs = () => {
                 </div>
               </Link>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3">
+            <div
+              data-aos="fade-up"
+              className="col-12 col-sm-6 col-md-4 col-lg-3 mb-3"
+            >
               <Link
                 to=""
                 onClick={() => {

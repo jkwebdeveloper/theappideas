@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
-import { BsFillPatchCheckFill } from 'react-icons/bs'
+import React, { useEffect, useState } from 'react'
 import TestiMonial from '../../../components/Testimonial/TestiMonial'
 import WorkSlider from '../../../components/WorkSlider'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import mobileweb from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development.svg'
 import mobileaap from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Web Development Services.svg'
@@ -36,7 +37,9 @@ import { Helmet } from 'react-helmet'
 const WebDev = () => {
   const [activeService, setActiveService] = useState('website_development')
   const [activeServe, setActiveServe] = useState('food_industry')
-
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Helmet title="Custom Web Development Company India - The App Ideas" />
@@ -571,9 +574,12 @@ const WebDev = () => {
           <div className="Title__White mb-4">
             <h3>Technologies we use</h3>
           </div>
-          <div className="row">
+          <div className="row" style={{ justifyContent: 'center' }}>
             <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/wp.png')}
                   alt="Wordpress"
@@ -583,7 +589,10 @@ const WebDev = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/php.png')}
                   alt="PHP"
@@ -593,7 +602,10 @@ const WebDev = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/an.png')}
                   alt="Angular"
@@ -603,7 +615,10 @@ const WebDev = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/react-js.png')}
                   alt="React-Js"
@@ -613,7 +628,10 @@ const WebDev = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Technologies/node-js.png')}
                   alt="Node-Js"
@@ -622,16 +640,6 @@ const WebDev = () => {
                 <h2>Node Js</h2>
               </div>
             </div>
-            {/* <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
-                <div className="technologies_box text-center">
-                  <img
-                    src={require("../../assets/images/MobileAppDev/technogies-img/flutter.png")}
-                    alt="flutter"
-                    className="img-fluid"
-                  />
-                  <h2>Flutter</h2>
-                </div>
-              </div> */}
           </div>
         </div>
       </section>

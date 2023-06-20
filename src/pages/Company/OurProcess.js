@@ -1,8 +1,13 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import ContactUs from '../../components/ContactUs'
 import { Helmet } from 'react-helmet'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const OurProcess = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Helmet title="Our Web and Mobile App Development Process" />
@@ -33,10 +38,10 @@ const OurProcess = () => {
                     </span>
                   </div>
                   <div className="road-map-card">
-                    <h4 className="card-head">
+                    <h4 data-aos="fade-left" className="card-head">
                       REQUIREMENTS GATHERING &amp; ANALYSIS
                     </h4>
-                    <p className="card-text">
+                    <p data-aos="fade-left" className="card-text">
                       We attentively listen to our clients and understand the
                       problems that we need to address with a comprehensive
                       solution. We start by gathering all the requirements and
@@ -55,10 +60,10 @@ const OurProcess = () => {
                     </span>
                   </div>
                   <div className="road-map-card">
-                    <h4 className="card-head">
+                    <h4 data-aos="fade-right" className="card-head">
                       INITIAL MEETINGS, QUESTIONS &amp; ANSWERS SESSION
                     </h4>
-                    <p className="card-text">
+                    <p data-aos="fade-right" className="card-text">
                       After gathering requirements we do a lot of brainstorming
                       to understand the scope of the solution for specific
                       customer problems. For this, we conduct team meetings,
@@ -79,10 +84,10 @@ const OurProcess = () => {
                     </span>
                   </div>
                   <div className="road-map-card">
-                    <h4 className="card-head">
+                    <h4 data-aos="fade-left" className="card-head">
                       PROJECT ESTIMATION &amp; PROPOSAL MAKING
                     </h4>
-                    <p className="card-text">
+                    <p data-aos="fade-left" className="card-text">
                       At this stage, we have a total picture of the project
                       requirements, time limit, and cost. Accordingly, we
                       estimate the project cost and required time and resources.
@@ -103,10 +108,10 @@ const OurProcess = () => {
                     </span>
                   </div>
                   <div className="road-map-card">
-                    <h4 className="card-head">
+                    <h4 data-aos="fade-right" className="card-head">
                       RESOURCE &amp; TEAM ALLOCATION, PROJECT SETUP
                     </h4>
-                    <p className="card-text">
+                    <p data-aos="fade-right" className="card-text">
                       After getting the final nod from the client we create a
                       detailed plan of resource and team allocation. Following
                       this, we create the setup and give responsibility to a
@@ -126,10 +131,10 @@ const OurProcess = () => {
                     </span>
                   </div>
                   <div className="road-map-card">
-                    <h4 className="card-head">
+                    <h4 data-aos="fade-left" className="card-head">
                       DAILY/WEEKLY UPDATES &amp; IMPROVEMENTS
                     </h4>
-                    <p className="card-text">
+                    <p data-aos="fade-left" className="card-text">
                       As the project continues rolling, we come with project
                       updates at regular intervals ranging from weekly to
                       monthly updates. Accordingly, we come with a specific plan
@@ -148,10 +153,10 @@ const OurProcess = () => {
                     </span>
                   </div>
                   <div className="road-map-card">
-                    <h4 className="card-head">
+                    <h4 data-aos="fade-right" className="card-head">
                       PROJECT HANDOVER, DEPLOYMENT &amp; SUPPORT
                     </h4>
-                    <p className="card-text">
+                    <p data-aos="fade-right" className="card-text">
                       When the development is finished and the software
                       application is ready for deployment, we handover the
                       application to the client. We offer continuous

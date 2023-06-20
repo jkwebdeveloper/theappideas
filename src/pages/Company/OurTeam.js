@@ -1,10 +1,15 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Helmet } from 'react-helmet'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 const OurTeam = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
-      <Helmet title='Our Team | THE APP IDEAS'/>
+      <Helmet title="Our Team | THE APP IDEAS" />
       <section className="team_banner">
         <h1>OUR TEAM</h1>
         <p>
@@ -13,11 +18,11 @@ const OurTeam = () => {
           niches.
         </p>
       </section>
-      <section className="team_main_section">
+      <section  className="team_main_section">
         <div className="team_section">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -34,7 +39,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -51,7 +56,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -68,7 +73,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -93,7 +98,7 @@ const OurTeam = () => {
         <div className="team_section">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -110,7 +115,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -127,7 +132,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -144,7 +149,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -161,7 +166,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -186,7 +191,7 @@ const OurTeam = () => {
         <div className="team_section">
           <div className="container">
             <div className="row">
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -203,7 +208,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -220,7 +225,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -237,7 +242,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -254,7 +259,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -271,7 +276,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -288,7 +293,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -305,7 +310,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -322,7 +327,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -339,7 +344,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -356,7 +361,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -373,7 +378,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -390,7 +395,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -407,7 +412,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -424,7 +429,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -441,7 +446,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -458,7 +463,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -475,7 +480,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -492,7 +497,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -509,7 +514,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">
@@ -526,7 +531,7 @@ const OurTeam = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
+              <div data-aos="fade-up" className="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-3">
                 <div className="profile_main_card">
                   <div className="profile-card">
                     <div className="img">

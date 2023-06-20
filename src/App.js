@@ -91,7 +91,6 @@ const App = () => {
 
   return (
     <BrowserRouter>
-      <ScrollToTop />
       {/* get a quote modal */}
       {openModal && <GetAQuoteModal setOpenModal={setOpenModal} />}
 
@@ -264,6 +263,7 @@ const App = () => {
           element={<MobileAppLondon />}
         />
       </Routes>
+      <ScrollToTop />
       <Footer />
     </BrowserRouter>
   )

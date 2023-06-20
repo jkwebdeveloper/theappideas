@@ -1,7 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Work from '../../../components/Workdone/Work'
 import TestiMonial from '../../../components/Testimonial/TestiMonial'
-
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 // Service section image
 import MobileAppDesigning from '../../../assets/images/SERVICES/Designing/Services we provide/Mobile app designing.svg'
 import WebAppDesigning from '../../../assets/images/SERVICES/Designing/Services we provide/Web app designing.svg'
@@ -15,7 +16,9 @@ import { Helmet } from 'react-helmet'
 const Designing = () => {
   const [activeService, setActiveService] = useState('banner_designing')
   const [activeWeServe, setActiveWeServe] = useState('security_gaurd')
-
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Helmet title="designing services - THE APP IDEAS" />
@@ -614,7 +617,10 @@ const Designing = () => {
           </div>
           <div className="row">
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/Designing/Technologies/photoshop.png')}
                   alt="Asp.Net"
@@ -625,7 +631,10 @@ const Designing = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/Designing/Technologies/Illustrator.png')}
                   alt="DotNetNuke"
@@ -636,7 +645,10 @@ const Designing = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/Designing/Technologies/Figma.png')}
                   alt="DotNetNuke"
@@ -647,7 +659,10 @@ const Designing = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-6 col-lg-3 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/Designing/Technologies/Adobe-XD.png')}
                   alt="DotNetNuke"

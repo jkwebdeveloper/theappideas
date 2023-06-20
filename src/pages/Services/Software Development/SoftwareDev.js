@@ -1,6 +1,8 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Work from '../../../components/Workdone/Work'
 import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 import SoftwareDevelopment from '../../../assets/images/SERVICES/Software development/Software Development.svg'
 import Custom from '../../../assets/images/SERVICES/Software development/Custom Softwrare Development.svg'
@@ -35,7 +37,9 @@ import { Helmet } from 'react-helmet'
 const SoftwareDev = () => {
   const [activeService, setActiveService] = useState('desktop_application')
   const [activeServe, setActiveServe] = useState('academic_education')
-
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
     <>
       <Helmet title="Software Development Services in India | The App ideas" />
@@ -563,7 +567,10 @@ const SoftwareDev = () => {
           </div>
           <div className="row">
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-left"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/Software development/Technologies/asp.net_.png')}
                   alt="Asp.Net"
@@ -574,7 +581,10 @@ const SoftwareDev = () => {
               </div>
             </div>
             <div className="col-12 col-sm-6 col-md-6 col-lg-6 mb-4">
-              <div className="technologies_box text-center">
+              <div
+                data-aos="flip-right"
+                className="technologies_box text-center"
+              >
                 <img
                   src={require('../../../assets/images/SERVICES/Software development/Technologies/dnn.png')}
                   alt="DotNetNuke"

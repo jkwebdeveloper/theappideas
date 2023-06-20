@@ -2648,6 +2648,10 @@ section {
   .life_content_lft {
     align-items: flex-start;
   }
+  .life_tai_content p {
+    padding: 0 14px;
+    text-align: justify;
+  }
 }
 @media (max-width: 575px) {
   .life_content_img h1 {
@@ -2659,6 +2663,7 @@ section {
   .life_tai_content p {
     font-size: 14px;
     padding: 0 14px;
+    text-align: justify;
   }
   .life_content_lft h1 {
     font-size: 30px;
@@ -2805,6 +2810,7 @@ section {
   .blog_box h2 {
     font-size: 16px;
   }
+  
 }
 /* -------------------- SiteMap Css End -------------------- */
 
@@ -3017,7 +3023,7 @@ section {
 @media (max-width: 575px) {
   .testimonial_box {
     height: 100%;
-    padding: 20px 0;
+    padding: 100px 0;
   }
   .hire_banner_rht h1 {
     font-size: 20px;
@@ -3947,7 +3953,11 @@ section {
   .card_bottom {
     margin-bottom: 120px;
   }
-
+  .join_rht p,
+  .about_banner p {
+    /* font-size: 16px; */
+    text-align: justify;
+  }
   .card_bottom:last-child {
     margin-bottom: 0px;
   }
@@ -3961,6 +3971,7 @@ section {
   .join_rht p,
   .about_banner p {
     font-size: 16px;
+    text-align: justify;
   }
 
   .about_banner h1 {
@@ -4651,40 +4662,11 @@ section {
 /* -------------------- Career Apply Css End -------------------- */
 
 /* -------------------- Scroll To Top css Start -------------------- */
-
-.button {
-  /* display: inline-block; */
-  background-color: #ff9800;
-  width: 100px;
-  height: 100px;
-  text-align: center;
-  border-radius: 4px;
+.top-btn{
   position: fixed;
-  bottom: 30px;
-  right: 30px;
-  transition: background-color 0.3s, opacity 0.5s, visibility 0.5s;
-  opacity: 0;
-  visibility: hidden;
-  /* z-index: 1000; */
-}
-.button::after {
-  content: "\f077";
-  /* font-family: FontAwesome; */
-  font-weight: normal;
-  font-style: normal;
-  font-size: 2em;
-  line-height: 500px;
-  color: #be1212;
-}
-.button:hover {
+  bottom: 1rem;
+  right: 2rem;
+  z-index: 999;
   cursor: pointer;
-  background-color: #333;
-}
-.button:active {
-  background-color: #555;
-}
-.button.show {
-  opacity: 1;
-  visibility: visible;
 }
 /* -------------------- Scroll To Top css ENd -------------------- */

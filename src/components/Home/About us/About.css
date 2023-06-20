@@ -97,7 +97,9 @@
   .achievements__section {
     flex-wrap: wrap;
   }
-
+  .About-left-heading {
+    padding-top: 30px;
+  }
   .achievements__section .achievements_box.achievements_box_top {
     margin-top: 0;
     margin-right: 0;

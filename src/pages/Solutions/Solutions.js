@@ -56,9 +56,14 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">Food Ordering Solution</a>
+                    <a href="/food-delivery-app-development">
+                      Food Ordering Solution
+                    </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a
+                    href="/food-delivery-app-development"
+                    className="arrow-icon"
+                  >
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -98,9 +103,11 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">Dating Website & App Solution</a>
+                    <a href="/dating-app-development">
+                      Dating Website & App Solution
+                    </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a href="/dating-app-development" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -140,12 +147,12 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">
+                    <a href="/security-app-solution">
                       Security App <br />
                       Solution
                     </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a href="/security-app-solution" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -185,9 +192,11 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">Ecommerce App Solution</a>
+                    <a href="/e-commerce-app-development">
+                      Ecommerce App Solution
+                    </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a href="/e-commerce-app-development" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -227,9 +236,14 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">Taxi Booking App Solution</a>
+                    <a href="/taxi-booking-app-development">
+                      Taxi Booking App Solution
+                    </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a
+                    href="/taxi-booking-app-development"
+                    className="arrow-icon"
+                  >
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -269,9 +283,14 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">Elearning Website Solution</a>
+                    <a href="/taxi-booking-app-development">
+                      Elearning Website Solution
+                    </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a
+                    href="/taxi-booking-app-development"
+                    className="arrow-icon"
+                  >
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -311,9 +330,14 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">Driver Tracking App Solution</a>
+                    <a href="/driver-tracking-app-development">
+                      Driver Tracking App Solution
+                    </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a
+                    href="/driver-tracking-app-development"
+                    className="arrow-icon"
+                  >
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -353,9 +377,9 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">MLM Website & Mobile App Solution</a>
+                    <a href="">MLM Website & Mobile App Solution</a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a href="" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -395,11 +419,11 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">
+                    <a href="/salon-service-app">
                       Salon <br /> Service App <br /> Solution
                     </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a href="/salon-service-app" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -439,11 +463,11 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">
+                    <a href="/doctor-hiring-app-solution">
                       On Demand Therapist/ Doctor Hiring App Solution
                     </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a href="/doctor-hiring-app-solution" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -482,11 +506,14 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="/solutions">
+                    <a href="/courier-pickup-management-solution">
                       Courier Pickup Management <br /> Solution
                     </a>
                   </h5>
-                  <a href="/solutions" className="arrow-icon">
+                  <a
+                    href="/courier-pickup-management-solution"
+                    className="arrow-icon"
+                  >
                     <HiOutlineArrowRight />
                   </a>
                 </div>
