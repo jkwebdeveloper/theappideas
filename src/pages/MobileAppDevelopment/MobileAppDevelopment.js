@@ -1391,7 +1391,7 @@ const MobileAppDev = () => {
                   disableOnInteraction: false,
                   pauseOnMouseEnter: true,
                 }}
-                speed={500}
+                speed={2000}
                 direction={'horizontal'}
                 pagination={{ clickable: true }}
                 // navigation

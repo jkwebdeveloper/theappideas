@@ -44,11 +44,11 @@ const Work = () => {
             },
           }}
           autoplay={{
-            delay: 1000,
+            delay: 3000,
             disableOnInteraction: false,
             pauseOnMouseEnter: true,
           }}
-          speed={1000}
+          speed={2000}
           direction={'horizontal'}
           pagination={{ clickable: true }}
           // navigation

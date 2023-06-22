@@ -48,7 +48,7 @@ const Banner = () => {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            speed={1000}
+            speed={2000}
             direction={'horizontal'}
             pagination={{ clickable: true }}
             // navigation
