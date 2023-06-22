@@ -489,6 +489,7 @@ const DoctorHiring = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/slider/mindweel.webp')}
+                    alt='mindweel'
                     style={{
                       width: '100%',
                     }}
@@ -501,6 +502,7 @@ const DoctorHiring = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/On-Demand App/On Demand Doctor App/slider/godr.webp')}
+                    alt='godr'
                     style={{
                       width: '100%',
                     }}

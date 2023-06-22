@@ -494,6 +494,7 @@ const TaxiBooking = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/slider/Demand-Taxi-Booking-App.webp')}
+                    alt=''
                     style={{
                       width: '100%',
                     }}
@@ -506,6 +507,7 @@ const TaxiBooking = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/On-Demand App/Taxi Booking App Solution/slider/kukaa.webp')}
+                    alt='kukaa'
                     style={{
                       width: '100%',
                     }}

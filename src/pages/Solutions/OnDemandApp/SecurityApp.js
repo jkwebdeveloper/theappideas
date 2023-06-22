@@ -352,6 +352,7 @@ const SecurityApp = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/On-Demand App/On Demand Security Guard App/slider/security.webp')}
+                    alt='security'
                     style={{
                       width: '100%',
                     }}

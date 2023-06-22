@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom'
 
 const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState('')
+  
 
   // on render, set listener
   useEffect(() => {

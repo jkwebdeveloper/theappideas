@@ -527,6 +527,7 @@ const GroceryApp = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
+                    alt='food1'
                     style={{
                       width: '100%',
                     }}
@@ -539,6 +540,7 @@ const GroceryApp = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp')}
+                    alt='food1'
                     style={{
                       width: '100%',
                     }}
@@ -551,6 +553,7 @@ const GroceryApp = () => {
                 <div className="col-12">
                   <img
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp')}
+                    alt='food1'
                     style={{
                       width: '100%',
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
