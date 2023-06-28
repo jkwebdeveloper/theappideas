@@ -1,5 +1,5 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React from 'react'
+import { Link } from 'react-router-dom'
 
 const Error404 = () => {
   return (
@@ -8,20 +8,25 @@ const Error404 = () => {
         <div className="page-error">
           <h2 className="">Oops ! Page not found.</h2>
           <img
-            src={require("../assets/images/Error.png")}
+            src={require('../assets/images/Error.png')}
             alt=""
-            style={{ marginTop: "-170px" }}
+            style={{ marginTop: '-170px' }}
           />
-          <h4 className="" style={{ marginTop: "-116px" }}>
+          <h4 className="" style={{ marginTop: '-116px' }}>
             We Can't find the page you're looking for.
           </h4>
-          <Link to="/">
+          <Link
+            to="/"
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: 'smooth' })
+            }}
+          >
             <button className="error-btn">GO BACK HOME</button>
           </Link>
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Error404;
+export default Error404

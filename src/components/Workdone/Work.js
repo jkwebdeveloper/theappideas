@@ -77,6 +77,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/2.webp')}
+                    alt="Mindweel"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -129,6 +130,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/bolt-app.webp')}
+                    alt="bolt-app"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -175,6 +177,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/bravura.webp')}
+                    alt="bravura"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -219,6 +222,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/chefs-club.webp')}
+                    alt="chefs-club"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -268,6 +272,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/jump-start-1-1.webp')}
+                    alt="jump-start"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -312,6 +317,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/jump-start-1.webp')}
+                    alt="jump-start-1"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -361,6 +367,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/service-my-car.webp')}
+                    alt="service-my-car"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -406,6 +413,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/shopping.webp')}
+                    alt="shopping"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
@@ -447,6 +455,7 @@ const Work = () => {
                 <div className="col-lg-5 col-md-12">
                   <img
                     src={require('../../assets/images/work/snagpay.webp')}
+                    alt="snagpay"
                     style={{
                       width: '100%',
                       boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
