@@ -322,7 +322,11 @@ const Footer = () => {
               <h2 className="footer_title">On Demand Apps</h2>
               <ul>
                 <Link to="/taxi-booking-app-development">
-                  <li>
+                  <li
+                    onClick={() => {
+                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                    }}
+                  >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
                     </i>{' '}
