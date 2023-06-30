@@ -91,6 +91,9 @@
   visibility: visible;
 }
 
+.nav-links li a:hover {
+  color: #f6c000;
+}
 .drop-menu li a {
   width: 100%;
   display: block;
