@@ -652,11 +652,20 @@ const ReactNativeDevelopment = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Experience and Expertise.</h3>
                     <p className="Title_para">
-                      We are from The App Ideas is a leading web and app
-                      development company. We offer website development services
-                      as well as the best iPad App development service which
-                      will helps businesses to grow and increase the engagement
-                      of the users towards your services.
+                      We are from{' '}
+                      <Link
+                        to="/"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }}
+                      >
+                        <b>The App Ideas</b>
+                      </Link>{' '}
+                      is a leading web and app development company. We offer
+                      website development services as well as the best iPad App
+                      development service which will helps businesses to grow
+                      and increase the engagement of the users towards your
+                      services.
                     </p>
                     <p className="Title_para">
                       Before hiring any software development company, it is very

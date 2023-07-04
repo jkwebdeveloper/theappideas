@@ -184,7 +184,9 @@ const IphoneAppDevelopment = () => {
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
-                    <h3 className="Title_heading">Support And Maintenance</h3>
+                    <h3 className="Title_heading">
+                      Custom iPhone app development
+                    </h3>
                     <p className="Title_para">
                       The popularity of the custom mobile app is getting
                       increase day by day. Similarly, iPhone users are also
@@ -357,7 +359,7 @@ const IphoneAppDevelopment = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>Why Choose App Ideas For Android App Development?</h3>
+            <h3>Why You Should Choose Us for iPhone App Development?</h3>
           </div>
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
@@ -493,9 +495,18 @@ const IphoneAppDevelopment = () => {
                     </p>
                     <p className="Title_para">
                       The App Ideas has a group of a skilled and dedicated team
-                      of IOS developers with years of experience. We boast of a
-                      robust team of experienced iPhone app developers having
-                      proven expertise across multiple niches.
+                      of{' '}
+                      <Link
+                        to="/hire-ios-developer"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }}
+                      >
+                        <b>IOS developers</b>
+                      </Link>{' '}
+                      with years of experience. We boast of a robust team of
+                      experienced iPhone app developers having proven expertise
+                      across multiple niches.
                     </p>
                   </div>
                 </div>
@@ -555,22 +566,19 @@ const IphoneAppDevelopment = () => {
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
-                    <h3 className="Title_heading">Unique UI/UX</h3>
+                    <h3 className="Title_heading">Agile Development</h3>
                     <p className="Title_para">
-                      If we talk about designing then this is one of the most
-                      important factors behind the success of any software
-                      solution including web and mobile apps Along with the
-                      development services, we also offer the best designing
-                      services for iPhone mobile apps.
+                      The demand for the iPhone mobile app is increasing because
+                      it offers the convenience of using the services as per
+                      comfort. More than half of the population are using
+                      smartphones this is the main reason behind the shifting of
+                      business owners towards online platforms.
                     </p>
                     <p className="Title_para">
-                      A proper design of your iPhone mobile app plays a very
-                      vital role in its success because designing can help you
-                      to increase the engagement of the users towards your
-                      services. The App Ideas offer the unique design of the
-                      software development. With each of our iPhone apps, we
-                      deliver a highly unique and user optimised user interface
-                      and user experience.
+                      We are from The App Ideas which is a leading web and app
+                      development. We strictly follow the agile app development
+                      methodology to ensure faster development without
+                      compromising on quality.
                     </p>
                   </div>
                 </div>

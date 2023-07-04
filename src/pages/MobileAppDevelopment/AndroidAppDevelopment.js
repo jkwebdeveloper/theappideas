@@ -1,38 +1,36 @@
-import React, { useEffect, useState } from "react";
-import AOS from "aos";
-import "aos/dist/aos.css";
+import React, { useEffect, useState } from 'react'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
-import mobileAppdevelopment from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
-import mobileApplication from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg";
-import mobileappdeveloper from "../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg";
+import mobileAppdevelopment from '../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg'
+import mobileApplication from '../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg'
+import mobileappdeveloper from '../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg'
 
-import Experience from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Experience and Expertise.svg";
-import Robust from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Robust Portfolio.svg";
-import Lifecycle from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Full Lifecycle support.svg";
-import Agile from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Agile Development.svg";
-import Fast from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Fast-paced development.svg";
-import Competitive from "../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Competitive price.svg";
+import Experience from '../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Experience and Expertise.svg'
+import Robust from '../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Robust Portfolio.svg'
+import Lifecycle from '../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Full Lifecycle support.svg'
+import Agile from '../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Agile Development.svg'
+import Fast from '../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Fast-paced development.svg'
+import Competitive from '../../assets/images/SERVICES/Mobile-App-dev/Android-App/Why-Choose/Competitive price.svg'
 
-import TestiMonial from "../../components/Testimonial/TestiMonial";
-import FAQ from "../../components/FAQ";
-import { Link } from "react-router-dom";
-import ContactUs from "../../components/ContactUs";
-import HeroSection from "../../components/HeroSection";
-import { Helmet } from "react-helmet";
+import TestiMonial from '../../components/Testimonial/TestiMonial'
+import FAQ from '../../components/FAQ'
+import { Link } from 'react-router-dom'
+import ContactUs from '../../components/ContactUs'
+import HeroSection from '../../components/HeroSection'
+import { Helmet } from 'react-helmet'
 // import WorkHand from "../../components/WorkHand";
 
 const AndroidAppDevelopment = () => {
-  const [activeService, setactiveService] = useState("custom_mobile");
-  const [activeWhyChoose, setActiveWhyChoose] = useState(
-    "experience_expertise"
-  );
+  const [activeService, setactiveService] = useState('custom_mobile')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
 
   useEffect(() => {
-    AOS.init();
-  }, []);
+    AOS.init()
+  }, [])
   return (
     <>
-    <Helmet title="Top Android App Development Comapny India - The app ideas"/>
+      <Helmet title="Top Android App Development Comapny India - The app ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Android App Development Company"
@@ -73,17 +71,17 @@ const AndroidAppDevelopment = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("custom_mobile")}
+                  onClick={() => setactiveService('custom_mobile')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "custom_mobile" &&
-                      "service__provide_tab_active"
+                      activeService === 'custom_mobile' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Website-Redesign.png')}
                       alt="Custom-Mobile-App-Development"
                       className="img-fluid"
                     />
@@ -92,17 +90,17 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_enterprise")}
+                  onClick={() => setactiveService('android_enterprise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_enterprise" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_enterprise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-235.png')}
                       alt="Android-Enterprise-App-Development"
                       className="img-fluid"
                     />
@@ -111,17 +109,17 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_wearable")}
+                  onClick={() => setactiveService('android_wearable')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_wearable" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_wearable' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/icons8-smart-watch-100-1.png')}
                       alt="Android-Wearable-App-Development"
                       className="img-fluid"
                     />
@@ -130,17 +128,17 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_game")}
+                  onClick={() => setactiveService('android_game')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_game" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_game' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-53.png')}
                       alt="Android-Game-App-Development"
                       className="img-fluid"
                     />
@@ -149,17 +147,17 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_app_redesign")}
+                  onClick={() => setactiveService('android_app_redesign')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_app_redesign" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_app_redesign' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Group-184.png')}
                       alt="Android-App-Redesign"
                       className="img-fluid"
                     />
@@ -168,17 +166,17 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setactiveService("android_support")}
+                  onClick={() => setactiveService('android_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeService === "android_support" &&
-                      "service__provide_tab_active"
+                      activeService === 'android_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
-                      src={require("../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png")}
+                      src={require('../../assets/images/MobileAppDev/Android App Development Company/Android App/Mask-Group.png')}
                       alt="Android-Support-And-Maintenance"
                       className="img-fluid"
                     />
@@ -187,7 +185,7 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeService === "custom_mobile" && (
+            {activeService === 'custom_mobile' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -217,7 +215,7 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_enterprise" && (
+            {activeService === 'android_enterprise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -247,12 +245,12 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_wearable" && (
+            {activeService === 'android_wearable' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Android wearable app development{" "}
+                      Android wearable app development{' '}
                     </h3>
                     <p className="Title_para">
                       The App Ideas is one of the most popular web and app
@@ -276,12 +274,12 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_game" && (
+            {activeService === 'android_game' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Android Game app development{" "}
+                      Android Game app development{' '}
                     </h3>
                     <p className="Title_para">
                       We are from The App Ideas, a leading software development
@@ -305,7 +303,7 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_app_redesign" && (
+            {activeService === 'android_app_redesign' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -333,12 +331,12 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             )}
-            {activeService === "android_support" && (
+            {activeService === 'android_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Android Support and Maintenance{" "}
+                      Android Support and Maintenance{' '}
                     </h3>
                     <p className="Title_para">
                       Every Android Mobile app requires Support and Maintenance
@@ -397,11 +395,11 @@ const AndroidAppDevelopment = () => {
                             <a className="work_head_item">Android App</a>
                           </li>
                           <li>
-                            {" "}
+                            {' '}
                             <a className="work_head_item">IOS</a>
                           </li>
                           <li>
-                            {" "}
+                            {' '}
                             <a className="work_head_item">
                               Mobile Application Development
                             </a>
@@ -413,7 +411,7 @@ const AndroidAppDevelopment = () => {
                       <div className="work_head_rht">
                         <img
                           data-aos="fade-left"
-                          src={require("../../assets/images/Portfolio/Device-Image-one.webp")}
+                          src={require('../../assets/images/Portfolio/Device-Image-one.webp')}
                           alt="Device-Image-one"
                           className="img-fluid"
                         />
@@ -441,26 +439,26 @@ const AndroidAppDevelopment = () => {
                         <a href="/" className="work_head_box_link"></a>
                         <li>
                           <a href="/" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="/" className="work_head_item">
                             Android App
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="/" className="work_head_item">
                             Flutter
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="/" className="work_head_item">
                             IOS
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="/" className="work_head_item">
                             Mobile Application Development
                           </a>
@@ -472,7 +470,7 @@ const AndroidAppDevelopment = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-left"
-                        src={require("../../assets/images/Portfolio/Device-Image-two.webp")}
+                        src={require('../../assets/images/Portfolio/Device-Image-two.webp')}
                         alt="Device-Image-two"
                         className="img-fluid"
                       />
@@ -499,20 +497,20 @@ const AndroidAppDevelopment = () => {
                         <a href="/" className="work_head_box_link"></a>
                         <li>
                           <a href="/" className="work_head_box_link">
-                            {" "}
+                            {' '}
                           </a>
                           <a href="/" className="work_head_item">
                             Android App
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="/" className="work_head_item">
                             IOS
                           </a>
                         </li>
                         <li>
-                          {" "}
+                          {' '}
                           <a href="/" className="work_head_item">
                             Mobile Application Development
                           </a>
@@ -524,7 +522,7 @@ const AndroidAppDevelopment = () => {
                     <div className="work_head_rht">
                       <img
                         data-aos="fade-left"
-                        src={require("../../assets/images/Portfolio/Device-Image-three.webp")}
+                        src={require('../../assets/images/Portfolio/Device-Image-three.webp')}
                         alt="Device-Image-three"
                         className="img-fluid"
                       />
@@ -542,22 +540,29 @@ const AndroidAppDevelopment = () => {
       <section className="service__provide__section py-5">
         <div className="container">
           <div className="Title">
-            <h3>
-              Why Choose App Ideas For React Native App Development Company?
-            </h3>
+            <h3>Why Choose App Ideas For Android App Development?</h3>
+            <p>
+              At the App Ideas over the years we built a standout reputation for
+              outstanding Android app development service by producing an array
+              of widely benchmarked apps flaunting sophisticated user experience
+              and visually enticing UI. Our Android app development service over
+              the years contributed to the commercial success of many businesses
+              and helped them carve out a competitive mobile presence. Let’s
+              mention the key reasons to choose us for Android app development.
+            </p>
           </div>
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("experience_expertise")}
+                  onClick={() => setActiveWhyChoose('experience_expertise')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "experience_expertise" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'experience_expertise' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -570,13 +575,13 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("robust_protfolio")}
+                  onClick={() => setActiveWhyChoose('robust_protfolio')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "robust_protfolio" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'robust_protfolio' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -589,13 +594,13 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("full_lifestyle_support")}
+                  onClick={() => setActiveWhyChoose('full_lifestyle_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "full_lifestyle_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'full_lifestyle_support' &&
+                      'service__provide_tab_active'
                     } `}
                   >
                     <img
@@ -608,16 +613,16 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile_development")}
+                  onClick={() => setActiveWhyChoose('agile_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Agile}
                       alt="Agile-Development"
@@ -628,16 +633,16 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("fast_paced_development")}
+                  onClick={() => setActiveWhyChoose('fast_paced_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "fast_paced_development" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'fast_paced_development' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Fast}
                       alt="Fast-Paced-Development"
@@ -648,16 +653,16 @@ const AndroidAppDevelopment = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_price")}
+                  onClick={() => setActiveWhyChoose('competitive_price')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_price" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_price' &&
+                      'service__provide_tab_active'
                     } `}
                   >
-                    {" "}
+                    {' '}
                     <img
                       src={Competitive}
                       alt="Competitive-Pricing"
@@ -668,17 +673,25 @@ const AndroidAppDevelopment = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "experience_expertise" && (
+            {activeWhyChoose === 'experience_expertise' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Experience and Expertise.</h3>
                     <p className="Title_para">
-                      We are from The App Ideas is a leading web and app
-                      development company. We offer website development services
-                      as well as the best iPad App development service which
-                      will helps businesses to grow and increase the engagement
-                      of the users towards your services.
+                      We are from The App Ideas is a leading web and {' '}
+                      <Link
+                        to="/mobile-app-development"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }}
+                      >
+                        <b>app development company</b>
+                      </Link>{' '}
+                      .We offer website development services as well as the
+                      best iPad App development service which will helps
+                      businesses to grow and increase the engagement of the
+                      users towards your services.
                     </p>
                     <p className="Title_para">
                       Before hiring any software development company, it is very
@@ -691,7 +704,7 @@ const AndroidAppDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "robust_protfolio" && (
+            {activeWhyChoose === 'robust_protfolio' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -717,7 +730,7 @@ const AndroidAppDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "full_lifestyle_support" && (
+            {activeWhyChoose === 'full_lifestyle_support' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -742,7 +755,7 @@ const AndroidAppDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "agile_development" && (
+            {activeWhyChoose === 'agile_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -767,7 +780,7 @@ const AndroidAppDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "fast_paced_development" && (
+            {activeWhyChoose === 'fast_paced_development' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -794,7 +807,7 @@ const AndroidAppDevelopment = () => {
               </div>
             )}
 
-            {activeWhyChoose === "competitive_price" && (
+            {activeWhyChoose === 'competitive_price' && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -838,7 +851,7 @@ Do you want to know how we can make great value additions with our Android devel
       />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default AndroidAppDevelopment;
+export default AndroidAppDevelopment

@@ -361,22 +361,12 @@ const IpadAppDev = () => {
             <h3>Why Choose App Ideas For IPad App Development?</h3>
             <p>
               At the App Ideas over the years we built a standout reputation for
-              outstanding Android app development service by producing an array
-              of widely benchmarked apps flaunting sophisticated user experience
-              and visually enticing UI. Our Android app development service over
+              outstanding IPad App Development Service by producing an array of
+              widely bench marked apps flaunting sophisticated user experience
+              and visually enticing UI. Our IPad App Development Service over
               the years contributed to the commercial success of many businesses
               and helped them carve out a competitive mobile presence. Let’s
-              mention the key reasons to choose us for{' '}
-              <Link
-                to="/android-app-development"
-                onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
-                }}
-                target="_blank"
-              >
-                {' '}
-                Android app development.
-              </Link>
+              mention the key reasons to choose us for IPad App Development.
             </p>
           </div>
           <div className="row mt-5">
@@ -512,11 +502,20 @@ const IpadAppDev = () => {
                   <div className="Title">
                     <h3 className="Title_heading">Experience and Expertise.</h3>
                     <p className="Title_para">
-                      We are from The App Ideas is a leading web and app
-                      development company. We offer website development services
-                      as well as the best iPad App development service which
-                      will helps businesses to grow and increase the engagement
-                      of the users towards your services.
+                      We are from{' '}
+                      <Link
+                        to="/"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: 'smooth' })
+                        }}
+                      >
+                        <b>The App Ideas</b>
+                      </Link>{' '}
+                      is a leading web and app development company. We offer
+                      website development services as well as the best iPad App
+                      development service which will helps businesses to grow
+                      and increase the engagement of the users towards your
+                      services.
                     </p>
                     <p className="Title_para">
                       Before hiring any software development company, it is very

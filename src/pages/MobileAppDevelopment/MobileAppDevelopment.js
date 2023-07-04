@@ -127,7 +127,7 @@ const MobileAppDev = () => {
   }, [])
   return (
     <>
-      <Helmet title='Top Mobile App Development Company India & USA - THE APP IDEAS'/>
+      <Helmet title="Top Mobile App Development Company India & USA - THE APP IDEAS" />
       {/* Banner Section Start */}
       <HeroSection
         title="Mobile App Development Company"
@@ -158,7 +158,7 @@ const MobileAppDev = () => {
                   window.scrollTo({ top: 0, behavior: 'smooth' })
                 }}
               >
-                <b>Mobile app developers</b>
+                <b>Mobile app developers</b>&nbsp;
               </Link>
               and UI/UX designer, We have worked on various themes based as well
               as customized mobile app solution which will be best for your
