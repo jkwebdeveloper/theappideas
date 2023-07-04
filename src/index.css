@@ -1517,6 +1517,18 @@ section {
   width: 500px;
   max-width: 75%;
 } */
+
+/* @media (max-width: 575px) {
+  .page-error img {
+    align-items: center;
+  }
+}
+@media (max-width: 767px) {
+  .page-error img {
+    align-items: center;
+    margin-left:  -90;
+  }
+} */
 .kf-contacts-items {
   padding: 40px 0;
   position: relative;
@@ -2810,7 +2822,6 @@ section {
   .blog_box h2 {
     font-size: 16px;
   }
-  
 }
 /* -------------------- SiteMap Css End -------------------- */
 
@@ -4217,7 +4228,7 @@ section {
 
 .contact_form_section {
   height: 100vh;
-  position: absolute;
+  /* position: absolute; */
   width: 100%;
   z-index: 999;
   backdrop-filter: blur(10px);
@@ -4235,7 +4246,7 @@ section {
   width: 100%;
   left: 50%;
   transform: translate(-50%, 0);
-  height: 80vh;
+  /* height: 50vh; */
   top: 6rem;
 }
 .hover_color_bubble {
@@ -4320,6 +4331,17 @@ section {
   background-color: #2f0e39;
   color: #fff;
   border: none;
+}
+.ReactModal__Content {
+  position: absolute !important;
+  inset: 0 !important;
+  border: 1px solid rgb(204, 204, 204) !important;
+  background: transparent !important;
+  overflow: hidden !important;
+  border-radius: 4px !important;
+  outline: none !important;
+  padding: 20px !important;
+  z-index: 99999 !important;
 }
 /* -------------------- GET A QUOTE End -------------------- */
 
@@ -4662,7 +4684,7 @@ section {
 /* -------------------- Career Apply Css End -------------------- */
 
 /* -------------------- Scroll To Top css Start -------------------- */
-.top-btn{
+.top-btn {
   position: fixed;
   bottom: 1rem;
   right: 2rem;

@@ -1149,7 +1149,7 @@ const Header = ({ setOpenModal }) => {
               onClick={() => setOpenModal(true)}
               style={{ cursor: 'pointer' }}
             >
-              <div className="quote_btn btn-1 hover-filled-opacity">
+              <div className="quote_btn btn-1 hover-filled-opacity close-btn">
                 <span>GET A QUOTE</span>
               </div>
             </li>

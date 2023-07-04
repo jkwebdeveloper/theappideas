@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import './index.css'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import Home from './pages/Home'
@@ -89,13 +89,27 @@ import ScrollToTop from './components/ScrollToTop'
 const App = () => {
   const [openModal, setOpenModal] = useState(false)
 
+  useEffect(() => {
+    if (openModal) window.document.body.style.overflow = 'hidden'
+    else window.document.body.style.overflow = 'unset'
+  }, [openModal])
+
+  const handleCloseModal = () => {
+    setOpenModal(false)
+  }
   return (
     <BrowserRouter>
       {/* get a quote modal */}
-      {openModal && <GetAQuoteModal setOpenModal={setOpenModal} />}
+      {openModal && (
+        <GetAQuoteModal
+          openModal={openModal}
+          handleCloseModal={handleCloseModal}
+          setOpenModal={setOpenModal}
+        />
+      )}
 
       {/* <Header /> */}
-      <Header setOpenModal={setOpenModal} openModal={openModal} />
+      <Header setOpenModal={setOpenModal} />
       <Routes>
         {/* Home page Link */}
         <Route path="/" element={<Home />} />

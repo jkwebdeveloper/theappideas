@@ -1,5 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import Lottie from 'lottie-react'
+import error from '../assets/images/4339-not-found.json'
 
 const Error404 = () => {
   return (
@@ -7,12 +9,17 @@ const Error404 = () => {
       <div className="container">
         <div className="page-error">
           <h2 className="">Oops ! Page not found.</h2>
-          <img
+          <Lottie
+            animationData={error}
+            loop={true}
+            // style={{ height: '50px' }}
+          />
+          {/* <img
             src={require('../assets/images/Error.png')}
             alt=""
             style={{ marginTop: '-170px' }}
-          />
-          <h4 className="" style={{ marginTop: '-116px' }}>
+          /> */}
+          <h4 className="">
             We Can't find the page you're looking for.
           </h4>
           <Link

@@ -65,7 +65,7 @@ const Banner = () => {
                 swiper.navigation.update()
               })
             }}
-            style={{ padding: '0px 0px 5rem' }}
+            style={{ padding: '0px 0px 5rem', zIndex:"0" }}
           >
             <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
