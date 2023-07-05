@@ -326,6 +326,8 @@ li .get_a_btn {
 
   #menu-btn:checked ~ .nav-links {
     left: 0%;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   #menu-btn:checked ~ .btn.menu-btn {
@@ -339,6 +341,14 @@ li .get_a_btn {
 
   .nav-links li {
     padding: 0 !important;
+    margin-left: 0px !important;
+    border-bottom: 1px solid #ffffff42;
+    margin-bottom: 10px !important;
+  }
+  .nav-links li:last-child {
+    border-bottom: 0px;
+    padding-left: 10px !important;
+    margin-bottom: 0px !important;
   }
 
   .nav-links li a {
@@ -377,12 +387,19 @@ li .get_a_btn {
     color: #f2f2f2;
     font-size: 16px;
     font-weight: 700;
-    padding-left: 10px;
+    /* padding-left: 10px; */
     cursor: pointer;
     border-radius: 5px;
     transition: all 0.3s ease;
     text-transform: uppercase;
     position: relative;
+    margin-bottom:0px;
+  }
+  .nav-links .mobile-item svg{
+    position: absolute;
+    right: 26px;
+    top: 17px;
+    font-size: 20px;
   }
   .down__arrow {
     position: absolute;
@@ -505,16 +522,16 @@ li .get_a_btn {
     padding: 0;
   }
   .nav-links .mobile-item {
-    padding-left: 0;
+    /* padding-left: 0; */
     font-size: 14px;
   }
   .nav-links li a {
     font-size: 14px;
   }
-
+/* 
   .nav-links li a {
     padding-left: 0px !important;
-  }
+  } */
 
   .content .row h4 {
     padding-left: 8px;

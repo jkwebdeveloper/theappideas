@@ -7,7 +7,6 @@ import { Link } from 'react-router-dom'
 
 const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState('')
-  
 
   // on render, set listener
   useEffect(() => {
@@ -58,7 +57,7 @@ const Header = ({ setOpenModal }) => {
               </a>
 
               <input type="checkbox" id="showMega" />
-              <label htmlFor="showMega" className="mobile-item">
+              <label htmlFor="showMega" className="mobile-item" style={{paddingLeft:"10px"}}>
                 Company <MdKeyboardArrowDown />
               </label>
               <div className="mega-box">
@@ -205,7 +204,7 @@ const Header = ({ setOpenModal }) => {
                 </div>
               </a>
               <input type="checkbox" id="showMega1" />
-              <label htmlFor="showMega1" className="mobile-item">
+              <label htmlFor="showMega1" className="mobile-item" style={{paddingLeft:"10px"}}>
                 Services <MdKeyboardArrowDown />{' '}
               </label>
               <div className="mega-box">
@@ -644,7 +643,15 @@ const Header = ({ setOpenModal }) => {
               </a>
               <input type="checkbox" id="showMega2" />
               <label htmlFor="showMega2" className="mobile-item">
-                Hire Us <MdKeyboardArrowDown />
+                <a
+                  href="/hire-us"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                >
+                  <div>Hire Us</div>
+                </a>{' '}
+                <MdKeyboardArrowDown />
               </label>
               <div className="mega-box">
                 <div className="content">
@@ -900,7 +907,15 @@ const Header = ({ setOpenModal }) => {
               </a>
               <input type="checkbox" id="showMega3" />
               <label htmlFor="showMega3" className="mobile-item">
-                Solutions <MdKeyboardArrowDown />
+                <a
+                  href="/solutions"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                  }}
+                >
+                  <div>Solutions</div>
+                </a>{' '}
+                <MdKeyboardArrowDown />
               </label>
               <div className="mega-box">
                 <div className="content">

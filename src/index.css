@@ -185,17 +185,19 @@ section {
 }
 
 .contact__with__social a {
-  margin: 9px 0;
-  width: 100%;
   background: #f6c000;
-  display: inline-block;
+  border-radius: 50px;
   color: #000;
+  display: inline-block;
   font-size: 18px;
-  padding: 10px 0px;
+  font-weight: 600;
+  margin: 9px 0;
+  padding: 10px 0;
   text-align: center;
   text-transform: uppercase;
-  border-radius: 50px;
-  font-weight: 600;
+  width: 100%;
+  border: 1px solid #f6c000;
+  transition: all 0.5s;
 }
 .contact__with__social a:hover {
   background-color: #fff;
@@ -214,16 +216,18 @@ section {
 }
 
 .social__connection a {
-  width: 50px;
-  height: 50px;
-  display: inline-block;
   background: #f6c000;
-  margin: 0 16px 10px 0;
-  color: #000;
   border-radius: 500%;
+  color: #000;
+  display: inline-block;
   font-size: 28px;
-  text-align: center;
+  height: 50px;
   line-height: 44px;
+  margin: 0 16px 10px 0;
+  text-align: center;
+  width: 50px;
+  border: 1px solid #f6c000;
+  transition: all 0.5s;
 }
 .social__connection a:hover {
   background-color: #fff;
@@ -1346,15 +1350,16 @@ section {
 }
 
 .footer__box .location_map {
-  color: #ff0000;
-  margin-right: 10px;
-  width: 26px;
-  background: #fff;
-  height: 26px;
-  text-align: center;
-  line-height: 26px;
   border-radius: 4px;
+  color: #fff;
   font-size: 20px;
+  height: 28px;
+  line-height: 26px;
+  margin-right: 10px;
+  text-align: center;
+  width: 28px;
+  background: #2f0e39;
+  display: inline-block;
 }
 .get_in_icons {
   margin-right: 10px;

@@ -75,13 +75,38 @@ const ContactUs = () => {
                         style={{ width: "100%", padding: "6px" }}
                       >
                         <option value={1}>Country*</option>
-                        <option value={2}>Option 2</option>
-                        <option value={3}>Option 3</option>
-                        <option value={4}>Option 4</option>
-                        <option value={5}>Option 5</option>
-                        <option value={6}>Option 6</option>
-                        <option value={7}>Option 7</option>
-                        <option value={8}>Option 8</option>
+                        <option value={2}>India</option>
+                        <option value={3}>Afghanistan</option>
+                        <option value={4}>Albania</option>
+                        <option value={5}>Algeria</option>
+                        <option value={6}>American Samoa</option>
+                        <option value={7}>Andoraa</option>
+                        <option value={8}>Angola</option>
+                        <option value={9}>Anguilla</option>
+                        <option value={10}>Antarctica</option>
+                        <option value={11}>Antigua and Barbuda</option>
+                        <option value={12}>Argentina</option>
+                        <option value={13}>Armenia</option>
+                        <option value={14}>Aruba</option>
+                        <option value={15}>Australia</option>
+                        <option value={16}>Austria</option>
+
+                        <option value={1}>Country*</option>
+                        <option value={2}>India</option>
+                        <option value={3}>Afghanistan</option>
+                        <option value={4}>Albania</option>
+                        <option value={5}>Algeria</option>
+                        <option value={6}>American Samoa</option>
+                        <option value={7}>Andoraa</option>
+                        <option value={8}>Angola</option>
+                        <option value={9}>Anguilla</option>
+                        <option value={10}>Antarctica</option>
+                        <option value={11}>Antigua and Barbuda</option>
+                        <option value={12}>Argentina</option>
+                        <option value={13}>Armenia</option>
+                        <option value={14}>Aruba</option>
+                        <option value={15}>Australia</option>
+                        <option value={16}>Austria</option>
                       </select>
                     </div>
                     <div className="col-sm-6 mt-4">
