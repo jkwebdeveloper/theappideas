@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { BsFillPatchCheckFill } from 'react-icons/bs'
 import { Country } from 'country-state-city'
+import ReCAPTCHA from 'react-google-recaptcha'
 
 const HeroSection = ({
   title,
@@ -124,7 +125,7 @@ const HeroSection = ({
                       </div>
                       <div className="col-sm-6 h-100 select__country my-3">
                         <select className="select2 w-100 h-100">
-                        <option label='country'></option>
+                          <option label="country"></option>
                           {countries.map((country) => (
                             <option key={country.name} value={country.name}>
                               {country.name}
@@ -149,7 +150,12 @@ const HeroSection = ({
                           defaultValue={''}
                         />
                       </div>
-                      <div className="col-sm-12 text-center py-5">
+                      <ReCAPTCHA
+                        style={{ padding: '15px 15px' }}
+                        sitekey="Your Client site key"
+                        onChange={onchange}
+                      />
+                      <div className="col-sm-12 text-center my-3">
                         <button type="submit" className="request__btn">
                           Request a FREE Quote
                         </button>
