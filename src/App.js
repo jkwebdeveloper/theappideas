@@ -85,6 +85,7 @@ import MobileAppLondon from './pages/Sitemap/LocationsWiseServices/MobileAppLond
 import CareerApply from './pages/CareerApply'
 import Footer from './components/Footer'
 import ScrollToTop from './components/ScrollToTop'
+import Whatsapp from './components/Whatsapp'
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false)
@@ -112,7 +113,7 @@ const App = () => {
       <Header setOpenModal={setOpenModal} />
       <Routes>
         {/* Home page Link */}
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Home setOpenModal={setOpenModal}/>} />
 
         {/* Company Link */}
         <Route path="/about-us" element={<ABoutUs />} />
@@ -278,6 +279,7 @@ const App = () => {
         />
       </Routes>
       <ScrollToTop />
+      <Whatsapp />
       <Footer />
     </BrowserRouter>
   )

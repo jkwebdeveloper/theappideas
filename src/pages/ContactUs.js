@@ -1,25 +1,32 @@
-import React from "react";
-import { BsSkype } from "react-icons/bs";
-import { BsWhatsapp } from "react-icons/bs";
-import { GoMail } from "react-icons/go";
-import { BsFillTelephoneFill } from "react-icons/bs";
-import { RiFacebookFill } from "react-icons/ri";
-import { BsTwitter } from "react-icons/bs";
-import { FaLinkedinIn } from "react-icons/fa";
-import { AiFillYoutube } from "react-icons/ai";
-import { BsDribbble } from "react-icons/bs";
-import { BsInstagram } from "react-icons/bs";
-import { FaPinterestP } from "react-icons/fa";
-import { AiOutlineBehance } from "react-icons/ai";
-import { Helmet } from "react-helmet";
+import React, { useState } from 'react'
+import { BsSkype } from 'react-icons/bs'
+import { BsWhatsapp } from 'react-icons/bs'
+import { GoMail } from 'react-icons/go'
+import { BsFillTelephoneFill } from 'react-icons/bs'
+import { RiFacebookFill } from 'react-icons/ri'
+import { BsTwitter } from 'react-icons/bs'
+import { FaLinkedinIn } from 'react-icons/fa'
+import { AiFillYoutube } from 'react-icons/ai'
+import { BsDribbble } from 'react-icons/bs'
+import { BsInstagram } from 'react-icons/bs'
+import { FaPinterestP } from 'react-icons/fa'
+import { AiOutlineBehance } from 'react-icons/ai'
+import { Helmet } from 'react-helmet'
+import { Country } from 'country-state-city'
+import { useEffect } from 'react'
 
 const ContactUs = () => {
+  const [countries, setCountries] = useState([])
+
+  useEffect(() => {
+    setCountries(Country.getAllCountries())
+  }, [])
   return (
     <>
-    <Helmet title="Contact Us - THE APP IDEAS"/>
+      <Helmet title="Contact Us - THE APP IDEAS" />
       <section
         className="blog__section"
-        style={{ paddingTop: "23px", paddingBottom: "70px" }}
+        style={{ paddingTop: '23px', paddingBottom: '70px' }}
       ></section>
       <section className="py-5">
         <div className="header-top-bg"></div>
@@ -34,7 +41,7 @@ const ContactUs = () => {
                       <input
                         type="text"
                         className="form-control"
-                        placeholder="Name*"
+                        placeholder="Name"
                         aria-label="Name*"
                       />
                     </div>
@@ -42,8 +49,7 @@ const ContactUs = () => {
                       <input
                         type="email"
                         className="form-control"
-                        placeholder="Email*
-                                  "
+                        placeholder="Email"
                         aria-label="Email"
                       />
                     </div>
@@ -51,15 +57,14 @@ const ContactUs = () => {
                       <input
                         type="email"
                         className="form-control"
-                        placeholder="skype ID*
-                                  "
+                        placeholder="skype ID"
                         aria-label="skype ID"
                       />
                     </div>
                     <div className="col-sm-6 h-100 mt-4">
                       <select
                         className="form-select"
-                        style={{ width: "100%", padding: "6px" }}
+                        style={{ width: '100%', padding: '6px' }}
                       >
                         <option selected="">Budget</option>
                         <option value={1}>Less Than 1000</option>
@@ -72,49 +77,23 @@ const ContactUs = () => {
                     <div className="col-sm-6 h-100 select__country mt-4">
                       <select
                         className="select2 w-100 h-100"
-                        style={{ width: "100%", padding: "6px" }}
+                        style={{ width: '100%', padding: '6px' }}
                       >
-                        <option value={1}>Country*</option>
-                        <option value={2}>India</option>
-                        <option value={3}>Afghanistan</option>
-                        <option value={4}>Albania</option>
-                        <option value={5}>Algeria</option>
-                        <option value={6}>American Samoa</option>
-                        <option value={7}>Andoraa</option>
-                        <option value={8}>Angola</option>
-                        <option value={9}>Anguilla</option>
-                        <option value={10}>Antarctica</option>
-                        <option value={11}>Antigua and Barbuda</option>
-                        <option value={12}>Argentina</option>
-                        <option value={13}>Armenia</option>
-                        <option value={14}>Aruba</option>
-                        <option value={15}>Australia</option>
-                        <option value={16}>Austria</option>
-
-                        <option value={1}>Country*</option>
-                        <option value={2}>India</option>
-                        <option value={3}>Afghanistan</option>
-                        <option value={4}>Albania</option>
-                        <option value={5}>Algeria</option>
-                        <option value={6}>American Samoa</option>
-                        <option value={7}>Andoraa</option>
-                        <option value={8}>Angola</option>
-                        <option value={9}>Anguilla</option>
-                        <option value={10}>Antarctica</option>
-                        <option value={11}>Antigua and Barbuda</option>
-                        <option value={12}>Argentina</option>
-                        <option value={13}>Armenia</option>
-                        <option value={14}>Aruba</option>
-                        <option value={15}>Australia</option>
-                        <option value={16}>Austria</option>
+                        <option label="Country"></option>
+                        {countries.map((counry) => (
+                          <option
+                            value={counry.name}
+                            label={counry.name}
+                            key={counry.name}
+                          />
+                        ))}
                       </select>
                     </div>
                     <div className="col-sm-6 mt-4">
                       <input
-                        type="text"
+                        type="number"
                         className="form-control"
-                        placeholder="Phone Number*
-                                  "
+                        placeholder="Phone Number*"
                         aria-label="Phone Number"
                       />
                     </div>
@@ -124,7 +103,7 @@ const ContactUs = () => {
                         id="exampleFormControlTextarea1"
                         rows={5}
                         placeholder="Project Requirement*"
-                        defaultValue={""}
+                        defaultValue={''}
                       />
                     </div>
                     <div className="col-sm-12 text-center mt-4">
@@ -139,7 +118,7 @@ const ContactUs = () => {
             <div className="col-12 col-md-12 col-lg-4">
               <div
                 className="other_contact_conection text-center"
-                style={{ padding: "11px" }}
+                style={{ padding: '11px' }}
               >
                 <h4>Other ways to connect</h4>
                 <p>
@@ -147,19 +126,19 @@ const ContactUs = () => {
                 </p>
                 <div className="contact__with__social">
                   <a href="skype:chirag4141">
-                    <BsSkype style={{ marginRight: "15px" }} />
+                    <BsSkype style={{ marginRight: '15px' }} />
                     skype
                   </a>
                   <a href="https://api.whatsapp.com/send?phone=918866564279">
-                    <BsWhatsapp style={{ marginRight: "15px" }} />
+                    <BsWhatsapp style={{ marginRight: '15px' }} />
                     Whatsapp
                   </a>
                   <a href="mailto:contact@theappideas.com">
-                    <GoMail style={{ marginRight: "15px" }} />
+                    <GoMail style={{ marginRight: '15px' }} />
                     Email
                   </a>
                   <a href="tel:+918866564279">
-                    <BsFillTelephoneFill style={{ marginRight: "15px" }} />
+                    <BsFillTelephoneFill style={{ marginRight: '15px' }} />
                     Phone
                   </a>
                 </div>
@@ -196,7 +175,7 @@ const ContactUs = () => {
         </div>
       </section>
     </>
-  );
-};
+  )
+}
 
-export default ContactUs;
+export default ContactUs

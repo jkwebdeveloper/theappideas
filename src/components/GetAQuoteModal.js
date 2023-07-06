@@ -1,8 +1,15 @@
-import React from 'react'
+import { Country } from 'country-state-city'
+import React, { useEffect, useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import ReactModal from 'react-modal'
 
-const GetAQuoteModal = ({ setOpenModal, openModal,handleCloseModal }) => {
+const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
+  const [countries, setCountries] = useState([])
+
+  useEffect(() => {
+    setCountries(Country.getAllCountries())
+  }, [])
+
   return (
     <ReactModal
       isOpen={openModal}
@@ -32,29 +39,31 @@ const GetAQuoteModal = ({ setOpenModal, openModal,handleCloseModal }) => {
                   <input
                     type="text"
                     className="form-control"
-                    placeholder="Name*"
+                    placeholder="Name"
                   />
                 </div>
                 <div className="mb-3">
                   <input
                     type="email"
                     className="form-control"
-                    placeholder="Email*"
+                    placeholder="Email"
                   />
                 </div>
                 <div className="mb-3">
                   <select className="form-select">
-                    <option label="Country"></option>
-                    <option value={1}>One</option>
-                    <option value={2}>Two</option>
-                    <option value={3}>Three</option>
+                    <option label="Select Country"></option>
+                    {countries.map((Country) => (
+                      <option key={Country.name} value={Country.name}>
+                        {Country.name}
+                      </option>
+                    ))}
                   </select>
                 </div>
                 <div className="mb-3">
                   <input
-                    type="text"
+                    type="number"
                     className="form-control"
-                    placeholder="Phone Number*"
+                    placeholder="Phone Number"
                   />
                 </div>
                 <div className="mb-3">

@@ -4331,6 +4331,7 @@ section {
   font-size: 18px;
   border-radius: 50px;
   border: none;
+  cursor: pointer;
 }
 .contact_form_box:hover .submit__btn {
   background-color: #2f0e39;
@@ -4697,3 +4698,19 @@ section {
   cursor: pointer;
 }
 /* -------------------- Scroll To Top css ENd -------------------- */
+
+.fix_whatsapp_btn {
+  position: fixed;
+  bottom: 2rem;
+  left: 2rem;
+  z-index: 999;
+  cursor: pointer;
+}
+@media (max-width: 575px) {
+  .fix_whatsapp_btn {
+    /* bottom: 2rem;
+    height: 50px;
+    left: 1rem; */
+    display: none;
+  }
+}

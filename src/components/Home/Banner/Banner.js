@@ -8,7 +8,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Link } from 'react-router-dom'
 
-const Banner = () => {
+const Banner = ({ setOpenModal }) => {
   const prevRef = useRef(null)
   const nextRef = useRef(null)
 
@@ -65,7 +65,7 @@ const Banner = () => {
                 swiper.navigation.update()
               })
             }}
-            style={{ padding: '0px 0px 5rem', zIndex:"0" }}
+            style={{ padding: '0px 0px 5rem', zIndex: '0' }}
           >
             <SwiperSlide style={{ cursor: 'pointer' }}>
               <div className="row">
@@ -91,7 +91,11 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <Link to="" className="slider-get_btn">
+                    <Link
+                      to=""
+                      className="slider-get_btn"
+                      onClick={() => setOpenModal(true)}
+                    >
                       Contact Us
                     </Link>
                   </div>
@@ -123,7 +127,11 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <Link to="" className="slider-get_btn">
+                    <Link
+                      to=""
+                      className="slider-get_btn"
+                      onClick={() => setOpenModal(true)}
+                    >
                       Contact Us
                     </Link>
                   </div>
@@ -156,7 +164,11 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <Link to="" className="slider-get_btn">
+                    <Link
+                      to=""
+                      className="slider-get_btn"
+                      onClick={() => setOpenModal(true)}
+                    >
                       Contact Us
                     </Link>
                   </div>
@@ -188,7 +200,11 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <Link href="" className="slider-get_btn">
+                    <Link
+                      href=""
+                      className="slider-get_btn"
+                      onClick={() => setOpenModal(true)}
+                    >
                       Contact Us
                     </Link>
                   </div>
@@ -220,7 +236,11 @@ const Banner = () => {
                   </p>
                   <br />
                   <div className="silder-btn">
-                    <Link href="" className="slider-get_btn">
+                    <Link
+                      href=""
+                      className="slider-get_btn"
+                      onClick={() => setOpenModal(true)}
+                    >
                       Contact Us
                     </Link>
                   </div>

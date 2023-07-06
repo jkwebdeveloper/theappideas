@@ -1,5 +1,6 @@
-import React from "react";
-import { BsFillPatchCheckFill } from "react-icons/bs";
+import React, { useEffect, useState } from 'react'
+import { BsFillPatchCheckFill } from 'react-icons/bs'
+import { Country } from 'country-state-city'
 
 const HeroSection = ({
   title,
@@ -15,6 +16,12 @@ const HeroSection = ({
   image2,
   image3,
 }) => {
+  const [countries, setCountries] = useState([])
+
+  useEffect(() => {
+    setCountries(Country.getAllCountries())
+  }, [])
+
   return (
     <section className="common__banner__section">
       <div className="container">
@@ -56,7 +63,7 @@ const HeroSection = ({
                       src={image1}
                       alt="Mobile-App-Development"
                       className="img-fluid"
-                      style={{ width: "25%" }}
+                      style={{ width: '25%' }}
                     />
                     <h4>{service1}</h4>
                   </div>
@@ -67,7 +74,7 @@ const HeroSection = ({
                       src={image2}
                       alt="Mobile-Application-Development"
                       className="img-fluid"
-                      style={{ width: "25%" }}
+                      style={{ width: '25%' }}
                     />
                     <h4>{service2}</h4>
                   </div>
@@ -78,7 +85,7 @@ const HeroSection = ({
                       src={image3}
                       alt="Mobile-Application-Development"
                       className="img-fluid"
-                      style={{ width: "25%" }}
+                      style={{ width: '25%' }}
                     />
                     <h4>{service3}</h4>
                   </div>
@@ -97,38 +104,39 @@ const HeroSection = ({
                     <div className="row g-3">
                       <div className="col-sm-12 my-3">
                         <input
-                          type="text"
+                          type="name"
+                          autoComplete="off"
                           className="form-control"
-                          placeholder="Name*"
+                          id="name"
+                          placeholder="Name"
                           aria-label="Name*"
                         />
                       </div>
                       <div className="col-sm-12">
                         <input
                           type="email"
+                          autoComplete="off"
                           className="form-control"
-                          placeholder="Email*"
+                          placeholder="Email"
+                          id="email"
                           aria-label="Email"
                         />
                       </div>
                       <div className="col-sm-6 h-100 select__country my-3">
                         <select className="select2 w-100 h-100">
-                          <option value={1}>Country*</option>
-                          <option value={2}>Option 2</option>
-                          <option value={3}>Option 3</option>
-                          <option value={4}>Option 4</option>
-                          <option value={5}>Option 5</option>
-                          <option value={6}>Option 6</option>
-                          <option value={7}>Option 7</option>
-                          <option value={8}>Option 8</option>
+                        <option label='country'></option>
+                          {countries.map((country) => (
+                            <option key={country.name} value={country.name}>
+                              {country.name}
+                            </option>
+                          ))}
                         </select>
                       </div>
                       <div className="col-sm-6 my-3">
                         <input
-                          type="text"
+                          type="number"
                           className="form-control"
-                          placeholder="Phone Number*
-                                      "
+                          placeholder="Phone Number*"
                           aria-label="Phone Number"
                         />
                       </div>
@@ -138,7 +146,7 @@ const HeroSection = ({
                           id="exampleFormControlTextarea1"
                           rows={3}
                           placeholder="Project Requirement*"
-                          defaultValue={""}
+                          defaultValue={''}
                         />
                       </div>
                       <div className="col-sm-12 text-center py-5">
@@ -156,7 +164,7 @@ const HeroSection = ({
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default HeroSection;
+export default HeroSection
