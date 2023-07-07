@@ -394,6 +394,7 @@ const WebFlowDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Cyber_Risk"
                     src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/Cyber_Risk.webp')}
                     style={{
                       width: '100%',
@@ -744,6 +745,7 @@ const WebFlowDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="certificate"
                     src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/certificate-1_page-0001-1200x849.jpg')}
                     style={{
                       height: '80%',
@@ -757,6 +759,7 @@ const WebFlowDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="certificate_page"
                     src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Angular-Dev/Work-hand/certificate_page-0001-1200x849.jpg')}
                     style={{
                       height: '80%',

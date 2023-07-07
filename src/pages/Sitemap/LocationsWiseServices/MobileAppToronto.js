@@ -137,7 +137,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Group-235.png')}
                       alt="Industrial-Internet"
@@ -150,7 +150,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png')}
                       alt="Smart-Cities"
@@ -160,7 +160,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png')}
                       alt="IoT-In-Agriculture"
@@ -170,7 +170,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png')}
                       alt="Smart-Retail"
@@ -180,7 +180,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png')}
                       alt="IoT-In-Healthcare"
@@ -283,6 +283,7 @@ const MobileAppToronto = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
+                      alt="Mindweel"
                       src={require('../../../assets/images/work/2.webp')}
                       style={{
                         width: '100%',
@@ -335,6 +336,7 @@ const MobileAppToronto = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
+                      alt="bolt-app"
                       src={require('../../../assets/images/work/bolt-app.webp')}
                       style={{
                         width: '100%',
@@ -381,6 +383,7 @@ const MobileAppToronto = () => {
                 <div className="row">
                   <div className="col-lg-5 col-md-12">
                     <img
+                      alt="service-my-car"
                       src={require('../../../assets/images/work/service-my-car.webp')}
                       style={{
                         width: '100%',
@@ -454,7 +457,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png')}
                       alt="Industrial-Internet"
@@ -464,7 +467,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/latest-technology.png')}
                       alt="Smart-Cities"
@@ -474,7 +477,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png')}
                       alt="IoT-In-Agriculture"
@@ -484,7 +487,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/transperent-process.png')}
                       alt="Smart-Retail"
@@ -494,7 +497,7 @@ const MobileAppToronto = () => {
                   </a>
                 </div>
                 <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a href="" className="service__provide_tab">
+                  <a className="service__provide_tab">
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png')}
                       alt="IoT-In-Healthcare"

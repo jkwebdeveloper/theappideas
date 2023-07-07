@@ -371,6 +371,7 @@ const ElearningApp = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="food"
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
                       width: '100%',

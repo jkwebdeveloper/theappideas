@@ -377,9 +377,9 @@ const Solutions = () => {
                     />
                   </div>
                   <h5>
-                    <a href="">MLM Website & Mobile App Solution</a>
+                    <a href="/">MLM Website & Mobile App Solution</a>
                   </h5>
-                  <a href="" className="arrow-icon">
+                  <a href="/" className="arrow-icon">
                     <HiOutlineArrowRight />
                   </a>
                 </div>
@@ -501,6 +501,7 @@ const Solutions = () => {
                   />
                   <div className="icon-box">
                     <img
+                    alt='courier-pickup-management'
                       src={require('../../assets/images/Header/Our Solutions/courier pickup management solution.gif')}
                       style={{ width: '100px' }}
                     />

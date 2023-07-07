@@ -422,6 +422,7 @@ const CourierPickup = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="food-1"
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
                       width: '100%',
@@ -434,6 +435,7 @@ const CourierPickup = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='food-2'
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp')}
                     style={{
                       width: '100%',
@@ -446,6 +448,7 @@ const CourierPickup = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='food-3'
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp')}
                     style={{
                       width: '100%',

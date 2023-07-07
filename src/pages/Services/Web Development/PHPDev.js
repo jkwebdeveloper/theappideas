@@ -403,6 +403,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-18"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp')}
                     style={{
                       width: '100%',
@@ -415,6 +416,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-19"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png')}
                     style={{
                       width: '100%',
@@ -427,6 +429,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-20"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png')}
                     style={{
                       width: '100%',
@@ -442,6 +445,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-21"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png')}
                     style={{
                       width: '100%',
@@ -457,6 +461,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-22"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png')}
                     style={{
                       width: '100%',
@@ -472,6 +477,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-23"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png')}
                     style={{
                       width: '100%',
@@ -487,6 +493,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-24"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp')}
                     style={{
                       width: '100%',
@@ -502,6 +509,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-26"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp')}
                     style={{
                       width: '100%',
@@ -517,6 +525,7 @@ const PHPDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="Group-28"
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp')}
                     style={{
                       width: '100%',

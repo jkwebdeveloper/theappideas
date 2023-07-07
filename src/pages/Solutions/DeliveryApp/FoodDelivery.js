@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useState, useCallback } from 'react'
+import React, { useRef, useEffect, useState } from 'react'
 import AOS from 'aos'
 import 'aos/dist/aos.css'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -522,6 +522,7 @@ const FoodDelivery = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="food"
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/food1.webp')}
                     style={{
                       width: '100%',
@@ -534,6 +535,7 @@ const FoodDelivery = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="food-2"
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-2.webp')}
                     style={{
                       width: '100%',
@@ -546,6 +548,7 @@ const FoodDelivery = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                    alt="food-3"
                     src={require('../../../assets/images/SOLUTIONS/Delivery App/Food-app/Food-3.webp')}
                     style={{
                       width: '100%',

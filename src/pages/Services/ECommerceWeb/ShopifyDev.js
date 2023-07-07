@@ -408,6 +408,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='baristaswag'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/baristaswag.webp')}
                     style={{
                       width: '100%',
@@ -420,6 +421,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='berripro'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/berripro.webp')}
                     style={{
                       width: '100%',
@@ -432,6 +434,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='blessestore'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/blessestore.webp')}
                     style={{
                       width: '100%',
@@ -447,6 +450,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='dashwallets'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/dashwallets.webp')}
                     style={{
                       width: '100%',
@@ -462,6 +466,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='glowrecipe'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/glowrecipe.webp')}
                     style={{
                       width: '100%',
@@ -477,6 +482,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='momzjoy'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/momzjoy.webp')}
                     style={{
                       width: '100%',
@@ -492,6 +498,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='monbebecouture'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/monbebecouture.webp')}
                     style={{
                       width: '100%',
@@ -507,6 +514,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='moroccanfurniturebazaar'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/moroccanfurniturebazaar.webp')}
                     style={{
                       width: '100%',
@@ -522,6 +530,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='purebodynaturals'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/purebodynaturals.webp')}
                     style={{
                       width: '100%',
@@ -537,6 +546,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='resipsausa'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/resipsausa.webp')}
                     style={{
                       width: '100%',
@@ -552,6 +562,7 @@ const ShopifyDev = () => {
               <div className="row">
                 <div className="col-12">
                   <img
+                  alt='terracomo'
                     src={require('../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Slider/terracomo.webp')}
                     style={{
                       width: '100%',
