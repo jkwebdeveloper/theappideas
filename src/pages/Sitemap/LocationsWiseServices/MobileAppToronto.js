@@ -1,4 +1,4 @@
-import { React, useRef } from 'react'
+import { React, useRef, useState } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, Navigation } from 'swiper'
 import '../../../components/Workdone/work.css'
@@ -10,102 +10,35 @@ import TestiMonial from '../../../components/Testimonial/TestiMonial'
 import FAQ from '../../../components/FAQ'
 import { Helmet } from 'react-helmet'
 import ContactUs from '../../../components/ContactUs'
+import HeroSection from '../../../components/HeroSection'
+import Company from '../../../assets/images/sitemap/toronto/Mobile-App-Development.png'
+import Development from '../../../assets/images/sitemap/toronto/Mobile-Application-Development-Company (1).png'
+import Native from '../../../assets/images/sitemap/toronto/Mobile-Application-Development-Company.png'
 
 const MobileAppToronto = () => {
+  const [activeService, setactiveService] = useState('Innovative_Custom')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('Unmatched_Portfolio')
   const prevRef = useRef(null)
   const nextRef = useRef(null)
   return (
     <>
       <Helmet title="Top Mobile App Development Company In Toronto" />
       {/* Banner Section Start */}
-      <section className="common__banner__section">
-        <div className="container">
-          <div className="row">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6 mb-4">
-              <div className="common_banner_lft">
-                <h2>Mobile App Development Toronto, Canada</h2>
-                <p>
-                  Mobile apps opened the opportunity of anytime-anywhere access
-                  to contents and communication for the users and customers
-                  worldwide. The App Ideas is a leading Mobile App Development
-                  Toronto, Canada comprising leading brands as well as startups
-                  and small businesses. As a development company with a global
-                  footprint, we can build the most sophisticated custom apps
-                  that perfectly meets your business needs.
-                </p>
-              </div>
-            </div>
-            <div className="col-sm-12 col-md-12 col-lg-12    col-xl-6 mb-4">
-              <div className="banner__contact__box">
-                <div className="contact_header">
-                  <h4>Request a FREE Quote</h4>
-                  <p>Guaranteed Response within One Business Day!</p>
-                </div>
-                <div className="contact__body">
-                  <div className="contact__form">
-                    <form action="">
-                      <div className="row g-3">
-                        <div className="col-sm-12 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Name*"
-                            aria-label="Name*"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <input
-                            type="email"
-                            className="form-control"
-                            placeholder="Email*"
-                            aria-label="Email"
-                          />
-                        </div>
-                        <div className="col-sm-6 h-100 select__country my-3">
-                          <select className="select2 w-100 h-100">
-                            <option value={1}>Country*</option>
-                            <option value={2}>Option 2</option>
-                            <option value={3}>Option 3</option>
-                            <option value={4}>Option 4</option>
-                            <option value={5}>Option 5</option>
-                            <option value={6}>Option 6</option>
-                            <option value={7}>Option 7</option>
-                            <option value={8}>Option 8</option>
-                          </select>
-                        </div>
-                        <div className="col-sm-6 my-3">
-                          <input
-                            type="text"
-                            className="form-control"
-                            placeholder="Phone Number*
-                                      "
-                            aria-label="Phone Number"
-                          />
-                        </div>
-                        <div className="col-sm-12">
-                          <textarea
-                            className="form-control"
-                            id="exampleFormControlTextarea1"
-                            rows={3}
-                            placeholder="Project Requirement*"
-                            defaultValue={''}
-                          />
-                        </div>
-                        <div className="col-sm-12 text-center py-5">
-                          <button type="submit" className="request__btn">
-                            Request a FREE Quote
-                          </button>
-                        </div>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                <div className="contact__footer" />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+
+      <HeroSection
+        title="Mobile App Development Toronto, Canada"
+        des="Mobile apps opened the opportunity of anytime-anywhere access to contents and communication for the users and customers worldwide. The App Ideas is a leading Mobile App Development Toronto, Canada comprising leading brands as well as startups and small businesses. As a development company with a global footprint, we can build the most sophisticated custom apps that perfectly meets your business needs."
+        list1="7+ Years of experience in Mobile App Development"
+        list2="Best Mobile App Development Company"
+        list3="Dedicated team for your Mobile App Development"
+        list4="Complete Guidance from Designing to Deployment"
+        service1="App Development Barcelona"
+        service2="Mobile App Development Barcelona"
+        service3="App Development Company Barcelona"
+        image1={Company}
+        image2={Development}
+        image3={Native}
+      />
       {/* Banner Section End */}
       {/* Service Section Start */}
       <section className="service__provide__section py-5">
@@ -123,10 +56,16 @@ const MobileAppToronto = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setactiveService('Innovative_Custom')}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === 'Innovative_Custom' &&
+                      `service__provide_tab_active`
+                    }`}
                   >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/icons8-iphone-x-72-1.png')}
@@ -136,8 +75,17 @@ const MobileAppToronto = () => {
                     <p>Innovative Custom Mobile Apps</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setactiveService('Superb_uiux')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === 'Superb_uiux' &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Group-235.png')}
                       alt="Industrial-Internet"
@@ -149,8 +97,17 @@ const MobileAppToronto = () => {
                     </p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setactiveService('Cross_Platform')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === 'Cross_Platform' &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Cross-platform-Mobile-Apps.png')}
                       alt="Smart-Cities"
@@ -159,8 +116,17 @@ const MobileAppToronto = () => {
                     <p>Cross-Platform Mobile Apps</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setactiveService('App_Testing')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === 'App_Testing' &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/mobile-app-testing.png')}
                       alt="IoT-In-Agriculture"
@@ -169,8 +135,17 @@ const MobileAppToronto = () => {
                     <p>Mobile App Testing</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setactiveService('App_Promotion')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === 'App_Promotion' &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Branding-And-Marketing.png')}
                       alt="Smart-Retail"
@@ -179,8 +154,17 @@ const MobileAppToronto = () => {
                     <p>App Promotion And Marketing</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setactiveService('Support_Maintenance')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeService === 'Support_Maintenance' &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/mobile-app/Mask-Group.png')}
                       alt="IoT-In-Healthcare"
@@ -191,29 +175,95 @@ const MobileAppToronto = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">
-                    Innovative Custom Mobile Apps
-                  </h3>
-                  <p className="Title_para">
-                    The popularity of connected cars are getting popular day by
-                    day, Nowadays many of the people are converting their car
-                    into smart cars to access the advanced features which smart
-                    cars are offering in this present time. Using such services
-                    can make the services more convenient and easy to use.
-                  </p>
-                  <p className="Title_para">
-                    Here we are at The App Ideas which is one of the most
-                    popular software development company. We are also offering
-                    the best IoT app development services at the best possible
-                    rates. Our developers can be skilled to deliver the
-                    best-connected car app based on the current trends.
-                  </p>
+            {activeService === 'Innovative_Custom' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Innovative Custom Mobile Apps
+                    </h3>
+                    <p className="Title_para">
+                      At The App Ideas, we build innovative custom mobile apps
+                      for a broad spectrum of business niches to ensure optimum
+                      engagement and business conversion.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeService === 'Superb_uiux' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Superb UI/UX</h3>
+                    <p className="Title_para">
+                      We design and develop visually appealing and instantly
+                      engaging User Interface (UI) and the most rewarding User
+                      Experience (UX) for mobile apps.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === 'Cross_Platform' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Cross-Platform Mobile Apps
+                    </h3>
+                    <p className="Title_para">
+                      We build native mobile apps for all leading mobile OS
+                      platforms including iOS and Android and also build
+                      cross-platform apps for multiple mobile OS platforms.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === 'App_Testing' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Mobile App Testing</h3>
+                    <p className="Title_para">
+                      We at App Ideas undertake QA testing and evaluation for
+                      the mobile apps to ensure glitch-free performance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === 'App_Promotion' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      App Promotion and Marketing
+                    </h3>
+                    <p className="Title_para">
+                      At App Ideas, we also undertake continuous promotion and
+                      marketing of mobile apps to ensure steady business
+                      conversion and growth.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeService === 'Support_Maintenance' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Support and Maintenance</h3>
+                    <p className="Title_para">
+                      We provide robust lifecycle support and maintenance
+                      service to all our clients and provide them frequent
+                      updates with crucial enhancements.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
@@ -443,10 +493,16 @@ const MobileAppToronto = () => {
           <div className="row mt-5">
             <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose('Unmatched_Portfolio')}
+                >
                   <a
-                    href="/"
-                    className="service__provide_tab service__provide_tab_active"
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === `Unmatched_Portfolio` &&
+                      `service__provide_tab_active`
+                    }`}
                   >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/robust-portfolio.png')}
@@ -456,8 +512,17 @@ const MobileAppToronto = () => {
                     <p>Unmatched Portfolio</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose('Innovative_Solutions')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === `Innovative_Solutions` &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/Advanced-Technology-1.png')}
                       alt="Industrial-Internet"
@@ -466,8 +531,17 @@ const MobileAppToronto = () => {
                     <p>Innovative Solutions</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose('Latest_Technology')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === `Latest_Technology` &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/latest-technology.png')}
                       alt="Smart-Cities"
@@ -476,8 +550,17 @@ const MobileAppToronto = () => {
                     <p>Latest Technology</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose('Agile_Development')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === `Agile_Development` &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/Agile-Development-1.png')}
                       alt="IoT-In-Agriculture"
@@ -486,8 +569,17 @@ const MobileAppToronto = () => {
                     <p>Agile Development</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose('Iterative_Transparent')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === `Iterative_Transparent` &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/transperent-process.png')}
                       alt="Smart-Retail"
@@ -496,8 +588,17 @@ const MobileAppToronto = () => {
                     <p>Iterative And Transparent Process</p>
                   </a>
                 </div>
-                <div className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4">
-                  <a className="service__provide_tab">
+                <div
+                  className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
+                  onClick={() => setActiveWhyChoose('Competitive_Pricing')}
+                >
+                  <a
+                    href="##"
+                    className={`service__provide_tab ${
+                      activeWhyChoose === `Competitive_Pricing` &&
+                      `service__provide_tab_active`
+                    }`}
+                  >
                     <img
                       src={require('../../../assets/images/sitemap/toronto/why-choose/competitive-pricing.png')}
                       alt="IoT-In-Healthcare"
@@ -508,29 +609,92 @@ const MobileAppToronto = () => {
                 </div>
               </div>
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
-              <div className="service_rht">
-                <div className="Title">
-                  <h3 className="Title_heading">
-                    Innovative Custom Mobile Apps
-                  </h3>
-                  <p className="Title_para">
-                    The popularity of connected cars are getting popular day by
-                    day, Nowadays many of the people are converting their car
-                    into smart cars to access the advanced features which smart
-                    cars are offering in this present time. Using such services
-                    can make the services more convenient and easy to use.
-                  </p>
-                  <p className="Title_para">
-                    Here we are at The App Ideas which is one of the most
-                    popular software development company. We are also offering
-                    the best IoT app development services at the best possible
-                    rates. Our developers can be skilled to deliver the
-                    best-connected car app based on the current trends.
-                  </p>
+            {activeWhyChoose === 'Unmatched_Portfolio' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Unmatched Portfolio</h3>
+                    <p className="Title_para">
+                      We at App Ideas boast an unmatched portfolio of the most
+                      successful mobile apps built for Toronto businesses and
+                      industries across various niches.
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+            {activeWhyChoose === 'Innovative_Solutions' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Innovative Solutions</h3>
+                    <p className="Title_para">
+                      With a talented pool of expert developers and years of
+                      frontline experience in building sophisticated apps, we
+                      deliver the most innovative custom solutions.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === 'Latest_Technology' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Latest Technology</h3>
+                    <p className="Title_para">
+                      At App Ideas, we excel with solid command over the state
+                      of the art technologies and tools to deliver cutting-edge
+                      features and uncompromising performance.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === 'Agile_Development' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Agile Development</h3>
+                    <p className="Title_para">
+                      We follow agile development methodology to ensure
+                      fast-paced development while maintaining optimum quality
+                      with concurrent testing.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === 'Iterative_Transparent' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">
+                      Iterative and Transparent Process
+                    </h3>
+                    <p className="Title_para">
+                      We boast of a truly iterative and transparent development
+                      process with a lot of room for our clients to come with
+                      value additions while remaining committed to the deadline.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
+            {activeWhyChoose === 'Competitive_Pricing' && (
+              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_rht">
+                  <div className="Title">
+                    <h3 className="Title_heading">Competitive Pricing</h3>
+                    <p className="Title_para">
+                      We offer highly competitive pricing for all our
+                      development services and make sure our services can be
+                      availed of by the leading brands as well as startups.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </div>
       </section>
