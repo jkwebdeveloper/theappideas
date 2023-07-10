@@ -336,7 +336,7 @@ li .get_a_btn {
 
   #close-btn:checked ~ .btn.menu-btn {
     display: block;
-    padding-top: 30px;
+    margin-top: 30px;
   }
 
   .nav-links li {
