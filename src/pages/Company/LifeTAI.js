@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useEffect, useRef } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Pagination, Autoplay, Navigation } from 'swiper'
 import { Link } from 'react-router-dom'
@@ -6,11 +6,17 @@ import 'swiper/css'
 import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 import { Helmet } from 'react-helmet'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 
 function LifeTAI() {
   const prevRef = useRef(null)
   const nextRef = useRef(null)
+  useEffect(() => {
+    AOS.init()
+  }, [])
   return (
+    
     <>
       <Helmet title="Life at TAI - THE APP IDEAS" />
       <section className="life_tai_banner">
@@ -40,7 +46,7 @@ function LifeTAI() {
           <div className="life__title">
             <h1>Life at App Ideas</h1>
           </div>
-          <div className="life_content_img text-center">
+          <div data-aos="fade-up" className="life_content_img text-center">
             <h1>LIFE @</h1>
             <img
               src={require('../../assets/images/COMPANY/lifeAtTai/life-tai.png')}
@@ -55,7 +61,7 @@ function LifeTAI() {
                 <h2>Ganesh Chaturthi</h2>
               </div>
             </div>
-            <div className="col-lg-5 col-md-7 col-sm-12 col-12">
+            <div data-aos="fade-left" className="col-lg-5 col-md-7 col-sm-12 col-12">
               <div className="life_img_rht">
                 <img
                   src={require('../../assets/images/COMPANY/lifeAtTai/Ganesh Chaturthi.gif')}
@@ -66,7 +72,7 @@ function LifeTAI() {
             </div>
           </div>
           <div className="row mt-5">
-            <div className="col-lg-5 col-md-7 col-sm-12 col-12 order-2 order-md-1 order-sm-2 order-xs-2">
+            <div data-aos="fade-right" className="col-lg-5 col-md-7 col-sm-12 col-12 order-2 order-md-1 order-sm-2 order-xs-2">
               <div className="life_img_rht life_img_rht_shift">
                 <img
                   src={require('../../assets/images/COMPANY/lifeAtTai/Christmas.gif')}
@@ -89,7 +95,7 @@ function LifeTAI() {
                 <h2>Diwali</h2>
               </div>
             </div>
-            <div className="col-lg-5 col-md-7 col-sm-12 col-12">
+            <div data-aos="fade-left" className="col-lg-5 col-md-7 col-sm-12 col-12">
               <div className="life_img_rht">
                 <img
                   src={require('../../assets/images/COMPANY/lifeAtTai/Diwali.gif')}

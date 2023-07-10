@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import Digital from '../../assets/images/careers/Digital Marketing Executive fresher.svg'
 import marketing from '../../assets/images/careers/Digital Marketing Executive fresher.svg'
 
@@ -24,9 +24,14 @@ import Graphics from '../../assets/images/careers/Graphic Desiner (Fresher).svg'
 
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import AOS from 'aos'
+import 'aos/dist/aos.css'
 // import ApplicationModal from "./ApplicationModal";
 
 const Careers = () => {
+  useEffect(() => {
+    AOS.init()
+  }, [])
   // const [showModal, setShowModal] = useState(false);
 
   return (
@@ -48,7 +53,10 @@ const Careers = () => {
             <h3>Current Opening In TheAppIdeas</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -77,7 +85,7 @@ const Careers = () => {
                   </div>
                 </div>
                 <div className="career__content">
-                  <div className="career__content__respo">
+                  <div div className="career__content__respo">
                     <div className="carrer__icon_respo">
                       <img
                         src={Digital}
@@ -119,7 +127,10 @@ const Careers = () => {
 
               {/*--------------end Modal------------ */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -188,7 +199,10 @@ const Careers = () => {
 
               {/* Modal */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -261,7 +275,10 @@ const Careers = () => {
 
               {/* Modal */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -330,7 +347,10 @@ const Careers = () => {
 
               {/* Modal */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -399,7 +419,10 @@ const Careers = () => {
 
               {/* Modal */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -467,7 +490,10 @@ const Careers = () => {
 
               {/* Modal */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -535,7 +561,10 @@ const Careers = () => {
 
               {/* Modal */}
             </div>
-            <div className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card">
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
               <div className="career__card">
                 <div className="career__shap">
                   <div className="carrer__img">
@@ -610,7 +639,10 @@ const Careers = () => {
       <section className="testi-bg py-4">
         <div className="container">
           <div className="row align-items-center">
-            <div className="col-sm-12 col-md-8 col-lg-8 mb-3">
+            <div
+              data-aos="fade-right"
+              className="col-sm-12 col-md-8 col-lg-8 mb-3"
+            >
               <div className="contact__lft">
                 <p style={{ textAlign: 'center', fontSize: '35px' }}>
                   Send your CV On
