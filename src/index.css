@@ -371,6 +371,7 @@ section {
   font-size: 17px;
   font-weight: 700;
   border-radius: 0px;
+  cursor: pointer;
 }
 
 .blog__tabing__box .nav .nav-item .nav-link.active {
@@ -380,6 +381,7 @@ section {
   margin: 10px;
   transition: 0.3s all;
   color: #000;
+  cursor: pointer;
 }
 
 /* Blog Page CSS End */
@@ -1709,6 +1711,10 @@ section {
 /* solutions css end */
 
 /* ---------------------------------------- Career_secrion css start ----------------------------------------  */
+
+.loading{
+  text-align: center;
+}
 .blog__section {
   background-color: #2f0e39;
 }
@@ -1973,6 +1979,7 @@ section {
   left: 0;
   top: 0;
   opacity: 0;
+  cursor: pointer;
 }
 .mail_btn {
   background: #f6c000;
@@ -4607,6 +4614,7 @@ section {
   top: 0;
   opacity: 0;
   height: 100%;
+  /* cursor: pointer; */
 }
 
 .submit_btn {
@@ -4619,6 +4627,7 @@ section {
   font-weight: 700;
   border: none;
   font-size: 16px;
+  cursor: pointer;
   transition: all 0.5s ease-in-out;
 }
 

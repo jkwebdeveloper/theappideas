@@ -1,130 +1,131 @@
-import { React, useState, useRef, useEffect } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay, Navigation } from 'swiper'
-import '../../components/Workdone/Work'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
-import { BiMinusCircle } from 'react-icons/bi'
-import { BiPlusCircle } from 'react-icons/bi'
-import './mobileAppDevelopment.css'
-import TestiMonial from '../../components/Testimonial/TestiMonial'
+import { React, useState, useRef, useEffect } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import "../../components/Workdone/Work";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { BiMinusCircle } from "react-icons/bi";
+import { BiPlusCircle } from "react-icons/bi";
+import "./mobileAppDevelopment.css";
+import TestiMonial from "../../components/Testimonial/TestiMonial";
 // import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
 
-import mobileApp from '../../assets/images/SERVICES/Mobile-App-dev/Mobile App Development.svg'
-import Application from '../../assets/images/SERVICES/Mobile-App-dev/Mobile Application Development Company.svg'
-import Mobileapplication from '../../assets/images/SERVICES/Mobile-App-dev/mobile app developer.svg'
+import mobileApp from "../../assets/images/SERVICES/Mobile-App-dev/Mobile App Development.svg";
+import Application from "../../assets/images/SERVICES/Mobile-App-dev/Mobile Application Development Company.svg";
+import Mobileapplication from "../../assets/images/SERVICES/Mobile-App-dev/mobile app developer.svg";
 
 // Services we provide
-import IPhoneapp from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/IPhone App Development.svg'
-import Ipadeapp from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/IPad Mobile app development.svg'
-import Androidapp from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Android Mobile app development.svg'
-import Androidtablet from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Android Tablet app development.svg'
-import Reskinning from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Reskinning.svg'
-import Redesigning from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Redesigning.svg'
-import Upgradation from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Upgradation.svg'
-import Mobileappsupport from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile app Support and maintenance.svg'
-import Crossplatform from '../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Cross-platform Mobile Apps.svg'
+import IPhoneapp from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/IPhone App Development.svg";
+import Ipadeapp from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/IPad Mobile app development.svg";
+import Androidapp from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Android Mobile app development.svg";
+import Androidtablet from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Android Tablet app development.svg";
+import Reskinning from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Reskinning.svg";
+import Redesigning from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Redesigning.svg";
+import Upgradation from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile App Upgradation.svg";
+import Mobileappsupport from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Mobile app Support and maintenance.svg";
+import Crossplatform from "../../assets/images/SERVICES/Mobile-App-dev/Services we provide/Cross-platform Mobile Apps.svg";
 
 // Industries We Serve
-import Shopping from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Shopping _ E-Commerce.svg'
-import Education from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Education and E-Learning.svg'
-import Banking from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Banking and finance.svg'
-import Travel from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Travel and Tourism.svg'
-import Food from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Food and Drink.svg'
-import SocialNetworking from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Social Networking.svg'
-import lifestyle from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Lifestyle.svg'
-import Real from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Real Estate.svg'
-import health from '../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg'
-import { Link } from 'react-router-dom'
-import ContactUs from '../../components/ContactUs'
-import HeroSection from '../../components/HeroSection'
-import { Helmet } from 'react-helmet'
+import Shopping from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Shopping _ E-Commerce.svg";
+import Education from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Education and E-Learning.svg";
+import Banking from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Banking and finance.svg";
+import Travel from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Travel and Tourism.svg";
+import Food from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Food and Drink.svg";
+import SocialNetworking from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Social Networking.svg";
+import lifestyle from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Lifestyle.svg";
+import Real from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Real Estate.svg";
+import health from "../../assets/images/SERVICES/Mobile-App-dev/Industries We Serve/Health and Fitness.svg";
+import { Link } from "react-router-dom";
+import ContactUs from "../../components/ContactUs";
+import HeroSection from "../../components/HeroSection";
+import { Helmet } from "react-helmet";
+import FAQ from "../../components/FAQ";
 
 const MobileAppDev = () => {
-  const [selected, setSelected] = useState(null)
-  const [activeService, setActiveService] = useState('iphone_app')
-  const [activeServe, setActiveServe] = useState('shopping')
+  const [selected, setSelected] = useState(null);
+  const [activeService, setActiveService] = useState("iphone_app");
+  const [activeServe, setActiveServe] = useState("shopping");
 
-  const prevRef = useRef(null)
-  const nextRef = useRef(null)
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
 
   const toggle = (i) => {
     if (selected === i) {
-      return setSelected(null)
+      return setSelected(null);
     }
-    setSelected(i)
-  }
+    setSelected(i);
+  };
   const data = [
     {
       id: 1,
-      question: 'What does Mobile App Development Require?',
+      question: "What does Mobile App Development Require?",
       answer:
-        'Mobile app development entails making computer programs that can run on a wide range of mobile platforms and devices. If you want to have a successful mobile app, you should choose a business that has experience making such apps and follows a tried-and-true process. Mobile app developers provide an all-encompassing development plan, interface design, software development, software distribution, and backend services to back up the app. Core features of the software are tested often during development.',
+        "Mobile app development entails making computer programs that can run on a wide range of mobile platforms and devices. If you want to have a successful mobile app, you should choose a business that has experience making such apps and follows a tried-and-true process. Mobile app developers provide an all-encompassing development plan, interface design, software development, software distribution, and backend services to back up the app. Core features of the software are tested often during development.",
     },
     {
       id: 2,
-      question: 'What Are the Different Types of Mobile Apps You Can Develop?',
+      question: "What Are the Different Types of Mobile Apps You Can Develop?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
     {
       id: 3,
       question:
-        'Which platform, Android or iOS, should our application be launched on?',
+        "Which platform, Android or iOS, should our application be launched on?",
       answer:
-        'In the past, companies had the option of creating software just for one OS. Even while major mobile OSes like Android and iOS have huge user bases, most companies still choose to create apps that work on both.',
+        "In the past, companies had the option of creating software just for one OS. Even while major mobile OSes like Android and iOS have huge user bases, most companies still choose to create apps that work on both.",
     },
     {
       id: 4,
       question:
-        'What is the Difference Between Cross-Platform and Native App Development?',
+        "What is the Difference Between Cross-Platform and Native App Development?",
       answer:
-        'Cross-platform development refers to the process of creating software for several platforms as opposed to only one. The process of creating applications specifically for different platforms, including Android and iOS, is known as native app development. A software that functions effectively on both systems may be made using cross-platform development approaches.',
+        "Cross-platform development refers to the process of creating software for several platforms as opposed to only one. The process of creating applications specifically for different platforms, including Android and iOS, is known as native app development. A software that functions effectively on both systems may be made using cross-platform development approaches.",
     },
     {
       id: 5,
       question:
-        'Can You Work With Us if We Don’t Have a Fully Formed Idea for Our App?',
+        "Can You Work With Us if We Don’t Have a Fully Formed Idea for Our App?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
     {
       id: 6,
-      question: 'Will You Sign an NDA for the App You’re Developing?',
+      question: "Will You Sign an NDA for the App You’re Developing?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
     {
       id: 7,
-      question: 'Do I Need to Test My App?',
+      question: "Do I Need to Test My App?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
     {
       id: 8,
-      question: 'Can an App connect to my existing systems/data store?',
+      question: "Can an App connect to my existing systems/data store?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
     {
       id: 9,
       question: "Should I prepare my app's visual (wireframe)?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
     {
       id: 10,
-      question: 'Who will own the intellectual property rights to my App?',
+      question: "Who will own the intellectual property rights to my App?",
       answer:
-        'Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.',
+        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
     },
-  ]
+  ];
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet title="Top Mobile App Development Company India & USA - THE APP IDEAS" />
@@ -155,7 +156,7 @@ const MobileAppDev = () => {
               <Link
                 to="/hire-us"
                 onClick={() => {
-                  window.scrollTo({ top: 0, behavior: 'smooth' })
+                  window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
               >
                 <b>Mobile app developers</b>&nbsp;
@@ -172,13 +173,13 @@ const MobileAppDev = () => {
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('iphone_app')}
+                  onClick={() => setActiveService("iphone_app")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'iphone_app' &&
-                      'service__provide_tab_active'
+                      activeService === "iphone_app" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -193,13 +194,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('iphone_mobile')}
+                  onClick={() => setActiveService("iphone_mobile")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'iphone_mobile' &&
-                      'service__provide_tab_active'
+                      activeService === "iphone_mobile" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -215,13 +216,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('android_app')}
+                  onClick={() => setActiveService("android_app")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'android_app' &&
-                      'service__provide_tab_active'
+                      activeService === "android_app" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -236,13 +237,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('android_tablet')}
+                  onClick={() => setActiveService("android_tablet")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'android_tablet' &&
-                      'service__provide_tab_active'
+                      activeService === "android_tablet" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -258,13 +259,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('mobile_app')}
+                  onClick={() => setActiveService("mobile_app")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'mobile_app' &&
-                      'service__provide_tab_active'
+                      activeService === "mobile_app" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -279,13 +280,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('mobile_app_redesign')}
+                  onClick={() => setActiveService("mobile_app_redesign")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'mobile_app_redesign' &&
-                      'service__provide_tab_active'
+                      activeService === "mobile_app_redesign" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -300,13 +301,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('mobile_app_upgrade')}
+                  onClick={() => setActiveService("mobile_app_upgrade")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'mobile_app_upgrade' &&
-                      'service__provide_tab_active'
+                      activeService === "mobile_app_upgrade" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -321,13 +322,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('mobile_app_support')}
+                  onClick={() => setActiveService("mobile_app_support")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'mobile_app_support' &&
-                      'service__provide_tab_active'
+                      activeService === "mobile_app_support" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -342,13 +343,13 @@ const MobileAppDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveService('crossplatform')}
+                  onClick={() => setActiveService("crossplatform")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab  ${
-                      activeService === 'crossplatform' &&
-                      'service__provide_tab_active'
+                      activeService === "crossplatform" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
@@ -363,7 +364,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             </div>
-            {activeService === 'iphone_app' && (
+            {activeService === "iphone_app" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -396,8 +397,8 @@ const MobileAppDev = () => {
                   </div>
                 </div>
               </div>
-            )}{' '}
-            {activeService === 'iphone_mobile' && (
+            )}{" "}
+            {activeService === "iphone_mobile" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -433,12 +434,12 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'android_app' && (
+            {activeService === "android_app" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Android Mobile app development{' '}
+                      Android Mobile app development{" "}
                     </h3>
                     <p className="Title_para">
                       The App Ideas is one of the top Android Mobile app
@@ -469,12 +470,12 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'android_tablet' && (
+            {activeService === "android_tablet" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Android Tablet app development{' '}
+                      Android Tablet app development{" "}
                     </h3>
                     <p className="Title_para">
                       The App Ideas is one of the leading software development
@@ -503,7 +504,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'mobile_app' && (
+            {activeService === "mobile_app" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -542,7 +543,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'mobile_app_redesign' && (
+            {activeService === "mobile_app_redesign" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -577,7 +578,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'mobile_app_upgrade' && (
+            {activeService === "mobile_app_upgrade" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -610,7 +611,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'mobile_app_support' && (
+            {activeService === "mobile_app_support" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -645,7 +646,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
-            {activeService === 'crossplatform' && (
+            {activeService === "crossplatform" && (
               <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
@@ -676,7 +677,7 @@ const MobileAppDev = () => {
                       design and the best possible rates.
                     </p>
                     <p className="Title_para">
-                      Are you looking for the best cross-platform technology?{' '}
+                      Are you looking for the best cross-platform technology?{" "}
                       <br />
                       If Yes, then feel free to reach us.
                     </p>
@@ -701,10 +702,10 @@ const MobileAppDev = () => {
                   data-aos="flip-left"
                   data-aos-duration="1000"
                   className="technologies_box text-center"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   <img
-                    src={require('../../assets/images/MobileAppDev/technogies-img/obj-c-icon.png')}
+                    src={require("../../assets/images/MobileAppDev/technogies-img/obj-c-icon.png")}
                     alt="obj-c-icon"
                     className="img-fluid"
                   />
@@ -716,10 +717,10 @@ const MobileAppDev = () => {
                   data-aos="flip-right"
                   data-aos-duration="1000"
                   className="technologies_box text-center"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   <img
-                    src={require('../../assets/images/MobileAppDev/technogies-img/swift-icon.png')}
+                    src={require("../../assets/images/MobileAppDev/technogies-img/swift-icon.png")}
                     alt="swift-icon"
                     className="img-fluid"
                   />
@@ -731,10 +732,10 @@ const MobileAppDev = () => {
                   data-aos="flip-left"
                   data-aos-duration="1000"
                   className="technologies_box text-center"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   <img
-                    src={require('../../assets/images/MobileAppDev/technogies-img/java.png')}
+                    src={require("../../assets/images/MobileAppDev/technogies-img/java.png")}
                     alt="Java"
                     className="img-fluid"
                   />
@@ -746,10 +747,10 @@ const MobileAppDev = () => {
                   data-aos="flip-right"
                   data-aos-duration="1000"
                   className="technologies_box text-center"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   <img
-                    src={require('../../assets/images/MobileAppDev/technogies-img/kotlin.png')}
+                    src={require("../../assets/images/MobileAppDev/technogies-img/kotlin.png")}
                     alt="kotlin"
                     className="img-fluid"
                   />
@@ -761,10 +762,10 @@ const MobileAppDev = () => {
                   data-aos="flip-left"
                   data-aos-duration="1000"
                   className="technologies_box text-center"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   <img
-                    src={require('../../assets/images/MobileAppDev/technogies-img/react-native.png')}
+                    src={require("../../assets/images/MobileAppDev/technogies-img/react-native.png")}
                     alt="react-native"
                     className="img-fluid"
                   />
@@ -776,10 +777,10 @@ const MobileAppDev = () => {
                   data-aos="flip-right"
                   data-aos-duration="1000"
                   className="technologies_box text-center"
-                  style={{ cursor: 'pointer' }}
+                  style={{ cursor: "pointer" }}
                 >
                   <img
-                    src={require('../../assets/images/MobileAppDev/technogies-img/flutter.png')}
+                    src={require("../../assets/images/MobileAppDev/technogies-img/flutter.png")}
                     alt="flutter"
                     className="img-fluid"
                   />
@@ -810,13 +811,13 @@ const MobileAppDev = () => {
                   <div className="row">
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('shopping')}
+                      onClick={() => setActiveServe("shopping")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'shopping' &&
-                          'service__provide_tab_active'
+                          activeServe === "shopping" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -829,13 +830,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('health')}
+                      onClick={() => setActiveServe("health")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'health' &&
-                          'service__provide_tab_active'
+                          activeServe === "health" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -848,13 +849,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('education')}
+                      onClick={() => setActiveServe("education")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'education' &&
-                          'service__provide_tab_active'
+                          activeServe === "education" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -867,13 +868,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('banking')}
+                      onClick={() => setActiveServe("banking")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'banking' &&
-                          'service__provide_tab_active'
+                          activeServe === "banking" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -886,13 +887,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('travel')}
+                      onClick={() => setActiveServe("travel")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'travel' &&
-                          'service__provide_tab_active'
+                          activeServe === "travel" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img src={Travel} alt="travel" className="img-fluid" />
@@ -901,13 +902,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('food')}
+                      onClick={() => setActiveServe("food")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'food' &&
-                          'service__provide_tab_active'
+                          activeServe === "food" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img src={Food} alt="food-1-1" className="img-fluid" />
@@ -916,13 +917,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('socila_networking')}
+                      onClick={() => setActiveServe("socila_networking")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'socila_networking' &&
-                          'service__provide_tab_active'
+                          activeServe === "socila_networking" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -935,13 +936,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('lifestyle')}
+                      onClick={() => setActiveServe("lifestyle")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'lifestyle' &&
-                          'service__provide_tab_active'
+                          activeServe === "lifestyle" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -954,13 +955,13 @@ const MobileAppDev = () => {
                     </div>
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
-                      onClick={() => setActiveServe('real_estate')}
+                      onClick={() => setActiveServe("real_estate")}
                     >
                       <a
                         href="##"
                         className={`service__provide_tab ${
-                          activeServe === 'real_estate' &&
-                          'service__provide_tab_active'
+                          activeServe === "real_estate" &&
+                          "service__provide_tab_active"
                         }`}
                       >
                         <img
@@ -975,7 +976,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 </div>
-                {activeServe === 'shopping' && (
+                {activeServe === "shopping" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1014,7 +1015,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'health' && (
+                {activeServe === "health" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1055,7 +1056,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'education' && (
+                {activeServe === "education" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1097,7 +1098,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'banking' && (
+                {activeServe === "banking" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1138,7 +1139,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'travel' && (
+                {activeServe === "travel" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1179,7 +1180,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'food' && (
+                {activeServe === "food" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1220,7 +1221,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'socila_networking' && (
+                {activeServe === "socila_networking" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1264,7 +1265,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'lifestyle' && (
+                {activeServe === "lifestyle" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1305,7 +1306,7 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
-                {activeServe === 'real_estate' && (
+                {activeServe === "real_estate" && (
                   <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
@@ -1392,23 +1393,23 @@ const MobileAppDev = () => {
                   pauseOnMouseEnter: true,
                 }}
                 speed={2000}
-                direction={'horizontal'}
+                direction={"horizontal"}
                 pagination={{ clickable: true }}
                 // navigation
                 onSwiper={(swiper) => {
                   // Delay execution for the refs to be defined
                   setTimeout(() => {
                     // Override prevEl & nextEl now that refs are defined
-                    swiper.params.navigation.prevEl = prevRef.current
-                    swiper.params.navigation.nextEl = nextRef.current
+                    swiper.params.navigation.prevEl = prevRef.current;
+                    swiper.params.navigation.nextEl = nextRef.current;
 
                     // Re-init navigation
-                    swiper.navigation.destroy()
-                    swiper.navigation.init()
-                    swiper.navigation.update()
-                  })
+                    swiper.navigation.destroy();
+                    swiper.navigation.init();
+                    swiper.navigation.update();
+                  });
                 }}
-                style={{ padding: '2.5rem 0' }}
+                style={{ padding: "2.5rem 0" }}
               >
                 <SwiperSlide>
                   <Link
@@ -1418,18 +1419,18 @@ const MobileAppDev = () => {
                     <div className="row">
                       <div className="col-lg-5 col-md-12">
                         <img
-                          src={require('../../assets/images/work/2.webp')}
+                          src={require("../../assets/images/work/2.webp")}
                           style={{
-                            width: '100%',
-                            boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
-                            borderRadius: '10px',
-                            marginLeft: '10px',
+                            width: "100%",
+                            boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                            borderRadius: "10px",
+                            marginLeft: "10px",
                           }}
                         />
                       </div>
                       <div
                         className="col-lg-7 col-md-12"
-                        style={{ color: '#000' }}
+                        style={{ color: "#000" }}
                       >
                         <div className="dec">
                           Mindweel - On Demand Psychologist Hiring App
@@ -1474,18 +1475,18 @@ const MobileAppDev = () => {
                     <div className="row">
                       <div className="col-lg-5 col-md-12">
                         <img
-                          src={require('../../assets/images/work/bolt-app.webp')}
+                          src={require("../../assets/images/work/bolt-app.webp")}
                           style={{
-                            width: '100%',
-                            boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
-                            borderRadius: '10px',
-                            marginLeft: '10px',
+                            width: "100%",
+                            boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                            borderRadius: "10px",
+                            marginLeft: "10px",
                           }}
                         />
                       </div>
                       <div
                         className="col-lg-7 col-md-12"
-                        style={{ color: '#000' }}
+                        style={{ color: "#000" }}
                       >
                         <div className="dec">Bold Delivery</div>
                         <p>
@@ -1525,18 +1526,18 @@ const MobileAppDev = () => {
                     <div className="row">
                       <div className="col-lg-5 col-md-12">
                         <img
-                          src={require('../../assets/images/work/service-my-car.webp')}
+                          src={require("../../assets/images/work/service-my-car.webp")}
                           style={{
-                            width: '100%',
-                            boxShadow: '0px 0px 10px 0px rgb(154 154 154/75%)',
-                            borderRadius: '10px',
-                            marginLeft: '10px',
+                            width: "100%",
+                            boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
+                            borderRadius: "10px",
+                            marginLeft: "10px",
                           }}
                         />
                       </div>
                       <div
                         className="col-lg-7 col-md-12"
-                        style={{ color: '#000' }}
+                        style={{ color: "#000" }}
                       >
                         <div className="dec">Service my car</div>
                         <p>
@@ -1577,7 +1578,8 @@ const MobileAppDev = () => {
 
           <>
             {/* FAQ Section Start */}
-            <section className="accordion_section py-5">
+            <FAQ />
+            {/* <section className="accordion_section py-5">
               <div className="container">
                 <div className="Title">
                   <h3>Frequently Asked Questions</h3>
@@ -1639,7 +1641,7 @@ const MobileAppDev = () => {
                   </div>
                 </div>
               </div>
-            </section>
+            </section> */}
             {/* FAQ Section End */}
           </>
 
@@ -1651,7 +1653,7 @@ const MobileAppDev = () => {
         </>
       </>
     </>
-  )
-}
+  );
+};
 
-export default MobileAppDev
+export default MobileAppDev;

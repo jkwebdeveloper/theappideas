@@ -2,8 +2,15 @@ import { Country } from 'country-state-city'
 import React, { useEffect, useState } from 'react'
 import { AiFillCloseCircle } from 'react-icons/ai'
 import ReactModal from 'react-modal'
+import { useForm } from 'react-hook-form'
+import * as yup from 'yup'
+import {yupResolver} from '@hookform/resolvers/yup'
 
 const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
+  const { handleSubmit } = useForm()
+  const formSubmit = (data) => {
+    console.log(data)
+  }
   const [countries, setCountries] = useState([])
 
   useEffect(() => {
@@ -34,7 +41,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
               <h2>Contact us</h2>
             </div>
             <div className="contact_body">
-              <form>
+              <form onSubmit={handleSubmit(formSubmit)}>
                 <div className="mb-3">
                   <input
                     type="text"

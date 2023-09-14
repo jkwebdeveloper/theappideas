@@ -1,94 +1,52 @@
-import React, { useState, useEffect } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useState, useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { Helmet } from "react-helmet";
+import axios from "axios";
 
-// backgroundImage
-import Gogenus from '../assets/images/Portfolio/header-portflio/Gogenus-web.webp'
-import covid from '../assets/images/Portfolio/header-portflio/covid-BG.webp'
-import Human from '../assets/images/Portfolio/header-portflio/human-BG.webp'
-import paddock from '../assets/images/Portfolio/header-portflio/paddock-BG.webp'
-import resipsausa from '../assets/images/Portfolio/header-portflio/resipsausa-BG.webp'
-import purebody from '../assets/images/Portfolio/header-portflio/purebody-BG.webp'
-
-// DeviceImage
-import GogenusDevice from '../assets/images/Portfolio/header-portflio/Gogenus-Device.webp'
-import covidDevice from '../assets/images/Portfolio/header-portflio/covid-Device.webp'
-import HumanDevice from '../assets/images/Portfolio/header-portflio/human-Device.webp'
-import paddockDevice from '../assets/images/Portfolio/header-portflio/paddock-Device.webp'
-import resipsausaDevice from '../assets/images/Portfolio/header-portflio/resipsausa-Device.webp'
-import purebodyDevice from '../assets/images/Portfolio/header-portflio/purebody-Device.webp'
-import { Helmet } from 'react-helmet'
-
-const Data = [
-  {
-    id: 1,
-    image: GogenusDevice,
-    bg: Gogenus,
-    category: 'web',
-    projectName: 'Gogenus',
-    tags: ['PHP', 'Web development'],
-  },
-  {
-    id: 2,
-    image: covidDevice,
-    bg: covid,
-    category: 'Application',
-    projectName: 'Covid',
-    tags: ['Android App', 'IOS', 'Mobile Application Development'],
-  },
-  {
-    id: 3,
-    image: HumanDevice,
-    bg: Human,
-    category: 'web',
-    projectName: 'Human Perform',
-    tags: ['PHP', 'Web development'],
-  },
-  {
-    id: 4,
-    image: paddockDevice,
-    bg: paddock,
-    category: 'Application',
-    projectName: 'Paddock',
-    tags: ['Android App', 'Flutter', 'IOS', 'Mobile Application Development'],
-  },
-  {
-    id: 5,
-    image: resipsausaDevice,
-    bg: resipsausa,
-    category: 'e-com',
-    projectName: 'Resipsausa',
-    tags: ['E-Commerce', 'Hire Wordpress'],
-  },
-  {
-    id: 6,
-    image: purebodyDevice,
-    bg: purebody,
-    category: 'e-com',
-    projectName: 'Resipsausa',
-    tags: ['E-Commerce', 'Hire Wordpress'],
-  },
-]
 const PortFolio = () => {
-  const [items, setItems] = useState(Data)
+  const [portfolio, setPortFolios] = useState([]);
+  const [loading, setLoading] = useState(false);
+  const [filterdata, setFilterData] = useState([]);
+
+  const handleGetPortFolios = () => {
+    setLoading(true);
+    axios
+      .get("https://the-app-ideas.onrender.com/api/portfolio", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        setPortFolios(res.data.portfolioData);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetPortFolios();
+  }, []);
 
   const filterItem = (cateItem) => {
-    const updateItems = Data.filter((curElem) => {
-      return curElem.category === cateItem
-    })
+    console.log(cateItem);
+    const updateItems = portfolio.filter((curElem) => {
+      return curElem.category === cateItem;
+    });
 
-    setItems(updateItems)
-  }
+    setFilterData(updateItems);
+  };
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
-      <Helmet title='PORTFOLIO | THE APP IDEAS'/>
+      <Helmet title="PORTFOLIO | THE APP IDEAS" />
       <section
         className="blog__section"
-        style={{ paddingTop: '120px', paddingBottom: '40px' }}
+        style={{ paddingTop: "120px", paddingBottom: "40px" }}
       >
         {/* categories */}
         <div className="container">
@@ -115,7 +73,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="All"
                   aria-selected="true"
-                  onClick={() => setItems(Data)}
+                  onClick={() => setFilterData(portfolio)}
                 >
                   All
                 </div>
@@ -130,7 +88,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="Application"
                   aria-selected="false"
-                  onClick={() => filterItem('Application')}
+                  onClick={() => filterItem("Application")}
                 >
                   Mobile Application Development
                 </div>
@@ -145,7 +103,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="App-idea"
                   aria-selected="false"
-                  onClick={() => filterItem('web')}
+                  onClick={() => filterItem("web")}
                 >
                   Web development
                 </div>
@@ -160,7 +118,7 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="bussiness"
                   aria-selected="false"
-                  onClick={() => filterItem('e-com')}
+                  onClick={() => filterItem("e-com")}
                 >
                   E-commerce
                 </div>
@@ -178,352 +136,153 @@ const PortFolio = () => {
               role="tabpanel"
               aria-labelledby="ALL-tab"
             >
-              <div className="row">
-                {items.map((elem) => {
-                  const { id, image, bg, category, projectName, tags } = elem
-                  return (
-                    <div key={id} className="col-12 px-0 mb-4">
-                      <div
-                        data-aos="fade-up"
-                        className="work_head_box"
-                        style={{ backgroundImage: `url(${bg})` }}
-                      >
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="row w-100">
-                          <a href="#" className="work_head_box_link"></a>
-                          <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                            <a href="#" className="work_head_box_link"></a>
-                            <div className="work_head_lft">
-                              <a href="#" className="work_head_box_link">
-                                <h2>{projectName}</h2>
-                              </a>
-                              <ul className="ps-0">
+              {loading ? (
+                <div className="loading">Loading...</div>
+              ) : setPortFolios.length > 0 ? (
+                <div className="row">
+                  {filterdata.length > 0
+                    ? filterdata.map((elem) => {
+                        const { _id, image, bgImage, tags, title } = elem;
+                        return (
+                          <div key={_id} className="col-12 px-0 mb-4">
+                            <div
+                              data-aos="fade-up"
+                              className="work_head_box"
+                              style={{
+                                backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                              }}
+                            >
+                              <a href="#" className="work_head_box_link"></a>
+                              <div className="row w-100">
                                 <a href="#" className="work_head_box_link"></a>
-                                {tags.map((tag) => {
-                                  return (
-                                    <li>
+                                <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                                  <a
+                                    href="#"
+                                    className="work_head_box_link"
+                                  ></a>
+                                  <div className="work_head_lft">
+                                    <a href="#" className="work_head_box_link">
+                                      <h2>{title}</h2>
+                                    </a>
+                                    <ul className="ps-0">
                                       <a
                                         href="#"
                                         className="work_head_box_link"
-                                      >
-                                        {' '}
-                                      </a>
-                                      <a href="#" className="work_head_item">
-                                        {tag}
-                                      </a>
-                                    </li>
-                                  )
-                                })}
-                              </ul>
+                                      ></a>
+                                      {tags.map((tag) => {
+                                        return (
+                                          <li key={tag}>
+                                            <a
+                                              href="#"
+                                              className="work_head_box_link"
+                                            >
+                                              {" "}
+                                            </a>
+                                            <a
+                                              href="#"
+                                              className="work_head_item"
+                                            >
+                                              {tag}
+                                            </a>
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                                  <div className="work_head_rht">
+                                    <img
+                                      data-aos="fade-left"
+                                      src={"https://the-app-ideas.onrender.com".concat(
+                                        image
+                                      )}
+                                      alt={title}
+                                      className="img-fluid"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
                             </div>
                           </div>
-                          <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                            <div className="work_head_rht">
-                              <img
-                                data-aos="fade-left"
-                                src={image}
-                                alt={projectName}
-                                className="img-fluid"
-                              />
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                })}
-                {/* <div className="col-12 px-0 mb-4">
-                  <div
-                    className="work_head_box"
-                    style={{ backgroundImage: `url(${bg1})` }}
-                  >
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>Gogenus </h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
+                        );
+                      })
+                    : portfolio.map((elem) => {
+                        const { _id, image, bgImage, tags, title } = elem;
+                        return (
+                          <div key={_id} className="col-12 px-0 mb-4">
+                            <div
+                              data-aos="fade-up"
+                              className="work_head_box"
+                              style={{
+                                backgroundImage: `url(https://the-app-ideas.onrender.com${bgImage})`,
+                              }}
+                            >
                               <a href="#" className="work_head_box_link"></a>
-                              <a href="#" className="work_head_item">
-                                PHP
-                              </a>
-                            </li>
-                            <li>
-                              <a href="#" className="work_head_item">
-                                Web development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={img1}
-                            alt="port-mobile-app-mobile-two"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-            <div
-              className="tab-pane fade"
-              id="Application"
-              role="tabpanel"
-              aria-labelledby="Application-tab"
-            >
-              <div className="row">
-                {/* <div className="col-12 px-0 mb-4">
-                  <div className="work_head_box port_mobilebg_two">
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>We Party </h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
-                              <a href="#" className="work_head_box_link">
-                                {" "}
-                              </a>
-                              <a href="#" className="work_head_item">
-                                Mobile Application Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={require("../assets/images/Portfolio/port-mobile-app-mobile-two.webp")}
-                            alt="port-mobile-app-mobile-two"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
+                              <div className="row w-100">
+                                <a href="#" className="work_head_box_link"></a>
+                                <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
+                                  <a
+                                    href="#"
+                                    className="work_head_box_link"
+                                  ></a>
+                                  <div className="work_head_lft">
+                                    <a href="#" className="work_head_box_link">
+                                      <h2>{title}</h2>
+                                    </a>
+                                    <ul className="ps-0">
+                                      <a
+                                        href="#"
+                                        className="work_head_box_link"
+                                      ></a>
+                                      {tags.map((tag) => {
+                                        return (
+                                          <li key={tag}>
+                                            <a
+                                              href="#"
+                                              className="work_head_box_link"
+                                            >
+                                              {" "}
+                                            </a>
+                                            <a
+                                              href="#"
+                                              className="work_head_item"
+                                            >
+                                              {tag}
+                                            </a>
+                                          </li>
+                                        );
+                                      })}
+                                    </ul>
+                                  </div>
+                                </div>
+                                <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
+                                  <div className="work_head_rht">
+                                    <img
+                                      data-aos="fade-left"
+                                      src={"https://the-app-ideas.onrender.com".concat(
+                                        image
+                                      )}
+                                      alt={title}
+                                      className="img-fluid"
+                                    />
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        );
+                      })}
                 </div>
-                <div className="col-12 px-0 mb-4">
-                  <div className="work_head_box port_mobilebg_tan">
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>Kurita</h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
-                              <a href="#" className="work_head_box_link">
-                                {" "}
-                              </a>
-                              <a href="#" className="work_head_item">
-                                Mobile Application Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={require("../assets/images/Portfolio/port-mobile-app-mobile-tan.webp")}
-                            alt="port-mobile-app-mobile-tan"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-            <div
-              className="tab-pane fade"
-              id="web"
-              role="tabpanel"
-              aria-labelledby="web-tab"
-            >
-              <div className="row">
-                {/* <div className="col-12 px-0 mb-4">
-                  <div className="work_head_box port_mobilebg_eleven">
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>Iwelli – User</h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
-                              <a href="#" className="work_head_box_link">
-                                {" "}
-                              </a>
-                              <a href="#" className="work_head_item">
-                                Mobile Application Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={require("../assets/images/Portfolio/port-mobile-app-mobile-eleven.webp")}
-                            alt="port-mobile-app-mobile-eleven"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 px-0 mb-4">
-                  <div className="work_head_box port_mobilebg_twelve">
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>Iwelli – Dr</h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
-                              <a href="#" className="work_head_box_link">
-                                {" "}
-                              </a>
-                              <a href="#" className="work_head_item">
-                                Mobile Application Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={require("../assets/images/Portfolio/port-mobile-app-mobile-twelve.webp")}
-                            alt="port-mobile-app-mobile-twelve"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
-            </div>
-            <div
-              className="tab-pane fade"
-              id="e-commerce"
-              role="tabpanel"
-              aria-labelledby="e-commerce-tab"
-            >
-              <div className="row">
-                {/* <div className="col-12 px-0 mb-4">
-                  <div className="work_head_box port_mobilebg_thirteen">
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>Human Perform</h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
-                              <a href="#" className="work_head_box_link">
-                                {" "}
-                              </a>
-                              <a href="#" className="work_head_item">
-                                Mobile Application Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={require("../assets/images/Portfolio/port-mobile-app-mobile-thirteen.webp")}
-                            alt="port-mobile-app-mobile-thirteen"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div className="col-12 px-0 mb-4">
-                  <div className="work_head_box port_mobilebg_fourteen">
-                    <a href="#" className="work_head_box_link"></a>
-                    <div className="row w-100">
-                      <a href="#" className="work_head_box_link"></a>
-                      <div className="col-sm-12 col-md-6 order-2 order-sm-2 order-md-1">
-                        <a href="#" className="work_head_box_link"></a>
-                        <div className="work_head_lft">
-                          <a href="#" className="work_head_box_link">
-                            <h2>Chefclub</h2>
-                          </a>
-                          <ul className="ps-0">
-                            <a href="#" className="work_head_box_link"></a>
-                            <li>
-                              <a href="#" className="work_head_box_link">
-                                {" "}
-                              </a>
-                              <a href="#" className="work_head_item">
-                                Mobile Application Development
-                              </a>
-                            </li>
-                          </ul>
-                        </div>
-                      </div>
-                      <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
-                        <div className="work_head_rht">
-                          <img
-                            src={require("../assets/images/Portfolio/port-mobile-app-mobile-forteen.webp")}
-                            alt="port-mobile-app-mobile-thirteen"
-                            className="img-fluid"
-                          />
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div> */}
-              </div>
+              ) : (
+                <div>no data</div>
+              )}
             </div>
           </div>
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default PortFolio
+export default PortFolio;

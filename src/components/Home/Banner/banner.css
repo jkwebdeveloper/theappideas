@@ -26,11 +26,12 @@
   margin-right: 40px;
   font-size: 30px;
   font-weight: bold;
+  margin-bottom: 0px;
 }
 .slider-dec {
   color: #fff;
   /* margin-right: 10px; */
-  font-size: 20px;
+  /* font-size: 20px; */
   font-family: sans-serif;
   text-align: justify;
 }
@@ -57,6 +58,13 @@
   color: #000 !important;
   max-width: 150px;
 }
+
+/* .loading_bar{
+  text-align: center;
+  width: 50px;
+  height: 50px;
+  left: 50%;
+} */
 @media only screen and (max-width: 991px) {
   .slider-img img {
     display: none;

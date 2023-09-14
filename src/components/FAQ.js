@@ -1,66 +1,41 @@
-import { React, useState } from "react";
+import axios from "axios";
+import { React, useEffect, useState } from "react";
 import { BiMinusCircle } from "react-icons/bi";
 import { BiPlusCircle } from "react-icons/bi";
 
 const FAQ = () => {
-  const [selected, setSelected] = useState(null);
+  // const [selected, setSelected] = useState(null);
+  const [loading, setLoading] = useState(false)
+  const [faqs, setFaqs] = useState([])
+  const [faqId, setFaqId] = useState(null)
+
+  const handleGetFaqs = () => {
+    setLoading(true)
+    axios.get('https://the-app-ideas.onrender.com/api/faqs', {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    })
+    .then((res) => {
+      setFaqs(res.data.content)
+      setLoading(false)
+    })
+    .catch((err) => {
+      setLoading(false)
+    })
+  }
+  useEffect(() => {
+    handleGetFaqs()
+  }, [])
 
   const toggle = (i) => {
-    if (selected === i) {
-      return setSelected(null);
+    if (faqId === i) {
+      return setFaqId(null);
     }
-    setSelected(i);
+    setFaqId(i);
   };
-  const data = [
-    {
-      id: 1,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 2,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 3,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 4,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 5,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 6,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 7,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-    {
-      id: 8,
-      question: "What Are the Different Types of Mobile Apps You Can Develop?",
-      answer:
-        "Applications may be developed for mobile devices running  both the Android and iOS operating systems. Customers,employees, or even vendors may promote certain apps for use.",
-    },
-  ];
+
+
   return (
     <section className="accordion_section py-5">
       <div className="container">
@@ -69,13 +44,13 @@ const FAQ = () => {
         </div>
         <div className="row mt-5">
           <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-            {data.slice(0, 4).map((item) => (
-              <div className="accordion" key={item.id}>
+            {faqs.slice(0, Math.ceil(faqs.length / 2)).map((item, ) => (
+              <div className="accordion" key={item.question}>
                 <div className="item">
-                  <h2 className="title" onClick={() => toggle(item.id)}>
+                  <h2 className="title" onClick={() => {toggle(item.question)}}>
                     {item.question}
                     <span style={{ margin: "10px" }}>
-                      {selected === item.id ? (
+                      {faqId ===item.question  ? (
                         <BiMinusCircle size={30} />
                       ) : (
                         <BiPlusCircle size={30} />
@@ -85,7 +60,7 @@ const FAQ = () => {
                 </div>
                 <div
                   className={
-                    selected === item.id
+                    faqId === item.question
                       ? "accordion_content show"
                       : "accordion_content"
                   }
@@ -96,13 +71,13 @@ const FAQ = () => {
             ))}
           </div>
           <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-            {data.slice(4, 8).map((item, i) => (
-              <div className="accordion" key={item.id}>
+            {faqs.slice(Math.ceil(faqs.length / 2) , faqs.length).map((item, ) => (
+              <div className="accordion" key={item.question}>
                 <div className="item">
-                  <h2 className="title" onClick={() => toggle(item.id)}>
+                  <h2 className="title"onClick={() => {toggle(item.question)}}>
                     {item.question}
                     <span style={{ margin: "10px" }}>
-                      {selected === item.id ? (
+                      {faqId === item.question? (
                         <BiMinusCircle size={30} />
                       ) : (
                         <BiPlusCircle size={30} />
@@ -112,7 +87,7 @@ const FAQ = () => {
                 </div>
                 <div
                   className={
-                    selected === item.id
+                    faqId === item.question
                       ? "accordion_content show"
                       : "accordion_content"
                   }

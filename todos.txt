@@ -4,3 +4,508 @@ MLM Website & Mobile App Solution Page Pending
 2) SiteMap -> Other Services
 Enterprise App Development Page Pending
 
+<div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={260}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#3366ff"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={DigitalExecutive}
+                      alt="bussness-development"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={Executive}
+                        alt="bussness-development-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>Digital marketing Executive</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span">2+ years</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">-</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <a
+                      href="#"
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#business"
+                      // onClick={handleShow}
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={260}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#ff3399"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={Business}
+                      alt="bussness-development"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={development}
+                        alt="bussness-development-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>Business Development Executive</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span">1 to 3 years</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">-</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <Link
+                      to="/career-application"
+                      onClick={() => {
+                        window.scrollTo({ top: 0, behavior: "smooth" });
+                      }}
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#business"
+                      // onClick={handleShow}
+                      target="_blank"
+                    >
+                      Apply Now
+                    </Link>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={260}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#6600cc"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={srBusiness}
+                      alt="bussness-development"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={srdevelopment}
+                        alt="bussness-development-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>Sr. Business Development Executive</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span"> 5+ years</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">-</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <a
+                      href="#"
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#business"
+                      // onClick={handleShow}
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={260}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#ff6699"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={exBusiness}
+                      alt="bussness-development"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={exdevelopment}
+                        alt="bussness-development-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>Business Development Executive(Fresher)</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span">Fresher to 2 Years</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">-</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <a
+                      href="#"
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#business"
+                      // onClick={handleShow}
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={260}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#61dbfb"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={react}
+                      alt="react-native"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={native}
+                        alt="react-native-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>React Native Development</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span">2 to 4 Years</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">01</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <a
+                      href="#"
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#reactnative"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={250}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#0468d7"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={Flutter}
+                      alt="flutter-logo"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={Developer}
+                        alt="flutter-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>Flutter Developer</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span">1-3 Year</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">06</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <a
+                      href="#"
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#flutterdeveloper"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>
+            <div
+              data-aos="fade-up"
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6 career_main_card"
+            >
+              <div className="career__card">
+                <div className="career__shap">
+                  <div className="carrer__img">
+                    <svg
+                      width={72}
+                      height={250}
+                      viewBox="0 0 72 250"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        fillRule="evenodd"
+                        clipRule="evenodd"
+                        d="M72 7.81748C72 1.96277 65.6409 -1.80866 60.3156 0.887694L4.31565 29.2419C1.66417 30.5843 0 33.2566 0 36.1716V250L70.9504 105.688C71.6413 104.283 72 102.744 72 101.186V7.81748Z"
+                        fill="#ff00ff"
+                      />
+                    </svg>
+                  </div>
+                  <div className="carrer__icon">
+                    <img
+                      src={Designer}
+                      alt="flutter-logo"
+                      className="img-fluid"
+                      style={{ width: "90%" }}
+                    />
+                  </div>
+                </div>
+                <div className="career__content">
+                  <div className="career__content__respo">
+                    <div className="carrer__icon_respo">
+                      <img
+                        src={Graphics}
+                        alt="flutter-icon"
+                        className="img-fluid"
+                        style={{ width: "90%" }}
+                      />
+                    </div>
+                    <div className="carrer_text_respo">
+                      <h2>Graphics Designer (Fresher)</h2>
+                    </div>
+                  </div>
+                  <ul>
+                    <li>
+                      <span className="lft_span">Experience:</span>{" "}
+                      <span className="rht_span">Fresher to 1 year</span>
+                    </li>
+                    <li>
+                      <span className="lft_span">Position:</span>{" "}
+                      <span className="rht_span">06</span>
+                    </li>
+                  </ul>
+                  <div className="text-end">
+                    <a
+                      href="#"
+                      className="apply_btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#flutterdeveloper"
+                    >
+                      Apply Now
+                    </a>
+                  </div>
+                </div>
+              </div>
+              {/* Modal */}
+
+              {/* Modal */}
+            </div>

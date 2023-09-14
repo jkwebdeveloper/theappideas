@@ -1,27 +1,78 @@
-import React from 'react'
-import { BsTelephoneFill } from 'react-icons/bs'
-import { FaRegDotCircle } from 'react-icons/fa'
-import { MdLocationPin } from 'react-icons/md'
-import { HiOutlineMail } from 'react-icons/hi'
-import { Helmet } from 'react-helmet'
+import React, { useState } from "react";
+import { BsTelephoneFill } from "react-icons/bs";
+import { FaRegDotCircle } from "react-icons/fa";
+import { MdLocationPin } from "react-icons/md";
+import { HiOutlineMail } from "react-icons/hi";
+import { Helmet } from "react-helmet";
+import { BiErrorCircle } from "react-icons/bi";
+import { useFormik } from "formik";
+import { careerApplySchema } from "./schemas";
+import axios from "axios";
+
+const initialValues = {
+  fullName: "",
+  email: "",
+  phoneNumber: "",
+  totalExperience: "",
+  cv: "",
+};
 
 const CareerApply = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handlePost = (values) => {
+    setLoading(true);
+    // console.log(values.cv)
+    const formData = new FormData()
+    formData.append('fullName',values.fullName)
+    formData.append('email',values.email)
+    formData.append('phoneNumber',values.phoneNumber)
+    formData.append('totalExperience',values.totalExperience)
+    formData.append('cv',values.cv)
+
+    axios("https://the-app-ideas.onrender.com/api/career", {
+      method: "post",
+      data: formData,
+      headers: {
+        "Content-Type": "multipart/form-data",
+      },
+    })
+      .then((res) => {
+        console.log(res.data);
+        setLoading(false)
+      })
+      .catch((err) => {
+        console.log(err.data);
+        setLoading(false)
+      });
+  };
+
+  const { values, errors, touched, handleBlur, handleChange, handleSubmit, setFieldValue } =
+    useFormik({
+      initialValues: initialValues,
+      validationSchema: careerApplySchema,
+      onSubmit: (values, action) => {
+        // console.log(values);
+        handlePost(values)
+        // action.resetForm();
+      },
+    });
   return (
     <>
-    <Helmet title='The App Ideas Careers Application'/>
+      <Helmet title="The App Ideas Careers Application" />
       <section className="carrer_banner">
         <div className="carrer_banner_content">
           <h1>Business Development Executive</h1>
           <div className="career_location">
             <i>
-              <MdLocationPin />{' '}
+              <MdLocationPin />{" "}
             </i>
 
             <span>Ahmedabad</span>
           </div>
           <div className="carrer__content">
             <p>
-              {' '}
+              {" "}
               <strong>
                 5 days a week and we are allowing work from home for a permanent
                 basis.
@@ -159,49 +210,154 @@ const CareerApply = () => {
           <div className="row">
             <div className="col-12">
               <div className="career_mdl_rht">
-                <form action="">
+                <form onSubmit={handleSubmit}>
                   <div className="hover_color_bubble" />
                   <div className="mb-3">
                     <input
                       type="text"
+                      name="fullName"
                       className="form-control"
                       placeholder="Full Name*"
+                      id="rfrom"
+                      value={values.fullName}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    <span
+                      className="error"
+                      style={{ color: "red", fontSize: "14px" }}
+                    >
+                      {errors.fullName}
+                    </span>
+                    {errors.fullName && touched.fullName ? (
+                      <BiErrorCircle
+                        style={{
+                          float: "right",
+                          marginTop: "5px",
+                          color: "red",
+                        }}
+                      />
+                    ) : null}
                   </div>
                   <div className="mb-3">
                     <input
-                      type="mail"
+                      type="email"
+                      name="email"
                       className="form-control"
                       placeholder="Email* "
+                      value={values.email}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    <span
+                      className="error"
+                      style={{ color: "red", fontSize: "14px" }}
+                    >
+                      {errors.email}
+                    </span>
+                    {errors.email && touched.email ? (
+                      <BiErrorCircle
+                        style={{
+                          float: "right",
+                          marginTop: "5px",
+                          color: "red",
+                        }}
+                      />
+                    ) : null}
                   </div>
                   <div className="mb-3">
                     <input
                       type="number"
                       className="form-control"
+                      pattern="[0-9()-\s]{10,14}"
                       placeholder="Phone Number*"
+                      aria-label="Phone Number"
+                      name="phoneNumber"
+                      maxLength="13"
+                      value={values.phoneNumber}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    <span
+                      className="error"
+                      style={{ color: "red", fontSize: "14px" }}
+                    >
+                      {errors.phoneNumber}
+                    </span>
+                    {errors.phoneNumber && touched.phoneNumber ? (
+                      <BiErrorCircle
+                        style={{
+                          float: "right",
+                          marginTop: "5px",
+                          color: "red",
+                        }}
+                      />
+                    ) : null}
                   </div>
                   <div className="mb-3">
                     <input
                       type="number"
                       className="form-control"
-                      placeholder="Total Experience In Years*"
+                      placeholder="Total Experince In Years"
+                      aria-label="totalExperience"
+                      name="totalExperience"
+                      value={values.totalExperience}
+                      onChange={handleChange}
+                      onBlur={handleBlur}
                     />
+                    <span
+                      className="error"
+                      style={{ color: "red", fontSize: "14px" }}
+                    >
+                      {errors.totalExperience}
+                    </span>
+                    {errors.totalExperience && touched.totalExperience ? (
+                      <BiErrorCircle
+                        style={{
+                          float: "right",
+                          marginTop: "5px",
+                          color: "red",
+                        }}
+                      />
+                    ) : null}
                   </div>
-                  <div className="upload-btn-wrapper mb-3">
+                  <div className="upload-btn-wrapper">
                     <button type="button" className="Upload_Btn">
                       Upload Resume
                     </button>
                     <input
                       type="file"
-                      style={{ cursor: 'pointer' }}
-                      name="resume"
+                      style={{ cursor: "pointer" }}
+                      name="cv"
+                      // value={values.cv}
+                      // onChange={handleChange}
+                      onChange={e => {
+                        setFieldValue("cv",e.target.files[0])
+                      }}
+                      onBlur={handleBlur}
+                      accept="application/pdf"
                     />
+                    
                   </div>
-                  <div className="mb-3 text-end">
-                    <button type="button" className="submit_btn">
-                      Submit
+                  <span
+                    className="error"
+                    style={{ color: "red", fontSize: "14px" }}
+                  >
+                    {errors.cv}
+                  </span>
+                  {errors.cv && touched.cv ? (
+                    <BiErrorCircle
+                      style={{
+                        float: "right",
+                        marginTop: "5px",
+                        color: "red",
+                      }}
+                    />
+                  ) : null}
+                  <div className="mb-3 mt-3 text-end">
+                    <button type="submit" className="submit_btn">
+                      {loading ? "loading..." : "submit"}
+                      {/* Submit */}
                     </button>
                   </div>
                 </form>
@@ -211,7 +367,7 @@ const CareerApply = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default CareerApply
+export default CareerApply;

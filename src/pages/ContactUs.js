@@ -1,49 +1,82 @@
-import React, { useRef, useState } from 'react'
-import { BsSkype } from 'react-icons/bs'
-import { BsWhatsapp } from 'react-icons/bs'
-import { GoMail } from 'react-icons/go'
-import { BsFillTelephoneFill } from 'react-icons/bs'
-import { RiFacebookFill } from 'react-icons/ri'
-import { BsTwitter } from 'react-icons/bs'
-import { FaLinkedinIn } from 'react-icons/fa'
-import { AiFillYoutube } from 'react-icons/ai'
-import { BsDribbble } from 'react-icons/bs'
-import { BsInstagram } from 'react-icons/bs'
-import { FaPinterestP } from 'react-icons/fa'
-import { AiOutlineBehance } from 'react-icons/ai'
-import { Helmet } from 'react-helmet'
-import { Country } from 'country-state-city'
-import { useEffect } from 'react'
-import { Formik } from 'formik'
-import * as yup from 'yup'
-import { BiErrorCircle } from 'react-icons/bi'
+import React, { useRef, useState } from "react";
+import { BsSkype } from "react-icons/bs";
+import { BsWhatsapp } from "react-icons/bs";
+import { GoMail } from "react-icons/go";
+import { BsFillTelephoneFill } from "react-icons/bs";
+import { RiFacebookFill } from "react-icons/ri";
+import { BsTwitter } from "react-icons/bs";
+import { FaLinkedinIn } from "react-icons/fa";
+import { AiFillYoutube } from "react-icons/ai";
+import { BsDribbble } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+import { FaPinterestP } from "react-icons/fa";
+import { AiOutlineBehance } from "react-icons/ai";
+import { Helmet } from "react-helmet";
+import { Country } from "country-state-city";
+import { useEffect } from "react";
+import { Formik } from "formik";
+import * as yup from "yup";
+import { BiErrorCircle } from "react-icons/bi";
+import axios from "axios";
 
 const ContactUs = () => {
+  const [loading, setLoading] = useState(false);
+
+  const handlePost = (values) => {
+    setLoading(true);
+    axios("https://the-app-ideas.onrender.com/api/contact", {
+      method: "post",
+      data: {
+        name: values.name,
+        email: values.email,
+        phoneNumber: values.phone,
+        skypeId: values.skypeId,
+        budget: values.budget,
+        country: values.country,
+        projectRequirement: values.projectReq,
+      },
+      headers: {
+        "Content-Type": "application/json",
+      },
+    })
+      .then((res) => {
+        console.log(res.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        console.log(err);
+        setLoading(false);
+      });
+  };
+
   // const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const ContactSchema = yup.object().shape({
-    name: yup.string().required('This field is required !'),
+    name: yup.string().required("This field is required !"),
     email: yup
       .string()
-      .email('Invalid email')
-      .required('This field is required'),
+      .email("Invalid email")
+      .required("This field is required"),
     phone: yup
       .number()
       // .matches(phoneRegExp, 'phone is invalid')
-      .required('This field is required'),
-    projectReq: yup.string().required('This field is required'),
-  })
-  const formref = useRef(null)
-  const [countries, setCountries] = useState([])
+      .required("This field is required"),
+    projectReq: yup.string().required("This field is required"),
+    skypeId: yup.string().required("This field is required"),
+    country: yup.string().required("This field is required !"),
+  });
+  const formref = useRef(null);
+  const [countries, setCountries] = useState([]);
 
   useEffect(() => {
-    setCountries(Country.getAllCountries())
-  }, [])
+    setCountries(Country.getAllCountries());
+  }, []);
+
   return (
     <>
       <Helmet title="Contact Us - THE APP IDEAS" />
       <section
         className="blog__section"
-        style={{ paddingTop: '23px', paddingBottom: '70px' }}
+        style={{ paddingTop: "23px", paddingBottom: "70px" }}
       ></section>
       <section className="py-5">
         <div className="header-top-bg"></div>
@@ -54,22 +87,19 @@ const ContactUs = () => {
                 <h2>Get in touch with us</h2>
                 <Formik
                   initialValues={{
-                    name: '',
-                    email: '',
-                    phone: '',
-                    projectReq: '',
+                    name: "",
+                    email: "",
+                    phone: "",
+                    skypeId: "",
+                    projectReq: "",
+                    country: "",
+                    budget: "",
                   }}
                   validationSchema={ContactSchema}
                   onSubmit={(values, action) => {
-                    console.log(values)
-                    action.resetForm()
-                    // toast.success(
-                    //   'Thanks, your message is sent successfully.',
-                    //   {
-                    //     position: 'bottom-center',
-                    //     theme: 'dark',
-                    //   },
-                    // )
+                    console.log(action);
+                    handlePost(values);
+                    action.resetForm();
                   }}
                 >
                   {(formik) => (
@@ -94,16 +124,16 @@ const ContactUs = () => {
                           />
                           <span
                             className="error"
-                            style={{ color: '#fff', fontSize: '14px' }}
+                            style={{ color: "#fff", fontSize: "14px" }}
                           >
                             {formik.errors.name}
                           </span>
                           {formik.errors.name ? (
                             <BiErrorCircle
                               style={{
-                                float: 'right',
-                                marginTop: '5px',
-                                color: '#fff',
+                                float: "right",
+                                marginTop: "5px",
+                                color: "#fff",
                               }}
                             />
                           ) : null}
@@ -121,54 +151,110 @@ const ContactUs = () => {
                           />
                           <span
                             className="error"
-                            style={{ color: '#fff', fontSize: '14px' }}
+                            style={{ color: "#fff", fontSize: "14px" }}
                           >
                             {formik.errors.email}
                           </span>
                           {formik.errors.name ? (
                             <BiErrorCircle
                               style={{
-                                float: 'right',
-                                marginTop: '5px',
-                                color: '#fff',
+                                float: "right",
+                                marginTop: "5px",
+                                color: "#fff",
                               }}
                             />
                           ) : null}
                         </div>
                         <div className="col-sm-6 mt-4">
                           <input
-                            type="email"
+                            type="text"
+                            name="skypeId"
                             className="form-control"
                             placeholder="skype ID"
                             aria-label="skype ID"
+                            value={formik.values.skypeId}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                           />
+                          <span
+                            className="error"
+                            style={{ color: "#fff", fontSize: "14px" }}
+                          >
+                            {formik.errors.skypeId}
+                          </span>
+                          {formik.errors.name ? (
+                            <BiErrorCircle
+                              style={{
+                                float: "right",
+                                marginTop: "5px",
+                                color: "#fff",
+                              }}
+                            />
+                          ) : null}
                         </div>
                         <div className="col-sm-6 h-100 mt-4">
                           <select
                             className="form-select"
-                            style={{ width: '100%', padding: '6px' }}
+                            style={{ width: "100%", padding: "6px" }}
+                            name="budget"
+                            value={formik.values.budget}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
                           >
-                            <option selected="">Budget</option>
-                            <option value={1}>Less Than 1000</option>
-                            <option value={2}>1001 - 3000 USD</option>
-                            <option value={2}>3001 - 5000 USD</option>
-                            <option value={2}>5001 - 10000 USD</option>
-                            <option value={2}>More Than 10000 USD</option>
+                            <option label="Budget">Budget</option>
+                            <option>Less Than 1000</option>
+                            <option>1001 - 3000 USD</option>
+                            <option>3001 - 5000 USD</option>
+                            <option>5001 - 10000 USD</option>
+                            <option>More Than 10000 USD</option>
+                            <span
+                              className="error"
+                              style={{ color: "#fff", fontSize: "14px" }}
+                            >
+                              {formik.errors.budget}
+                            </span>
+                            {formik.errors.name ? (
+                              <BiErrorCircle
+                                style={{
+                                  float: "right",
+                                  marginTop: "5px",
+                                  color: "#fff",
+                                }}
+                              />
+                            ) : null}
                           </select>
                         </div>
                         <div className="col-sm-6 h-100 select__country mt-4">
                           <select
                             className="select2 w-100 h-100"
-                            style={{ width: '100%', padding: '6px' }}
+                            style={{ width: "100%", padding: "6px" }}
+                            onChange={formik.handleChange}
+                            onBlur={formik.handleBlur}
+                            name="country"
                           >
                             <option label="Country"></option>
-                            {countries.map((counry) => (
+                            {countries.map((country) => (
                               <option
-                                value={counry.name}
-                                label={counry.name}
-                                key={counry.name}
+                                value={country.name}
+                                label={country.name}
+                                key={country.name}
                               />
                             ))}
+                            <span
+                              className="error"
+                              style={{ color: "#fff", fontSize: "14px" }}
+                            >
+                              {formik.errors.country}
+                            </span>
+                            {formik.errors.name ? (
+                              <BiErrorCircle
+                                style={{
+                                  float: "right",
+                                  marginTop: "5px",
+                                  color: "#fff",
+                                }}
+                              />
+                            ) : null}
                           </select>
                         </div>
                         <div className="col-sm-6 mt-4">
@@ -186,16 +272,16 @@ const ContactUs = () => {
                           />
                           <span
                             className="error"
-                            style={{ color: '#fff', fontSize: '14px' }}
+                            style={{ color: "#fff", fontSize: "14px" }}
                           >
                             {formik.errors.phone}
                           </span>
                           {formik.errors.phone ? (
                             <BiErrorCircle
                               style={{
-                                float: 'right',
-                                marginTop: '5px',
-                                color: '#fff',
+                                float: "right",
+                                marginTop: "5px",
+                                color: "#fff",
                               }}
                             />
                           ) : null}
@@ -206,7 +292,6 @@ const ContactUs = () => {
                             id="exampleFormControlTextarea1"
                             rows={5}
                             placeholder="Project Requirement*"
-                            defaultValue={''}
                             name="projectReq"
                             value={formik.values.projectReq}
                             onChange={formik.handleChange}
@@ -214,23 +299,24 @@ const ContactUs = () => {
                           />
                           <span
                             className="error"
-                            style={{ color: '#fff', fontSize: '14px' }}
+                            style={{ color: "#fff", fontSize: "14px" }}
                           >
-                            {formik.errors.phone}
+                            {formik.errors.projectReq}
                           </span>
-                          {formik.errors.phone ? (
+                          {formik.errors.projectReq ? (
                             <BiErrorCircle
                               style={{
-                                float: 'right',
-                                marginTop: '5px',
-                                color: '#fff',
+                                float: "right",
+                                marginTop: "5px",
+                                color: "#fff",
                               }}
                             />
                           ) : null}
                         </div>
+
                         <div className="col-sm-12 text-center mt-4">
-                          <button type="submit" className="request__btn" on>
-                            Submit
+                          <button type="submit" className="request__btn">
+                            {loading ? "loading..." : "submit"}
                           </button>
                         </div>
                       </div>
@@ -242,7 +328,7 @@ const ContactUs = () => {
             <div className="col-12 col-md-12 col-lg-4">
               <div
                 className="other_contact_conection text-center"
-                style={{ padding: '11px' }}
+                style={{ padding: "11px" }}
               >
                 <h4>Other ways to connect</h4>
                 <p>
@@ -250,19 +336,19 @@ const ContactUs = () => {
                 </p>
                 <div className="contact__with__social">
                   <a href="skype:chirag4141">
-                    <BsSkype style={{ marginRight: '15px' }} />
+                    <BsSkype style={{ marginRight: "15px" }} />
                     skype
                   </a>
                   <a href="https://api.whatsapp.com/send?phone=918866564279">
-                    <BsWhatsapp style={{ marginRight: '15px' }} />
+                    <BsWhatsapp style={{ marginRight: "15px" }} />
                     Whatsapp
                   </a>
                   <a href="mailto:contact@theappideas.com">
-                    <GoMail style={{ marginRight: '15px' }} />
+                    <GoMail style={{ marginRight: "15px" }} />
                     Email
                   </a>
                   <a href="tel:+918866564279">
-                    <BsFillTelephoneFill style={{ marginRight: '15px' }} />
+                    <BsFillTelephoneFill style={{ marginRight: "15px" }} />
                     Phone
                   </a>
                 </div>
@@ -299,7 +385,7 @@ const ContactUs = () => {
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
