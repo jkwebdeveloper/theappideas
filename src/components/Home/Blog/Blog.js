@@ -6,6 +6,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [blogs, setBlogs] = useState([]);
@@ -20,7 +21,8 @@ const Blog = () => {
         },
       })
       .then((res) => {
-        setBlogs(res.data.blogData);
+        setBlogs(res.data.data);
+        // console.log(res.data.data);
         setLoading(false);
       })
       .catch((err) => {
@@ -39,7 +41,9 @@ const Blog = () => {
           <h2>Our Latest Blogs</h2>
         </div>
         {loading ? (
-          <div>Loading...</div>
+          <div className="loading" style={{ textAlign: "center", paddingTop:"10px" }}>
+            Loading...
+          </div>
         ) : blogs.length > 0 ? (
           <Swiper
             modules={[Pagination, Autoplay, Navigation]}
@@ -93,34 +97,39 @@ const Blog = () => {
             style={{ padding: "2.5rem 0px 4.2rem" }}
           >
             {blogs.map((blog) => (
-            <SwiperSlide key={blog._id}>
-              <div className="card">
-                <div className="image-box">
-                  <img
-                    src={"https://the-app-ideas.onrender.com".concat(
-                      blog.image.src
-                    )}
-                    alt={blog.image.alt}
-                  />
-                </div>
-                <div className="profile-details">
-                  <div className="name-job">
-                    <h3 className="name">
-                      {blog.title}
-                    </h3>
-                    <br />
-                    <h4 className="job">{blog.description}</h4>
-                    <br />
-                    <h4 className="job">
-                      {blog.content}
-                    </h4>
-                    <br />
-                    <button className="read-btn">READ MORE</button>
+              <SwiperSlide key={blog._id}>
+                <div className="card">
+                  <div className="image-box">
+                    <img
+                      src={"https://the-app-ideas.onrender.com".concat(
+                        blog.image.src
+                      )}
+                      alt={blog.image.alt}
+                    />
+                  </div>
+                  <div className="profile-details">
+                    <div className="name-job">
+                      <h1 className="name">{blog.title}</h1>
+                      <br />
+                      <h4>{blog.creator.name}</h4>
+                      <br />
+                      <h4 className="job">{blog.description}</h4>
+                      <br />
+                      {/* <div dangerouslySetInnerHTML={{__html:blog.content}} className="job"//> */}
+
+                      <br />
+                      <Link
+                        to="/single-blog"
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        <button className="read-btn">READ MORE</button>
+                      </Link>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </SwiperSlide>
-
+              </SwiperSlide>
             ))}
           </Swiper>
         ) : (

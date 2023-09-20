@@ -4252,7 +4252,8 @@ section {
   box-shadow: 0 0 10px #00000029;
   /* border-radius: 9px; */
   position: absolute;
-  overflow: hidden;
+  overflow-y: scroll;
+  overflow-x: hidden;
   z-index: 1;
   transition: 0.7s;
   width: 100%;
@@ -4260,6 +4261,7 @@ section {
   transform: translate(-50%, 0);
   /* height: 50vh; */
   top: 6rem;
+  bottom: 3rem;
 }
 .hover_color_bubble {
   position: absolute;
@@ -4462,6 +4464,7 @@ section {
   font-size: 24px;
   font-weight: 700;
   padding-top: 10px;
+  padding-bottom: 10px;
 }
 
 .roles_title h2::after {
@@ -4474,8 +4477,7 @@ section {
 }
 
 .roles_box {
-  padding: 10px;
-  margin-top: 20px;
+  padding: 0px 0px 0px 26px;
 }
 
 .roles_box p {

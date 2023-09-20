@@ -20,7 +20,7 @@ const Work = () => {
         },
       })
       .then((res) => {
-        setWorks(res.data.workDoneData);
+        setWorks(res.data.data);
         // console.log(res.data.workDoneData)
         setLoading(false);
       })

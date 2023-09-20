@@ -61,22 +61,31 @@
   text-transform: capitalize;
 }
 .profile-details .name {
-  font-size: 15px;
+  font-size: 17px;
   font-weight: 500;
 }
 .profile-details .job {
-  font-size: 12px;
+  font-size: 16px;
   font-weight: 500;
   color: #4d4d4d;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.name-job h4 {
+  font-size: 14px;
 }
 .read-btn {
-  padding: 5px 9px 5px 13px;
-  border-radius: 20px;
+  padding: 10px 24px 10px 24px;
+  border-radius: 30px;
   background-color: #f6c000;
   color: #000;
   border: none;
+  cursor: pointer;
 }
-.read-btn a:hover {
+.read-btn:hover {
   background-color: #2f0e39 !important;
   color: #fff;
 }
@@ -105,7 +114,8 @@
   }
 }
 
-.swiper-button-prev, .swiper-button-next{
+.swiper-button-prev,
+.swiper-button-next {
   /* color: yellow; */
   display: none;
 }

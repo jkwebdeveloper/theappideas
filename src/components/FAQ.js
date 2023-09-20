@@ -5,28 +5,29 @@ import { BiPlusCircle } from "react-icons/bi";
 
 const FAQ = () => {
   // const [selected, setSelected] = useState(null);
-  const [loading, setLoading] = useState(false)
-  const [faqs, setFaqs] = useState([])
-  const [faqId, setFaqId] = useState(null)
+  const [loading, setLoading] = useState(false);
+  const [faqs, setFaqs] = useState([]);
+  const [faqId, setFaqId] = useState(null);
 
   const handleGetFaqs = () => {
-    setLoading(true)
-    axios.get('https://the-app-ideas.onrender.com/api/faqs', {
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    })
-    .then((res) => {
-      setFaqs(res.data.content)
-      setLoading(false)
-    })
-    .catch((err) => {
-      setLoading(false)
-    })
-  }
+    setLoading(true);
+    axios
+      .get("https://the-app-ideas.onrender.com/api/faqs", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        setFaqs(res.data.faqs);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
   useEffect(() => {
-    handleGetFaqs()
-  }, [])
+    handleGetFaqs();
+  }, []);
 
   const toggle = (i) => {
     if (faqId === i) {
@@ -34,7 +35,6 @@ const FAQ = () => {
     }
     setFaqId(i);
   };
-
 
   return (
     <section className="accordion_section py-5">
@@ -44,13 +44,18 @@ const FAQ = () => {
         </div>
         <div className="row mt-5">
           <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-            {faqs.slice(0, Math.ceil(faqs.length / 2)).map((item, ) => (
+            {faqs.slice(0, Math.ceil(faqs.length / 2)).map((item) => (
               <div className="accordion" key={item.question}>
                 <div className="item">
-                  <h2 className="title" onClick={() => {toggle(item.question)}}>
+                  <h2
+                    className="title"
+                    onClick={() => {
+                      toggle(item.question);
+                    }}
+                  >
                     {item.question}
                     <span style={{ margin: "10px" }}>
-                      {faqId ===item.question  ? (
+                      {faqId === item.question ? (
                         <BiMinusCircle size={30} />
                       ) : (
                         <BiPlusCircle size={30} />
@@ -71,13 +76,18 @@ const FAQ = () => {
             ))}
           </div>
           <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-            {faqs.slice(Math.ceil(faqs.length / 2) , faqs.length).map((item, ) => (
+            {faqs.slice(Math.ceil(faqs.length / 2), faqs.length).map((item) => (
               <div className="accordion" key={item.question}>
                 <div className="item">
-                  <h2 className="title"onClick={() => {toggle(item.question)}}>
+                  <h2
+                    className="title"
+                    onClick={() => {
+                      toggle(item.question);
+                    }}
+                  >
                     {item.question}
                     <span style={{ margin: "10px" }}>
-                      {faqId === item.question? (
+                      {faqId === item.question ? (
                         <BiMinusCircle size={30} />
                       ) : (
                         <BiPlusCircle size={30} />

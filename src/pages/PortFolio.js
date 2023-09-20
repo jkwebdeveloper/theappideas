@@ -18,7 +18,7 @@ const PortFolio = () => {
         },
       })
       .then((res) => {
-        setPortFolios(res.data.portfolioData);
+        setPortFolios(res.data.data);
         setLoading(false);
       })
       .catch((err) => {

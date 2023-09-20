@@ -29,7 +29,7 @@ const ContactUs = () => {
       data: {
         name: values.name,
         email: values.email,
-        phoneNumber: values.phone,
+        phoneNumber: values.phoneNumber,
         skypeId: values.skypeId,
         budget: values.budget,
         country: values.country,
@@ -56,7 +56,7 @@ const ContactUs = () => {
       .string()
       .email("Invalid email")
       .required("This field is required"),
-    phone: yup
+    phoneNumber: yup
       .number()
       // .matches(phoneRegExp, 'phone is invalid')
       .required("This field is required"),
@@ -89,7 +89,7 @@ const ContactUs = () => {
                   initialValues={{
                     name: "",
                     email: "",
-                    phone: "",
+                    phoneNumber: "",
                     skypeId: "",
                     projectReq: "",
                     country: "",
@@ -97,9 +97,9 @@ const ContactUs = () => {
                   }}
                   validationSchema={ContactSchema}
                   onSubmit={(values, action) => {
-                    console.log(action);
                     handlePost(values);
-                    action.resetForm();
+                    // console.log(values)
+                    // action.resetForm();
                   }}
                 >
                   {(formik) => (
@@ -264,9 +264,9 @@ const ContactUs = () => {
                             pattern="[0-9()-\s]{10,14}"
                             placeholder="Phone Number*"
                             aria-label="Phone Number"
-                            name="phone"
+                            name="phoneNumber"
                             maxLength="13"
-                            value={formik.values.phone}
+                            value={formik.values.phoneNumber}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
@@ -274,9 +274,9 @@ const ContactUs = () => {
                             className="error"
                             style={{ color: "#fff", fontSize: "14px" }}
                           >
-                            {formik.errors.phone}
+                            {formik.errors.phoneNumber}
                           </span>
-                          {formik.errors.phone ? (
+                          {formik.errors.phoneNumber ? (
                             <BiErrorCircle
                               style={{
                                 float: "right",

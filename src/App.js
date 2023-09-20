@@ -1,103 +1,104 @@
-import React, { useEffect, useState } from 'react'
-import './index.css'
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import Home from './pages/Home'
-import Header from './components/Header/Header'
-import MobileAppDevelopment from './pages/MobileAppDevelopment/MobileAppDevelopment'
-import WebDev from './pages/Services/Web Development/WebDevelopment'
-import PortFolio from './pages/PortFolio'
-import ContactUs from './pages/ContactUs'
-import Blog from './pages/Blog'
-import DigitalMarketing from './pages/Services/Digital Maketing/DigitalMarketing'
-import ECommerceWeb from './pages/Services/ECommerceWeb/ECommerceWeb'
-import SoftwareDev from './pages/Services/Software Development/SoftwareDev'
-import Designing from './pages/Services/Designing Services/Designing'
-import StartupServices from './pages/StartupServices'
-import HireIOSDev from './pages/Hire Us/Hire Mobile App Dev/HireIOSDev'
-import FoodDelivery from './pages/Solutions/DeliveryApp/FoodDelivery'
-import MLMWebsiteAndApp from './pages/Solutions/MLMWebsiteAndApp'
-import Error404 from './pages/Error404'
-import AndroidAppDevelopment from './pages/MobileAppDevelopment/AndroidAppDevelopment'
-import IphoneAppDevelopment from './pages/MobileAppDevelopment/IphoneAppDevelopment'
-import IpadAppDevelopment from './pages/MobileAppDevelopment/IpadAppDevelopment'
-import ReactNativeDevelopment from './pages/MobileAppDevelopment/ReactNativeDevelopment'
-import IOTAppDevelopment from './pages/MobileAppDevelopment/IOTAppDevelopment'
-import HireAndroidDev from './pages/Hire Us/Hire Mobile App Dev/HireAndroidDev'
-import HireReactNativeDev from './pages/Hire Us/Hire Mobile App Dev/HireReactNativeDev'
-import HireFlutterDev from './pages/Hire Us/Hire Mobile App Dev/HireFlutterDev'
-import HireLaravelDev from './pages/Hire Us/Hire Web Dev/HireLaravelDev'
-import HireWordPressDev from './pages/Hire Us/Hire Web Dev/HireWordPressDev'
-import HireNodeDev from './pages/Hire Us/Hire Web Dev/HireNodeDev'
-import HireCodeIgniter from './pages/Hire Us/Hire Web Dev/HireCodeIgniter'
-import HirePHPDev from './pages/Hire Us/Hire Web Dev/HirePHPDev'
-import HirePythonDev from './pages/Hire Us/Hire Web Dev/HirePythonDev'
-import HireReactJsDev from './pages/Hire Us/Hire Web Dev/HireReactJsDev'
-import HireAngular from './pages/Hire Us/Hire Web Dev/HireAngular'
-import CourierPickup from './pages/Solutions/DeliveryApp/CourierPickup'
-import GroceryApp from './pages/Solutions/DeliveryApp/GroceryApp'
-import TaxiBooking from './pages/Solutions/OnDemandApp/TaxiBooking'
-import DoctorHiring from './pages/Solutions/OnDemandApp/DoctorHiring'
-import SecurityApp from './pages/Solutions/OnDemandApp/SecurityApp'
-import SalonApp from './pages/Solutions/PopularSolution/SalonApp'
-import DriverTrackingApp from './pages/Solutions/PopularSolution/DriverTrackingApp'
-import ElearningApp from './pages/Solutions/PopularSolution/ElearningApp'
-import DatingApp from './pages/Solutions/PopularSolution/DatingApp'
-import EcommerceApp from './pages/Solutions/PopularSolution/EcommerceApp'
-import HireShopify from './pages/Hire Us/Hire ECommerce/HireShopify'
-import HireMagento from './pages/Hire Us/Hire ECommerce/HireMagento'
-import SEO from './pages/Services/Digital Maketing/SEO'
-import SocialMedia from './pages/Services/Digital Maketing/SocialMedia'
-import ASO from './pages/Services/Digital Maketing/ASO'
-import ShopifyDev from './pages/Services/ECommerceWeb/ShopifyDev'
-import MagentoDev from './pages/Services/ECommerceWeb/MagentoDev'
-import Joomla from './pages/Services/ECommerceWeb/Joomla'
-import DrupalDev from './pages/Services/ECommerceWeb/DrupalDev'
-import WordPressDeveloper from './pages/Services/Web Development/WordPressDeveloper'
-import PHPDev from './pages/Services/Web Development/PHPDev'
-import Angular from './pages/Services/Web Development/Angular'
-import WebFlowDev from './pages/Services/Web Development/WebFlowDev'
-import AspNet from './pages/Services/Software Development/AspNet'
-import DotNetDev from './pages/Services/Software Development/DotNetDev'
-import GraphicsDesign from './pages/Services/Designing Services/GraphicsDesign'
-import MobileAppDesign from './pages/Services/Designing Services/MobileAppDesign'
-import LifeTAI from './pages/Company/LifeTAI'
-import Careers from './pages/Company/Careers'
-import Testimonial from './pages/Company/Testimonial'
-import OurTeam from './pages/Company/OurTeam'
-import OurProcess from './pages/Company/OurProcess'
-import Solutions from './pages/Solutions/Solutions'
-import HireUs from './pages/Hire Us/HireUs'
-import LawyerWeb from './pages/LawyerWeb'
-import MobileAppToronto from './pages/Sitemap/LocationsWiseServices/MobileAppToronto'
-import MobileAppNewyork from './pages/Sitemap/LocationsWiseServices/MobileAppNewyork'
-import MobileAppBarcelona from './pages/Sitemap/LocationsWiseServices/MobileAppBarcelona'
-import SiteMap from './pages/Sitemap/SiteMap'
-import ABoutUs from './pages/Company/ABoutUs'
-import GetAQuoteModal from './components/GetAQuoteModal'
-import MobileAppSydney from './pages/Sitemap/LocationsWiseServices/MobileAppSydney'
-import MobileAppAdelaide from './pages/Sitemap/LocationsWiseServices/MobileAppAdelaide'
-import MobileAppBrisbane from './pages/Sitemap/LocationsWiseServices/MobileAppBrisbane'
-import MobileAppBristol from './pages/Sitemap/LocationsWiseServices/MobileAppBristol'
-import MobileAppLiverpool from './pages/Sitemap/LocationsWiseServices/MobileAppLiverpool'
-import MobileAppManchester from './pages/Sitemap/LocationsWiseServices/MobileAppManchester'
-import MobileAppMelbourne from './pages/Sitemap/LocationsWiseServices/MobileAppMelbourne'
-import MobileAppLondon from './pages/Sitemap/LocationsWiseServices/MobileAppLondon'
-import CareerApply from './pages/CareerApply'
-import Footer from './components/Footer'
-import ScrollToTop from './components/ScrollToTop'
-import Whatsapp from './components/Whatsapp'
+import React, { useEffect, useState } from "react";
+import "./index.css";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./pages/Home";
+import Header from "./components/Header/Header";
+import MobileAppDevelopment from "./pages/MobileAppDevelopment/MobileAppDevelopment";
+import WebDev from "./pages/Services/Web Development/WebDevelopment";
+import PortFolio from "./pages/PortFolio";
+import ContactUs from "./pages/ContactUs";
+import Blog from "./pages/Blog";
+import DigitalMarketing from "./pages/Services/Digital Maketing/DigitalMarketing";
+import ECommerceWeb from "./pages/Services/ECommerceWeb/ECommerceWeb";
+import SoftwareDev from "./pages/Services/Software Development/SoftwareDev";
+import Designing from "./pages/Services/Designing Services/Designing";
+import StartupServices from "./pages/StartupServices";
+import HireIOSDev from "./pages/Hire Us/Hire Mobile App Dev/HireIOSDev";
+import FoodDelivery from "./pages/Solutions/DeliveryApp/FoodDelivery";
+import MLMWebsiteAndApp from "./pages/Solutions/MLMWebsiteAndApp";
+import Error404 from "./pages/Error404";
+import AndroidAppDevelopment from "./pages/MobileAppDevelopment/AndroidAppDevelopment";
+import IphoneAppDevelopment from "./pages/MobileAppDevelopment/IphoneAppDevelopment";
+import IpadAppDevelopment from "./pages/MobileAppDevelopment/IpadAppDevelopment";
+import ReactNativeDevelopment from "./pages/MobileAppDevelopment/ReactNativeDevelopment";
+import IOTAppDevelopment from "./pages/MobileAppDevelopment/IOTAppDevelopment";
+import HireAndroidDev from "./pages/Hire Us/Hire Mobile App Dev/HireAndroidDev";
+import HireReactNativeDev from "./pages/Hire Us/Hire Mobile App Dev/HireReactNativeDev";
+import HireFlutterDev from "./pages/Hire Us/Hire Mobile App Dev/HireFlutterDev";
+import HireLaravelDev from "./pages/Hire Us/Hire Web Dev/HireLaravelDev";
+import HireWordPressDev from "./pages/Hire Us/Hire Web Dev/HireWordPressDev";
+import HireNodeDev from "./pages/Hire Us/Hire Web Dev/HireNodeDev";
+import HireCodeIgniter from "./pages/Hire Us/Hire Web Dev/HireCodeIgniter";
+import HirePHPDev from "./pages/Hire Us/Hire Web Dev/HirePHPDev";
+import HirePythonDev from "./pages/Hire Us/Hire Web Dev/HirePythonDev";
+import HireReactJsDev from "./pages/Hire Us/Hire Web Dev/HireReactJsDev";
+import HireAngular from "./pages/Hire Us/Hire Web Dev/HireAngular";
+import CourierPickup from "./pages/Solutions/DeliveryApp/CourierPickup";
+import GroceryApp from "./pages/Solutions/DeliveryApp/GroceryApp";
+import TaxiBooking from "./pages/Solutions/OnDemandApp/TaxiBooking";
+import DoctorHiring from "./pages/Solutions/OnDemandApp/DoctorHiring";
+import SecurityApp from "./pages/Solutions/OnDemandApp/SecurityApp";
+import SalonApp from "./pages/Solutions/PopularSolution/SalonApp";
+import DriverTrackingApp from "./pages/Solutions/PopularSolution/DriverTrackingApp";
+import ElearningApp from "./pages/Solutions/PopularSolution/ElearningApp";
+import DatingApp from "./pages/Solutions/PopularSolution/DatingApp";
+import EcommerceApp from "./pages/Solutions/PopularSolution/EcommerceApp";
+import HireShopify from "./pages/Hire Us/Hire ECommerce/HireShopify";
+import HireMagento from "./pages/Hire Us/Hire ECommerce/HireMagento";
+import SEO from "./pages/Services/Digital Maketing/SEO";
+import SocialMedia from "./pages/Services/Digital Maketing/SocialMedia";
+import ASO from "./pages/Services/Digital Maketing/ASO";
+import ShopifyDev from "./pages/Services/ECommerceWeb/ShopifyDev";
+import MagentoDev from "./pages/Services/ECommerceWeb/MagentoDev";
+import Joomla from "./pages/Services/ECommerceWeb/Joomla";
+import DrupalDev from "./pages/Services/ECommerceWeb/DrupalDev";
+import WordPressDeveloper from "./pages/Services/Web Development/WordPressDeveloper";
+import PHPDev from "./pages/Services/Web Development/PHPDev";
+import Angular from "./pages/Services/Web Development/Angular";
+import WebFlowDev from "./pages/Services/Web Development/WebFlowDev";
+import AspNet from "./pages/Services/Software Development/AspNet";
+import DotNetDev from "./pages/Services/Software Development/DotNetDev";
+import GraphicsDesign from "./pages/Services/Designing Services/GraphicsDesign";
+import MobileAppDesign from "./pages/Services/Designing Services/MobileAppDesign";
+import LifeTAI from "./pages/Company/LifeTAI";
+import Careers from "./pages/Company/Careers";
+import Testimonial from "./pages/Company/Testimonial";
+import OurTeam from "./pages/Company/OurTeam";
+import OurProcess from "./pages/Company/OurProcess";
+import Solutions from "./pages/Solutions/Solutions";
+import HireUs from "./pages/Hire Us/HireUs";
+import LawyerWeb from "./pages/LawyerWeb";
+import MobileAppToronto from "./pages/Sitemap/LocationsWiseServices/MobileAppToronto";
+import MobileAppNewyork from "./pages/Sitemap/LocationsWiseServices/MobileAppNewyork";
+import MobileAppBarcelona from "./pages/Sitemap/LocationsWiseServices/MobileAppBarcelona";
+import SiteMap from "./pages/Sitemap/SiteMap";
+import ABoutUs from "./pages/Company/ABoutUs";
+import GetAQuoteModal from "./components/GetAQuoteModal";
+import MobileAppSydney from "./pages/Sitemap/LocationsWiseServices/MobileAppSydney";
+import MobileAppAdelaide from "./pages/Sitemap/LocationsWiseServices/MobileAppAdelaide";
+import MobileAppBrisbane from "./pages/Sitemap/LocationsWiseServices/MobileAppBrisbane";
+import MobileAppBristol from "./pages/Sitemap/LocationsWiseServices/MobileAppBristol";
+import MobileAppLiverpool from "./pages/Sitemap/LocationsWiseServices/MobileAppLiverpool";
+import MobileAppManchester from "./pages/Sitemap/LocationsWiseServices/MobileAppManchester";
+import MobileAppMelbourne from "./pages/Sitemap/LocationsWiseServices/MobileAppMelbourne";
+import MobileAppLondon from "./pages/Sitemap/LocationsWiseServices/MobileAppLondon";
+import CareerApply from "./pages/CareerApply";
+import Footer from "./components/Footer";
+import ScrollToTop from "./components/ScrollToTop";
+import Whatsapp from "./components/Whatsapp";
+import SingleBlog from "./components/Home/Blog/SingleBlog";
 
 const App = () => {
-  const [openModal, setOpenModal] = useState(false)
+  const [openModal, setOpenModal] = useState(false);
 
   useEffect(() => {
-    if (openModal) window.document.body.style.overflow = 'hidden'
-    else window.document.body.style.overflow = 'unset'
-  }, [openModal])
+    if (openModal) window.document.body.style.overflow = "hidden";
+    else window.document.body.style.overflow = "unset";
+  }, [openModal]);
 
   const handleCloseModal = () => {
-    setOpenModal(false)
-  }
+    setOpenModal(false);
+  };
   return (
     <BrowserRouter>
       {/* get a quote modal */}
@@ -113,7 +114,7 @@ const App = () => {
       <Header setOpenModal={setOpenModal} />
       <Routes>
         {/* Home page Link */}
-        <Route path="/" element={<Home setOpenModal={setOpenModal}/>} />
+        <Route path="/" element={<Home setOpenModal={setOpenModal} />} />
 
         {/* Company Link */}
         <Route path="/about-us" element={<ABoutUs />} />
@@ -227,6 +228,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         {/* Blog Link */}
         <Route path="/blog" element={<Blog />} />
+        <Route path="/single-blog" element={<SingleBlog />} />
 
         <Route path="/*" element={<Error404 />} />
         <Route path="/lawyer-website-solution" element={<LawyerWeb />} />
@@ -282,7 +284,7 @@ const App = () => {
       <Whatsapp />
       <Footer />
     </BrowserRouter>
-  )
-}
+  );
+};
 
-export default App
+export default App;

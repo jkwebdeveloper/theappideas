@@ -24,7 +24,7 @@ const Home = ({ setOpenModal }) => {
         method: 'GET'
       })
       .then((res) => {
-        setBanners(res.data.bannerData)
+        setBanners(res.data.data)
         setLoading(false)
       })
       .catch((err) => {
