@@ -1,8 +1,42 @@
-import React from 'react'
-import { Helmet } from 'react-helmet'
-import { BiSearch } from 'react-icons/bi'
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
+import { BiSearch } from "react-icons/bi";
 
 const Blog = () => {
+  const [blogs, setblogs] = useState([]);
+  const [loading, setLoading] = useState(false);
+  // const [filterdata, setFilterData] = useState([])
+
+  // const filterItem = (cateItem) => {
+  //   console.log(cateItem)
+  //   const updateItems = blogs.filter((curElem) => {
+  //     return curElem.category === cateItem
+  //   })
+  //   setFilterData(updateItems)
+  // }
+
+  const handleGetBlogs = () => {
+    setLoading(true);
+    axios
+      .get("https://the-app-ideas.onrender.com/api/blog", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        setblogs(res.data.data);
+        console.log(res.data.data);
+        setLoading(false);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetBlogs();
+  }, []);
+
   return (
     <>
       <Helmet title="BLOG - THE APP IDEAS" />
@@ -13,7 +47,7 @@ const Blog = () => {
             <div className="blog__search">
               <input type="text" placeholder="Search..." />
               <button>
-                <BiSearch style={{ fontSize: '20px' }} />
+                <BiSearch style={{ fontSize: "20px" }} />
               </button>
             </div>
           </form>
@@ -37,6 +71,7 @@ const Blog = () => {
                   role="tab"
                   aria-controls="All"
                   aria-selected="true"
+                  // onClick={() => setFilterData(blogs)}
                 >
                   All
                 </button>
@@ -51,6 +86,7 @@ const Blog = () => {
                   role="tab"
                   aria-controls="Application"
                   aria-selected="false"
+                  // onClick={() => filterItem("Application")}
                 >
                   Application
                 </button>
@@ -65,6 +101,7 @@ const Blog = () => {
                   role="tab"
                   aria-controls="App-idea"
                   aria-selected="false"
+                  // onClick={() => filterItem("App")}
                 >
                   App Ideas
                 </button>
@@ -79,6 +116,7 @@ const Blog = () => {
                   role="tab"
                   aria-controls="bussiness"
                   aria-selected="false"
+                  // onClick={() => filterItem("bussiness")}
                 >
                   Bussiness
                 </button>
@@ -93,6 +131,7 @@ const Blog = () => {
                   role="tab"
                   aria-controls="Designing"
                   aria-selected="false"
+                  // onClick={() => filterItem("designing")}
                 >
                   Designing
                 </button>
@@ -107,6 +146,7 @@ const Blog = () => {
                   role="tab"
                   aria-controls="E-commerce"
                   aria-selected="false"
+                  // onClick={() => filterItem("e-com")}
                 >
                   E-commerce
                 </button>
@@ -121,238 +161,64 @@ const Blog = () => {
                   role="tab"
                   aria-controls="Demand"
                   aria-selected="false"
+                  // onClick={() => filterItem("on-demand")}
                 >
                   On-Demand-app
                 </button>
               </li>
             </ul>
-            <div className="tab-content" id="pills-tabContent">
+            {loading ? (
               <div
-                className="tab-pane fade show active"
-                id="ALL"
-                role="tabpanel"
-                aria-labelledby="ALL-tab"
+                className="loading"
+                style={{ textAlign: "center", paddingTop: "10px" }}
               >
-                <div className="row">
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-1.jpg')}
-                            alt="blog_banner-1"
-                            className="img-fluid"
-                          />
+                {/* <img
+                 src={require("../assets/images/loading.webp")}
+                 alt="loading"
+                 style={{ width: "120px", height: "120px" }}
+               /> */}
+                Loading...
+              </div>
+            ) : blogs.length > 0 ? (
+              <div className="tab-content" id="pills-tabContent">
+                <div
+                  className="tab-pane fade show active"
+                  id="ALL"
+                  role="tabpanel"
+                  aria-labelledby="ALL-tab"
+                >
+                  <div className="row">
+                    {blogs.map((blog) => (
+                      <div
+                        className="col-sm-6 col-md-6 col-lg-4 col-xl-4"
+                        key={blog._id}
+                      >
+                        <div className="blog__box">
+                          <a href="#">
+                            <div className="blog__box__img">
+                              <img
+                                src={"https://the-app-ideas.onrender.com".concat(
+                                  blog.image.src
+                                )}
+                                alt={blog.image.alt}
+                                className="img-fluid"
+                              />
+                            </div>
+                            <div className="blog__box__content">
+                              <h4>{blog.title}</h4>
+                            </div>
+                          </a>
                         </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How much does it cost to create an app in 2023?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-2.jpg')}
-                            alt="blog_banner-2"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>How much Does It Cost to Build a FinTech App?</h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-3.webp')}
-                            alt="blog_banner-3"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How Much Does It Cost To Build An App Like Rover?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-4.webp')}
-                            alt="blog_banner-4"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How Much Does It Cost to Develop An On-Demand Car
-                            Wash App?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-5.webp')}
-                            alt="blog_banner-5"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How Much Does It Cost To Develop A Car Parking
-                            Finder App?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-6.webp')}
-                            alt="blog_banner-6"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How Much Does It Cost to Develop an On-Demand
-                            Delivery App like Dunzo?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-7.webp')}
-                            alt="blog_banner-7"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How Much Does it Cost to Build an Educational App
-                            for Kids?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-8.webp')}
-                            alt="blog_banner-8"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            Mobile App Development Services by App Ideas
-                            Infotech Grabs GoodFirms Attention
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
-                  </div>
-                  <div className="col-sm-6 col-md-6 col-lg-4 col-xl-4">
-                    <div className="blog__box">
-                      <a href="#">
-                        <div className="blog__box__img">
-                          <img
-                            src={require('../assets/images/blog/blog_banner-9.webp')}
-                            alt="blog_banner-9"
-                            className="img-fluid"
-                          />
-                        </div>
-                        <div className="blog__box__content">
-                          <h4>
-                            How Much Does It Cost to Develop A Grocery Delivery
-                            App like Instacart?
-                          </h4>
-                        </div>
-                      </a>
-                    </div>
+                      </div>
+                    ))}
                   </div>
                 </div>
               </div>
-              <div
-                className="tab-pane fade"
-                id="Application"
-                role="tabpanel"
-                aria-labelledby="Application-tab"
-              >
-                2
-              </div>
-              <div
-                className="tab-pane fade"
-                id="App-idea"
-                role="tabpanel"
-                aria-labelledby="App-idea-tab"
-              >
-                3
-              </div>
-              <div
-                className="tab-pane fade"
-                id="bussiness"
-                role="tabpanel"
-                aria-labelledby="bussiness-tab"
-              >
-                4
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Designing"
-                role="tabpanel"
-                aria-labelledby="Designing-tab"
-              >
-                5
-              </div>
-              <div
-                className="tab-pane fade"
-                id="E-commerce"
-                role="tabpanel"
-                aria-labelledby="E-commerce-tab"
-              >
-                6
-              </div>
-              <div
-                className="tab-pane fade"
-                id="Demand"
-                role="tabpanel"
-                aria-labelledby="Demand-tab"
-              >
-                7
-              </div>
-            </div>
+            ) : (
+              <div>No Data</div>
+            )}
           </div>
-          <div className="pagination__wrapper mt-4">
+          {/* <div className="pagination__wrapper mt-4">
             <nav>
               <ul className="pagination justify-content-center">
                 <li className="page-item">
@@ -390,11 +256,11 @@ const Blog = () => {
                 </li>
               </ul>
             </nav>
-          </div>
+          </div> */}
         </div>
       </section>
     </>
-  )
-}
+  );
+};
 
-export default Blog
+export default Blog;
