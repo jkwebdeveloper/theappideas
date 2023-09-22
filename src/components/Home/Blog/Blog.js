@@ -41,7 +41,10 @@ const Blog = () => {
           <h2>Our Latest Blogs</h2>
         </div>
         {loading ? (
-          <div className="loading" style={{ textAlign: "center", paddingTop:"10px" }}>
+          <div
+            className="loading"
+            style={{ textAlign: "center", paddingTop: "10px" }}
+          >
             Loading...
           </div>
         ) : blogs.length > 0 ? (
@@ -120,6 +123,7 @@ const Blog = () => {
                       <br />
                       <Link
                         to="/single-blog"
+                        state={{ id: blog._id }}
                         onClick={() => {
                           window.scrollTo({ top: 0, behavior: "smooth" });
                         }}

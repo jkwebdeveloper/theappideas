@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { BiSearch } from "react-icons/bi";
+import { Link } from "react-router-dom";
 
 const Blog = () => {
   const [blogs, setblogs] = useState([]);
@@ -193,22 +194,30 @@ const Blog = () => {
                         className="col-sm-6 col-md-6 col-lg-4 col-xl-4"
                         key={blog._id}
                       >
-                        <div className="blog__box">
-                          <a href="#">
-                            <div className="blog__box__img">
-                              <img
-                                src={"https://the-app-ideas.onrender.com".concat(
-                                  blog.image.src
-                                )}
-                                alt={blog.image.alt}
-                                className="img-fluid"
-                              />
-                            </div>
-                            <div className="blog__box__content">
-                              <h4>{blog.title}</h4>
-                            </div>
-                          </a>
-                        </div>
+                        <Link
+                          to="/single-blog"
+                          state={{ id: blog._id }}
+                          onClick={() => {
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                          }}
+                        >
+                          <div className="blog__box">
+                            <a href="#">
+                              <div className="blog__box__img">
+                                <img
+                                  src={"https://the-app-ideas.onrender.com".concat(
+                                    blog.image.src
+                                  )}
+                                  alt={blog.image.alt}
+                                  className="img-fluid"
+                                />
+                              </div>
+                              <div className="blog__box__content">
+                                <h4>{blog.title}</h4>
+                              </div>
+                            </a>
+                          </div>
+                        </Link>
                       </div>
                     ))}
                   </div>

@@ -7,21 +7,22 @@ import { FaLinkedinIn, FaPinterestP, FaTumblr } from "react-icons/fa";
 import { AiOutlineMail } from "react-icons/ai";
 import Blog from "./Blog";
 import axios from "axios";
+import { useLocation } from "react-router-dom";
 
 const SingleBlog = () => {
   const [singleblogs, setSingleBlogs] = useState();
   const [loading, setLoading] = useState(true);
 
+  const { id } = useLocation().state;
+  console.log(id);
+
   const handleGetSingleBlogs = () => {
     axios
-      .get(
-        "https://the-app-ideas.onrender.com/api/blog/65044849f8b19748f6dbada2",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      .get(`https://the-app-ideas.onrender.com/api/blog/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => {
         setSingleBlogs(res.data.blog);
         setLoading(false);
