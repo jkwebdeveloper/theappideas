@@ -27,7 +27,7 @@ const Banner = ({ banners, setOpenModal, loading }) => {
             </div>
           ) : banners.length > 0 ? (
             <Swiper
-              modules={[Pagination, Autoplay, Navigation]}
+              modules={[Pagination, Navigation]}
               spaceBetween={20}
               slidesPerView={1}
               loop={true}
@@ -79,7 +79,7 @@ const Banner = ({ banners, setOpenModal, loading }) => {
             >
               {banners.map((banner) => (
                 <SwiperSlide key={banner._id} style={{ cursor: "pointer" }}>
-                  <div className="row">
+                  <div className="row" style={{ alignItems: "start" }}>
                     <div className="col-lg-6 col-md-12">
                       <div className="slider-img">
                         <img
@@ -87,7 +87,12 @@ const Banner = ({ banners, setOpenModal, loading }) => {
                             banner.image.src
                           )}
                           alt={banner.image.alt}
-                          style={{ width: "100%" }}
+                          style={{
+                            width: "100%",
+                            height: "25vw",
+                            objectPosition: "center",
+                            objectFit: "contain",
+                          }}
                         />
                       </div>
                     </div>

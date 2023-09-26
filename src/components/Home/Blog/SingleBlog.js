@@ -14,7 +14,7 @@ const SingleBlog = () => {
   const [loading, setLoading] = useState(true);
 
   const { id } = useLocation().state;
-  console.log(id);
+  // console.log(id);
 
   const handleGetSingleBlogs = () => {
     axios

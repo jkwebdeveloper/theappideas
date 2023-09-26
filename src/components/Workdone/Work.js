@@ -130,7 +130,7 @@ const Work = () => {
             ))}
           </Swiper>
         ) : (
-          <div>No Data</div>
+          <div style={{ textAlign: "center" }}>No Data</div>
         )}
       </div>
     </section>

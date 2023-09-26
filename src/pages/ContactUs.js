@@ -62,7 +62,7 @@ const ContactUs = () => {
       .required("This field is required"),
     projectReq: yup.string().required("This field is required"),
     skypeId: yup.string().required("This field is required"),
-    country: yup.string().required("This field is required !"),
+    country: yup.string().required("This field is required"),
   });
   const formref = useRef(null);
   const [countries, setCountries] = useState([]);
@@ -99,7 +99,7 @@ const ContactUs = () => {
                   onSubmit={(values, action) => {
                     handlePost(values);
                     // console.log(values)
-                    // action.resetForm();
+                    action.resetForm();
                   }}
                 >
                   {(formik) => (

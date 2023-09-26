@@ -54,7 +54,12 @@ const Careers = () => {
             <h3>Current Opening In TheAppIdeas</h3>
           </div>
           {loading ? (
-            <div className="loading">Loading...</div>
+            <div
+              className="loading"
+              style={{ textAlign: "center", paddingTop: "100px" }}
+            >
+              Loading...
+            </div>
           ) : careers.length > 0 ? (
             <div className="row mt-5">
               {careers.map((career) => (
@@ -121,6 +126,7 @@ const Careers = () => {
                       <div className="text-end">
                         <Link
                           to="/career-application"
+                          state={{ id: careers._id }}
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
@@ -144,7 +150,9 @@ const Careers = () => {
               ))}
             </div>
           ) : (
-            <div>No data</div>
+            <div className="text-center" style={{ textAlign: "center" }}>
+              No data
+            </div>
           )}
         </div>
       </section>

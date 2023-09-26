@@ -8,6 +8,7 @@ const PortFolio = () => {
   const [portfolio, setPortFolios] = useState([]);
   const [loading, setLoading] = useState(false);
   const [filterdata, setFilterData] = useState([]);
+  const [activefilter, setActiveFilter] = useState("all");
 
   const handleGetPortFolios = () => {
     setLoading(true);
@@ -30,14 +31,12 @@ const PortFolio = () => {
   }, []);
 
   const filterItem = (cateItem) => {
-    console.log(cateItem);
     const updateItems = portfolio.filter((curElem) => {
-      return curElem.category === cateItem;
+      return curElem.categories ===  cateItem
+      
     });
-
     setFilterData(updateItems);
   };
-
   useEffect(() => {
     AOS.init();
   }, []);
@@ -65,7 +64,7 @@ const PortFolio = () => {
             >
               <li className="nav-item" role="presentation">
                 <div
-                  className="nav-link active"
+                  className={`nav-link ${activefilter === "all" && "active"} `}
                   id="ALL-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#ALL"
@@ -73,14 +72,20 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="All"
                   aria-selected="true"
-                  onClick={() => setFilterData(portfolio)}
+                  onClick={() => {
+                    setFilterData(portfolio);
+                    setActiveFilter("all");
+                  }}
                 >
                   All
                 </div>
               </li>
               <li className="nav-item" role="presentation">
                 <div
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "mobile-application-development" &&
+                    "active"
+                  } `}
                   id="Application-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Application"
@@ -88,14 +93,19 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="Application"
                   aria-selected="false"
-                  onClick={() => filterItem("Application")}
+                  onClick={() => {
+                    filterItem("mobile-application-development");
+                    setActiveFilter("mobile-application-development");
+                  }}
                 >
                   Mobile Application Development
                 </div>
               </li>
               <li className="nav-item" role="presentation">
                 <div
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "web-development" && "active"
+                  } `}
                   id="web"
                   data-bs-toggle="pill"
                   data-bs-target="#App-idea"
@@ -103,14 +113,19 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="App-idea"
                   aria-selected="false"
-                  onClick={() => filterItem("web")}
+                  onClick={() => {
+                    filterItem("web-development");
+                    setActiveFilter("web-development");
+                  }}
                 >
                   Web development
                 </div>
               </li>
               <li className="nav-item" role="presentation">
                 <div
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "e-commerce" && "active"
+                  } `}
                   id="bussiness-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#bussiness"
@@ -118,7 +133,10 @@ const PortFolio = () => {
                   role="tab"
                   aria-controls="bussiness"
                   aria-selected="false"
-                  onClick={() => filterItem("e-com")}
+                  onClick={() => {
+                    filterItem("e-commerce");
+                    setActiveFilter("e-commerce");
+                  }}
                 >
                   E-commerce
                 </div>
@@ -138,11 +156,19 @@ const PortFolio = () => {
             >
               {loading ? (
                 <div className="loading">Loading...</div>
-              ) : setPortFolios.length > 0 ? (
+              ) : portfolio.length > 0 ? (
                 <div className="row">
                   {filterdata.length > 0
                     ? filterdata.map((elem) => {
-                        const { _id, image, bgImage, tags, title } = elem;
+                        const {
+                          _id,
+                          image,
+                          bgImage,
+                          tags,
+                          title,
+                          link,
+                          technology,
+                        } = elem;
                         return (
                           <div key={_id} className="col-12 px-0 mb-4">
                             <div
@@ -161,7 +187,10 @@ const PortFolio = () => {
                                     className="work_head_box_link"
                                   ></a>
                                   <div className="work_head_lft">
-                                    <a href="#" className="work_head_box_link">
+                                    <a
+                                      href={link}
+                                      className="work_head_box_link"
+                                    >
                                       <h2>{title}</h2>
                                     </a>
                                     <ul className="ps-0">
@@ -169,9 +198,9 @@ const PortFolio = () => {
                                         href="#"
                                         className="work_head_box_link"
                                       ></a>
-                                      {tags.map((tag) => {
+                                      {technology.map((tech) => {
                                         return (
-                                          <li key={tag}>
+                                          <li key={tech}>
                                             <a
                                               href="#"
                                               className="work_head_box_link"
@@ -182,7 +211,7 @@ const PortFolio = () => {
                                               href="#"
                                               className="work_head_item"
                                             >
-                                              {tag}
+                                              {tech}
                                             </a>
                                           </li>
                                         );
@@ -208,7 +237,15 @@ const PortFolio = () => {
                         );
                       })
                     : portfolio.map((elem) => {
-                        const { _id, image, bgImage, tags, title } = elem;
+                        const {
+                          _id,
+                          image,
+                          bgImage,
+                          tags,
+                          title,
+                          link,
+                          technology,
+                        } = elem;
                         return (
                           <div key={_id} className="col-12 px-0 mb-4">
                             <div
@@ -227,7 +264,11 @@ const PortFolio = () => {
                                     className="work_head_box_link"
                                   ></a>
                                   <div className="work_head_lft">
-                                    <a href="#" className="work_head_box_link">
+                                    <a
+                                      href={link}
+                                      target="_blank"
+                                      className="work_head_box_link"
+                                    >
                                       <h2>{title}</h2>
                                     </a>
                                     <ul className="ps-0">
@@ -235,20 +276,11 @@ const PortFolio = () => {
                                         href="#"
                                         className="work_head_box_link"
                                       ></a>
-                                      {tags.map((tag) => {
+                                      {technology.map((tech) => {
                                         return (
-                                          <li key={tag}>
-                                            <a
-                                              href="#"
-                                              className="work_head_box_link"
-                                            >
-                                              {" "}
-                                            </a>
-                                            <a
-                                              href="#"
-                                              className="work_head_item"
-                                            >
-                                              {tag}
+                                          <li key={tech}>
+                                            <a className="work_head_item">
+                                              {tech}
                                             </a>
                                           </li>
                                         );
