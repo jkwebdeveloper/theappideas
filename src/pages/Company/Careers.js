@@ -125,8 +125,9 @@ const Careers = () => {
                       </ul>
                       <div className="text-end">
                         <Link
-                          to="/career-application"
-                          state={{ id: careers._id }}
+                          to={`/career-application/${career._id}`}
+                          // state={{ id: careers._id }}
+
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}

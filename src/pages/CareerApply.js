@@ -8,6 +8,7 @@ import { BiErrorCircle } from "react-icons/bi";
 import { useFormik } from "formik";
 import { careerApplySchema } from "./schemas";
 import axios from "axios";
+import { useLocation, useParams } from "react-router-dom";
 
 const initialValues = {
   fullName: "",
@@ -21,16 +22,16 @@ const CareerApply = () => {
   const [careers, setCareers] = useState();
   const [loading, setLoading] = useState(true);
 
+  const { id } = useParams();
+  console.log(id);
+
   const handleGetApplyCareers = () => {
     axios
-      .get(
-        "https://the-app-ideas.onrender.com/api/career/6504046e1618ce209f71e7cf",
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
-        }
-      )
+      .get(`https://the-app-ideas.onrender.com/api/career/${id}`, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
       .then((res) => {
         setCareers(res.data.careers);
         console.log(res.data.careers);
@@ -92,12 +93,14 @@ const CareerApply = () => {
     <>
       <Helmet title="The App Ideas Careers Application" />
       {loading ? (
-        <div>Loading...</div>
+        <div style={{ textAlign: "center", marginTop: "100px" }}>
+          Loading...
+        </div>
       ) : (
         <>
           <section className="carrer_banner">
             <div className="carrer_banner_content">
-              <h1>{careers.title}</h1>
+              <h1>{careers?.title}</h1>
               <div className="career_location">
                 <i>
                   <MdLocationPin />{" "}
@@ -114,10 +117,10 @@ const CareerApply = () => {
                   </strong>
                 </p>
                 <p>
-                  <b>Salary:-</b> {careers.salary}
+                  <b>Salary:-</b> {careers?.salary}
                 </p>
                 <p>
-                  <b>Education Qualification:-</b> {careers.education}
+                  <b>Education Qualification:-</b> {careers?.education}
                 </p>
                 {/* <a href="#CarreContact" className="apply_btn">
               Apply Now
@@ -131,37 +134,40 @@ const CareerApply = () => {
                 <h2>Roles &amp; Responsibilities</h2>
               </div>
               {loading ? (
-                <div className="loading">Loading...</div>
+                <div
+                  className="loading"
+                  style={{ textAlign: "center", paddingTop: "100px" }}
+                >
+                  Loading...
+                </div>
               ) : (
                 <div className="row">
                   <div className="col-sm-12 col-md-12 col-lg-6">
-                    {careers.responsibility
+                    {careers?.responsibility
                       .slice(0, Math.ceil(careers.responsibility.length / 2))
                       .map((item) => (
-                
                         <div className="roles_box" key={item}>
-                        <p>
-                          <FaRegDotCircle className="roles_box_icons" />
-                        
-                              {item}
-                            </p>
-                         
-                      </div>
-                           
+                          <p>
+                            <FaRegDotCircle className="roles_box_icons" />
+                            {item}
+                          </p>
+                        </div>
                       ))}
                   </div>
                   <div className="col-sm-12 col-md-12 col-lg-6">
-                    {careers.responsibility
-                      .slice( Math.ceil(careers.responsibility.length / 2),careers.responsibility.length)
+                    {careers?.responsibility
+                      .slice(
+                        Math.ceil(careers.responsibility.length / 2),
+                        careers.responsibility.length
+                      )
                       .map((item) => (
                         <div className="roles_box" key={item}>
-                        <p>
-                          <FaRegDotCircle className="roles_box_icons" />
-                          
-                              {item}
-                          
-                        </p>
-                      </div>
+                          <p>
+                            <FaRegDotCircle className="roles_box_icons" />
+
+                            {item}
+                          </p>
+                        </div>
                       ))}
                   </div>
                 </div>

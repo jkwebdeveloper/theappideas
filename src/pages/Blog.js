@@ -7,15 +7,6 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const [blogs, setblogs] = useState([]);
   const [loading, setLoading] = useState(false);
-  // const [filterdata, setFilterData] = useState([])
-
-  // const filterItem = (cateItem) => {
-  //   console.log(cateItem)
-  //   const updateItems = blogs.filter((curElem) => {
-  //     return curElem.category === cateItem
-  //   })
-  //   setFilterData(updateItems)
-  // }
 
   const handleGetBlogs = () => {
     setLoading(true);
@@ -173,11 +164,6 @@ const Blog = () => {
                 className="loading"
                 style={{ textAlign: "center", paddingTop: "10px" }}
               >
-                {/* <img
-                 src={require("../assets/images/loading.webp")}
-                 alt="loading"
-                 style={{ width: "120px", height: "120px" }}
-               /> */}
                 Loading...
               </div>
             ) : blogs.length > 0 ? (
@@ -227,45 +213,6 @@ const Blog = () => {
               <div>No Data</div>
             )}
           </div>
-          {/* <div className="pagination__wrapper mt-4">
-            <nav>
-              <ul className="pagination justify-content-center">
-                <li className="page-item">
-                  <a className="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">«</span>
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#" aria-label="Previous">
-                    <span aria-hidden="true">‹</span>
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    1
-                  </a>
-                </li>
-                <li className="page-item active" aria-current="page">
-                  <span className="page-link">2</span>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#">
-                    3
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">›</span>
-                  </a>
-                </li>
-                <li className="page-item">
-                  <a className="page-link" href="#" aria-label="Next">
-                    <span aria-hidden="true">»</span>
-                  </a>
-                </li>
-              </ul>
-            </nav>
-          </div> */}
         </div>
       </section>
     </>
