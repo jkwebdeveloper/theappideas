@@ -38,6 +38,9 @@
   font-size: 22px;
   margin-bottom: 1rem;
 }
+.contant_section img {
+  max-width: 100%;
+}
 .content_image img {
   margin-top: 10px;
   margin-bottom: 20px;
@@ -102,22 +105,22 @@
   padding-top: 20px;
 }
 .on_demand_section_bg {
-  background-image: url('../../../assets/images/shape.webp');
+  background-image: url("../../../assets/images/shape.webp");
   border-radius: 20px;
   color: white;
   padding: 30px 56px 30px 20px;
   box-shadow: 0px 0px 6px 0px #000;
 }
-.on_demand_content{
+.on_demand_content {
   display: flex;
   justify-content: space-between;
   align-items: baseline;
 }
-.on_demand_content_btn{
+.on_demand_content_btn {
   background: #f6c000;
-    padding: 15px;
-    border: none;
-    border-radius: 40px;
-    font-weight: 700;
-    cursor: pointer;
+  padding: 15px;
+  border: none;
+  border-radius: 40px;
+  font-weight: 700;
+  cursor: pointer;
 }
