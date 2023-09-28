@@ -37,11 +37,11 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       },
     })
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err);
+        // console.log(err);
         setLoading(false);
       });
   };
@@ -57,7 +57,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       validationSchema: getAQuoteSchema,
       onSubmit: (values, action) => {
         handlePost(values)
-        console.log(values);
+        // console.log(values);
         action.resetForm();
       },
     });

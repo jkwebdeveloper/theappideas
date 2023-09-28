@@ -18,7 +18,7 @@ const Blog = () => {
       })
       .then((res) => {
         setblogs(res.data.data);
-        console.log(res.data.data);
+        // console.log(res.data.data);
         setLoading(false);
       })
       .catch((err) => {

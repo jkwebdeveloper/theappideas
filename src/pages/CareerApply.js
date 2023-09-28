@@ -23,7 +23,7 @@ const CareerApply = () => {
   const [loading, setLoading] = useState(true);
 
   const { id } = useParams();
-  console.log(id);
+  // console.log(id);
 
   const handleGetApplyCareers = () => {
     axios
@@ -34,7 +34,7 @@ const CareerApply = () => {
       })
       .then((res) => {
         setCareers(res.data.careers);
-        console.log(res.data.careers);
+        // console.log(res.data.careers);
         setLoading(false);
       })
       .catch((err) => {
@@ -63,11 +63,11 @@ const CareerApply = () => {
       },
     })
       .then((res) => {
-        console.log(res.data);
+        // console.log(res.data);
         setLoading(false);
       })
       .catch((err) => {
-        console.log(err.data);
+        // console.log(err.data);
         setLoading(false);
       });
   };
@@ -86,7 +86,7 @@ const CareerApply = () => {
     onSubmit: (values, action) => {
       // console.log(action)
       handlePost(values);
-      // action.resetForm();
+      action.resetForm();
     },
   });
   return (
