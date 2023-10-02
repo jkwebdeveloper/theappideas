@@ -118,8 +118,13 @@ const Work = () => {
                     </div>
                     <div className="col-lg-7 col-md-12">
                       <div className="dec">{work.title}</div>
-                      <p style={{ textAlign: "justify" }}>{work.description}</p>
-                      <p style={{ textAlign: "justify" }}>{work.description}</p>
+                      <div
+                        style={{ textAlign: "justify" }}
+                        dangerouslySetInnerHTML={{
+                          __html: work.description,
+                        }}
+                      ></div>
+                      {/* <p style={{ textAlign: "justify" }}>{work.description}</p> */}
                       {/* <p style={{ textAlign: "justify" }}>{work.description}</p>
                       <p style={{ textAlign: "justify" }}>{work.description}</p>
                       <p style={{ textAlign: "justify" }}>{work.description}</p> */}

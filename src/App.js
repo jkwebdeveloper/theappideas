@@ -7,7 +7,7 @@ import MobileAppDevelopment from "./pages/MobileAppDevelopment/MobileAppDevelopm
 import WebDev from "./pages/Services/Web Development/WebDevelopment";
 import PortFolio from "./pages/PortFolio";
 import ContactUs from "./pages/ContactUs";
-import Blog from "./pages/Blog";
+import Blog from "./pages/HeaderBlog";
 import DigitalMarketing from "./pages/Services/Digital Maketing/DigitalMarketing";
 import ECommerceWeb from "./pages/Services/ECommerceWeb/ECommerceWeb";
 import SoftwareDev from "./pages/Services/Software Development/SoftwareDev";

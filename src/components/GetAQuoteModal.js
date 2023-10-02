@@ -6,6 +6,8 @@ import { useFormik } from "formik";
 import { getAQuoteSchema } from "../pages/schemas";
 import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const initialValues = {
   name: "",
@@ -46,7 +48,6 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       });
   };
 
-
   useEffect(() => {
     setCountries(Country.getAllCountries());
   }, []);
@@ -56,7 +57,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       initialValues: initialValues,
       validationSchema: getAQuoteSchema,
       onSubmit: (values, action) => {
-        handlePost(values)
+        handlePost(values);
         // console.log(values);
         action.resetForm();
       },
@@ -141,6 +142,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                 </div>
                 <div className="mb-3">
                   <select
+                    style={{ padding: "7px" }}
                     className="form-select"
                     name="country"
                     value={values.country}
@@ -171,9 +173,22 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                   ) : null}
                 </div>
                 <div className="mb-3">
-                  <input
+                  {/* <input
                     type="number"
                     className="form-control"
+                    name="phoneNumber"
+                    placeholder="Phone Number"
+                    value={values.phoneNumber}
+                    onChange={handleChange}
+                    onBlur={handleBlur}
+                  /> */}
+                  <PhoneInput
+                    inputStyle={{
+                      width: "100%",
+                      padding: "21px 0px 21px 50px",
+                    }}
+                    type="number"
+                    // className="form-control"
                     name="phoneNumber"
                     placeholder="Phone Number"
                     value={values.phoneNumber}

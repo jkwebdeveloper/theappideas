@@ -102,7 +102,7 @@ const Banner = ({ banners, setOpenModal, loading }) => {
                       <br />
                       <div className="silder-btn">
                         <Link
-                          to="/contact-us"
+                          to=""
                           className="slider-get_btn"
                           onClick={() => setOpenModal(true)}
                         >

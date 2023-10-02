@@ -44,6 +44,7 @@ section .testimonial {
   background: #f6c000;
 }
 .container .box p {
+  color: #000;
   margin: 0;
   padding: 0;
   transition: 0.5s;

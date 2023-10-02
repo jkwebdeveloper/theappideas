@@ -18,6 +18,7 @@ import { Formik } from "formik";
 import * as yup from "yup";
 import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
@@ -258,7 +259,7 @@ const ContactUs = () => {
                           </select>
                         </div>
                         <div className="col-sm-6 mt-4">
-                          <input
+                          {/* <input
                             type="number"
                             className="form-control"
                             pattern="[0-9()-\s]{10,14}"
@@ -269,6 +270,14 @@ const ContactUs = () => {
                             value={formik.values.phoneNumber}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
+                          /> */}
+                          <PhoneInput
+                          type="number"
+                          name="phoneNumber"
+                          placeholder="Phone Number"
+                          value={formik.values.phoneNumber}
+                          onChange={formik.handleChange}
+                          onBlur={formik.handleBlur}
                           />
                           <span
                             className="error"

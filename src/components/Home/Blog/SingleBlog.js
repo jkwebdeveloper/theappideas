@@ -33,7 +33,7 @@ const SingleBlog = () => {
   };
   useEffect(() => {
     handleGetSingleBlogs();
-  }, []);
+  }, [id]);
   return (
     <>
       {loading ? (

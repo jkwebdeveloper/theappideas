@@ -137,7 +137,7 @@ const Careers = () => {
                           // onClick={handleShow}
                           target="_blank"
                         >
-                          Apply Now
+                          More Details
                         </Link>
                       </div>
                     </div>
