@@ -72,7 +72,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       contentLabel="Contact us Modal"
       appElement={document.getElementById("root")}
       shouldCloseOnOverlayClick={true}
-      style={{ content: { zIndex: 99999 } }}
+      style={{ content: { zIndex: "99999" } }}
     >
       <section className="contact_form_section">
         <div className="container">
@@ -140,7 +140,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                     />
                   ) : null}
                 </div>
-                <div className="mb-3">
+                {/* <div className="mb-3">
                   <select
                     style={{ padding: "7px" }}
                     className="form-select"
@@ -148,6 +148,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                     value={values.country}
                     onChange={handleChange}
                     onBlur={handleBlur}
+                    
                   >
                     <option label="Select Country"></option>
                     {countries.map((Country) => (
@@ -171,18 +172,14 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                       }}
                     />
                   ) : null}
-                </div>
+                </div> */}
                 <div className="mb-3">
-                  {/* <input
-                    type="number"
-                    className="form-control"
-                    name="phoneNumber"
-                    placeholder="Phone Number"
-                    value={values.phoneNumber}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                  /> */}
                   <PhoneInput
+                    countryCodeEditable={false}
+                    enableSearch={true}
+                    inputProps={{
+                      name: "phone",
+                    }}
                     inputStyle={{
                       width: "100%",
                       padding: "21px 0px 21px 50px",
@@ -190,9 +187,18 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                     type="number"
                     // className="form-control"
                     name="phoneNumber"
+                    country={"in"}
                     placeholder="Phone Number"
                     value={values.phoneNumber}
-                    onChange={handleChange}
+                    onChange={(value) => {
+                      // Formik's handleChange requires an object with a target property
+                      handleChange({
+                        target: {
+                          name: "phone",
+                          value: value,
+                        },
+                      });
+                    }}
                     onBlur={handleBlur}
                   />
                   <span

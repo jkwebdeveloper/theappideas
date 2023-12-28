@@ -42,72 +42,88 @@ const FAQ = () => {
         <div className="Title">
           <h3>Frequently Asked Questions</h3>
         </div>
-        <div className="row mt-5">
-          <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-            {faqs.slice(0, Math.ceil(faqs.length / 2)).map((item) => (
-              <div className="accordion" key={item.question}>
-                <div className="item">
-                  <h2
-                    className="title"
-                    onClick={() => {
-                      toggle(item.question);
-                    }}
-                  >
-                    {item.question}
-                    <span style={{ margin: "10px" }}>
-                      {faqId === item.question ? (
-                        <BiMinusCircle size={30} />
-                      ) : (
-                        <BiPlusCircle size={30} />
-                      )}
-                    </span>
-                  </h2>
-                </div>
-                <div
-                  className={
-                    faqId === item.question
-                      ? "accordion_content show"
-                      : "accordion_content"
-                  }
-                >
-                  {item.answer}
-                </div>
-              </div>
-            ))}
+
+        {loading ? (
+          <div
+            className="loading"
+            style={{ textAlign: "center", paddingTop: "50px" }}
+          >
+            Loading...
           </div>
-          <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
-            {faqs.slice(Math.ceil(faqs.length / 2), faqs.length).map((item) => (
-              <div className="accordion" key={item.question}>
-                <div className="item">
-                  <h2
-                    className="title"
-                    onClick={() => {
-                      toggle(item.question);
-                    }}
+        ) : faqs.length > 0 ? (
+          <div className="row mt-5">
+            <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
+              {faqs.slice(0, Math.ceil(faqs.length / 2)).map((item) => (
+                <div className="accordion" key={item.question}>
+                  <div className="item">
+                    <h2
+                      className="title"
+                      onClick={() => {
+                        toggle(item.question);
+                      }}
+                    >
+                      {item.question}
+                      <span style={{ margin: "10px" }}>
+                        {faqId === item.question ? (
+                          <BiMinusCircle size={30} />
+                        ) : (
+                          <BiPlusCircle size={30} />
+                        )}
+                      </span>
+                    </h2>
+                  </div>
+                  <div
+                    className={
+                      faqId === item.question
+                        ? "accordion_content show"
+                        : "accordion_content"
+                    }
                   >
-                    {item.question}
-                    <span style={{ margin: "10px" }}>
-                      {faqId === item.question ? (
-                        <BiMinusCircle size={30} />
-                      ) : (
-                        <BiPlusCircle size={30} />
-                      )}
-                    </span>
-                  </h2>
+                    {item.answer}
+                  </div>
                 </div>
-                <div
-                  className={
-                    faqId === item.question
-                      ? "accordion_content show"
-                      : "accordion_content"
-                  }
-                >
-                  {item.answer}
-                </div>
-              </div>
-            ))}
+              ))}
+            </div>
+            <div className="col-sm-12 col-md-6 col-lg-6 accordion_box">
+              {faqs
+                .slice(Math.ceil(faqs.length / 2), faqs.length)
+                .map((item) => (
+                  <div className="accordion" key={item.question}>
+                    <div className="item">
+                      <h2
+                        className="title"
+                        onClick={() => {
+                          toggle(item.question);
+                        }}
+                      >
+                        {item.question}
+                        <span style={{ margin: "10px" }}>
+                          {faqId === item.question ? (
+                            <BiMinusCircle size={30} />
+                          ) : (
+                            <BiPlusCircle size={30} />
+                          )}
+                        </span>
+                      </h2>
+                    </div>
+                    <div
+                      className={
+                        faqId === item.question
+                          ? "accordion_content show"
+                          : "accordion_content"
+                      }
+                    >
+                      {item.answer}
+                    </div>
+                  </div>
+                ))}
+            </div>
           </div>
-        </div>
+        ) : (
+          <div className="text-center" style={{ textAlign: "center" }}>
+            No data
+          </div>
+        )}
       </div>
     </section>
   );

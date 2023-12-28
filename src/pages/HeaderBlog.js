@@ -7,6 +7,8 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const [blogs, setblogs] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [filterdata, setFilterData] = useState([]);
+  const [activefilter, setActiveFilter] = useState("all");
 
   const handleGetBlogs = () => {
     setLoading(true);
@@ -28,6 +30,13 @@ const Blog = () => {
   useEffect(() => {
     handleGetBlogs();
   }, []);
+
+  const filterItem = (cateItem) => {
+    const updateItems = blogs.filter((curElem) => {
+      return curElem.categories === cateItem;
+    });
+    setFilterData(updateItems);
+  };
 
   return (
     <>
@@ -55,7 +64,7 @@ const Blog = () => {
             >
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link active"
+                  className={`nav-link ${activefilter === "all" && "active"} `}
                   id="ALL-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#ALL"
@@ -63,14 +72,19 @@ const Blog = () => {
                   role="tab"
                   aria-controls="All"
                   aria-selected="true"
-                  // onClick={() => setFilterData(blogs)}
+                  onClick={() => {
+                    setFilterData(blogs);
+                    setActiveFilter("all");
+                  }}
                 >
                   All
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "application" && "active"
+                  }`}
                   id="Application-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Application"
@@ -78,14 +92,19 @@ const Blog = () => {
                   role="tab"
                   aria-controls="Application"
                   aria-selected="false"
-                  // onClick={() => filterItem("Application")}
+                  onClick={() => {
+                    filterItem("application");
+                    setActiveFilter("application");
+                  }}
                 >
                   Application
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "aap-ideas" && "active"
+                  }`}
                   id="App-idea-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#App-idea"
@@ -93,14 +112,19 @@ const Blog = () => {
                   role="tab"
                   aria-controls="App-idea"
                   aria-selected="false"
-                  // onClick={() => filterItem("App")}
+                  onClick={() => {
+                    filterItem("aap-ideas");
+                    setActiveFilter("aap-ideas");
+                  }}
                 >
                   App Ideas
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "bussiness" && "active"
+                  }`}
                   id="bussiness-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#bussiness"
@@ -108,14 +132,19 @@ const Blog = () => {
                   role="tab"
                   aria-controls="bussiness"
                   aria-selected="false"
-                  // onClick={() => filterItem("bussiness")}
+                  onClick={() => {
+                    filterItem("bussiness");
+                    setActiveFilter("bussiness");
+                  }}
                 >
                   Bussiness
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "designing" && "active"
+                  }`}
                   id="Designing-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Designing"
@@ -123,14 +152,19 @@ const Blog = () => {
                   role="tab"
                   aria-controls="Designing"
                   aria-selected="false"
-                  // onClick={() => filterItem("designing")}
+                  onClick={() => {
+                    filterItem("designing");
+                    setActiveFilter("designing");
+                  }}
                 >
                   Designing
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "e-commerce" && "active"
+                  }`}
                   id="E-commerce-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#E-commerce"
@@ -138,14 +172,19 @@ const Blog = () => {
                   role="tab"
                   aria-controls="E-commerce"
                   aria-selected="false"
-                  // onClick={() => filterItem("e-com")}
+                  onClick={() => {
+                    filterItem("e-commerce");
+                    setActiveFilter("e-commerce");
+                  }}
                 >
                   E-commerce
                 </button>
               </li>
               <li className="nav-item" role="presentation">
                 <button
-                  className="nav-link"
+                  className={`nav-link ${
+                    activefilter === "demand-tab" && "active"
+                  }`}
                   id="Demand-tab"
                   data-bs-toggle="pill"
                   data-bs-target="#Demand"
@@ -153,7 +192,10 @@ const Blog = () => {
                   role="tab"
                   aria-controls="Demand"
                   aria-selected="false"
-                  // onClick={() => filterItem("on-demand")}
+                  onClick={() => {
+                    filterItem("demand-tab");
+                    setActiveFilter("demand-tab");
+                  }}
                 >
                   On-Demand-app
                 </button>

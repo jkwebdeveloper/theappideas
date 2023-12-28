@@ -2162,6 +2162,7 @@ section {
   /* transition: all 0.5s cubic-bezier(0, 1, 0, 1); */
 }
 .accordion_content.show {
+  text-align: justify;
   height: auto;
   max-height: 9999px;
   transition: all 0.5s cubic-bezier(1, 0, 1, 1);
@@ -4266,8 +4267,8 @@ section {
   width: 100%;
   left: 50%;
   transform: translate(-50%, 0);
-  /* height: 50vh; */
-  top: 6rem;
+  /* height: 80vh; */
+  top: 5.5rem;
   /* bottom: 3rem; */
 }
 .hover_color_bubble {
