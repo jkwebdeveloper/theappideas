@@ -228,6 +228,60 @@ a:hover {
   letter-spacing: 1px;
   text-transform: capitalize;
 }
+/* new design css start */
+.mobile_service_provide{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service_provide_box {
+  background: #2f0e39;
+  /* text-align: center; */
+  /* display: flex; */
+  /* justify-content: space-between; */
+  /* justify-items: center; */
+  color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  width: 100%;
+  height: 100%;
+  /* align-items: center; */
+  
+}
+.answer_box{
+  transition: all;
+  animation-duration: 500;
+}
+.service_provide_box:hover {
+  color: #fff;
+}
+
+.service_provide_box_active {
+  background-color: #d6aa0b;
+}
+.service_provide_content{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.service_provide_title{
+  display: flex;
+  align-items: center;
+  gap: 21px;
+}
+.service_provide_title p {
+  font-size: 15px;
+  margin: 0;
+  letter-spacing: 1px;
+  text-transform: capitalize;
+}
+.service_provide_title img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  /* margin: 0 auto 10px; */
+}
+/* new design css end */
 
 .Title h3 {
   font-size: 30px;
@@ -461,7 +515,7 @@ input::-webkit-inner-spin-button {
 }
 
 /* Firefox */
-input[type=number] {
+input[type="number"] {
   -moz-appearance: textfield;
 }
 @media (max-width: 767px) {

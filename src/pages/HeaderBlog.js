@@ -234,9 +234,9 @@ const Blog = () => {
                               <div className="blog__box__img">
                                 <img
                                   src={"https://the-app-ideas.onrender.com".concat(
-                                    blog.image.src
+                                    blog.image
                                   )}
-                                  alt={blog.image.alt}
+                                  alt={blog.imageAlt}
                                   className="img-fluid"
                                 />
                               </div>
@@ -252,7 +252,7 @@ const Blog = () => {
                 </div>
               </div>
             ) : (
-              <div>No Data</div>
+              <div style={{textAlign:"center"}}>No Data</div>
             )}
           </div>
         </div>

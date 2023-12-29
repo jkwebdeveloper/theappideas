@@ -105,9 +105,9 @@ const Blog = () => {
                   <div className="image-box">
                     <img
                       src={"https://the-app-ideas.onrender.com".concat(
-                        blog.image.src
+                        blog.image
                       )}
-                      alt={blog.image.alt}
+                      alt={blog.imageAlt}
                     />
                   </div>
                   <div className="profile-details">

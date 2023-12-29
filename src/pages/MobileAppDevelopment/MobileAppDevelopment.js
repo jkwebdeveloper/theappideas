@@ -10,6 +10,8 @@ import "aos/dist/aos.css";
 import { BiMinusCircle } from "react-icons/bi";
 import { BiPlusCircle } from "react-icons/bi";
 import "./mobileAppDevelopment.css";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
 import TestiMonial from "../../components/Testimonial/TestiMonial";
 // import mobileApp from "../../assets/images/MobileAppDev/Mobile App Development Company/Mobile App Development.svg";
 
@@ -43,6 +45,14 @@ import ContactUs from "../../components/ContactUs";
 import HeroSection from "../../components/HeroSection";
 import { Helmet } from "react-helmet";
 import FAQ from "../../components/FAQ";
+
+const ServiceProvideData = [
+  {
+    id:1,
+    question: "IPhone App Development",
+    answer: ""
+  }
+]
 
 const MobileAppDev = () => {
   const [selected, setSelected] = useState(null);
@@ -168,8 +178,8 @@ const MobileAppDev = () => {
               business.
             </p>
           </div>
-          <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+          <div className="row">
+            {/* <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -684,7 +694,59 @@ const MobileAppDev = () => {
                   </div>
                 </div>
               </div>
-            )}
+            )} */}
+            <div
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6"
+              style={{ marginTop: "20px" }}
+            >
+              <div className="service_provide_box">
+                <div className="service_provide_content">
+                  <div className="service_provide_title">
+                    <img
+                      src={IPhoneapp}
+                      alt="smartphone-tablet"
+                      className="img-fluid"
+                    />
+                    <p>IPhone App Development</p>
+                  </div>
+                  <div>
+                    <IoIosArrowDown />
+                  </div>
+                </div>
+                <div className="answer_box">
+                  <hr />
+                  <div className="mt-5">
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="col-sm-12 col-md-12 col-lg-6 col-xl-6"
+              style={{ marginTop: "20px" }}
+            >
+              <div className="service_provide_box">
+                <div className="service_provide_content">
+                  <div className="service_provide_title">
+                    <img
+                      src={IPhoneapp}
+                      alt="smartphone-tablet"
+                      className="img-fluid"
+                    />
+                    <p>IPhone App Development</p>
+                  </div>
+                  <div>
+                    <IoIosArrowDown />
+                  </div>
+                </div>
+                <div className="answer_box">
+                  <hr />
+                  <div className="mt-5">
+
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
