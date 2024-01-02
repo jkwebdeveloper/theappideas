@@ -61,7 +61,7 @@ const SingleBlog = () => {
                         src={"https://the-app-ideas.onrender.com".concat(
                           singleblogs?.creator?.photo
                         )}
-                        alt={singleblogs.image.alt}
+                        alt={singleblogs.imageAlt}
                       />
                       <div className="description">
                         <p className="author_name">

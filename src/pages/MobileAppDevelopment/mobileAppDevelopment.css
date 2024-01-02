@@ -248,9 +248,15 @@ a:hover {
   /* align-items: center; */
   
 }
-.answer_box{
+/* .answer_box{
   transition: all;
   animation-duration: 500;
+} */
+.line_tag{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid white;
 }
 .service_provide_box:hover {
   color: #fff;
@@ -330,7 +336,20 @@ Title .Title_Color {
   object-fit: contain;
   margin: 0 auto 10px;
 }
-
+.answer p {
+  text-align: justify;
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  .service_mobile_view{
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .service_desk_view{
+    display: none;
+  }
+}
 /* Services Provide Section CSS End */
 
 /* Work Slider Section CSS Start */

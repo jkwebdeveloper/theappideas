@@ -48,16 +48,84 @@ import FAQ from "../../components/FAQ";
 
 const ServiceProvideData = [
   {
-    id:1,
-    question: "IPhone App Development",
-    answer: ""
-  }
-]
+    id: 1,
+    images: IPhoneapp,
+    que: "IPhone App Development",
+    ans: "The App Ideas is one of the leading web as well as mobile app development company. We are highly experienced in providing the best Mobile app services for Android devices as well as for IOS devices. We have a team of highly skilled IOS app developers who are efficient in providing successful iPhone app development services. We are highly expert in deploying successful iPhone Mobile app development as per the client’s requirements.",
+    ans2: "Are you looking for the best iPhone App Development services?",
+    ans3: "If Yes, then without taking much time, let’s get connected. We are happy to help you to launch a successful iPhone Mobile app services which will be very profitable for your business. We mainly follow the steps like initially, we gather the requirements, analyze the client’s requirements, have a meeting for clearing all the doubt of the clients, divide the overall project into milestones, take clients approval in every stage and deliver the project on time.",
+  },
+  {
+    id: 2,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 3,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 4,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 5,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 6,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 7,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 8,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 9,
+    images: Ipadeapp,
+    que: "Ipad App Development",
+    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
+    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+];
 
 const MobileAppDev = () => {
   const [selected, setSelected] = useState(null);
   const [activeService, setActiveService] = useState("iphone_app");
   const [activeServe, setActiveServe] = useState("shopping");
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -67,6 +135,12 @@ const MobileAppDev = () => {
       return setSelected(null);
     }
     setSelected(i);
+  };
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false);
+    }
+    SetOpenServicesProvide(i);
   };
   const data = [
     {
@@ -179,7 +253,7 @@ const MobileAppDev = () => {
             </p>
           </div>
           <div className="row">
-            {/* <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -375,7 +449,7 @@ const MobileAppDev = () => {
               </div>
             </div>
             {activeService === "iphone_app" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">IPhone App Development</h3>
@@ -409,7 +483,7 @@ const MobileAppDev = () => {
               </div>
             )}{" "}
             {activeService === "iphone_mobile" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -445,7 +519,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "android_app" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -481,7 +555,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "android_tablet" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -515,7 +589,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "mobile_app" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Mobile App Reskinning </h3>
@@ -554,7 +628,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "mobile_app_redesign" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Mobile App Redesigning</h3>
@@ -589,7 +663,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "mobile_app_upgrade" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Mobile App Upgradation</h3>
@@ -622,7 +696,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "mobile_app_support" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -657,7 +731,7 @@ const MobileAppDev = () => {
               </div>
             )}
             {activeService === "crossplatform" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-6 col-lg-6 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -694,59 +768,48 @@ const MobileAppDev = () => {
                   </div>
                 </div>
               </div>
-            )} */}
-            <div
-              className="col-sm-12 col-md-12 col-lg-6 col-xl-6"
-              style={{ marginTop: "20px" }}
-            >
-              <div className="service_provide_box">
-                <div className="service_provide_content">
-                  <div className="service_provide_title">
-                    <img
-                      src={IPhoneapp}
-                      alt="smartphone-tablet"
-                      className="img-fluid"
-                    />
-                    <p>IPhone App Development</p>
+            )}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
                   </div>
-                  <div>
-                    <IoIosArrowDown />
-                  </div>
-                </div>
-                <div className="answer_box">
-                  <hr />
-                  <div className="mt-5">
-
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              className="col-sm-12 col-md-12 col-lg-6 col-xl-6"
-              style={{ marginTop: "20px" }}
-            >
-              <div className="service_provide_box">
-                <div className="service_provide_content">
-                  <div className="service_provide_title">
-                    <img
-                      src={IPhoneapp}
-                      alt="smartphone-tablet"
-                      className="img-fluid"
-                    />
-                    <p>IPhone App Development</p>
-                  </div>
-                  <div>
-                    <IoIosArrowDown />
-                  </div>
-                </div>
-                <div className="answer_box">
-                  <hr />
-                  <div className="mt-5">
-
-                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                        <p>{item.ans3}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
                 </div>
               </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
