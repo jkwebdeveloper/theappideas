@@ -87,7 +87,6 @@ import Footer from "./components/Footer";
 import ScrollToTop from "./components/ScrollToTop";
 import Whatsapp from "./components/Whatsapp";
 import SingleBlog from "./components/Home/Blog/SingleBlog";
-import Headerr from "./components/Header/Headerr";
 
 const App = () => {
   const [openModal, setOpenModal] = useState(false);
@@ -113,7 +112,6 @@ const App = () => {
 
       {/* <Header /> */}
       <Header setOpenModal={setOpenModal} />
-      {/* <Headerr setOpenModal={setOpenModal} /> */}
       <Routes>
         {/* Home page Link */}
         <Route path="/" element={<Home setOpenModal={setOpenModal} />} />
