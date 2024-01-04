@@ -228,8 +228,8 @@ a:hover {
   letter-spacing: 1px;
   text-transform: capitalize;
 }
-/* new design css start */
-.mobile_service_provide{
+/* ================================ new design css start ================================ */
+.mobile_service_provide {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -246,13 +246,12 @@ a:hover {
   width: 100%;
   height: 100%;
   /* align-items: center; */
-  
 }
 /* .answer_box{
   transition: all;
   animation-duration: 500;
 } */
-.line_tag{
+.line_tag {
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: 0;
@@ -265,12 +264,12 @@ a:hover {
 .service_provide_box_active {
   background-color: #d6aa0b;
 }
-.service_provide_content{
+.service_provide_content {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.service_provide_title{
+.service_provide_title {
   display: flex;
   align-items: center;
   gap: 21px;
@@ -282,12 +281,12 @@ a:hover {
   text-transform: capitalize;
 }
 .service_provide_title img {
-  width: 60px;
-  height: 60px;
+  width: 50px;
+  height: 50px;
   object-fit: contain;
   /* margin: 0 auto 10px; */
 }
-/* new design css end */
+/* ================================ new design css end ================================ */
 
 .Title h3 {
   font-size: 30px;
@@ -341,13 +340,22 @@ Title .Title_Color {
   font-size: 14px;
 }
 @media (min-width: 1024px) {
-  .service_mobile_view{
+  .service_mobile_view {
     display: none;
   }
 }
 @media (max-width: 1023px) {
-  .service_desk_view{
+  .service_desk_view {
     display: none;
+  }
+  .banner__contact__box {
+    display: none;
+  }
+  .banner__boxes {
+    display: none;
+  }
+  .common__banner__section {
+    padding-bottom: 0px;
   }
 }
 /* Services Provide Section CSS End */

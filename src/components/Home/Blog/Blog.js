@@ -21,7 +21,8 @@ const Blog = () => {
         },
       })
       .then((res) => {
-        setBlogs(res.data.data);
+        const blogs = res.data.data ? res.data.data.slice(0, 5) : [];
+        setBlogs(blogs);
         // console.log(res.data.data);
         setLoading(false);
       })

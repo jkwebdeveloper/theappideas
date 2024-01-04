@@ -372,7 +372,7 @@ const Footer = () => {
               </ul>
             </div>
           </div>
-          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-6">
+          <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
             <div className="footer__box">
               <h2 className="footer_title">Awards and Accolades</h2>
               <div className="footer__awards">
@@ -443,7 +443,7 @@ const Footer = () => {
                       </a>
                     </div>
                   </li>
-                </ul>
+                </ul> 
               </div>
             </div>
           </div>

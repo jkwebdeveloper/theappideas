@@ -1453,8 +1453,9 @@ section {
 
 .footer__awards ul li {
   display: inline-block;
-  margin-right: 60px;
+  margin-right: 30px;
   margin-bottom: 20px;
+  margin-left: 0px;
 }
 
 .footer__awards a:first-child {

@@ -65,67 +65,142 @@ const ServiceProvideData = [
   },
   {
     id: 3,
-    images: Ipadeapp,
-    que: "Ipad App Development",
-    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
-    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
-    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+    images: Androidapp,
+    que: "Android app development",
+    ans: "The App Ideas is one of the top Android Mobile app development. We offer Mobile app development services that help various businesses and startups to digitalize their services and make them successful in the market. We have a team of highly skilled Android Mobile app developers who have years of experience in developing Mobile applications that are Stable, customize, future of the industry as well as a fully functional solution for an Android Mobile App.",
+    ans2: "We have experience in developing Android Mobile app development for various niches and categories of the business. We initially gather the requirements from our clients, analyze them, discuss them further with the clients and finalize the project at the best rates. We mainly work on the agile methodology in which we divide projects into small milestones, start working on the projects and takes clients confirmation at every step.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us. Are you looking for the best Android Mobile App Development Firm? If Yes, then feel free to reach us.",
   },
   {
     id: 4,
-    images: Ipadeapp,
-    que: "Ipad App Development",
-    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
-    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
-    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+    images: Androidtablet,
+    que: "Android app Tablet development",
+    ans: "The App Ideas is one of the leading software development company which offers Android Tablet app development services. Nowadays, along with the web and mobile app development, users are also more inclined towards the different sizes of devices for convenience. Due to the increasing popularity of Android devices, the demand for the Android app is also increased for different devices.",
+    ans2: "Many of the businesses or startups are also making investments in the development of the Android Tablet app. We can initially gather, understand and analyze the requirements in a proper way. After that, our experts also suggest some of the changes to the requirements by keeping the future as a reference and then finalize the project at the best rates.",
+    ans3: "Are you looking for services for successful Android Tablet app Development? If yes, then feel free to reach and discuss further.",
   },
   {
     id: 5,
-    images: Ipadeapp,
-    que: "Ipad App Development",
-    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
-    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
-    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+    images: Reskinning,
+    que: "Mobile App Reskinning",
+    ans: "Currently, the field like Shopping and E-commerce business is booming in the market. Along with all the digital services, the E-commerce business, as well as Shopping markets, are converting their services into online platforms like websites, web apps and mobile apps in the market. In this digital era, many users are shifting towards the digital platform because it offers the convenience of services, time-saving and cost-effective for the people. Many of the new business owners and entrepreneurs are making high investments in an E-commerce store because the demand for these services is increasing day by day.",
+    ans2: "E-commerce(Electronic Commerce) and Shopping is an online platform that helps in buying and selling goods as well as the services, transmitting of data and funds and the major requirement is the Internet. This business transaction occurs in business to business, consumer to consumer, business to consumer and consumer to business. E-commerce also encompasses other activities including internet banking, online auctions, online ticketing and payment gateways.",
+    ans3: "Are you thinking of launching any Shopping and E-commerce digital solutions in the market? If Yes then feel free to reach us and get a free quote.",
   },
   {
     id: 6,
-    images: Ipadeapp,
-    que: "Ipad App Development",
-    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
-    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
-    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+    images: Redesigning,
+    que: "Mobile App Redesigning",
+    ans: "Mobile app redesigning is one of the most popular services in the current trends. Some of the business owners launched the beta version before launching the final product in the market to gets user feedback. After gathering get feedback, sometimes mobile app owner has to redesign their mobile app before launching it into the market. Mobile App redesigning is a very important service because from time to time mobile app needs to be redesign to make them better as well as attractive as per the trend.",
+    ans2: "The App Ideas is one of the leading web and app development company. Along with the best development services, we also offer the best mobile app designing and redesigning services at the best rates. We first gather the client’s requirements, understand as well as analyze them and then start the process. We have a team of highly skilled designers who will provide the best Mobile app redesigning services at the best rates.",
+    ans3: "Are you looking for the best Mobile app Redesigning? If Yes, then feel free to reach us.",
   },
   {
     id: 7,
-    images: Ipadeapp,
-    que: "Ipad App Development",
-    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
-    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
-    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+    images: Upgradation,
+    que: "Mobile App Upgradation",
+    ans: "Mobile App upgradation is very important for business owners who have a mobile application or who are running their business through a mobile app. With the timings, things need to change or upgrade like a mobile app to keep it relevant with the current business. To stay ahead with the competitors it is very important for you to upgrade your mobile app from time to time.",
+    ans2: "Mobile app upgradation helps business owners to integrate newly introduced features and functionality into the app. If you observe the current trend then you can Clearly observe that an operating system updates in a short time period. Along with the mobile app development, The App Ideas also offer the services of Mobile app upgradation at the best possible price without changing the concept of the mobile app.",
+    ans3: "Are you looking for the best Mobile App upgradation? If Yes, then feel free to reach us.",
   },
   {
     id: 8,
-    images: Ipadeapp,
+    images: Mobileappsupport,
+    que: "Mobile app Support and Service",
+    ans: "Along with the mobile app and web app development, The App Ideas also offers the services like Mobile app Support and maintenance. The services and maintenance of the mobile app play a crucial role in the success of the business or an online business. Many of the business owners avoid these support and maintenance services which lead to the failure of the mobile app after some period because it is very important to maintain the code from time to time to make it compatible with the newly introduced software updates.",
+    ans2: "The App Ideas offers the services of web and mobile app development, the UI/UX designing of the software as well as also offers the support and maintenance services after deploying the projects to the clients. We keep our team updated with the newly introduced technology and updates in the codes.",
+    ans3: "If you are looking for Mobile app support and maintenance services then feel free to reach us.",
+  },
+  {
+    id: 9,
+    images: Crossplatform,
+    que: "Cross-platform Mobile Apps",
+    ans: "Nowadays, Cross-platform technology is getting popular day by day because there is a huge range of mobile devices and platforms are available in the market. Mobile app flexibility is very important in this present time if you are targeting a huge number of users. If you are planning to launch a single mobile app platform that can be compatible with various operating systems then Cross-platform technology is one of the best options for your business mobile app development.",
+    ans2: "Along with the best web app and mobile app development, The App Ideas also provide the services like cross platforms app development. Cross-platform technology helps in developing mobile apps for multiple devices as well as multiple platforms. Cross-platform technology provides the flexibility and easy to use mobile app solution for a successful business. The App Ideas strictly follow the agile methodology for the development of the software services. We offer cross-platform technology with unique design and the best possible rates.",
+    ans3: "Are you looking for the best cross-platform technology? If Yes, then feel free to reach us.",
+  },
+];
+const IndustriesData = [
+  {
+    id: 1,
+    images: Shopping,
+    que: "Shopping & E-Commerce",
+    ans: "We are highly experienced in providing the best software development services to each niche with unique designing and development services as well as at the best costing. We have a team of highly skilled developers as well as designers who initially try to understand the client’s requirements.",
+    ans2: "Currently, many business owners are shifting their services into online platforms like websites, web apps or mobile apps. It is beneficial to convert your business into online platforms because this makes the work easier for you as well as for your users.",
+    ans3: "Are you planning to launch a Shopping and E-commerce Store in the market?",
+    ans4: "If Yes, then feel free to connect with us. Let’s have a quick call to discuss your requirements in detail. Our Process starts from Requirements Gathering and Analysis, The meeting for clearing out the questions, Project Estimation and Proposal, Resources and team allocation, Daily/Weekly updates and the deployment of the projects",
+  },
+  {
+    id: 2,
+    images: Education,
     que: "Ipad App Development",
     ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
     ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
     ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
   },
   {
+    id: 3,
+    images: Banking,
+    que: "Android app development",
+    ans: "The App Ideas is one of the top Android Mobile app development. We offer Mobile app development services that help various businesses and startups to digitalize their services and make them successful in the market. We have a team of highly skilled Android Mobile app developers who have years of experience in developing Mobile applications that are Stable, customize, future of the industry as well as a fully functional solution for an Android Mobile App.",
+    ans2: "We have experience in developing Android Mobile app development for various niches and categories of the business. We initially gather the requirements from our clients, analyze them, discuss them further with the clients and finalize the project at the best rates. We mainly work on the agile methodology in which we divide projects into small milestones, start working on the projects and takes clients confirmation at every step.",
+    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us. Are you looking for the best Android Mobile App Development Firm? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 4,
+    images: Travel,
+    que: "Android app Tablet development",
+    ans: "The App Ideas is one of the leading software development company which offers Android Tablet app development services. Nowadays, along with the web and mobile app development, users are also more inclined towards the different sizes of devices for convenience. Due to the increasing popularity of Android devices, the demand for the Android app is also increased for different devices.",
+    ans2: "Many of the businesses or startups are also making investments in the development of the Android Tablet app. We can initially gather, understand and analyze the requirements in a proper way. After that, our experts also suggest some of the changes to the requirements by keeping the future as a reference and then finalize the project at the best rates.",
+    ans3: "Are you looking for services for successful Android Tablet app Development? If yes, then feel free to reach and discuss further.",
+  },
+  {
+    id: 5,
+    images: Food,
+    que: "Mobile App Reskinning",
+    ans: "Currently, the field like Shopping and E-commerce business is booming in the market. Along with all the digital services, the E-commerce business, as well as Shopping markets, are converting their services into online platforms like websites, web apps and mobile apps in the market. In this digital era, many users are shifting towards the digital platform because it offers the convenience of services, time-saving and cost-effective for the people. Many of the new business owners and entrepreneurs are making high investments in an E-commerce store because the demand for these services is increasing day by day.",
+    ans2: "E-commerce(Electronic Commerce) and Shopping is an online platform that helps in buying and selling goods as well as the services, transmitting of data and funds and the major requirement is the Internet. This business transaction occurs in business to business, consumer to consumer, business to consumer and consumer to business. E-commerce also encompasses other activities including internet banking, online auctions, online ticketing and payment gateways.",
+    ans3: "Are you thinking of launching any Shopping and E-commerce digital solutions in the market? If Yes then feel free to reach us and get a free quote.",
+  },
+  {
+    id: 6,
+    images: SocialNetworking,
+    que: "Mobile App Redesigning",
+    ans: "Mobile app redesigning is one of the most popular services in the current trends. Some of the business owners launched the beta version before launching the final product in the market to gets user feedback. After gathering get feedback, sometimes mobile app owner has to redesign their mobile app before launching it into the market. Mobile App redesigning is a very important service because from time to time mobile app needs to be redesign to make them better as well as attractive as per the trend.",
+    ans2: "The App Ideas is one of the leading web and app development company. Along with the best development services, we also offer the best mobile app designing and redesigning services at the best rates. We first gather the client’s requirements, understand as well as analyze them and then start the process. We have a team of highly skilled designers who will provide the best Mobile app redesigning services at the best rates.",
+    ans3: "Are you looking for the best Mobile app Redesigning? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 7,
+    images: lifestyle,
+    que: "Mobile App Upgradation",
+    ans: "Mobile App upgradation is very important for business owners who have a mobile application or who are running their business through a mobile app. With the timings, things need to change or upgrade like a mobile app to keep it relevant with the current business. To stay ahead with the competitors it is very important for you to upgrade your mobile app from time to time.",
+    ans2: "Mobile app upgradation helps business owners to integrate newly introduced features and functionality into the app. If you observe the current trend then you can Clearly observe that an operating system updates in a short time period. Along with the mobile app development, The App Ideas also offer the services of Mobile app upgradation at the best possible price without changing the concept of the mobile app.",
+    ans3: "Are you looking for the best Mobile App upgradation? If Yes, then feel free to reach us.",
+  },
+  {
+    id: 8,
+    images: Real,
+    que: "Mobile app Support and Service",
+    ans: "Along with the mobile app and web app development, The App Ideas also offers the services like Mobile app Support and maintenance. The services and maintenance of the mobile app play a crucial role in the success of the business or an online business. Many of the business owners avoid these support and maintenance services which lead to the failure of the mobile app after some period because it is very important to maintain the code from time to time to make it compatible with the newly introduced software updates.",
+    ans2: "The App Ideas offers the services of web and mobile app development, the UI/UX designing of the software as well as also offers the support and maintenance services after deploying the projects to the clients. We keep our team updated with the newly introduced technology and updates in the codes.",
+    ans3: "If you are looking for Mobile app support and maintenance services then feel free to reach us.",
+  },
+  {
     id: 9,
-    images: Ipadeapp,
-    que: "Ipad App Development",
-    ans: "The App Ideas is one of the leading iPad mobile app development. We offer the best mobile app development services that assist various startups and businesses in converting their offline business to online business. We have a team of highly skilled and experienced developers in designing and developing mobile app solution which is stable, customize and can be future of the industry.",
-    ans2: "In our portfolio section, you can check our past projects. Our iPad app developers are proficient in providing the best mobile app services for different niches and categories of the business. We first gather the overall requirements from the clients, analyze the requirements, arrange a meeting with the clients, provide a proposal and then after clearly everything finalizes the project at the best rates. For every mobile app and web app development including iPad app development, we strictly follow the agile methodology.",
-    ans3: "Are you looking for the best iPad Mobile App Development Firm? If Yes, then feel free to reach us.",
+    images: health,
+    que: "Cross-platform Mobile Apps",
+    ans: "Nowadays, Cross-platform technology is getting popular day by day because there is a huge range of mobile devices and platforms are available in the market. Mobile app flexibility is very important in this present time if you are targeting a huge number of users. If you are planning to launch a single mobile app platform that can be compatible with various operating systems then Cross-platform technology is one of the best options for your business mobile app development.",
+    ans2: "Along with the best web app and mobile app development, The App Ideas also provide the services like cross platforms app development. Cross-platform technology helps in developing mobile apps for multiple devices as well as multiple platforms. Cross-platform technology provides the flexibility and easy to use mobile app solution for a successful business. The App Ideas strictly follow the agile methodology for the development of the software services. We offer cross-platform technology with unique design and the best possible rates.",
+    ans3: "Are you looking for the best cross-platform technology? If Yes, then feel free to reach us.",
   },
 ];
-
 const MobileAppDev = () => {
   const [selected, setSelected] = useState(null);
   const [activeService, setActiveService] = useState("iphone_app");
   const [activeServe, setActiveServe] = useState("shopping");
   const [openServicesProvide, SetOpenServicesProvide] = useState(false);
+  const [openIndustries, setOpenIndustries] = useState(false);
 
   const prevRef = useRef(null);
   const nextRef = useRef(null);
@@ -141,6 +216,12 @@ const MobileAppDev = () => {
       return SetOpenServicesProvide(false);
     }
     SetOpenServicesProvide(i);
+  };
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return setOpenIndustries(null);
+    }
+    setOpenIndustries(i);
   };
   const data = [
     {
@@ -769,6 +850,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             )}
+            {/* ========================= Mobile View =========================== */}
             {ServiceProvideData.map((item, i) => (
               <div
                 className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
@@ -810,6 +892,7 @@ const MobileAppDev = () => {
                 </div>
               </div>
             ))}
+            {/* ========================= Mobile View =========================== */}
           </div>
         </div>
       </section>
@@ -822,7 +905,7 @@ const MobileAppDev = () => {
               <h3>Technologies we use</h3>
             </div>
             <div className="row">
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div
                   data-aos="flip-left"
                   data-aos-duration="1000"
@@ -837,7 +920,7 @@ const MobileAppDev = () => {
                   <h2>Objective C</h2>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div
                   data-aos="flip-right"
                   data-aos-duration="1000"
@@ -852,7 +935,7 @@ const MobileAppDev = () => {
                   <h2>Swift</h2>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div
                   data-aos="flip-left"
                   data-aos-duration="1000"
@@ -867,7 +950,7 @@ const MobileAppDev = () => {
                   <h2>Java</h2>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div
                   data-aos="flip-right"
                   data-aos-duration="1000"
@@ -882,7 +965,7 @@ const MobileAppDev = () => {
                   <h2>Kotlin</h2>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div
                   data-aos="flip-left"
                   data-aos-duration="1000"
@@ -897,7 +980,7 @@ const MobileAppDev = () => {
                   <h2>React Native</h2>
                 </div>
               </div>
-              <div className="col-12 col-sm-6 col-md-4 col-lg-2 mb-4">
+              <div className="col-6 col-sm-6 col-md-4 col-lg-2 mb-4">
                 <div
                   data-aos="flip-right"
                   data-aos-duration="1000"
@@ -932,7 +1015,7 @@ const MobileAppDev = () => {
                 </p>
               </div>
               <div className="row mt-5">
-                <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                   <div className="row">
                     <div
                       className="col-12 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -1102,7 +1185,7 @@ const MobileAppDev = () => {
                   </div>
                 </div>
                 {activeServe === "shopping" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">
@@ -1141,7 +1224,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "health" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Health and Fitness</h3>
@@ -1182,7 +1265,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "education" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">
@@ -1224,7 +1307,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "banking" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Banking and finance </h3>
@@ -1265,7 +1348,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "travel" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Travel and Tourism</h3>
@@ -1306,7 +1389,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "food" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Food and Drink</h3>
@@ -1347,7 +1430,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "socila_networking" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Social Networking</h3>
@@ -1391,7 +1474,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "lifestyle" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Lifestyle</h3>
@@ -1432,7 +1515,7 @@ const MobileAppDev = () => {
                   </div>
                 )}
                 {activeServe === "real_estate" && (
-                  <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+                  <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                     <div className="service_rht">
                       <div className="Title">
                         <h3 className="Title_heading">Real Estate</h3>
@@ -1474,6 +1557,50 @@ const MobileAppDev = () => {
                     </div>
                   </div>
                 )}
+                {/* ========================= Mobile View =========================== */}
+                {IndustriesData.map((item, i) => (
+                  <div
+                    className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                    style={{ marginTop: "20px", cursor: "pointer" }}
+                    onClick={() => industriesOpen(i)}
+                  >
+                    <div className="service_provide_box">
+                      <div className="service_provide_content">
+                        <div className="service_provide_title">
+                          <img
+                            src={item?.images}
+                            alt="smartphone-tablet"
+                            className="img-fluid"
+                          />
+                          <p>{item.que}</p>
+                        </div>
+                        {openIndustries === i ? (
+                          <div>
+                            <IoIosArrowUp />
+                          </div>
+                        ) : (
+                          <div>
+                            <IoIosArrowDown />
+                          </div>
+                        )}
+                      </div>
+                      {openIndustries === i ? (
+                        <div className="answer_box">
+                          <hr className="line_tag" />
+                          <div className="answer">
+                            <p>{item.ans}</p>
+                            <p>{item.ans2}</p>
+                            <p>{item.ans3}</p>
+                            <p>{item.ans4}</p>
+                          </div>
+                        </div>
+                      ) : (
+                        ""
+                      )}
+                    </div>
+                  </div>
+                ))}
+                {/* ========================= Mobile View =========================== */}
               </div>
             </div>
           </section>

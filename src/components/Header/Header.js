@@ -1,12 +1,15 @@
 import React, { useEffect, useState } from "react";
 import "./header.css";
 import { AiOutlineClose } from "react-icons/ai";
-import { MdKeyboardArrowDown } from "react-icons/md";
+import { MdKeyboardArrowDown, MdKeyboardArrowUp } from "react-icons/md";
 import { RiArrowRightSLine, RiMenu3Line } from "react-icons/ri";
 import { Link } from "react-router-dom";
 
 const Header = ({ setOpenModal }) => {
   const [sticky, setSticky] = useState("");
+  const [openmenu, setOpenMenu] = useState(false);
+  const [openCategory, setOpenCategory] = useState(null);
+  const [openSubCategory, setOpenSubCategory] = useState(false);
 
   // on render, set listener
   useEffect(() => {
@@ -47,9 +50,6 @@ const Header = ({ setOpenModal }) => {
           <input type="radio" name="slider" id="menu-btn" />
           <input type="radio" name="slider" id="close-btn" />
           <ul className="nav-links">
-            <label htmlFor="close-btn" className="btn close-btn">
-              <AiOutlineClose />
-            </label>
             {/* company */}
             <li>
               <a href="/" className="desktop-item">
@@ -57,6 +57,7 @@ const Header = ({ setOpenModal }) => {
               </a>
 
               <input type="checkbox" id="showMega" />
+
               <label
                 htmlFor="showMega"
                 className="mobile-item"
@@ -246,7 +247,7 @@ const Header = ({ setOpenModal }) => {
                           Android App Development
                         </li>
                       </a>
-                      <a href="iphone-app-development">
+                      <a href="/iphone-app-development">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -324,7 +325,7 @@ const Header = ({ setOpenModal }) => {
                           <i className="right__arrow">
                             <RiArrowRightSLine />
                           </i>
-                          SEO
+                          Search Engine Optimization
                         </li>
                       </a>
                       <a href="/social-media-marketing">
@@ -348,7 +349,7 @@ const Header = ({ setOpenModal }) => {
                           <i className="right__arrow">
                             <RiArrowRightSLine />
                           </i>
-                          ASO
+                          App Store Optimization
                         </li>
                       </a>
                     </ul>
@@ -366,7 +367,7 @@ const Header = ({ setOpenModal }) => {
                           src={require("../../assets/images/Header/Services/E-commerce website Development.gif")}
                           alt="E-commerce-website-Development"
                         />{" "}
-                        E-commerce Website Development
+                        E-commerce Development
                       </h4>
                     </a>
                     <ul className="mega-links">
@@ -490,11 +491,14 @@ const Header = ({ setOpenModal }) => {
                 </div>
                 <div
                   className="content_last content "
-                  style={{ justifyContent: "flex-start", padding: "10px 13px" }}
+                  style={{
+                    justifyContent: "flex-start",
+                    padding: "10px 13px",
+                  }}
                 >
                   <div
                     className="row responsive_width"
-                    style={{ width: "28%" }}
+                    style={{ width: "29%" }}
                   >
                     <a
                       href="/software-development"
@@ -1069,7 +1073,7 @@ const Header = ({ setOpenModal }) => {
                           E-learning App Development
                         </li>
                       </a>
-                      <a href="dating-app-development">
+                      <a href="/dating-app-development">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1177,335 +1181,837 @@ const Header = ({ setOpenModal }) => {
               </div>
             </li>
           </ul>
-          {/* Mobile start */}
-          {/* <div className="header_mobile_menu ">
-            <a href="#" className="mobile_menu_close_btn">
-              <i className="fa fa-times" />
-            </a>
-            <div className="sidebar-nav">
-              <div className="nav">
-                <ul className="nav_ul">
-                  <li className="nav_ul_li">
-                    <a href="#">COMPANY</a>
-                    <a className="menu-toggle" href="#" />
-                    <ul
-                      className="sub-menu company_sub_menu"
-                      id="company_sub_menu_id"
-                    >
-                      <li>
-                        <a href="#">
-                          <img src="assets/img/About-us.gif" alt="About-us" />
-                          About Us
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="assets/img/our-process.gif"
-                            alt="About-us"
-                          />{" "}
-                          Our Process
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="assets/img/Our-Team.gif" alt="Our-Team" />{" "}
-                          Our Team
-                        </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="assets/img/Testamonials.gif"
-                            alt="Testamonials"
+
+          {/* =============================== Mobile View start =============================== */}
+          {openmenu ? (
+            <div className="header_mobile_menu header_menu_lft">
+              <div className="header_mobile_top">
+                <a
+                  href="/"
+                  onClick={() => {
+                    window.scrollTo({ top: 0, behavior: "smooth" });
+                  }}
+                >
+                  <img
+                    src={require("../../assets/images/Header/logo.png")}
+                    alt="logo"
+                    className="img-fluid"
+                    // style={{ height: '60px ' }}
+                  />
+                </a>
+                <a href="#" className="mobile_menu_close_btn">
+                  <AiOutlineClose onClick={() => setOpenMenu(false)} />
+                </a>
+              </div>
+              <div className="sidebar-nav">
+                <div className="nav">
+                  <ul className="nav_ul">
+                    <li className="nav_ul_li">
+                      <a href="#">COMPANY</a>
+                      {openCategory === "company" ? (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowUp
+                            onClick={() => setOpenCategory(null)}
                           />
-                          Testimonial
                         </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img src="assets/img/Carrers.gif" alt="Careers" />{" "}
-                          Careers
+                      ) : (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowDown
+                            onClick={() => setOpenCategory("company")}
+                          />
                         </a>
-                      </li>
-                      <li>
-                        <a href="#">
-                          <img
-                            src="assets/img/Life-at-TAI.gif"
-                            alt="Life-at-TAI"
-                          />{" "}
-                          Life At TAI
+                      )}
+                      {openCategory === "company" ? (
+                        <ul
+                          className="sub-menu company_sub_menu"
+                          id="company_sub_menu_id"
+                        >
+                          <li>
+                            <a
+                              href="/about-us"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              <img
+                                src={require("../../assets/images/Header/Company/About Us.gif")}
+                                alt="About-us"
+                              />{" "}
+                              About Us
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/our-process"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              <img
+                                src={require("../../assets/images/Header/Company/Our Process.gif")}
+                                alt="Our-Team"
+                              />{" "}
+                              Our Process
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/our-team"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              <img
+                                src={require("../../assets/images/Header/Company/Our Team.gif")}
+                                alt="Our-Team"
+                              />{" "}
+                              Our Team
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/testimonial"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              <img
+                                src={require("../../assets/images/Header/Company/Testimonial.gif")}
+                                alt="Testamonials"
+                              />
+                              Testimonial
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/careers"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              <img
+                                src={require("../../assets/images/Header/Company/Careers.gif")}
+                                alt="Carrers"
+                              />{" "}
+                              Careers
+                            </a>
+                          </li>
+                          <li>
+                            <a
+                              href="/life-at-tai"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              <img
+                                src={require("../../assets/images/Header/Company/Life at TAI.gif")}
+                                alt="Life-at-TAI"
+                              />{" "}
+                              Life At TAI
+                            </a>
+                          </li>
+                        </ul>
+                      ) : (
+                        ""
+                      )}
+                    </li>
+                    <li className="nav_ul_li">
+                      <a href="#">SERVICE</a>
+                      {openCategory === "service" ? (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowUp
+                            onClick={() => setOpenCategory(null)}
+                          />
                         </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#">SERVICE</a>
-                    <a className="menu-toggle" href="#" />
-                    <ul className="sub-menu" id="sub-menu">
-                      <li>
-                        <a href="#">MOBILE APP DEVELOPMENT</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
+                      ) : (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowDown
+                            onClick={() => setOpenCategory("service")}
+                          />
+                        </a>
+                      )}
+                      {openCategory === "service" ? (
+                        <ul className="sub-menu" id="sub-menu">
                           <li>
-                            <a href="#">Android App Development</a>
+                            <a
+                              href="/mobile-app-development"
+                              onClick={() => {
+                                window.scrollTo({ top: 0, behavior: "smooth" });
+                              }}
+                            >
+                              MOBILE APP DEVELOPMENT
+                            </a>
+                            {openSubCategory === "mobileappdev" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("mobileappdev")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "mobileappdev" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/android-app-development">
+                                    Android App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/iphone-app-development">
+                                    Iphone App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/ipad-app-development">
+                                    IPad App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/react-native-development">
+                                    React Native Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/iot-app-development">
+                                    IOT App Development
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">Iphone App Development</a>
+                            <a href="/digital-marketing-agency">
+                              DIGITAL MARKETING AGENCY
+                            </a>
+                            {openSubCategory === "digital" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() => setOpenSubCategory("digital")}
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "digital" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/seo">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Search Engine Optimization
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/social-media-marketing">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Social Media Marketing
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/aso">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    App Store Optimization
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">IPad App Development</a>
+                            <a href="/e-commerce-website-development">
+                              E-COMMERCE WEBSITE DEVELOPMENT
+                            </a>
+                            {openSubCategory === "ecommerce" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("ecommerce")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "ecommerce" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/shopify-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Shopify Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/magento-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Magento Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/joomla-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Joomla Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/drupal-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Drupal Development
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">React Native Development</a>
+                            <a href="/web-development">WEB DEVELOPMENT</a>
+                            {openSubCategory === "webdevelopment" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("webdevelopment")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "webdevelopment" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/wordpress-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    WordPress Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/php-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    PHP Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/angular-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Angular Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/webflow-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Webflow Development
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">IOT App Development</a>
+                            <a href="/software-development">
+                              SOFTWARE DEVELOPMENT
+                            </a>
+                            {openSubCategory === "softwaredevelopment" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("softwaredevelopment")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "softwaredevelopment" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/asp-net-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Asp.Net Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/dotnetnuke-development">
+                                    <i className="fa fa-angle-right right__arrow" />
+                                    DotNetNuke Development
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
+                          </li>
+                          <li>
+                            <a href="/designing-services">DESIGNING SERVICES</a>
+                            {openSubCategory === "designing" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("designing")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "designing" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/graphics-design">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Graphic Design
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/mobile-app-design">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Mobile App Design
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
+                          </li>
+                          <li>
+                            <a>OTHER SERVICE</a>
+                            {openSubCategory === "otherservice" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("otherservice")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "otherservice" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/startup-services">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Startup Services
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                         </ul>
-                      </li>
-                      <li>
-                        <a href="#">DIGITAL MARKETING AGENCY</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
+                      ) : (
+                        ""
+                      )}
+                    </li>
+                    <li className="nav_ul_li">
+                      <a href="/hire-us">HIRE US</a>
+                      {openCategory === "hireus" ? (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowUp
+                            onClick={() => setOpenCategory(null)}
+                          />
+                        </a>
+                      ) : (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowDown
+                            onClick={() => setOpenCategory("hireus")}
+                          />
+                        </a>
+                      )}
+                      {openCategory === "hireus" && (
+                        <ul className="sub-menu" id="sub-menu">
                           <li>
-                            <a href="#">SEO</a>
+                            <a>HIRE MOBILE APP DEVELOPMENT</a>
+                            {openSubCategory === "hiremobileapp" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("hiremobileapp")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "hiremobileapp" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/hire-ios-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire IOS Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-android-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Android Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-react-native-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire React Native Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-flutter-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Flutter Developer
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">Social Media Marketing</a>
+                            <a>HIRE WEB DEVELOPER</a>
+                            {openSubCategory === "hiremobileweb" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("hiremobileweb")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "hiremobileweb" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/hire-laravel-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Laravel Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-wordpress-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Wordpress Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-nodejs-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Node.Js Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-codeigniter-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Codelgniter Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-php-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire PHP Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-python-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Paython Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-reactjs-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire React JS Developer
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-angular-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Angular 2 Developer
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">ASO</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">E-COMMERCE WEBSITE DEVELOPMENT</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Shopify Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Magento Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Joomla Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Drupal Development</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">WEB DEVELOPMENT</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">WordPress Development</a>
-                          </li>
-                          <li>
-                            <a href="#">PHP Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Angular Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Webflow Development</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">SOFTWARE DEVELOPMENT</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Asp.Net Development</a>
-                          </li>
-                          <li>
-                            <a href="#">DotNetNuke Development</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">DESIGNING SERVICES</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Graphic Design</a>
+                            <a href="#">HIRE E-COMMERCE DEVELOPER</a>
+                            {openSubCategory === "hiremobilecommerce" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("hiremobilecommerce")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "hiremobilecommerce" ? (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/hire-shopify-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Shopify Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/hire-magento-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Hire Magento 2 Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Joomla Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="#">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Drupal Development
+                                  </a>
+                                </li>
+                              </ul>
+                            ) : (
+                              ""
+                            )}
                           </li>
                           <li>
-                            <a href="#">Mobile App Design</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">OTHER SERVICE</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Startup Services</a>
-                          </li>
-                        </ul>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#">HIRE US</a>
-                    <a className="menu-toggle" href="#" />
-                    <ul className="sub-menu" id="sub-menu">
-                      <li>
-                        <a href="#">HIRE MOBILE APP DEVELOPMENT</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Hire IOS Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Android Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire React Native Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Flutter Developer</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">HIRE WEB DEVELOPER</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Hire Laravel Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Wordpress Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Node.Js Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Codelgniter Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire PHP Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Paython Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire React JS Developer</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Angular 2 Developer</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">HIRE E-COMMERCE DEVELOPER</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Hire Shopify Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Hire Magento 2 Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Joomla Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Drupal Development</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">HIRE DESIGNER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#">SOLUTIONS</a>
-                    <a className="menu-toggle" href="#" />
-                    <ul className="sub-menu" id="sub-menu">
-                      <li>
-                        <a href="#">DELIVERY APPS</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Food Delivery App Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Courier Pickup Management Solution</a>
-                          </li>
-                          <li>
-                            <a href="#">Grocery App Development</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li>
-                        <a href="#">ON-DEMAND APPS</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
-                          <li>
-                            <a href="#">Taxi Booking App Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Doctor Hiring App Solution</a>
-                          </li>
-                          <li>
-                            <a href="#">Security App Solution</a>
+                            <a href="#">HIRE DESIGNER</a>
                           </li>
                         </ul>
-                      </li>
-                      <li>
-                        <a href="#">POPULAR SOLUTIONS</a>
-                        <a href="#" className="menu-toggle" />
-                        <ul className="sub-menu">
+                      )}
+                    </li>
+                    <li className="nav_ul_li">
+                      <a href="/solutions">SOLUTIONS</a>
+                      {openCategory === "solutions" ? (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowUp
+                            onClick={() => setOpenCategory(null)}
+                          />
+                        </a>
+                      ) : (
+                        <a className="menu-toggle" href="#">
+                          <MdKeyboardArrowDown
+                            onClick={() => setOpenCategory("solutions")}
+                          />
+                        </a>
+                      )}
+                      {openCategory === "solutions" ? (
+                        <ul className="sub-menu" id="sub-menu">
                           <li>
-                            <a href="#">ECommerce App Development</a>
+                            <a>DELIVERY APPS</a>
+                            {openSubCategory === "deliveryapp" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() =>
+                                    setOpenSubCategory("deliveryapp")
+                                  }
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "deliveryapp" && (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/food-delivery-app-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Food Delivery App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/courier-pickup-management-solution">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Courier Pickup Management Solution
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/grocery-app-developer">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Grocery App Development
+                                  </a>
+                                </li>
+                              </ul>
+                            )}
                           </li>
                           <li>
-                            <a href="#">E-Learning App Development</a>
+                            <a href="#">ON-DEMAND APPS</a>
+                            {openSubCategory === "ondemand" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() => setOpenSubCategory("ondemand")}
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "ondemand" && (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/taxi-booking-app-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Taxi Booking App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/doctor-hiring-app-solution">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Doctor Hiring App Solution
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/security-app-solution">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Security App Solution
+                                  </a>
+                                </li>
+                              </ul>
+                            )}
                           </li>
                           <li>
-                            <a href="#">Dating App Development</a>
+                            <a>POPULAR SOLUTIONS</a>
+                            {openSubCategory === "popular" ? (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowUp
+                                  onClick={() => setOpenSubCategory(null)}
+                                />
+                              </a>
+                            ) : (
+                              <a className="menu-toggle" href="#">
+                                <MdKeyboardArrowDown
+                                  onClick={() => setOpenSubCategory("popular")}
+                                />
+                              </a>
+                            )}
+                            {openSubCategory === "popular" && (
+                              <ul className="sub-menu">
+                                <li>
+                                  <a href="/e-commerce-app-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    ECommerce App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/e-learning-app-development">
+                                    <i className="fa fa-angle-right right__arrow" />
+                                    E-Learning App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/dating-app-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Dating App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/driver-tracking-app-development">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Driver Tracking App Development
+                                  </a>
+                                </li>
+                                <li>
+                                  <a href="/salon-service-app">
+                                    <i className="fa fa-angle-right right__arrow" />{" "}
+                                    Salon Service App
+                                  </a>
+                                </li>
+                              </ul>
+                            )}
                           </li>
                           <li>
-                            <a href="#">Driver Tracking App Development</a>
-                          </li>
-                          <li>
-                            <a href="#">Salon Service App</a>
+                            <a href="#">HIRE DESIGNER</a>
                           </li>
                         </ul>
-                      </li>
-                      <li>
-                        <a href="#">HIRE DESIGNER</a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#">PORTFOLIO</a>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#">CONTACT US</a>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#">BLOG</a>
-                  </li>
-                  <li className="nav_ul_li">
-                    <a href="#" className="get_a_btn">
-                      GET A QUOTE
-                    </a>
-                  </li>
-                </ul>
+                      ) : (
+                        ""
+                      )}
+                    </li>
+                    <li className="nav_ul_li">
+                      <a href="/portfolio">PORTFOLIO</a>
+                    </li>
+                    <li className="nav_ul_li">
+                      <a href="/contact-us">CONTACT US</a>
+                    </li>
+                    <li className="nav_ul_li">
+                      <a href="/blog">BLOG</a>
+                    </li>
+                    {/* <li
+                      className="nav_ul_li"
+                      onClick={() => setOpenModal(true)}
+                    >
+                      <a className="get_a_btn">
+                        GET A QUOTE
+                      </a>
+                    </li> */}
+                  </ul>
+                </div>
               </div>
             </div>
-          </div> */}
-          {/* Mobile End */}
+          ) : (
+            ""
+          )}
+
+          {/* Mobile View End */}
           <label htmlFor="menu-btn" className="btn menu-btn">
-            <RiMenu3Line style={{ fontSize: "27px" }} />
+            <RiMenu3Line
+              style={{ fontSize: "27px" }}
+              onClick={() => setOpenMenu(true)}
+            />
           </label>
         </div>
       </nav>
