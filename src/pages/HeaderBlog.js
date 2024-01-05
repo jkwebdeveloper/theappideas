@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { BiSearch } from "react-icons/bi";
+import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
 
 const Blog = () => {
@@ -9,6 +10,10 @@ const Blog = () => {
   const [loading, setLoading] = useState(false);
   const [filterdata, setFilterData] = useState([]);
   const [activefilter, setActiveFilter] = useState("all");
+
+  const handlePageChange = () => {
+    console.log("click");
+  }
 
   const handleGetBlogs = () => {
     setLoading(true);
@@ -252,8 +257,30 @@ const Blog = () => {
                 </div>
               </div>
             ) : (
-              <div style={{textAlign:"center"}}>No Data</div>
+              <div style={{ textAlign: "center" }}>No Data</div>
             )}
+          </div>
+          <div className="paginate_section">
+            <ReactPaginate
+              previousLabel="Previous"
+              nextLabel="Next"
+              breakLabel="..."
+              breakClassName="page-item"
+              breakLinkClassName="page-link"
+              pageCount={25}
+              marginPagesDisplayed={2}
+              pageRangeDisplayed={3}
+              onPageChange={handlePageChange}
+              containerClassName="pagination justify-content-center"
+              pageClassName="page-item"
+              pageLinkClassName="page-link"
+              previousClassName="page-item"
+              previousLinkClassName="page-link"
+              nextClassName="page-item"
+              nextLinkClassName="page-link"
+              activeClassName="active"
+              style={{ marginTop: "20px" }}
+            />
           </div>
         </div>
       </section>

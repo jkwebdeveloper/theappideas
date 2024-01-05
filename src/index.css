@@ -569,6 +569,32 @@ section {
   background: #f6c000;
   color: #000;
 }
+/* Pagination css start */
+/* .pagination p {
+  background-color: ;
+} */
+.pagination_section p{
+  background-color: white;
+  border: #000;
+  color: #000;
+  text-align: center;
+}
+.pagination {
+  background-color: white;
+  border: #000;
+  color: #000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  gap: 2;
+}
+/* .pagination:hover {
+  background-color: #f6c000;
+} */
+/* Pagination css End */
+
+
+
 /* Blog Listing Page CSS End */
 
 /* Work We head Section CSS Start */
@@ -4737,3 +4763,76 @@ section {
 .loading_bar{
   text-align: center;
 }
+/* =========== service provide Mobile view ==========  */
+
+.Title h3 {
+  font-size: 30px;
+  text-align: center;
+  font-weight: 700;
+  color: #000;
+}
+
+.Title .Title_heading {
+  font-size: 22px;
+  margin-bottom: 22px;
+}
+
+.Title h3::after {
+  content: "";
+  width: 80px;
+  height: 4px;
+  background: #f6c000;
+  display: block;
+  margin: 8px auto;
+}
+
+.Title p {
+  text-align: justify;
+  letter-spacing: 1px;
+  color: #000;
+  line-height: 30px;
+  font-size: 16px;
+}
+
+.Title .Title_para {
+  line-height: 25px;
+}
+
+.Title p a {
+  color: #d6aa0b;
+}
+
+Title .Title_Color {
+  color: #d6aa0b;
+}
+
+.service__provide_tab img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  margin: 0 auto 10px;
+}
+.answer p {
+  text-align: justify;
+  font-size: 14px;
+}
+@media (min-width: 1024px) {
+  .service_mobile_view {
+    display: none;
+  }
+}
+@media (max-width: 1023px) {
+  .service_desk_view {
+    display: none;
+  }
+  .banner__contact__box {
+    display: none;
+  }
+  .banner__boxes {
+    display: none;
+  }
+  .common__banner__section {
+    padding-bottom: 0px;
+  }
+}
+/* =========== service provide Mobile view ==========  */

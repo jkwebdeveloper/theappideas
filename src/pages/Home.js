@@ -9,6 +9,7 @@ import Banner from "../components/Home/Banner/Banner";
 import { Helmet } from "react-helmet";
 import axios from "axios";
 import OndemandProduct from "../components/Home/OndemandProducts/OndemandProduct";
+import WhyChoose from "../components/Home/Why Choose/WhyChoose";
 
 const Home = ({ setOpenModal }) => {
   const [banners, setBanners] = useState([]);
@@ -40,6 +41,7 @@ const Home = ({ setOpenModal }) => {
       <Helmet title="Best Web & Mobile App Development Company" />
       <Banner loading={loading} banners={banners} setOpenModal={setOpenModal} />
       <OndemandProduct />
+      <WhyChoose />
       <About />
       <Services />
       <Work />
