@@ -15,11 +15,123 @@ import mobileAppdevelopment from '../../assets/images/MobileAppDev/Mobile App De
 import mobileApplication from '../../assets/images/MobileAppDev/Mobile App Development Company/Mobile Application Development Company.svg'
 import mobileappdeveloper from '../../assets/images/MobileAppDev/Mobile App Development Company/mobile app developer.svg'
 import { Helmet } from 'react-helmet'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+
+const ServiceProvideData = [
+  {
+    id: 1,
+    images: require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Connected-Cars.png'),
+    que: 'Connected cars',
+    ans:
+      'The popularity of connected cars are getting popular day by day, Nowadays many of the people are converting their car into smart cars to access the advanced features which smart cars are offering in this present time. Using such services can make the services more convenient and easy to use.',
+    ans2:
+      'Here we are at The App Ideas which is one of the most popular software development company. We are also offering the best IoT app development services at the best possible rates. Our developers can be skilled to deliver the best-connected car app based on the current trends.',
+  },
+  {
+    id: 2,
+    images: require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Industrial-Internet.png'),
+    que: 'Industrial Internet',
+    ans:
+      'If we talk about the Industrial Internat services then it is also in high demand in the market. Many people are now inclined towards industrial internet services for making life much easier and simpler. This type of service can make accessing the services easier and helpful for the people.',
+    ans2:
+      'The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers and designers who are experts in developing the best software solution for every business categories including the Industrial Internet at the best rates.',
+  },
+  {
+    id: 3,
+    images: require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Cities.png'),
+    que: 'Smart Cities',
+    ans:
+      'Currently, technologies are trending in the market. Each and every service is now converting their business into online services by utilising the advanced technology features. If we talk about the users then they are also liking the digital services because this will save their time as well as sometimes costs.',
+    ans2:
+      'We are at The App Ideas which is one of the leading web and app development. We have high expertise in offering the best software solution to our clients. If we talk about smart cities then many people are accepting this technology, so this is the time for you to launch your own IoT app in the market.',
+  },
+  {
+    id: 4,
+    images: require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/IoT-In-Agriculture.png'),
+    que: 'IoT in Agriculture',
+    ans:
+      'Nowadays, the whole service market is digitilizing its services for making the process much easier and convenient to access by the users. If we talk about the users then they are also loving the digital services because it is convenient to use. And as per the increasing demand, entrepreneurs are now making investments in digital solutions.',
+    ans2:
+      'The App Ideas is one of the leading web and app development. We have a team of highly skilled developers who are experts in offering the best IoT app development services. This technology is also now integrated into the agricultural services to make the services more convenient to access by the agriculture owners and staff members. We also offer services for the Agriculture industry.',
+  },
+  {
+    id: 5,
+    images: require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Smart-Retail.png'),
+    que: 'Smart Retail',
+    ans:
+      'This era is as highly popular as the digital era because every service is now converting into digital platforms by launching a specific mobile app and web app development. Due to the advancement in technology, the services are getting digitalize because it is easy for users to access the services easily as well as it is also convenient for the business owners to manage the services conveniently.',
+    ans2:
+      'We are at The App Ideas which is a leading web and app development company. We have a team of highly experienced developers who are experts in offering the best development as well as designing services. We are providing IoT app development services like Smart retail services for the enhancement of the user experience.',
+  },
+  {
+    id: 6,
+    images: require('../../assets/images/MobileAppDev/IOT App/Internet Of Things/Mask-Group.png'),
+    que: 'IOT in healthcare',
+    ans:
+      'Every business owner including the healthcare industry is now shifting towards the digital platform to offer more convenient services to their users. The advancement in technology has also affected the services platforms. Now it is very easy for converting everything online and access it easily at any time for any place.',
+    ans2:
+      'We are from The App Ideas, which is one of the most popular software development company. We have a team of highly skilled designers and developers who are proficient in developing IoT mobile app development for every industry including the healthcare industry.',
+  },
+]
+const IndustriesData = [
+  {
+    id: 1,
+    images: require('../../assets/images/MobileAppDev/IOT App/Why Choose/Expert-Developers.png'),
+    que: 'Expert developers',
+    ans:
+      'The demand for the IoT devices or we can say smart devices are getting popular day by day. Many people are now accepting technology and implementing it into day to day life. The demand for smart devices, as well as smart applications, are also raising because this will provide the proper comfort and convenience of accessing all the services.',
+    ans2:
+      'The App Ideas is one of the most popular software development company. We have a group of highly talented people who are experts in offering the online platform’s solutions like Mobile app development, web app development, website development and IoT app development at the best rates. An experienced, skilled and creative team of developers and designers with a proven track record in building award-winning mobile apps for both IOS and Android.',
+  },
+  {
+    id: 2,
+    images: require('../../assets/images/MobileAppDev/IOT App/Why Choose/robust-portfolio.png'),
+    que: 'Great Portfolio',
+    ans:
+      'Nowadays, a high number of people are using digital solutions for accessing all kinds of services like food delivery services, E-commerce services and more. Due to the increasing demand for software solutions the service owners, business owners, startups and entrepreneurs are making investments in developing smart devices.',
+    ans2:
+      'The App Ideas is one of the leading web and app development. We have a talented pool of developers who are highly experienced and expert in offering the best software solution based on the specific niches. We have built mobile apps for a wide variety of niches. We make sure to address business concerns with custom development and design.',
+  },
+  {
+    id: 3,
+    images: require('../../assets/images/MobileAppDev/IOT App/Why Choose/Performance-Driven..png'),
+    que: 'Performance Driven',
+    ans:
+      'If we look in the market then we can clearly observe that there are thousands of mobile app solutions available in the market which offer similar kinds of services. To make a place in the market, it is very important for you to offer something unique and innovative IoT mobile app in the market.',
+    ans2:
+      'The App Ideas is one of the leading web and app development company. We are highly experienced in providing the best smart devices app development services like IoT app development which can help you in the growth of your business. Unmatched ease of use and glitch-free performance are two areas of strength for our IoT apps.',
+  },
+  {
+    id: 4,
+    images: require('../../assets/images/MobileAppDev/IOT App/Why Choose/Strong-Support.png'),
+    que: 'Strong Support',
+    ans:
+      'We are from The App Ideas which is one of the most popular Software development company. Our services include the services like web app development, mobile app development services, website development and IoT app development. We have delivers the exact solutions to the clients as per their expectations.',
+    ans2:
+      'We highly follow the agile methodology for every software development service. We divide the project into milestones too easily developing every milestone with client approval. After deployment of the project, we also offer support and maintenance. We are always awake to hear about your concerns. We have a robust post-development support and maintenance team ready to address your concerns over E-mail, telephone, Skype, Web chat etc.',
+  },
+]
 
 const IOTAppDev = () => {
   const [activeService, setactiveService] = useState('connected_cars')
   const [activeWhyChoose, setActiveWhyChoose] = useState('expert_developers')
-  const [] = useState(false)
+
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false)
+  const [openIndustries, SetOpenIndustries] = useState(false)
+
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false)
+    }
+    SetOpenServicesProvide(i)
+  }
+
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return SetOpenIndustries(null)
+    }
+    SetOpenIndustries(i)
+  }
 
   const prevRef = useRef(null)
   const nextRef = useRef(null)
@@ -58,7 +170,7 @@ const IOTAppDev = () => {
             </p>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -195,7 +307,7 @@ const IOTAppDev = () => {
               </div>
             </div>
             {activeService === 'connected_cars' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Connected cars</h3>
@@ -219,7 +331,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeService === 'industrial_internet' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Industrial Internet</h3>
@@ -243,7 +355,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeService === 'smart_cities' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Smart Cities</h3>
@@ -268,7 +380,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeService === 'iot_agriculture' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">IoT in Agriculture</h3>
@@ -295,7 +407,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeService === 'smart_retail' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Smart Retail</h3>
@@ -321,7 +433,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeService === 'iot_healthcare' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">IOT in healthcare</h3>
@@ -344,6 +456,48 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: '20px', cursor: 'pointer' }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -560,7 +714,7 @@ const IOTAppDev = () => {
             <h3>Why Choose us for IoT app development?</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -647,7 +801,7 @@ const IOTAppDev = () => {
               </div>
             </div>
             {activeWhyChoose === 'expert_developers' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Expert developers</h3>
@@ -676,7 +830,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeWhyChoose === 'great_portfolio' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Great Portfolio</h3>
@@ -702,7 +856,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeWhyChoose === 'performance_driven' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Performance Driven</h3>
@@ -727,7 +881,7 @@ const IOTAppDev = () => {
               </div>
             )}
             {activeWhyChoose === 'strong_support' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Strong Support</h3>
@@ -753,6 +907,48 @@ const IOTAppDev = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {IndustriesData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: '20px', cursor: 'pointer' }}
+                onClick={() => industriesOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openIndustries === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openIndustries === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>

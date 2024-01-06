@@ -1,22 +1,153 @@
-import React, { useState } from "react";
-import TestiMonial from "../../../components/Testimonial/TestiMonial";
-import FAQ from "../../../components/FAQ";
-import ContactUs from "../../../components/ContactUs";
+import React, { useState } from 'react'
+import TestiMonial from '../../../components/Testimonial/TestiMonial'
+import FAQ from '../../../components/FAQ'
+import ContactUs from '../../../components/ContactUs'
 
-import asoservice from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Services.png";
-import Specialist from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Specialist.png";
-import optimization from "../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-optimization.png";
+import asoservice from '../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Services.png'
+import Specialist from '../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-Specialist.png'
+import optimization from '../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/SEO-optimization.png'
 
-import HeroSection from "../../../components/HeroSection";
-import { Helmet } from "react-helmet";
+import HeroSection from '../../../components/HeroSection'
+import { Helmet } from 'react-helmet'
+import { IoIosArrowDown, IoIosArrowUp } from 'react-icons/io'
+
+const ServiceProvideData = [
+  {
+    id: 1,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png'),
+    que: 'SEO Consultancy',
+    ans:
+      'SEO which is also known as Search Engine Optimization which is one of the most demanding and popular services.SEO is free traffic generating process that is very helpful in increasing the engagement of the users towards the business. If you want to drive organic traffic then go for SEO.',
+    ans2:
+      'The App Ideas is one of the leading software development services. We have years of experience in offering the best software development services along with the best digital marketing services. We offer expert SEO consultancy to business websites and help them to chase achievable and realistic search engine ranking goals and guide them in creating a content and SEO strategy for short and long term results.',
+  },
+  {
+    id: 2,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png'),
+    que: 'Keyword and Market Research',
+    ans:
+      'Software solutions are one of the most popular ways of making a business successful and also to stand out differently in the market. Due to the high competition, you need to offer the best solutions as well as you also need to work on digital marketing for generating traffic.',
+    ans2:
+      'We are from The App Ideas, which is one of the popular web and app development company. We have a team of the highly skilled digital marketing team who will offer the best services. We boast of a robust and expertise-driven keyword and market research apparatus and professionals who can help you focus on the most relevant and useful low-competition Keywords for best SEO results.',
+  },
+  {
+    id: 3,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png'),
+    que: 'On-site and Technical SEO',
+    ans:
+      'Digital marketing is one of the most demanding services in this present time. If we talk about SEO(Search Engine Optimization) then this is very useful to attract users into your business. If you already have an online platform then it is very important for you to go for Onsite and Technical SEO to increase the userbase.',
+    ans2:
+      'Here we are at The App Ideas, which is one of the most popular web and app development company. We have a group of people who are experts in offering Onsite and Technical SEO services. We undertake on-site and technical SEO responsibilities for websites and help them boost site performance, loading speed, design elements and various aspects that help search engine crawlers to find content easily.',
+  },
+  {
+    id: 4,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png'),
+    que: 'Penalty Recovery',
+    ans:
+      'If you have online platforms for your business then it is very important for you to know everything about the websites including the Digital marketing services. Sometimes due to some reasons, the website can be blocked or can be penalised for some reasons.',
+    ans2:
+      'The App Ideas is one of the leading software development company. We are highly experts in offering the best solution like mobile app development, web app development, website development as well as digital marketing services. If your website has ever been penalized or indexed by Google for black hat SEO practices, we can help you recovering and de-indexing the site and help it achieve search engine results through credible link development and content strategy.',
+  },
+  {
+    id: 5,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png'),
+    que: 'Link Development',
+    ans:
+      'If we discuss digital marketing then this is probably one of the best services for the growth of the business. Many people are now planning of making investments in digital marketing for promoting their services and increasing the customer base of the users.',
+    ans2:
+      'The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers as well as a team of digital marketers who are experts in offering the best services at the best rates. We help your websites to build a quality link profile by fetching links from top-notch links from respective niches as per the relevance of the context.',
+  },
+  {
+    id: 6,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png'),
+    que: 'Content Marketing',
+    ans:
+      'Nowadays, the demand for content marketing is one of the most popular factors for promoting any kind of business and service at the best possible rates. Content is highly demanding in the market because this will help your business to reach out to the targeted audience and attract new customers.',
+    ans2:
+      'The App Ideas is one of the leading web and app development company. We are highly experts in offering the best software development services like mobile app, web app, websites as well as a digital marketing team. We boost your websites’ SEO prospects by helping you with quality content publishing and marketing of content across highly credible and reputed websites across niches.',
+  },
+]
+const IndustriesData = [
+  {
+    id: 1,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png'),
+    que: 'Timebound and Result-Driven',
+    ans:
+      'The demand for online platforms is increasing day by day. Many of the business owners are now planning of making investments in digital platforms for making the business more popular.SEO(Search Engine Optimization) is very helpful in getting the attention of new users into your websites',
+    ans2:
+      'The App Ideas is one of the leading web and app development company. We have years of experience in offering the best digital marketing and SEO services. We ensure providing outstanding SEO output within a specified time through our focused efforts through all facets of SEO including performance optimization, content publication and link building.',
+  },
+  {
+    id: 2,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png'),
+    que: 'Agile and Proactive',
+    ans:
+      'Currently, the demand for online platforms is increasing for all kinds of services. People are more inclined towards online services. Online platforms provide the convenience of accessing the services more easily and it is also time-saving. Similarly, if we talk about the business owner then they are also making investments in online services.',
+    ans2:
+      'Here we are at The App Ideas which is one of the leading web and app development company. We strictly follow the agile methodology for the development of the services. Our SEO services are always proactive and agile to take on any trends and new methods to help our clients take on any opportunity to boost their search engine rank.',
+  },
+  {
+    id: 3,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png'),
+    que: 'Competitive Pricing',
+    ans:
+      'As per the increasing demand for software solutions, the demand for software development services is also increasing with the increasing popularity. If you already own a website then it is very important for you to work on digital marketing to promote your services in the business.',
+    ans2:
+      'The App Ideas is one of the most popular software development company. We offer web apps, websites and mobile app development. We offer SEO services at a highly competitive price and even remain approachable and accessible for startups and small enterprise websites.',
+  },
+  {
+    id: 4,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png'),
+    que: 'Comprehensive Content Marketing',
+    ans:
+      'If we talk about the demand for digital marketing then digital marketing is one of the most popular as well as demanding services in the market. Content Marketing is one of the most important parts of digital marketing. This can help businesses to stand out differently among their competitors.',
+    ans2:
+      'The App Ideas is one of the leading web and app development company. Along with that we also offer digital marketing services like content marketing. With the App Ideas, you can get a comprehensive content marketing service spanning all channels and needs including guest posting, regular content publication, digital and social marketing content etc.',
+  },
+  {
+    id: 5,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png'),
+    que: 'Time-Bound Delivery',
+    ans:
+      'Digital marketing is very helpful in this present time as well as also for the future. To beat up the high competition, it is very important for you to have the best online platform as well as the best team of digital marketing who will deliver the project on time and drive better results.',
+    ans2:
+      'The App Ideas is one of the most popular software development services. We have a team of the highly skilled web app, mobile apps, website development and digital marketing services. Our guest posting services will fulfil the publication and outreach commitments in a time-bound manner. We ensure delivering measurable results within a stipulated time frame.',
+  },
+  {
+    id: 6,
+    images: require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png'),
+    que: 'Continuous Support',
+    ans:
+      'If you own a business online platform then it is very important for you to hire the best digital marketing team who will offer continuous support and helps in increasing the engagement of the customers or users. Digital marketing is very important for business growth.',
+    ans2:
+      'The App Ideas offering the best digital marketing services including SEO, content marketing and more. We have years of experience in offering the best SEO services for business growth. We also offer continuous support for guest blogging and content marketing services with a dedicated help desk manned by seasoned content marketing professionals.',
+  },
+]
 
 const SEO = () => {
-  const [activeWeProvide, setActiveWeProvide] = useState("seo");
-  const [activeWhyChoose, setActiveWhyChoose] = useState("timebound");
+  const [activeWeProvide, setActiveWeProvide] = useState('seo')
+  const [activeWhyChoose, setActiveWhyChoose] = useState('timebound')
+
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false)
+  const [openIndustries, SetOpenIndustries] = useState(false)
+
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false)
+    }
+    SetOpenServicesProvide(i)
+  }
+
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return SetOpenIndustries(null)
+    }
+    SetOpenIndustries(i)
+  }
 
   return (
     <>
-    <Helmet title="App Search Engine Optimization (SEO) Company Serivices - The App Ideas"/>
+      <Helmet title="App Search Engine Optimization (SEO) Company Serivices - The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="SEO Agency in London"
@@ -53,20 +184,20 @@ const SEO = () => {
             </p>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("seo")}
+                  onClick={() => setActiveWeProvide('seo')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "seo" && "service__provide_tab_active"
+                      activeWeProvide === 'seo' && 'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/1-3.png')}
                       alt="SEO
                       Consultancy"
                       className="img-fluid"
@@ -76,17 +207,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("keyword")}
+                  onClick={() => setActiveWeProvide('keyword')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "keyword" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'keyword' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/2-3.png')}
                       alt="Keyword And
                       Market Research."
                       className="img-fluid"
@@ -96,17 +227,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("onsite")}
+                  onClick={() => setActiveWeProvide('onsite')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "onsite" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'onsite' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/3-2.png')}
                       alt="On-Site And
                       Technical SEO"
                       className="img-fluid"
@@ -116,17 +247,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("penalty")}
+                  onClick={() => setActiveWeProvide('penalty')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "penalty" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'penalty' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/4-2.png')}
                       alt="Penalty
                       Recovery"
                       className="img-fluid"
@@ -136,17 +267,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("link_development")}
+                  onClick={() => setActiveWeProvide('link_development')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "link_development" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'link_development' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/5-2.png')}
                       alt="Link
                       Development"
                       className="img-fluid"
@@ -156,17 +287,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide("content_marketing")}
+                  onClick={() => setActiveWeProvide('content_marketing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === "content_marketing" &&
-                      "service__provide_tab_active"
+                      activeWeProvide === 'content_marketing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/We Provide/6-2.png')}
                       alt="Content
                       Marketing"
                       className="img-fluid"
@@ -176,8 +307,8 @@ const SEO = () => {
                 </div>
               </div>
             </div>
-            {activeWeProvide === "seo" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === 'seo' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">SEO Consultancy</h3>
@@ -202,9 +333,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "keyword" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWeProvide === 'keyword' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -229,9 +360,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "onsite" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWeProvide === 'onsite' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">On-site and Technical SEO</h3>
@@ -256,9 +387,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "penalty" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWeProvide === 'penalty' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Penalty Recovery</h3>
@@ -283,9 +414,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "link_development" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWeProvide === 'link_development' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Link Development</h3>
@@ -308,9 +439,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWeProvide === "content_marketing" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWeProvide === 'content_marketing' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Content Marketing</h3>
@@ -335,6 +466,48 @@ const SEO = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: '20px', cursor: 'pointer' }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -345,21 +518,21 @@ const SEO = () => {
             <h3>Why You Should Choose Us for SEO Agency in London?</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("timebound")}
+                  onClick={() => setActiveWhyChoose('timebound')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "timebound" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'timebound' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/1-4.png')}
                       alt="Timebound and Result-Driven"
                       className="img-fluid"
                     />
@@ -368,17 +541,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("agile_proactive")}
+                  onClick={() => setActiveWhyChoose('agile_proactive')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "agile_proactive" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'agile_proactive' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/2-4.png')}
                       alt="Agile and Proactive"
                       className="img-fluid"
                     />
@@ -387,17 +560,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("competitive_pricing")}
+                  onClick={() => setActiveWhyChoose('competitive_pricing')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "competitive_pricing" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'competitive_pricing' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/3-3.png')}
                       alt="Competitive Pricing"
                       className="img-fluid"
                     />
@@ -406,17 +579,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("comprehensive")}
+                  onClick={() => setActiveWhyChoose('comprehensive')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "comprehensive" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'comprehensive' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/4-3.png')}
                       alt="Comprehensive Content Marketing"
                       className="img-fluid"
                     />
@@ -425,17 +598,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("timebound_delivery")}
+                  onClick={() => setActiveWhyChoose('timebound_delivery')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "timebound_delivery" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'timebound_delivery' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/5-3.png')}
                       alt="Time-Bound Delivery"
                       className="img-fluid"
                     />
@@ -444,17 +617,17 @@ const SEO = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose("continuous_support")}
+                  onClick={() => setActiveWhyChoose('continuous_support')}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === "continuous_support" &&
-                      "service__provide_tab_active"
+                      activeWhyChoose === 'continuous_support' &&
+                      'service__provide_tab_active'
                     }`}
                   >
                     <img
-                      src={require("../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png")}
+                      src={require('../../../assets/images/SERVICES/Digital Marketing Agency/SEO-marketing/Why You Should/6-3.png')}
                       alt="Continuous Support"
                       className="img-fluid"
                     />
@@ -463,8 +636,8 @@ const SEO = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === "timebound" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === 'timebound' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -491,8 +664,8 @@ const SEO = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === "agile_proactive" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === 'agile_proactive' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Agile and Proactive </h3>
@@ -516,9 +689,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "competitive_pricing" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWhyChoose === 'competitive_pricing' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Competitive Pricing </h3>
@@ -540,13 +713,13 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "comprehensive" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWhyChoose === 'comprehensive' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Comprehensive Content Marketing{" "}
+                      Comprehensive Content Marketing{' '}
                     </h3>
                     <p className="Title_para">
                       If we talk about the demand for digital marketing then
@@ -568,9 +741,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "timebound_delivery" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWhyChoose === 'timebound_delivery' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Time-Bound Delivery </h3>
@@ -594,9 +767,9 @@ const SEO = () => {
                   </div>
                 </div>
               </div>
-            )}{" "}
-            {activeWhyChoose === "continuous_support" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{' '}
+            {activeWhyChoose === 'continuous_support' && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Continuous Support</h3>
@@ -620,6 +793,48 @@ const SEO = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {IndustriesData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: '20px', cursor: 'pointer' }}
+                onClick={() => industriesOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openIndustries === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openIndustries === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ''
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -631,7 +846,7 @@ const SEO = () => {
       <ContactUs question="Are you planning to launch a Successful SEO in the market?" />
       {/* Contact Section End */}
     </>
-  );
-};
+  )
+}
 
-export default SEO;
+export default SEO
