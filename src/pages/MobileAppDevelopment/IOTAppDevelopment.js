@@ -19,6 +19,7 @@ import { Helmet } from 'react-helmet'
 const IOTAppDev = () => {
   const [activeService, setactiveService] = useState('connected_cars')
   const [activeWhyChoose, setActiveWhyChoose] = useState('expert_developers')
+  const [] = useState(false)
 
   const prevRef = useRef(null)
   const nextRef = useRef(null)
