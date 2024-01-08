@@ -10,10 +10,12 @@ const Blog = () => {
   const [loading, setLoading] = useState(false);
   const [filterdata, setFilterData] = useState([]);
   const [activefilter, setActiveFilter] = useState("all");
+  const [category, SetCategory] = useState([]);
+  const [autoSearch, SetAutoSearch] = useState([])
 
   const handlePageChange = () => {
     console.log("click");
-  }
+  };
 
   const handleGetBlogs = () => {
     setLoading(true);
@@ -35,6 +37,46 @@ const Blog = () => {
   useEffect(() => {
     handleGetBlogs();
   }, []);
+
+  const handleGetCategory = () => {
+    setLoading(true);
+    axios
+      .get("https://the-app-ideas.onrender.com/api/category", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        SetCategory(res.data.category);
+        console.log(res.data.category);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
+  };
+  useEffect(() => {
+    handleGetCategory();
+  }, []);
+
+  const handleGetAutoSearch = () => {
+    setLoading(true)
+    axios.get("https://the-app-ideas.onrender.com/api/autocomplete/title", {
+      headers: {
+        "Content-Type" : "application/json",
+      },
+    })
+    .then((res) => {
+      SetAutoSearch(res.data.data)
+      console.log(res.data.data);
+    })
+    .catch((err) => {
+      setLoading(false)
+    })
+  }
+  useEffect(() => {
+    handleGetAutoSearch()
+  }, [])
+
 
   const filterItem = (cateItem) => {
     const updateItems = blogs.filter((curElem) => {
@@ -85,27 +127,29 @@ const Blog = () => {
                   All
                 </button>
               </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className={`nav-link ${
-                    activefilter === "application" && "active"
-                  }`}
-                  id="Application-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#Application"
-                  type="button"
-                  role="tab"
-                  aria-controls="Application"
-                  aria-selected="false"
-                  onClick={() => {
-                    filterItem("application");
-                    setActiveFilter("application");
-                  }}
-                >
-                  Application
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
+              {category.map((item) => (
+                <li className="nav-item" role="presentation">
+                  <button
+                    className={`nav-link ${
+                      activefilter === "application" && "active"
+                    }`}
+                    id="Application-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#Application"
+                    type="button"
+                    role="tab"
+                    aria-controls="Application"
+                    aria-selected="false"
+                    onClick={() => {
+                      filterItem("application");
+                      setActiveFilter("application");
+                    }}
+                  >
+                    {item?.name}
+                  </button>
+                </li>
+              ))}
+              {/* <li className="nav-item" role="presentation">
                 <button
                   className={`nav-link ${
                     activefilter === "aap-ideas" && "active"
@@ -204,7 +248,7 @@ const Blog = () => {
                 >
                   On-Demand-app
                 </button>
-              </li>
+              </li> */}
             </ul>
             {loading ? (
               <div

@@ -1,27 +1,132 @@
-import React, { useRef, useState } from 'react'
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination, Autoplay, Navigation } from 'swiper'
-import 'swiper/css'
-import 'swiper/css/pagination'
-import 'swiper/css/navigation'
-import TestiMonial from '../../../components/Testimonial/TestiMonial'
-import FAQ from '../../../components/FAQ'
-import ContactUs from '../../../components/ContactUs'
+import React, { useRef, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Pagination, Autoplay, Navigation } from "swiper";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import FAQ from "../../../components/FAQ";
+import ContactUs from "../../../components/ContactUs";
 
-import mobileweb from '../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Website-Development.webp'
-import mobileaap from '../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Custom-Theme-Developmen.webp'
-import Experts from '../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Experts.webp'
-import HeroSection from '../../../components/HeroSection'
-import { Helmet } from 'react-helmet'
+import mobileweb from "../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Website-Development.webp";
+import mobileaap from "../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Custom-Theme-Developmen.webp";
+import Experts from "../../../assets/images/SERVICES/E-Commerce Website/ShopifyDev/Shopify-Experts.webp";
+import HeroSection from "../../../components/HeroSection";
+import { Helmet } from "react-helmet";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const ServiceProvideData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Website-Development.png"),
+    que: "Magento Website Development",
+    ans: "Magento is one of the most popular Website platform development services at the present time. If we observe the market then there are a high number of users who are now accepting the online platform because it offers the convenience of accessing the services at any time and from any place.",
+    ans2: "The App Ideas is one of the leading web and app developing company. We have years of experience in developing the successful Magento website for all kinds of business categories. We develop high-performance business websites using Magento CMS.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/icons8-magento-100-1.png"),
+    que: "Magento E-commerce Development",
+    ans: "The demand for online platforms is increasing along with time and competition. If we talk about the users then they are more inclined towards the website platforms or online system because it is convenient to use from any place and time saving as well. People can check the items, add them to the cart and make the delivery to their doorstep without visiting the stores.",
+    ans2: "The App Ideas is one of the most popular E-commerce platform development company. We have a team of highly skilled and experienced Magento developers who are experts in offering the best software solutions for all kinds of business categories. Using Magento we develop versatile and powerful e-commerce stores complete with all e-commerce features.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Theme.png"),
+    que: "Magento Theme Development",
+    ans: "There are many E-commerce technology solutions are available in the market. Many store owners and business owners are shifting towards digital platforms because this offers convenience as well as time-saving methods. If you are also planning on launching an E-commerce platform them Magento offers various themes options for developing a successful store for your business or startup.",
+    ans2: "The App Ideas is one of the successful Magento development company. We have a team of experienced Magento developers who will deploy a successful Magento E-commerce platform for all business categories. We build custom Magento modules and themes to provide e-commerce stores and business websites appropriate custom look and feel.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Shopping-Cart-Development.png"),
+    que: "Magento Shopping Cart Development",
+    ans: "E-commerce platforms are considered as one of the best innovations in the field of digitalization. Magento is one of the most popular and demanding E-commerce platforms at this present time. If you are planning to launch your own E-commerce stores then this is probably the best time to make an investment in developing your E-commerce platform.",
+    ans2: "The App Ideas is one of the leading software development company. We have a team of highly skilled and experienced developers who are experts in offering the best Magento E-commerce platforms. Using Magento we also develop a shopping cart for business websites to deliver smooth checkout and payment solutions.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Plugins-And-Extensions.png"),
+    que: "Magento Plugins and extensions",
+    ans: "As we know, nowadays, the demand of the online platform or digital solutions are increasing day by day. The high number of users are now shifting towards the online platform, so this is probably the right time for you and your business to make an investment in E-commerce platform development using the Magento framework.",
+    ans2: "Magento is one of the most popular E-commerce platforms development frameworks. This provides all kinds of features and functionality to develop a successful E-commerce platform for all kinds of businesses and categories. We develop custom plugins and extensions for business and E-commerce websites and ensure custom web users as well as a shopping experience.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Mask-Group.png"),
+    que: "Support and Maintenance",
+    ans: "Are you planning to launch online platforms or digitalizing your store? If yes then this is probably the best time to move further. If we talk about the market then users are more inclined towards digital solutions for accessing all kinds of services including different Shopping sites.",
+    ans2: "We are from The App Ideas which is one of the leading web and app development company. We have a team of highly skilled and experienced Magento developers who have years of experience in developing future-ready Magento E-commerce platforms as per the current trend. We provide full optimization, support and maintenance services to Magento websites and help them come with regular updates.",
+  },
+];
+const IndustriesData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Expert-Developers.png"),
+    que: "Experience Developers",
+    ans: "We are from The App Ideas, which is one of the popular software development company. We have years of experience in providing the best software development services for mobile app development, web app development and website app development at the best possible rates.",
+    ans2: "We are also proficient in offering the best Magento E-commerce platforms for increasing the profit rates of the business. We boast of a huge team of experienced Magento developers having doled track record across a variety of projects.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/robust-portfolio.png"),
+    que: "Robust Portfolio",
+    ans: "If you check the market then you can probably see that there are hundreds of E-commerce platforms available in the market but users are still looking for the best solution which can offer all kinds of functionality and satisfy customers needs. If you are planning of launching an E-commerce platform then it is required to check the portfolio.",
+    ans2: "We are from The App Ideas, which is one of the leading app and web development company. We have a talented pool of Magento developers who are proficient in offering the future-ready Magento developers which help in increasing the profit rates of the business. We boast a robust portfolio of business websites and e-commerce stores built using Magento CMS.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/competitive-pricing.png"),
+    que: "Competitive Value",
+    ans: "This time is probably known as the digital era because all the services are now moving towards online platforms. This is why each and every business is making investments in E-commerce platform development. Because of this, the competitions are high in the market, there are thousands of E-commerce platform available in the market.",
+    ans2: "We at The App Ideas offers the best software development Services including E-commerce platform development. We have a team of highly skilled Magento developers who are experts in offering the victorious e-commerce solution for the business. We continuously deliver competitive value to clients by offering our own custom-built themes and plugins.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Time-Bound-Development..png"),
+    que: "Project Deadlines",
+    ans: "Planning of digitalizing your offline stores or thinking of making an investment in an E-commerce store is one of the best ideas in this present time. The demands, as well as the online users, are increasing day by day, people are loving the digital platforms. It is very important for you to hire the Magento developers company who deliver the project on time.",
+    ans2: "We are from The App Ideas, which is one of the leading software development company. We have a team of Magento developers who have years of expertise in offering successful Magento E-commerce platforms on time. We strictly adhere to the project deadline and milestones.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Agile-Development-1.png"),
+    que: "Agile Development",
+    ans: "The demand for Magento E-commerce platforms is highly increasing in the market. The Magento E-commerce platform offers the comfort and convenience of accessing the services through the online platforms by saving time as well as saving money. If you own a store then this is probably the best time of digitizing your store platforms.",
+    ans2: "The App Ideas is one of the leading software development company. We have an expert team of Magento developers who strictly follow the agile methodology for all kinds of software development. We follow the Agile development method to ensure concurrent testing and continuous value-addition from the clients.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/icons8-value-72.png"),
+    que: "Competitive Pricing",
+    ans: "If you are planning on initiating an E-commerce business for your stores then this is probably the best time for you to making an investment. The Magento technology for your E-commerce business can help you and your business to stand out different in the competition.",
+    ans2: "The App Ideas is one of the leading software development company. We offer the software development services like mobile app, web app and website development. We have a team of highly skilled Magento developers who offer the services at the best rates. We offer the most competitive pricing for every Magento development project.",
+  },
+];
 
 const MagentoDev = () => {
-  const [activeWeOffer, setActiveWeOffer] = useState('magento_website')
+  const [activeWeOffer, setActiveWeOffer] = useState("magento_website");
   const [activeWhyChoose, setActiveWhyChoose] = useState(
-    'experience_developers',
-  )
+    "experience_developers"
+  );
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false);
+  const [openIndustries, SetOpenIndustries] = useState(false);
 
-  const prevRef = useRef(null)
-  const nextRef = useRef(null)
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false);
+    }
+    SetOpenServicesProvide(i);
+  };
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return SetOpenIndustries(null);
+    }
+    SetOpenIndustries(i);
+  };
+
+  const prevRef = useRef(null);
+  const nextRef = useRef(null);
   return (
     <>
       <Helmet title="Magento Development Company in India, USA, Canada - The App Ideas" />
@@ -56,21 +161,21 @@ const MagentoDev = () => {
             </p>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('magento_website')}
+                  onClick={() => setActiveWeOffer("magento_website")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'magento_website' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "magento_website" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Website-Development.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Website-Development.png")}
                       alt="Magento Website Development"
                       className="img-fluid"
                     />
@@ -79,17 +184,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('magento_e_comm')}
+                  onClick={() => setActiveWeOffer("magento_e_comm")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'magento_e_comm' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "magento_e_comm" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/icons8-magento-100-1.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/icons8-magento-100-1.png")}
                       alt="Magento E-commerce Development"
                       className="img-fluid"
                     />
@@ -98,17 +203,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('magento_theme')}
+                  onClick={() => setActiveWeOffer("magento_theme")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'magento_theme' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "magento_theme" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Theme.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Theme.png")}
                       alt="Magento Theme Development"
                       className="img-fluid"
                     />
@@ -117,17 +222,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('magento_shopping_Cart')}
+                  onClick={() => setActiveWeOffer("magento_shopping_Cart")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'magento_shopping_Cart' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "magento_shopping_Cart" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Shopping-Cart-Development.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Shopping-Cart-Development.png")}
                       alt="Magento Shopping Cart Development"
                       className="img-fluid"
                     />
@@ -136,17 +241,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('magento_plugins')}
+                  onClick={() => setActiveWeOffer("magento_plugins")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'magento_plugins' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "magento_plugins" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Plugins-And-Extensions.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Magento-Plugins-And-Extensions.png")}
                       alt="Magento Plugins and extensions"
                       className="img-fluid"
                     />
@@ -155,17 +260,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('support_maintanance')}
+                  onClick={() => setActiveWeOffer("support_maintanance")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'support_maintanance' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "support_maintanance" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Mask-Group.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/What-do/Mask-Group.png")}
                       alt="Support and Maintenance"
                       className="img-fluid"
                     />
@@ -174,8 +279,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             </div>
-            {activeWeOffer === 'magento_website' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "magento_website" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -200,12 +305,12 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'magento_e_comm' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "magento_e_comm" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Magento E-commerce Development{' '}
+                      Magento E-commerce Development{" "}
                     </h3>
                     <p className="Title_para">
                       The demand for online platforms is increasing along with
@@ -229,12 +334,12 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'magento_theme' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "magento_theme" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Magento Theme Development{' '}
+                      Magento Theme Development{" "}
                     </h3>
                     <p className="Title_para">
                       There are many E-commerce technology solutions are
@@ -257,12 +362,12 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'magento_shopping_Cart' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "magento_shopping_Cart" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Magento Shopping Cart Development{' '}
+                      Magento Shopping Cart Development{" "}
                     </h3>
                     <p className="Title_para">
                       E-commerce platforms are considered as one of the best
@@ -284,12 +389,12 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'magento_plugins' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "magento_plugins" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Magento Plugins and extensions{' '}
+                      Magento Plugins and extensions{" "}
                     </h3>
                     <p className="Title_para">
                       As we know, nowadays, the demand of the online platform or
@@ -312,8 +417,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'support_maintanance' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "support_maintanance" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Support and Maintenance </h3>
@@ -338,6 +443,48 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -381,58 +528,58 @@ const MagentoDev = () => {
               pauseOnMouseEnter: true,
             }}
             speed={500}
-            direction={'horizontal'}
+            direction={"horizontal"}
             pagination={{ clickable: true }}
             // navigation
             onSwiper={(swiper) => {
               // Delay execution for the refs to be defined
               setTimeout(() => {
                 // Override prevEl & nextEl now that refs are defined
-                swiper.params.navigation.prevEl = prevRef.current
-                swiper.params.navigation.nextEl = nextRef.current
+                swiper.params.navigation.prevEl = prevRef.current;
+                swiper.params.navigation.nextEl = nextRef.current;
 
                 // Re-init navigation
-                swiper.navigation.destroy()
-                swiper.navigation.init()
-                swiper.navigation.update()
-              })
+                swiper.navigation.destroy();
+                swiper.navigation.init();
+                swiper.navigation.update();
+              });
             }}
             //   style={{ padding: "2.5rem 0" }}
           >
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-18"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-18.webp")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-19"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-19.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                     }}
                   />
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-20"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-20.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -441,14 +588,14 @@ const MagentoDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-21"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-21.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -457,14 +604,14 @@ const MagentoDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-22"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-22.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -473,14 +620,14 @@ const MagentoDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-23"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-23.png")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -489,14 +636,14 @@ const MagentoDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-24"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-24.webp")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -505,14 +652,14 @@ const MagentoDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-26"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-26.webp")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -521,14 +668,14 @@ const MagentoDev = () => {
                 </div>
               </div>
             </SwiperSlide>
-            <SwiperSlide style={{ cursor: 'pointer' }}>
+            <SwiperSlide style={{ cursor: "pointer" }}>
               <div className="row">
                 <div className="col-12">
                   <img
                     alt="Group-28"
-                    src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp')}
+                    src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/Slider/Group-28.webp")}
                     style={{
-                      width: '100%',
+                      width: "100%",
                       // boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                       // borderRadius: "10px",
                       // marginLeft: "10px",
@@ -547,21 +694,21 @@ const MagentoDev = () => {
             <h3>Why choose us for Magento Development Company?</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('experience_developers')}
+                  onClick={() => setActiveWhyChoose("experience_developers")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'experience_developers' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "experience_developers" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Expert-Developers.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Expert-Developers.png")}
                       alt="Experience Developers"
                       className="img-fluid"
                     />
@@ -570,17 +717,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('robust')}
+                  onClick={() => setActiveWhyChoose("robust")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'robust' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "robust" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/robust-portfolio.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/robust-portfolio.png")}
                       alt="Robust Portfolio"
                       className="img-fluid"
                     />
@@ -589,17 +736,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('competitive_value')}
+                  onClick={() => setActiveWhyChoose("competitive_value")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'competitive_value' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "competitive_value" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/competitive-pricing.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/competitive-pricing.png")}
                       alt="Competitive Value"
                       className="img-fluid"
                     />
@@ -608,17 +755,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('project_deadlines')}
+                  onClick={() => setActiveWhyChoose("project_deadlines")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'project_deadlines' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "project_deadlines" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Time-Bound-Development..png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Time-Bound-Development..png")}
                       alt="Project Deadlines"
                       className="img-fluid"
                     />
@@ -627,17 +774,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('agile')}
+                  onClick={() => setActiveWhyChoose("agile")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'agile' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "agile" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Agile-Development-1.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/Agile-Development-1.png")}
                       alt="Agile Development"
                       className="img-fluid"
                     />
@@ -646,17 +793,17 @@ const MagentoDev = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('competitive_pricing')}
+                  onClick={() => setActiveWhyChoose("competitive_pricing")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'competitive_pricing' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "competitive_pricing" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/icons8-value-72.png')}
+                      src={require("../../../assets/images/SERVICES/E-Commerce Website/MagentoDev/why-Choose/icons8-value-72.png")}
                       alt="Competitive Pricing"
                       className="img-fluid"
                     />
@@ -665,8 +812,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === 'experience_developers' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "experience_developers" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Experience Developers</h3>
@@ -688,8 +835,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'robust' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "robust" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Robust Portfolio</h3>
@@ -715,8 +862,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'competitive_value' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "competitive_value" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Competitive Value</h3>
@@ -741,8 +888,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'project_deadlines' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "project_deadlines" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Project Deadlines</h3>
@@ -766,8 +913,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'agile' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "agile" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Agile Development</h3>
@@ -791,8 +938,8 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'competitive_pricing' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "competitive_pricing" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Competitive Pricing</h3>
@@ -815,6 +962,48 @@ const MagentoDev = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {IndustriesData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => industriesOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openIndustries === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openIndustries === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -824,7 +1013,7 @@ const MagentoDev = () => {
       <ContactUs question="Are you planning to launch a Successful Magento app in the market?" />
       {/* Contact Section End */}
     </>
-  )
-}
+  );
+};
 
-export default MagentoDev
+export default MagentoDev;

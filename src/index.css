@@ -341,7 +341,7 @@ section {
   width: 100%;
   border: none;
   padding-right: 61px;
-  padding-left: 8px;
+  padding-left: 25px;
 }
 
 .blog__search input:focus-visible {

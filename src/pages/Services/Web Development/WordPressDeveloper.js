@@ -1,26 +1,132 @@
-import React, { useEffect, useState } from 'react'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect, useState } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
-import CustomWordPress from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/Custom-WordPress-Development-Services.png'
-import WordPressWebsite from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Development-Company.png'
-import Developer from '../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Developer.png'
+import CustomWordPress from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/Custom-WordPress-Development-Services.png";
+import WordPressWebsite from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Development-Company.png";
+import Developer from "../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/WordPress-Website-Developer.png";
 
-import TestiMonial from '../../../components/Testimonial/TestiMonial'
-import FAQ from '../../../components/FAQ'
-import ContactUs from '../../../components/ContactUs'
-import HeroSection from '../../../components/HeroSection'
-import { Helmet } from 'react-helmet'
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import FAQ from "../../../components/FAQ";
+import ContactUs from "../../../components/ContactUs";
+import HeroSection from "../../../components/HeroSection";
+import { Helmet } from "react-helmet";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const ServiceProvideData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png"),
+    que: "WordPress Web Development.",
+    ans: "WordPress is one of the most popular web development services in the market. Due to the high demand for online platforms, many startups, entrepreneurs and business owners are making investments in developing successful web development for engaging a high number of users and increasing the profit rate of their business.",
+    ans2: "The App Ideas is one of the leading web and app development company. We have years of experience and expertise in offering the best WordPress web development services. WordPress is a flexible platform that can be used for every business type. Using WordPress we build highly customised and high-performance websites and blogs with appealing UI and a rich set of appropriate features.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png"),
+    que: "WordPress Theme Development",
+    ans: "Currently, the demand for online platforms is increasing day by day. People are liking or we can also say loving the digital services. And as per the research, there are more than half of the population are using smart devices for accessing every service like E-commerce, driver tracking or food delivery.WordPress is offering various themes as well as custom development can also be done.",
+    ans2: "The App Ideas is one of the popular WordPress web development company. We have a team of people who are highly expert in offering WordPress app development with the theme as well as custom theme based development. We build brilliant WordPress themes rich with aesthetic appeal and custom look and feel. Having expertise in popular themes like Divi, Avada, Enfold and etc.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png"),
+    que: "Location-based services",
+    ans: "If we talk about location-based services then this type of service is also getting highly popular in the market. Many of the businesses are launching online platforms and implementing location-based features to make the services easier to access as well as for a better understanding.",
+    ans2: "The App Ideas is one of the most popular software development services. We offer development services for mobile app, web app and E-commerce platform development. We are highly expert in offering a location-based online platform. We help various websites converting to WordPress CMS from their existing platforms and help to optimise existing WordPress websites.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png"),
+    que: "WordPress Plugin Development",
+    ans: "WordPress is one of the most popular and demanding CMS platforms in the market. If you check the market then a high number of businesses are using WordPress as their business platforms. WordPress offers various options as well as plugins for developing the future-ready solution in the market.",
+    ans2: "The App Ideas is one of the highly successful WordPress development services. We have years of expertise in offering the best WordPress web services for all kinds of business categories at the best possible rates. We build an array of custom plugins and extensions representing various WordPress features and functionalities as per client needs.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png"),
+    que: "WordPress Mobile app",
+    ans: "WordPress is one of the most popular and demanding CMS platforms in the market.WordPress offers all types of features which can be used to develop successful web platforms for all types of business categories. Many business owners and entrepreneurs are making high investments in web development services for increasing the enhancing of the user.",
+    ans2: "The App Ideas is one of the proficient web and app development company. We are highly experienced as well as expertise in developing WordPress web development services and we are also skilled in developing WordPress Mobile app. By using a plethora of tools and frameworks we help converting WordPress websites into custom mobile apps.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png"),
+    que: "Maintenance and Support",
+    ans: "Every WordPress web development service needs support and maintenance at some time. As we are observing, from time to time new features and functionality are added to the operating system. So it is very important for you to keep maintaining as well as supporting your website to increasing the engagement of the user.",
+    ans2: "The App Ideas is one of the most successful WordPress web development services. We have a group of highly skilled developers who are highly expert in offering WordPress web development services along with support and maintenance services. We provide redesign, optimisation, support and maintenance for all types of WordPress websites.",
+  },
+];
+const IndustriesData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png"),
+    que: "Expertise and Experience.",
+    ans: "We are from The App Ideas which is one of the foremost web and app development company. We have a group of highly skilled developers who are experienced in providing the best web development services. Many business owners and entrepreneurs are converting their businesses into web platforms.",
+    ans2: "The main reason behind choosing The App Ideas is that we have years of experience in deploying the best business solution which can drive your business to the peak of the success. We initially understand the requirements then start the development. We flaunt a highly experienced team of WordPress developers with proven expertise in building the most sophisticated WordPress websites.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png"),
+    que: "Strong Portfolio",
+    ans: "Before hiring a software development company, it is very important for you to choose the best and according to your budget. But it is also quite important to check the past projects or portfolios of the services to check their expertise and skill before making an investment.",
+    ans2: "We are from The App Ideas which is one of the popular software development company. We have expertise in developing websites, web app and mobile app development services. We have a talented pool of highly skilled developers as well as developers who offer the services at the best rates. We have built a whole array of the most successful WordPress Websites across diverse niches and categories.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png"),
+    que: "Time-Bound Development",
+    ans: "If you have planned to launch a web service using WordPress technology for your business then it is very important for you to decide the timeline or ask the developers about the timeline before hiring them for your software service development. This will give you clarity about the project deadlines.",
+    ans2: "The App Ideas is highly experienced in offering the best software development services. We specifically divide the project into small milestones then start working on small milestones. After completing every milestone we take the client approval before moving forward. We are strict to the project milestones and deadlines strictly and deliver a project in time without compromising on quality assurance and testing.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png"),
+    que: "Superb User Experience",
+    ans: "Nowadays, every business and industrial owner is making a high investment in web development services. If we talk about the users then they are also liking the online platforms or web solutions because it is very easy and convenient to access the service. And sometimes web solution is time-saving as well as cost-effective this is the main reason behind the popularity.",
+    ans2: "The reason to choose The App Ideas is years of expertise in deploying successful web development services also using the WordPress platforms. We initially understand the requirements then take the further step. We have deployed the projects with a superb user experience. We are known for building aesthetically appealing, easy to use and fast loading.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png"),
+    que: "Agile Development",
+    ans: "There are millions of online platforms available in the market. People are more likely shifting towards the digital platform became it is convenient to use, take less time as well as sometimes cost-effective. This is why many business owners and entrepreneurs are making investments in web and app development with some innovative ideas to make it popular as well as successful.",
+    ans2: "The App Ideas is one of the most popular software development company. We are highly experienced and have expertise in developing successful mobile app and web app development services. For WordPress web development, we highly follow the Agile development methodology to ensure faster development, concurrent testing and continuous iteration.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png"),
+    que: "Competitive Pricing",
+    ans: "If you are planning to launch a WordPress web app solution in the market then this is the right time to make an investment and increase your profit rate. Before hiring any software development services, it is very important for you to do the proper market research then hire the software development service.",
+    ans2: "The App Ideas is one of the foremost web and app development company. We have a group of highly skilled developers who offer WordPress web development services with advanced features and functionality at the best rates. We provide WordPress development service at a truly cost-competitive rate.",
+  },
+];
 
 const WordPressDeveloper = () => {
-  const [activeWeOffer, setActiveWeOffer] = useState('wordpress_web')
+  const [activeWeOffer, setActiveWeOffer] = useState("wordpress_web");
   const [activeWhyChoose, setActiveWhyChoose] = useState(
-    'expertise_exprerience',
-  )
+    "expertise_exprerience"
+  );
+
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false);
+  const [openIndustries, SetOpenIndustries] = useState(false);
+
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false);
+    }
+    SetOpenServicesProvide(i);
+  };
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return SetOpenIndustries(null);
+    }
+    SetOpenIndustries(i);
+  };
 
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <>
       <Helmet title="Certified WordPress development Company In India | The App Ideas" />
@@ -56,21 +162,21 @@ const WordPressDeveloper = () => {
             </p>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('wordpress_web')}
+                  onClick={() => setActiveWeOffer("wordpress_web")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'wordpress_web' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "wordpress_web" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Website-Redesign.png")}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -79,17 +185,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('wordpress_theme')}
+                  onClick={() => setActiveWeOffer("wordpress_theme")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'wordpress_theme' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "wordpress_theme" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Group-235.png")}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -98,17 +204,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('location_based')}
+                  onClick={() => setActiveWeOffer("location_based")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'location_based' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "location_based" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Location-Based-Services.png")}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -117,17 +223,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('wordpress_plugin')}
+                  onClick={() => setActiveWeOffer("wordpress_plugin")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'wordpress_plugin' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "wordpress_plugin" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Wordpress-plugin.png")}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -136,17 +242,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('wordpress_mobile')}
+                  onClick={() => setActiveWeOffer("wordpress_mobile")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'wordpress_mobile' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "wordpress_mobile" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/WordPress-Mobile-App.png")}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -155,17 +261,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeOffer('manitenance_support')}
+                  onClick={() => setActiveWeOffer("manitenance_support")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeOffer === 'manitenance_support' &&
-                      'service__provide_tab_active'
+                      activeWeOffer === "manitenance_support" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/what do/Mask-Group.png")}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -174,8 +280,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             </div>
-            {activeWeOffer === 'wordpress_web' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "wordpress_web" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -202,12 +308,12 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'wordpress_theme' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "wordpress_theme" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      WordPress Theme Development{' '}
+                      WordPress Theme Development{" "}
                     </h3>
                     <p className="Title_para">
                       Currently, the demand for online platforms is increasing
@@ -231,8 +337,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'location_based' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "location_based" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Location-based services </h3>
@@ -256,8 +362,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'wordpress_plugin' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "wordpress_plugin" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -284,8 +390,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'wordpress_mobile' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "wordpress_mobile" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">WordPress Mobile app </h3>
@@ -310,8 +416,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWeOffer === 'manitenance_support' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeOffer === "manitenance_support" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Maintenance and Support</h3>
@@ -335,6 +441,48 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -361,14 +509,14 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {' '}
+                            {" "}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -379,7 +527,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require('../../../assets/images/Portfolio/port-ecommerce-website.webp')}
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website.webp")}
                         alt="port-ecommerce-website"
                         className="img-fluid"
                       />
@@ -403,14 +551,14 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {' '}
+                            {" "}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -421,7 +569,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require('../../../assets/images/Portfolio/port-ecommerce-website-one.webp')}
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-one.webp")}
                         alt="port-ecommerce-website-one"
                         className="img-fluid"
                       />
@@ -445,22 +593,22 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {' '}
+                            {" "}
                           </a>
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
                             Web Development
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
-                            {' '}
+                            {" "}
                             Wordpress
                           </a>
                         </li>
@@ -470,7 +618,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require('../../../assets/images/Portfolio/port-webdevelop-webiste-two.webp')}
+                        src={require("../../../assets/images/Portfolio/port-webdevelop-webiste-two.webp")}
                         alt="port-webdevelop-webiste-two"
                         className="img-fluid"
                       />
@@ -494,14 +642,14 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {' '}
+                            {" "}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
@@ -512,7 +660,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require('../../../assets/images/Portfolio/port-ecommerce-website-tan.webp')}
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-tan.webp")}
                         alt="port-ecommerce-website-tan"
                         className="img-fluid"
                       />
@@ -536,20 +684,20 @@ const WordPressDeveloper = () => {
                         <a href="#" className="work_head_box_link"></a>
                         <li>
                           <a href="#" className="work_head_box_link">
-                            {' '}
+                            {" "}
                           </a>
                           <a href="#" className="work_head_item">
                             E-Commerce
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
                             Hire Wordpress
                           </a>
                         </li>
                         <li>
-                          {' '}
+                          {" "}
                           <a href="#" className="work_head_item">
                             Wordpress
                           </a>
@@ -560,7 +708,7 @@ const WordPressDeveloper = () => {
                   <div className="col-sm-12 col-md-6 order-1 order-sm-1 order-md-2">
                     <div className="work_head_rht">
                       <img
-                        src={require('../../../assets/images/Portfolio/port-ecommerce-website-eleven.webp')}
+                        src={require("../../../assets/images/Portfolio/port-ecommerce-website-eleven.webp")}
                         alt="port-ecommerce-website-eleven"
                         className="img-fluid"
                       />
@@ -580,21 +728,21 @@ const WordPressDeveloper = () => {
             <h3>Why choose us for WordPress development?</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('expertise_exprerience')}
+                  onClick={() => setActiveWhyChoose("expertise_exprerience")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'expertise_exprerience' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "expertise_exprerience" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -603,17 +751,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('strong_portfolio')}
+                  onClick={() => setActiveWhyChoose("strong_portfolio")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'strong_portfolio' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "strong_portfolio" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -622,17 +770,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('time_bound')}
+                  onClick={() => setActiveWhyChoose("time_bound")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'time_bound' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "time_bound" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Time-Bound-Development..png")}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -641,17 +789,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('superb_user')}
+                  onClick={() => setActiveWhyChoose("superb_user")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'superb_user' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "superb_user" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Superb-User-Experience.png")}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -660,17 +808,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('agile')}
+                  onClick={() => setActiveWhyChoose("agile")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'agile' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "agile" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -679,17 +827,17 @@ const WordPressDeveloper = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('competitve_pricing')}
+                  onClick={() => setActiveWhyChoose("competitve_pricing")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'competitve_pricing' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "competitve_pricing" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -698,8 +846,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === 'expertise_exprerience' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "expertise_exprerience" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Expertise and Experience.</h3>
@@ -724,8 +872,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'strong_portfolio' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "strong_portfolio" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Strong Portfolio</h3>
@@ -750,8 +898,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'time_bound' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "time_bound" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Time-Bound Development</h3>
@@ -777,8 +925,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'superb_user' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "superb_user" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Superb User Experience</h3>
@@ -804,8 +952,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'agile' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "agile" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Agile Development</h3>
@@ -831,8 +979,8 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'competitve_pricing' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "competitve_pricing" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Competitive Pricing</h3>
@@ -856,6 +1004,48 @@ const WordPressDeveloper = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {IndustriesData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => industriesOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openIndustries === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openIndustries === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -868,7 +1058,7 @@ const WordPressDeveloper = () => {
       <ContactUs question="Are you planning to launch a Successful WordPress Web in the market?" />
       {/* Contact Section End */}
     </>
-  )
-}
+  );
+};
 
-export default WordPressDeveloper
+export default WordPressDeveloper;
