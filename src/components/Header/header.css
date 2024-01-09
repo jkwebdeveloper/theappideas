@@ -197,8 +197,6 @@
   border-radius: 0;
 } */
 
-
-
 .wrapper .btn.close-btn {
   position: absolute;
   right: 20px;
@@ -300,7 +298,7 @@ li .get_a_btn {
     align-items: center;
     justify-content: space-between;
     max-width: 1350px;
-}
+  }
   .menu-btn {
     display: block;
   }
@@ -628,6 +626,7 @@ nav input {
   overflow-y: auto;
   box-shadow: 0px 15px 15px rgba(0, 0, 0, 0.18);
   transition: all 2s ease;
+  transition-duration: 0.9s;
 }
 
 .header_mobile_menu .sidebar-nav {
@@ -847,8 +846,10 @@ nav input {
 }
 
 .header_menu_lft {
-  left: 0%;
+  left: 0% ;
   transition: all 0.3s ease;
+  transition-property: all;
+  transition-duration: 0.9s;
 }
 
 .mobile_menu_close_btn {

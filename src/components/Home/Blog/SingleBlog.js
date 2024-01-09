@@ -55,19 +55,19 @@ const SingleBlog = () => {
               <div className="row">
                 <div className="col-lg-6 col-md-12">
                   <div className="left_content">
-                    <h1>{singleblogs.title}</h1>
+                    <h1>{singleblogs?.title}</h1>
                     <div className="author">
                       <img
                         src={"https://the-app-ideas.onrender.com".concat(
                           singleblogs?.creator?.photo
                         )}
-                        alt={singleblogs.imageAlt}
+                        alt={singleblogs?.imageAlt}
                       />
                       <div className="description">
                         <p className="author_name">
-                          Written by <span>{singleblogs.creator.name}</span>
+                          Written by <span>{singleblogs?.creator?.name}</span>
                         </p>
-                        <p>{singleblogs.updatedAt}</p>
+                        <p>{singleblogs?.updatedAt}</p>
                       </div>
                     </div>
                   </div>
@@ -120,7 +120,7 @@ const SingleBlog = () => {
                 <div className="col-11">
                   <div
                     className="contant_section"
-                    dangerouslySetInnerHTML={{ __html: singleblogs.content }}
+                    dangerouslySetInnerHTML={{ __html: singleblogs?.content }}
                   />
                 </div>
               </div>

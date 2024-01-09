@@ -1,19 +1,23 @@
 import axios from "axios";
+import Lottie from "lottie-react";
 import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import { BiSearch } from "react-icons/bi";
 import ReactPaginate from "react-paginate";
 import { Link } from "react-router-dom";
+import Loading from "../assets/images/loading.json";
 
 const Blog = () => {
   const [blogs, setblogs] = useState([]);
   const [loading, setLoading] = useState(false);
   const [activefilter, setActiveFilter] = useState("all");
   const [category, SetCategory] = useState([]);
-  const [autoSearch, SetAutoSearch] = useState([]);
+  const [autoSearch, setAutoSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(0);
   const [totalBlogCount, setTotalBlogCount] = useState(0);
   const [keyForReset, setKeyForReset] = useState(0);
+  const [searchResult, setSearchResult] = useState([]);
+  const [debouncedSearchTerm, setDebouncedSearchTerm] = useState("");
 
   const blogsPerPage = 9;
 
@@ -71,14 +75,17 @@ const Blog = () => {
   const handleGetAutoSearch = () => {
     setLoading(true);
     axios
-      .get("https://the-app-ideas.onrender.com/api/autocomplete/title", {
-        headers: {
-          "Content-Type": "application/json",
-        },
-      })
+      .get(
+        `https://the-app-ideas.onrender.com/api/autocomplete/title?title=${debouncedSearchTerm}`,
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
-        SetAutoSearch(res.data.data);
-        console.log(res.data.data);
+        setSearchResult(res.data);
+        console.log(res.data);
       })
       .catch((err) => {
         setLoading(false);
@@ -86,8 +93,22 @@ const Blog = () => {
   };
   useEffect(() => {
     handleGetAutoSearch();
-  }, []);
+  }, [debouncedSearchTerm]);
 
+  const handleChange = (value) => {
+    setAutoSearch(value);
+    // Debouncing the search term
+    const delay = 500; // Adjust the delay as needed
+    if (timerId) clearTimeout(timerId);
+    if (value.length > 2) {
+      timerId = setTimeout(() => {
+        setDebouncedSearchTerm(value);
+      }, delay);
+    } else {
+      setSearchResult([]);
+    }
+  };
+  let timerId;
 
   return (
     <>
@@ -97,12 +118,44 @@ const Blog = () => {
           <h2 className="blog-title-heading">Our Blogs</h2>
           <form action="">
             <div className="blog__search">
-              <input type="text" placeholder="Search..." />
+              <input
+                type="text"
+                placeholder="Search..."
+                value={autoSearch}
+                onChange={(e) => handleChange(e.target.value)}
+              />
               <button>
                 <BiSearch style={{ fontSize: "20px" }} />
               </button>
             </div>
           </form>
+          {autoSearch?.length > 3 && (
+            <div className="suggtion">
+              {searchResult.map((item) => {
+                return (
+                  <div className="suggtion_content" key={item._id}>
+                    <img
+                      src={"https://theappideas.com".concat(item.image)}
+                      alt=""
+                      srcset=""
+                    />
+                    <div>
+                      <Link
+                        to="/single-blog"
+                        state={{ id: item._id }}
+                        onClick={() => {
+                          window.scrollTo({ top: 0, behavior: "smooth" });
+                        }}
+                      >
+                        <a href="">{item?.title}</a>
+                      </Link>
+                      {/* <hr className="line" /> */}
+                    </div>
+                  </div>
+                );
+              })}
+            </div>
+          )}
         </div>
       </section>
       <section className="blog__tabing__section py-5">
@@ -159,11 +212,15 @@ const Blog = () => {
               ))}
             </ul>
             {loading ? (
-              <div
-                className="loading"
-                style={{ textAlign: "center", paddingTop: "10px" }}
-              >
-                Loading...
+              <div className="loading" style={{ textAlign: "center" }}>
+                <Lottie
+                  animationData={Loading}
+                  loop={true}
+                  style={{
+                    width: "200px",
+                    margin: "0 auto",
+                  }}
+                />
               </div>
             ) : blogs.length > 0 ? (
               <div className="tab-content" id="pills-tabContent">
@@ -212,7 +269,7 @@ const Blog = () => {
               <div style={{ textAlign: "center" }}>No Data</div>
             )}
           </div>
-          <div className="paginate_section">
+          <div className="paginate_section" style={{ marginTop: "50px" }}>
             <ReactPaginate
               onPageChange={(selected) => handlePageChange(selected.selected)}
               key={keyForReset}

@@ -573,7 +573,7 @@ section {
 /* .pagination p {
   background-color: ;
 } */
-.pagination_section p{
+.pagination_section p {
   background-color: white;
   border: #000;
   color: #000;
@@ -592,8 +592,6 @@ section {
   background-color: #f6c000;
 } */
 /* Pagination css End */
-
-
 
 /* Blog Listing Page CSS End */
 
@@ -1543,13 +1541,13 @@ section {
   background-position: bottom center;
   padding: 40px;
   color: #fff;
-  padding-bottom: 120px;
+  /* padding-bottom: 120px; */
   padding-top: 130px;
 }
 
 .page-error {
   text-align: center;
-  padding-bottom: 50px;
+  /* padding-bottom: 50px; */
   /* padding-top: 10rem; */
 }
 /* .page-error img {
@@ -4760,7 +4758,7 @@ section {
     display: none;
   }
 }
-.loading_bar{
+.loading_bar {
   text-align: center;
 }
 /* =========== service provide Mobile view ==========  */
@@ -4836,18 +4834,59 @@ Title .Title_Color {
   }
 }
 /* =========== service provide Mobile view ==========  */
-/* .page-item .active {
-  background-color: #d6aa0b;
-}
-.page-item {
-  background-color: #d6aa0b;
-} */
+/* =========== Pagination css Start ==========  */
 .page-item a {
   cursor: pointer !important;
   color: #000;
 }
 .page-item.active .page-link {
   background-color: #d6aa0b !important;
-  border-color:  #d6aa0b !important;
-  color: #000;  
+  border-color: #d6aa0b !important;
+  color: #000;
 }
+/* =========== Pagination css End ==========  */
+
+/* =========== Autocomplete Search css start ==========  */
+.suggtion {
+  background-color: white;
+  color: #000;
+  width: 70%;
+  margin: 0 auto;
+  border-radius: 7px;
+  margin-top: 10px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px;
+  z-index: 9;
+  transition: 0.8s cubic-bezier(0.4, 0, 1, 1);
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+  cursor: pointer;
+}
+.suggtion img{
+  width: 50px;
+}
+.suggtion_content a {
+  margin: 14px;
+  color: #000;
+}
+.suggtion_content a:hover {
+  color: #23092b;
+  font-weight: 500;
+}
+.suggtion_content {
+  display: flex;
+  gap: 4;
+  align-items: center;
+  margin: 12px;
+}
+.line {
+  margin: 0;
+}
+
+@media (max-width: 1023px) {
+  .suggtion {
+    width: 80%;
+  }
+}
+/* =========== Autocomplete Search css End ==========  */

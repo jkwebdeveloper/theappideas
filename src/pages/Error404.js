@@ -9,16 +9,16 @@ const Error404 = () => {
       <div className="container">
         <div className="page-error">
           <h2 className="">Oops ! Page not found.</h2>
-          <Lottie
+          {/* <Lottie
             animationData={error}
             loop={true}
             // style={{ height: '50px' }}
-          />
-          {/* <img
+          /> */}
+          <img
             src={require('../assets/images/Error.png')}
             alt=""
-            style={{ marginTop: '-170px' }}
-          /> */}
+            style={{ width:"70%" }}
+          />
           <h4 className="">
             We Can't find the page you're looking for.
           </h4>
