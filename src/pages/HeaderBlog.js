@@ -8,25 +8,35 @@ import { Link } from "react-router-dom";
 const Blog = () => {
   const [blogs, setblogs] = useState([]);
   const [loading, setLoading] = useState(false);
-  const [filterdata, setFilterData] = useState([]);
   const [activefilter, setActiveFilter] = useState("all");
   const [category, SetCategory] = useState([]);
-  const [autoSearch, SetAutoSearch] = useState([])
+  const [autoSearch, SetAutoSearch] = useState([]);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [totalBlogCount, setTotalBlogCount] = useState(0);
+  const [keyForReset, setKeyForReset] = useState(0);
 
-  const handlePageChange = () => {
-    console.log("click");
+  const blogsPerPage = 9;
+
+  const handlePageChange = (selectedPage) => {
+    setCurrentPage(selectedPage);
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   const handleGetBlogs = () => {
     setLoading(true);
+    let url = `https://the-app-ideas.onrender.com/api/blog?page=${
+      currentPage + 1
+    }&limit=${blogsPerPage}`;
+    if (activefilter !== "all") url = url + `&category=${activefilter}`;
     axios
-      .get("https://the-app-ideas.onrender.com/api/blog", {
+      .get(url, {
         headers: {
           "Content-Type": "application/json",
         },
       })
       .then((res) => {
         setblogs(res.data.data);
+        setTotalBlogCount(res.data.totalBlogCount);
         // console.log(res.data.data);
         setLoading(false);
       })
@@ -36,7 +46,7 @@ const Blog = () => {
   };
   useEffect(() => {
     handleGetBlogs();
-  }, []);
+  }, [activefilter, currentPage]);
 
   const handleGetCategory = () => {
     setLoading(true);
@@ -59,31 +69,25 @@ const Blog = () => {
   }, []);
 
   const handleGetAutoSearch = () => {
-    setLoading(true)
-    axios.get("https://the-app-ideas.onrender.com/api/autocomplete/title", {
-      headers: {
-        "Content-Type" : "application/json",
-      },
-    })
-    .then((res) => {
-      SetAutoSearch(res.data.data)
-      console.log(res.data.data);
-    })
-    .catch((err) => {
-      setLoading(false)
-    })
-  }
-  useEffect(() => {
-    handleGetAutoSearch()
-  }, [])
-
-
-  const filterItem = (cateItem) => {
-    const updateItems = blogs.filter((curElem) => {
-      return curElem.categories === cateItem;
-    });
-    setFilterData(updateItems);
+    setLoading(true);
+    axios
+      .get("https://the-app-ideas.onrender.com/api/autocomplete/title", {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        SetAutoSearch(res.data.data);
+        console.log(res.data.data);
+      })
+      .catch((err) => {
+        setLoading(false);
+      });
   };
+  useEffect(() => {
+    handleGetAutoSearch();
+  }, []);
+
 
   return (
     <>
@@ -120,8 +124,10 @@ const Blog = () => {
                   aria-controls="All"
                   aria-selected="true"
                   onClick={() => {
-                    setFilterData(blogs);
+                    // setFilterData(blogs);
                     setActiveFilter("all");
+                    setCurrentPage(0);
+                    setKeyForReset((prevKey) => prevKey + 1);
                   }}
                 >
                   All
@@ -131,7 +137,7 @@ const Blog = () => {
                 <li className="nav-item" role="presentation">
                   <button
                     className={`nav-link ${
-                      activefilter === "application" && "active"
+                      activefilter === item?._id && "active"
                     }`}
                     id="Application-tab"
                     data-bs-toggle="pill"
@@ -141,114 +147,16 @@ const Blog = () => {
                     aria-controls="Application"
                     aria-selected="false"
                     onClick={() => {
-                      filterItem("application");
-                      setActiveFilter("application");
+                      // filterItem("application");
+                      setActiveFilter(item?._id);
+                      setCurrentPage(0);
+                      setKeyForReset((prevKey) => prevKey + 1);
                     }}
                   >
                     {item?.name}
                   </button>
                 </li>
               ))}
-              {/* <li className="nav-item" role="presentation">
-                <button
-                  className={`nav-link ${
-                    activefilter === "aap-ideas" && "active"
-                  }`}
-                  id="App-idea-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#App-idea"
-                  type="button"
-                  role="tab"
-                  aria-controls="App-idea"
-                  aria-selected="false"
-                  onClick={() => {
-                    filterItem("aap-ideas");
-                    setActiveFilter("aap-ideas");
-                  }}
-                >
-                  App Ideas
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className={`nav-link ${
-                    activefilter === "bussiness" && "active"
-                  }`}
-                  id="bussiness-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#bussiness"
-                  type="button"
-                  role="tab"
-                  aria-controls="bussiness"
-                  aria-selected="false"
-                  onClick={() => {
-                    filterItem("bussiness");
-                    setActiveFilter("bussiness");
-                  }}
-                >
-                  Bussiness
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className={`nav-link ${
-                    activefilter === "designing" && "active"
-                  }`}
-                  id="Designing-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#Designing"
-                  type="button"
-                  role="tab"
-                  aria-controls="Designing"
-                  aria-selected="false"
-                  onClick={() => {
-                    filterItem("designing");
-                    setActiveFilter("designing");
-                  }}
-                >
-                  Designing
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className={`nav-link ${
-                    activefilter === "e-commerce" && "active"
-                  }`}
-                  id="E-commerce-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#E-commerce"
-                  type="button"
-                  role="tab"
-                  aria-controls="E-commerce"
-                  aria-selected="false"
-                  onClick={() => {
-                    filterItem("e-commerce");
-                    setActiveFilter("e-commerce");
-                  }}
-                >
-                  E-commerce
-                </button>
-              </li>
-              <li className="nav-item" role="presentation">
-                <button
-                  className={`nav-link ${
-                    activefilter === "demand-tab" && "active"
-                  }`}
-                  id="Demand-tab"
-                  data-bs-toggle="pill"
-                  data-bs-target="#Demand"
-                  type="button"
-                  role="tab"
-                  aria-controls="Demand"
-                  aria-selected="false"
-                  onClick={() => {
-                    filterItem("demand-tab");
-                    setActiveFilter("demand-tab");
-                  }}
-                >
-                  On-Demand-app
-                </button>
-              </li> */}
             </ul>
             {loading ? (
               <div
@@ -306,15 +214,16 @@ const Blog = () => {
           </div>
           <div className="paginate_section">
             <ReactPaginate
+              onPageChange={(selected) => handlePageChange(selected.selected)}
+              key={keyForReset}
               previousLabel="Previous"
               nextLabel="Next"
               breakLabel="..."
               breakClassName="page-item"
               breakLinkClassName="page-link"
-              pageCount={25}
+              pageCount={Math.ceil(totalBlogCount / blogsPerPage)}
               marginPagesDisplayed={2}
               pageRangeDisplayed={3}
-              onPageChange={handlePageChange}
               containerClassName="pagination justify-content-center"
               pageClassName="page-item"
               pageLinkClassName="page-link"

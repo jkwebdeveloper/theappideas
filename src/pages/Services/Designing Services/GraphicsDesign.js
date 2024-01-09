@@ -12,6 +12,97 @@ import FAQ from "../../../components/FAQ";
 import ContactUs from "../../../components/ContactUs";
 import HeroSection from "../../../components/HeroSection";
 import { Helmet } from "react-helmet";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const ServiceProvideData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/what-do/logo-design.png"),
+    que: "Logo Designing",
+    ans: "Logo plays a vital role in the branding of any business or startup. Nowadays, there are a high number of people are investing in online business because of the high demand for online services. There are thousands of online businesses available, so it is very important to work on logo design services that completely represent your business in the market.",
+    ans2: "The App Ideas is one of the leading web and app development services. Along with the software development services, we also offer the best graphic designing services for all kinds of business categories. Our Logo design experts are highly proficient in providing the best logo designing services that reflect your services or brands.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/what-do/web-ui-ux.png"),
+    que: "Web UI/UX Designing",
+    ans: "UI/UX designing services are highly popular in this present time. As per the increasing demand for online services, Web designing services is also at a peak. If you are a web designing owner then it is very important for you to update your online services based on the new technology.",
+    ans2: "The App Ideas is one of the highly popular Graphic Designing services. We have a team of highly skilled developers as well as designers who are proficient in providing the best services at the best rates. If you are planning to develop a web app or looking for a skilled web designers group then feel free to connect with us and get a free quote.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/what-do/landing-page.png"),
+    que: "Landing Page Designing",
+    ans: "Landing Page business plays a vital role in the success of any online business solution. In this present time, the demand for an online solution is increasing because people are now more inclined towards online platforms because it offers the convenience of accessing the services. A landing page is one of the best methods for keeping engaging your client in your services.",
+    ans2: "The App Ideas is one of the foremost software development company. We have a team of highly skilled team of designers who are experienced in providing the best landing page services for all types of business. We are highly expertise in analysing the business as well as the modern trend to offer the leading landing page development service.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/what-do/brochure-design.png"),
+    que: "Brochure design",
+    ans: "The brochure is considered as an Old method of doing the advertising in the market, but still, through the digital brochure, you can attract a high number of users towards your services. If you are planning to invest in a business or already have a business then for promotion you can plan to develop the best brochure based on your services.",
+    ans2: "The App Ideas is one of the foremost software development company. We offer the services like mobile app development, web app development, website development as well as Graphic designing services at the best possible rates. We offer graphic designing services that are unique and which catch the attention of the users as well as let them know about your service.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/what-do/brand-identity.png"),
+    que: "Brand Identity",
+    ans: "Nowadays, the demand for online platforms is highly increasing in the market. People are more inclined towards online platforms because they offer the convenience of accessing the services. Due to the demand for online platforms, there is high competition in the market. So if you are planning to launch a business or you are already running a business then it is very important to build up a Brand Identity.",
+    ans2: "The App Ideas is one of the most popular web and app development company. We have a team of highly skilled developers who are proficient in providing the best Graphic designing services at the best possible rates. We provide a modern design that can help your business to create a brand identity in the market.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/what-do/business-card.png"),
+    que: "Business Card",
+    ans: "Many Entrepreneurs and business owners are now planning to launch a software development service in the market as it helps in increasing the sales rate of the business. If you are one of them, then you must be familiar with the business card term. This business card can help you to make people aware of your business. Digital business cards are highly popular in this present time.",
+    ans2: "The App Ideas is one of the foremost software development company. We have a team of highly experienced designers or developers who are experts in providing graphic designing services. We are also proficient in offering the foremost business cards design based on the current market requirements at the best rates.",
+  },
+];
+
+const IndustriesData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png"),
+    que: "Expertise and Experience.",
+    ans: "We are from The App Ideas which is one of the foremost web and app development company. We have a group of highly skilled developers who are experienced in providing the best web development services. Many business owners and entrepreneurs are converting their businesses into web platforms.",
+    ans2: "The main reason behind choosing The App Ideas is that we have years of experience in deploying the best business solution which can drive your business to the peak of the success. We initially understand the requirements then start the development. We flaunt a highly experienced team of WordPress developers with proven expertise in building the most sophisticated WordPress websites.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/why-choose/portfolio.png"),
+    que: "Strong Portfolio",
+    ans: "Are you planning to hire an expert graphic designing agency for your Mobile app? If yes, then you are at the right place. Here we have years of experience in providing the best graphic designing services according to the business requirements. Before hiring any agency it is very important to check their portfolio before hiring any services.",
+    ans2: "The App Ideas is one of the foremost graphic designing services. We have a team of highly skilled graphic designers who are highly skilled in providing the best services for all kinds of business niches. To check our expertise in graphic designing, you can check out our strong portfolio of graphic designing services for the web app as well as for the mobile app.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png"),
+    que: "Agile methodology",
+    ans: "Are you thinking of redesigning your online platforms? There are millions of mobile apps and web apps available in the market with similar ideas. The only thing which can make the difference in the various online solution is the designing or the graphic designing services. It is very important to search for the best graphic design service.",
+    ans2: "The App Ideas is one of the highly popular software development company. We are proficient in providing the best services for all kinds of online platforms like web app development, mobile app development, web designing as well as graphic designing service. We strictly follow the agile methodology for the development of the online platform and also the client approval for that.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/Designing/Graphic-design/why-choose/time-delivery.png"),
+    que: "On-time Delivery",
+    ans: "The demand for the online solution is increasing in the market because it is very easy to manage as well as provide the service online to the users. If you are also planning to launch an online platform then it is very important for you to also provide the best UI/UX design to enhance the platform user.",
+    ans2: "The App Ideas is one of the best IT services providers. We offer all kinds of services like development of the app and web platforms, Digital marketing services and Graphic design services. We first analyse the requirements then we offer the quotation as well as the timeline of completing these services. We deliver the project on the given timeline by testing the overall projects",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png"),
+    que: "Competitive pricing",
+    ans: "In this present time, people are more inclined towards online platforms because it offers easy accessibility for the services. Many entrepreneurs and startup owners are now planning and investing in some of the best ideas which can help in increasing the sales of the business. It is quite important for you to search for the best firm which can offer the best rates for graphic design.",
+    ans2: "The App Ideas is one of the leading web and app development company. We Have a team of highly skilled developers as well as designers who are experts in providing the best graphic designing services. We have worked on various graphic designing projects and offer unique services at a competitive price.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png"),
+    que: "Support and Maintenance",
+    ans: "Are you thinking of launching an online platform in the market? If yes, then this is probably the best time for you to connect with us and discuss your requirements to get a free quotation. Along with the development of the online platforms, it is very important for you to also take care of the designing services. Along with these services, it is very important to have maintenance of your platforms from time to time.",
+    ans2: "The App Ideas is one of the leading web and app development company. We have a team of highly skilled developers as well as designers who are experts in providing the best solutions for all kinds of business niches. Along with that, we also provide support and maintenance services to our clients and it’s free for 3 months. Feel free to connect with us and get a free quotation for a graphic designing service.",
+  },
+];
 
 const GraphicsDesign = () => {
   const [activeWeOffer, setActiveWeOffer] = useState("logo_designing");
@@ -19,11 +110,27 @@ const GraphicsDesign = () => {
     "expertise_experience"
   );
 
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false);
+  const [openIndustries, SetOpenIndustries] = useState(false);
+
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false);
+    }
+    SetOpenServicesProvide(i);
+  };
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return SetOpenIndustries(null);
+    }
+    SetOpenIndustries(i);
+  };
+
   const prevRef = useRef(null);
   const nextRef = useRef(null);
   return (
     <>
-    <Helmet title="Best Graphics Design Company in India | The App Ideas"/>
+      <Helmet title="Best Graphics Design Company in India | The App Ideas" />
       {/* Banner Section Start */}
       <HeroSection
         title="Best Graphic Design Company"
@@ -58,7 +165,7 @@ const GraphicsDesign = () => {
             </p>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -177,7 +284,7 @@ const GraphicsDesign = () => {
               </div>
             </div>
             {activeWeOffer === "logo_designing" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Logo Designing</h3>
@@ -204,7 +311,7 @@ const GraphicsDesign = () => {
               </div>
             )}
             {activeWeOffer === "web_ui_ux" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Web UI/UX Designing</h3>
@@ -230,7 +337,7 @@ const GraphicsDesign = () => {
               </div>
             )}{" "}
             {activeWeOffer === "landing_page" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Landing Page Designing</h3>
@@ -257,7 +364,7 @@ const GraphicsDesign = () => {
               </div>
             )}{" "}
             {activeWeOffer === "brouchure_design" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Brochure design</h3>
@@ -283,7 +390,7 @@ const GraphicsDesign = () => {
               </div>
             )}{" "}
             {activeWeOffer === "brand_identify" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Brand Identity</h3>
@@ -310,7 +417,7 @@ const GraphicsDesign = () => {
               </div>
             )}{" "}
             {activeWeOffer === "business_card" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Business Card</h3>
@@ -335,6 +442,48 @@ const GraphicsDesign = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -431,7 +580,7 @@ const GraphicsDesign = () => {
             <h3>Why choose us for Graphic Design Company?</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
@@ -550,7 +699,7 @@ const GraphicsDesign = () => {
               </div>
             </div>
             {activeWhyChoose === "expertise_experience" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Expertise and Experience.</h3>
@@ -576,7 +725,7 @@ const GraphicsDesign = () => {
               </div>
             )}
             {activeWhyChoose === "agile" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Agile methodology</h3>
@@ -602,7 +751,7 @@ const GraphicsDesign = () => {
               </div>
             )}
             {activeWhyChoose === "competitive_pricing" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Competitive pricing</h3>
@@ -628,7 +777,7 @@ const GraphicsDesign = () => {
               </div>
             )}
             {activeWhyChoose === "strong_portfolio" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Strong Portfolio</h3>
@@ -655,7 +804,7 @@ const GraphicsDesign = () => {
               </div>
             )}
             {activeWhyChoose === "on_time_delivery" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">On-time Delivery</h3>
@@ -681,7 +830,7 @@ const GraphicsDesign = () => {
               </div>
             )}
             {activeWhyChoose === "support_maintenance" && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Support and Maintenance</h3>
@@ -709,6 +858,48 @@ const GraphicsDesign = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {IndustriesData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => industriesOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openIndustries === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openIndustries === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>

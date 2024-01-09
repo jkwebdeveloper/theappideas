@@ -1,18 +1,126 @@
-import React, { useState } from 'react'
+import React, { useState } from "react";
 
-import CustomWordPress from '../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development.webp'
-import WordPressWebsite from '../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development-services.webp'
-import Developer from '../../../assets/images/SERVICES/Software development/asp-net-dev/full-stack-aspnet-development-company.webp'
+import CustomWordPress from "../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development.webp";
+import WordPressWebsite from "../../../assets/images/SERVICES/Software development/asp-net-dev/aspnet-development-services.webp";
+import Developer from "../../../assets/images/SERVICES/Software development/asp-net-dev/full-stack-aspnet-development-company.webp";
 
-import TestiMonial from '../../../components/Testimonial/TestiMonial'
-import FAQ from '../../../components/FAQ'
-import ContactUs from '../../../components/ContactUs'
-import HeroSection from '../../../components/HeroSection'
-import { Helmet } from 'react-helmet'
+import TestiMonial from "../../../components/Testimonial/TestiMonial";
+import FAQ from "../../../components/FAQ";
+import ContactUs from "../../../components/ContactUs";
+import HeroSection from "../../../components/HeroSection";
+import { Helmet } from "react-helmet";
+import { IoIosArrowDown, IoIosArrowUp } from "react-icons/io";
+
+const ServiceProvideData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png"),
+    que: "Enterprise Website Development",
+    ans: "The demand for online solutions is increasing as per the increasing number of online users. Not only for the users but many of the large scale businesses are implementing the software or Enterprise solutions for managing things properly and keep the overall records of the data for future reference.",
+    ans2: "Here we are at The App Ideas, which is one of the leading software development services. We have a team of highly skilled Asp.net developers who are experts in offering successful services at the best rates. We help you build robust and powerful enterprise websites and web apps with the Asp.net framework equipped with rich features and unmatched performance.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png"),
+    que: "Mobile App Development",
+    ans: "The popularity of the mobile app solution is getting popular because it provides the convenience and comforts of using the services very easily from any place and at any time. Enterprise solutions are very important in this present time, as it helps in managing everything very easily.",
+    ans2: "Here we are at The App Ideas which is one of the leading web and app development company. We have a team of highly skilled in offering software development services. We utilise the Asp.net framework to develop sophisticated and feature-rich mobile apps for multiple mobile OS platforms.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/3-8.png"),
+    que: "Video and Live Streaming",
+    ans: "Many business owners and entrepreneurs are now making investments in online platforms or digital solutions. By this, they can digitize their business and can access it from any place. Many of the industries are now accepting the features like Video and Live streaming for making the business more popular.",
+    ans2: "The App Ideas is one of the most popular software development company. We are highly experienced in offering the best services for development, designing as well as enterprise development. We utilise the Asp.net framework to build performance-savvy apps for video and real-time streaming capabilities.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/4-8.png"),
+    que: "E-commerce Web Store Development",
+    ans: "The online store provides the proper flexibility of checking the details of the product, adding it to the cart and order it at your doorstep very easily. As a store owner, it is very important for you to invest and launch an E-commerce platform to increase your profit rate and attract a high number of users to your services.",
+    ans2: "We are from The App Ideas, which is one of the most popular E-commerce Web store development Company. We have a skilled team of developers who are experts in offering the best services. We utilise the asp.net framework to build robust and feature-rich e-commerce web stores equipped with all state of the art features and sophisticated shopping experiences.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/5-8.png"),
+    que: "Asp.Net Integration",
+    ans: "If we talk about the Software solution then Asp.Net is one of the most demanding technology. Asp.Net offers the best features and functionality which can support business owners in managing everything online. As a business owner if you are planning to integrate Asp.Net then this is the time.",
+    ans2: "The App Ideas is one of the leading Software development company. We have a skilled team of expert developers who offers the best software solution by using the Asp.net services. We also help existing websites and mobile apps integrating the asp.net framework to deliver highly customised and business-specific web and mobile experiences.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/6-8.png"),
+    que: "Asp.Net Support and Maintenance",
+    ans: "If you are planning on making an investment in developing a software solution or enterprise for your business then this is probably the best time for it. You can do the proper research, plan things and then hire the best software development services who can offer the best service at the best rates.",
+    ans2: "The App Ideas is one of the proficient software development company. We have a team of highly skilled Asp.net developers who are highly experienced in offering the best solution at affordable rates. We also provide support and maintenance services for all existing asp.net web and mobile apps across the niches.",
+  },
+];
+const IndustriesData = [
+  {
+    id: 1,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png"),
+    que: "Expertise and Experience.",
+    ans: "If you are planning on launching a software solution for your business growth then this is probably the best time for you to make an investment. A software solution can help to easily manage the data as well as do the management. Before hiring any services it is very important for you to research and hire the Asp.net expertise team.",
+    ans2: "Here we are at The App Ideas, which is one of the most popular software development company. We have years of experience in providing the best Asp.net software services, Our experience and expertise with the app.net framework dates back to more than a decade before and spans across a multitude of successful apps and websites.",
+  },
+  {
+    id: 2,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png"),
+    que: "Robust Portfolio",
+    ans: "Digitalization is taking place all over the world. Many businesses like offline stores, educational institutes, agencies are now launching their online services to target a high number of users. If you are also planning on digitalizing your business then this is high time for you to launch a software solution for your business.",
+    ans2: "Here we are at The App Ideas which is one of the leading web and app development company. We have a team of highly skilled Asp.net software developers who have years of experience in offering the best solution. We boast of a robust and expansive portfolio of several successful asp.net based mobile apps and enterprise websites across the niches.",
+  },
+  {
+    id: 3,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png"),
+    que: "Agile Development",
+    ans: "Having a software solution makes the work easier for business owners. Many of the large scale to small scale businesses are now implementing the software solution to their business. Software business can make the management of the services much easier for the people.",
+    ans2: "The App Ideas is one of the leading web and app development company. Along with website development, we are experienced and expertise in offering the best software solutions. We strictly follow the agile development methodology and ensure fast-paced development and optimum performance through concurrent testing.",
+  },
+  {
+    id: 4,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png"),
+    que: "Timely Delivery",
+    ans: "If you observe the current market then many of the business owners are now planning to shift their services to online platforms because it provides easy manageability as well as accessibility. If you finding it difficult to manage your business then this is the time for you to have a software solution for your business.",
+    ans2: "Here we are at The App Ideas, which is one of the leading software development company. We have a team of highly skilled Asp.net software developers. We ensure the timely completion of each and every project by strictly following the deadlines and project milestones.",
+  },
+  {
+    id: 5,
+    images: require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png"),
+    que: "Affordable Pricing",
+    ans: "The software solution makes the work easier for all kinds of businesses and industries. If you are running a business then this is probably the best time for you to take a step forward and make an investment in developing the best software solution using Asp.net technology.",
+    ans2: "Here we are at The App Ideas which is one of the leading web and app development company. We have skilful and experienced Asp.net development who offers the best services at the best costing. We offer a very affordable rate for all our asp.net development projects and ensure highly competitive pricing while keeping the focus on quality.",
+  },
+  {
+    id: 6,
+    images: require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png"),
+    que: "Superb Post Development support",
+    ans: "Do you have a software solution for your business? If no then this is the time for you to research and design the best software solution which can be very useful for your business growth. Asp.net software can make the work much easier for your business and services.",
+    ans2: "The App Ideas is one of the leading software development services. We have a pool of talented asp.net developers who offer the best services at the best possible rates. We provide suburb post-development support for all our development projects and ensure optimum qualitative output.",
+  },
+];
 
 const AspNet = () => {
-  const [activeWeProvide, setActiveWeProvide] = useState('enterprise_website')
-  const [activeWhyChoose, setActiveWhyChoose] = useState('experience_expertise')
+  const [activeWeProvide, setActiveWeProvide] = useState("enterprise_website");
+  const [activeWhyChoose, setActiveWhyChoose] = useState(
+    "experience_expertise"
+  );
+
+  const [openServicesProvide, SetOpenServicesProvide] = useState(false);
+  const [openIndustries, SetOpenIndustries] = useState(false);
+
+  const toggleOpen = (i) => {
+    if (openServicesProvide === i) {
+      return SetOpenServicesProvide(false);
+    }
+    SetOpenServicesProvide(i);
+  };
+  const industriesOpen = (i) => {
+    if (openIndustries === i) {
+      return SetOpenIndustries(null);
+    }
+    SetOpenIndustries(i);
+  };
 
   return (
     <>
@@ -48,21 +156,21 @@ const AspNet = () => {
             </p>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide('enterprise_website')}
+                  onClick={() => setActiveWeProvide("enterprise_website")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === 'enterprise_website' &&
-                      'service__provide_tab_active'
+                      activeWeProvide === "enterprise_website" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/1-8.png")}
                       alt="Website-Redesign"
                       className="img-fluid"
                     />
@@ -71,17 +179,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide('mobile_app')}
+                  onClick={() => setActiveWeProvide("mobile_app")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === 'mobile_app' &&
-                      'service__provide_tab_active'
+                      activeWeProvide === "mobile_app" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/2-9.png")}
                       alt="Group-235"
                       className="img-fluid"
                     />
@@ -90,17 +198,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide('video_live_steraming')}
+                  onClick={() => setActiveWeProvide("video_live_steraming")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === 'video_live_steraming' &&
-                      'service__provide_tab_active'
+                      activeWeProvide === "video_live_steraming" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/3-8.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/3-8.png")}
                       alt="icons8-smart-watch-100-1"
                       className="img-fluid"
                     />
@@ -109,17 +217,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide('e_comm')}
+                  onClick={() => setActiveWeProvide("e_comm")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === 'e_comm' &&
-                      'service__provide_tab_active'
+                      activeWeProvide === "e_comm" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/4-8.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/4-8.png")}
                       alt="Group-53"
                       className="img-fluid"
                     />
@@ -128,17 +236,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide('asp.net_integration')}
+                  onClick={() => setActiveWeProvide("asp.net_integration")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === 'asp.net_integration' &&
-                      'service__provide_tab_active'
+                      activeWeProvide === "asp.net_integration" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/5-8.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/5-8.png")}
                       alt="Group-184"
                       className="img-fluid"
                     />
@@ -147,17 +255,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWeProvide('asp.net_maintenance')}
+                  onClick={() => setActiveWeProvide("asp.net_maintenance")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWeProvide === 'asp.net_maintenance' &&
-                      'service__provide_tab_active'
+                      activeWeProvide === "asp.net_maintenance" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/6-8.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/what-do/6-8.png")}
                       alt="Mask-Group"
                       className="img-fluid"
                     />
@@ -166,8 +274,8 @@ const AspNet = () => {
                 </div>
               </div>
             </div>
-            {activeWeProvide === 'enterprise_website' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === "enterprise_website" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -194,8 +302,8 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === 'mobile_app' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === "mobile_app" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Mobile App Development </h3>
@@ -218,8 +326,8 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === 'video_live_steraming' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === "video_live_steraming" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Video and Live Streaming </h3>
@@ -243,12 +351,12 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === 'e_comm' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === "e_comm" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      E-commerce Web Store Development{' '}
+                      E-commerce Web Store Development{" "}
                     </h3>
                     <p className="Title_para">
                       The online store provides the proper flexibility of
@@ -271,8 +379,8 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === 'asp.net_integration' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === "asp.net_integration" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Asp.Net Integration </h3>
@@ -297,12 +405,12 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWeProvide === 'asp.net_maintenance' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWeProvide === "asp.net_maintenance" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
-                      Asp.Net Support and Maintenance{' '}
+                      Asp.Net Support and Maintenance{" "}
                     </h3>
                     <p className="Title_para">
                       If you are planning on making an investment in developing
@@ -324,6 +432,48 @@ const AspNet = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {ServiceProvideData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => toggleOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openServicesProvide === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openServicesProvide === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -335,21 +485,21 @@ const AspNet = () => {
             <h3>Why Choose The App Ideas for Asp.net Development?</h3>
           </div>
           <div className="row mt-5">
-            <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
               <div className="row">
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('experience_expertise')}
+                  onClick={() => setActiveWhyChoose("experience_expertise")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'experience_expertise' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "experience_expertise" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Experience-And-Expertise-1.png")}
                       alt="Experience-And-Expertise"
                       className="img-fluid"
                     />
@@ -358,17 +508,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('robust_portfolio')}
+                  onClick={() => setActiveWhyChoose("robust_portfolio")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'robust_portfolio' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "robust_portfolio" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/robust-portfolio.png")}
                       alt="robust-portfolio"
                       className="img-fluid"
                     />
@@ -377,17 +527,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('agile')}
+                  onClick={() => setActiveWhyChoose("agile")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'agile' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "agile" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/Agile-Development-1.png")}
                       alt="Time-Bound-Development"
                       className="img-fluid"
                     />
@@ -396,17 +546,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('timely_delivery')}
+                  onClick={() => setActiveWhyChoose("timely_delivery")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'timely_delivery' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "timely_delivery" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/4-9.png")}
                       alt="Superb-User-Experience"
                       className="img-fluid"
                     />
@@ -415,17 +565,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('affordable_pricing')}
+                  onClick={() => setActiveWhyChoose("affordable_pricing")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'affordable_pricing' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "affordable_pricing" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png')}
+                      src={require("../../../assets/images/SERVICES/WEB DEVELOPMENT/Wordpress-dev/why-Choose/competitive-pricing.png")}
                       alt="Agile-Development"
                       className="img-fluid"
                     />
@@ -434,17 +584,17 @@ const AspNet = () => {
                 </div>
                 <div
                   className="col-12 col-6 col-sm-6 col-md-6 col-lg-4 mb-4"
-                  onClick={() => setActiveWhyChoose('post_deploy_support')}
+                  onClick={() => setActiveWhyChoose("post_deploy_support")}
                 >
                   <a
                     href="##"
                     className={`service__provide_tab ${
-                      activeWhyChoose === 'post_deploy_support' &&
-                      'service__provide_tab_active'
+                      activeWhyChoose === "post_deploy_support" &&
+                      "service__provide_tab_active"
                     }`}
                   >
                     <img
-                      src={require('../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png')}
+                      src={require("../../../assets/images/SERVICES/Software development/asp-net-dev/why-choose/6-9.png")}
                       alt="competitive-pricing"
                       className="img-fluid"
                     />
@@ -453,8 +603,8 @@ const AspNet = () => {
                 </div>
               </div>
             </div>
-            {activeWhyChoose === 'experience_expertise' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "experience_expertise" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Expertise and Experience.</h3>
@@ -479,8 +629,8 @@ const AspNet = () => {
                 </div>
               </div>
             )}
-            {activeWhyChoose === 'robust_portfolio' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            {activeWhyChoose === "robust_portfolio" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Robust Portfolio</h3>
@@ -504,9 +654,9 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{' '}
-            {activeWhyChoose === 'agile' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{" "}
+            {activeWhyChoose === "agile" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Agile Development</h3>
@@ -528,9 +678,9 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{' '}
-            {activeWhyChoose === 'timely_delivery' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{" "}
+            {activeWhyChoose === "timely_delivery" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Timely Delivery</h3>
@@ -552,9 +702,9 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{' '}
-            {activeWhyChoose === 'affordable_pricing' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{" "}
+            {activeWhyChoose === "affordable_pricing" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">Affordable Pricing</h3>
@@ -577,9 +727,9 @@ const AspNet = () => {
                   </div>
                 </div>
               </div>
-            )}{' '}
-            {activeWhyChoose === 'post_deploy_support' && (
-              <div className="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            )}{" "}
+            {activeWhyChoose === "post_deploy_support" && (
+              <div className="service_desk_view col-sm-12 col-md-12 col-lg-12 col-xl-6">
                 <div className="service_rht">
                   <div className="Title">
                     <h3 className="Title_heading">
@@ -604,6 +754,48 @@ const AspNet = () => {
                 </div>
               </div>
             )}
+            {/* Mobile View */}
+            {IndustriesData.map((item, i) => (
+              <div
+                className="service_mobile_view col-sm-12 col-md-12 col-lg-12 col-xl-12"
+                style={{ marginTop: "20px", cursor: "pointer" }}
+                onClick={() => industriesOpen(i)}
+              >
+                <div className="service_provide_box">
+                  <div className="service_provide_content">
+                    <div className="service_provide_title">
+                      <img
+                        src={item?.images}
+                        alt="smartphone-tablet"
+                        className="img-fluid"
+                      />
+                      <p>{item.que}</p>
+                    </div>
+                    {openIndustries === i ? (
+                      <div>
+                        <IoIosArrowUp />
+                      </div>
+                    ) : (
+                      <div>
+                        <IoIosArrowDown />
+                      </div>
+                    )}
+                  </div>
+                  {openIndustries === i ? (
+                    <div className="answer_box">
+                      <hr className="line_tag" />
+                      <div className="answer">
+                        <p>{item.ans}</p>
+                        <p>{item.ans2}</p>
+                      </div>
+                    </div>
+                  ) : (
+                    ""
+                  )}
+                </div>
+              </div>
+            ))}
+            {/* Mobile View */}
           </div>
         </div>
       </section>
@@ -614,7 +806,7 @@ const AspNet = () => {
       <ContactUs question="Are you planning to launch a Successful Asp.net Software development in the market?" />
       {/* Contact Section End */}
     </>
-  )
-}
+  );
+};
 
-export default AspNet
+export default AspNet;

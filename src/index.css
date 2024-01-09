@@ -4836,3 +4836,18 @@ Title .Title_Color {
   }
 }
 /* =========== service provide Mobile view ==========  */
+/* .page-item .active {
+  background-color: #d6aa0b;
+}
+.page-item {
+  background-color: #d6aa0b;
+} */
+.page-item a {
+  cursor: pointer !important;
+  color: #000;
+}
+.page-item.active .page-link {
+  background-color: #d6aa0b !important;
+  border-color:  #d6aa0b !important;
+  color: #000;  
+}
