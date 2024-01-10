@@ -49,11 +49,10 @@
   border-radius: 25px;
   font-weight: 600;
 }
-.find_more_btn:hover {
-  /* border: 1px solid #f6c000; */
+/* .find_more_btn:hover {
   background-color: #2f0e39;
   color: #fff;
-}
+} */
 .achievements__section {
   display: flex;
   justify-content: space-between;

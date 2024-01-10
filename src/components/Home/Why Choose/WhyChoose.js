@@ -1,5 +1,5 @@
 import React from "react";
-import './whyChoose.css'
+import "./whyChoose.css";
 
 const WhyChoose = () => {
   return (
@@ -18,7 +18,7 @@ const WhyChoose = () => {
                 alt="choose-img-1"
                 className="img-fluis"
               />
-              <p>Requirements Gathering &amp; Analysis</p>
+              <p>Your Success is Our Priority</p>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3">
@@ -28,7 +28,7 @@ const WhyChoose = () => {
                 alt="choose-img-2"
                 className="img-fluis"
               />
-              <p>Initial Meetings, Questions &amp; Answers Session</p>
+              <p>Custom Solutions, Real Results</p>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3">
@@ -38,7 +38,7 @@ const WhyChoose = () => {
                 alt="choose-img-3"
                 className="img-fluis"
               />
-              <p>Project Estimation &amp; Proposal Making</p>
+              <p>Innovation Beyond Boundaries</p>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3">
@@ -48,7 +48,7 @@ const WhyChoose = () => {
                 alt="choose-img-4"
                 className="img-fluis"
               />
-              <p>Resource &amp; Team Allocation, Project Setup</p>
+              <p>Transparent Communication</p>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3">
@@ -58,7 +58,7 @@ const WhyChoose = () => {
                 alt="choose-img-5"
                 className="img-fluis"
               />
-              <p> Daily/weekly Updates &amp; Improvements</p>
+              <p>Web Presence Redefined</p>
             </div>
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4 mb-3">
@@ -68,7 +68,7 @@ const WhyChoose = () => {
                 alt="choose-img-6"
                 className="img-fluis"
               />
-              <p>Project Handover, Deployment &amp; Support</p>
+              <p>Industry Excellence</p>
             </div>
           </div>
         </div>

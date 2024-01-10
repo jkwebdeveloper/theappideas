@@ -97,3 +97,123 @@ section .testimonial {
   background-color: #fff;
   color: #000;
 }
+/* ======================================= Testimonial Modal css start ===================================== */
+
+.modal_section {
+  position: fixed;
+  top: -20px;
+  inset: 0;
+  z-index: 999;
+  backdrop-filter: blur(10px);
+}
+
+/* .iframe_video {
+  width: 100%;
+  border-radius: 12px;
+  border: 8px solid #f6c000;
+} */
+.modal_video {
+  height: 50%;
+  width: 50%;
+  top: 29%;
+  left: 25%;
+  padding: 5px;
+  border-radius: 5px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  box-shadow: 0 20px 50px rgb(23, 32, 90);
+  border: 2px solid #eabe0a;
+  background: #eaeaea;
+  /* top: -60px; */
+  /* padding-bottom: 50px; */
+  /* z-index: 999; */
+}
+
+.modal_video:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.1);
+  transition: 0.5s;
+  pointer-events: none;
+}
+.modal_video span {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  box-sizing: border-box;
+}
+
+.modal_video span:nth-child(1) {
+  transform: rotate(0deg);
+}
+
+.modal_video span:nth-child(2) {
+  transform: rotate(90deg);
+}
+
+.modal_video span:nth-child(3) {
+  transform: rotate(180deg);
+}
+
+.modal_video span:nth-child(4) {
+  transform: rotate(270deg);
+}
+
+.modal_video span:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: #d6aa0b;
+  animation: animate 4s linear infinite;
+}
+
+@keyframes animate {
+  0% {
+    transform: scaleX(0);
+    transform-origin: left;
+  }
+
+  50% {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+
+  50.1% {
+    transform: scaleX(1);
+    transform-origin: right;
+  }
+
+  100% {
+    transform: scaleX(0);
+    transform-origin: right;
+  }
+}
+
+.modal_video iframe {
+  position: relative;
+}
+
+.modal_video video {
+  width: 100%;
+  height: 100%;
+}
+@media (max-width: 1023px) {
+  .modal_video {
+    width: 90%;
+    top: 15%;
+    left: 5%;
+    height: 70%;
+  }
+}
+/* ======================================= Testimonial Modal css End =================================== */

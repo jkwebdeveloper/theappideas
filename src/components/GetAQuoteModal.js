@@ -72,7 +72,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       contentLabel="Contact us Modal"
       appElement={document.getElementById("root")}
       shouldCloseOnOverlayClick={true}
-      style={{ content: { zIndex: "99999" } }}
+      style={{ content: { zIndex: "999" } }}
     >
       <section className="contact_form_section">
         <div className="container">

@@ -47,7 +47,7 @@ const Work = () => {
             modules={[Pagination, Autoplay, Navigation]}
             spaceBetween={20}
             slidesPerView={3}
-            loop={true}
+            loop={false}
             breakpoints={{
               320: {
                 slidesPerView: 1,
@@ -109,7 +109,7 @@ const Work = () => {
                         )}
                         alt={work.image.alt}
                         style={{
-                          width: "100%",
+                          width: "95%",
                           boxShadow: "0px 0px 10px 0px rgb(154 154 154/75%)",
                           borderRadius: "10px",
                           marginLeft: "10px",

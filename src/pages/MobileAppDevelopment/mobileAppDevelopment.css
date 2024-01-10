@@ -530,11 +530,11 @@ Title .Title_Color {
   text-transform: uppercase;
 }
 
-.contact_btn:hover {
+/* .contact_btn:hover {
   border: 1px solid #351040;
   color: #000;
   background: #fff;
-}
+} */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
   -webkit-appearance: none;

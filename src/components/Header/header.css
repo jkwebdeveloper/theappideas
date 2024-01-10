@@ -173,7 +173,7 @@
 }
 
 .row .mega-links li:hover {
-  color: #f6c000;
+  color: #800080;
   /* transition: all 0.5s ease; */
   font-weight: 600;
 }
@@ -188,7 +188,7 @@
 .row .mega-links li:hover .right__arrow {
   opacity: 1;
   padding-right: 5px;
-  color: #f6c000;
+  color: #800080;
   transition: all 350ms ease-in-out 0s;
 }
 
@@ -262,7 +262,7 @@ li .get_a_btn {
   transition: 0.3s ease-out;
 }
 .btn-1 span {
-  color: rgb(255, 255, 255);
+  color: #000;
   transition: 0.2s 0.1s;
 }
 .btn-1 span:hover {

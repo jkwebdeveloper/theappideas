@@ -16,7 +16,7 @@ const Banner = ({ setOpenModal }) => {
       <div style={{ position: "relative" }}>
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg-4 col-md-12">
               <div className="slider-img">
                 <img
                   src={require("../../../assets/images/Banner/Group 29.png")}
@@ -30,17 +30,34 @@ const Banner = ({ setOpenModal }) => {
                 />
               </div>
             </div>
-            <div className="col-lg-6 col-md-12">
+            <div className="col-lg-8 col-md-12">
               <p className="slider-heading-dec">
                 Mobile App & Website Development{" "}
               </p>
               <p className="slider-dec">
-                Keeping pace with the latest innovations in web development
-                technologies, we build highly sophisticated, feature-rich and
-                performance-driven websites of various niches. Our web
-                development experience and expertise spans across all latest web
-                development technologies including Progressive Web Apps (PWA),
-                Accelerated Mobile Pages (AMP) and other.
+                Are you deciding to make an app or an e-commerce store or even a
+                website? We are right here for your service. Our custom mobile
+                application development company specializes in crafting
+                cutting-edge mobile applications designed for sustained user
+                engagement and optimal business conversion. Our proficiency
+                extends from the development of intricate enterprise apps to a
+                diverse range of on demand app ideas, ensuring that every niche
+                and category is met with expertise.
+              </p>
+              <p className="slider-dec">
+                With decades of experience in e-commerce development, we have
+                been pivotal in shaping numerous online brands. Our commitment
+                lies in constructing well-equipped, customer-centric e-commerce
+                stores with features that enhance user experience and contribute
+                to consistent business conversion.
+                Additionally, We stay abreast of the latest web development
+                technologies, employing our expertise to build sophisticated,
+                feature-rich solutions across various business-niches. Whether
+                it's app development, website development, offshore software
+                development, on demand app development, clone application
+                development or other cutting-edge technologies. We are
+                well-versed in delivering performance-driven solutions that
+                align with your vision and goals.
               </p>
               <br />
               <div className="silder-btn">

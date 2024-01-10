@@ -95,11 +95,11 @@ section {
   text-transform: uppercase;
 }
 
-.contact_btn:hover {
+/* .contact_btn:hover {
   border: 1px solid #351040;
   color: #000;
   background: #fff;
-}
+} */
 @media (max-width: 767px) {
   .contact-lft p {
     font-size: 16px;
@@ -1459,7 +1459,7 @@ section {
   padding: 10px 20px;
   background: #d6aa0b;
   border-radius: 22px;
-  color: #fff;
+  color: #000;
   font-weight: 700;
   font-size: 15px;
   transition: all 0.5s;
@@ -1470,9 +1470,7 @@ section {
 }
 
 .sitemap_btn:hover {
-  color: #561569;
-  border: 1px solid #561569;
-  background-color: transparent;
+  color: #000;
 }
 
 .footer__awards ul li {

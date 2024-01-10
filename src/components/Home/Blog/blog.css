@@ -85,10 +85,10 @@
   border: none;
   cursor: pointer;
 }
-.read-btn:hover {
+/* .read-btn:hover {
   background-color: #2f0e39 !important;
   color: #fff;
-}
+} */
 .swiper-navBtn {
   color: #000;
   height: 40px;

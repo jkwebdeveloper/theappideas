@@ -1,11 +1,16 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import "./testimonial.css";
 import { Link } from "react-router-dom";
 import { BsPlayCircleFill } from "react-icons/bs";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import TestimonialModal from "./TestimonialModal";
 
 const TestiMonial = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOnClose = () => setOpenModal(false);
+
   useEffect(() => {
     AOS.init();
   }, []);
@@ -21,94 +26,81 @@ const TestiMonial = () => {
               data-aos="fade-right"
               className="box my-5"
               style={{ cursor: "pointer" }}
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/IBYadSoVF3c");
+              }}
             >
-              <Link
-                to="https://www.youtube.com/watch?v=IBYadSoVF3c&feature=youtu.be"
-                target="_blank"
-              >
-                <BsPlayCircleFill
-                  size={60}
-                  color="white"
-                  style={{
-                    position: "absolute",
-                    top: "15%",
-                    left: "50%",
-                    transform: "translate(-50%,-50%)",
-                    zIndex: "997",
-                    backgroundColor: "red",
-                    borderRadius: "50%",
-                    width: "fit-content",
-                  }}
+              <BsPlayCircleFill
+                size={60}
+                color="white"
+                style={{
+                  position: "absolute",
+                  top: "15%",
+                  left: "50%",
+                  transform: "translate(-50%,-50%)",
+                  zIndex: "997",
+                  backgroundColor: "red",
+                  borderRadius: "50%",
+                  width: "fit-content",
+                }}
+              />
+              <div className="imgbox">
+                <img
+                  src={require("../../assets/images/Testimonial/maxresdefault.webp")}
+                  alt=""
+                  style={{ width: "330px" }}
                 />
-                <div className="imgbox">
-                  <img
-                    src={require("../../assets/images/Testimonial/maxresdefault.webp")}
-                    alt=""
-                    style={{ width: "330px" }}
-                  />
-                </div>
-              </Link>
-
+              </div>
               <h4>
                 <span>Lloyd Medley</span>
               </h4>
               <br />
-              <Link
-                to="https://www.youtube.com/watch?v=IBYadSoVF3c&feature=youtu.be"
-                target="_blank"
-              >
-                <p className="">
-                  We have designed and developed a website for his client, happy
-                  to work with him in future.
-                </p>
-              </Link>
+              <p className="">
+                We have designed and developed a website for his client, happy
+                to work with him in future.
+              </p>
             </div>
           </div>
-          <div className="col-lg-6 col-md-12 col-sm-12">
+          <div
+            className="col-lg-6 col-md-12 col-sm-12"
+            onClick={() => {
+              setOpenModal("https://www.youtube.com/embed/8IXVtVkGNl8");
+            }}
+          >
             <div
               data-aos="fade-left"
               className="box my-5"
               style={{ cursor: "pointer" }}
             >
-              <Link
-                to="https://www.youtube.com/watch?v=8IXVtVkGNl8%3D&feature=youtu.be"
-                target="_blank"
-              >
-                <BsPlayCircleFill
-                  size={60}
-                  color="white"
-                  style={{
-                    position: "absolute",
-                    top: "15%",
-                    left: "50%",
-                    transform: "translate(-50%,-50%)",
-                    zIndex: "997",
-                    backgroundColor: "red",
-                    borderRadius: "50%",
-                    width: "fit-content",
-                  }}
+              <BsPlayCircleFill
+                size={60}
+                color="white"
+                style={{
+                  position: "absolute",
+                  top: "15%",
+                  left: "50%",
+                  transform: "translate(-50%,-50%)",
+                  zIndex: "997",
+                  backgroundColor: "red",
+                  borderRadius: "50%",
+                  width: "fit-content",
+                }}
+              />
+              <div className="imgbox">
+                <img
+                  src={require("../../assets/images/Testimonial/testimonial-2.webp")}
+                  alt=""
+                  style={{ width: "330px" }}
                 />
-                <div className="imgbox">
-                  <img
-                    src={require("../../assets/images/Testimonial/testimonial-2.webp")}
-                    alt=""
-                    style={{ width: "330px" }}
-                  />
-                </div>
-              </Link>
+              </div>
               <h4>
                 <span>Roberto Valdovinos</span>
               </h4>
               <br />
-              <Link
-                to="https://www.youtube.com/watch?v=8IXVtVkGNl8%3D&feature=youtu.be"
-                target="_blank"
-              >
-                <p className="">
-                  We had done a Food Ordering and Food Delivery app for this
-                  client
-                </p>
-              </Link>
+              <p className="">
+                We had done a Food Ordering and Food Delivery app for this
+                client
+              </p>
             </div>
           </div>
         </div>
@@ -142,6 +134,7 @@ const TestiMonial = () => {
           </div>
         </div>
       </div>
+      <TestimonialModal onClose={handleOnClose} visible={openModal} />
     </section>
   );
 };

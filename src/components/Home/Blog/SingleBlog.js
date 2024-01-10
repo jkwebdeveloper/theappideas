@@ -8,6 +8,8 @@ import { AiOutlineMail } from "react-icons/ai";
 import Blog from "./Blog";
 import axios from "axios";
 import { useLocation } from "react-router-dom";
+import Loading from "../../../assets/images/loading.json";
+import Lottie from "lottie-react";
 
 const SingleBlog = () => {
   const [singleblogs, setSingleBlogs] = useState();
@@ -41,7 +43,14 @@ const SingleBlog = () => {
           className="loading"
           style={{ textAlign: "center", paddingTop: "100px" }}
         >
-          Loading...
+          <Lottie
+            animationData={Loading}
+            loop={true}
+            style={{
+              width: "200px",
+              margin: "0 auto",
+            }}
+          />
         </div>
       ) : (
         <>
