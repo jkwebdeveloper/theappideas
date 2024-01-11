@@ -164,6 +164,56 @@
 .Arrow_btn {
   margin-bottom: 20px;
 }
+
+/* Mobile View Design css Start */
+.demand_lft_bx_mobile {
+  border-radius: 10.804px;
+  background: linear-gradient(
+    84deg,
+    #edb3ff -1.63%,
+    rgb(243 206 255) 57.64%,
+    rgb(255 255 255) 100%
+  );
+  box-shadow: 0 0 10px #00000024;
+  padding: 25px;
+
+  position: relative;
+  margin-bottom: 16px;
+  z-index: 1;
+  cursor: pointer;
+}
+.content_box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.title_img {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+}
+.title_img h6 {
+  font-size: 16px;
+}
+.demand_lft_answer h4 {
+  font-size: 16px;
+  font-weight: 600;
+}
+.demand_lft_answer p {
+  font-size: 15px;
+  text-align: justify;
+}
+.demand_bottom_col_mobile h6 {
+  color: #000;
+  text-align: center;
+  font-family: Open Sans;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 22px;
+  padding-top: 12px;
+}
+/* Mobile View Design css end */
+
 @media (max-width: 1280px) {
   .demand_lft_bx {
     min-width: 300px;

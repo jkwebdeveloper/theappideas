@@ -41,10 +41,10 @@ const Home = ({ setOpenModal }) => {
       <Helmet title="Best Web & Mobile App Development Company" />
       <Banner loading={loading} banners={banners} setOpenModal={setOpenModal} />
       <OndemandProduct />
-      <WhyChoose />
       <About />
       <Services />
       <Work />
+      <WhyChoose />
       <TestiMonial />
       <Blog />
       <ContactUs question="Would you like to execute any project?" />
