@@ -1,10 +1,14 @@
-import React from 'react'
-import { FaPlay } from 'react-icons/fa'
-import { FaQuoteLeft } from 'react-icons/fa'
-import ContactUs from '../../components/ContactUs'
-import { Helmet } from 'react-helmet'
+import React, { useState } from "react";
+import { FaPlay } from "react-icons/fa";
+import { FaQuoteLeft } from "react-icons/fa";
+import ContactUs from "../../components/ContactUs";
+import { Helmet } from "react-helmet";
+import TestimonialModal from "../../components/Testimonial/TestimonialModal";
 
 const Testimonial = () => {
+  const [openModal, setOpenModal] = useState(false);
+
+  const handleOnClose = () => setOpenModal(false);
   return (
     <>
       <Helmet title="Testimonial | THE APP IDEAS" />
@@ -12,19 +16,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_one">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-1.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-1.webp")}
               alt="testimonial-1"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=IBYadSoVF3c&feature=youtu.be"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/IBYadSoVF3c");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Lloyd Medley</h5>
@@ -37,19 +42,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_two">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-2.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-2.webp")}
               alt="testimonial-2"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=8IXVtVkGNl8"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/8IXVtVkGNl8");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Roberto Valdovinos</h5>
@@ -61,19 +67,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_three">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-3.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-3.webp")}
               alt="testimonial-3"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=ClF0ps79WqM"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/ClF0ps79WqM");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Nasreen</h5>
@@ -83,19 +90,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_four">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-4.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-4.webp")}
               alt="testimonial-4"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=l5L9s34EmnU&feature=youtu.be"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/l5L9s34EmnU");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Ratings and Review</h5>
@@ -105,19 +113,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_five">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-5.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-5.webp")}
               alt="testimonial-5"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=Reho_MyuJEo"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/Reho_MyuJEo");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Matthias Hippe </h5>
@@ -127,19 +136,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_six">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-6.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-6.webp")}
               alt="testimonial-6"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=XiuW-g0evVo&feature=youtu.be"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/XiuW-g0evVo");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Dale</h5>
@@ -152,19 +162,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_seven">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-7.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-7.webp")}
               alt="testimonial-7"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=TNDclCm8kRs&feature=youtu.be"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/TNDclCm8kRs");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Rupa Saumil</h5>
@@ -174,19 +185,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_eight">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-8.webp')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-8.webp")}
               alt="testimonial-8"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/shorts/SX5CXY_Y_yU"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/SX5CXY_Y_yU");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Siegfried Moyo</h5>
@@ -199,19 +211,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_nine">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-9.jpg')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-9.jpg")}
               alt="testimonial-9"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=L9GvJkmMQYI&feature=youtu.be"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/L9GvJkmMQYI");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Asad</h5>
@@ -224,19 +237,20 @@ const Testimonial = () => {
         <div className="testimonial_box testimonial_box_two">
           <div className="video_testimonial">
             <img
-              src={require('../../assets/images/COMPANY/testimonial/testimonial-10.jpg')}
+              src={require("../../assets/images/COMPANY/testimonial/testimonial-10.jpg")}
               alt="testimonial-10"
               className="img-fluid"
             />
-            <a
-              href="https://www.youtube.com/watch?v=qn6TrD7cz7k&feature=youtu.be"
+            <div
               className="video_btn"
-              target="_blank"
+              onClick={() => {
+                setOpenModal("https://www.youtube.com/embed/qn6TrD7cz7k");
+              }}
             >
               <i>
                 <FaPlay />
               </i>
-            </a>
+            </div>
           </div>
           <div className="testimonial_content">
             <h5>Manjil Chaudhari</h5>
@@ -250,7 +264,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/testimonial-written-one.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/testimonial-written-one.jpg")}
                   alt="testimonial-written-one"
                   className="img-fluid"
                 />
@@ -298,7 +312,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/testimonial-written-two.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/testimonial-written-two.jpg")}
                   alt="testimonial-written-two"
                   className="img-fluid"
                 />
@@ -309,7 +323,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/testimonial-written-three.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/testimonial-written-three.jpg")}
                   alt="testimonial-written-three"
                   className="img-fluid"
                 />
@@ -325,7 +339,7 @@ const Testimonial = () => {
                 <p>
                   App Ideas helped me to design a logo for an app I’m writing.
                   They were very quick and took time to understand the purpose
-                  behind my app. The final product is of good quality.{' '}
+                  behind my app. The final product is of good quality.{" "}
                 </p>
                 <div className="testimonial_written_title">
                   <h2>Richard Kernick</h2>
@@ -369,7 +383,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/testimonial-written-four.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/testimonial-written-four.jpg")}
                   alt="testimonial-written-four"
                   className="img-fluid"
                 />
@@ -380,7 +394,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Arturo-Mendez.png')}
+                  src={require("../../assets/images/COMPANY/testimonial/Arturo-Mendez.png")}
                   alt="Arturo-Mendez"
                   className="img-fluid"
                 />
@@ -447,7 +461,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Rena-McDaniel.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Rena-McDaniel.jpg")}
                   alt="Rena-McDaniel"
                   className="img-fluid"
                 />
@@ -458,7 +472,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Anne-Sophie-Gau.png')}
+                  src={require("../../assets/images/COMPANY/testimonial/Anne-Sophie-Gau.png")}
                   alt="Anne-Sophie-Gau"
                   className="img-fluid"
                 />
@@ -507,7 +521,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Emilia-Ku-Music-u-Live.png')}
+                  src={require("../../assets/images/COMPANY/testimonial/Emilia-Ku-Music-u-Live.png")}
                   alt="Emilia-Ku-Music-u-Live"
                   className="img-fluid"
                 />
@@ -518,7 +532,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Corinne-Punter.jpeg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Corinne-Punter.jpeg")}
                   alt="Corinne-Punter"
                   className="img-fluid"
                 />
@@ -534,7 +548,7 @@ const Testimonial = () => {
                 <p>
                   All outcomes of the collaboration with Theappideas are
                   positive. Their responsiveness, other design-related projects
-                  approach, and{' '}
+                  approach, and{" "}
                 </p>
                 <details className="testimonial_details">
                   <summary>
@@ -595,7 +609,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Guy-Basan.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Guy-Basan.jpg")}
                   alt="Guy-Basan"
                   className="img-fluid"
                 />
@@ -606,7 +620,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/jake-clopton.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/jake-clopton.jpg")}
                   alt="jake-clopton"
                   className="img-fluid"
                 />
@@ -655,7 +669,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Kosta-Kasadis.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Kosta-Kasadis.jpg")}
                   alt="Kosta-Kasadis"
                   className="img-fluid"
                 />
@@ -666,7 +680,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Marcin-Kulas.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Marcin-Kulas.jpg")}
                   alt="Marcin-Kulas"
                   className="img-fluid"
                 />
@@ -740,7 +754,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Pablo.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Pablo.jpg")}
                   alt="Pablo"
                   className="img-fluid"
                 />
@@ -751,7 +765,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Ramesh-V.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Ramesh-V.jpg")}
                   alt="Ramesh-V"
                   className="img-fluid"
                 />
@@ -767,7 +781,7 @@ const Testimonial = () => {
                 <p>
                   I’m full praise of “The App Ideas” Team after I used their
                   services few times in the recent months. Their team has
-                  specific experts in each area{' '}
+                  specific experts in each area{" "}
                 </p>
                 <details className="testimonial_details">
                   <summary>
@@ -829,7 +843,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Dale-Smith.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Dale-Smith.jpg")}
                   alt="Dale-Smith"
                   className="img-fluid"
                 />
@@ -840,7 +854,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Oluwatoyin-Ehinmosan.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Oluwatoyin-Ehinmosan.jpg")}
                   alt="Oluwatoyin-Ehinmosan"
                   className="img-fluid"
                 />
@@ -863,7 +877,7 @@ const Testimonial = () => {
                     <span id="close">Read Less</span>
                   </summary>
                   <p>
-                    {' '}
+                    {" "}
                     configuration, thanks for the dedicated staff that worked on
                     my project. Pricing was very fare too. Thank you!”.
                   </p>
@@ -897,7 +911,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Juan-alarcon.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Juan-alarcon.jpg")}
                   alt="Juan-alarcon"
                   className="img-fluid"
                 />
@@ -908,7 +922,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Hussain-Arif.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Hussain-Arif.jpg")}
                   alt="Hussain-Arif"
                   className="img-fluid"
                 />
@@ -932,7 +946,7 @@ const Testimonial = () => {
                     <span id="close">Read Less</span>
                   </summary>
                   <p>
-                    {' '}
+                    {" "}
                     fetched 70%–80% increase in traffic. Incoming leads also
                     doubled month-over-month. The App Ideas designed a catchy
                     layout that helped customers understand the company’s
@@ -972,7 +986,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Shawn-Smith.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Shawn-Smith.jpg")}
                   alt="Shawn-Smith"
                   className="img-fluid"
                 />
@@ -983,7 +997,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Obi-Umegbolu.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Obi-Umegbolu.jpg")}
                   alt="Obi-Umegbolu"
                   className="img-fluid"
                 />
@@ -998,7 +1012,7 @@ const Testimonial = () => {
                 </div>
                 <p>
                   “They gave us more than we expected. The quality of their work
-                  is second to none.”{' '}
+                  is second to none.”{" "}
                 </p>
 
                 <div className="testimonial_written_title">
@@ -1030,7 +1044,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/neky-gandhi.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/neky-gandhi.jpg")}
                   alt="neky-gandhi"
                   className="img-fluid"
                 />
@@ -1041,7 +1055,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Shiraaz-Joosub.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Shiraaz-Joosub.jpg")}
                   alt="Shiraaz-Joosub"
                   className="img-fluid"
                 />
@@ -1087,7 +1101,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Andrew-Mortimer.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Andrew-Mortimer.jpg")}
                   alt="Andrew-Mortimer"
                   className="img-fluid"
                 />
@@ -1098,7 +1112,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Lori-Mercer.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Lori-Mercer.jpg")}
                   alt="Lori-Mercer"
                   className="img-fluid"
                 />
@@ -1143,7 +1157,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Prashant-Soni.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Prashant-Soni.jpg")}
                   alt="Prashant-Soni"
                   className="img-fluid"
                 />
@@ -1154,7 +1168,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Adrian-Preuss.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Adrian-Preuss.jpg")}
                   alt="Adrian-Preuss"
                   className="img-fluid"
                 />
@@ -1169,7 +1183,7 @@ const Testimonial = () => {
                 </div>
                 <p>
                   “They were very professional and very good at handling the
-                  files and followed the design direction.”{' '}
+                  files and followed the design direction.”{" "}
                 </p>
                 <div className="testimonial_written_title">
                   <h2>Adrian Preuss</h2>
@@ -1202,7 +1216,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Billy-Wepener.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Billy-Wepener.jpg")}
                   alt="Billy-Wepener"
                   className="img-fluid"
                 />
@@ -1213,7 +1227,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Raul-Castells-Cardet.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Raul-Castells-Cardet.jpg")}
                   alt="Raul-Castells-Cardet"
                   className="img-fluid"
                 />
@@ -1280,7 +1294,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Ganesh-Yanadi.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Ganesh-Yanadi.jpg")}
                   alt="Ganesh-Yanadi"
                   className="img-fluid"
                 />
@@ -1291,7 +1305,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Emilia-Ku-Music-u-Live.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Emilia-Ku-Music-u-Live.jpg")}
                   alt="Emilia-Ku-Music-u-Live"
                   className="img-fluid"
                 />
@@ -1361,7 +1375,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Pete-Evans.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Pete-Evans.jpg")}
                   alt="Pete-Evans"
                   className="img-fluid"
                 />
@@ -1372,7 +1386,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Raul-Porcar.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Raul-Porcar.jpg")}
                   alt="Raul-Porcar"
                   className="img-fluid"
                 />
@@ -1388,7 +1402,7 @@ const Testimonial = () => {
                 <p>
                   “They made a strong effort to fix any problems as soon as
                   possible.” <br />
-                  Through The App Ideas’ efforts,{' '}
+                  Through The App Ideas’ efforts,{" "}
                 </p>
                 <details className="testimonial_details">
                   <summary>
@@ -1442,7 +1456,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Nadege-Bourdin-Fayard.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Nadege-Bourdin-Fayard.jpg")}
                   alt="Nadege-Bourdin-Fayard"
                   className="img-fluid"
                 />
@@ -1453,7 +1467,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Dawood-Kokawala.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Dawood-Kokawala.jpg")}
                   alt="Dawood-Kokawala"
                   className="img-fluid"
                 />
@@ -1522,7 +1536,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Anthony-Omenya.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Anthony-Omenya.jpg")}
                   alt="Anthony-Omenya"
                   className="img-fluid"
                 />
@@ -1533,7 +1547,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Dan-Taylor-Owner-of-Tesla-Teachings.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Dan-Taylor-Owner-of-Tesla-Teachings.jpg")}
                   alt="Dan-Taylor-Owner-of-Tesla-Teachings"
                   className="img-fluid"
                 />
@@ -1602,7 +1616,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/chiara-molena.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/chiara-molena.jpg")}
                   alt="chiara-molena"
                   className="img-fluid"
                 />
@@ -1613,7 +1627,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Alex-Chudnovsky.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Alex-Chudnovsky.jpg")}
                   alt="Alex-Chudnovsky"
                   className="img-fluid"
                 />
@@ -1677,7 +1691,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Kevin-Devine.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Kevin-Devine.jpg")}
                   alt="Kevin-Devine"
                   className="img-fluid"
                 />
@@ -1688,7 +1702,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/joe.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/joe.jpg")}
                   alt="joe"
                   className="img-fluid"
                 />
@@ -1712,7 +1726,7 @@ const Testimonial = () => {
                     <span id="close">Read Less</span>
                   </summary>
                   <p>
-                    {' '}
+                    {" "}
                     commendable. They understood our objective and helped us to
                     get what we want”.
                   </p>
@@ -1756,7 +1770,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Nooruddin.png')}
+                  src={require("../../assets/images/COMPANY/testimonial/Nooruddin.png")}
                   alt="Nooruddin"
                   className="img-fluid"
                 />
@@ -1804,7 +1818,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/leon.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/leon.jpg")}
                   alt="leon"
                   className="img-fluid"
                 />
@@ -1815,7 +1829,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Jacob-terry-image.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/Jacob-terry-image.jpg")}
                   alt="Corinne-Punter"
                   className="img-fluid"
                 />
@@ -1830,7 +1844,7 @@ const Testimonial = () => {
                 </div>
                 <p>
                   “Everything was good with Chirag. Make a list of things and he
-                  will deliver and find a solution.”.{' '}
+                  will deliver and find a solution.”.{" "}
                 </p>
 
                 <div className="testimonial_written_title">
@@ -1849,21 +1863,22 @@ const Testimonial = () => {
                   </i>
                 </div>
                 <p className="testimonial_paraghraph">
-                  “The communication and workflow at The App Ideas were
-                  excellent, and everything worked out as planned.”
+                  The best app designer that I have ever met. They provide me
+                  excellent design which I wished. Thank you very much for your
+                  work.
                 </p>
 
                 <div className="testimonial_written_title">
-                  <h2>Albert Chong</h2>
-                  <p className="title__para">Founder, Triphastic</p>
+                  <h2>Mariya Valui</h2>
+                  <p className="title__para">UK</p>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/userplaceholder.jpg')}
-                  alt="Jake-Clopton"
+                  src={require("../../assets/images/COMPANY/testimonial/Mariya-Valui.jpg")}
+                  alt="Mariya-Valui"
                   className="img-fluid"
                 />
               </div>
@@ -1873,7 +1888,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/userplaceholder.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/userplaceholder.jpg")}
                   alt="jake-clopton"
                   className="img-fluid"
                 />
@@ -1897,7 +1912,7 @@ const Testimonial = () => {
                     <span id="close">Read Less</span>
                   </summary>
                   <p>
-                    {' '}
+                    {" "}
                     on the App Store. The App Ideas is communicative and easy to
                     work with. Their team is dependable and insightful.
                   </p>
@@ -1927,7 +1942,7 @@ const Testimonial = () => {
                     <span id="close">Read Less</span>
                   </summary>
                   <p>
-                    {' '}
+                    {" "}
                     Insightful advice from Theappideas added value. They are an
                     expert team with a professional communication style.
                   </p>
@@ -1941,7 +1956,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/userplaceholder.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/userplaceholder.jpg")}
                   alt="Kosta-Kasadis"
                   className="img-fluid"
                 />
@@ -1952,7 +1967,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/userplaceholder.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/userplaceholder.jpg")}
                   alt="Corinne-Punter"
                   className="img-fluid"
                 />
@@ -1967,7 +1982,7 @@ const Testimonial = () => {
                 </div>
                 <p>
                   We worked well together, we are satisfied with the delivery
-                  term as it wasnt any urgency.{' '}
+                  term as it wasnt any urgency.{" "}
                 </p>
 
                 <div className="testimonial_written_title">
@@ -1999,7 +2014,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/userplaceholder.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/userplaceholder.jpg")}
                   alt="Jake-Clopton"
                   className="img-fluid"
                 />
@@ -2010,7 +2025,7 @@ const Testimonial = () => {
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/userplaceholder.jpg')}
+                  src={require("../../assets/images/COMPANY/testimonial/userplaceholder.jpg")}
                   alt="jake-clopton"
                   className="img-fluid"
                 />
@@ -2043,22 +2058,21 @@ const Testimonial = () => {
                   </i>
                 </div>
                 <p className="testimonial_paraghraph">
-                  The best app designer that I have ever met. They provide me
-                  excellent design which I wished. Thank you very much for your
-                  work.
+                  “The communication and workflow at The App Ideas were
+                  excellent, and everything worked out as planned.”
                 </p>
 
                 <div className="testimonial_written_title">
-                  <h2>Mariya Valui</h2>
-                  <p className="title__para">UK</p>
+                  <h2>Albert Chong</h2>
+                  <p className="title__para">Founder, Triphastic</p>
                 </div>
               </div>
             </div>
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft purple_bg right_circle">
                 <img
-                  src={require('../../assets/images/COMPANY/testimonial/Mariya-Valui.jpg')}
-                  alt="Mariya-Valui"
+                  src={require("../../assets/images/COMPANY/testimonial/userplaceholder.jpg")}
+                  alt="Jake-Clopton"
                   className="img-fluid"
                 />
               </div>
@@ -2069,8 +2083,9 @@ const Testimonial = () => {
       {/* Contact Section Start */}
       <ContactUs question="Would you like to execute any project?" />
       {/* Contact Section End */}
+      <TestimonialModal onClose={handleOnClose} visible={openModal} />
     </>
-  )
-}
+  );
+};
 
-export default Testimonial
+export default Testimonial;

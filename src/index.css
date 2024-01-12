@@ -2305,6 +2305,7 @@ section {
   transform: translateX(-50%);
   text-decoration: none;
   color: #fff;
+  cursor: pointer;
 }
 
 .video_btn:hover {
