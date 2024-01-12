@@ -19,11 +19,13 @@ import * as yup from "yup";
 import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
 
   const handlePost = (values) => {
+    console.log(values);
     setLoading(true);
     axios("https://the-app-ideas.onrender.com/api/contact", {
       method: "post",
@@ -34,7 +36,7 @@ const ContactUs = () => {
         skypeId: values.skypeId,
         budget: values.budget,
         country: values.country,
-        projectRequirement: values.projectReq,
+        projectRequirement: values.projectRequirement,
       },
       headers: {
         "Content-Type": "application/json",
@@ -57,11 +59,8 @@ const ContactUs = () => {
       .string()
       .email("Invalid email")
       .required("This field is required"),
-    phoneNumber: yup
-      .number()
-      // .matches(phoneRegExp, 'phone is invalid')
-      .required("This field is required"),
-    projectReq: yup.string().required("This field is required"),
+    phoneNumber: yup.string().required("Phone number is must be required"),
+    projectRequirement: yup.string().required("This field is required"),
     skypeId: yup.string().required("This field is required"),
     country: yup.string().required("This field is required"),
   });
@@ -92,14 +91,14 @@ const ContactUs = () => {
                     email: "",
                     phoneNumber: "",
                     skypeId: "",
-                    projectReq: "",
+                    projectRequirement: "",
                     country: "",
                     budget: "",
                   }}
                   validationSchema={ContactSchema}
                   onSubmit={(values, action) => {
+                    console.log(values, "values");
                     handlePost(values);
-                    // console.log(values)
                     action.resetForm();
                   }}
                 >
@@ -272,12 +271,23 @@ const ContactUs = () => {
                             onBlur={formik.handleBlur}
                           /> */}
                           <PhoneInput
-                          type="number"
-                          name="phoneNumber"
-                          placeholder="Phone Number"
-                          value={formik.values.phoneNumber}
-                          onChange={formik.handleChange}
-                          onBlur={formik.handleBlur}
+                            countryCodeEditable={false}
+                            enableSearch={true}
+                            inputProps={{
+                              name: "phoneNumber",
+                            }}
+                            country={"in"}
+                            placeholder="Phone Number"
+                            value={formik.values.phoneNumber}
+                            onChange={(value) =>
+                              formik.setFieldValue("phoneNumber", value)
+                            }
+                            onBlur={formik.handleBlur}
+                            inputStyle={{
+                              width: "100%",
+                              padding: "21px",
+                              paddingLeft: "54px",
+                            }}
                           />
                           <span
                             className="error"
@@ -301,8 +311,8 @@ const ContactUs = () => {
                             id="exampleFormControlTextarea1"
                             rows={5}
                             placeholder="Project Requirement*"
-                            name="projectReq"
-                            value={formik.values.projectReq}
+                            name="projectRequirement"
+                            value={formik.values.projectRequirement}
                             onChange={formik.handleChange}
                             onBlur={formik.handleBlur}
                           />
@@ -310,9 +320,9 @@ const ContactUs = () => {
                             className="error"
                             style={{ color: "#fff", fontSize: "14px" }}
                           >
-                            {formik.errors.projectReq}
+                            {formik.errors.projectRequirement}
                           </span>
-                          {formik.errors.projectReq ? (
+                          {formik.errors.projectRequirement ? (
                             <BiErrorCircle
                               style={{
                                 float: "right",

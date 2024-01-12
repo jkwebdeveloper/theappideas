@@ -32,7 +32,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
         skypeId: values.skypeId,
         budget: values.budget,
         country: values.country,
-        projectRequirement: values.projectReq,
+        projectRequirement: values.projectRequirement,
       },
       headers: {
         "Content-Type": "application/json",
@@ -52,16 +52,23 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
     setCountries(Country.getAllCountries());
   }, []);
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: getAQuoteSchema,
-      onSubmit: (values, action) => {
-        handlePost(values);
-        // console.log(values);
-        action.resetForm();
-      },
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: getAQuoteSchema,
+    onSubmit: (values, action) => {
+      handlePost(values);
+      // console.log(values);
+      action.resetForm();
+    },
+  });
 
   return (
     <ReactModal
@@ -140,64 +147,23 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                     />
                   ) : null}
                 </div>
-                {/* <div className="mb-3">
-                  <select
-                    style={{ padding: "7px" }}
-                    className="form-select"
-                    name="country"
-                    value={values.country}
-                    onChange={handleChange}
-                    onBlur={handleBlur}
-                    
-                  >
-                    <option label="Select Country"></option>
-                    {countries.map((Country) => (
-                      <option key={Country.name} value={Country.name}>
-                        {Country.name}
-                      </option>
-                    ))}
-                  </select>
-                  <span
-                    className="error"
-                    style={{ color: "red", fontSize: "14px" }}
-                  >
-                    {errors.country}
-                  </span>
-                  {errors.country && touched.country ? (
-                    <BiErrorCircle
-                      style={{
-                        float: "right",
-                        marginTop: "5px",
-                        color: "red",
-                      }}
-                    />
-                  ) : null}
-                </div> */}
                 <div className="mb-3">
                   <PhoneInput
                     countryCodeEditable={false}
                     enableSearch={true}
                     inputProps={{
-                      name: "phone",
+                      name: "phoneNumber",
                     }}
                     inputStyle={{
                       width: "100%",
                       padding: "21px 0px 21px 50px",
                     }}
-                    type="number"
-                    // className="form-control"
-                    name="phoneNumber"
                     country={"in"}
                     placeholder="Phone Number"
                     value={values.phoneNumber}
-                    onChange={(value) => {
-                      // Formik's handleChange requires an object with a target property
-                      handleChange({
-                        target: {
-                          name: "phone",
-                          value: value,
-                        },
-                      });
+                    onChange={(value, country, event, formattedValue) => {
+                      // Set the formatted phone number value to the state using setFieldValue
+                      setFieldValue("phoneNumber", formattedValue);
                     }}
                     onBlur={handleBlur}
                   />
@@ -220,11 +186,11 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                 <div className="mb-3">
                   <textarea
                     className="form-control"
-                    name="projectReq"
+                    name="projectRequirement"
                     rows={3}
                     placeholder="Project Requirement*"
                     defaultValue={""}
-                    value={values.projectReq}
+                    value={values.projectRequirement}
                     onChange={handleChange}
                     onBlur={handleBlur}
                   />
@@ -232,9 +198,9 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                     className="error"
                     style={{ color: "red", fontSize: "14px" }}
                   >
-                    {errors.projectReq}
+                    {errors.projectRequirement}
                   </span>
-                  {errors.projectReq && touched.projectReq ? (
+                  {errors.projectRequirement && touched.projectRequirement ? (
                     <BiErrorCircle
                       style={{
                         float: "right",
