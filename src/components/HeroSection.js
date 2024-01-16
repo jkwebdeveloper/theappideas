@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { BsFillPatchCheckFill } from "react-icons/bs";
 import { Country } from "country-state-city";
 import ReCAPTCHA from "react-google-recaptcha";
@@ -6,13 +6,21 @@ import { useFormik } from "formik";
 import { getFreeQuoteSchema } from "../pages/schemas";
 import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
+import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
+
+// Live Key
+// const SITE_KEY = "6LcVilIpAAAAAGXDl8znTD4mG5OnO8T15UdoQmZX";
+
+// localhost Key
+const SITE_KEY = "6LcVilIpAAAAALvfYtAher88C-b4MfmXvoE4-MhA";
 
 const initialValues = {
   name: "",
   email: "",
   country: "",
   phoneNumber: "",
-  projectReq: "",
+  projectRequirement: "",
 };
 
 const HeroSection = ({
@@ -32,6 +40,9 @@ const HeroSection = ({
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(false);
 
+  const captchaRef = useRef();
+
+
   const handlePost = (values) => {
     setLoading(true);
     axios("https://the-app-ideas.onrender.com/api/contact", {
@@ -43,7 +54,7 @@ const HeroSection = ({
         skypeId: values.skypeId,
         budget: values.budget,
         country: values.country,
-        projectRequirement: values.projectReq,
+        projectRequirement: values.projectRequirement,
       },
       headers: {
         "Content-Type": "application/json",
@@ -51,6 +62,7 @@ const HeroSection = ({
     })
       .then((res) => {
         console.log(res.data);
+        captchaRef.current.reset();
         setLoading(false);
       })
       .catch((err) => {
@@ -63,16 +75,23 @@ const HeroSection = ({
     setCountries(Country.getAllCountries());
   }, []);
 
-  const { values, errors, touched, handleBlur, handleChange, handleSubmit } =
-    useFormik({
-      initialValues: initialValues,
-      validationSchema: getFreeQuoteSchema,
-      onSubmit: (values, action) => {
-        handlePost(values);
-        console.log(values);
-        action.resetForm();
-      },
-    });
+  const {
+    values,
+    errors,
+    touched,
+    handleBlur,
+    handleChange,
+    handleSubmit,
+    setFieldValue,
+  } = useFormik({
+    initialValues: initialValues,
+    validationSchema: getFreeQuoteSchema,
+    onSubmit: (values, action) => {
+      handlePost(values);
+      console.log(values);
+      action.resetForm();
+    },
+  });
 
   return (
     <section className="common__banner__section">
@@ -243,14 +262,23 @@ const HeroSection = ({
                         ) : null}
                       </div>
                       <div className="col-sm-6 my-3">
-                        <input
-                          type="number"
-                          name="phoneNumber"
-                          className="form-control"
-                          placeholder="Phone Number*"
-                          aria-label="Phone Number"
+                        <PhoneInput
+                          countryCodeEditable={false}
+                          enableSearch={true}
+                          inputProps={{
+                            name: "phoneNumber",
+                          }}
+                          inputStyle={{
+                            width: "100%",
+                            padding: "15px 0px 21px 50px",
+                          }}
+                          country={"in"}
+                          placeholder="Phone Number"
                           value={values.phoneNumber}
-                          onChange={handleChange}
+                          onChange={(value, country, event, formattedValue) => {
+                            // Set the formatted phone number value to the state using setFieldValue
+                            setFieldValue("phoneNumber", formattedValue);
+                          }}
                           onBlur={handleBlur}
                         />
                         <span
@@ -274,10 +302,10 @@ const HeroSection = ({
                           className="form-control"
                           id="exampleFormControlTextarea1"
                           rows={3}
-                          name="projectReq"
+                          name="projectRequirement"
                           placeholder="Project Requirement*"
                           defaultValue={""}
-                          value={values.projectReq}
+                          value={values.projectRequirement}
                           onChange={handleChange}
                           onBlur={handleBlur}
                         />
@@ -285,9 +313,10 @@ const HeroSection = ({
                           className="error"
                           style={{ color: "red", fontSize: "14px" }}
                         >
-                          {errors.projectReq}
+                          {errors.projectRequirement}
                         </span>
-                        {errors.projectReq && touched.projectReq ? (
+                        {errors.projectRequirement &&
+                        touched.projectRequirement ? (
                           <BiErrorCircle
                             style={{
                               float: "right",
@@ -299,8 +328,8 @@ const HeroSection = ({
                       </div>
                       <ReCAPTCHA
                         style={{ padding: "15px 15px" }}
-                        sitekey="Your Client site key"
-                        onChange={onchange}
+                        sitekey={SITE_KEY}
+                        ref={captchaRef}
                       />
                       <div className="col-sm-12 text-center my-3">
                         <button type="submit" className="request__btn">

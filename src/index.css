@@ -4862,7 +4862,7 @@ Title .Title_Color {
   box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
   cursor: pointer;
 }
-.suggtion img{
+.suggtion img {
   width: 50px;
 }
 .suggtion_content a {
@@ -4889,3 +4889,8 @@ Title .Title_Color {
   }
 }
 /* =========== Autocomplete Search css End ==========  */
+/* =========== Phone Input css start ==========  */
+.country-name {
+  color: #000;
+}
+/* =========== Phone Input css end ==========  */

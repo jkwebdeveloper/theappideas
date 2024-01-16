@@ -69,7 +69,7 @@ const Header = ({ setOpenModal }) => {
                 <div className="content content_sub">
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/about-us">
+                      <a href="/about-us/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -87,7 +87,7 @@ const Header = ({ setOpenModal }) => {
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/our-process">
+                      <a href="/our-process/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -105,7 +105,7 @@ const Header = ({ setOpenModal }) => {
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/our-team">
+                      <a href="/our-team/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -125,7 +125,7 @@ const Header = ({ setOpenModal }) => {
                 <div className="content content_sub">
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/testimonial">
+                      <a href="/testimonial/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -143,7 +143,7 @@ const Header = ({ setOpenModal }) => {
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/careers">
+                      <a href="/careers/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -161,7 +161,7 @@ const Header = ({ setOpenModal }) => {
                   </div>
                   <div className="row">
                     <ul className="mega-links">
-                      <a href="/life-at-tai">
+                      <a href="/life-at-tai/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -188,7 +188,7 @@ const Header = ({ setOpenModal }) => {
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
                         <a
-                          href="/careers"
+                          href="/careers/"
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}

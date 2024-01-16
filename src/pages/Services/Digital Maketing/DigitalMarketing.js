@@ -784,7 +784,7 @@ const DigitalMarketing = () => {
             <h3>Technologies we use</h3>
           </div>
           <div className="row">
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
               <div
                 data-aos="flip-left"
                 data-aos-duration="1000"
@@ -799,7 +799,7 @@ const DigitalMarketing = () => {
                 <h2>SEO</h2>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
               <div
                 data-aos="flip-right"
                 data-aos-duration="1000"
@@ -814,7 +814,7 @@ const DigitalMarketing = () => {
                 <h2>Social Media Marketing</h2>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
               <div
                 data-aos="flip-left"
                 data-aos-duration="1000"
@@ -829,7 +829,7 @@ const DigitalMarketing = () => {
                 <h2>ASO</h2>
               </div>
             </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+            <div className="col-6 col-sm-6 col-md-4 col-lg-3 mb-4">
               <div
                 data-aos="flip-right"
                 data-aos-duration="1000"

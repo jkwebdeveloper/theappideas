@@ -7,6 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
+import bannerImg from "../../../assets/images/theappideas solutions.svg"
 // import Lottie from "lottie-react";
 // import Loading from "../../../assets/images/loading.json";
 
@@ -16,21 +17,21 @@ const Banner = ({ setOpenModal }) => {
       <div style={{ position: "relative" }}>
         <div className="container">
           <div className="row" style={{ alignItems: "center" }}>
-            <div className="col-lg-4 col-md-12">
+            <div className="col-lg-5 col-md-12">
               <div className="slider-img">
                 <img
-                  src={require("../../../assets/images/Banner/Group 29.png")}
+                  src={bannerImg}
                   alt=""
                   style={{
                     width: "100%",
-                    height: "25vw",
+                    // height: "25vw",
                     objectPosition: "center",
                     objectFit: "contain",
                   }}
                 />
               </div>
             </div>
-            <div className="col-lg-8 col-md-12">
+            <div className="col-lg-7 col-md-12">
               <p className="slider-heading-dec">
                 Mobile App & Website Development{" "}
               </p>

@@ -129,7 +129,7 @@ const Blog = () => {
               </button>
             </div>
           </form>
-          {autoSearch?.length > 3 && (
+          {autoSearch?.length > 2 && (
             <div className="suggtion">
               {searchResult.map((item) => {
                 return (

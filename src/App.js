@@ -117,13 +117,13 @@ const App = () => {
         <Route path="/" element={<Home setOpenModal={setOpenModal} />} />
 
         {/* Company Link */}
-        <Route path="/about-us" element={<ABoutUs />} />
-        <Route path="/life-at-tai" element={<LifeTAI />} />
-        <Route path="/careers" element={<Careers />} />
+        <Route path="/about-us/" element={<ABoutUs />} />
+        <Route path="/life-at-tai/" element={<LifeTAI />} />
+        <Route path="/careers/" element={<Careers />} />
         <Route path="/career-application/:id" element={<CareerApply />} />
-        <Route path="/testimonial" element={<Testimonial />} />
-        <Route path="/our-team" element={<OurTeam />} />
-        <Route path="/our-process" element={<OurProcess />} />
+        <Route path="/testimonial/" element={<Testimonial />} />
+        <Route path="/our-team/" element={<OurTeam />} />
+        <Route path="/our-process/" element={<OurProcess />} />
 
         {/* Services Link */}
         <Route
