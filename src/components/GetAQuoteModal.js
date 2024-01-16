@@ -29,9 +29,9 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
         name: values.name,
         email: values.email,
         phoneNumber: values.phoneNumber,
-        skypeId: values.skypeId,
-        budget: values.budget,
-        country: values.country,
+        // skypeId: values.skypeId,
+        // budget: values.budget,
+        // country: values.country,
         projectRequirement: values.projectRequirement,
       },
       headers: {
@@ -79,7 +79,9 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       contentLabel="Contact us Modal"
       appElement={document.getElementById("root")}
       shouldCloseOnOverlayClick={true}
-      style={{ content: { zIndex: "999" } }}
+      style={{overlay: {
+        zIndex: "9999"
+      }, content: { zIndex: "9999" } }}
     >
       <section className="contact_form_section">
         <div className="container">

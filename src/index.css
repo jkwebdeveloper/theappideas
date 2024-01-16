@@ -4577,7 +4577,7 @@ section {
   position: relative;
   overflow: hidden;
 }
-.career_mdl_rht::before {
+/* .career_mdl_rht::before {
   content: "";
   position: absolute;
   background: rgb(246 192 0 / 8%);
@@ -4588,7 +4588,7 @@ section {
   right: -56px;
   bottom: -111px;
   border-radius: 35px;
-}
+} */
 .career_mdl_rht form {
   position: relative;
   /* z-index: 2; */

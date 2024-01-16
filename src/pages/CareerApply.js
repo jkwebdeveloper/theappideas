@@ -8,8 +8,9 @@ import { BiErrorCircle } from "react-icons/bi";
 import { useFormik } from "formik";
 import { careerApplySchema } from "./schemas";
 import axios from "axios";
-import { useLocation, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import PhoneInput from "react-phone-input-2";
+import "react-phone-input-2/lib/style.css";
 
 const initialValues = {
   fullName: "",
@@ -48,7 +49,6 @@ const CareerApply = () => {
 
   const handlePost = (values) => {
     setLoading(true);
-    // console.log(values.cv)
     const formData = new FormData();
     formData.append("fullName", values.fullName);
     formData.append("email", values.email);
@@ -64,11 +64,9 @@ const CareerApply = () => {
       },
     })
       .then((res) => {
-        // console.log(res.data);
         setLoading(false);
       })
       .catch((err) => {
-        // console.log(err.data);
         setLoading(false);
       });
   };
@@ -85,7 +83,7 @@ const CareerApply = () => {
     initialValues: initialValues,
     validationSchema: careerApplySchema,
     onSubmit: (values, action) => {
-      // console.log(action)
+      // console.log(values)
       handlePost(values);
       action.resetForm();
     },
@@ -280,28 +278,23 @@ const CareerApply = () => {
                         ) : null}
                       </div>
                       <div className="mb-3">
-                        {/* <input
-                          type="number"
-                          className="form-control"
-                          pattern="[0-9()-\s]{10,14}"
-                          placeholder="Phone Number*"
-                          aria-label="Phone Number"
-                          name="phoneNumber"
-                          maxLength="13"
-                          value={values.phoneNumber}
-                          onChange={handleChange}
-                          onBlur={handleBlur}
-                        /> */}
                         <PhoneInput
+                          countryCodeEditable={false}
+                          enableSearch={true}
+                          inputProps={{
+                            name: "phoneNumber",
+                          }}
                           inputStyle={{
                             width: "100%",
                             padding: "21px 0px 21px 50px",
                           }}
-                          name="phoneNumber"
+                          country={"in"}
                           placeholder="Phone Number"
-                          type="number"
                           value={values.phoneNumber}
-                          onChange={handleChange}
+                          onChange={(value, country, event, formattedValue) => {
+                            // Set the formatted phone number value to the state using setFieldValue
+                            setFieldValue("phoneNumber", formattedValue);
+                          }}
                           onBlur={handleBlur}
                         />
                         <span

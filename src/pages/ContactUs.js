@@ -258,18 +258,6 @@ const ContactUs = () => {
                           </select>
                         </div>
                         <div className="col-sm-6 mt-4">
-                          {/* <input
-                            type="number"
-                            className="form-control"
-                            pattern="[0-9()-\s]{10,14}"
-                            placeholder="Phone Number*"
-                            aria-label="Phone Number"
-                            name="phoneNumber"
-                            maxLength="13"
-                            value={formik.values.phoneNumber}
-                            onChange={formik.handleChange}
-                            onBlur={formik.handleBlur}
-                          /> */}
                           <PhoneInput
                             countryCodeEditable={false}
                             enableSearch={true}
