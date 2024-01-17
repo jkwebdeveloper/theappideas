@@ -10,6 +10,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import Loading from "../../../assets/images/loading.json";
 import Lottie from "lottie-react";
+import { Helmet } from "react-helmet";
 
 const SingleBlog = () => {
   const [singleblogs, setSingleBlogs] = useState();
@@ -38,6 +39,7 @@ const SingleBlog = () => {
   }, [id]);
   return (
     <>
+    <Helmet title="How much Does It Cost to Build a FinTech App? - THE APP IDEAS"/>
       {loading ? (
         <div
           className="loading"
