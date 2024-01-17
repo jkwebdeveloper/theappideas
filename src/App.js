@@ -127,7 +127,7 @@ const App = () => {
 
         {/* Services Link */}
         <Route
-          path="/mobile-app-development"
+          path="/mobile-app-development/"
           element={<MobileAppDevelopment />}
         />
         <Route
@@ -228,7 +228,7 @@ const App = () => {
         <Route path="/contact-us" element={<ContactUs />} />
         {/* Blog Link */}
         <Route path="/blog" element={<Blog />} />
-        <Route path="/single-blog" element={<SingleBlog />} />
+        <Route path="/blog/*" element={<SingleBlog />} />
 
         <Route path="/*" element={<Error404 />} />
         <Route path="/lawyer-website-solution" element={<LawyerWeb />} />

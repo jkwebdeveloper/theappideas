@@ -13,7 +13,7 @@ import "react-phone-input-2/lib/style.css";
 // const SITE_KEY = "6LcVilIpAAAAAGXDl8znTD4mG5OnO8T15UdoQmZX";
 
 // localhost Key
-const SITE_KEY = "6LcVilIpAAAAALvfYtAher88C-b4MfmXvoE4-MhA";
+const SITE_KEY = "6Ld9hlMpAAAAAECTno-3flFDva33LDHA-zb-1aXs";
 
 const initialValues = {
   name: "",
@@ -21,6 +21,7 @@ const initialValues = {
   country: "",
   phoneNumber: "",
   projectRequirement: "",
+  // recaptchaToken: ""
 };
 
 const HeroSection = ({
@@ -39,11 +40,16 @@ const HeroSection = ({
 }) => {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [recaptchavalue, SetRecaptchaValue] = useState("");
 
+  const onChange = (value) => {
+    SetRecaptchaValue(value);
+    console.log(value, "recaptcha");
+  };
   const captchaRef = useRef();
 
-
   const handlePost = (values) => {
+    console.log(values, "values");
     setLoading(true);
     axios("https://the-app-ideas.onrender.com/api/contact", {
       method: "post",
@@ -55,6 +61,7 @@ const HeroSection = ({
         budget: values.budget,
         country: values.country,
         projectRequirement: values.projectRequirement,
+        recaptchaToken: recaptchavalue,
       },
       headers: {
         "Content-Type": "application/json",
@@ -62,6 +69,7 @@ const HeroSection = ({
     })
       .then((res) => {
         console.log(res.data);
+        SetRecaptchaValue("");
         captchaRef.current.reset();
         setLoading(false);
       })
@@ -89,7 +97,7 @@ const HeroSection = ({
     onSubmit: (values, action) => {
       handlePost(values);
       console.log(values);
-      action.resetForm();
+      // action.resetForm();
     },
   });
 
@@ -329,6 +337,7 @@ const HeroSection = ({
                       <ReCAPTCHA
                         style={{ padding: "15px 15px" }}
                         sitekey={SITE_KEY}
+                        onChange={onChange}
                         ref={captchaRef}
                       />
                       <div className="col-sm-12 text-center my-3">

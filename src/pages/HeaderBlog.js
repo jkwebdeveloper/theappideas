@@ -141,7 +141,7 @@ const Blog = () => {
                     />
                     <div>
                       <Link
-                        to="/single-blog"
+                        to="/blog"
                         state={{ id: item._id }}
                         onClick={() => {
                           window.scrollTo({ top: 0, behavior: "smooth" });
@@ -237,7 +237,7 @@ const Blog = () => {
                         key={blog._id}
                       >
                         <Link
-                          to="/single-blog"
+                          to={`/blog/${blog.slug}`}
                           state={{ id: blog._id }}
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });

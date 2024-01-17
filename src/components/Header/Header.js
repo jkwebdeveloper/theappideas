@@ -220,7 +220,7 @@ const Header = ({ setOpenModal }) => {
                 <div className="content">
                   <div className="row">
                     <a
-                      href="/mobile-app-development"
+                      href="/mobile-app-development/"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
@@ -235,7 +235,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/android-app-development">
+                      <a href="/android-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -247,7 +247,7 @@ const Header = ({ setOpenModal }) => {
                           Android App Development
                         </li>
                       </a>
-                      <a href="/iphone-app-development">
+                      <a href="/iphone-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -259,7 +259,7 @@ const Header = ({ setOpenModal }) => {
                           IPhone App Development
                         </li>
                       </a>
-                      <a href="/ipad-app-development">
+                      <a href="/ipad-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -271,7 +271,7 @@ const Header = ({ setOpenModal }) => {
                           IPad App Development
                         </li>
                       </a>
-                      <a href="/react-native-development">
+                      <a href="/react-native-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -284,7 +284,7 @@ const Header = ({ setOpenModal }) => {
                         </li>
                       </a>
 
-                      <a href="/iot-app-development">
+                      <a href="/iot-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -301,7 +301,7 @@ const Header = ({ setOpenModal }) => {
 
                   <div className="row">
                     <a
-                      href="/digital-marketing-agency"
+                      href="/digital-marketing-agency/"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
@@ -316,7 +316,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/seo">
+                      <a href="/seo/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -328,7 +328,7 @@ const Header = ({ setOpenModal }) => {
                           Search Engine Optimization
                         </li>
                       </a>
-                      <a href="/social-media-marketing">
+                      <a href="/social-media-marketing/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -340,7 +340,7 @@ const Header = ({ setOpenModal }) => {
                           Social Media Marketing
                         </li>
                       </a>
-                      <a href="/aso">
+                      <a href="/aso/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -356,7 +356,7 @@ const Header = ({ setOpenModal }) => {
                   </div>
                   <div className="row">
                     <a
-                      href="/e-commerce-website-development"
+                      href="/e-commerce-website-development/"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
@@ -371,7 +371,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/shopify-development">
+                      <a href="/shopify-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -383,7 +383,7 @@ const Header = ({ setOpenModal }) => {
                           Shopify Development
                         </li>
                       </a>
-                      <a href="/magento-development">
+                      <a href="/magento-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -395,7 +395,7 @@ const Header = ({ setOpenModal }) => {
                           Magento Development
                         </li>
                       </a>
-                      <a href="/joomla-development">
+                      <a href="/joomla-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -407,7 +407,7 @@ const Header = ({ setOpenModal }) => {
                           Joomla Development{" "}
                         </li>
                       </a>
-                      <a href="/drupal-development">
+                      <a href="/drupal-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -423,7 +423,7 @@ const Header = ({ setOpenModal }) => {
                   </div>
                   <div className="row">
                     <a
-                      href="/web-development"
+                      href="/web-development/"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
@@ -438,7 +438,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/wordpress-development">
+                      <a href="/wordpress-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -450,7 +450,7 @@ const Header = ({ setOpenModal }) => {
                           WordPress Development
                         </li>
                       </a>
-                      <a href="/php-development">
+                      <a href="/php-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -462,7 +462,7 @@ const Header = ({ setOpenModal }) => {
                           PHP Development
                         </li>
                       </a>
-                      <a href="/angular-development">
+                      <a href="/angular-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -474,7 +474,7 @@ const Header = ({ setOpenModal }) => {
                           Angular Development
                         </li>
                       </a>
-                      <a href="/webflow-development">
+                      <a href="/webflow-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -501,7 +501,7 @@ const Header = ({ setOpenModal }) => {
                     style={{ width: "29%" }}
                   >
                     <a
-                      href="/software-development"
+                      href="/software-development/"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
@@ -516,7 +516,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/asp-net-development">
+                      <a href="/asp-net-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -528,7 +528,7 @@ const Header = ({ setOpenModal }) => {
                           Asp.Net Development
                         </li>
                       </a>
-                      <a href="/dotnetnuke-development">
+                      <a href="/dotnetnuke-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -547,7 +547,7 @@ const Header = ({ setOpenModal }) => {
                     style={{ width: "28%" }}
                   >
                     <a
-                      href="/designing-services"
+                      href="/designing-services/"
                       onClick={() => {
                         window.scrollTo({ top: 0, behavior: "smooth" });
                       }}
@@ -562,7 +562,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/graphics-design">
+                      <a href="/graphics-design/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -574,7 +574,7 @@ const Header = ({ setOpenModal }) => {
                           Graphics Design
                         </li>
                       </a>
-                      <a href="/mobile-app-design">
+                      <a href="/mobile-app-design/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -603,7 +603,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/startup-services">
+                      <a href="/startup-services/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -628,7 +628,7 @@ const Header = ({ setOpenModal }) => {
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
                         <a
-                          href="/contact-us"
+                          href="/contact-us/"
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
@@ -644,7 +644,7 @@ const Header = ({ setOpenModal }) => {
             {/* hire us */}
             <li>
               <a
-                href="/hire-us"
+                href="/hire-us/"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
@@ -656,7 +656,7 @@ const Header = ({ setOpenModal }) => {
               <input type="checkbox" id="showMega2" />
               <label htmlFor="showMega2" className="mobile-item">
                 <a
-                  href="/hire-us"
+                  href="/hire-us/"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
@@ -677,7 +677,7 @@ const Header = ({ setOpenModal }) => {
                       Hire Mobile App Development
                     </h4>
                     <ul className="mega-links">
-                      <a href="/hire-ios-developer">
+                      <a href="/hire-ios-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -689,7 +689,7 @@ const Header = ({ setOpenModal }) => {
                           Hire IOS Developer
                         </li>
                       </a>
-                      <a href="/hire-android-developer">
+                      <a href="/hire-android-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -701,7 +701,7 @@ const Header = ({ setOpenModal }) => {
                           Hire Android Developer
                         </li>
                       </a>
-                      <a href="/hire-react-native-developer">
+                      <a href="/hire-react-native-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -713,7 +713,7 @@ const Header = ({ setOpenModal }) => {
                           Hire React Native Developer
                         </li>
                       </a>
-                      <a href="/hire-flutter-developer">
+                      <a href="/hire-flutter-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -737,7 +737,7 @@ const Header = ({ setOpenModal }) => {
                       Hire Web Developer
                     </h4>
                     <ul className="mega-links">
-                      <a href="/hire-laravel-developer">
+                      <a href="/hire-laravel-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -749,7 +749,7 @@ const Header = ({ setOpenModal }) => {
                           Hire Laravel Developer
                         </li>
                       </a>
-                      <a href="/hire-wordpress-developer">
+                      <a href="/hire-wordpress-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -761,7 +761,7 @@ const Header = ({ setOpenModal }) => {
                           Hire WordPress Developer
                         </li>
                       </a>
-                      <a href="/hire-nodejs-developer">
+                      <a href="/hire-nodejs-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -773,7 +773,7 @@ const Header = ({ setOpenModal }) => {
                           Hire Node.js Developer
                         </li>
                       </a>
-                      <a href="/hire-codeigniter-developer">
+                      <a href="/hire-codeigniter-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -785,7 +785,7 @@ const Header = ({ setOpenModal }) => {
                           Hire CodeIgniter Developer
                         </li>
                       </a>
-                      <a href="/hire-php-developer">
+                      <a href="/hire-php-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -797,7 +797,7 @@ const Header = ({ setOpenModal }) => {
                           Hire PHP Developers
                         </li>
                       </a>
-                      <a href="/hire-python-developer">
+                      <a href="/hire-python-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -809,7 +809,7 @@ const Header = ({ setOpenModal }) => {
                           Hire Python Developer
                         </li>
                       </a>
-                      <a href="/hire-reactjs-developer">
+                      <a href="/hire-reactjs-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -821,7 +821,7 @@ const Header = ({ setOpenModal }) => {
                           Hire React JS Developer
                         </li>
                       </a>
-                      <a href="/hire-angular-developer">
+                      <a href="/hire-angular-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -845,7 +845,7 @@ const Header = ({ setOpenModal }) => {
                       Hire E-commerce Developer
                     </h4>
                     <ul className="mega-links">
-                      <a href="/hire-shopify-development">
+                      <a href="/hire-shopify-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -857,7 +857,7 @@ const Header = ({ setOpenModal }) => {
                           Hire Shopify Development
                         </li>
                       </a>
-                      <a href="/hire-magento-development">
+                      <a href="/hire-magento-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -895,7 +895,7 @@ const Header = ({ setOpenModal }) => {
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
                         <a
-                          href="/hire-us"
+                          href="/hire-us/"
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
@@ -912,7 +912,7 @@ const Header = ({ setOpenModal }) => {
             </li>
             {/* solutions */}
             <li>
-              <a href="/solutions">
+              <a href="/solutions/">
                 <div className="desktop-item">
                   Solutions <MdKeyboardArrowDown />{" "}
                 </div>
@@ -920,7 +920,7 @@ const Header = ({ setOpenModal }) => {
               <input type="checkbox" id="showMega3" />
               <label htmlFor="showMega3" className="mobile-item">
                 <a
-                  href="/solutions"
+                  href="/solutions/"
                   onClick={() => {
                     window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
@@ -946,7 +946,7 @@ const Header = ({ setOpenModal }) => {
                       </h4>
                     </a>
                     <ul className="mega-links">
-                      <a href="/food-delivery-app-development">
+                      <a href="/food-delivery-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -959,7 +959,7 @@ const Header = ({ setOpenModal }) => {
                           Food Delivery App Development
                         </li>
                       </a>
-                      <a href="/courier-pickup-management-solution">
+                      <a href="/courier-pickup-management-solution/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -971,7 +971,7 @@ const Header = ({ setOpenModal }) => {
                           Courier Pickup Management Solution
                         </li>
                       </a>
-                      <a href="/grocery-app-developer">
+                      <a href="/grocery-app-developer/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -998,7 +998,7 @@ const Header = ({ setOpenModal }) => {
                       On-Demand Apps
                     </h4>
                     <ul className="mega-links">
-                      <a href="/taxi-booking-app-development">
+                      <a href="/taxi-booking-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1010,7 +1010,7 @@ const Header = ({ setOpenModal }) => {
                           Taxi Booking App Development
                         </li>
                       </a>
-                      <a href="/doctor-hiring-app-solution">
+                      <a href="/doctor-hiring-app-solution/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1022,7 +1022,7 @@ const Header = ({ setOpenModal }) => {
                           Doctor Hiring App Solution
                         </li>
                       </a>
-                      <a href="/security-app-solution">
+                      <a href="/security-app-solution/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1049,7 +1049,7 @@ const Header = ({ setOpenModal }) => {
                       Popular Solutions
                     </h4>
                     <ul className="mega-links">
-                      <a href="/e-commerce-app-development">
+                      <a href="/e-commerce-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1061,7 +1061,7 @@ const Header = ({ setOpenModal }) => {
                           eCommerce App Development
                         </li>
                       </a>
-                      <a href="/e-learning-app-development">
+                      <a href="/e-learning-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1073,7 +1073,7 @@ const Header = ({ setOpenModal }) => {
                           E-learning App Development
                         </li>
                       </a>
-                      <a href="/dating-app-development">
+                      <a href="/dating-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1085,7 +1085,7 @@ const Header = ({ setOpenModal }) => {
                           Dating App Development
                         </li>
                       </a>
-                      <a href="/driver-tracking-app-development">
+                      <a href="/driver-tracking-app-development/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1097,7 +1097,7 @@ const Header = ({ setOpenModal }) => {
                           Driver Tracking App Development
                         </li>
                       </a>
-                      <a href="/salon-service-app">
+                      <a href="/salon-service-app/">
                         <li
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
@@ -1125,7 +1125,7 @@ const Header = ({ setOpenModal }) => {
                     <div className="col-md-4 text-center">
                       <div className="menu_bottomm_content_rht">
                         <a
-                          href="/contact-us"
+                          href="/contact-us/"
                           onClick={() => {
                             window.scrollTo({ top: 0, behavior: "smooth" });
                           }}
@@ -1141,7 +1141,7 @@ const Header = ({ setOpenModal }) => {
             {/* portoflio */}
             <li>
               <a
-                href="/portfolio"
+                href="/portfolio/"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
@@ -1152,7 +1152,7 @@ const Header = ({ setOpenModal }) => {
             {/* contact us */}
             <li>
               <a
-                href="/contact-us"
+                href="/contact-us/"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
@@ -1163,7 +1163,7 @@ const Header = ({ setOpenModal }) => {
             {/* blog */}
             <li>
               <a
-                href="/blog"
+                href="/blog/"
                 onClick={() => {
                   window.scrollTo({ top: 0, behavior: "smooth" });
                 }}
