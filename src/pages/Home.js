@@ -38,7 +38,49 @@ const Home = ({ setOpenModal }) => {
 
   return (
     <>
-      <Helmet title="Best Web & Mobile App Development Company" />
+      <Helmet title="Best Web & Mobile App Development Company">
+        <title>Best Web & Mobile App Development Company</title>
+        <meta
+          name="title"
+          content="Best Web & Mobile App Development Company"
+        />
+        <meta
+          name="description"
+          content="The App Ideas is the leading Web & Mobile App Development Company with a skilled development team in India. We develop Web App Ideas for Android App."
+        />
+        <meta
+          name="keyword"
+          content="app development company india, web and mobile development solutions, on demand development company,"
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://theappideas.com/" />
+        <meta
+          property="og:title"
+          content="Best Web & Mobile App Development Company"
+        />
+        <meta
+          property="og:description"
+          content="The App Ideas is the leading Web & Mobile App Development Company with a skilled development team in India. We develop Web App Ideas for Android App."
+        />
+        <meta
+          property="og:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+        <meta property="twitter:card" content="summary_large_image" />
+        <meta property="twitter:url" content="https://theappideas.com/" />
+        <meta
+          property="twitter:title"
+          content="Best Web & Mobile App Development Company"
+        />
+        <meta
+          property="twitter:description"
+          content="The App Ideas is the leading Web & Mobile App Development Company with a skilled development team in India. We develop Web App Ideas for Android App."
+        />
+        <meta
+          property="twitter:image"
+          content="https://metatags.io/images/meta-tags.png"
+        />
+      </Helmet>
       <Banner loading={loading} banners={banners} setOpenModal={setOpenModal} />
       <OndemandProduct />
       <About />
