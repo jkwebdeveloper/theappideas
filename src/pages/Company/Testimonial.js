@@ -8,6 +8,14 @@ import TestimonialModal from "../../components/Testimonial/TestimonialModal";
 const Testimonial = () => {
   const [openModal, setOpenModal] = useState(false);
 
+  const video = [
+    {
+      id: 1,
+      images: "",
+      videobtn: ""
+    }
+  ]
+
   const handleOnClose = () => setOpenModal(false);
   return (
     <>
@@ -40,7 +48,7 @@ const Testimonial = () => {
           </div>
         </div>
         <div className="testimonial_box testimonial_box_two">
-          <div className="video_testimonial">
+          <div className="video_testimonial_two">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-2.webp")}
               alt="testimonial-2"
@@ -57,14 +65,14 @@ const Testimonial = () => {
               </i>
             </div>
           </div>
-          <div className="testimonial_content">
+          <div className="testimonial_content_two">
             <h5>Roberto Valdovinos</h5>
             <p>
               We had done a Food Ordering and Food Delivery app for this client
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_three">
+        <div className="testimonial_box testimonial_box_one">
           <div className="video_testimonial">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-3.webp")}
@@ -87,8 +95,8 @@ const Testimonial = () => {
             <p>We had done a Logo Design for this client.</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_four">
-          <div className="video_testimonial">
+        <div className="testimonial_box testimonial_box_two">
+          <div className="video_testimonial_two">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-4.webp")}
               alt="testimonial-4"
@@ -105,12 +113,12 @@ const Testimonial = () => {
               </i>
             </div>
           </div>
-          <div className="testimonial_content">
+          <div className="testimonial_content_two">
             <h5>Ratings and Review</h5>
             <p>We had delivered a Website to him.</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_five">
+        <div className="testimonial_box testimonial_box_one">
           <div className="video_testimonial">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-5.webp")}
@@ -133,8 +141,8 @@ const Testimonial = () => {
             <p>We did a Musical Instrument App for him.</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_six">
-          <div className="video_testimonial">
+        <div className="testimonial_box testimonial_box_two">
+          <div className="video_testimonial_two">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-6.webp")}
               alt="testimonial-6"
@@ -151,7 +159,7 @@ const Testimonial = () => {
               </i>
             </div>
           </div>
-          <div className="testimonial_content">
+          <div className="testimonial_content_two">
             <h5>Dale</h5>
             <p>
               We had done several websites for Dale. It’s an awesome experience
@@ -159,7 +167,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_seven">
+        <div className="testimonial_box testimonial_box_one">
           <div className="video_testimonial">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-7.webp")}
@@ -182,8 +190,8 @@ const Testimonial = () => {
             <p>Founder at Footnote.world</p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_eight">
-          <div className="video_testimonial">
+        <div className="testimonial_box testimonial_box_two">
+          <div className="video_testimonial_two">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-8.webp")}
               alt="testimonial-8"
@@ -200,7 +208,7 @@ const Testimonial = () => {
               </i>
             </div>
           </div>
-          <div className="testimonial_content">
+          <div className="testimonial_content_two">
             <h5>Siegfried Moyo</h5>
             <p>
               We had done several websites for Siegfried Moyo. It’s an awesome
@@ -208,7 +216,7 @@ const Testimonial = () => {
             </p>
           </div>
         </div>
-        <div className="testimonial_box testimonial_box_nine">
+        <div className="testimonial_box testimonial_box_one">
           <div className="video_testimonial">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-9.jpg")}
@@ -235,7 +243,7 @@ const Testimonial = () => {
           </div>
         </div>
         <div className="testimonial_box testimonial_box_two">
-          <div className="video_testimonial">
+          <div className="video_testimonial_two">
             <img
               src={require("../../assets/images/COMPANY/testimonial/testimonial-10.jpg")}
               alt="testimonial-10"
@@ -252,7 +260,7 @@ const Testimonial = () => {
               </i>
             </div>
           </div>
-          <div className="testimonial_content">
+          <div className="testimonial_content_two">
             <h5>Manjil Chaudhari</h5>
             <p>We had provide Digital Marketing services to this client.</p>
           </div>
@@ -260,7 +268,7 @@ const Testimonial = () => {
       </section>
       <section className="content_testimonial_section">
         <div className="container">
-          <div className="row row_one">
+          {/* <div className="row row_one">
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
                 <img
@@ -288,7 +296,7 @@ const Testimonial = () => {
                 </div>
               </div>
             </div>
-          </div>
+          </div> */}
           <div className="row row_one">
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_rht">
@@ -647,6 +655,7 @@ const Testimonial = () => {
               </div>
             </div>
           </div>
+          
           <div className="row row_one">
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_rht">
@@ -1780,7 +1789,7 @@ const Testimonial = () => {
           <div className="row row_one">
             <div className="col-sm-12 col-md-6">
               <div className="testimonial_written_lft yellow_bg">
-                <img src="" alt="Anne-Sophie-Gau" className="img-fluid" />
+                <img src={require("../../assets/images/COMPANY/testimonial/craig-mackie-390x390.a13bba568b95.jpg")} alt="Anne-Sophie-Gau" className="img-fluid" />
               </div>
             </div>
             <div className="col-sm-12 col-md-6">
