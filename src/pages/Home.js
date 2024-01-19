@@ -38,15 +38,15 @@ const Home = ({ setOpenModal }) => {
 
   return (
     <>
-      <Helmet title="Best Web & Mobile App Development Company">
-        <title>Best Web & Mobile App Development Company</title>
+      <Helmet title="Best Web And Mobile App Development Company">
+        <title>Best Web And Mobile App Development Company</title>
         <meta
           name="title"
-          content="Best Web & Mobile App Development Company"
+          content="Best Web And Mobile App Development Company"
         />
         <meta
           name="description"
-          content="The App Ideas is the leading Web & Mobile App Development Company with a skilled development team in India. We develop Web App Ideas for Android App."
+          content="The App Ideas is a top web and mobile app development company in India, offering the best IT solutions with a team of highly skilled developers."
         />
         <meta
           name="keyword"
@@ -56,11 +56,11 @@ const Home = ({ setOpenModal }) => {
         <meta property="og:url" content="https://theappideas.com/" />
         <meta
           property="og:title"
-          content="Best Web & Mobile App Development Company"
+          content="Best Web And Mobile App Development Company"
         />
         <meta
           property="og:description"
-          content="The App Ideas is the leading Web & Mobile App Development Company with a skilled development team in India. We develop Web App Ideas for Android App."
+          content="The App Ideas is a top web and mobile app development company in India, offering the best IT solutions with a team of highly skilled developers."
         />
         <meta
           property="og:image"
@@ -70,11 +70,11 @@ const Home = ({ setOpenModal }) => {
         <meta property="twitter:url" content="https://theappideas.com/" />
         <meta
           property="twitter:title"
-          content="Best Web & Mobile App Development Company"
+          content="Best Web And Mobile App Development Company"
         />
         <meta
           property="twitter:description"
-          content="The App Ideas is the leading Web & Mobile App Development Company with a skilled development team in India. We develop Web App Ideas for Android App."
+          content="The App Ideas is a top web and mobile app development company in India, offering the best IT solutions with a team of highly skilled developers."
         />
         <meta
           property="twitter:image"

@@ -38,7 +38,7 @@ const Work = () => {
     <section className="work_slider_section py-5">
       <div className="container">
         <div className="work-heading">
-          <h2>Work we had done</h2>
+          <h2>Portfolio of Accomplishment and Excellence</h2>
         </div>
         {loading ? (
           <div className="">Loading...</div>

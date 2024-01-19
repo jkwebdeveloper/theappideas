@@ -1,14 +1,14 @@
-import React, { useEffect } from 'react'
-import './About.css'
-import { Link } from 'react-router-dom'
-import CountUp from 'react-countup'
-import AOS from 'aos'
-import 'aos/dist/aos.css'
+import React, { useEffect } from "react";
+import "./About.css";
+import { Link } from "react-router-dom";
+import CountUp from "react-countup";
+import AOS from "aos";
+import "aos/dist/aos.css";
 
 const About = () => {
   useEffect(() => {
-    AOS.init()
-  }, [])
+    AOS.init();
+  }, []);
   return (
     <section className="about-section">
       <div className="container">
@@ -17,27 +17,28 @@ const About = () => {
             <div className="about-heading">
               <h2>About us</h2>
             </div>
-            <p className="about-text">WEB & MOBILE APP DEVELOPMENT COMPANY</p>
-            <p style={{ textAlign: 'justify' }}>
-              The App Ideas is the leading Web and Mobile App Development
-              Company that can help your business grow with innovative and
-              engaging solutions. We build cutting edge digital solutions with a
-              quick-engaging user interface and user experience.
+            <p className="about-text">WEB AND MOBILE APP DEVELOPMENT COMPANY</p>
+            <p style={{ textAlign: "justify" }}>
+              The App Ideas is a forefront Web and Mobile App Development
+              Company, we propel business growth through innovative solutions.
+              Crafting cutting-edge digital solutions with swift, engaging user
+              interfaces and experiences is our forte.
             </p>
-            <p style={{ textAlign: 'justify' }}>
-              We have a team of highly experienced as well as proficient Web and
-              Mobile App Developers as well as designers, who will first
-              understand and analyze our client’s requirements in a much better
-              way, to deliver the best solution for the success of your business
-              at the best price. We strictly follow the agile methodology for
-              web as well as Mobile app development and divide projects into
-              small milestones to reach every milestone with client approval and
-              confirmation.
+            <p style={{ textAlign: "justify" }}>
+              Our adept team of experienced Web and Mobile App Developers and
+              designers prioritizes understanding and analyzing client
+              requirements. This comprehensive approach ensures delivering the
+              best solutions for your on demand business and services success at
+              the most competitive prices. Following strict adherence to agile
+              methodology, we meticulously divide projects into small
+              milestones, achieving each with client approval and confirmation.
+              This commitment defines our path to excellence in web and mobile
+              app development and on-demand business solutions.
             </p>
             <Link
               to="/about-us"
               onClick={() => {
-                window.scrollTo({ top: 0, behavior: 'smooth' })
+                window.scrollTo({ top: 0, behavior: "smooth" });
               }}
             >
               <div className="find_more_btn">Find out More</div>
@@ -50,7 +51,7 @@ const About = () => {
 
             <section
               className="Portfolio_section_wrapper"
-              style={{ paddingTop: '50px' }}
+              style={{ paddingTop: "50px" }}
             >
               <div className="achievements__section">
                 <div className="achievements_box">
@@ -75,7 +76,7 @@ const About = () => {
                 <div className="achievements_box achievements_box_top">
                   <p>Worked With Clients</p>
                   <h4>
-                    {' '}
+                    {" "}
                     <CountUp start={1} end={200} duration={3} /> +
                   </h4>
                 </div>
@@ -85,7 +86,7 @@ const About = () => {
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default About
+export default About;

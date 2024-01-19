@@ -7,7 +7,7 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import { Link } from "react-router-dom";
-import bannerImg from "../../../assets/images/theappideas solutions.svg"
+import bannerImg from "../../../assets/images/Banner/theappideassolutions.webp"
 // import Lottie from "lottie-react";
 // import Loading from "../../../assets/images/loading.json";
 
@@ -32,9 +32,9 @@ const Banner = ({ setOpenModal }) => {
               </div>
             </div>
             <div className="col-lg-7 col-md-12">
-              <p className="slider-heading-dec">
-                Mobile App & Website Development{" "}
-              </p>
+              <h1 className="slider-heading-dec">
+              Web and Mobile App Development Company - The App Ideas
+              </h1>
               <p className="slider-dec">
                 Are you deciding to make an app or an e-commerce store or even a
                 website? We are right here for your service. Our custom mobile

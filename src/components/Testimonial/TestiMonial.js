@@ -21,7 +21,7 @@ const TestiMonial = () => {
           <h2>Clients Testimonial</h2>
         </div>
         <div className="row">
-          <div className="col-lg-6 col-md-12 col-sm-12">
+          <div className="col-lg-4 col-md-12 col-sm-12">
             <div
               data-aos="fade-right"
               className="box my-5"
@@ -48,21 +48,18 @@ const TestiMonial = () => {
                 <img
                   src={require("../../assets/images/Testimonial/maxresdefault.webp")}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "300px" }}
                 />
               </div>
               <h4>
                 <span>Lloyd Medley</span>
               </h4>
               <br />
-              <p className="">
-                We have designed and developed a website for his client, happy
-                to work with him in future.
-              </p>
+              
             </div>
           </div>
           <div
-            className="col-lg-6 col-md-12 col-sm-12"
+            className="col-lg-4 col-md-12 col-sm-12"
             onClick={() => {
               setOpenModal("https://www.youtube.com/embed/8IXVtVkGNl8");
             }}
@@ -90,17 +87,53 @@ const TestiMonial = () => {
                 <img
                   src={require("../../assets/images/Testimonial/testimonial-2.webp")}
                   alt=""
-                  style={{ width: "330px" }}
+                  style={{ width: "300px" }}
                 />
               </div>
               <h4>
                 <span>Roberto Valdovinos</span>
               </h4>
               <br />
-              <p className="">
-                We had done a Food Ordering and Food Delivery app for this
-                client
-              </p>
+              
+            </div>
+          </div>
+          <div
+            className="col-lg-4 col-md-12 col-sm-12"
+            onClick={() => {
+              setOpenModal("https://www.youtube.com/embed/8IXVtVkGNl8");
+            }}
+          >
+            <div
+              data-aos="fade-left"
+              className="box my-5"
+              style={{ cursor: "pointer" }}
+            >
+              <BsPlayCircleFill
+                size={60}
+                color="white"
+                style={{
+                  position: "absolute",
+                  top: "15%",
+                  left: "50%",
+                  transform: "translate(-50%,-50%)",
+                  zIndex: "997",
+                  backgroundColor: "red",
+                  borderRadius: "50%",
+                  width: "fit-content",
+                }}
+              />
+              <div className="imgbox">
+                <img
+                  src={require("../../assets/images/Testimonial/testimonial-2.webp")}
+                  alt=""
+                  style={{ width: "300px" }}
+                />
+              </div>
+              <h4>
+                <span>Roberto Valdovinos</span>
+              </h4>
+              <br />
+              
             </div>
           </div>
         </div>

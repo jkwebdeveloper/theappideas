@@ -1,6 +1,6 @@
-import React from 'react'
+import React from "react";
 // import './footer.css'
-import { MdLocationPin } from 'react-icons/md'
+import { MdLocationPin } from "react-icons/md";
 import {
   BsDribbble,
   BsFillTelephoneFill,
@@ -8,13 +8,13 @@ import {
   BsSkype,
   BsTwitter,
   BsWhatsapp,
-} from 'react-icons/bs'
-import { GoMail } from 'react-icons/go'
-import { RiArrowRightSLine, RiFacebookFill } from 'react-icons/ri'
-import { Link } from 'react-router-dom'
-import appdeveloper from '../assets/images/Footer/app-development-img.svg'
-import { FaLinkedinIn, FaPinterestP } from 'react-icons/fa'
-import { AiFillYoutube, AiOutlineBehance } from 'react-icons/ai'
+} from "react-icons/bs";
+import { GoMail } from "react-icons/go";
+import { RiArrowRightSLine, RiFacebookFill } from "react-icons/ri";
+import { Link } from "react-router-dom";
+import appdeveloper from "../assets/images/Footer/app-development-img.svg";
+import { FaLinkedinIn, FaPinterestP } from "react-icons/fa";
+import { AiFillYoutube, AiOutlineBehance } from "react-icons/ai";
 
 const Footer = () => {
   return (
@@ -37,18 +37,18 @@ const Footer = () => {
                 <li>
                   <a
                     href="mailto:contact@theappideas.com"
-                    style={{ color: 'black' }}
+                    style={{ color: "black" }}
                   >
                     <i className="get_in_icons">
-                      <GoMail style={{ color: '#000' }} />
+                      <GoMail style={{ color: "#000" }} />
                     </i>
                     <span>contact@theappideas.com</span>
                   </a>
                 </li>
                 <li>
-                  <a href="tel:+918866564279" style={{ color: 'black' }}>
+                  <a href="tel:+918866564279" style={{ color: "black" }}>
                     <i className="get_in_icons">
-                      <BsFillTelephoneFill style={{ color: '#000' }} />
+                      <BsFillTelephoneFill style={{ color: "#000" }} />
                     </i>
                     <span>+91 8866564279</span>
                   </a>
@@ -57,10 +57,10 @@ const Footer = () => {
                   <a
                     href="https://api.whatsapp.com/send?phone=918866564279"
                     target="_blank"
-                    style={{ color: 'black' }}
+                    style={{ color: "black" }}
                   >
                     <i className="get_in_icons">
-                      <BsWhatsapp style={{ color: 'rgb(36 184 28)' }} />
+                      <BsWhatsapp style={{ color: "rgb(36 184 28)" }} />
                     </i>
                     <span>Whats App Me</span>
                   </a>
@@ -69,10 +69,10 @@ const Footer = () => {
                   <a
                     href="skype:chirag4141"
                     target="_blank"
-                    style={{ color: 'black' }}
+                    style={{ color: "black" }}
                   >
                     <i className="get_in_icons">
-                      <BsSkype style={{ color: 'rgb(43 158 255)' }} />
+                      <BsSkype style={{ color: "rgb(43 158 255)" }} />
                     </i>
                     <span>Skype</span>
                   </a>
@@ -87,85 +87,85 @@ const Footer = () => {
                 <Link to="/">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Home
                   </li>
                 </Link>
                 <Link to="/about-us">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     About Us
                   </li>
                 </Link>
                 <Link to="/portfolio">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Portfolio
                   </li>
                 </Link>
                 <Link to="/blog">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Blog
                   </li>
                 </Link>
                 <Link to="/contact-us">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Contact Us
                   </li>
                 </Link>
                 <Link to="/testimonial">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Testimonial
                   </li>
                 </Link>
                 <Link to="/careers">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
-                    Careers{' '}
+                    </i>{" "}
+                    Careers{" "}
                   </li>
                 </Link>
               </ul>
@@ -178,72 +178,72 @@ const Footer = () => {
                 <Link to="/mobile-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Mobile App Development
                   </li>
                 </Link>
                 <Link to="/iot-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     IOT Development
                   </li>
                 </Link>
                 <Link to="/web-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Web Design &amp; Development
                   </li>
                 </Link>
                 <Link to="/e-commerce-website-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     E-commerce Development
                   </li>
                 </Link>
                 <Link to="/testimonial">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Testimonial
                   </li>
                 </Link>
                 <Link to="/hire-us">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Hire A Developer
                   </li>
                 </Link>
@@ -257,60 +257,60 @@ const Footer = () => {
                 <Link to="/dating-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Dating App
                   </li>
                 </Link>
                 <Link to="/lawyer-website-solution">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Lawyer Website Solution
                   </li>
                 </Link>
                 <Link to="/driver-tracking-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Driver Tracking App Solution
                   </li>
                 </Link>
                 <Link to="/e-commerce-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Ecommerce App Solution
                   </li>
                 </Link>
                 <Link to="/e-learning-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Elearning Website Solution
                   </li>
                 </Link>
@@ -324,48 +324,48 @@ const Footer = () => {
                 <Link to="/taxi-booking-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Taxi Booking App
                   </li>
                 </Link>
                 <Link to="/security-app-solution">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Security Guard App
                   </li>
                 </Link>
                 <Link to="/food-delivery-app-development">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Food Delivery App
                   </li>
                 </Link>
                 <Link to="/doctor-hiring-app-solution">
                   <li
                     onClick={() => {
-                      window.scrollTo({ top: 0, behavior: 'smooth' })
+                      window.scrollTo({ top: 0, behavior: "smooth" });
                     }}
                   >
                     <i className="right__arrow">
                       <RiArrowRightSLine />
-                    </i>{' '}
+                    </i>{" "}
                     Doctor Hiring App
                   </li>
                 </Link>
@@ -397,7 +397,7 @@ const Footer = () => {
                       target="_blank"
                     >
                       <img
-                        src={require('../assets/images/Footer/freelancer-logo-1.webp')}
+                        src={require("../assets/images/Footer/freelancer-logo-1.webp")}
                         alt="freelancer-logo"
                         className="img-fluid"
                       />
@@ -410,7 +410,7 @@ const Footer = () => {
                       className="footer__awards_achor"
                     >
                       <img
-                        src={require('../assets/images/Footer/pph_new.webp')}
+                        src={require("../assets/images/Footer/pph_new.webp")}
                         alt="pph_new"
                         className="img-fluid"
                       />
@@ -418,12 +418,12 @@ const Footer = () => {
                   </li>
                   <li>
                     <a
-                      href="https://www.upwork.com/ag/theappideas/"
+                      href="https://www.upwork.com/agencies/973127564812582912/"
                       className="footer__awards_achor"
                       target="_blank"
                     >
                       <img
-                        src={require('../assets/images/Footer/upwork_new.webp')}
+                        src={require("../assets/images/Footer/upwork_new.webp")}
                         alt="upwork_new"
                         className="img-fluid"
                       />
@@ -435,7 +435,7 @@ const Footer = () => {
                       <a href="#" className="footer__awards_achor">
                         <div>
                           <img
-                            src={require('../assets/images/Footer/clutch-logo.png')}
+                            src={require("../assets/images/Footer/clutch-logo.png")}
                             alt="app-development-img"
                             className="img-fluid"
                           />
@@ -443,7 +443,7 @@ const Footer = () => {
                       </a>
                     </div>
                   </li>
-                </ul> 
+                </ul>
               </div>
             </div>
           </div>
@@ -478,7 +478,7 @@ const Footer = () => {
                   <AiOutlineBehance />
                 </a>
                 <a
-                  href="https://www.instagram.com/theappideas/"
+                  href="https://www.instagram.com/theappideas_appdevelopment/"
                   target="_blank"
                 >
                   <BsInstagram />
@@ -492,7 +492,7 @@ const Footer = () => {
                   to="/sitemap"
                   className="sitemap_btn"
                   onClick={() => {
-                    window.scrollTo({ top: 0, behavior: 'smooth' })
+                    window.scrollTo({ top: 0, behavior: "smooth" });
                   }}
                 >
                   Sitemap
@@ -503,7 +503,7 @@ const Footer = () => {
         </div>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;

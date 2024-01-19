@@ -127,7 +127,7 @@ const OndemandProduct = () => {
       <section className="demand_product_offer_section">
         <div className="container">
           <div className="service_desk_view demand_product_ttl">
-            <h2>Top On-Demand Products We Offers</h2>
+            <h2>Top On-Demand Business Solutions We Offers</h2>
           </div>
           <div className="row">
             <div className="col-12">
@@ -145,7 +145,7 @@ const OndemandProduct = () => {
                           }`}
                         >
                           <img src={frist} alt="" />
-                          <h6>Taxi Solutions</h6>
+                          <h3>Taxi Solutions</h3>
                         </div>
                       </div>
                       <div
@@ -159,7 +159,7 @@ const OndemandProduct = () => {
                           }`}
                         >
                           <img src={frist2} alt="" />
-                          <h6>Delivery Solutions</h6>
+                          <h3>Delivery Solutions</h3>
                         </div>
                       </div>
                       <div
@@ -172,10 +172,10 @@ const OndemandProduct = () => {
                           }`}
                         >
                           <img src={frist3} alt="" />
-                          <h6>
+                          <h3>
                             Multi Service <br />
                             Solutions
-                          </h6>
+                          </h3>
                         </div>
                       </div>
                       <div
@@ -189,10 +189,10 @@ const OndemandProduct = () => {
                           }`}
                         >
                           <img src={frist4} alt="" />
-                          <h6>
+                          <h3>
                             Popular On-demand <br />
                             Solutions
-                          </h6>
+                          </h3>
                         </div>
                       </div>
                     </div>
@@ -213,39 +213,41 @@ const OndemandProduct = () => {
                           payment methods. We recognize this shifting industry
                           necessitates adaptation. Thus, Our bespoke taxi
                           bookingapp script enable enterprises to operate
-                          seamlessly in various settings. Our apps provide a
-                          customized, tailored experience for new and existing
-                          enterprises globally in several currencies and
-                          languages. Our unique ride-sharing solutions help taxi
-                          firms exceed customer expectations. From one-tap
-                          bookings to carpooling, our apps enhance service
-                          providers' and consumers' experiences. Future taxi
-                          booking app solutions from us are creative and
-                          adaptable.
+                          seamlessly in various settings.
+                        </p>
+                        <p>
+                          Our apps provide a customized, tailored experience for
+                          new and existing enterprises globally in several
+                          currencies and languages. Our unique ride-sharing
+                          solutions help taxi firms exceed customer
+                          expectations. From one-tap bookings to carpooling, our
+                          apps enhance service providers' and consumers'
+                          experiences. Future taxi booking app solutions from us
+                          are creative and adaptable.
                         </p>
                         <div className="row">
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={bike} alt="" />
-                              <h6>Bike Riding</h6>
+                              <h5>Bike Riding</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={texi} alt="" />
-                              <h6>Taxi Hailing</h6>
+                              <h5>Taxi Hailing</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={tuk} alt="" />
-                              <h6>Tuk-Tuk Sharing</h6>
+                              <h5>Tuk-Tuk Sharing</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={car} alt="" />
-                              <h6>Car Rental</h6>
+                              <h5>Car Rental</h5>
                             </div>
                           </div>
                         </div>
@@ -269,41 +271,43 @@ const OndemandProduct = () => {
                           safety are linked via hygiene-focused interfaces in a
                           clean society. Companies can satisfy post-pandemic
                           client expectations and develop trust and loyalty with
-                          this product. For more than convenience, our app
-                          solutions provide real-time monitoring and more. This
-                          makes delivery visible and interactive, allowing users
-                          follow shipments live. Client satisfaction and
-                          delivery efficiency increase. Our delivery app
-                          development is customized for delivering service
-                          launches or refinements. Our tailored solutions
-                          provide firms the freedom to adapt to today's market.
-                          We design apps that increase security, cleanliness,
-                          and efficiency to prepare delivery firms for the
-                          current market.
+                          this product.
+                        </p>
+                        <p>
+                          For more than convenience, our app solutions provide
+                          real-time monitoring and more. This makes delivery
+                          visible and interactive, allowing users follow
+                          shipments live. Client satisfaction and delivery
+                          efficiency increase. Our delivery app development is
+                          customized for delivering service launches or
+                          refinements. Our tailored solutions provide firms the
+                          freedom to adapt to today's market. We design apps
+                          that increase security, cleanliness, and efficiency to
+                          prepare delivery firms for the current market.
                         </p>
                         <div className="row">
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
-                              <img src={food} alt="" />
-                              <h6>Food Delivery</h6>
+                              <img src={food} alt="food" />
+                              <h5>Food Delivery</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
-                              <img src={grocery} alt="" />
-                              <h6>Grocery Delivery</h6>
+                              <img src={grocery} alt="grocery" />
+                              <h5>Grocery Delivery</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
-                              <img src={courier} alt="" />
-                              <h6>Courier Delivery</h6>
+                              <img src={courier} alt="courier" />
+                              <h5>Courier Delivery</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
-                              <img src={delivery} alt="" />
-                              <h6>DeliverAll</h6>
+                              <img src={delivery} alt="delivery" />
+                              <h5>DeliverAll</h5>
                             </div>
                           </div>
                         </div>
@@ -327,8 +331,10 @@ const OndemandProduct = () => {
                           services lets entrepreneurs provide a full,
                           user-friendly experience at one single place. This
                           strategy makes several services available via one app,
-                          enhancing consumer satisfaction and engagement. Our
-                          innovation helps businesses navigate the on-demand
+                          enhancing consumer satisfaction and engagement.
+                        </p>
+                        <p>
+                          Our innovation helps businesses navigate the on-demand
                           market. The mega app concept's vast service offerings
                           may help entrepreneurs satisfy client needs. Our
                           app-making talents provide a diversified platform that
@@ -341,25 +347,25 @@ const OndemandProduct = () => {
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={taxiservice} alt="" />
-                              <h6>Taxi Services</h6>
+                              <h5>Taxi Services</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={deliveryservice} alt="" />
-                              <h6>Delivery Services</h6>
+                              <h5>Delivery Services</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={ondemand} alt="" />
-                              <h6>On Demand Services</h6>
+                              <h5>On Demand Services</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={services} alt="" />
-                              <h6>100+ Services</h6>
+                              <h5>100+ Services</h5>
                             </div>
                           </div>
                         </div>
@@ -381,37 +387,40 @@ const OndemandProduct = () => {
                           To assist firms adapt to the on-demand market, we
                           provide sector-specific apps. We add unique features
                           to our apps. Integrating security services for
-                          on-demand consumers is simple. Our apps help
-                          organizations thrive in the fast-paced, ever-changing
-                          on-demand services sector. We offer a broad variety of
-                          skills and serve numerous industries to help
-                          organizations adapt, grow, and create outstanding
-                          customer experiences. Get involved in the on-demand
-                          service revolution with our customized apps.
+                          on-demand consumers is simple.
+                        </p>
+                        <p>
+                          {" "}
+                          Our apps help organizations thrive in the fast-paced,
+                          ever-changing on-demand services sector. We offer a
+                          broad variety of skills and serve numerous industries
+                          to help organizations adapt, grow, and create
+                          outstanding customer experiences. Get involved in the
+                          on-demand service revolution with our customized apps.
                         </p>
                         <div className="row">
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={beauty} alt="" />
-                              <h6>Beauty & Salon Services</h6>
+                              <h5>Beauty & Salon Services</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={doctor} alt="" />
-                              <h6>Doctor & Medical Services</h6>
+                              <h5>Doctor & Medical Services</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={handyman} alt="" />
-                              <h6>Handyman Services</h6>
+                              <h5>Handyman Services</h5>
                             </div>
                           </div>
                           <div className="col-6 col-sm-3 col-md-3 col-lg-3 col-xl-3">
                             <div className="demand_bottom_col">
                               <img src={security} alt="" />
-                              <h6>Security Guard Services</h6>
+                              <h5>Security Guard Services</h5>
                             </div>
                           </div>
                         </div>
