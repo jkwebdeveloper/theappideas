@@ -18,7 +18,7 @@ const TestiMonial = () => {
     <section className="testi-bg">
       <div className="container">
         <div className="testi-heading">
-          <h2>Clients Testimonial</h2>
+          <h4>Clients Testimonial</h4>
         </div>
         <div className="row">
           <div className="col-lg-4 col-md-12 col-sm-12">
@@ -51,9 +51,9 @@ const TestiMonial = () => {
                   style={{ width: "300px" }}
                 />
               </div>
-              <h4>
+              <h5>
                 <span>Lloyd Medley</span>
-              </h4>
+              </h5>
               <br />
               
             </div>
@@ -90,9 +90,9 @@ const TestiMonial = () => {
                   style={{ width: "300px" }}
                 />
               </div>
-              <h4>
+              <h5>
                 <span>Roberto Valdovinos</span>
-              </h4>
+              </h5>
               <br />
               
             </div>
@@ -129,9 +129,9 @@ const TestiMonial = () => {
                   style={{ width: "300px" }}
                 />
               </div>
-              <h4>
+              <h5>
                 <span>Roberto Valdovinos</span>
-              </h4>
+              </h5>
               <br />
               
             </div>

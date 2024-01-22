@@ -2,7 +2,7 @@
   text-align: center;
   padding-top: 80px;
 }
-.blog-heading h2::after {
+.blog-heading h4::after {
   content: "";
   width: 80px;
   height: 4px;
@@ -74,7 +74,7 @@
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
-.name-job h4 {
+.name-job p {
   font-size: 14px;
 }
 .read-btn {

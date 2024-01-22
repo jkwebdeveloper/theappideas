@@ -113,15 +113,13 @@ const Blog = () => {
                   </div>
                   <div className="profile-details">
                     <div className="name-job">
-                      <h1 className="name">{blog.title}</h1>
+                      <h4 className="name">{blog.title}</h4>
                       <br />
                       <h4>{blog.creator.name}</h4>
                       <br />
                       <h4 className="job">{blog.description}</h4>
-                      <br />
                       {/* <div dangerouslySetInnerHTML={{__html:blog.content}} className="job"//> */}
 
-                      <br />
                       <Link
                         to={`/blog/${blog.slug}`}
                         state={{ id: blog._id }}

@@ -5,14 +5,14 @@
 .services-section {
     padding-bottom: 100px;
   }
-  .services-heading h2{
+  .services-heading h3{
     text-align: center;
     font-size: 30px;
     font-weight: 700;
     font-family: sans-serif;
     padding: 20px;
   }
-  .services-heading h2::after {
+  .services-heading h3::after {
     content: "";
     width: 80px;
     height: 4px;
@@ -142,19 +142,19 @@
     -o-transition: all 600ms ease;
   }
   
-  .service-block .inner-box:hover h5 a,
+  .service-block .inner-box:hover h4 a,
   .service-block .inner-box:hover .text,
   .service-block .inner-box:hover .icon-box {
     color: #ffffff;
   }
   
-  .service-block .inner-box h5 {
+  .service-block .inner-box h4 {
     position: relative;
     line-height: 1.3em;
     font-weight: 600;
   }
   
-  .service-block .inner-box h5 a {
+  .service-block .inner-box h4 a {
     position: relative;
     color: #222222;
     transition: all 600ms ease;

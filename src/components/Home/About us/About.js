@@ -46,7 +46,7 @@ const About = () => {
           </div>
           <div data-aos="fade-left" className="col-lg-6 col-md-12">
             <div className="About-left-heading">
-              <h2>Our Achievements</h2>
+              <h3>Our Achievements</h3>
             </div>
 
             <section

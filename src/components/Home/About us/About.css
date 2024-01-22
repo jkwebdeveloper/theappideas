@@ -21,7 +21,7 @@
   display: block;
   margin-top: 5px;
 }
-.About-left-heading h2::after {
+.About-left-heading h3::after {
   content: "";
   width: 80px;
   height: 4px;

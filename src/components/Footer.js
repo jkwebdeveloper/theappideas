@@ -23,7 +23,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div className="footer__box">
-              <h2 className="footer_title">Get in Touch</h2>
+              <h5 className="footer_title">Get in Touch</h5>
               <p>
                 <i className="location_map" aria-hidden="true">
                   <MdLocationPin />
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div className="footer__box">
-              <h2 className="footer_title">Quick Links</h2>
+              <h5 className="footer_title">Quick Links</h5>
               <ul>
                 <Link to="/">
                   <li
@@ -173,7 +173,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div className="footer__box">
-              <h2 className="footer_title">Services</h2>
+              <h5 className="footer_title">Services</h5>
               <ul>
                 <Link to="/mobile-app-development">
                   <li
@@ -252,7 +252,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div className="footer__box">
-              <h2 className="footer_title">Solutions</h2>
+              <h5 className="footer_title">Solutions</h5>
               <ul>
                 <Link to="/dating-app-development">
                   <li
@@ -319,7 +319,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div className="footer__box">
-              <h2 className="footer_title">On Demand Apps</h2>
+              <h5 className="footer_title">On Demand Apps</h5>
               <ul>
                 <Link to="/taxi-booking-app-development">
                   <li
@@ -374,7 +374,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-4">
             <div className="footer__box">
-              <h2 className="footer_title">Awards and Accolades</h2>
+              <h5 className="footer_title">Awards and Accolades</h5>
               <div className="footer__awards">
                 <ul>
                   <li>
@@ -449,7 +449,7 @@ const Footer = () => {
           </div>
           <div className="col-12 col-sm-6 col-md-6 col-lg-4 col-xl-3">
             <div className="footer__box">
-              <h2 className="footer_title">Follow us</h2>
+              <h5 className="footer_title">Follow us</h5>
               <div className="social__footer">
                 <a href="https://www.facebook.com/Theappideas/" target="_blank">
                   <RiFacebookFill />

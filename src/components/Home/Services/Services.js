@@ -17,7 +17,7 @@ const Services = () => {
       <section className="services-section style-two">
         <div className="container">
           <div className="services-heading">
-            <h2>Our Services</h2>
+            <h3>Our Services</h3>
           </div>
           <p className="services-heading-text">
             Over the years we have established ourselves as the leading service
@@ -51,16 +51,16 @@ const Services = () => {
                     style={{ width: '70px' }}
                   />
                 </div>
-                <h5>
+                <h4>
                   <Link
                     to="/web-development"
                     onClick={() => {
                       window.scrollTo({ top: 0, behavior: 'smooth' })
                     }}
                   >
-                    <div>WEB DEVELOPMENT</div>
+                    <h4>WEB DEVELOPMENT</h4>
                   </Link>
-                </h5>
+                </h4>
                 <div className="text">
                   We help you build robust web presence with our expertise ...
                 </div>
@@ -101,7 +101,7 @@ const Services = () => {
                     style={{ width: '70px' }}
                   />
                 </div>
-                <h5>
+                <h4>
                   <Link
                     to="/e-commerce-website-development"
                     onClick={() => {
@@ -110,7 +110,7 @@ const Services = () => {
                   >
                     E-COMMERCE DEVELOPMENT
                   </Link>
-                </h5>
+                </h4>
                 <div className="text">
                   We help your business connect to the customers over ...
                 </div>
@@ -151,7 +151,7 @@ const Services = () => {
                     style={{ width: '70px' }}
                   />
                 </div>
-                <h5>
+                <h4>
                   <Link
                     to="/mobile-app-development"
                     onClick={() => {
@@ -160,7 +160,7 @@ const Services = () => {
                   >
                     MOBILE APP DEVELOPMENT
                   </Link>
-                </h5>
+                </h4>
                 <div className="text">
                   We assist your brand to enjoy the edge of mobile by ...
                 </div>
@@ -201,7 +201,7 @@ const Services = () => {
                     style={{ width: '70px' }}
                   />
                 </div>
-                <h5>
+                <h4>
                   <Link
                     to="/iot-app-development"
                     onClick={() => {
@@ -210,7 +210,7 @@ const Services = () => {
                   >
                     INTERNET OF THINGS
                   </Link>
-                </h5>
+                </h4>
                 <div className="text">
                   We build intuitive mobile apps connecting the gadgets in ...
                 </div>
@@ -251,7 +251,7 @@ const Services = () => {
                     style={{ width: '70px' }}
                   />
                 </div>
-                <h5>
+                <h4>
                   <Link
                     to="/"
                     onClick={() => {
@@ -260,7 +260,7 @@ const Services = () => {
                   >
                     GAME DEVELOPMENT
                   </Link>
-                </h5>
+                </h4>
                 <div className="text">
                   We build 2D & 3D engaging and addictive mobile games for all
                   ...
@@ -301,7 +301,7 @@ const Services = () => {
                     style={{ width: '70px' }}
                   />
                 </div>
-                <h5>
+                <h4>
                   <Link
                     to="/hire-us"
                     onClick={() => {
@@ -310,7 +310,7 @@ const Services = () => {
                   >
                     HIRE A DEVELOPER
                   </Link>
-                </h5>
+                </h4>
                 <div className="text">
                   The App Ideas providing best skilled, experienced developers
                   ...
