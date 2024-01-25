@@ -115,7 +115,7 @@ const Blog = () => {
                     <div className="name-job">
                       <h4 className="name">{blog.title}</h4>
                       <br />
-                      <h4>{blog.creator.name}</h4>
+                      {/* <h4>{blog.creator.name}</h4> */}
                       <br />
                       <h4 className="job">{blog.description}</h4>
                       {/* <div dangerouslySetInnerHTML={{__html:blog.content}} className="job"//> */}

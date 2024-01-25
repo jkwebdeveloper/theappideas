@@ -1,5 +1,5 @@
 import { Country } from "country-state-city";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { AiFillCloseCircle } from "react-icons/ai";
 import ReactModal from "react-modal";
 import { useFormik } from "formik";
@@ -8,6 +8,10 @@ import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import ReCAPTCHA from "react-google-recaptcha";
+
+// localhost Key
+const SITE_KEY = "6Ld9hlMpAAAAAECTno-3flFDva33LDHA-zb-1aXs";
 
 const initialValues = {
   name: "",
@@ -15,11 +19,19 @@ const initialValues = {
   country: "",
   phoneNumber: "",
   projectReq: "",
+  recaptchaToken: "",
 };
 
 const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
   const [loading, setLoading] = useState(false);
   const [countries, setCountries] = useState([]);
+  const [recaptchavalue, SetRecaptchaValue] = useState("");
+
+  const onChange = (value) => {
+    SetRecaptchaValue(value);
+    console.log(value, "recaptcha");
+  };
+  const captchaRef = useRef();
 
   const handlePost = (values) => {
     setLoading(true);
@@ -33,6 +45,7 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
         // budget: values.budget,
         // country: values.country,
         projectRequirement: values.projectRequirement,
+        recaptchaToken: recaptchavalue,
       },
       headers: {
         "Content-Type": "application/json",
@@ -40,6 +53,8 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
     })
       .then((res) => {
         // console.log(res.data);
+        SetRecaptchaValue("");
+        captchaRef.current.reset();
         setLoading(false);
       })
       .catch((err) => {
@@ -79,9 +94,12 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
       contentLabel="Contact us Modal"
       appElement={document.getElementById("root")}
       shouldCloseOnOverlayClick={true}
-      style={{overlay: {
-        zIndex: "9999"
-      }, content: { zIndex: "9999" } }}
+      style={{
+        overlay: {
+          zIndex: "9999",
+        },
+        content: { zIndex: "9999" },
+      }}
     >
       <section className="contact_form_section">
         <div className="container">
@@ -212,6 +230,27 @@ const GetAQuoteModal = ({ setOpenModal, openModal, handleCloseModal }) => {
                     />
                   ) : null}
                 </div>
+                <ReCAPTCHA
+                  style={{ padding: "15px 15px" }}
+                  sitekey={SITE_KEY}
+                  onChange={onChange}
+                  ref={captchaRef}
+                />
+                <span
+                  className="error"
+                  style={{ color: "red", fontSize: "14px" }}
+                >
+                  {errors.recaptchaToken}
+                </span>
+                {errors.recaptchaToken && touched.recaptchaToken ? (
+                  <BiErrorCircle
+                    style={{
+                      float: "right",
+                      marginTop: "5px",
+                      color: "red",
+                    }}
+                  />
+                ) : null}
                 <div className="text-center">
                   <button type="submit" className="submit__btn">
                     {loading ? "loading..." : "submit"}

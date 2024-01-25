@@ -20,9 +20,21 @@ import { BiErrorCircle } from "react-icons/bi";
 import axios from "axios";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
+import ReCAPTCHA from "react-google-recaptcha";
+
+// localhost Key
+const SITE_KEY = "6Ld9hlMpAAAAAECTno-3flFDva33LDHA-zb-1aXs";
 
 const ContactUs = () => {
   const [loading, setLoading] = useState(false);
+  const [recaptchavalue, SetRecaptchaValue] = useState("");
+
+
+  const onChange = (value) => {
+    SetRecaptchaValue(value);
+    console.log(value, "recaptcha");
+  };
+  const captchaRef = useRef();
 
   const handlePost = (values) => {
     console.log(values);
@@ -37,6 +49,7 @@ const ContactUs = () => {
         budget: values.budget,
         country: values.country,
         projectRequirement: values.projectRequirement,
+        recaptchaToken: recaptchavalue,
       },
       headers: {
         "Content-Type": "application/json",
@@ -44,6 +57,8 @@ const ContactUs = () => {
     })
       .then((res) => {
         // console.log(res.data);
+        SetRecaptchaValue("");
+        captchaRef.current.reset();
         setLoading(false);
       })
       .catch((err) => {
@@ -320,7 +335,12 @@ const ContactUs = () => {
                             />
                           ) : null}
                         </div>
-
+                        <ReCAPTCHA
+                          style={{ padding: "15px 15px" }}
+                          sitekey={SITE_KEY}
+                          onChange={onChange}
+                          ref={captchaRef}
+                        />
                         <div className="col-sm-12 text-center mt-4">
                           <button type="submit" className="request__btn">
                             {loading ? "loading..." : "submit"}

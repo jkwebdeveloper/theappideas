@@ -14,6 +14,7 @@ export const getAQuoteSchema = yup.object({
   // country: yup.string().required("This field is required !"),
   phoneNumber: yup.string().required("Phone number is must be required"),
   projectRequirement: yup.string().required("This field is required"),
+  recaptchaToken: yup.string().required("Check the captcha.")
 });
 
 const phoneRegExp =
